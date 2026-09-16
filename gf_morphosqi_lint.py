@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+r"""
 gf_morphosqi_lint.py
 
 Lint MorphoSqi.gf for the *same classes of failures* we hit in this conversation:
@@ -26,6 +26,7 @@ from typing import Dict, List, Set, Tuple, Iterable, Optional
 
 MK_DEF_RE = re.compile(r"^(mkN\d+)\b[^=]*=")          # definition line (column 0)
 MK_ANY_RE = re.compile(r"\bmkN\d+\b")                # any mkN reference
+TOPLEVEL_DECL_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_']*)\s*(?::|=)")
 
 
 @dataclass(frozen=True)
@@ -89,9 +90,23 @@ def extract_mk_defs(text: str) -> Tuple[Dict[str, Tuple[int, int, str]], List[st
         if m:
             starts.append((m.group(1), i))
 
+    # A mkN definition ends at the next *top-level* declaration, not merely
+    # at the next mkN definition.  This matters for the final mkN block in
+    # MorphoSqi.gf: it is followed by mkA/mkV helpers, and treating the rest
+    # of the file as part of that mkN produced a false "unbalanced" finding.
+    top_level = []
+    for i, ln in enumerate(lines):
+        m = TOPLEVEL_DECL_RE.match(ln)
+        if m:
+            top_level.append((m.group(1), i))
+
     defs: Dict[str, Tuple[int, int, str]] = {}
-    for j, (name, start) in enumerate(starts):
-        end = starts[j + 1][1] if j + 1 < len(starts) else len(lines)
+    for name, start in starts:
+        end = len(lines)
+        for next_name, next_line in top_level:
+            if next_line > start and next_name != name:
+                end = next_line
+                break
         body = "\n".join(lines[start:end])
         defs[name] = (start + 1, end, body)  # store 1-based start line
     return defs, lines

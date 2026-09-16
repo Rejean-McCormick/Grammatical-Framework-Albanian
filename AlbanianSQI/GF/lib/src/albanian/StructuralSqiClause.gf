@@ -1,6 +1,6 @@
 -- GF/lib/src/albanian/StructuralSqiClause.gf
 resource StructuralSqiClause =
-  open Prelude, ParamX, CatSqi, (R = ResSqi), (P = ParadigmsSqi) in {
+  open Prelude, ParamX, CatSqi, (P = ParadigmsSqi) in {
 
 oper
   -- =========================================================
@@ -13,27 +13,27 @@ oper
   -- =========================================================
 
   -- Prepositions
-  above_Prep : Prep = R.mkPrep "sipër" ;
-  after_Prep : Prep = R.mkPrep "pas" ;
-  before_Prep : Prep = R.mkPrep "para" ;
-  behind_Prep : Prep = R.mkPrep "pas" ;
-  between_Prep : Prep = R.mkPrep "midis" ;
-  by8agent_Prep : Prep = R.mkPrep "nga" ;
-  by8means_Prep : Prep = R.mkPrep "me" ;
-  during_Prep : Prep = R.mkPrep "gjatë" ;
-  for_Prep : Prep = R.mkPrep "për" ;
-  from_Prep : Prep = R.mkPrep "nga" ;
-  in8front_Prep : Prep = R.mkPrep "përpara" ;
-  in_Prep : Prep = R.mkPrep "në" ;
-  on_Prep : Prep = R.mkPrep "mbi" ;
-  part_Prep : Prep = R.mkPrep "prej" ;
-  possess_Prep : Prep = R.mkPrep "i" ;
-  through_Prep : Prep = R.mkPrep "përmes" ;
-  to_Prep : Prep = R.mkPrep "në" ;
-  under_Prep : Prep = R.mkPrep "nën" ;
-  with_Prep : Prep = R.mkPrep "me" ;
-  without_Prep : Prep = R.mkPrep "pa" ;
-  except_Prep : Prep = R.mkPrep "përveç" ;
+  above_Prep : Prep = P.mkPrep "sipër" ;
+  after_Prep : Prep = P.mkPrep "pas" ;
+  before_Prep : Prep = P.mkPrep "para" ;
+  behind_Prep : Prep = P.mkPrep "pas" ;
+  between_Prep : Prep = P.mkPrep "midis" ;
+  by8agent_Prep : Prep = P.mkPrep "nga" ;
+  by8means_Prep : Prep = P.mkPrep "me" ;
+  during_Prep : Prep = P.mkPrep "gjatë" ;
+  for_Prep : Prep = P.mkPrep "për" ;
+  from_Prep : Prep = P.mkPrep "nga" ;
+  in8front_Prep : Prep = P.mkPrep "përpara" ;
+  in_Prep : Prep = P.mkPrep "në" ;
+  on_Prep : Prep = P.mkPrep "mbi" ;
+  part_Prep : Prep = P.mkPrep "prej" ;
+  possess_Prep : Prep = P.mkPrep "i" ;
+  through_Prep : Prep = P.mkPrep "përmes" ;
+  to_Prep : Prep = P.mkPrep "në" ;
+  under_Prep : Prep = P.mkPrep "nën" ;
+  with_Prep : Prep = P.mkPrep "me" ;
+  without_Prep : Prep = P.mkPrep "pa" ;
+  except_Prep : Prep = P.mkPrep "përveç" ;
 
   -- Conjunctions and subordinators
   although_Subj : Subj = P.mkSubj "megjithëse" ;

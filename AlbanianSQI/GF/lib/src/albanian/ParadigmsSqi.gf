@@ -1365,7 +1365,7 @@ mkPron : (nom,acc,dat,ablat,acc_clit,dat_clit : Str) -> GenNum -> Person -> Pron
       a = {gn=gn; p=p}
      } ;
 
-mkCard : Str -> Card = \s -> lin Card {s=s} ;
+mkCard : Str -> Card = \s -> lin Card {s=s; n=Pl} ;
 mkACard : Str -> ACard = \s -> lin ACard {s=s} ;
 mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
 

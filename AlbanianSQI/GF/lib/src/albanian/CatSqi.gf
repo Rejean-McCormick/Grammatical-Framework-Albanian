@@ -17,7 +17,7 @@ lincat Subj  = {s : Str} ;
 lincat Conj  = {s : Str} ;
 lincat DConj = {s : Str} ;
 
-lincat Card   = {s : Str} ;
+lincat Card   = {s : Str; n : Number} ;
 lincat ACard  = {s : Str} ;
 lincat Predet = {s : Str} ;
 lincat Ord    = {s : Str} ;

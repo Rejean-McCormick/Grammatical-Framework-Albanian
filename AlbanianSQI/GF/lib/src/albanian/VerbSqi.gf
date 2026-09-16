@@ -12,13 +12,13 @@ concrete VerbSqi of Verb = CatSqi **
     vPred : Verb -> Str = \v ->
       v.Indicative ! Pres ! Sg ! P3 ;
 
-    npNom : NP -> Str = \np -> np.s ! Nom ;
-    npAcc : NP -> Str = \np -> np.s ! Acc ;
+    npNom : {s : Case => Str ; a : Agr} -> Str = \np -> np.s ! Nom ;
+    npAcc : {s : Case => Str ; a : Agr} -> Str = \np -> np.s ! Acc ;
 
-    apPred : AP -> Str = \ap ->
+    apPred : {s : Species => Case => Gender => Number => Str} -> Str = \ap ->
       ap.s ! Indef ! Nom ! Masc ! Sg ;
 
-    cnPred : CN -> Str = \cn ->
+    cnPred : Noun -> Str = \cn ->
       cn.s ! Indef ! Nom ! Sg ;
 
   lin

@@ -23,10 +23,10 @@ concrete ExtraSqi of ExtraSqiAbs =
     verbPres3sg : Verb -> Str =
       \v -> v.Indicative ! Pres ! Sg ! P3 ;
 
-    npSurfaceNom : NP -> Str =
+    npSurfaceNom : {s : Case => Str ; a : Agr} -> Str =
       \np -> np.s ! Nom ;
 
-    npSurfaceAcc : NP -> Str =
+    npSurfaceAcc : {s : Case => Str ; a : Agr} -> Str =
       \np -> np.s ! Acc ;
 
     -- =========================================================
@@ -44,7 +44,7 @@ concrete ExtraSqi of ExtraSqiAbs =
     -- allowed only for string-like targets
     -- =========================================================
 
-    apSurfaceNomMascSg : AP -> Str =
+    apSurfaceNomMascSg : {s : Species => Case => Gender => Number => Str} -> Str =
       \ap -> ap.s ! Indef ! Nom ! Masc ! Sg ;
 
     -- =========================================================

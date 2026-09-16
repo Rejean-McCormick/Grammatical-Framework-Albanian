@@ -7,7 +7,7 @@ lincat
   Document   = {s : Str} ;
   Tag        = {s : Str} ;
 
-lin InflectionN = \x -> {
+lin InflectionN, InflectionN2, InflectionN3 = \x -> {
       t="em" ;
       s1=heading1 ("Emër" ++
                    case x.g of {
@@ -27,7 +27,7 @@ lin InflectionN = \x -> {
       s3=[]
     } ;
 
-lin InflectionA = \x -> {
+lin InflectionA, InflectionA2 = \x -> {
       t="mb" ;
       s1=heading1 "Mbiemër" ;
       s2=frameTable (
@@ -49,7 +49,8 @@ lin InflectionA = \x -> {
                      } ;
     } ;
 
-lin InflectionV = \x -> {
+lin InflectionV, InflectionV2, InflectionVV, InflectionVS, InflectionVQ, InflectionVA,
+    InflectionV3, InflectionV2V, InflectionV2S, InflectionV2Q, InflectionV2A = \x -> {
       t="fl" ;
       s1=heading1 "Folje" ;
       s2=frameTable (
@@ -107,7 +108,7 @@ lin InflectionV = \x -> {
       s3=[]
     } ;
 
-lin InflectionAdv = \x -> {
+lin InflectionAdv, InflectionAdV, InflectionAdA, InflectionAdN = \x -> {
       t="nd" ;
       s1=heading1 "Ndajfolje" ;
       s2=frameTable (
@@ -116,11 +117,25 @@ lin InflectionAdv = \x -> {
     } ;
 
 lin
+  InflectionPN x = simpleInflection "pn" "Emër i përveçëm" x.s ;
+  InflectionLN x = simpleInflection "ln" "Emër gjuhe" x.s ;
+  InflectionGN x = simpleInflection "gn" "Emër gjeografik" x.s ;
+  InflectionSN x = simpleInflection "sn" "Emër special" x.s ;
+  InflectionPrep x = simpleInflection "prep" "Parafjalë" x.s ;
+
   NoDefinition t = {s = t.s} ;
   MkDefinition t d = {s = "<p><b>Definition:</b>" ++ t.s ++ d.s ++ "</p>"} ;
   MkDefinitionEx t d e =
     {s = "<p><b>Definition:</b>" ++ t.s ++ d.s ++ "</p><p><b>Example:</b>" ++ e.s ++ "</p>"} ;
   MkDocument d i e = {s = i.s1 ++ d.s ++ i.s2 ++ i.s3 ++ e.s} ;
   MkTag i = {s = i.t} ;
+
+oper
+  simpleInflection : Str -> Str -> Str -> {t : Str; s1,s2,s3 : Str} = \tag,label,form -> {
+    t = tag ;
+    s1 = heading1 label ;
+    s2 = frameTable (tr (th "s" ++ td form)) ;
+    s3 = []
+  } ;
 
 }

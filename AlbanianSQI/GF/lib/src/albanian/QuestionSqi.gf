@@ -3,7 +3,7 @@ concrete QuestionSqi of Question = CatSqi **
   open ResSqi, Prelude in {
 
   oper
-    sep : Str = " " ;
+    questionSep : Str = " " ;
 
   lincat
     -- QVP is not defined in CatSqi, so we define it here.
@@ -11,17 +11,17 @@ concrete QuestionSqi of Question = CatSqi **
 
   lin
     AddAdvQVP qvp iadv =
-      {s = qvp.s ++ sep ++ iadv.s} ;
+      {s = qvp.s ++ questionSep ++ iadv.s} ;
 
     AdvIAdv iadv adv =
-      {s = iadv.s ++ sep ++ adv.s} ;
+      {s = iadv.s ++ questionSep ++ adv.s} ;
 
     -- CatSqi: IP = {s : Str}
     AdvIP ip adv =
-      {s = ip.s ++ sep ++ adv.s} ;
+      {s = ip.s ++ questionSep ++ adv.s} ;
 
     AdvQVP vp iadv =
-      {s = vp.s ++ sep ++ iadv.s} ;
+      {s = vp.s ++ questionSep ++ iadv.s} ;
 
     -- CatSqi: IComp = {s : Str}
     CompIAdv iadv =
@@ -31,40 +31,40 @@ concrete QuestionSqi of Question = CatSqi **
       {s = ip.s} ;
 
     ComplSlashIP vpslash ip =
-      {s = vpslash.s ++ sep ++ ip.s} ;
+      {s = vpslash.s ++ questionSep ++ ip.s} ;
 
     -- CatSqi: IDet = {s : Str}, IP = {s : Str}, CN is Noun with
     -- cn.s : Species => Case => Number => Str
     -- Fallback: pick Indef/Nom/Sg.
     IdetCN idet cn =
-      {s = idet.s ++ sep ++ cn.s ! Indef ! Nom ! Sg} ;
+      {s = idet.s ++ questionSep ++ cn.s ! Indef ! Nom ! Sg} ;
 
     IdetIP idet =
       {s = idet.s} ;
 
     -- CatSqi: IQuant = {s : Str}
     IdetQuant iquant num =
-      {s = iquant.s ++ sep ++ num.s} ;
+      {s = iquant.s ++ questionSep ++ num.s} ;
 
     PrepIP prep ip =
-      {s = prep.s ++ sep ++ ip.s} ;
+      {s = prep.s ++ questionSep ++ ip.s} ;
 
     QuestCl cl =
       {s = cl.s} ;
 
     QuestIAdv iadv cl =
-      {s = iadv.s ++ sep ++ cl.s} ;
+      {s = iadv.s ++ questionSep ++ cl.s} ;
 
     QuestIComp icomp np =
-      {s = icomp.s ++ sep ++ np.s ! Nom} ;
+      {s = icomp.s ++ questionSep ++ np.s ! Nom} ;
 
     QuestQVP ip qvp =
-      {s = ip.s ++ sep ++ qvp.s} ;
+      {s = ip.s ++ questionSep ++ qvp.s} ;
 
     QuestSlash ip clslash =
-      {s = ip.s ++ sep ++ clslash.s} ;
+      {s = ip.s ++ questionSep ++ clslash.s} ;
 
     QuestVP ip vp =
-      {s = ip.s ++ sep ++ vp.s} ;
+      {s = ip.s ++ questionSep ++ vp.s} ;
 
 } 

@@ -58,7 +58,8 @@ resource ExtendSqiAPCN =
     -- not by selecting a raw noun cell.
     apcn_CardCNCard : Card -> CN -> Card =
       \card,cn -> lin Card {
-        s = card.s ++ apcn_wordSep ++ (apcn_CompFromCN cn).s
+        s = card.s ++ apcn_wordSep ++ (apcn_CompFromCN cn).s ;
+        n = card.n
       } ;
 
 } ;

@@ -19,8 +19,10 @@ concrete NumeralSqi of Numeral = CatSqi ** open ParamX, Prelude in {
     Digit      = LinDigit ;
     Sub10      = LinDigit ;
     Sub100     = LinSub100 ;
-    Sub1000    = LinSub100 ;
-    Sub1000000 = {s : Str} ;
+    Sub1000          = LinSub100 ;
+    Sub1000000       = {s : Str} ;
+    Sub1000000000    = {s : Str} ;
+    Sub1000000000000 = {s : Str} ;
 
   oper
     mkNum : Str -> LinDigit = \tri ->
@@ -81,12 +83,28 @@ concrete NumeralSqi of Numeral = CatSqi ** open ParamX, Prelude in {
     pot1plus d e = mkR ((d.s ! ten) ++ "e" ++ (e.s ! unit)) ;
     pot1as2 n = n ;
 
+    pot21 = mkR "njëqind" ;
     pot2 d = mkR (bind (d.s ! unit) "qind") ;
     pot2plus d e = mkR ((bind (d.s ! unit) "qind") ++ "e" ++ e.s) ;
     pot2as3 n = {s = n.s} ;
 
+    pot31 = {s = "një" ++ "mijë"} ;
     pot3 n = {s = n.s ++ "mijë"} ;
     pot3plus n m = {s = n.s ++ "mijë" ++ "e" ++ m.s} ;
+
+    pot3as4 n = {s = n.s} ;
+    pot3decimal d = {s = d.s ++ "mijë"} ;
+
+    pot41 = {s = "një" ++ "milion"} ;
+    pot4 n = {s = n.s ++ "milionë"} ;
+    pot4plus n m = {s = n.s ++ "milionë" ++ "e" ++ m.s} ;
+    pot4as5 n = {s = n.s} ;
+    pot4decimal d = {s = d.s ++ "milionë"} ;
+
+    pot51 = {s = "një" ++ "miliard"} ;
+    pot5 n = {s = n.s ++ "miliardë"} ;
+    pot5plus n m = {s = n.s ++ "miliardë" ++ "e" ++ m.s} ;
+    pot5decimal d = {s = d.s ++ "miliardë"} ;
 
   lincat
     Dig = {s : Str; n : Number} ;

@@ -10,7 +10,8 @@ resource ExtendSqiScaffolding =
     -- - preserve current working Albanian category shapes
     -- - keep boundary-safe Albanian glue here only for functions
     --   that are actually owned by scaffolding in this cycle
-    -- - do not reintroduce inherited Comp/Imp/VPI/VPS family logic
+    -- - VPS/VPI and Comp/Imp list ownership lives in ExtendSqi itself,
+    --   because GF 3.12 ExtendFunctor leaves their lincats incomplete
     -- =========================================================
 
     -- =========================================================
@@ -65,7 +66,7 @@ resource ExtendSqiScaffolding =
         a        = p.a
       } ;
 
-    sc_AdAdV : AdA -> Adv -> AdV =
+    sc_AdAdV : AdA -> AdV -> AdV =
       \ada,adv -> lin AdV {s = ada.s ++ adv.s} ;
 
     sc_PositAdVAdj : A -> AdV =
@@ -95,7 +96,7 @@ resource ExtendSqiScaffolding =
     sc_UttDatNP : NP -> Utt =
       \np -> lin Utt {s = np.s ! R.Dat} ;
 
-    sc_UttAdV : Adv -> Utt =
+    sc_UttAdV : AdV -> Utt =
       \adv -> lin Utt {s = adv.s} ;
 
     sc_UttVPShort : VP -> Utt =

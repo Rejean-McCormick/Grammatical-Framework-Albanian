@@ -18,7 +18,7 @@ concrete IdiomSqi of Idiom = CatSqi ** open ResSqi, Prelude in {
     letPart  : Str = "le" ++ "të" ;
     selfWord : Str = "vetë" ;
 
-    idiomNpNom : NP -> Str =
+    idiomNpNom : {s : Case => Str ; a : Agr} -> Str =
       \np -> np.s ! Nom ;
 
   lin

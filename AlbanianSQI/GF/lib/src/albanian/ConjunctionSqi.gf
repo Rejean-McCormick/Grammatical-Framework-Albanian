@@ -3,7 +3,7 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
 
   oper
     commaSep : Str = ", " ;
-    conjSep  : Conj -> Str = \c -> " " ++ c.s ++ " " ;
+    conjSep  : {s : Str} -> Str = \c -> " " ++ c.s ++ " " ;
 
   lincat
     ListS    = {init : Str ; last : Str} ;

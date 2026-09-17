@@ -62,7 +62,7 @@ concrete ExtendSqi of Extend =
     -- =========================================================
     -- VP / VPSLASH BRIDGE SUBSYSTEM
     -- =========================================================
-    PresPartAP, EmbedPresPart, PastPartAP, PastPartAgentAP,
+    PresPartAP, EmbedPresPart, EmbedSSlash, PastPartAP, PastPartAgentAP,
     PassVPSlash, PassAgentVPSlash, NominalizeVPSlashNP, ProgrVPSlash,
     A2VPSlash, N2VPSlash, AdvIsNP, AdvIsNPAP, PurposeVP, WithoutVP, ByVP, InOrderToVP, CompoundAP,
 
@@ -234,6 +234,7 @@ concrete ExtendSqi of Extend =
     -- =========================================================
     PresPartAP x1 = vp_PresPartAP (lin VP x1) ;
     EmbedPresPart x1 = vp_EmbedPresPart (lin VP x1) ;
+    EmbedSSlash x1 = vp_EmbedSSlash (lin SSlash x1) ;
     PastPartAP x1 = vp_PastPartAP (lin VPSlash x1) ;
     PastPartAgentAP x1 x2 = vp_PastPartAgentAP (lin VPSlash x1) (lin NP x2) ;
     PassVPSlash x1 = vp_PassVPSlash (lin VPSlash x1) ;

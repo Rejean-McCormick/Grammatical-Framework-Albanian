@@ -434,6 +434,26 @@ When relevant, also record:
 
 ---
 
+### Entry: `EmbedSSlash`
+- **kind:** symbol
+- **current_owner:** `ExtendSqiVPBridge.gf` with thin wiring in `ExtendSqi.gf`
+- **current_location:** VP / VPSlash bridge subsystem
+- **primary_status:** `temporary`
+- **why_this_status:** the pinned `ExtendFunctor` linearizes `EmbedSSlash : SSlash -> SC` as `variants {}`, while the current Wordbench run crashes during PMCFG generation before producing `ExtendSqi.gfo`. Albanian currently flattens `SSlash` to `{s : Str}`, so the compile-probe replacement can preserve only that surface string. Canonical model languages that override this function reconstruct/fill the slash rather than merely coercing its string, so the Albanian bridge is not linguistically final.
+- **allowed_use:** narrow compile-causality probe for the observed `ExtendSqi.gf` PMCFG failure; temporary compatibility fallback if the probe passes and remains explicitly tracked
+- **forbidden_use:** treating direct `SSlash.s -> SC.s` preservation as a validated Albanian free-relative implementation; using compile success as proof of linguistic correctness
+- **exit_criteria:**
+  1. `Quick -> ExtendSqi.gf` completes under GF 3.12 without the PMCFG crash or new warnings,
+  2. causal status is updated from hypothesis to compiler-confirmed or rejected,
+  3. Albanian slash/free-relative construction is validated against current Albanian category/constructor evidence,
+  4. the final implementation receives targeted linguistic regression tests,
+  5. the override matrix and decision log are updated to the final status
+- **related_tests:** direct `ExtendSqiVPBridge.gf` compile, `ExtendSqi.gf` Quick validation, later targeted `EmbedSSlash` linearization tests including non-prepositional and prepositional slash cases
+- **related_docs:** `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md`, `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`, `ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`, `ALBANIAN_DECISION_LOG.md`, `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`
+- **notes:** current Albanian `SSlash` has already lost complement metadata available in richer model-language implementations; that architectural limitation must remain visible during finalization.
+
+---
+
 ## 7. Required maintenance rules
 
 ### 7.1 When to add an entry

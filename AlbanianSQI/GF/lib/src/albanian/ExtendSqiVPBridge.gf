@@ -2,7 +2,7 @@
 
 resource ExtendSqiVPBridge =
   open GrammarSqi, CatSqi,
-       (R = ResSqi), (P = ParamX),
+       (R = ResSqi), (P = ParamX), (PS = ParadigmsSqi),
        ExtendSqiHelpers,
        (NS = NounSqi), (AS = AdverbSqi) in {
 
@@ -39,6 +39,17 @@ resource ExtendSqiVPBridge =
     vp_EmbedPresPart : VP -> SC =
       \vp ->
         lin SC {s = vp.s} ;
+
+    -- TEMPORARY compile probe / compatibility fallback.
+    -- ExtendFunctor leaves EmbedSSlash as variants {} in the pinned RGL.
+    -- Albanian SSlash is already flattened to {s : Str}, so this bridge can
+    -- only preserve the available surface string. This is NOT a final
+    -- linguistic realization of free-relative/slash embedding. Model
+    -- languages reconstruct or fill the slash more explicitly; Albanian
+    -- needs a later category/constructor decision before this can be final.
+    vp_EmbedSSlash : SSlash -> SC =
+      \sslash ->
+        lin SC {s = sslash.s} ;
 
     -- TEMPORARY fallback:
     -- preserve subsystem ownership, but keep the lossy AP bridge explicit.
@@ -79,21 +90,26 @@ resource ExtendSqiVPBridge =
       \vpslash ->
         vpslash ;
 
-    -- Keep the rich Albanian adjective path as long as possible:
-    -- A2 -> AP via UseA2, then AP -> Comp via CompAP, and only then expose
-    -- the open complement slot as a shallow slash surface.
+    -- Preserve the full VPSlash category shape (including GF lock fields)
+    -- by starting from a real Albanian VPSlash constructor. The dummy verb
+    -- is only a structural scaffold: its surface string is replaced below.
+    -- This follows the model-language pattern used for A2VPSlash/N2VPSlash
+    -- while keeping the actual Albanian A2/N2 complement realization.
+    vp_dummyVPSlash : VPSlash =
+      SlashV2a (PS.mkV2 (PS.mkV "bëj")) ;
+
     vp_A2VPSlash : A2 -> VPSlash =
       \a2 ->
-        lin VPSlash {
-          s = (vp_compFromA2 a2).s ++ wordSep ++ a2.c2.s
+        let vp : VP = UseComp (vp_compFromA2 a2)
+        in vp_dummyVPSlash ** {
+          s = vp.s ++ wordSep ++ a2.c2.s
         } ;
 
-    -- Same policy for N2:
-    -- N2 -> CN via UseN2, then CN -> Comp via CompCN, then expose the slot.
     vp_N2VPSlash : N2 -> VPSlash =
       \n2 ->
-        lin VPSlash {
-          s = (vp_compFromN2 n2).s ++ wordSep ++ n2.c2.s
+        let vp : VP = UseComp (vp_compFromN2 n2)
+        in vp_dummyVPSlash ** {
+          s = vp.s ++ wordSep ++ n2.c2.s
         } ;
 
     -- Preferred inherited/functor-style composition path.

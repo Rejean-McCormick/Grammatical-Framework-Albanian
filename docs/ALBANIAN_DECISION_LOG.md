@@ -745,3 +745,31 @@ If only one layer is updated, the next session can still drift.
 - Update only one control file and assume the system is now aligned.
 
 ---
+
+## ALB-DEC-028
+**Status:** provisional  
+**Area:** `ExtendSqi` / `EmbedSSlash` / PMCFG compile repair  
+**Decision:** Subtract `EmbedSSlash` from the inherited `ExtendFunctor` path and route it through `ExtendSqiVPBridge` only as a tracked compile probe. The temporary Albanian bridge preserves the already-flattened `SSlash.s` into `SC.s`; it is not accepted as the final linguistic realization.
+
+**Why:** The pinned shared functor leaves `EmbedSSlash : SSlash -> SC` at `variants {}`. The observed GF 3.12 Wordbench run crashes in `GeneratePMCFG` and does not produce `ExtendSqi.gfo`, while companion modules do compile. Current Albanian `SSlash` and `SC` are shallow string records, making the probe type-shape compatible. However, canonical model languages that override `EmbedSSlash` reconstruct or fill the slash rather than performing a bare string coercion, and current Albanian `SSlash` no longer carries equivalent complement metadata.
+
+**Evidence:**
+- current Wordbench `ExtendSqi.gf` PMCFG failure (`GeneratePMCFG.hs`, non-exhaustive patterns)
+- pinned `abstract/Extend.gf`: `EmbedSSlash : SSlash -> SC`
+- pinned `common/ExtendFunctor.gf`: `EmbedSSlash = variants {}`
+- current `CatSqi.gf`: `SSlash = {s : Str}` and inherited `CommonX.SC = {s : Str}`
+- current `ExtendSqi.gf` / `ExtendSqiVPBridge.gf` ownership structure
+- canonical pinned model-language implementations in `ExtendFin.gf` and `ExtendSwe.gf`
+
+**Implications:**
+- This patch may establish or reject the PMCFG-causality hypothesis after `Quick -> ExtendSqi.gf`.
+- A passing compile does not promote `EmbedSSlash` to `stable`.
+- Finalization requires an Albanian-specific slash/free-relative strategy and targeted linguistic tests.
+- The override matrix and symbol-status ledger must keep the temporary status visible until those exit criteria are met.
+
+**Do not:**
+- Report `EmbedSSlash` as the proven PMCFG cause before the retest.
+- Report direct `SSlash.s -> SC.s` preservation as linguistically complete.
+- Copy Finnish or Swedish surface strings into Albanian.
+
+---

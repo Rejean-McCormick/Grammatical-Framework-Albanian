@@ -315,6 +315,7 @@ This subsystem compiles with no contract-shape errors and no accidental `TenseSq
 |---|---|---|---|---|
 | `PresPartAP` | override | `ExtendSqiVPBridge.gf` | participial/AP evidence | AP shape preserved |
 | `EmbedPresPart` | override | `ExtendSqiVPBridge.gf` | participial embedding evidence | no ad hoc flattening |
+| `EmbedSSlash` | override | `ExtendSqiVPBridge.gf` | exact `SSlash -> SC` signature + pinned `ExtendFunctor` `variants {}` + PMCFG failure + model-language comparison | **temporary compile probe only**; `ExtendSqi.gf` must compile with no new warnings, and linguistic finalization remains blocked until Albanian slash/free-relative realization is validated |
 | `PastPartAP` | override | `ExtendSqiVPBridge.gf` | participial/AP evidence | AP shape preserved |
 | `PastPartAgentAP` | override | `ExtendSqiVPBridge.gf` | participial/AP evidence | AP shape preserved |
 | `PassVPSlash` | override | `ExtendSqiVPBridge.gf` | abstract signature + VPSlash shape | no bare record mismatch |

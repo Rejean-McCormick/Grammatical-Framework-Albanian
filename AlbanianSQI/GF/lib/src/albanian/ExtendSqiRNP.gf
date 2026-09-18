@@ -61,13 +61,10 @@ resource ExtendSqiRNP =
         ComplA2 a2 rnp ;
 
     rnp_PossPronRNP : CatSqi.Pron -> Num -> CN -> NP -> NP =
-      \pron,num,cn,rnp -> lin NP {
-        s = \\c =>
-              pron.s ! c ++
-              wordSep ++ cn.s ! R.Indef ! c ! num.n ++
-              wordSep ++ rnp.s ! R.Acc ;
-        a = pron.a
-      } ;
+      \pron,num,cn,rnp ->
+        DetCN
+          (DetQuant (PossPron pron) num)
+          (PossNP cn rnp) ;
 
     -- Reuse the standard Albanian NP conjunction path.
     rnp_ConjRNP : Conj -> ListNP -> NP =

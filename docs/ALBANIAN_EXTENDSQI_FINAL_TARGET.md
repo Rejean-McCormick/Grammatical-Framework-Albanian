@@ -1,5 +1,7 @@
 # ALBANIAN_EXTENDSQI_FINAL_TARGET
 
+This file defines the stable target architecture, **not the current blocker**. For the latest Wordbench run, warnings, and next evidence gate, see `CURRENT_REPAIR_STATE.md`.
+
 ## Status
 Approved target architecture for the current Albanian development cycle.
 
@@ -35,7 +37,7 @@ It must contain:
 
 It must not contain:
 
-- local VPS/VPI/VPS2/VPI2/list-family machinery
+- local VPS/VPI/VPS2/VPI2 or VP-series-list machinery
 - local coordinator-side helper definitions
 - generic repair code
 - drifted or experimental logic that belongs in a subsystem module
@@ -271,7 +273,7 @@ The Albanian `Extend` layer is considered correct for this cycle only when all o
 
 1. `ExtendSqi.gf` remains a thin coordinator.
 2. `ExtendSqiScaffolding.gf` is contract-correct.
-3. No unsupported local VPS/VPI/VPS2/VPI2/list-family logic is present.
+3. No unsupported local VPS/VPI/VPS2/VPI2 or VP-series-list logic is present.
 4. Every local override is owned by the correct subsystem file.
 5. No accidental category flattening has been introduced.
 6. The full Albanian extension layer compiles cleanly.
@@ -302,7 +304,7 @@ The implementation order for this cycle is fixed:
 
 The following are prohibited during this cycle:
 
-- reintroducing local VPS/VPI/VPS2/VPI2/list-family coordinator logic
+- reintroducing local VPS/VPI/VPS2/VPI2 or VP-series-list coordinator logic
 - moving subsystem logic into `ExtendSqi.gf`
 - fixing one function in a family while leaving the rest structurally inconsistent
 - flattening rich Albanian categories to strings for convenience

@@ -773,3 +773,387 @@ If only one layer is updated, the next session can still drift.
 - Copy Finnish or Swedish surface strings into Albanian.
 
 ---
+## ALB-DEC-029
+**Status:** provisional  
+**Area:** `ExtendSqi` / `ComplBareVS` / PMCFG localization  
+**Decision:** Replace the current scaffold reconstruction for `ComplBareVS` with the direct Albanian core reuse `ComplBareVS = ComplVS` as a bounded GF 3.12 compile probe.
+
+**Why:** A verbose Wordbench run now localizes the PMCFG crash directly. `CompVP` completes with full PMCFG statistics, then GF prints `+ ComplBareVS 1` and crashes before the statistics tuple for that function. In the same run, `VerbSqi.gfo` is produced successfully, so the Albanian core `ComplVS : VS -> S -> VP` path is already accepted by GF 3.12. The available Bulgarian model-language source uses the same direct reuse (`ComplBareVS = ComplVS`). This is stronger evidence than the previous generic scaffold reconstruction through `verbPres3sg`.
+
+**Evidence:**
+- Wordbench verbose run `20260918_020756`: last completed entry `+ CompVP 4 (1,1)`, followed by `+ ComplBareVS 1` and the `GeneratePMCFG.hs` non-exhaustive-pattern crash
+- current abstract signature: `ComplBareVS : VS -> S -> VP`
+- current Albanian `VerbSqi.gf`: `ComplVS` already realizes `VS -> S -> VP`
+- the same run successfully emits `VerbSqi.gfo`
+- available Bulgarian model-language implementation: `ComplBareVS = ComplVS`
+
+**Implications:**
+- This probe changes only the `ComplBareVS` wiring; it does not pre-emptively alter later Extend functions.
+- If the next verbose run advances past `ComplBareVS`, the old scaffold path is confirmed as a PMCFG trigger for this function.
+- If the crash remains on `ComplBareVS`, the direct-alias hypothesis is rejected and the next investigation must inspect the normalized concrete term rather than patching later functions.
+- `sc_ComplBareVS` may remain temporarily unused until the probe result is known; remove or repurpose it only after validation.
+
+**Do not:**
+- Claim that all of `ExtendSqi` is repaired before the retest.
+- Patch `ComplDirectVS`, `ComplDirectVQ`, or later functions merely because they are in the same family; wait for verbose evidence.
+- Treat the previous `EmbedSSlash` or `A2VPSlash` hypotheses as proven PMCFG causes.
+
+---
+## ALB-DEC-030
+**Status:** provisional  
+**Area:** `ExtendSqi` / `ComplDirectVQ` / PMCFG localization  
+**Decision:** Replace the manual `lin VP {s = verbPres3sg vq ++ ...}` realization inside `sc_ComplDirectVQ` with composition through the already-compiled Albanian core constructors `UseV` and `AdvVP`, preserving the current direct-utterance surface as `Utt.s`.
+
+**Why:** The GF 3.12 verbose run after ALB-DEC-029 proves that `ComplBareVS` now completes (`+ ComplBareVS 1 (1,1)`) and that PMCFG then crashes while generating `ComplDirectVQ` (`+ ComplDirectVQ 1` with no completed statistics tuple). The current `sc_ComplDirectVQ` repeats the same manual `verbPres3sg` + bare `lin VP` pattern that was removed from `ComplBareVS`. Albanian core `VerbSqi` already compiles `UseV` and `AdvVP`. The pinned RGL also contains architecture-compatible model implementations that compose `ComplDirectVQ` through `UseV` and `AdvVP`; model evidence is corroborative only, not authoritative over Albanian category shapes.
+
+**Evidence:**
+- Wordbench verbose run `20260918_023203`: `+ ComplBareVS 1 (1,1)` followed by `+ ComplDirectVQ 1` and the `GeneratePMCFG.hs` non-exhaustive-pattern crash.
+- `ComplDirectVQ : VQ -> Utt -> VP`.
+- Albanian `VQ = Verb`, `VP = {s : Str}`, and core `UseV`/`AdvVP` compile successfully as part of `VerbSqi.gfo`.
+- Albanian override matrix already assigns `ComplDirectVQ` to `ExtendSqiScaffolding.gf`.
+- Pinned RGL implementations use the same core-composition architecture for direct VQ complements.
+
+**Implications:**
+- Only `sc_ComplDirectVQ` changes functionally in this probe.
+- `ComplDirectVS` and fronted direct-complement functions are intentionally left untouched until verbose evidence reaches them.
+- The probe preserves the current Albanian output policy by passing `utt.s` unchanged; it does not import punctuation/quotation policy from another language.
+- If the next verbose run prints a completed tuple for `ComplDirectVQ`, the manual VP reconstruction is confirmed as a PMCFG trigger for this function.
+
+---
+## ALB-DEC-031
+**Status:** provisional  
+**Area:** `ExtendSqi` / `ComplDirectVS` / PMCFG localization  
+**Decision:** Record successful GF 3.12 PMCFG validation of the preceding `ComplBareVS` and `ComplDirectVQ` repairs, then replace only the manual `lin VP` realization inside `sc_ComplDirectVS` with Albanian core composition through `UseV` and `AdvVP`, preserving `Utt.s`.
+
+**Compiler evidence:** Wordbench verbose run `20260918_024514` completes:
+- `+ ComplBareVS 1 (1,1)`
+- `+ ComplDirectVQ 1 (1,1)`
+
+and then fails while generating:
+- `+ ComplDirectVS 1`
+- `GeneratePMCFG.hs ... Non-exhaustive patterns in case`
+
+**Rationale:** The active failure has moved exactly from `ComplDirectVQ` to `ComplDirectVS`. The current `sc_ComplDirectVS` still uses the same manual `verbPres3sg` plus bare `lin VP {s = ...}` construction that has already been removed from the two preceding hotspots. Albanian core `UseV` and `AdvVP` are compiled in `VerbSqi.gfo`. The pinned `ExtendFunctor.gf` uses the same structural composition (`AdvVP (UseV <lin V vs : V>) ...`) for `ComplDirectVS`; its punctuation/quotation surface policy is not copied.
+
+**Scope:**
+- functional change only in `sc_ComplDirectVS`;
+- no change to `FrontComplDirectVS`, `FrontComplDirectVQ`, `SlashBareV2S`, or later functions;
+- keep GF verbose enabled for the next validation.
+
+**Pass condition:** GF 3.12 must print a completed PMCFG tuple for `ComplDirectVS` and advance to the next function or emit `ExtendSqi.gfo`.
+
+---
+## ALB-DEC-032
+**Status:** provisional  
+**Area:** `ExtendSqi` / `ComplGenVV` / PMCFG localization  
+**Decision:** Record successful GF 3.12 PMCFG validation of `ComplDirectVS`, then replace only the manual bare-`VP` realization inside `sc_ComplGenVV` with the existing Albanian core constructor `ComplVV vv vp`.
+
+**Compiler evidence:** Wordbench verbose run `20260918_024851` completes:
+- `+ ComplBareVS 1 (1,1)`
+- `+ ComplDirectVQ 1 (1,1)`
+- `+ ComplDirectVS 1 (1,1)`
+
+and then fails while generating:
+- `+ ComplGenVV 4`
+- `GeneratePMCFG.hs ... Non-exhaustive patterns in case`
+
+**Architecture evidence:**
+- abstract signature: `ComplGenVV : VV -> Ant -> Pol -> VP -> VP`;
+- pinned `ExtendFunctor.gf`: `ComplGenVV = variants {}` (language-specific obligation);
+- Albanian override matrix already assigns `ComplGenVV` to `ExtendSqiScaffolding.gf` and requires the `CommonX` contract with no `TenseSqi` leakage;
+- Albanian core `VerbSqi.gf` already provides `ComplVV : VV -> VP -> VP`;
+- the previous helper's surface `verbPres3sg vv ++ wordSep ++ vp.s` is structurally equivalent to the current Albanian core `ComplVV` realization (`vPred vv` + `vp.s`).
+
+**Important limitation:** `Ant` and `Pol` remain ignored by this bounded probe, exactly as in the previous Albanian implementation. This is not claimed to be a linguistically complete implementation of generalized VV complementation. The purpose of this patch is to eliminate manual `lin VP` fabrication while preserving existing surface behavior and to test PMCFG stability. Once `ExtendSqi` is structurally stable, `ComplGenVV` needs a separate Albanian linguistic design for anteriority/polarity.
+
+**Scope:** no changes to later functions. Keep GF verbose enabled.
+
+**Pass condition:** GF 3.12 prints a completed PMCFG tuple for `ComplGenVV` and advances to the next function or emits `ExtendSqi.gfo`.
+
+---
+## ALB-DEC-033
+**Status:** provisional validation of an accepted architecture  
+**Area:** `ExtendSqi` / inherited VPS-VPI family / coordinator drift  
+**Decision:** Reconcile the live coordinator with accepted ALB-DEC-022: the VPS/VPI/VPS2/VPI2/list family remains inherited from `ExtendFunctor`; `ExtendSqi.gf` keeps only documented boundary `lincat` declarations and must not subtract or locally implement this family.
+
+**Why:** The current snapshot contradicts the accepted architecture by subtracting and locally rebuilding the inherited family. GF 3.12 verbose run `20260918_124945` now reaches the local `ComplVPIVV` implementation and crashes there after successfully completing the preceding repaired functions. The override matrix explicitly classifies such local ownership as a coordinator drift bug and requires that mismatch to be fixed before another coordinator-side patch is accepted.
+
+**Compiler evidence:**
+- `+ ComplGenVV 4 (1,1)`
+- `+ ComplSlashPartLast 9 (1,1)`
+- `+ ComplVPI2 9 (1,1)`
+- `+ ComplVPIVV 1`
+- then `GeneratePMCFG.hs ... Non-exhaustive patterns in case`
+
+**Code action:**
+- remove the inherited family from the subtraction list;
+- remove all local inherited-family `lin` implementations, including `Base/Cons/ConjComp` and `Base/Cons/ConjImp`;
+- retain the existing explicit shallow boundary `lincat` declarations for `VPS`, `VPI`, `VPS2`, `VPI2`, their lists, `[Comp]`, and `[Imp]`;
+- correct the stale policy comment that previously claimed Albanian local ownership.
+
+**Important limitation:** inherited `ExtendFunctor` functions that are still `variants {}` remain explicitly incomplete. Restoring inheritance is an architecture/stability correction, not a claim of linguistic coverage.
+
+**Pass condition:** a verbose GF 3.12 run must advance beyond the coordinator-drift hotspot or produce `ExtendSqi.gfo`. If inherited `variants {}` expose a new family-level failure, do not restore one-off local functions; reassess the whole family and update the matrix before changing ownership.
+
+---
+## ALB-DEC-034
+**Status:** provisional  
+**Area:** `ExtendSqi` / `FrontComplDirectVS` / `Cl` preservation  
+**Decision:** After fix11 successfully advances beyond the locally reintroduced VPS/VPI family, repair only `FrontComplDirectVS` by constructing an Albanian `Cl` through `PredVP` and `UseV`, then applying a same-category update to preserve the existing surface realization.
+
+**Compiler evidence — run `20260918_132835`:**
+- `+ FrontComplDirectVQ 9 (1,1)` completes;
+- `+ FrontComplDirectVS 9` is printed;
+- GF then crashes in `GeneratePMCFG.hs` before the statistics tuple for `FrontComplDirectVS`.
+
+The same run also demonstrates that fix11 removed the previous `ComplVPIVV` crash: inherited/provisional VPS/VPI family functions now complete with `(0,0)` where `ExtendFunctor` still uses `variants {}`.
+
+**Current problematic path:**
+```gf
+lin Cl {s = ...}
+```
+
+**Fix12 path:**
+```gf
+let cl : Cl = PredVP np (UseV <lin V vs : V>)
+in cl ** {s = <existing Albanian surface>}
+```
+
+**Why:** `CatSqi` exposes `Cl` as shallow, but the compiled category interface carries lock/category structure. Albanian policy requires composition over direct reconstruction when a core constructor path exists. `SentenceSqi.PredVP` is the current Albanian `NP -> VP -> Cl` constructor, and `VerbSqi.UseV` is the current Albanian `V -> VP` path. The same-category update preserves the constructor-produced `Cl` shape rather than fabricating a fresh reduced `Cl`.
+
+**Surface policy:** This compile probe deliberately preserves the existing Albanian surface order. It does not copy Estonian, Russian, or Romance punctuation/quotation behavior.
+
+**Scope:**
+- change only `sc_FrontComplDirectVS` functionally;
+- leave `sc_FrontComplDirectVQ` unchanged because it already completes PMCFG;
+- do not alter later scaffolding functions until verbose evidence reaches them.
+
+**Separate open issue:** GF now warns that `Base/Cons/ConjComp` and `Base/Cons/ConjImp` have no linearizations under the inheritance-only configuration. This contradicts the previously assumed compiler completeness of that boundary. Do not silently reintroduce coordinator implementations; resolve the six constructors as one family in a later architecture decision.
+
+**Pass condition:** verbose GF 3.12 prints a completed PMCFG tuple for `FrontComplDirectVS` and advances further.
+
+---
+## ALB-DEC-035
+**Status:** diagnostic / non-final  
+**Area:** `ExtendSqi` / `FrontComplDirectVS` / PMCFG minimization  
+**Decision:** Reject the previously proposed `VS -> VQ` sibling cast and instead temporarily inherit `FrontComplDirectVS = variants {}` from the pinned `ExtendFunctor`.
+
+**Evidence:** fix12 compiled its changed scaffolding module, but GF 3.12 still crashed at the exact same `FrontComplDirectVS` PMCFG step immediately after `FrontComplDirectVQ` completed.
+
+**Why this is safer:** `VS` and `VQ` share a visible Albanian `Verb` representation, but they remain distinct abstract categories and compiled lock markers. The Albanian helper-reuse policy and Compendium retyping rules do not justify treating them as interchangeable merely because the visible record shape matches.
+
+**Functional scope:** remove exactly `FrontComplDirectVS` from the local subtraction list and remove exactly its local wiring. Leave the helper source present but unused so the experiment is reversible. Do not change the adjacent passing `FrontComplDirectVQ`.
+
+**Pass condition:** verbose GF prints a completed empty/inherited PMCFG tuple for `FrontComplDirectVS` and advances.
+
+**Failure condition:** if GF still crashes on the same symbol, stop Albanian realization edits and create a minimal GF/backend reproducer.
+
+---
+## ALB-DEC-036
+**Status:** provisional  
+**Area:** `ExtendSqi` / `FrontComplDirectVS` / exact-typed minimization  
+**Decision:** Promote the fix13r diagnostic result to evidence, restore Albanian ownership of `FrontComplDirectVS`, and test the smallest non-empty realization using only `PredVP np (UseV <lin V vs : V>)`, with `Utt` intentionally ignored.
+
+**Evidence — run `20260918_140731`:**
+- inherited `FrontComplDirectVS = variants {}` completes as `+ FrontComplDirectVS 9 (0,0)`;
+- GF advances through many later declarations;
+- the next observed hard failure is `PossPronRNP`, proving the previous `FrontComplDirectVS` position is no longer intrinsically fatal.
+
+**Reasoning:** This isolates the non-empty realization while preserving the exact abstract categories. The probe avoids the prohibited `VS -> VQ` cast and removes every reported-speech augmentation that was present in the failing fix12 helper.
+
+**Functional realization:**
+```gf
+sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl =
+  \np,vs,_ ->
+    PredVP np (UseV <lin V vs : V>) ;
+```
+
+**Pass condition:** verbose GF completes `FrontComplDirectVS` with a non-zero tuple and advances.
+
+**Failure condition:** if GF crashes again at `FrontComplDirectVS`, stop adding surface material and construct a minimal GF 3.12 reproducer for the exact non-empty constructor path.
+
+**Linguistic status:** incomplete by design; `Utt` is temporarily ignored only for compiler localization.
+
+---
+## ALB-DEC-037
+**Status:** compiler-confirmed / linguistically provisional  
+**Area:** `ExtendSqi` / `FrontComplDirectVS` / exact helper reuse  
+**Decision:** Promote fix14 as PMCFG-confirmed and reintroduce `Utt` by composing two exact-typed Albanian paths: `sc_ComplDirectVS : VS -> Utt -> VP` followed by `PredVP : NP -> VP -> Cl`.
+
+**Compiler evidence — run `20260918_153252`:**
+- `+ FrontComplDirectVQ 9 (1,1)`
+- `+ FrontComplDirectVS 9 (1,1)`
+- compiler advances to `PossPronRNP 324`, where the next hard backend crash occurs.
+
+**Functional realization:**
+```gf
+sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl =
+  \np,vs,utt ->
+    PredVP np (sc_ComplDirectVS vs utt) ;
+```
+
+**Why:** fix14 proves the non-empty `PredVP` + `UseV` skeleton is safe. `sc_ComplDirectVS` already composes `UseV` and `AdvVP` and its public `ComplDirectVS` wiring completes PMCFG. Reusing it is therefore more evidence-preserving than reconstructing a `Cl` string or inventing a category cast.
+
+**Pass condition:** `FrontComplDirectVS` remains a completed non-zero PMCFG entry and the run reaches the later blocker again or progresses beyond it.
+
+**Linguistic status:** still provisional. The function now consumes `Utt`, but the final fronted direct-speech order/punctuation must be validated separately after structural compilation stabilizes.
+
+---
+
+## ALB-DEC-038
+**Status:** accepted structural result / active blocker handoff  
+**Area:** `ExtendSqi` / `FrontComplDirectVS` confirmation / `PossPronRNP` PMCFG localization  
+**Decision:** Freeze the fix15 compositional implementation of `FrontComplDirectVS` as the current structurally accepted path, keep its linguistic direct-speech status provisional, and move the first-hard-blocker investigation to `PossPronRNP`.
+
+**Compiler evidence — run `20260918_153932`:**
+- `+ ComplDirectVQ 1 (1,1)`
+- `+ ComplDirectVS 1 (1,1)`
+- `+ FrontComplDirectVQ 9 (1,1)`
+- `+ FrontComplDirectVS 9 (1,1)`
+- GF advances through the remaining middle section and then prints `+ PossPronRNP 324` before the `GeneratePMCFG.hs` non-exhaustive-pattern crash.
+- no `missing lock_*` warning occurs in this run.
+- six boundary warnings remain: no linearization of `Base/Cons/ConjComp` and `Base/Cons/ConjImp`.
+
+**Accepted structural path:**
+```gf
+sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl =
+  \np,vs,utt ->
+    PredVP np (sc_ComplDirectVS vs utt) ;
+```
+
+**What this proves:**
+- the exact-typed `NP -> VS -> Utt -> Cl` Albanian composition is PMCFG-safe in the current source state;
+- the earlier `lin Cl` / manual surface-rewrite path is no longer needed for structural compilation;
+- compiler acceptance does **not** validate the final Albanian order, quoting, or punctuation of fronted direct speech.
+
+**Next evidence gate — `PossPronRNP`:**
+1. exact abstract signature `Pron -> Num -> CN -> RNP -> NP`;
+2. current Albanian `Pron`, `Num`, `CN`, `RNP`, and `NP` contracts;
+3. current `ExtendSqiRNP.gf` implementation and owner/wiring;
+4. Albanian core possessive constructors and their module availability;
+5. exact inherited/functor status;
+6. target NP producer/consumer requirements;
+7. compatible model-language corroboration only after the target contract is fixed.
+
+**Do not:**
+- reopen `FrontComplDirectVS` merely because `ExtendSqi` still fails later;
+- flatten `PossPronRNP` to a surface-only NP record;
+- patch functions after `PossPronRNP` before the first independent blocker is advanced;
+- treat the six Comp/Imp warnings as permission for piecemeal coordinator reintroduction.
+
+---
+
+## ALB-DEC-039
+**Status:** provisional / compile probe pending  
+**Area:** `ExtendSqiRNP` / `PossPronRNP` / rich NP construction  
+**Decision:** Replace the manual `lin NP` implementation of `PossPronRNP` with the existing Albanian noun-constructor chain:
+
+```gf
+rnp_PossPronRNP : CatSqi.Pron -> Num -> CN -> NP -> NP =
+  \pron,num,cn,rnp ->
+    DetCN
+      (DetQuant (PossPron pron) num)
+      (PossNP cn rnp) ;
+```
+
+**Evidence:**
+- exact abstract signature: `Pron -> Num -> CN -> RNP -> NP`;
+- pinned `ExtendFunctor` maps `RNP` to `Grammar.NP` but has no `PossPronRNP` implementation;
+- Albanian core `NounSqi` already defines `PossPron`, `DetQuant`, `PossNP`, and `DetCN`;
+- the returned Albanian `NP` is rich (`Case => Str` plus `Agr`), so direct final-record reconstruction should be avoided when the core constructor path exists;
+- Bulgarian, German, and Swedish at the pinned RGL revision independently use the same high-level `DetCN (DetQuant (PossPron ...)) (PossNP ...)` architecture.
+
+**Why the old implementation is suspect:** it manually concatenates pronoun, noun, and RNP surfaces and sets `a = pron.a`. That makes the agreement of the whole possessed NP follow the possessor pronoun rather than the possessed nominal head. The Albanian `DetCN` path derives agreement from `cn.g` and `num.n`, which is the current core nominal contract.
+
+**Scope:**
+- change only `rnp_PossPronRNP` functionally;
+- do not change coordinator wiring;
+- do not patch the next PMCFG declaration until this probe is rerun;
+- do not flatten the returned `NP`.
+
+**Compiler status:** not run after change.
+
+**Pass condition:** verbose GF prints a completed PMCFG tuple for `PossPronRNP` and advances.
+
+**Linguistic status:** provisional until targeted Albanian possessive/RNP examples validate surface order, genitive linking, case behavior, and agreement.
+
+---
+
+## ALB-DEC-040
+**Status:** provisional / compile probe pending  
+**Area:** `ExtendSqi` / `SlashBareV2S` / inheritance restoration  
+**Decision:** Promote fix16 as PMCFG-confirmed, then stop locally overriding `SlashBareV2S` and inherit the pinned `ExtendFunctor` implementation `SlashBareV2S = SlashV2S`.
+
+**Compiler evidence — run `20260918_205422`:**
+- `+ PossPronRNP 324 (28,28)` confirms fix16 structurally;
+- GF advances through later entries and then stops at `+ SlashBareV2S 1` with the same `GeneratePMCFG.hs` non-exhaustive-pattern crash;
+- no `missing lock_*` cluster appears;
+- the six `Base/Cons/ConjComp` and `Base/Cons/ConjImp` warnings remain separate boundary work.
+
+**Exact contract:**
+```gf
+SlashBareV2S : V2S -> S -> VPSlash ;
+```
+
+**Pinned inherited path:**
+```gf
+SlashBareV2S = SlashV2S ;
+```
+
+**Albanian core evidence:** `VerbSqi.SlashV2S` already returns `VPSlash` through the core verb/slash path and includes `v2s.c2.s`. The local scaffolding helper instead fabricates a fresh `lin VPSlash {s = ...}` and omits that complement material.
+
+**Architecture rationale:** Albanian policy says to inherit by default and override only with evidence of a real language-specific divergence. Here the inherited function has the exact signature and points directly at an existing Albanian core constructor, so the local override has no remaining burden-of-proof justification.
+
+**Functional scope:**
+- remove only `SlashBareV2S` from the subtraction list;
+- remove only its local coordinator wiring;
+- keep `sc_SlashBareV2S` source temporarily untouched for reversibility;
+- do not modify the next PMCFG declaration in the same probe.
+
+**Compiler status:** not run after fix17.
+
+**Pass condition:** verbose GF prints a completed PMCFG tuple for `SlashBareV2S` and advances.
+
+**Linguistic status:** provisional until targeted V2S/slash examples validate Albanian complement placement and saturation behavior.
+
+---
+
+## ALB-DEC-041
+**Status:** provisional / family compile probe pending  
+**Area:** `ExtendSqi` / `ExtendSqiScaffolding` / `Comp` + `Imp` list boundaries  
+**Decision:** Promote fix17 as PMCFG-confirmed, then implement `Base/Cons/ConjComp` and `Base/Cons/ConjImp` together as one Albanian string-list family in `ExtendSqiScaffolding`, with exact `ListComp` / `ListImp` retyping kept in the thin coordinator.
+
+**Compiler evidence — run `20260918_210629`:**
+- `+ SlashBareV2S 1 (1,1)` confirms fix17 structurally;
+- GF continues through the remaining named entries and reaches `+ youPolPl_Pron 1 (1,1)`;
+- the backend then crashes during final PMCFG generation;
+- no final `ExtendSqi.gfo` is produced; only `ExtendSqi.gfo.tmp...` remains;
+- the six `no linearization` warnings for `Base/Cons/ConjComp` and `Base/Cons/ConjImp` are still present.
+
+**Target-category evidence:**
+- `CatSqi.Comp = {s : Str}`;
+- `CatSqi.Imp = {s : Str}`;
+- `CatSqi.Conj = {s : Str}`;
+- `ExtendSqi` already declares `[Comp] = {init,last : Str}` and `[Imp] = {init,last : Str}`;
+- `ConjunctionSqi` already implements the same Base/Cons/Conj string-list architecture for `S`, `Adv`, `AdV`, `IAdv`, and `RS`.
+
+**Inheritance evidence:** pinned `ExtendFunctor` has no implementation for these six functions, so this is not an inheritance-restoration case like fix17.
+
+**Implementation rule:**
+- implement all six or none;
+- family logic belongs in `ExtendSqiScaffolding.gf`;
+- `ExtendSqi.gf` contains only exact-category wiring and `lin ListComp` / `lin ListImp` boundary retyping;
+- do not add dummy strings, `variants {}`, cross-category casts, or direct category redesign;
+- keep VPS/VPI/VPS2/VPI2 ownership inherited and untouched.
+
+**Compiler status:** not run after fix18.
+
+**Acceptance:**
+1. all six missing-linearization warnings disappear;
+2. no new category/lock warning appears;
+3. if `ExtendSqi.gfo` is produced, fix18 is a strong root-cause candidate;
+4. if the warnings disappear but the final PMCFG crash remains, keep the family only if structurally clean and continue backend minimization.
+
+**Linguistic status:** provisional; compile success does not validate Albanian coordination semantics.
+
+---

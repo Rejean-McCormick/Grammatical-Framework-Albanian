@@ -1,8 +1,9 @@
 # ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX
 
-Status: target matrix for the current development cycle  
+Status: normative ownership matrix for the current development cycle  
 Scope: `GF/lib/src/albanian/ExtendSqi.gf` and its companion extension modules  
-Authority order: current codedump > Albanian architecture docs > `ExtendFunctor` default path > model-language comparison
+Live run state: see `CURRENT_REPAIR_STATE.md`  
+Authority: exact abstract contract + current Albanian category/source contract > exact inherited/functor source > accepted Albanian architecture > compatible model-language corroboration; current compiler output is authoritative for build facts on the same source state
 
 ---
 
@@ -12,7 +13,7 @@ This matrix assumes the following decisions are already locked for this cycle:
 
 - `ExtendSqi.gf` is a **thin coordinator**.
 - Companion modules align to `ExtendSqi.gf`, not the other way around.
-- The VPS/VPI/VPS2/VPI2/list-family remains **inherited from `ExtendFunctor`** in this cycle.
+- The VPS/VPI/VPS2/VPI2 family and **its VP-series list categories** remain inherited from `ExtendFunctor` in this cycle.
 - No `ExtendSqiVPS.gf` will be introduced in this cycle.
 - No local override is accepted unless there is Albanian-specific evidence or a clear structural need.
 - Each override family must be coherent as a family; no one-off drift.
@@ -97,6 +98,11 @@ These remain inherited from `ExtendFunctor` and must **not** be reintroduced as 
 - `ConsVPS2`
 - `BaseVPI2`
 - `ConsVPI2`
+
+### Active boundary-family implementation — `Comp` / `Imp` lists
+
+The following six functions are treated as **one coherent local family** in fix18:
+
 - `BaseComp`
 - `ConsComp`
 - `ConjComp`
@@ -104,11 +110,21 @@ These remain inherited from `ExtendFunctor` and must **not** be reintroduced as 
 - `ConsImp`
 - `ConjImp`
 
+Current ownership candidate:
+
+- family logic: `ExtendSqiScaffolding.gf`;
+- category boundary and exact lock-safe wiring: `ExtendSqi.gf`;
+- inherited `ExtendFunctor`: no implementation for these six functions.
+
+Evidence: Albanian `Comp`, `Imp`, and `Conj` are string-shaped; `[Comp]` and `[Imp]` are already `{init,last : Str}` boundaries; `ConjunctionSqi` provides the native Albanian Base/Cons/Conj pattern for other string-shaped categories. Run `20260918_210629` still reports all six linearizations missing after all named PMCFG entries otherwise complete.
+
+**Compiler status:** fix18 pending validation. The family must be accepted or rejected as a unit.
+
 ### Rationale
-This family previously failed when it was partially localized. In this cycle, maturity is better served by stable inheritance than by half-complete local machinery.
+The former inheritance-only status was not compiler-complete because `ExtendFunctor` contains no implementation for this family. A bounded local family is now justified by exact target-category compatibility and an existing Albanian coordination pattern; this does not authorize re-localizing the inherited VPS/VPI families.
 
 ### Drift-control consequence
-If current code locally owns any function listed above, that is a **coordinator drift bug** and must be fixed before accepting the coordinator as stable.
+Do not implement only a subset of these six functions, and do not place their string-building logic directly in the thin coordinator. Any future redesign must update the whole family and its tests together.
 
 ---
 
@@ -198,15 +214,15 @@ Legend:
 | `UttDatNP` | override | `ExtendSqiScaffolding.gf` | NP case behavior | only valid case use |
 | `UttAdV` | override | `ExtendSqiScaffolding.gf` | `Utt` shape | safe utterance coercion |
 | `UttVPShort` | override | `ExtendSqiScaffolding.gf` | `Utt` shape | safe utterance coercion |
-| `ComplBareVS` | override | `ExtendSqiScaffolding.gf` | VS/VP shape | no tense-side drift |
-| `SlashBareV2S` | override | `ExtendSqiScaffolding.gf` | VPSlash shape | no partial records |
-| `ComplDirectVS` | override | `ExtendSqiScaffolding.gf` | VS/VP/Utt shapes | no partial records |
-| `ComplDirectVQ` | override | `ExtendSqiScaffolding.gf` | VQ/VP/Utt shapes | no partial records |
-| `FrontComplDirectVS` | override | `ExtendSqiScaffolding.gf` | Cl shape | no partial records |
-| `FrontComplDirectVQ` | override | `ExtendSqiScaffolding.gf` | Cl shape | no partial records |
+| `ComplBareVS` | override | `VerbSqi.gf` via `ComplVS` (wired by `ExtendSqi.gf`) | verbose PMCFG localization + exact `VS -> S -> VP` signature + Albanian core constructor + model-language corroboration | **PMCFG-confirmed 2026-09-18** (`+ ComplBareVS 1 (1,1)`); structural path accepted by GF 3.12; linguistic/golden validation remains pending |
+| `SlashBareV2S` | **inherit** | `ExtendFunctor.gf` -> Albanian core `SlashV2S` | exact `V2S -> S -> VPSlash` signature + pinned functor alias + Albanian `VerbSqi.SlashV2S` | **PMCFG-confirmed in run `20260918_210629`** as `+ SlashBareV2S 1 (1,1)`; linguistic slash realization remains provisional |
+| `ComplDirectVS` | override | `ExtendSqiScaffolding.gf` | verbose PMCFG localization + VS/VP/Utt shapes + Albanian core `UseV`/`AdvVP` composition | **PMCFG-confirmed 2026-09-18** (`+ ComplDirectVS 1 (1,1)`); `Utt.s` preservation accepted structurally; linguistic punctuation/quotation validation remains pending |
+| `ComplDirectVQ` | override | `ExtendSqiScaffolding.gf` | verbose PMCFG localization + VQ/VP/Utt shapes + Albanian core `UseV`/`AdvVP` composition | **PMCFG-confirmed 2026-09-18** (`+ ComplDirectVQ 1 (1,1)`); `Utt.s` preservation accepted structurally; linguistic punctuation/quotation validation remains pending |
+| `FrontComplDirectVS` | override | `ExtendSqiScaffolding.gf` | fix13r empty path + fix14 exact-typed path + fix15 exact helper composition; latest run `20260918_153932` | **PMCFG-confirmed structurally** (`+ FrontComplDirectVS 9 (1,1)`) with `PredVP np (sc_ComplDirectVS vs utt)`; no `VS -> VQ` cast/direct `lin Cl`/record update; **linguistic fronting/order/punctuation remains provisional** |
+| `FrontComplDirectVQ` | override | `ExtendSqiScaffolding.gf` | Cl shape | **PMCFG-confirmed 2026-09-18** (`+ FrontComplDirectVQ 9 (1,1)`); current implementation is compiler-accepted, but canonical Cl-constructor/punctuation review remains separate |
 | `PredIAdvVP` | override | `ExtendSqiScaffolding.gf` | QCl shape | no partial records |
 | `ApposNP` | override | `ExtendSqiScaffolding.gf` | NP record shape | agreement preserved |
-| `ComplGenVV` | override | `ExtendSqiScaffolding.gf` | abstract signature + `CommonX` contract | no `TenseSqi` leakage |
+| `ComplGenVV` | override | `ExtendSqiScaffolding.gf` | verbose PMCFG localization + abstract signature + `CommonX` contract + Albanian core `ComplVV` | **PMCFG-confirmed 2026-09-18** (`+ ComplGenVV 4 (1,1)`); structural reuse of `ComplVV` accepted by GF 3.12; `Ant`/`Pol` remain a documented linguistic gap requiring separate design |
 | `CompoundN` | override | `ExtendSqiScaffolding.gf` | N shape | no ad hoc flattening |
 | `GerundCN` | override | `ExtendSqiScaffolding.gf` | CN helper ownership | uses helper, not ad hoc CN |
 | `GerundNP` | override | `ExtendSqiScaffolding.gf` | NP helper ownership | uses helper, not ad hoc NP |
@@ -358,7 +374,7 @@ This subsystem compiles with no contract-shape errors and no accidental `TenseSq
 | `AdvRVP` | override | `ExtendSqiRNP.gf` | VP/prep attachment evidence | category shape preserved |
 | `AdvRAP` | override | `ExtendSqiRNP.gf` | AP/prep attachment evidence | category shape preserved |
 | `ReflA2RNP` | override | `ExtendSqiRNP.gf` | AP/reflexive evidence | category shape preserved |
-| `PossPronRNP` | override | `ExtendSqiRNP.gf` | possessive pronoun evidence | agreement preserved |
+| `PossPronRNP` | override | `ExtendSqiRNP.gf` | exact `Pron -> Num -> CN -> RNP -> NP` signature + Albanian `PossPron`/`DetQuant`/`PossNP`/`DetCN` constructor chain + pinned Bulgarian/German/Swedish corroboration | **PMCFG-confirmed in run `20260918_205422`** as `+ PossPronRNP 324 (28,28)`; linguistic possessive/RNP validation remains provisional |
 | `ConjRNP` | override | `ExtendSqiRNP.gf` | NP coordination evidence | coherent list behavior |
 | `Base_rr_RNP` | override | `ExtendSqiRNP.gf` | list behavior evidence | coherent list behavior |
 | `Base_nr_RNP` | override | `ExtendSqiRNP.gf` | list behavior evidence | coherent list behavior |
@@ -464,6 +480,8 @@ Do not allow:
 
 ## 10. Current cycle execution order
 
+The architecture order remains:
+
 1. Scaffolding boundary (`ExtendSqiScaffolding.gf`, `ExtendSqiHelpers.gf`)
 2. Coordinator lock (`ExtendSqi.gf`)
 3. VP bridge (`ExtendSqiVPBridge.gf`)
@@ -474,6 +492,8 @@ Do not allow:
 8. Lexical tail (`ExtendSqiLexicon.gf`)
 9. Structural cleanup outside `Extend` (`StructuralSqi.gf`, `StructuralSqiClause.gf`)
 10. Full validation through `GrammarSqi` and `SyntaxSqi`
+
+For the **live repair cursor**, always use `CURRENT_REPAIR_STATE.md`; do not infer the next code target from this architecture ordering alone.
 
 ---
 
@@ -495,7 +515,28 @@ At the end of this cycle:
 
 - `ExtendSqi.gf` is a stable thin coordinator.
 - Every local override belongs to one of the canonical companion modules.
-- The VPS/VPI/VPS2/VPI2/list-family remains inherited and stable.
+- The VPS/VPI/VPS2/VPI2 family and its VP-series list categories remain inherited; the separate Comp/Imp list-constructor boundary is resolved coherently before final closure.
 - All companion modules compile cleanly.
 - Structural warnings are reduced to the point that Albanian behaves like a mature GF language rather than an exploratory extension layer.
 - The matrix and the coordinator agree on ownership, inheritance, and family boundaries.
+---
+
+---
+
+## 13. Live state and repair chronology policy
+
+This matrix is normative and must stay compact. Per-run experiments and rejected hypotheses are **not** maintained here.
+
+- Current compiler state and next blocker: `CURRENT_REPAIR_STATE.md`
+- Chronological repair evidence: `ALBANIAN_DECISION_LOG.md`
+- Current symbol maturity: `ALBANIAN_SYMBOL_STATUS_LEDGER.md`
+
+The fix11–fix15 sequence is preserved in `ALB-DEC-033` through `ALB-DEC-038`. Only the stable conclusions are retained in the matrix rows above.
+
+### Stable conclusions retained from that sequence
+
+- VPS/VPI/VPS2/VPI2 local coordinator ownership was drift and remains removed.
+- `FrontComplDirectVS` is structurally PMCFG-confirmed through exact Albanian composition; linguistic direct-speech validation is still pending.
+- `PossPronRNP` is PMCFG-confirmed under fix16.
+- `SlashBareV2S` inheritance is PMCFG-confirmed under fix17 as `(1,1)`.
+- the six `Base/Cons/ConjComp` and `Base/Cons/ConjImp` functions are now one bounded fix18 family candidate, not six independent ad hoc fixes.

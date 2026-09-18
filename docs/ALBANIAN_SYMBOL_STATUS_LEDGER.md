@@ -114,6 +114,27 @@ Use this when:
 - but a stale explanatory comment or historical note is still present in the codebase,
 - and that note is now dangerous enough to deserve explicit tracking.
 
+### 4.8 Validation axes for active repair entries
+
+`primary_status` remains the maturity/risk label above. For symbols currently participating in compile repair, also record two orthogonal fields so compiler progress is never confused with linguistic completion.
+
+**`compiler_status`** must use one of:
+- `not_run`
+- `compile_blocked`
+- `pmcfg_blocked`
+- `pmcfg_confirmed`
+- `full_compile_pass`
+- `warning_missing_linearizations`
+- `pmcfg_incomplete_by_design`
+
+**`linguistic_status`** must use one of:
+- `unvalidated`
+- `provisional`
+- `targeted_validated`
+- `regression_validated`
+
+A symbol may therefore be `pmcfg_confirmed` and still only `provisional` linguistically. That is the expected state for several current `ExtendSqi` repairs.
+
 ---
 
 ## 5. Required fields for every entry
@@ -133,6 +154,8 @@ Every tracked entry in this ledger should record:
 - `related_docs`
 
 When relevant, also record:
+- `compiler_status`
+- `linguistic_status`
 - `current_blocked_by`
 - `downstream_effect`
 - `notes`
@@ -550,3 +573,168 @@ A symbol is safe only when:
 - and its known failure modes are visible.
 
 That is the function of this ledger.
+### Entry: `ComplBareVS`
+- **kind:** symbol
+- **current_owner:** Albanian core `VerbSqi.ComplVS`, wired by `ExtendSqi.gf`
+- **current_location:** `ExtendSqi` scaffolding override family
+- **primary_status:** `warning`
+- **why_this_status:** GF 3.12 now completes `ComplBareVS` as `+ ComplBareVS 1 (1,1)` through the Albanian core `ComplVS` path. Structural/PMCFG validation is therefore positive, but targeted linguistic/golden validation is still pending.
+- **allowed_use:** direct `ComplBareVS = ComplVS` compile probe only
+- **forbidden_use:** treating the probe as validated before the next `Quick -> ExtendSqi.gf` verbose run; extrapolating the result to later VS/VQ helpers without evidence
+- **exit_criteria:**
+  1. verbose GF 3.12 advances past `ComplBareVS` with a completed statistics tuple,
+  2. `ExtendSqi.gfo` is produced or the next PMCFG hotspot is identified,
+  3. no new warnings are introduced by the alias,
+  4. after confirmation, dead scaffold code is cleaned up and documentation is promoted from provisional
+- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
+- **related_docs:** override matrix, decision log, model-language comparison
+- **notes:** the same run already compiles `VerbSqi.gfo`, and the available Bulgarian model language uses `ComplBareVS = ComplVS`.
+
+---
+### Entry: `ComplDirectVQ`
+- **kind:** symbol
+- **current_owner:** `ExtendSqiScaffolding.gf`
+- **current_location:** `sc_ComplDirectVQ`, wired by `ExtendSqi.gf`
+- **primary_status:** `warning`
+- **why_this_status:** GF 3.12 now completes `ComplDirectVQ` as `+ ComplDirectVQ 1 (1,1)` through Albanian core `UseV`/`AdvVP`. Structural/PMCFG validation is positive; direct-speech punctuation/quotation behavior still needs targeted Albanian validation.
+- **allowed_use:** bounded compile probe preserving `Utt.s`
+- **forbidden_use:** copying punctuation or quotation conventions from model languages; pre-emptively changing `ComplDirectVS` or fronted variants before compiler evidence reaches them
+- **exit_criteria:**
+  1. verbose GF 3.12 prints a completed PMCFG statistics tuple for `ComplDirectVQ`,
+  2. the run advances to the next function or emits `ExtendSqi.gfo`,
+  3. no new type/lock warnings are introduced,
+  4. the implementation is then promoted or revised based on linguistic tests
+- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
+- **related_docs:** override matrix, decision log, Compendium evidence/maturity rules
+
+---
+
+### Entry: `ComplDirectVS`
+- **kind:** symbol
+- **current_owner:** `ExtendSqiScaffolding.gf`
+- **current_location:** `sc_ComplDirectVS`, wired by `ExtendSqi.gf`
+- **primary_status:** `warning`
+- **why_this_status:** GF 3.12 now completes `ComplDirectVS` as `+ ComplDirectVS 1 (1,1)` through Albanian core `UseV`/`AdvVP`. Structural/PMCFG validation is positive; direct-speech punctuation/quotation behavior still needs targeted Albanian validation.
+- **allowed_use:** bounded compile probe preserving `Utt.s`
+- **forbidden_use:** copying model-language punctuation/quotation policy; pre-emptively changing fronted/direct-complement neighbors without compiler evidence
+- **exit_criteria:**
+  1. verbose GF 3.12 prints a completed PMCFG statistics tuple for `ComplDirectVS`,
+  2. the run advances to the next function or emits `ExtendSqi.gfo`,
+  3. no new type/lock warnings are introduced,
+  4. targeted Albanian direct-speech tests are added before promotion to stable
+- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
+- **related_docs:** override matrix, decision log, Compendium evidence/maturity rules
+
+---
+
+### Entry: `ComplGenVV`
+- **kind:** symbol
+- **current_owner:** `ExtendSqiScaffolding.gf`
+- **current_location:** `sc_ComplGenVV`, wired by `ExtendSqi.gf`
+- **primary_status:** `warning`
+- **why_this_status:** GF 3.12 now completes `ComplGenVV` as `+ ComplGenVV 4 (1,1)` through Albanian core `ComplVV`. Structural/PMCFG validation is positive; `Ant`/`Pol` remain a documented linguistic gap.
+- **allowed_use:** bounded structural compile probe `\vv,_,_,vp -> ComplVV vv vp`
+- **forbidden_use:** claiming full generalized-VV semantics; importing `TenseSqi` representations into this `CommonX`-contract path; pre-emptively modifying later functions
+- **known_semantic_gap:** anteriority and polarity arguments remain ignored exactly as in the previous Albanian implementation
+- **exit_criteria:**
+  1. verbose GF 3.12 prints a completed PMCFG statistics tuple for `ComplGenVV`,
+  2. the run advances to the next function or emits `ExtendSqi.gfo`,
+  3. no new type/lock warnings are introduced,
+  4. after structural stabilization, design and test an Albanian realization for `Ant`/`Pol` before promotion to stable
+- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
+- **related_docs:** override matrix, decision log, `CommonX` contract, Compendium evidence/maturity rules
+
+---
+
+### Entry: inherited `VPS/VPI/VPS2/VPI2` coordinator family
+- **kind:** architecture/family
+- **current_owner:** `ExtendFunctor` for this development cycle
+- **current_location:** inherited through `ExtendSqi`; explicit shallow boundary `lincat` declarations remain in `ExtendSqi.gf`
+- **primary_status:** `warning`
+- **why_this_status:** fix11 is compiler-confirmed to advance beyond the previous local `ComplVPIVV` crash. Inherited `variants {}` family members now generate `(0,0)` PMCFG entries as expected for incomplete coverage. The family remains warning-state because the Comp/Imp list constructors expose six missing-linearization warnings.
+- **allowed_use:** inherited family plus documented boundary `lincat` declarations only
+- **forbidden_use:** one-off local reintroduction of `MkVPS`, `MkVPI`, `ComplVPIVV`, list constructors, VPS2/VPI2 functions, or Comp/Imp list machinery without first changing the override matrix
+- **known_gap:** several inherited `ExtendFunctor` linearizers are `variants {}` and therefore represent explicit incomplete coverage, not linguistic completion
+- **exit_criteria:**
+  1. verbose GF 3.12 advances beyond the prior local `ComplVPIVV` hotspot or emits `ExtendSqi.gfo`,
+  2. no inherited family member is again present in the subtraction list,
+  3. no inherited family function is locally wired in the coordinator,
+  4. any later ownership change is family-wide, evidence-backed, and synchronized with the matrix/decision log
+- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
+- **related_docs:** ALB-DEC-022, ALB-DEC-033, override matrix, lockfield/boundary guide
+
+---
+
+### Entry: `FrontComplDirectVS`
+- **kind:** symbol
+- **current_owner:** `ExtendSqiScaffolding.gf`
+- **current_location:** `sc_FrontComplDirectVS`, wired by `ExtendSqi.gf`
+- **primary_status:** `warning`
+- **compiler_status:** `pmcfg_confirmed`
+- **linguistic_status:** `provisional`
+- **why_this_status:** run `20260918_153932` confirms the fix15 exact-helper composition as `+ FrontComplDirectVS 9 (1,1)` and GF advances to `PossPronRNP`. Structural PMCFG acceptance is therefore positive. Final fronted direct-speech order, quotation, and punctuation remain unvalidated.
+- **allowed_use:** current structural path `\np,vs,utt -> PredVP np (sc_ComplDirectVS vs utt)`
+- **forbidden_use:** `VS -> VQ` cast; direct fresh `Cl` reconstruction; treating PMCFG success as proof of final Albanian direct-speech realization
+- **known_semantic_gap:** final fronting/order/punctuation policy remains open
+- **exit_criteria:**
+  1. targeted Albanian direct-speech examples establish the intended word order and punctuation,
+  2. regression tests cover both `FrontComplDirectVS` and `FrontComplDirectVQ`,
+  3. full `ExtendSqi` compilation succeeds after downstream blockers are repaired,
+  4. only then promote linguistic status beyond `provisional`
+- **related_tests:** verbose `Quick -> ExtendSqi.gf`; direct-speech subsystem tests
+- **related_docs:** ALB-DEC-035 through ALB-DEC-038, override matrix, minimal test suite, lock/retype rules
+
+
+### Entry: `Comp/Imp` list constructor family
+- **kind:** architecture/family
+- **current_owner_candidate:** `ExtendSqiScaffolding.gf` for family logic; `ExtendSqi.gf` for exact list-category wiring
+- **current_location:** `ListComp` / `ListImp` boundary in `ExtendSqi`
+- **primary_status:** `temporary family probe`
+- **compiler_status:** `not_run_after_change`
+- **linguistic_status:** `provisional`
+- **previous_evidence:** run `20260918_210629` reaches the final named PMCFG entry but still emits all six `no linearization` warnings before the final backend crash
+- **current_fix18_candidate:** implement `BaseComp`, `ConsComp`, `ConjComp`, `BaseImp`, `ConsImp`, `ConjImp` together using the current Albanian string-list coordination pattern
+- **why_this_status:** `ExtendFunctor` supplies no family implementation; Albanian `Comp`, `Imp`, `Conj`, `ListComp`, and `ListImp` are representation-compatible with the existing target-language string-list pattern in `ConjunctionSqi`
+- **allowed_use:** one coherent six-function probe with exact `lin ListComp` / `lin ListImp` boundary retyping
+- **forbidden_use:** piecemeal implementation; dummy strings; unrestricted variants; moving string-building logic into the coordinator; changing inherited VPS/VPI ownership
+- **exit_criteria:**
+  1. all six missing-linearization warnings disappear,
+  2. no new lock/category warning appears,
+  3. final PMCFG behavior is recorded explicitly,
+  4. targeted coordination tests are added before linguistic promotion
+- **related_tests:** full verbose `Quick -> ExtendSqi.gf`; later Comp/Imp coordination tests
+- **related_docs:** ALB-DEC-041, override matrix, current repair state, open questions
+
+### Entry: `PossPronRNP`
+- **kind:** symbol
+- **current_owner:** `ExtendSqiRNP.gf`
+- **current_location:** `rnp_PossPronRNP`, wired by `ExtendSqi.gf`
+- **primary_status:** `accepted structural path`
+- **compiler_status:** `pmcfg_confirmed` (`28,28`)
+- **linguistic_status:** `provisional`
+- **compiler_evidence:** run `20260918_205422` prints `+ PossPronRNP 324 (28,28)` and advances
+- **current_implementation:** `DetCN (DetQuant (PossPron pron) num) (PossNP cn rnp)`
+- **why_this_status:** fix16 replaces manual final-NP reconstruction with the Albanian core possessive/determiner chain and is now compiler-confirmed. This settles structural PMCFG safety, not final possessive/RNP surface correctness.
+- **allowed_use:** keep fix16 implementation while downstream hard blockers are repaired
+- **forbidden_use:** reverting to the old manual `lin NP` without new evidence; treating `(28,28)` as final linguistic validation
+- **exit_criteria:** targeted Albanian possessive/RNP tests validate case behavior, agreement, surface order, and genitive linking; full `ExtendSqi` build eventually succeeds
+- **related_tests:** verbose `Quick -> ExtendSqi.gf`; later possessive/RNP generation tests
+- **related_docs:** ALB-DEC-038 through ALB-DEC-040, override matrix, current repair state
+
+### Entry: `SlashBareV2S`
+- **kind:** symbol
+- **current_owner:** inherited `ExtendFunctor.gf` -> Albanian core `VerbSqi.SlashV2S`
+- **previous_owner:** local coordinator override using `ExtendSqiScaffolding.sc_SlashBareV2S`
+- **primary_status:** `accepted structural path`
+- **compiler_status:** `pmcfg_confirmed` (`1,1`)
+- **linguistic_status:** `provisional`
+- **compiler_evidence:** run `20260918_210629` prints `+ SlashBareV2S 1 (1,1)` and advances through the remaining named declarations
+- **current_implementation:** pinned inherited `SlashBareV2S = SlashV2S`
+- **why_this_status:** fix17 removes an unnecessary local fresh-`VPSlash` reconstruction and restores the exact inherited core path; PMCFG now completes the symbol
+- **allowed_use:** keep inherited path; remove the now-dead `sc_SlashBareV2S` helper only in a later cleanup patch
+- **forbidden_use:** restoring the old manual helper without new evidence; treating `(1,1)` as final linguistic validation
+- **exit_criteria:** targeted V2S/slash tests validate complement placement and saturation; dead helper cleanup completed; full language regression passes
+- **related_tests:** verbose `Quick -> ExtendSqi.gf`; later V2S/slash behavior tests
+- **related_docs:** ALB-DEC-040, ALB-DEC-041, override matrix, current repair state
+
+---

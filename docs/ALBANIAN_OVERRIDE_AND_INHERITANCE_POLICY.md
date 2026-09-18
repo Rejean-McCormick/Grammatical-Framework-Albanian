@@ -912,17 +912,27 @@ A documented lincat shape is not by itself a license to write `lin Cat { ... }` 
 
 Constructor availability must be checked in the **actual module context** and against the **current codedump/compiler reality**.
 
-### 16.5 Current-codedump rule
+### 16.5 Contract authority vs empirical build authority
 
-When architecture docs, inferred category shape, and live compiler behavior pull apart, the authority order for concrete coding decisions is:
+Do not collapse type/semantic authority and build evidence into one ranking.
 
-1. current compiler error and current source dump,
-2. exact abstract signature,
-3. current Albanian lincat and core constructor path,
-4. architecture docs,
-5. model-language comparison.
+**For contracts and legal implementation shape:**
 
-The docs remain the authority for architecture, but the current repository remains the authority for what compiles now.
+1. exact current abstract signature or type declaration,
+2. current Albanian lincat/category contract plus relevant producers, consumers, and public constructors,
+3. exact inherited/functor/interface source,
+4. accepted Albanian architecture and ownership decisions,
+5. target-language linguistic evidence where realization semantics are at issue,
+6. architecture-compatible model-language comparison,
+7. comments/history last.
+
+**For claims about what compiles now:**
+
+1. compiler/test result from the exact current source state and GF/RGL revision,
+2. the current source dump that produced that result,
+3. prior runs only as historical evidence.
+
+A compiler result can invalidate a claim that a particular implementation compiles, but compiler success does not redefine the abstract signature, prove category equivalence, or establish linguistic correctness.
 
 ### 16.6 Comment-authority rule
 

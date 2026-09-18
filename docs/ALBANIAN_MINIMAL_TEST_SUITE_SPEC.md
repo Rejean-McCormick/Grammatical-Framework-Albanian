@@ -522,7 +522,11 @@ Must verify:
 - coherent use of the inherited `NP` / `ListNP` strategy unless a different coherent design is explicitly adopted,
 - list-category preservation,
 - no member left behind on a different representation,
-- no ad hoc string-only list replacement.
+- no ad hoc string-only list replacement,
+- `PossPronRNP` preserves the full returned `NP` case table and agreement,
+- possessive-pronoun person/number combinations are tested with both singular and plural `Num` where supported,
+- the RNP complement is realized under the intended Albanian case/government policy rather than a model-language assumption,
+- the exact core possessive constructor path (if used) is exercised through `ExtendSqi` rather than only in isolation.
 
 ## 8.4 Prepositional government suite
 
@@ -553,6 +557,30 @@ Must verify:
 - category border is explicit,
 - exact target preserved,
 - no borrowed helper from a neighbor category without proof.
+
+## 8.5a Direct-speech / fronted-complement suite
+
+Used to cover:
+- `ComplDirectVS`
+- `ComplDirectVQ`
+- `FrontComplDirectVS`
+- `FrontComplDirectVQ`
+
+Must separate **structural compiler acceptance** from **linguistic realization validation**.
+
+Structural checks:
+- exact abstract categories are preserved (`VS` is never retyped as `VQ` merely because both use `Verb` visibly),
+- implementation uses category-compatible Albanian constructors/helpers,
+- verbose PMCFG completes a non-zero tuple for the local override,
+- no direct fresh `Cl`/`VP` record is introduced when a validated constructor path exists.
+
+Linguistic checks:
+- reported utterance order is correct for Albanian,
+- quotation and punctuation policy is explicitly chosen from Albanian evidence,
+- subject/reporting-verb order is validated,
+- `VS` and `VQ` fronted forms are tested separately.
+
+Current structural regression anchor: run `20260918_153932` must not regress `FrontComplDirectVS 9 (1,1)`.
 
 ## 8.6 Focus/AP helper discipline suite
 

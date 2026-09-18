@@ -12,7 +12,7 @@ It does **not** replace the Albanian phase plan, the final-target architecture d
 - acceptance rules for temporary shallow fallbacks versus category-preserving Albanian paths
 - drift prevention when current code, current logs, and current ownership docs disagree
 
-Use this document when a change compiles in isolation but the **full `ExtendSqi` build still warns or crashes**.
+Use this document when a change compiles in isolation but the **full `ExtendSqi` build still warns or crashes**. For the current run/blocker snapshot, read `CURRENT_REPAIR_STATE.md` first.
 
 ## What this document is for
 
@@ -375,14 +375,21 @@ Prioritize warnings in this order:
 
 ### Current live example
 
-At the time of writing, the live first-warning example is `vp_A2VPSlash`, followed by many coordinator-wired lock warnings and a final crash in `GeneratePMCFG.hs`.
+The historical `vp_A2VPSlash` lock-warning cluster is **not the current live state**.
 
-That pattern means:
+In run `20260918_153932`:
 
-- start with VP bridge
-- do not start by cleaning lexical tail or RNP in isolation
-- check whether the coordinator/functor boundary is amplifying the damage
-- check whether inherited functions are being locally owned against the matrix
+- there is no `missing lock_*` warning cluster;
+- `FrontComplDirectVS` completes as `+ FrontComplDirectVS 9 (1,1)`;
+- the first hard PMCFG blocker is `+ PossPronRNP 324`;
+- six separate boundary warnings report no linearization for `Base/Cons/ConjComp` and `Base/Cons/ConjImp`.
+
+Operational consequence:
+
+- use raw verbose PMCFG order to localize the first hard blocker;
+- treat historical lock-warning examples as lessons, not current facts;
+- work the `PossPronRNP` RNP/NP contract next;
+- keep the Comp/Imp warnings as one unresolved boundary family rather than scattering one-off fixes.
 
 ---
 
@@ -505,9 +512,23 @@ This family includes:
 ### Rules
 
 - Start with inherited `NP`/`ListNP` behavior.
-- Bulgarian is the first model-language comparison for this family.
+- For the current `PossPronRNP` blocker, freeze the exact abstract signature and Albanian `Pron/Num/CN/RNP/NP` contracts before touching code.
+- Inspect Albanian core possessive constructors/producers before any model language.
+- Bulgarian is the first model-language comparison for this family **after** target contracts are known; German/Swedish may corroborate only when the representation matches.
+- Preserve the full returned `NP` case table and agreement; do not replace it with a surface-only compatibility record.
 - If custom list behavior is required, redesign the RNP list family together.
 - Do not keep obsolete coordinator wiring for abstract functions that are not actually present.
+
+### Current RNP hard hotspot
+
+Run `20260918_153932` reaches:
+
+```text
++ PossPronRNP 324
+<GeneratePMCFG non-exhaustive-pattern crash>
+```
+
+Do not patch later RNP or lexical functions until `PossPronRNP` either completes a PMCFG tuple or is proven to be a backend-level failure independent of its Albanian realization.
 
 ### Typical red flags
 
@@ -617,23 +638,25 @@ A patch is only ready when all items below are true.
 
 Maintain this section during active repair.
 
-### First-warning hotspot
+### Current first hard blocker
 
-- `vp_A2VPSlash`
+- `PossPronRNP` — PMCFG crash after `+ PossPronRNP 324` in run `20260918_153932`
+
+### Current lock-warning status
+
+- no `missing lock_*` warnings in the latest run
+- historical lock-warning hotspots remain regression lessons, not current blocker labels
 
 ### Current subsystem watchlist
 
-- VP bridge family
-- APCN family
-- existential family
-- RNP family
-- DAP wrappers
-- any coordinator-wired function still emitting `lock_*` in full `ExtendSqi`
+- RNP family, with `PossPronRNP` first
+- fronted direct-speech family for later linguistic validation only (`FrontComplDirectVS` is structurally PMCFG-confirmed)
+- DAP wrappers and AP/CN/existential families as regression zones, not current first blockers
 
 ### Current boundary watchlist
 
-- `Comp` / `Imp` coordination families
-- `VPI` / `VPI2` / `VPS` / `VPS2` families
+- `Base/Cons/ConjComp` and `Base/Cons/ConjImp`: six current `no linearization` warnings, one unresolved family
+- `VPI` / `VPI2` / `VPS` / `VPS2`: inherited `(0,0)` coverage remains incomplete by design this cycle
 - list-family `lincat` insertion by default
 - any inherited function still subtracted in `ExtendSqi.gf`
 

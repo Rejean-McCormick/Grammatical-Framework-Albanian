@@ -33,14 +33,15 @@ Out of scope:
 
 ## Current Status Snapshot
 
-### What has already become clearer
-- `PrepCN` should not be treated as a `CN`-returning override.
-- The `RNP` family cannot be safely treated as a collection of flat strings.
-- The active blocker moved beyond the earliest `PrepCN` and `ReflPoss` failures.
-- The current run history shows that category-shape errors and lock-field warnings are the recurring pattern, especially around AP/CN-related functions and existential constructors.
+### Latest live facts — run `20260918_210629`
+- `PossPronRNP` remains PMCFG-confirmed as `(28,28)` under fix16.
+- `SlashBareV2S` is PMCFG-confirmed as `(1,1)` under fix17.
+- GF reaches the final named PMCFG declaration, then crashes during backend finalization.
+- The latest run has **no `missing lock_*` warning cluster**.
+- Six `no linearization` warnings remain for `Base/Cons/ConjComp` and `Base/Cons/ConjImp`; they are now the first unresolved structural family.
 
 ### What this means
-The remaining problems are mostly **structural** rather than lexical. The main unresolved area is how Albanian should preserve or inherit full category shapes instead of flattening them to strings.
+The immediate repair target is the **Comp/Imp list boundary family**, not another isolated extension symbol. Its six functions must be treated as one family because they share category shape, list representation, coordination behavior, warning state, and ownership decision.
 
 ---
 
@@ -54,12 +55,43 @@ The remaining problems are mostly **structural** rather than lexical. The main u
 
 ## P0 — Compile-Critical Open Questions
 
+### Q0. Does the Albanian `Comp` / `Imp` boundary family close the final PMCFG failure when implemented coherently?
+
+**Priority:** P0 — first unresolved structural family after fix17  
+**Symbols:** `BaseComp`, `ConsComp`, `ConjComp`, `BaseImp`, `ConsImp`, `ConjImp`  
+**Owner candidate:** `ExtendSqiScaffolding.gf` with thin coordinator wiring
+
+**Current compiler evidence:**
+- run `20260918_210629` completes `SlashBareV2S` as `(1,1)`;
+- GF completes every later named declaration through `youPolPl_Pron`;
+- all six Comp/Imp linearizations are still reported missing;
+- backend PMCFG finalization then crashes and no final `ExtendSqi.gfo` is produced.
+
+**Current category evidence:**
+- `Comp = {s : Str}`;
+- `Imp = {s : Str}`;
+- `Conj = {s : Str}`;
+- `[Comp] = {init,last : Str}` and `[Imp] = {init,last : Str}` in `ExtendSqi`;
+- `ConjunctionSqi` already implements the same string-list Base/Cons/Conj pattern for several Albanian categories.
+
+**Evidence-backed fix18 hypothesis:**
+- implement all six together using the native Albanian string-list pattern;
+- keep exact `ListComp` / `ListImp` retyping in the coordinator to preserve category locks;
+- do not alter VPS/VPI inheritance or use model-language record shapes.
+
+**Closure criterion:**
+- all six warnings disappear;
+- no new lock/category warnings appear;
+- record whether final `ExtendSqi.gfo` is produced;
+- if PMCFG still fails after warnings disappear, reclassify the six functions as structurally repaired but not causal to the remaining backend crash.
+
+---
 ### Q1. What is the final correct implementation strategy for `PredAPVP`?
 
 **Subsystem:** AP/VP interaction
 
 **Current state:**
-- This has surfaced as the most recent top type error in the latest run family.
+- This was a historical top type-shape blocker. It is **not** the current first failure in run `20260918_153932`; keep it open as a regression/design question until the compiler reaches and validates it in the stabilized chain.
 - Historical Albanian implementations flattened AP to a surface string and combined it directly with VP.
 - That strategy is structurally suspect because it discards full AP shape.
 
@@ -190,6 +222,8 @@ The remaining problems are mostly **structural** rather than lexical. The main u
 **Current state:**
 - The earliest Albanian snapshot treated this family as flat strings.
 - Later repair attempts moved toward inherited `NP/ListNP` behavior.
+- Current verbose run `20260918_153932` makes `PossPronRNP` the first hard PMCFG blocker in this family.
+- Several RNP list/attachment functions already complete before that point, which is useful local evidence but does not by itself validate the whole family.
 - Bulgarian and German both show that the whole family must be treated as one subsystem.
 
 **Known facts:**

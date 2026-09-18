@@ -10,10 +10,55 @@ resource ExtendSqiScaffolding =
     -- - preserve current working Albanian category shapes
     -- - keep boundary-safe Albanian glue here only for functions
     --   that are actually owned by scaffolding in this cycle
-    -- - VPS/VPI and Comp/Imp list ownership lives in ExtendSqi itself,
-    --   because GF 3.12 ExtendFunctor leaves their lincats incomplete
+    -- - VPS/VPI/VPS2/VPI2 logic remains inherited from ExtendFunctor
+    --   in this cycle; explicit boundary lincats in ExtendSqi do not transfer
+    --   function ownership.
+    -- - Comp/Imp list constructors are owned here as one bounded family in
+    --   fix18 because ExtendFunctor supplies no implementation and GF 3.12
+    --   reports all six linearizations missing.
     -- =========================================================
 
+    -- =========================================================
+    -- COMP / IMP LIST BOUNDARY FAMILY
+    -- Mirrors the current Albanian string-list coordination pattern from
+    -- ConjunctionSqi, while keeping ListComp/ListImp category retyping in
+    -- the concrete coordinator where their hidden category locks exist.
+    -- =========================================================
+
+    sc_StrListBoundary : Type = {init, last : Str} ;
+
+    sc_compImpCommaSep : Str = ", " ;
+
+    sc_compImpConjSep : Conj -> Str =
+      \c -> " " ++ c.s ++ " " ;
+
+    sc_BaseComp : Comp -> Comp -> sc_StrListBoundary =
+      \x,y -> {init = x.s ; last = y.s} ;
+
+    sc_ConsComp : Comp -> sc_StrListBoundary -> sc_StrListBoundary =
+      \x,xs -> {
+        init = x.s ++ sc_compImpCommaSep ++ xs.init ;
+        last = xs.last
+      } ;
+
+    sc_ConjComp : Conj -> sc_StrListBoundary -> Comp =
+      \c,xs -> lin Comp {
+        s = xs.init ++ sc_compImpConjSep c ++ xs.last
+      } ;
+
+    sc_BaseImp : Imp -> Imp -> sc_StrListBoundary =
+      \x,y -> {init = x.s ; last = y.s} ;
+
+    sc_ConsImp : Imp -> sc_StrListBoundary -> sc_StrListBoundary =
+      \x,xs -> {
+        init = x.s ++ sc_compImpCommaSep ++ xs.init ;
+        last = xs.last
+      } ;
+
+    sc_ConjImp : Conj -> sc_StrListBoundary -> Imp =
+      \c,xs -> lin Imp {
+        s = xs.init ++ sc_compImpConjSep c ++ xs.last
+      } ;
     -- =========================================================
     -- GENITIVE / REL-SLASH BOUNDARY
     -- =========================================================
@@ -109,14 +154,20 @@ resource ExtendSqiScaffolding =
       \v2s,s -> lin VPSlash {s = verbPres3sg v2s ++ wordSep ++ s.s} ;
 
     sc_ComplDirectVS : VS -> Utt -> VP =
-      \vs,utt -> lin VP {s = verbPres3sg vs ++ wordSep ++ utt.s} ;
+      \vs,utt ->
+        AdvVP
+          (UseV <lin V vs : V>)
+          (lin Adv {s = utt.s}) ;
 
     sc_ComplDirectVQ : VQ -> Utt -> VP =
-      \vq,utt -> lin VP {s = verbPres3sg vq ++ wordSep ++ utt.s} ;
+      \vq,utt ->
+        AdvVP
+          (UseV <lin V vq : V>)
+          (lin Adv {s = utt.s}) ;
 
     sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl =
       \np,vs,utt ->
-        lin Cl {s = np.s ! R.Nom ++ wordSep ++ utt.s ++ wordSep ++ verbPres3sg vs} ;
+        PredVP np (sc_ComplDirectVS vs utt) ;
 
     sc_FrontComplDirectVQ : NP -> VQ -> Utt -> Cl =
       \np,vq,utt ->
@@ -132,7 +183,7 @@ resource ExtendSqiScaffolding =
       } ;
 
     sc_ComplGenVV : VV -> Ant -> Pol -> VP -> VP =
-      \vv,_,_,vp -> lin VP {s = verbPres3sg vv ++ wordSep ++ vp.s} ;
+      \vv,_,_,vp -> ComplVV vv vp ;
 
     sc_CompoundN : N -> N -> N =
       \n1,_ -> n1 ;

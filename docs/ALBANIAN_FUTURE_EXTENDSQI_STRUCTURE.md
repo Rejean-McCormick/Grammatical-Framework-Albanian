@@ -291,9 +291,9 @@ concrete ExtendSqi of Extend =
 
 This is the operational control map for `ExtendSqi`.
 
-## 8.1 Scaffolding / list wrappers
+## 8.1 VP-series scaffolding / list wrappers
 
-These are expected to be shallow unless Albanian proves otherwise.
+These VP-series items are expected to remain shallow/inherited in the current cycle unless Albanian evidence proves otherwise. Boundary lincats do not transfer function ownership.
 
 * `MkVPS`
 * `ConjVPS`
@@ -319,6 +319,17 @@ These are expected to be shallow unless Albanian proves otherwise.
 * `ConsVPS2`
 * `BaseVPI2`
 * `ConsVPI2`
+
+### Exit condition
+
+* no shape drift introduced into rich categories
+* wrappers remain visibly shallow
+* inherited `variants {}` remain explicitly incomplete rather than being presented as linguistic coverage
+
+## 8.1a `Comp` / `Imp` list-constructor boundary — unresolved
+
+Do **not** classify the following six functions as ordinary inherited/shallow wrappers until the GF 3.12 warning family is resolved:
+
 * `BaseComp`
 * `ConsComp`
 * `ConjComp`
@@ -326,10 +337,13 @@ These are expected to be shallow unless Albanian proves otherwise.
 * `ConsImp`
 * `ConjImp`
 
+Current full `ExtendSqi` builds report `no linearization` for all six. Treat them as one family-level ownership/implementation question. Do not reintroduce them piecemeal in the coordinator.
+
 ### Exit condition
 
-* no shape drift introduced into rich categories
-* wrappers remain visibly shallow
+* one coherent ownership decision covers all six functions
+* the six warnings disappear in the full build
+* the override matrix, decision log, and symbol ledger agree with the final boundary
 
 ---
 
@@ -878,4 +892,3 @@ with:
 * explicit cross-file ownership rules
 * explicit subsystem exit criteria
 * minimal local reinvention of inherited grammar paths
-

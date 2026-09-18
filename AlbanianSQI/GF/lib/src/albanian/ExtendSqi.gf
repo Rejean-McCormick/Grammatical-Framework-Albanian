@@ -4,10 +4,10 @@
 -- POLICY:
 -- 1. ExtendFunctor is the default source of structure.
 -- 2. ExtendSqi.gf remains a thin coordinator only.
--- 3. GF 3.12 ExtendFunctor does NOT provide lincats for the VPS/VPI/VPS2/VPI2
---    and list families; Albanian must own these explicitly.
--- 4. Keep that local ownership shallow and compatible with CatSqi's current
---    string-oriented VP layer; do not let GF insert default lincats.
+-- 3. The VPS/VPI/VPS2/VPI2/list family remains inherited from ExtendFunctor
+--    in this development cycle, per ALB-DEC-022 and the override matrix.
+-- 4. Local lincats below are boundary declarations only: they make the
+--    inherited shallow family explicit and do not transfer function ownership.
 -- 5. Companion modules own Albanian-specific subsystem logic.
 -- 6. Rich-category safety is enforced in subsystem modules, not here.
 
@@ -21,21 +21,17 @@ concrete ExtendSqi of Extend =
     PiedPipingQuestSlash, PiedPipingRelSlash, StrandQuestSlash, StrandRelSlash, EmptyRelSlash,
     ProDrop, AdAdV, PositAdVAdj, IAdvAdv, CompS, CompQS, CompVP,
     UttAccIP, UttDatIP, UttAccNP, UttDatNP, UttAdV, UttVPShort,
-    ComplBareVS, SlashBareV2S, ComplDirectVS, ComplDirectVQ, FrontComplDirectVS, FrontComplDirectVQ,
+    ComplBareVS, ComplDirectVS, ComplDirectVQ, FrontComplDirectVS, FrontComplDirectVQ,
     PredIAdvVP, ApposNP, ComplGenVV, CompoundN,
     GerundCN, GerundNP, GerundAdv, UncontractedNeg, TPastSimple, ComplSlashPartLast,
     DetNPMasc, DetNPFem, UseComp_estar, UseComp_ser, SubjRelNP, SubjunctRelCN,
 
     -- =========================================================
     -- VP-SERIES SUBSYSTEM
-    -- ExtendFunctor leaves these categories structurally incomplete.
+    -- Inherited from ExtendFunctor in this cycle.
+    -- Boundary lincats remain explicit below, but no family member is
+    -- subtracted or locally reimplemented here.
     -- =========================================================
-    VPS, ListVPS, VPI, ListVPI,
-    VPS2, ListVPS2, VPI2, ListVPI2,
-    MkVPS, BaseVPS, ConsVPS, ConjVPS, PredVPS, SQuestVPS, QuestVPS, RelVPS,
-    MkVPI, BaseVPI, ConsVPI, ConjVPI, ComplVPIVV,
-    MkVPS2, BaseVPS2, ConsVPS2, ConjVPS2, ComplVPS2, ReflVPS2,
-    MkVPI2, BaseVPI2, ConsVPI2, ConjVPI2, ComplVPI2,
 
     -- =========================================================
     -- LEXICAL TAIL
@@ -88,10 +84,11 @@ concrete ExtendSqi of Extend =
 
   lincat
     -- =========================================================
-    -- VP-SERIES / CONJUNCTION LIST TYPES
-    -- GF 3.12 otherwise inserts default lincats for these Extend families
-    -- and then crashes in PMCFG generation.  CatSqi's VP layer is currently
-    -- surface-string based, so keep these categories shallow but explicit.
+    -- VP-SERIES / CONJUNCTION LIST BOUNDARIES
+    -- VPS/VPI/VPS2/VPI2 ownership remains inherited from ExtendFunctor.
+    -- [Comp]/[Imp] stay shallow boundary lincats, but their Base/Cons/Conj
+    -- functions are wired below to the single family implementation owned
+    -- by ExtendSqiScaffolding in fix18.
     -- =========================================================
     VPS   = {s : Str} ;
     [VPS] = {init, last : Str} ;
@@ -108,45 +105,23 @@ concrete ExtendSqi of Extend =
 
   lin
     -- =========================================================
-    -- VP-SERIES SUBSYSTEM
-    -- Mirrors the shallow VPS/VPI behavior already used by ExtraSqi while
-    -- completing the full Extend family, including VPS2/VPI2 and lists.
+    -- COMP / IMP LIST BOUNDARY FAMILY
+    -- Coordinator wiring only; family logic lives in ExtendSqiScaffolding.
+    -- Exact ListComp/ListImp retyping is kept here to preserve category locks.
     -- =========================================================
-    MkVPS t p vp = {s = vp.s} ;
-    BaseVPS x y = {init = x.s ; last = y.s} ;
-    ConsVPS x xs = {init = x.s ++ "," ++ H.wordSep ++ xs.init ; last = xs.last} ;
-    ConjVPS c xs = {s = xs.init ++ H.wordSep ++ c.s ++ H.wordSep ++ xs.last} ;
-    PredVPS np vps = {s = np.s ! R.Nom ++ H.wordSep ++ vps.s} ;
-    SQuestVPS np vps = {s = np.s ! R.Nom ++ H.wordSep ++ vps.s} ;
-    QuestVPS ip vps = {s = ip.s ++ H.wordSep ++ vps.s} ;
-    RelVPS rp vps = {s = rp.s ++ H.wordSep ++ vps.s} ;
+    BaseComp x1 x2 =
+      lin ListComp (sc_BaseComp (lin Comp x1) (lin Comp x2)) ;
+    ConsComp x1 x2 =
+      lin ListComp (sc_ConsComp (lin Comp x1) (lin ListComp x2)) ;
+    ConjComp x1 x2 =
+      sc_ConjComp (lin Conj x1) (lin ListComp x2) ;
 
-    MkVPI vp = {s = vp.s} ;
-    BaseVPI x y = {init = x.s ; last = y.s} ;
-    ConsVPI x xs = {init = x.s ++ "," ++ H.wordSep ++ xs.init ; last = xs.last} ;
-    ConjVPI c xs = {s = xs.init ++ H.wordSep ++ c.s ++ H.wordSep ++ xs.last} ;
-    ComplVPIVV vv vpi = {s = H.verbPres3sg vv ++ H.wordSep ++ vpi.s} ;
-
-    MkVPS2 t p vps = {s = vps.s} ;
-    BaseVPS2 x y = {init = x.s ; last = y.s} ;
-    ConsVPS2 x xs = {init = x.s ++ "," ++ H.wordSep ++ xs.init ; last = xs.last} ;
-    ConjVPS2 c xs = {s = xs.init ++ H.wordSep ++ c.s ++ H.wordSep ++ xs.last} ;
-    ComplVPS2 vps np = {s = vps.s ++ H.wordSep ++ np.s ! R.Acc} ;
-    ReflVPS2 vps rnp = {s = vps.s ++ H.wordSep ++ rnp.s ! R.Acc} ;
-
-    MkVPI2 vps = {s = vps.s} ;
-    BaseVPI2 x y = {init = x.s ; last = y.s} ;
-    ConsVPI2 x xs = {init = x.s ++ "," ++ H.wordSep ++ xs.init ; last = xs.last} ;
-    ConjVPI2 c xs = {s = xs.init ++ H.wordSep ++ c.s ++ H.wordSep ++ xs.last} ;
-    ComplVPI2 vpi np = {s = vpi.s ++ H.wordSep ++ np.s ! R.Acc} ;
-
-    BaseComp x y = {init = x.s ; last = y.s} ;
-    ConsComp x xs = {init = x.s ++ "," ++ H.wordSep ++ xs.init ; last = xs.last} ;
-    ConjComp c xs = {s = xs.init ++ H.wordSep ++ c.s ++ H.wordSep ++ xs.last} ;
-
-    BaseImp x y = {init = x.s ; last = y.s} ;
-    ConsImp x xs = {init = x.s ++ "," ++ H.wordSep ++ xs.init ; last = xs.last} ;
-    ConjImp c xs = {s = xs.init ++ H.wordSep ++ c.s ++ H.wordSep ++ xs.last} ;
+    BaseImp x1 x2 =
+      lin ListImp (sc_BaseImp (lin Imp x1) (lin Imp x2)) ;
+    ConsImp x1 x2 =
+      lin ListImp (sc_ConsImp (lin Imp x1) (lin ListImp x2)) ;
+    ConjImp x1 x2 =
+      sc_ConjImp (lin Conj x1) (lin ListImp x2) ;
 
     -- =========================================================
     -- SCAFFOLDING SUBSYSTEM
@@ -175,8 +150,7 @@ concrete ExtendSqi of Extend =
     UttDatNP x1 = sc_UttDatNP (lin NP x1) ;
     UttAdV x1 = sc_UttAdV (lin AdV x1) ;
     UttVPShort x1 = sc_UttVPShort (lin VP x1) ;
-    ComplBareVS x1 x2 = sc_ComplBareVS (lin VS x1) (lin S x2) ;
-    SlashBareV2S x1 x2 = sc_SlashBareV2S (lin V2S x1) (lin S x2) ;
+    ComplBareVS = ComplVS ;
     ComplDirectVS x1 x2 = sc_ComplDirectVS (lin VS x1) (lin Utt x2) ;
     ComplDirectVQ x1 x2 = sc_ComplDirectVQ (lin VQ x1) (lin Utt x2) ;
     FrontComplDirectVS x1 x2 x3 = sc_FrontComplDirectVS (lin NP x1) (lin VS x2) (lin Utt x3) ;

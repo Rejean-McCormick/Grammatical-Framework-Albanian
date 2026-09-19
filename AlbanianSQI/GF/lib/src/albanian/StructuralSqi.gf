@@ -129,9 +129,7 @@ lin
   can8know_VV = SV.can8know_VV ;
   can_VV = SV.can_VV ;
   want_VV = SV.want_VV ;
+  must_VV = SV.must_VV ;
   have_V2 = SV.have_V2 ;
-
-  -- Keep disabled until the crash source is isolated in the verbal helper.
-  -- must_VV = SV.must_VV ;
 
 } ;

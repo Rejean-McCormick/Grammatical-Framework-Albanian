@@ -13,6 +13,7 @@ concrete SymbolSqi of Symbol = CatSqi
       \numStr,n,g,cnCase ->
         lin NP {
           s = \\c => numStr ++ cnCase ! c ;
+          acc_clit = [] ; dat_clit = [] ;
           a = agr3 n g
         } ;
 
@@ -47,7 +48,7 @@ concrete SymbolSqi of Symbol = CatSqi
     SymbNum symb = mkCard symb.s ;
 
     SymbOrd symb =
-      lin Ord {s = symb.s} ;
+      lin Ord {s = \\_,_,_ => symb.s} ;
 
     SymbS symb = symb ;
 
@@ -70,6 +71,7 @@ concrete SymbolSqi of Symbol = CatSqi
       in
       lin NP {
         s = \\c => cnCaseWithDet d n ! c ++ syms.s ;
+        acc_clit = [] ; dat_clit = [] ;
         a = agr3 d.n n.g
       } ;
 

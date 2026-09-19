@@ -1,1 +1,5 @@
-concrete AllSqi of AllSqiAbs = LangSqi ** {} ;
+concrete AllSqi of AllSqiAbs =
+  LangSqi,
+  ExtendSqi,
+  IrregSqi
+  ** {}

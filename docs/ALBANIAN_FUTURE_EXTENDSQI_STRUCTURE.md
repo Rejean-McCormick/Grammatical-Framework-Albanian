@@ -87,13 +87,12 @@ These must not be flattened unless the target category is genuinely shallow:
 
 ### 4.2 String-like categories
 
-These may be realized by shallow `{s : Str}` assembly only when that matches Albanian core behavior **and no later consumer requires grammatical information that would be lost by flattening**:
+These may be realized by shallow `{s : Str}` assembly only when that matches Albanian core behavior:
 
-- some clause-level extension wrappers;
-- many utterance-level extension wrappers;
-- other terminal categories whose Albanian lincat is genuinely shallow.
-
-`VPS`, `VPI`, `VPS2`, and `VPI2` are **not presumed string-like final categories during Completion**. Their historical shallow boundary lincats were stabilization scaffolding, not a final linguistic contract.
+- many clause-level extension wrappers
+- many `VPS` / `VPI` wrappers
+- many utterance-level extension wrappers
+- other categories whose Albanian lincat is already shallow
 
 ### 4.3 Non-negotiable rule
 
@@ -292,72 +291,61 @@ concrete ExtendSqi of Extend =
 
 This is the operational control map for `ExtendSqi`.
 
-## 8.1 VPS/VPI completion subsystem
+## 8.1 VP-series scaffolding / list wrappers
 
-The VPS/VPI/VPS2/VPI2 family is the first major post-v0.1.0 Completion target.
-
-The final Albanian verbal realization contract is defined by `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`. The family remains inherited/provisional only while the live implementation/evidence state in `CURRENT_REPAIR_STATE.md` has not established a safe ownership transition.
-
-Functions in scope:
+These VP-series items are expected to remain shallow/inherited in the current cycle unless Albanian evidence proves otherwise. Boundary lincats do not transfer function ownership.
 
 * `MkVPS`
-* `BaseVPS`
-* `ConsVPS`
 * `ConjVPS`
 * `PredVPS`
 * `SQuestVPS`
 * `QuestVPS`
 * `RelVPS`
 * `MkVPI`
-* `BaseVPI`
-* `ConsVPI`
 * `ConjVPI`
 * `ComplVPIVV`
 * `MkVPS2`
-* `BaseVPS2`
-* `ConsVPS2`
 * `ConjVPS2`
 * `ComplVPS2`
 * `ReflVPS2`
 * `MkVPI2`
-* `BaseVPI2`
-* `ConsVPI2`
 * `ConjVPI2`
 * `ComplVPI2`
-
-### Representation rule
-
-Do not assume the historical `{s : Str}` boundary is the final family representation. Before local ownership is activated, determine which of the following must survive to later consumers:
-
-* agreement;
-* tense/anteriority;
-* polarity;
-* finite versus embedded realization;
-* open-complement government;
-* full-NP versus clitic realization;
-* reflexive/clitic ordering.
-
-Use EP004 deferred realization as the primary representation test. Introduce EP005-style slots only when Albanian behavior demonstrates independently movable material.
-
-### Ownership rule
-
-If the family becomes locally owned, its extension-level implementation belongs in `ExtendSqiVPS.gf`; `ExtendSqi.gf` remains wiring-only. General `VP`/`Cl` realization belongs in core modules.
+* `BaseVPS`
+* `ConsVPS`
+* `BaseVPI`
+* `ConsVPI`
+* `BaseVPS2`
+* `ConsVPS2`
+* `BaseVPI2`
+* `ConsVPI2`
 
 ### Exit condition
 
-* Wordbench scenarios prove agreement and `Temp`/`Pol` behavior;
-* no family member reconstructs grammatical information from an already emitted string;
-* VPI behavior is supported by Albanian linguistic evidence rather than model-language copying;
-* VPS2/VPI2 preserve the open complement until saturation;
-* required clitic behavior is tested where applicable;
-* `ExtendSqi`, `LangSqi`, and `AllSqi` compile after the family changes;
-* reviewed goldens exist before the family is called linguistically validated.
+* no shape drift introduced into rich categories
+* wrappers remain visibly shallow
+* inherited `variants {}` remain explicitly incomplete rather than being presented as linguistic coverage
 
-## 8.1a `Comp` / `Imp` list boundary — stabilized baseline
+## 8.1a `Comp` / `Imp` list-constructor boundary — unresolved
 
-The earlier `Base/Cons/ConjComp` and `Base/Cons/ConjImp` warning family belongs to the compiler-stabilization history. The v0.1.0 release gate now produces `ExtendSqi.gfo`.
+Do **not** classify the following six functions as ordinary inherited/shallow wrappers until the GF 3.12 warning family is resolved:
 
-Preserve the accepted implementation. Reopen it only if a concrete behavioral or compiler regression demonstrates a defect. It is not part of the active VPS/VPI Architecture Gate.
+* `BaseComp`
+* `ConsComp`
+* `ConjComp`
+* `BaseImp`
+* `ConsImp`
+* `ConjImp`
+
+Current full `ExtendSqi` builds report `no linearization` for all six. Treat them as one family-level ownership/implementation question. Do not reintroduce them piecemeal in the coordinator.
+
+### Exit condition
+
+* one coherent ownership decision covers all six functions
+* the six warnings disappear in the full build
+* the override matrix, decision log, and symbol ledger agree with the final boundary
+
+---
 
 ## 8.2 Existential subsystem
 
@@ -749,13 +737,13 @@ The preferred Albanian extension layout is:
 * `ExtendSqiRNP.gf` — reflexive NP / RNP subsystem
 * `ExtendSqiLexicon.gf` — extension-specific lexical tail only
 
-### Completion extension module
+### Conditional extension module
 
 Create:
 
 * `ExtendSqiVPS.gf`
 
-when the Architecture Gate has established a coherent Albanian contract and local ownership is activated for the:
+only if Albanian chooses to implement a **full custom override** for the:
 
 * `VPS`
 * `VPI`
@@ -763,7 +751,7 @@ when the Architecture Gate has established a coherent Albanian contract and loca
 * `VPI2`
 * list/coordinating wrapper family
 
-Until that gate is complete, the family remains inherited/provisional. Once ownership is activated, migrate the family coherently rather than through isolated overrides.
+If that family is not being implemented coherently as an Albanian subsystem, it should remain inherited from `ExtendFunctor`.
 
 ### File-creation rule
 
@@ -772,8 +760,7 @@ Create a new Albanian extension file only when all of the following are true:
 1. the functions form one coherent subsystem
 2. the subsystem cannot safely remain inherited from `ExtendFunctor`
 3. keeping the subsystem inside `ExtendSqi.gf` would reduce clarity or boundary control
-4. the Albanian target category shapes are understood from core modules and producer/consumer analysis
-5. Wordbench scenarios demonstrate why local ownership is required
+4. the Albanian target category shapes are already understood from core modules
 
 ### Do not create these by default
 

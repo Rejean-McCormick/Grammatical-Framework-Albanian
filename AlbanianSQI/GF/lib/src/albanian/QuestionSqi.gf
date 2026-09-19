@@ -1,70 +1,59 @@
--- FILE: QuestionSqi.gf
 concrete QuestionSqi of Question = CatSqi **
-  open ResSqi, Prelude in {
+  open Prelude, ParamX, ResSqi, ClauseSqiRes, (I = IrregSqi) in {
 
-  oper
-    questionSep : Str = " " ;
+  lincat QVP = VP ;
 
-  lincat
-    -- QVP is not defined in CatSqi, so we define it here.
-    QVP = {s : Str} ;
+lin
+  -- Standard polar questions are introduced by a.
+  QuestCl cl = {s = \t,ant,pol => "a" ++ cl.s ! t ! ant ! pol} ;
 
-  lin
-    AddAdvQVP qvp iadv =
-      {s = qvp.s ++ questionSep ++ iadv.s} ;
+  QuestVP ip vp = {
+    s = \t,ant,pol => ip.s ! Nom ++ realizeVP vp t ant pol ip.a
+  } ;
 
-    AdvIAdv iadv adv =
-      {s = iadv.s ++ questionSep ++ adv.s} ;
+  QuestSlash ip cl = {
+    s = \t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol
+  } ;
 
-    -- CatSqi: IP = {s : Str}
-    AdvIP ip adv =
-      {s = ip.s ++ questionSep ++ adv.s} ;
+  QuestIAdv iadv cl = {
+    s = \t,ant,pol => iadv.s ++ cl.s ! t ! ant ! pol
+  } ;
 
-    AdvQVP vp iadv =
-      {s = vp.s ++ questionSep ++ iadv.s} ;
+  QuestIComp icomp np = {
+    s = \t,ant,pol =>
+      let cop : VP = appendVP (emptyVP (lin Verb I.jam_V)) (\_ => np.s ! Nom)
+      in icomp.s ++ realizeVP cop t ant pol np.a
+  } ;
 
-    -- CatSqi: IComp = {s : Str}
-    CompIAdv iadv =
-      {s = iadv.s} ;
+  IdetCN idet cn = {
+    s = \c => idet.s ! c ! cn.g ++ cn.s ! Indef ! c ! idet.n ;
+    a = agrgP3 cn.g idet.n
+  } ;
 
-    CompIP ip =
-      {s = ip.s} ;
+  IdetIP idet = {
+    s = \c => idet.s ! c ! Masc ;
+    a = agrgP3 Masc idet.n
+  } ;
 
-    ComplSlashIP vpslash ip =
-      {s = vpslash.s ++ questionSep ++ ip.s} ;
+  AdvIP ip adv = ip ** {s = \c => ip.s ! c ++ adv.s} ;
 
-    -- CatSqi: IDet = {s : Str}, IP = {s : Str}, CN is Noun with
-    -- cn.s : Species => Case => Number => Str
-    -- Fallback: pick Indef/Nom/Sg.
-    IdetCN idet cn =
-      {s = idet.s ++ questionSep ++ cn.s ! Indef ! Nom ! Sg} ;
+  IdetQuant iq num = {
+    s = \c,g => iq.s ! c ! g ! num.n ++ num.s ;
+    n = num.n
+  } ;
 
-    IdetIP idet =
-      {s = idet.s} ;
+  PrepIP prep ip = {s = prep.s ++ ip.s ! prep.c} ;
+  AdvIAdv iadv adv = {s = iadv.s ++ adv.s} ;
+  CompIAdv iadv = {s = iadv.s} ;
+  CompIP ip = {s = ip.s ! Nom} ;
 
-    -- CatSqi: IQuant = {s : Str}
-    IdetQuant iquant num =
-      {s = iquant.s ++ questionSep ++ num.s} ;
+  ComplSlashIP sl ip = appendVP (vpFromSlash sl)
+    (\_ => sl.c2.s ++ ip.s ! sl.c2.c) ;
 
-    PrepIP prep ip =
-      {s = prep.s ++ questionSep ++ ip.s} ;
+  AdvQVP vp iadv = appendVP vp (\_ => iadv.s) ;
+  AddAdvQVP qvp iadv = appendVP qvp (\_ => iadv.s) ;
 
-    QuestCl cl =
-      {s = cl.s} ;
-
-    QuestIAdv iadv cl =
-      {s = iadv.s ++ questionSep ++ cl.s} ;
-
-    QuestIComp icomp np =
-      {s = icomp.s ++ questionSep ++ np.s ! Nom} ;
-
-    QuestQVP ip qvp =
-      {s = ip.s ++ questionSep ++ qvp.s} ;
-
-    QuestSlash ip clslash =
-      {s = ip.s ++ questionSep ++ clslash.s} ;
-
-    QuestVP ip vp =
-      {s = ip.s ++ questionSep ++ vp.s} ;
-
-} 
+  QuestQVP ip qvp = {
+    s = \t,ant,pol => ip.s ! Nom ++ realizeVP qvp t ant pol ip.a
+  } ;
+}

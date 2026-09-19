@@ -1,87 +1,47 @@
--- GF/lib/src/albanian/IdiomSqi.gf
-concrete IdiomSqi of Idiom = CatSqi ** open ResSqi, Prelude in {
-
+concrete IdiomSqi of Idiom = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRes in {
   oper
-    -- =========================================================
-    -- IDIOM SUBSYSTEM
-    -- Strategy:
-    -- - keep established Albanian idioms shallow and explicit
-    -- - do not pretend draft paths preserve richer structure than they do
-    -- - preserve full records with ** only when the target category remains
-    --   the same and only the surface string is being adjusted
-    -- =========================================================
+    defaultAgr : Agr = {gn=GSg Masc;p=P3} ;
+    p1plAgr : Agr = {gn=GPl;p=P1} ;
 
-    copBe    : Str = "është" ;
-    relThat  : Str = "që" ;
-    existV   : Str = "ka" ;
-    progPart : Str = "po" ;
-    letPart  : Str = "le" ++ "të" ;
-    selfWord : Str = "vetë" ;
+    subjVP : VP -> Agr -> Str = \vp,a -> realizeSubjVP vp Pos a ;
 
-    idiomNpNom : {s : Case => Str ; a : Agr} -> Str =
-      \np -> np.s ! Nom ;
+    existWord : ParamX.Tense -> Anteriority -> Agr -> Str = \t,ant,a ->
+      case ant of {
+        Simul => case t of {
+          ParamX.Pres => "ka" ; ParamX.Past => "pati" ;
+          ParamX.Fut => "do të ketë" ; ParamX.Cond => "do të kishte"
+        } ;
+        Anter => haveAux!t!agrNumber a!a.p ++ "pasur"
+      } ;
 
   lin
-    -- it is here she slept
-    CleftAdv adv s =
-      {s = copBe ++ adv.s ++ relThat ++ s.s} ;
+    ImpersCl vp = {s=\\t,a,p=>realizeVP vp t a p defaultAgr} ;
+    GenericCl vp = {s=\\t,a,p=>"njeriu" ++ realizeVP vp t a p defaultAgr} ;
 
-    -- it is NP who/that ...
-    CleftNP np rs =
-      {s = copBe ++ idiomNpNom np ++ relThat ++ rs.s} ;
+    CleftNP np rs = {
+      s=\\_,_,_=>"është" ++ np.s!Nom ++ rs.s!np.a
+    } ;
+    CleftAdv adv s = {s=\\_,_,_=>"është" ++ adv.s ++ "që" ++ s.s} ;
 
-    -- which X are there
-    ExistIP ip =
-      {s = ip.s ++ existV} ;
+    ExistNP np = {
+      s=\\t,a,p=>negation p ++ existWord t a np.a ++ np.s!Acc
+    } ;
+    ExistIP ip = {
+      s=\\t,a,p=>ip.s!Acc ++ negation p ++ existWord t a ip.a
+    } ;
+    ExistNPAdv np adv = {
+      s=\\t,a,p=>(ExistNP np).s!t!a!p ++ adv.s
+    } ;
+    ExistIPAdv ip adv = {
+      s=\\t,a,p=>(ExistIP ip).s!t!a!p ++ adv.s
+    } ;
 
-    ExistIPAdv ip adv =
-      {s = ip.s ++ adv.s ++ existV} ;
+    ProgrVP vp = vp ** {cl=\\a=>"po" ++ vp.cl!a} ;
 
-    -- there is NP
-    ExistNP np =
-      {s = existV ++ idiomNpNom np} ;
+    ImpPl1 vp = {s="le" ++ subjVP vp p1plAgr} ;
+    ImpP3 np vp = {s="le" ++ np.s!Nom ++ subjVP vp np.a} ;
 
-    ExistNPAdv np adv =
-      {s = existV ++ idiomNpNom np ++ adv.s} ;
-
-    -- TEMPORARY / DRAFT:
-    -- no explicit Albanian generic-subject strategy has been surfaced here.
-    -- Keep this shallow rather than manufacturing a fake expletive/pronoun path.
-    GenericCl vp =
-      {s = vp.s} ;
-
-    -- TEMPORARY / DRAFT:
-    -- likewise, no explicit impersonal/expletive path is currently established.
-    ImpersCl vp =
-      {s = vp.s} ;
-
-    -- let NP VP
-    ImpP3 np vp =
-      {s = letPart ++ idiomNpNom np ++ vp.s} ;
-
-    -- let's VP
-    ImpPl1 vp =
-      {s = letPart ++ vp.s} ;
-
-    -- TEMPORARY / DRAFT:
-    -- progressive marking is currently realized with shallow "po" prefixing.
-    -- Preserve the VP record, but only adjust its surface string.
-    ProgrVP vp =
-      vp ** {s = progPart ++ vp.s} ;
-
-    -- TEMPORARY / DRAFT:
-    -- reflexive/emphatic self path remains a shallow suffix strategy.
-    -- Preserve the VP record, but only adjust its surface string.
-    SelfAdVVP vp =
-      vp ** {s = vp.s ++ selfWord} ;
-
-    -- Shallow Adv-like realization.
-    SelfAdvVP vp =
-      {s = vp.s ++ selfWord} ;
-
-    -- NP itself
-    SelfNP np =
-      {s = \\c => np.s ! c ++ selfWord ;
-       a = np.a} ;
-
-} ;
+    SelfAdvVP vp = vp ** {post=\\a=>vp.post!a ++ "vetë"} ;
+    SelfAdVVP vp = vp ** {cl=\\a=>"vetë" ++ vp.cl!a} ;
+    SelfNP np = np ** {s=\\c=>np.s!c ++ "vetë"} ;
+}

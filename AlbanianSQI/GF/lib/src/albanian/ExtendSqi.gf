@@ -14,6 +14,12 @@
 concrete ExtendSqi of Extend =
   CatSqi ** ExtendFunctor -
   [
+    VPS, ListVPS, VPI, ListVPI, VPS2, ListVPS2, VPI2, ListVPI2,
+    MkVPS, BaseVPS, ConsVPS, ConjVPS, PredVPS, QuestVPS, SQuestVPS, RelVPS,
+    MkVPI, BaseVPI, ConsVPI, ConjVPI, ComplVPIVV,
+    MkVPS2, BaseVPS2, ConsVPS2, ConjVPS2, ComplVPS2, ReflVPS2,
+    MkVPI2, BaseVPI2, ConsVPI2, ConjVPI2, ComplVPI2,
+    RNP, RNPList,
     -- =========================================================
     -- SCAFFOLDING SUBSYSTEM
     -- =========================================================
@@ -70,7 +76,7 @@ concrete ExtendSqi of Extend =
   ]
   with
     (Grammar = GrammarSqi) **
-  open Prelude,
+  open Prelude, (P = ParamX), ClauseSqiRes,
        (R = ResSqi),
        (H = ExtendSqiHelpers),
        ExtendSqiScaffolding,
@@ -83,27 +89,58 @@ concrete ExtendSqi of Extend =
   in {
 
   lincat
-    -- =========================================================
-    -- VP-SERIES / CONJUNCTION LIST BOUNDARIES
-    -- VPS/VPI/VPS2/VPI2 ownership remains inherited from ExtendFunctor.
-    -- [Comp]/[Imp] stay shallow boundary lincats, but their Base/Cons/Conj
-    -- functions are wired below to the single family implementation owned
-    -- by ExtendSqiScaffolding in fix18.
-    -- =========================================================
-    VPS   = {s : Str} ;
-    [VPS] = {init, last : Str} ;
-    VPI   = {s : Str} ;
-    [VPI] = {init, last : Str} ;
+    VPS   = {s : R.Agr => Str} ;
+    [VPS] = {first,last : R.Agr => Str} ;
+    VPI   = {s : R.Agr => Str} ;
+    [VPI] = {first,last : R.Agr => Str} ;
 
-    VPS2   = {s : Str} ;
-    [VPS2] = {init, last : Str} ;
-    VPI2   = {s : Str} ;
-    [VPI2] = {init, last : Str} ;
+    -- Shared-object coordination keeps the complement government alive.
+    -- The NP is saturated only by ComplVPS2/ComplVPI2.
+    VPS2   = {s : R.Agr => Str ; c2 : R.Compl} ;
+    [VPS2] = {first,last : R.Agr => Str ; c2 : R.Compl} ;
+    VPI2   = {s : R.Agr => Str ; c2 : R.Compl} ;
+    [VPI2] = {first,last : R.Agr => Str ; c2 : R.Compl} ;
 
-    [Comp] = {init, last : Str} ;
-    [Imp]  = {init, last : Str} ;
+    RNP = {s : R.Agr => R.Case => Str ; isPron : Bool} ;
+    RNPList = {first,last : R.Agr => R.Case => Str} ;
+
+    [Comp] = {init,last : R.Agr => Str} ;
+    [Imp]  = {init,last : P.Polarity => P.Number => Str} ;
 
   lin
+    -- =========================================================
+    -- FINITE / SUBJUNCTIVE VP COORDINATION
+    -- =========================================================
+    MkVPS t pol vp = {s=\a=>realizeVP vp t.t t.a pol.p a} ;
+    BaseVPS x y = {first=x.s; last=y.s} ;
+    ConsVPS x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last} ;
+    ConjVPS c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a} ;
+    PredVPS np x = {s=np.s!R.Nom ++ x.s!np.a} ;
+    SQuestVPS np x = {s="a" ++ np.s!R.Nom ++ x.s!np.a} ;
+    QuestVPS ip x = {s=ip.s!R.Nom ++ x.s!ip.a} ;
+    RelVPS rp x = {s=\a=>rp.s!R.Nom!a.gn ++ x.s!a} ;
+
+    MkVPI vp = {s=\a=>realizeSubjVP vp P.Pos a} ;
+    BaseVPI x y = {first=x.s; last=y.s} ;
+    ConsVPI x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last} ;
+    ConjVPI c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a} ;
+    ComplVPIVV vv x = appendVP (emptyVP vv) (\a=>x.s!a) ;
+
+    MkVPS2 t pol sl = {
+      s=\a=>realizeVP (vpFromSlash sl) t.t t.a pol.p a ; c2=sl.c2
+    } ;
+    BaseVPS2 x y = {first=x.s; last=y.s; c2=y.c2} ;
+    ConsVPS2 x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last; c2=xs.c2} ;
+    ConjVPS2 c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a; c2=xs.c2} ;
+    ComplVPS2 x np = {s=\a=>x.s!a ++ x.c2.s ++ np.s!x.c2.c} ;
+    ReflVPS2 x rnp = {s=\a=>x.s!a ++ x.c2.s ++ rnp.s!a!x.c2.c} ;
+
+    MkVPI2 sl = {s=\a=>realizeSubjVP (vpFromSlash sl) P.Pos a; c2=sl.c2} ;
+    BaseVPI2 x y = {first=x.s; last=y.s; c2=y.c2} ;
+    ConsVPI2 x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last; c2=xs.c2} ;
+    ConjVPI2 c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a; c2=xs.c2} ;
+    ComplVPI2 x np = {s=\a=>x.s!a ++ x.c2.s ++ np.s!x.c2.c} ;
+
     -- =========================================================
     -- COMP / IMP LIST BOUNDARY FAMILY
     -- Coordinator wiring only; family logic lives in ExtendSqiScaffolding.

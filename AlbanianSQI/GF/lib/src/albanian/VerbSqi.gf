@@ -1,112 +1,127 @@
--- GF/lib/src/albanian/VerbSqi.gf
+-- Albanian verb syntax with deferred realization.
 concrete VerbSqi of Verb = CatSqi **
-  open ResSqi, Prelude in {
+  open Prelude, ParamX, ResSqi, (I = IrregSqi) in {
 
   oper
-    copula   : Str = "është" ;
-    reflClit : Str = "u" ;
-    sp       : Str = " " ;
+    emptyAgrStr : Agr => Str = \_ => [] ;
 
-    join : Str -> Str -> Str = \x,y -> x ++ sp ++ y ;
+    baseVP : Verb -> VP = \v -> lin VP {
+      v = v ;
+      cl = emptyAgrStr ;
+      post = emptyAgrStr
+    } ;
 
-    vPred : Verb -> Str = \v ->
-      v.Indicative ! Pres ! Sg ! P3 ;
+    baseSlash : Verb -> Compl -> VPSlash = \v,c -> lin VPSlash {
+      v = v ;
+      cl = emptyAgrStr ;
+      post = emptyAgrStr ;
+      c2 = c
+    } ;
 
-    npNom : {s : Case => Str ; a : Agr} -> Str = \np -> np.s ! Nom ;
-    npAcc : {s : Case => Str ; a : Agr} -> Str = \np -> np.s ! Acc ;
+    slashToVP : VPSlash -> VP = \sl -> lin VP {
+      v = sl.v ; cl = sl.cl ; post = sl.post
+    } ;
 
-    apPred : {s : Species => Case => Gender => Number => Str} -> Str = \ap ->
-      ap.s ! Indef ! Nom ! Masc ! Sg ;
+    addPost : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
+      post = \\a => vp.post ! a ++ x ! a
+    } ;
 
-    cnPred : Noun -> Str = \cn ->
-      cn.s ! Indef ! Nom ! Sg ;
+    addPostSlash : VPSlash -> (Agr => Str) -> VPSlash = \vp,x -> vp ** {
+      post = \\a => vp.post ! a ++ x ! a
+    } ;
+
+    addClitic : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
+      cl = \\a => vp.cl ! a ++ x ! a
+    } ;
+
+    addCliticSlash : VPSlash -> (Agr => Str) -> VPSlash = \vp,x -> vp ** {
+      cl = \\a => vp.cl ! a ++ x ! a
+    } ;
+
+    vpiStr : VP -> Agr -> Str = \vp,a ->
+      teWithClitic (vp.cl ! a) ++ subjunctiveFinite vp.v a ++ vp.post ! a ;
+
+    slashVpiStr : VPSlash -> Agr -> Str = \vp,a ->
+      teWithClitic (vp.cl ! a) ++ subjunctiveFinite vp.v a ++ vp.post ! a ;
+
+    saturateSlash : VPSlash -> NP -> VP = \sl,np ->
+      let c : Case = sl.c2.c ;
+          cli : Str = case sl.c2.s of {
+            [] => case c of {Acc => np.acc_clit ; Dat => np.dat_clit ; _ => []} ;
+            _  => []
+          }
+      in case cli of {
+        [] => addPost (slashToVP sl) (\\_ => sl.c2.s ++ np.s ! c) ;
+        _  => addClitic (slashToVP sl) (\\_ => cli)
+      } ;
 
   lin
-    UseV v =
-      {s = vPred v} ;
+    UseV v = baseVP v ;
 
-    UseCopula =
-      {s = copula} ;
+    UseCopula = baseVP (lin Verb I.jam_V) ;
 
-    UseComp c =
-      {s = join copula c.s} ;
+    UseComp c = addPost (baseVP (lin Verb I.jam_V)) c.s ;
 
-    CompNP np =
-      {s = npNom np} ;
+    CompNP np = {s = \\_ => np.s ! Nom} ;
+    CompAP ap = {s = \\a => ap.s ! Indef ! Nom ! agrGender a ! agrNumber a} ;
+    CompCN cn = {s = \\a => cn.s ! Indef ! Nom ! agrNumber a} ;
+    CompAdv adv = {s = \\_ => adv.s} ;
 
-    CompAP ap =
-      {s = apPred ap} ;
+    AdvVP vp adv = addPost vp (\\_ => adv.s) ;
+    ExtAdvVP vp adv = addPost vp (\\_ => SOFT_BIND ++ "," ++ adv.s) ;
+    AdVVP adv vp = vp ** {post = \\a => adv.s ++ vp.post ! a} ;
 
-    CompCN cn =
-      {s = cnPred cn} ;
+    AdvVPSlash sl adv = addPostSlash sl (\\_ => adv.s) ;
+    AdVVPSlash adv sl = sl ** {post = \\a => adv.s ++ sl.post ! a} ;
 
-    CompAdv adv =
-      {s = adv.s} ;
+    ComplSlash sl np = saturateSlash sl np ;
 
-    AdvVP vp adv =
-      vp ** {s = join vp.s adv.s} ;
+    ReflVP sl = addClitic (slashToVP sl) (\\_ => "u") ;
 
-    ExtAdvVP vp adv =
-      vp ** {s = join adv.s vp.s} ;
+    PassV2 v2 = addPost (baseVP (lin Verb I.jam_V)) (\\_ => v2.participle) ;
 
-    AdVVP adv vp =
-      vp ** {s = join adv.s vp.s} ;
+    ComplVV vv vp = addPost (baseVP vv) (\\a => vpiStr vp a) ;
+    ComplVS vs s = addPost (baseVP vs) (\\_ => "që" ++ s.s) ;
+    ComplVQ vq qs = addPost (baseVP vq) (\\_ => qs.s) ;
+    ComplVA va ap = addPost (baseVP va)
+      (\\a => ap.s ! Indef ! Nom ! agrGender a ! agrNumber a) ;
 
-    AdvVPSlash vps adv =
-      vps ** {s = join vps.s adv.s} ;
+    SlashV2a v2 = baseSlash (lin Verb v2) v2.c2 ;
 
-    AdVVPSlash adv vps =
-      vps ** {s = join adv.s vps.s} ;
+    SlashV2V v2v vp = addPostSlash (baseSlash (lin Verb v2v) v2v.c2)
+      (\\a => v2v.c3.s ++ vpiStr vp a) ;
 
-    ComplSlash vps np =
-      {s = join vps.s (npAcc np)} ;
+    SlashV2S v2s s = addPostSlash (baseSlash (lin Verb v2s) v2s.c2)
+      (\\_ => v2s.c3.s ++ "që" ++ s.s) ;
 
-    ReflVP vps =
-      {s = join reflClit vps.s} ;
+    SlashV2Q v2q qs = addPostSlash (baseSlash (lin Verb v2q) v2q.c2)
+      (\\_ => v2q.c3.s ++ qs.s) ;
 
-    PassV2 v2 =
-      {s = join reflClit v2.participle} ;
+    SlashV2A v2a ap = addPostSlash (baseSlash (lin Verb v2a) v2a.c2)
+      (\\a => v2a.c3.s ++ ap.s ! Indef ! Nom ! agrGender a ! agrNumber a) ;
 
-    ComplVV vv vp =
-      {s = join (vPred vv) vp.s} ;
+    Slash2V3 v3 np = addPostSlash (baseSlash (lin Verb v3) v3.c3)
+      (\\_ => v3.c2.s ++ np.s ! v3.c2.c) ;
 
-    ComplVS vs s =
-      {s = join (vPred vs) s.s} ;
+    Slash3V3 v3 np = addPostSlash (baseSlash (lin Verb v3) v3.c2)
+      (\\_ => v3.c3.s ++ np.s ! v3.c3.c) ;
 
-    ComplVQ vq qs =
-      {s = join (vPred vq) qs.s} ;
+    SlashVV vv sl = lin VPSlash {
+      v = vv ;
+      cl = emptyAgrStr ;
+      post = \\a => slashVpiStr sl a ;
+      c2 = sl.c2
+    } ;
 
-    ComplVA va ap =
-      {s = join (vPred va) (apPred ap)} ;
+    SlashV2VNP v2v np sl = lin VPSlash {
+      v = lin Verb v2v ;
+      cl = emptyAgrStr ;
+      post = \\a => v2v.c2.s ++ np.s ! v2v.c2.c ++
+                     v2v.c3.s ++ slashVpiStr sl a ;
+      c2 = sl.c2
+    } ;
 
-    SlashV2a v2 =
-      {s = join (vPred v2) v2.c2.s} ;
-
-    SlashV2V v2v vp =
-      {s = join (join (vPred v2v) vp.s) v2v.c2.s} ;
-
-    SlashV2S v2s s =
-      {s = join (join (vPred v2s) s.s) v2s.c2.s} ;
-
-    SlashV2Q v2q qs =
-      {s = join (join (vPred v2q) qs.s) v2q.c2.s} ;
-
-    SlashV2A v2a ap =
-      {s = join (join (vPred v2a) (apPred ap)) v2a.c2.s} ;
-
-    Slash2V3 v3 np =
-      {s = join (join (join (vPred v3) v3.c2.s) (npAcc np)) v3.c3.s} ;
-
-    Slash3V3 v3 np =
-      {s = join (join (join (vPred v3) v3.c3.s) (npAcc np)) v3.c2.s} ;
-
-    SlashVV vv vps =
-      {s = join (vPred vv) vps.s} ;
-
-    SlashV2VNP v2v np vps =
-      {s = join (join (join (vPred v2v) v2v.c2.s) (npAcc np)) vps.s} ;
-
-    VPSlashPrep vp prep =
-      {s = join vp.s prep.s} ;
-
+    VPSlashPrep vp prep = lin VPSlash {
+      v = vp.v ; cl = vp.cl ; post = vp.post ; c2 = prep
+    } ;
 }

@@ -1,14 +1,16 @@
 resource ResSqi = ParamX-[Tense,Past,Pres] ** open Prelude in {
 
 oper
-  Compl : Type = {s : Str} ;
+  Compl : Type = {s : Str ; c : Case} ;
 
-  mkCompl : Str -> Compl = \s -> {s = s} ;
+  mkCompl : Str -> Case -> Compl = \s,c -> {s = s ; c = c} ;
 
-  -- In CatSqi: Prep = Compl
+  -- In CatSqi: Prep = Compl.  Government is therefore carried all the
+  -- way to the final nominal-realization boundary instead of being
+  -- flattened into a preposition string.
   Prep : Type = Compl ;
-  mkPrep : Str -> Prep = mkCompl ;
-  noPrep : Prep = mkPrep [] ;
+  mkPrep : Str -> Case -> Prep = mkCompl ;
+  noPrep : Prep = mkPrep [] Acc ;
 
 
 param
@@ -225,5 +227,128 @@ oper
                  }
       }
     } ;
+
+
+oper
+  agrNumber : Agr -> Number = \a -> case a.gn of {
+    GSg _ => Sg ;
+    GPl   => Pl
+  } ;
+
+  agrGender : Agr -> Gender = \a -> case a.gn of {
+    GSg g => g ;
+    GPl   => Masc
+  } ;
+
+  -- Public RGL tense and Albanian morphological tense are deliberately
+  -- distinct parameter spaces.  Keep the conversion centralized here;
+  -- never use a ParamX constructor as a key of Verb.Indicative.
+  sqiTense : ParamX.Tense -> Tense = \t -> case t of {
+    ParamX.Pres => Pres ;
+    ParamX.Past => Aorist ;
+    ParamX.Fut  => Pres ;
+    ParamX.Cond => Imperfect
+  } ;
+
+  negation : Polarity -> Str = \p -> case p of {
+    Pos => [] ;
+    Neg => "nuk"
+  } ;
+
+  futureParticle : ParamX.Tense -> Str = \t -> case t of {
+    ParamX.Fut  => "do" ++ "të" ;
+    ParamX.Cond => "do" ++ "të" ;
+    _           => []
+  } ;
+
+  haveAux : ParamX.Tense => Number => Person => Str = table {
+    ParamX.Pres => table {
+      Sg => table {P1 => "kam" ; P2 => "ke" ; P3 => "ka"} ;
+      Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kanë"}
+    } ;
+    ParamX.Past => table {
+      Sg => table {P1 => "kisha" ; P2 => "kishe" ; P3 => "kishte"} ;
+      Pl => table {P1 => "kishim" ; P2 => "kishit" ; P3 => "kishin"}
+    } ;
+    ParamX.Fut => table {
+      Sg => table {P1 => "do të kem" ; P2 => "do të kesh" ; P3 => "do të ketë"} ;
+      Pl => table {P1 => "do të kemi" ; P2 => "do të keni" ; P3 => "do të kenë"}
+    } ;
+    ParamX.Cond => table {
+      Sg => table {P1 => "do të kisha" ; P2 => "do të kishe" ; P3 => "do të kishte"} ;
+      Pl => table {P1 => "do të kishim" ; P2 => "do të kishit" ; P3 => "do të kishin"}
+    }
+  } ;
+
+  -- Albanian has no productive Standard-Albanian infinitive.  Embedded
+  -- verbal complements are normally introduced by të and select a finite
+  -- subjunctive form.  The morphology imported in this project predates a
+  -- dedicated subjunctive table, so the form is derived here from the rich
+  -- present paradigm.  Plural forms and 1sg are normally identical to the
+  -- corresponding present forms; 2sg/3sg need a small set of productive and
+  -- irregular rules.  Keeping this conversion centralized lets a future
+  -- MorphoSqi subjunctive table replace it without changing syntax.
+  subjunctiveFinite : Verb -> Agr -> Str = \v,a ->
+    let n : Number = agrNumber a ;
+        p : Person = a.p ;
+        p1 : Str = v.Indicative ! Pres ! Sg ! P1 ;
+        pres : Str = v.Indicative ! Pres ! n ! p
+    in case <n,p> of {
+      <Pl,_> => pres ;
+      <Sg,P1> => p1 ;
+      <Sg,P2> => case p1 of {
+        "jam" => "jesh" ;
+        "kam" => "kesh" ;
+        "dua" => "duash" ;
+        "di"  => "dish" ;
+        "ha"  => "hash" ;
+        "pi"  => "pish" ;
+        "vij" => "vish" ;
+        "them" => "thuash" ;
+        _ + "j" => init p1 ++ "sh" ;
+        _ => case v.Indicative ! Pres ! Sg ! P2 of {
+          stem + "n" => stem ++ "sh" ;
+          x => x
+        }
+      } ;
+      <Sg,P3> => case p1 of {
+        "jam" => "jetë" ;
+        "kam" => "ketë" ;
+        "dua" => "dojë" ;
+        "di"  => "dijë" ;
+        "ha"  => "hajë" ;
+        "pi"  => "pijë" ;
+        "vij" => "vijë" ;
+        "them" => "thotë" ;
+        _ + "j" => p1 ++ BIND ++ "ë" ;
+        _ => case v.Indicative ! Pres ! Sg ! P2 of {
+          stem + "n" => stem ++ "ë" ;
+          x => x
+        }
+      }
+    } ;
+
+  haveSubj : Number => Person => Str = table {
+    Sg => table {P1 => "kem" ; P2 => "kesh" ; P3 => "ketë"} ;
+    Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kenë"}
+  } ;
+
+  cliticFor : Case -> {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr} -> Str =
+    \c,np -> case c of {
+      Acc => np.acc_clit ;
+      Dat => np.dat_clit ;
+      _   => []
+    } ;
+
+  -- të contracts with third-person object clitics in the future and in
+  -- subjunctival complements: të + e -> ta, të + i -> t'i, të + u -> t'u.
+  -- Other clitics remain separate (të më, të të, të na, të ju).
+  teWithClitic : Str -> Str = \cl -> case cl of {
+    []  => "të" ;
+    "e" => "ta" ;
+    "i" => "t'i" ;
+    "u" => "t'u" ;
+    _   => "të" ++ cl
+  } ;
 
 }

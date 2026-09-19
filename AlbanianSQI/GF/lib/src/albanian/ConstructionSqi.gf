@@ -1,139 +1,141 @@
--- FILE: ConstructionSqi.gf
+-- Albanian construction grammar built on the same deferred VP/Cl core.
 concrete ConstructionSqi of Construction = CatSqi **
-  open ResSqi, Prelude, Predef, ParamX in {
+  open ResSqi, Prelude, Predef, ParamX, ClauseSqiRes, (P=ParadigmsSqi), (I=IrregSqi) in {
 
   lincat
     Timeunit, Hour, Weekday, Month, Monthday, Year, Language = {s : Str} ;
 
   oper
-    -- GF 3.12: Int is a built-in type; convert via Predef.show when needed.
     showIntStr : Int -> Str = \i -> Predef.show Predef.Int i ;
 
-    -- Constant noun (same surface form everywhere), with a gender
     mkNConst : Gender -> Str -> Noun = \g,w ->
       mkNoun w w w w w w w w w w w w w w w w g ;
 
-    -- Constant NP (same surface form in all cases)
-    -- Use `lin NP` so any lock field required by the RGL lincat is added.
-    mkNPConst : Gender -> Number -> Str -> NP = \g,n,w ->
-      lin NP { s = \\_ => w ; a = agrgP3 g n } ;
+    mkNPConst : Gender -> Number -> Str -> NP = \g,n,w -> lin NP {
+      s=\\_=>w; acc_clit=[]; dat_clit=[]; a=agrgP3 g n
+    } ;
 
-    copBe : Str = "është" ;
+    baseVP : Verb -> VP = emptyVP ;
+    addPost : VP -> (Agr => Str) -> VP = appendVP ;
+
+    mkPred : Str -> Agr -> VP -> Cl = \subj,a,vp -> lin Cl {
+      s=\t,ant,pol=>mkClause subj a vp t ant pol
+    } ;
+
+    copVP : (Agr => Str) -> VP = \x -> appendVP (emptyVP (lin Verb I.jam_V)) x ;
+
+    qualVP : Str -> Str -> VP = \m,f -> copVP (\\a=>case agrGender a of {
+      Masc=>m; Fem=>f
+    }) ;
 
   lin
-    -- Dates / time adverbs (simple concatenation fallbacks)
-    dayMonthAdv d m = {s = d.s ++ m.s} ;
-    dayMonthYearAdv d m y = {s = d.s ++ m.s ++ y.s} ;
+    dayMonthAdv d m = {s=d.s ++ m.s} ;
+    dayMonthYearAdv d m y = {s=d.s ++ m.s ++ y.s} ;
+    monthAdv m = {s=m.s} ;
+    monthYearAdv m y = {s=m.s ++ y.s} ;
+    yearAdv y = {s=y.s} ;
 
-    monthAdv m = {s = m.s} ;
-    monthYearAdv m y = {s = m.s ++ y.s} ;
-    yearAdv y = {s = y.s} ;
-
-    -- Months / weekdays as nouns / proper names
     monthN m = mkNConst Masc m.s ;
-    monthPN m = {s = m.s} ;
-
+    monthPN m = {s=m.s} ;
     weekdayN w = mkNConst Fem w.s ;
-    weekdayPN w = {s = w.s} ;
-    weekdayLastAdv w = {s = w.s ++ "e" ++ "kaluar"} ;
-    weekdayNextAdv w = {s = w.s ++ "e" ++ "ardhshme"} ;
-    weekdayPunctualAdv w = {s = "të" ++ w.s} ;
-    weekdayHabitualAdv w = {s = "çdo" ++ w.s} ;
+    weekdayPN w = {s=w.s} ;
+    weekdayLastAdv w = {s=w.s ++ "e" ++ "kaluar"} ;
+    weekdayNextAdv w = {s=w.s ++ "e" ++ "ardhshme"} ;
+    weekdayPunctualAdv w = {s="të" ++ w.s} ;
+    weekdayHabitualAdv w = {s="çdo" ++ w.s} ;
 
-    intMonthday i = {s = i.s} ;
-    intYear i = {s = i.s} ;
+    intMonthday i = {s=i.s} ;
+    intYear i = {s=i.s} ;
 
-    -- Languages
-    InLanguage lang = {s = "në" ++ lang.s} ;
-
+    InLanguage lang = {s="në" ++ lang.s} ;
     languageCN lang = mkNConst Fem ("gjuhë" ++ lang.s) ;
     languageNP lang = mkNPConst Fem Sg ("gjuha" ++ lang.s) ;
 
-    -- Age / name / questions (stringy fallbacks)
-    has_age_VP c = {s = c.s ++ "vjeç"} ;
+    has_age_VP c = addPost (baseVP (lin Verb I.kam_V)) (\\_=>c.s ++ "vjeç") ;
 
-    -- name behaves NP-like in your setup (name.s : Case => Str), so pick Nom
-    have_name_Cl np name = {s = np.s ! Nom ++ "quhet" ++ name.s ! Nom} ;
-    what_name_QCl np = {s = "si" ++ "quhet" ++ np.s ! Nom} ;
+    have_name_Cl np name =
+      mkPred (np.s!Nom) np.a
+        (addPost (baseVP (lin Verb (P.mkV "quhem"))) (\\_=>name.s!Nom)) ;
 
-    how_old_QCl np = {s = "sa" ++ "vjeç" ++ copBe ++ np.s ! Nom} ;
-    how_far_QCl np = {s = "sa" ++ "larg" ++ copBe ++ np.s ! Nom} ;
+    what_name_QCl np = {
+      s=\\t,a,p=>"si" ++ (have_name_Cl np (mkNPConst Masc Sg [])).s!t!a!p
+    } ;
 
-    -- Deictic motion questions and predicates. VP/QCl are shallow in the
-    -- current Albanian category model, so these are realized directly.
-    where_go_QCl np = {s = "ku" ++ "shkon" ++ np.s ! Nom} ;
-    where_come_from_QCl np = {s = "nga" ++ "ku" ++ "vjen" ++ np.s ! Nom} ;
+    how_old_QCl np = {
+      s=\\t,a,p=>"sa" ++ "vjeç" ++
+        realizeVP (baseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
+    } ;
 
-    go_here_VP = {s = "shkon" ++ "këtu"} ;
-    come_here_VP = {s = "vjen" ++ "këtu"} ;
-    come_from_here_VP = {s = "vjen" ++ "nga" ++ "këtu"} ;
+    how_far_QCl np = {
+      s=\\t,a,p=>"sa" ++ "larg" ++
+        realizeVP (baseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
+    } ;
 
-    go_there_VP = {s = "shkon" ++ "atje"} ;
-    come_there_VP = {s = "vjen" ++ "atje"} ;
-    come_from_there_VP = {s = "vjen" ++ "nga" ++ "atje"} ;
+    where_go_QCl np = {
+      s=\\t,a,p=>"ku" ++ np.s!Nom ++ realizeVP (baseVP (lin Verb (P.mkV "shkoj"))) t a p np.a
+    } ;
+    where_come_from_QCl np = {
+      s=\\t,a,p=>"nga" ++ "ku" ++ np.s!Nom ++ realizeVP (baseVP (lin Verb I.vij_V)) t a p np.a
+    } ;
+
+    go_here_VP = addPost (baseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"këtu") ;
+    come_here_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"këtu") ;
+    come_from_here_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "këtu") ;
+    go_there_VP = addPost (baseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"atje") ;
+    come_there_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"atje") ;
+    come_from_there_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "atje") ;
 
     married_Cl np other =
-      {s = np.s ! Nom ++ copBe ++ "i" ++ "martuar" ++ "me" ++ other.s ! Nom} ;
+      mkPred (np.s!Nom) np.a
+        (addPost (qualVP "i martuar" "e martuar") (\\_=>"me" ++ other.s!Acc)) ;
 
-    hungry_VP  = {s = "i" ++ "uritur"} ;
-    thirsty_VP = {s = "i" ++ "etur"} ;
-    tired_VP   = {s = "i" ++ "lodhur"} ;
-    ill_VP     = {s = "i" ++ "sëmurë"} ;
-    scared_VP  = {s = "i" ++ "frikësuar"} ;
-    ready_VP   = {s = "gati"} ;
+    hungry_VP  = qualVP "i uritur" "e uritur" ;
+    thirsty_VP = qualVP "i etur" "e etur" ;
+    tired_VP   = qualVP "i lodhur" "e lodhur" ;
+    ill_VP     = qualVP "i sëmurë" "e sëmurë" ;
+    scared_VP  = qualVP "i frikësuar" "e frikësuar" ;
+    ready_VP   = copVP (\\_=>"gati") ;
+    is_right_VP = copVP (\\_=>"me të drejtë") ;
+    is_wrong_VP = copVP (\\_=>"gabim") ;
 
-    is_right_VP = {s = "me" ++ "të" ++ "drejtë"} ;
-    is_wrong_VP = {s = "gabim"} ;
+    weather_adjCl ap = {
+      s=\\t,a,p=>"moti" ++ realizeVP
+        (copVP (\\_=>ap.s!Indef!Nom!Masc!Sg)) t a p {gn=GSg Masc;p=P3}
+    } ;
 
-    -- Weather: "moti është AP"
-    weather_adjCl ap =
-      {s = "moti" ++ copBe ++ ap.s ! Indef ! Nom ! Masc ! Sg} ;
-
-    -- Time unit adverbials / quantity constructions
-    timeunitAdv c tu = {s = c.s ++ tu.s} ;
+    timeunitAdv c tu = {s=c.s ++ tu.s} ;
+    timeunitRange lo hi tu = {s=lo.s ++ "deri" ++ hi.s ++ tu.s} ;
 
     n_units_AP c cn a = {
-      s = \\spec,cas,g,n =>
-            c.s ++ cn.s ! Indef ! cas ! Pl ++ a.s ! cas ! g ! n
+      s=\\sp,cas,g,n=>c.s ++ cn.s!Indef!cas!Pl ++ a.s!cas!g!n
     } ;
 
-    n_units_of_NP c cn np =
-      lin NP {
-        s = \\cas => c.s ++ cn.s ! Indef ! cas ! Pl ++ "prej" ++ np.s ! Ablat ;
-        a = agrgP3 Masc Pl
-      } ;
+    n_units_of_NP c cn np = lin NP {
+      s=\\cas=>c.s ++ cn.s!Indef!cas!Pl ++ "prej" ++ np.s!Ablat;
+      acc_clit=[]; dat_clit=[]; a=agrgP3 Masc Pl
+    } ;
 
-    -- Compound unit noun: keep the head CN's full nominal table and gender.
     n_unit_CN c unit cn = {
-      s = \\spec,cas,n =>
-            c.s ++ unit.s ! Indef ! cas ! Sg ++ cn.s ! spec ! cas ! n ;
-      g = cn.g
+      s=\\sp,cas,n=>c.s ++ unit.s!Indef!cas!Sg ++ cn.s!sp!cas!n;
+      g=cn.g
     } ;
 
-    -- Container constructions keep a full CN shape.
     bottle_of_CN np = {
-      s = \\spec,cas,n =>
-            (mkNConst Fem "shishe").s ! spec ! cas ! n ++ "me" ++ np.s ! Ablat ;
-      g = Fem
+      s=\\sp,cas,n=>(mkNConst Fem "shishe").s!sp!cas!n ++ "me" ++ np.s!Acc;
+      g=Fem
     } ;
     cup_of_CN np = {
-      s = \\spec,cas,n =>
-            (mkNConst Masc "filxhan").s ! spec ! cas ! n ++ "me" ++ np.s ! Ablat ;
-      g = Masc
+      s=\\sp,cas,n=>(mkNConst Masc "filxhan").s!sp!cas!n ++ "me" ++ np.s!Acc;
+      g=Masc
     } ;
     glass_of_CN np = {
-      s = \\spec,cas,n =>
-            (mkNConst Fem "gotë").s ! spec ! cas ! n ++ "me" ++ np.s ! Ablat ;
-      g = Fem
+      s=\\sp,cas,n=>(mkNConst Fem "gotë").s!sp!cas!n ++ "me" ++ np.s!Acc;
+      g=Fem
     } ;
 
-    few_X_short_of_Y np x y = lin S {
-      s = np.s ! Nom ++ "ka" ++ "pak" ++ x.s ! Indef ! Acc ! Pl ++
-          "më pak se" ++ y.s ! Indef ! Acc ! Sg
-    } ;
-
-    timeunitRange lo hi tu = lin Adv {
-      s = lo.s ++ "deri" ++ hi.s ++ tu.s
+    few_X_short_of_Y np x y = {
+      s=np.s!Nom ++ "ka" ++ "pak" ++ x.s!Indef!Acc!Pl ++
+        "më pak se" ++ y.s!Indef!Acc!Sg
     } ;
 
     oneHour = {s = "1"} ;

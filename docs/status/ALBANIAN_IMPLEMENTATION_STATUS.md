@@ -420,11 +420,13 @@ This is intentional.
 
 The current architecture uses `ExtendFunctor` as the default source of shared structure and only overrides functions where Albanian needs a language-specific implementation or where the inherited implementation is insufficient.
 
-During the v0.1.0 stabilization cycle, the VPS/VPI/VPS2/VPI2 family was intentionally kept inherited. That policy protected the compiler-stable baseline and remains part of the historical release record.
+In particular, the current cycle keeps the VPS/VPI/VPS2/VPI2 family inherited.
 
-For the post-v0.1.0 Completion phase, the family is now an explicit architecture-and-capability target. The normative **final state** is defined in `docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`; the Architecture Gate wording below describes only the current implementation/evidence cursor. Until its Architecture Gate is complete, inherited `variants {}` / `(0,0)` entries remain acceptable only as visible incomplete placeholders.
+Some inherited functions can still have empty `variants {}` implementations.
 
-Current compiler evidence shows that those inherited gaps **do not prevent `ExtendSqi.gfo` from being produced**. They therefore represent **coverage/completion work**, not a current compiler blocker. Coherent local ownership may be activated after the Architecture Gate; one-off coordinator-side reimplementation remains prohibited.
+Current compiler evidence shows that those empty inherited entries **do not prevent `ExtendSqi.gfo` from being produced**.
+
+They therefore represent **coverage/completion work**, not a current compiler blocker.
 
 ---
 
@@ -628,17 +630,17 @@ The compiler/structural release gate is now complete.
 
 The remaining work is mainly:
 
-1. complete the VPS/VPI **Architecture Gate** with a producer/consumer map and the first Wordbench behavior scenarios;
-2. repair the minimal verbal realization boundary only where those tests prove early information loss;
-3. implement the finite VPS vertical slice before expanding to the whole family;
-4. implement and validate VPI embedding/control from Albanian evidence;
-5. preserve structured slash/clitic information before completing VPS2/VPI2;
-6. register and review Wordbench scenarios/goldens for each capability gate;
-7. complete other inherited or deliberately unfinished `Extend` functions and `(0,0)` coverage gaps;
-8. resolve structural warning/open-symbol areas such as `DConj` and `must_VV`;
-9. replace provisional extension realizations where linguistic refinement is still required;
-10. strengthen `ConstructionSqi` where current implementations are shallow or string-based;
-11. validate morphology, syntax, lexicon, and public top-level composition through behavioral regression;
+1. establish Wordbench sentence/scenario suites;
+2. validate morphology and syntax against expected Albanian outputs;
+3. complete inherited or deliberately unfinished `Extend` functions;
+4. prioritize the VPS/VPI/VPS2/VPI2 family and other `(0,0)` coverage gaps;
+5. resolve the remaining structural warning/open-symbol areas such as `DConj` and `must_VV`;
+6. replace provisional extension realizations where linguistic refinement is still required;
+7. strengthen `ConstructionSqi` where current implementations are shallow or string-based;
+8. validate the standard lexicon through representative paradigms and behavioral examples;
+9. align the public top-level language surface with the intended full RGL feature set;
+10. reduce unexplained compiler warnings;
+11. run a true behavioral/golden regression;
 12. only then declare Albanian RGL complete.
 
 The next phase is therefore **Albanian RGL Completion**, not foundational compiler repair.
@@ -680,32 +682,3 @@ LINGUISTIC QA:         IN PROGRESS
 FEATURE COMPLETION:    IN PROGRESS
 FINAL RGL RELEASE:     NOT YET
 ```
-
----
-
-## 20. Active Completion plan — VPS/VPI expansion
-
-The governing post-core expansion document is:
-
-```text
-docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md
-```
-
-The first active work package is:
-
-```text
-WP1 — Verbal Realization Architecture Gate
-```
-
-It requires, before a large VPS/VPI rewrite:
-
-- a producer/consumer map for `VP`, `Cl`, `VPSlash`, `Temp`, `Pol`, and `Agr`;
-- Wordbench scenarios `vps_agreement` and `vps_temp_pol`;
-- localization of the first information-loss boundary;
-- the smallest core/resource change that preserves the required information;
-- regression through `ExtendSqi`, `LangSqi`, and `AllSqi`.
-
-Current structural comparison policy uses Bulgarian as the primary VPS/VPI model, Greek as secondary embedding evidence, Romanian as the slash/clitic stress model, German as a segmented-realization stress model, and English as the full `Extend` coverage reference. Model languages do not define Albanian linguistic output.
-
-The primary Compendium architecture pattern is EP004 (deferred realization); EP005/EP019 and clitic/control patterns are adopted only when Albanian evidence satisfies their selection conditions.
-

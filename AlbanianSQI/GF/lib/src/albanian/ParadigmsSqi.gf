@@ -1227,6 +1227,46 @@ mkA2 = overload {
   mkA2 : A -> Prep -> A2 = \a,p -> lin A2 a ** {c2=p} ;
 } ;
 
+irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
+  \p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part -> lin V {
+    Indicative = table {
+      Pres => table {
+        Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
+        Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
+      } ;
+      Past => table {
+        Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
+        Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
+      } ;
+      Aorist => table {
+        Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
+        Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
+      } ;
+      Imperfect => table {
+        Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
+        Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
+      }
+    } ;
+    Imperative = table {Sg=>impSg; Pl=>impPl} ;
+    participle = part ;
+    pres_optative = \\n,p => case <n,p> of {
+      <Sg,P1>=>p1sg; <Sg,P2>=>p2sg; <Sg,P3>=>p3sg;
+      <Pl,P1>=>p1pl; <Pl,P2>=>p2pl; <Pl,P3>=>p3pl
+    } ;
+    perf_optative = \\n,p => case <n,p> of {
+      <Sg,P1>=>p1sg; <Sg,P2>=>p2sg; <Sg,P3>=>p3sg;
+      <Pl,P1>=>p1pl; <Pl,P2>=>p2pl; <Pl,P3>=>p3pl
+    } ;
+    pres_admirative = \\n,p => case <n,p> of {
+      <Sg,P1>=>p1sg; <Sg,P2>=>p2sg; <Sg,P3>=>p3sg;
+      <Pl,P1>=>p1pl; <Pl,P2>=>p2pl; <Pl,P3>=>p3pl
+    } ;
+    imperf_admirative = \\n,p => case <n,p> of {
+      <Sg,P1>=>p1sg; <Sg,P2>=>p2sg; <Sg,P3>=>p3sg;
+      <Pl,P1>=>p1pl; <Pl,P2>=>p2pl; <Pl,P3>=>p3pl
+    }
+  } ;
+
 mkV = overload {
   mkV : Str -> V = regV;   -- Indicative;Pres;Sg;P1
   mkV : Str -> Str -> V = reg2V   -- Indicative;Pres;Sg;P1  participle
@@ -1274,9 +1314,17 @@ mkAdN : Str -> AdN = \s -> lin AdN {s=s} ;
 mkCAdv : Str -> CAdv = \s -> lin CAdv {s=s; p=""} ;
 
 mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;
-mkIP : Str -> IP = \s -> lin IP {s=s} ;
-mkIQuant : Str -> IQuant = \s -> lin IQuant {s=s} ;
-mkIDet : Str -> IDet = \s -> lin IDet {s=s} ;
+mkIP : Str -> IP = \s -> lin IP {
+  s = table {Nom=>s; Acc=>s; Dat=>s; Ablat=>s} ;
+  a = agrgP3 Masc Sg
+} ;
+mkIQuant : Str -> IQuant = \s -> lin IQuant {
+  s = \_,_,_ => s
+} ;
+mkIDet : Str -> IDet = \s -> lin IDet {
+  s = \_,_ => s ;
+  n = Sg
+} ;
 
 mkInterj : Str -> Interj = \s -> lin Interj {s=s} ;
 
@@ -1370,7 +1418,10 @@ mkCard : Str -> Card = \s -> lin Card {s=s; n=Pl} ;
 mkACard : Str -> ACard = \s -> lin ACard {s=s} ;
 mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
 
-mkPrep : Str -> Prep = \s -> lin Prep {s=s} ;
-noPrep : Prep = lin Prep {s=""} ;
+mkPrep = overload {
+  mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Acc} ;
+  mkPrep : Str -> Case -> Prep = \s,c -> lin Prep {s=s; c=c}
+} ;
+noPrep : Prep = lin Prep {s=[]; c=Acc} ;
 
 }

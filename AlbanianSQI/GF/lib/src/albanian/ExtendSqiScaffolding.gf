@@ -1,239 +1,162 @@
+-- Non-VPS extension helpers that preserve Albanian rich categories.
 resource ExtendSqiScaffolding =
   open Prelude, Predef, (P = ParamX), GrammarSqi, CatSqi, CommonX,
-       ExtendSqiHelpers, (R = ResSqi) in {
+       ExtendSqiHelpers, ClauseSqiRes, (R = ResSqi) in {
 
-  oper
-    -- =========================================================
-    -- SCAFFOLDING OPS SAFE TO KEEP IN A RESOURCE
-    -- Strategy:
-    -- - keep coordinator-facing helpers shallow and explicit
-    -- - preserve current working Albanian category shapes
-    -- - keep boundary-safe Albanian glue here only for functions
-    --   that are actually owned by scaffolding in this cycle
-    -- - VPS/VPI/VPS2/VPI2 logic remains inherited from ExtendFunctor
-    --   in this cycle; explicit boundary lincats in ExtendSqi do not transfer
-    --   function ownership.
-    -- - Comp/Imp list constructors are owned here as one bounded family in
-    --   fix18 because ExtendFunctor supplies no implementation and GF 3.12
-    --   reports all six linearizations missing.
-    -- =========================================================
+oper
+  sc_CompListBoundary : Type = {init,last : R.Agr => Str} ;
+  sc_ImpListBoundary  : Type = {init,last : P.Polarity => P.Number => Str} ;
 
-    -- =========================================================
-    -- COMP / IMP LIST BOUNDARY FAMILY
-    -- Mirrors the current Albanian string-list coordination pattern from
-    -- ConjunctionSqi, while keeping ListComp/ListImp category retyping in
-    -- the concrete coordinator where their hidden category locks exist.
-    -- =========================================================
+  sc_BaseComp : Comp -> Comp -> sc_CompListBoundary = \x,y -> {
+    init=x.s ; last=y.s
+  } ;
+  sc_ConsComp : Comp -> sc_CompListBoundary -> sc_CompListBoundary = \x,xs -> {
+    init=\a=>x.s!a ++ "," ++ xs.init!a ; last=xs.last
+  } ;
+  sc_ConjComp : Conj -> sc_CompListBoundary -> Comp = \c,xs -> lin Comp {
+    s=\a=>xs.init!a ++ c.s ++ xs.last!a
+  } ;
 
-    sc_StrListBoundary : Type = {init, last : Str} ;
+  sc_BaseImp : Imp -> Imp -> sc_ImpListBoundary = \x,y -> {
+    init=x.s ; last=y.s
+  } ;
+  sc_ConsImp : Imp -> sc_ImpListBoundary -> sc_ImpListBoundary = \x,xs -> {
+    init=\p,n=>x.s!p!n ++ "," ++ xs.init!p!n ; last=xs.last
+  } ;
+  sc_ConjImp : Conj -> sc_ImpListBoundary -> Imp = \c,xs -> lin Imp {
+    s=\p,n=>xs.init!p!n ++ c.s ++ xs.last!p!n
+  } ;
 
-    sc_compImpCommaSep : Str = ", " ;
+  sc_GenNP : NP -> Quant = \np -> lin Quant {
+    s=\c,g,n=>R.link_clitic!R.Indef!c!g!n ++ np.s!R.Ablat ;
+    spec=R.Def
+  } ;
 
-    sc_compImpConjSep : Conj -> Str =
-      \c -> " " ++ c.s ++ " " ;
+  sc_GenIP : IP -> IQuant = \ip -> lin IQuant {
+    s=\_,_,_=>"i" ++ ip.s!R.Dat
+  } ;
 
-    sc_BaseComp : Comp -> Comp -> sc_StrListBoundary =
-      \x,y -> {init = x.s ; last = y.s} ;
+  sc_GenRP : Num -> CN -> RP = \num,cn -> lin RP {
+    s=\c,gn=>R.link_clitic!R.Indef!c!cn.g!num.n ++ cn.s!R.Indef!R.Ablat!num.n
+  } ;
 
-    sc_ConsComp : Comp -> sc_StrListBoundary -> sc_StrListBoundary =
-      \x,xs -> {
-        init = x.s ++ sc_compImpCommaSep ++ xs.init ;
-        last = xs.last
-      } ;
+  sc_GenModNP : Num -> NP -> CN -> NP = \num,np,cn -> lin NP {
+    s=\c=>cn.s!R.Def!c!num.n ++ R.link_clitic!R.Def!c!cn.g!num.n ++ np.s!R.Ablat ;
+    acc_clit=[] ; dat_clit=[] ; a=R.agrgP3 cn.g num.n
+  } ;
 
-    sc_ConjComp : Conj -> sc_StrListBoundary -> Comp =
-      \c,xs -> lin Comp {
-        s = xs.init ++ sc_compImpConjSep c ++ xs.last
-      } ;
+  sc_GenModIP : Num -> IP -> CN -> IP = \num,ip,cn -> lin IP {
+    s=\c=>cn.s!R.Def!c!num.n ++ R.link_clitic!R.Def!c!cn.g!num.n ++ ip.s!R.Dat ;
+    a=R.agrgP3 cn.g num.n
+  } ;
 
-    sc_BaseImp : Imp -> Imp -> sc_StrListBoundary =
-      \x,y -> {init = x.s ; last = y.s} ;
+  sc_PiedPipingQuestSlash : IP -> ClSlash -> QCl = \ip,slash -> lin QCl {
+    s=\t,a,p=>slash.c2.s ++ ip.s!slash.c2.c ++ slash.s!t!a!p
+  } ;
 
-    sc_ConsImp : Imp -> sc_StrListBoundary -> sc_StrListBoundary =
-      \x,xs -> {
-        init = x.s ++ sc_compImpCommaSep ++ xs.init ;
-        last = xs.last
-      } ;
+  sc_PiedPipingRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
+    s=\agr,t,a,p=>slash.c2.s ++ rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p
+  } ;
 
-    sc_ConjImp : Conj -> sc_StrListBoundary -> Imp =
-      \c,xs -> lin Imp {
-        s = xs.init ++ sc_compImpConjSep c ++ xs.last
-      } ;
-    -- =========================================================
-    -- GENITIVE / REL-SLASH BOUNDARY
-    -- =========================================================
+  -- Albanian prepositions normally precede their complement.  The API keeps
+  -- strand/pied-pipe distinctions; both are grammaticalized here without
+  -- losing the governed case.
+  sc_StrandQuestSlash : IP -> ClSlash -> QCl = \ip,slash -> lin QCl {
+    s=\t,a,p=>ip.s!slash.c2.c ++ slash.s!t!a!p ++ slash.c2.s
+  } ;
 
-    sc_GenNP : NP -> Quant =
-      \np -> lin Quant {
-        s    = \\c,g,n => R.link_clitic ! R.Indef ! c ! g ! n ++ np.s ! R.Ablat ;
-        spec = R.Indef
-      } ;
+  sc_StrandRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
+    s=\agr,t,a,p=>rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ++ slash.c2.s
+  } ;
 
-    sc_GenIP : IP -> IQuant =
-      \ip -> lin IQuant {s = "i" ++ ip.s} ;
+  sc_EmptyRelSlash : ClSlash -> RCl = \slash -> lin RCl {
+    s=\_,t,a,p=>"që" ++ slash.s!t!a!p ++ slash.c2.s
+  } ;
 
-    sc_GenRP : Num -> CN -> RP =
-      \num,cn -> lin RP {
-        s = R.link_clitic ! R.Indef ! R.Nom ! cn.g ! num.n
-            ++ cn.s ! R.Indef ! R.Ablat ! num.n
-      } ;
+  sc_ProDrop : Pron -> Pron = \pro -> lin Pron {
+    s=\_=>[] ; acc_clit=pro.acc_clit ; dat_clit=pro.dat_clit ; a=pro.a
+  } ;
 
-    sc_GenModNP : Num -> NP -> CN -> NP =
-      \_,np,_ -> np ;
+  sc_AdAdV : AdA -> AdV -> AdV = \a,v -> lin AdV {s=a.s ++ v.s} ;
+  sc_PositAdVAdj : A -> AdV = \a -> lin AdV {s=adjSurfaceNomMascSg a} ;
+  sc_IAdvAdv : Adv -> IAdv = \adv -> lin IAdv {s=adv.s} ;
 
-    sc_GenModIP : Num -> IP -> CN -> IP =
-      \_,ip,_ -> ip ;
+  sc_CompS : S -> Comp = \s -> lin Comp {s=\_=>"që" ++ s.s} ;
+  sc_CompQS : QS -> Comp = \qs -> lin Comp {s=\_=>qs.s} ;
+  sc_CompVP : Ant -> Pol -> VP -> Comp = \ant,pol,vp -> lin Comp {
+    s=\a=>realizeSubjAntVP vp ant.a pol.p a
+  } ;
 
-    sc_PiedPipingQuestSlash : IP -> ClSlash -> QS =
-      \ip,slash -> lin QS {s = ip.s ++ wordSep ++ slash.s} ;
+  sc_UttAccIP : IP -> Utt = \ip -> lin Utt {s=ip.s!R.Acc} ;
+  sc_UttDatIP : IP -> Utt = \ip -> lin Utt {s=ip.s!R.Dat} ;
+  sc_UttAccNP : NP -> Utt = \np -> lin Utt {s=np.s!R.Acc} ;
+  sc_UttDatNP : NP -> Utt = \np -> lin Utt {s=np.s!R.Dat} ;
+  sc_UttAdV : AdV -> Utt = \adv -> lin Utt {s=adv.s} ;
+  sc_UttVPShort : VP -> Utt = \vp -> lin Utt {s=realizeImpVP vp P.Pos P.Sg} ;
 
-    sc_PiedPipingRelSlash : RP -> ClSlash -> RS =
-      \rp,slash -> lin RS {s = rp.s ++ wordSep ++ slash.s} ;
+  sc_ComplBareVS : VS -> S -> VP = \vs,s -> appendVP (emptyVP vs) (\_=>s.s) ;
+  sc_SlashBareV2S : V2S -> S -> VPSlash = \v2s,s -> lin VPSlash {
+    v=v2s ; cl=\_=>[] ; post=\_=>s.s ; c2=v2s.c2
+  } ;
 
-    sc_StrandQuestSlash : IP -> ClSlash -> QS =
-      \ip,slash -> lin QS {s = ip.s ++ wordSep ++ slash.s} ;
+  sc_ComplDirectVS : VS -> Utt -> VP = \vs,utt ->
+    appendVP (emptyVP vs) (\_=>":" ++ utt.s) ;
+  sc_ComplDirectVQ : VQ -> Utt -> VP = \vq,utt ->
+    appendVP (emptyVP vq) (\_=>":" ++ utt.s) ;
 
-    sc_StrandRelSlash : RP -> ClSlash -> RS =
-      \rp,slash -> lin RS {s = rp.s ++ wordSep ++ slash.s} ;
+  sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl = \np,vs,utt ->
+    PredVP np (sc_ComplDirectVS vs utt) ;
+  sc_FrontComplDirectVQ : NP -> VQ -> Utt -> Cl = \np,vq,utt ->
+    PredVP np (sc_ComplDirectVQ vq utt) ;
 
-    sc_EmptyRelSlash : ClSlash -> RS =
-      \slash -> lin RS {s = slash.s} ;
+  sc_PredIAdvVP : IAdv -> VP -> QCl = \iadv,vp -> lin QCl {
+    s=\t,a,p=>iadv.s ++ realizeVP vp t a p defaultAgr
+  } ;
 
-    -- =========================================================
-    -- SMALL UTTERANCE / COMPLEMENT HELPERS
-    -- =========================================================
+  sc_ApposNP : NP -> NP -> NP = \np1,np2 -> lin NP {
+    s=\c=>np1.s!c ++ SOFT_BIND ++ "," ++ np2.s!c ;
+    acc_clit=[] ; dat_clit=[] ; a=np1.a
+  } ;
 
-    sc_ProDrop : Pron -> Pron =
-      \p -> lin Pron {
-        s        = \\_ => "" ;
-        acc_clit = p.acc_clit ;
-        dat_clit = p.dat_clit ;
-        a        = p.a
-      } ;
+  sc_ComplGenVV : VV -> Ant -> Pol -> VP -> VP = \vv,ant,pol,vp ->
+    appendVP (emptyVP vv) (\a=>realizeSubjAntVP vp ant.a pol.p a) ;
 
-    sc_AdAdV : AdA -> AdV -> AdV =
-      \ada,adv -> lin AdV {s = ada.s ++ adv.s} ;
+  sc_CompoundN : N -> N -> N = \modifier,head -> lin N {
+    s=\sp,c,n=>modifier.s!R.Indef!R.Nom!P.Sg ++ head.s!sp!c!n ;
+    g=head.g
+  } ;
 
-    sc_PositAdVAdj : A -> AdV =
-      \a -> lin AdV {s = adjSurfaceNomMascSg a} ;
+  sc_GerundCN : VP -> CN = \vp -> lin CN {
+    s=\_,_,_=>realizeGerundVP vp agrMascSg ; g=R.Masc
+  } ;
+  sc_GerundNP : VP -> NP = \vp -> lin NP {
+    s=\_=>realizeGerundVP vp agrMascSg ; acc_clit=[] ; dat_clit=[] ; a=agrMascSg
+  } ;
+  sc_GerundAdv : VP -> Adv = \vp -> lin Adv {s=realizeGerundVP vp agrMascSg} ;
 
-    sc_IAdvAdv : Adv -> IAdv =
-      \adv -> lin IAdv {s = adv.s} ;
+  sc_UncontractedNeg : Pol = lin Pol {s=[] ; p=P.Neg} ;
+  sc_TPastSimple : Tense = lin Tense {s=[] ; t=P.Past} ;
 
-    sc_CompS : S -> Comp =
-      \s -> lin Comp {s = s.s} ;
+  sc_ComplSlashPartLast : VPSlash -> NP -> VP = \sl,np ->
+    appendVP (vpFromSlash sl) (\_=>sl.c2.s ++ np.s!sl.c2.c) ;
 
-    sc_CompQS : QS -> Comp =
-      \qs -> lin Comp {s = qs.s} ;
+  sc_DetNPMasc : Det -> NP = \det -> lin NP {
+    s=\c=>det.s!c!R.Masc ; acc_clit=[] ; dat_clit=[] ;
+    a=R.agrgP3 R.Masc det.n
+  } ;
+  sc_DetNPFem : Det -> NP = \det -> lin NP {
+    s=\c=>det.s!c!R.Fem ; acc_clit=[] ; dat_clit=[] ;
+    a=R.agrgP3 R.Fem det.n
+  } ;
 
-    sc_CompVP : Ant -> Pol -> VP -> Comp =
-      \_,_,vp -> lin Comp {s = vp.s} ;
+  sc_UseComp_estar : Comp -> VP = UseComp ;
+  sc_UseComp_ser : Comp -> VP = UseComp ;
 
-    sc_UttAccIP : IP -> Utt =
-      \ip -> lin Utt {s = ip.s} ;
+  sc_SubjRelNP : NP -> RS -> NP = \np,rs -> np ** {
+    s=\c=>np.s!c ++ rs.s!np.a
+  } ;
+  sc_SubjunctRelCN : CN -> RS -> CN = \cn,rs -> cn ** {
+    s=\sp,c,n=>cn.s!sp!c!n ++ rs.s!(R.agrgP3 cn.g n)
+  } ;
 
-    sc_UttDatIP : IP -> Utt =
-      \ip -> lin Utt {s = ip.s} ;
-
-    sc_UttAccNP : NP -> Utt =
-      \np -> lin Utt {s = np.s ! R.Acc} ;
-
-    sc_UttDatNP : NP -> Utt =
-      \np -> lin Utt {s = np.s ! R.Dat} ;
-
-    sc_UttAdV : AdV -> Utt =
-      \adv -> lin Utt {s = adv.s} ;
-
-    sc_UttVPShort : VP -> Utt =
-      \vp -> lin Utt {s = vp.s} ;
-
-    sc_ComplBareVS : VS -> S -> VP =
-      \vs,s -> lin VP {s = verbPres3sg vs ++ wordSep ++ s.s} ;
-
-    sc_SlashBareV2S : V2S -> S -> VPSlash =
-      \v2s,s -> lin VPSlash {s = verbPres3sg v2s ++ wordSep ++ s.s} ;
-
-    sc_ComplDirectVS : VS -> Utt -> VP =
-      \vs,utt ->
-        AdvVP
-          (UseV <lin V vs : V>)
-          (lin Adv {s = utt.s}) ;
-
-    sc_ComplDirectVQ : VQ -> Utt -> VP =
-      \vq,utt ->
-        AdvVP
-          (UseV <lin V vq : V>)
-          (lin Adv {s = utt.s}) ;
-
-    sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl =
-      \np,vs,utt ->
-        PredVP np (sc_ComplDirectVS vs utt) ;
-
-    sc_FrontComplDirectVQ : NP -> VQ -> Utt -> Cl =
-      \np,vq,utt ->
-        lin Cl {s = np.s ! R.Nom ++ wordSep ++ utt.s ++ wordSep ++ verbPres3sg vq} ;
-
-    sc_PredIAdvVP : IAdv -> VP -> QCl =
-      \iadv,vp -> lin QCl {s = iadv.s ++ wordSep ++ vp.s} ;
-
-    sc_ApposNP : NP -> NP -> NP =
-      \np1,np2 -> lin NP {
-        s = \\c => np1.s ! c ++ wordSep ++ np2.s ! c ;
-        a = np1.a
-      } ;
-
-    sc_ComplGenVV : VV -> Ant -> Pol -> VP -> VP =
-      \vv,_,_,vp -> ComplVV vv vp ;
-
-    sc_CompoundN : N -> N -> N =
-      \n1,_ -> n1 ;
-
-    sc_GerundCN : VP -> CN =
-      \vp -> mkCompatCNFromStr vp.s R.Masc ;
-
-    sc_GerundNP : VP -> NP =
-      \vp -> mkCompatNPFromStr vp.s R.Masc P.Sg ;
-
-    sc_GerundAdv : VP -> Adv =
-      \vp -> lin Adv {s = vp.s} ;
-
-    sc_UncontractedNeg : Pol =
-      lin Pol {s = "" ; p = P.Neg} ;
-
-    sc_TPastSimple : Tense =
-      lin Tense {s = "" ; t = P.Past} ;
-
-    sc_ComplSlashPartLast : VPSlash -> NP -> VP =
-      \vpslash,np -> lin VP {s = vpslash.s ++ wordSep ++ np.s ! R.Acc} ;
-
-    sc_DetNPMasc : Det -> NP =
-      \det -> lin NP {
-        s = \\c => det.s ! c ! R.Masc ;
-        a = R.agrgP3 R.Masc det.n
-      } ;
-
-    sc_DetNPFem : Det -> NP =
-      \det -> lin NP {
-        s = \\c => det.s ! c ! R.Fem ;
-        a = R.agrgP3 R.Fem det.n
-      } ;
-
-    sc_UseComp_estar : Comp -> VP =
-      \comp -> lin VP {s = comp.s} ;
-
-    sc_UseComp_ser : Comp -> VP =
-      \comp -> lin VP {s = comp.s} ;
-
-    sc_SubjRelNP : NP -> RS -> NP =
-      \np,rs -> lin NP {
-        s = \\c => np.s ! c ++ wordSep ++ rs.s ;
-        a = np.a
-      } ;
-
-    sc_SubjunctRelCN : CN -> RS -> CN =
-      \cn,rs -> lin CN {
-        s = \\spec,c,n => cn.s ! spec ! c ! n ++ wordSep ++ rs.s ;
-        g = cn.g
-      } ;
-
-} ;
+}

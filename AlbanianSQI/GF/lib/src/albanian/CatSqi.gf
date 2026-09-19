@@ -1,63 +1,92 @@
 concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
 
-lincat N  = Noun ;
-lincat N2 = Noun ** {c2 : Compl} ;
-lincat N3 = Noun ** {c2,c3 : Compl} ;
+  lincat
+    N = Noun ;
+    N2 = Noun ** {c2 : Compl} ;
+    N3 = Noun ** {c2,c3 : Compl} ;
 
-lincat A  = Adj ;
-lincat A2 = Adj ** {c2 : Compl} ;
+    A = Adj ;
+    A2 = Adj ** {c2 : Compl} ;
 
-lincat V, VA, VV, VS, VQ = Verb ;
-lincat V2, V2S, V2Q      = Verb ** {c2 : Compl} ;
-lincat V3, V2A, V2V      = Verb ** {c2,c3 : Compl} ;
+    V, VA, VV, VS, VQ = Verb ;
+    V2 = Verb ** {c2 : Compl} ;
+    V2S, V2Q, V3, V2A, V2V = Verb ** {c2,c3 : Compl} ;
 
-lincat Prep = Compl ;
+    Prep = Compl ;
 
-lincat Subj  = {s : Str} ;
-lincat Conj  = {s : Str} ;
-lincat DConj = {s : Str} ;
+    Subj = {s : Str} ;
+    Conj = {s : Str} ;
 
-lincat Card   = {s : Str; n : Number} ;
-lincat ACard  = {s : Str} ;
-lincat Predet = {s : Str} ;
-lincat Ord    = {s : Str} ;
+    Card = {s : Str ; n : Number} ;
+    ACard = {s : Str} ;
+    Predet = {s : Str} ;
+    Ord = {s : Case => Gender => Number => Str} ;
 
-lincat IComp  = {s : Str} ;
-lincat IP     = {s : Str} ;
-lincat IDet   = {s : Str} ;
-lincat IQuant = {s : Str} ;
+    IComp = {s : Str} ;
+    IDet = {s : Case => Gender => Str ; n : Number} ;
+    IP = {s : Case => Str ; a : Agr} ;
+    IQuant = {s : Case => Gender => Number => Str} ;
 
-lincat S       = {s : Str} ;
-lincat QS      = {s : Str} ;
-lincat RS      = {s : Str} ;
-lincat SSlash  = {s : Str} ;
-lincat Cl      = {s : Str} ;
-lincat QCl     = {s : Str} ;
-lincat RCl     = {s : Str} ;
-lincat RP      = {s : Str} ;
-lincat ClSlash = {s : Str} ;
+    S = {s : Str} ;
+    QS = {s : Str} ;
+    RS = {s : Agr => Str} ;
+    SSlash = {s : Str ; c2 : Compl} ;
 
-lincat VP      = {s : Str} ;
-lincat VPSlash = {s : Str} ;
-lincat Comp    = {s : Str} ;
-lincat DAP     = {s : Str} ;
-lincat GN      = {s : Str} ;
-lincat LN      = {s : Str} ;
-lincat PN      = {s : Str} ;
-lincat SN      = {s : Str} ;
+    Cl = {s : ParamX.Tense => Anteriority => Polarity => Str} ;
+    QCl = {s : ParamX.Tense => Anteriority => Polarity => Str} ;
+    RCl = {s : Agr => ParamX.Tense => Anteriority => Polarity => Str} ;
+    RP = {s : Case => GenNum => Str} ;
+    ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl} ;
 
-lincat Imp = {s : Str} ;
+    -- VP keeps the lexical verb and separates clitics from post-verbal
+    -- material.  Finite tense/polarity is not chosen until SentenceSqi.
+    VP = {
+      v : Verb ;
+      cl : Agr => Str ;
+      post : Agr => Str
+    } ;
 
-lincat Numeral = {s : Str} ;
-lincat Digits  = {s : Str; n : Number; tail : DTail} ;
-lincat Decimal = {s : Str; n : Number; hasDot : Bool} ;
+    VPSlash = {
+      v : Verb ;
+      cl : Agr => Str ;
+      post : Agr => Str ;
+      c2 : Compl
+    } ;
 
-lincat AP    = {s : Species => Case => Gender => Number => Str} ;
-lincat CN    = Noun ;
-lincat Num   = {s : Str; n : Number} ;
-lincat Quant = {s : Case => Gender => Number => Str; spec : Species} ;
-lincat Det   = {s : Case => Gender => Str; spec : Species; n : Number} ;
-lincat NP    = {s : Case => Str; a : Agr} ;
-lincat Pron  = {s : Case => Str; acc_clit, dat_clit : Str; a : Agr} ;
+    Comp = {s : Agr => Str} ;
+    DAP = {s : Case => Gender => Str ; n : Number} ;
+    GN = {s : Str} ;
+    LN = {s : Str} ;
+    PN = {s : Str} ;
+    SN = {s : Str} ;
 
+    Imp = {s : Polarity => Number => Str} ;
+
+    Numeral = {s : Str} ;
+    Digits = {s : Str ; n : Number ; tail : DTail} ;
+    Decimal = {s : Str ; n : Number ; hasDot : Bool} ;
+
+    AP = {s : Species => Case => Gender => Number => Str} ;
+    CN = Noun ;
+    Num = {s : Str ; n : Number} ;
+    Quant = {s : Case => Gender => Number => Str ; spec : Species} ;
+    Det = {s : Case => Gender => Str ; spec : Species ; n : Number} ;
+
+    NP = {
+      s : Case => Str ;
+      acc_clit, dat_clit : Str ;
+      a : Agr
+    } ;
+
+    Pron = {
+      s : Case => Str ;
+      acc_clit, dat_clit : Str ;
+      a : Agr
+    } ;
+
+  linref
+    A = \a -> case a.clit of {True => "i" ; False => []} ++ a.s ! Nom ! Masc ! Sg ;
+    V = \v -> v.Indicative ! ResSqi.Pres ! Sg ! P3 ;
+    N = \n -> n.s ! Indef ! Nom ! Sg ;
+    NP = \np -> np.s ! Nom ;
 }

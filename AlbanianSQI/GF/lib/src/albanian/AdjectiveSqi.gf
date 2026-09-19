@@ -29,7 +29,7 @@ concrete AdjectiveSqi of Adjective = CatSqi **
 
     ComplA2 a2 np = {
       s = \\spec,c,g,n =>
-            (UseA2 a2).s ! spec ! c ! g ! n ++ a2.c2.s ++ np.s ! Acc
+            (UseA2 a2).s ! spec ! c ! g ! n ++ a2.c2.s ++ np.s ! a2.c2.c
     } ;
 
     ReflA2 a2 = UseA2 a2 ;
@@ -53,7 +53,7 @@ concrete AdjectiveSqi of Adjective = CatSqi **
 
     -- Ordinal used as adjective phrase (invariant fallback).
     AdjOrd ord = {
-      s = \\_,_,_,_ => ord.s
+      s = \\_,c,g,n => ord.s ! c ! g ! n
     } ;
 
     -- Sentence complement AP + "që" + SC (fallback).

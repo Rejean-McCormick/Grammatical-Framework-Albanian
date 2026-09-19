@@ -2,9 +2,7 @@
 
 ## Status and purpose
 
-This document is the **tactical boundary/lock debugging guide** for `ExtendSqi`.
-
-**Completion-phase note (2026-09-19):** the v0.1.0 compiler release gate now passes. Any older "current blocker" or "keep VPS/VPI inherited this cycle" wording in this tactical guide is historical. For active priorities/ownership use `CURRENT_REPAIR_STATE.md` and the override matrix; for the normative completed-system target use `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`.
+This document is the **tactical repair guide** for `ExtendSqi`.
 
 It does **not** replace the Albanian phase plan, the final-target architecture doc, or the override matrix. Those documents already define the architecture, the phase order, and the stable ownership map. This document exists to make one class of work explicit and repeatable:
 
@@ -640,25 +638,27 @@ A patch is only ready when all items below are true.
 
 Maintain this section during active repair.
 
-### Current live status
+### Current first hard blocker
 
-There is no active PMCFG hard blocker in the published v0.1.0 baseline. `ExtendSqi.gfo` is produced.
+- `PossPronRNP` — PMCFG crash after `+ PossPronRNP 324` in run `20260918_153932`
 
-The current use of this guide is therefore regression/debugging support, especially for:
+### Current lock-warning status
 
-- new `lock_*` or category-shape warnings introduced by Completion changes;
-- boundary mistakes after a core verbal representation change;
-- ownership drift between `ExtendSqi.gf` and companion modules;
-- exact retyping problems at list or extension-family boundaries.
+- no `missing lock_*` warnings in the latest run
+- historical lock-warning hotspots remain regression lessons, not current blocker labels
 
-### Current Completion watchlist
+### Current subsystem watchlist
 
-- VPS/VPI Architecture Gate and any boundary changes it requires;
-- future VPS2/VPI2 slash/clitic preservation;
-- `DConj` / `must_VV` only when they become active Completion targets;
-- AP/CN/RNP/focus families as regression zones.
+- RNP family, with `PossPronRNP` first
+- fronted direct-speech family for later linguistic validation only (`FrontComplDirectVS` is structurally PMCFG-confirmed)
+- DAP wrappers and AP/CN/existential families as regression zones, not current first blockers
 
-Historical inherited `(0,0)` VPS/VPI entries remain visible completion gaps until the family is implemented; they are no longer classified as a deliberate final design for the current phase.
+### Current boundary watchlist
+
+- `Base/Cons/ConjComp` and `Base/Cons/ConjImp`: six current `no linearization` warnings, one unresolved family
+- `VPI` / `VPI2` / `VPS` / `VPS2`: inherited `(0,0)` coverage remains incomplete by design this cycle
+- list-family `lincat` insertion by default
+- any inherited function still subtracted in `ExtendSqi.gf`
 
 ---
 

@@ -1,25 +1,21 @@
 concrete RelativeSqi of Relative = CatSqi **
-  open ResSqi, Prelude in {
+  open Prelude, ParamX, ResSqi, ClauseSqiRes in {
 
-  oper
-    relPart : Str = "që" ;
-    relSp   : Str = " " ;
+lin
+  RelCl cl = {s = \_,t,ant,pol => "që" ++ cl.s ! t ! ant ! pol} ;
 
-  lin
-    -- Invariant:
-    --   []        = no RP tail
-    --   non-empty = already includes its own leading space
-    IdRP = {s = []} ;
+  RelVP rp vp = {
+    s = \agr,t,ant,pol => rp.s ! Nom ! agr.gn ++ realizeVP vp t ant pol agr
+  } ;
 
-    FunRP prep np rp =
-      {s = relSp ++ np.s ! Nom ++ relSp ++ prep.s ++ rp.s} ;
+  RelSlash rp cl = {
+    s = \agr,t,ant,pol =>
+      cl.c2.s ++ rp.s ! cl.c2.c ! agr.gn ++ cl.s ! t ! ant ! pol
+  } ;
 
-    RelCl _ =
-      {s = relPart} ;
+  IdRP = {s = \_,_ => "që"} ;
 
-    RelVP rp _ =
-      {s = relPart ++ rp.s} ;
-
-    RelSlash rp _ =
-      {s = relPart ++ rp.s} ;
+  FunRP prep np rp = {
+    s = \c,g => prep.s ++ np.s ! prep.c ++ rp.s ! c ! g
+  } ;
 }

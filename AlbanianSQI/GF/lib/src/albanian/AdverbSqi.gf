@@ -12,13 +12,12 @@ concrete AdverbSqi of Adverb = CatSqi ** open ResSqi, Prelude in {
 
     thanSep : Str = "se" ;
 
-    npAfterThan : {s : Case => Str ; a : Agr} -> Str = \np -> np.s ! Nom ;
+    npAfterThan : NP -> Str = \np -> np.s ! Nom ;
 
     -- Do not inspect p.s at runtime.
     -- In this grammar Prep only carries a surface string, so choose
     -- the structural default used after prepositions.
-    npAfterPrep : {s : Case => Str ; a : Agr} -> Str = \np ->
-      np.s ! Acc ;
+    npAfterPrep : Prep -> NP -> Str = \p,np -> np.s ! p.c ;
 
   lin
     PositAdAAdj a = {s = aBase a} ;
@@ -33,7 +32,7 @@ concrete AdverbSqi of Adverb = CatSqi ** open ResSqi, Prelude in {
     ComparAdvAdjS cadv a s =
       {s = cadv.s ++ aBase a ++ thanSep ++ s.s} ;
 
-    PrepNP p np = {s = p.s ++ npAfterPrep np} ;
+    PrepNP p np = {s = p.s ++ npAfterPrep p np} ;
 
     SubjS subj s = {s = subj.s ++ s.s} ;
 }

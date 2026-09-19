@@ -3,27 +3,24 @@
 This file defines the stable target architecture, **not the current blocker**. For the latest Wordbench run, warnings, and next evidence gate, see `CURRENT_REPAIR_STATE.md`.
 
 ## Status
-Approved coordinator architecture for the Albanian RGL Completion phase.
+Approved target architecture for the current Albanian development cycle.
 
-The thin-coordinator rule remains stable. The former cycle-specific rule that VPS/VPI/VPS2/VPI2 must remain inherited has been superseded for post-v0.1.0 Completion by `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`.
-
-This document defines the intended role of `GF/lib/src/albanian/ExtendSqi.gf` and the subsystem ownership rules that all companion modules must follow.
+This document defines the final intended role of `GF/lib/src/albanian/ExtendSqi.gf` and the subsystem ownership rules that all companion modules must follow.
 
 ---
 
 ## 1. Purpose
 
-The purpose of this document is to keep the target architecture of the Albanian `Extend` layer stable while functional coverage expands.
+The purpose of this document is to freeze the target architecture of the Albanian `Extend` layer before further implementation work.
 
-The guiding principles for the Completion phase are:
+The guiding principle for this cycle is:
 
 - `ExtendSqi.gf` is a **thin coordinator**.
 - Companion modules hold Albanian-specific implementation logic.
-- Families stay inherited until Albanian evidence justifies coherent local ownership.
-- A family may move from inheritance to a dedicated Albanian subsystem when its final category/realization contract is compatible with `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md` and the live acceptance evidence recorded in `CURRENT_REPAIR_STATE.md` supports ownership transfer.
-- Every local override must preserve the correct concrete category shape and must be backed by behavior tests.
+- Unsupported families stay inherited from `ExtendFunctor`.
+- Every local override must be justified by Albanian-specific evidence and must preserve the correct concrete category shape.
 
-This document governs coordinator structure; the expansion plan governs completion order and VPS/VPI architecture.
+This document is the source of truth for all `ExtendSqi`-related edits in this cycle.
 
 ---
 
@@ -40,7 +37,7 @@ It must contain:
 
 It must not contain:
 
-- local VPS/VPI/VPS2/VPI2 implementation machinery directly in the coordinator; coherent family logic belongs in a dedicated subsystem if local ownership is activated
+- local VPS/VPI/VPS2/VPI2 or VP-series-list machinery
 - local coordinator-side helper definitions
 - generic repair code
 - drifted or experimental logic that belongs in a subsystem module
@@ -67,24 +64,17 @@ The canonical Albanian `Extend` companion modules for this cycle are:
 - `GF/lib/src/albanian/ExtendSqiLexicon.gf`
 - `GF/lib/src/albanian/ExtendSqiHelpers.gf`
 
-Conditional Completion module:
-
-- `GF/lib/src/albanian/ExtendSqiVPS.gf` — create only when coherent local VPS/VPI ownership is activated after the Architecture Gate
-
 ### 3.3 VPS-family decision
 
-The stabilization-cycle prohibition on local VPS/VPI ownership is superseded.
+Do **not** build `ExtendSqiVPS.gf` in this cycle.
 
-For the Completion phase:
+The entire VPS/VPI/VPS2/VPI2/list-wrapper family remains inherited from `ExtendFunctor`.
 
-- the family may remain inherited while its contract is unresolved;
-- `(0,0)` inherited members remain explicitly incomplete;
-- local ownership may be activated only for the family as a coherent subsystem;
-- isolated one-function overrides remain prohibited;
-- `ExtendSqi.gf` remains wiring-only;
-- any required core verbal realization machinery belongs in core resource/syntax modules, not in the coordinator.
+Reason:
 
-The preferred local owner, if activated, is `ExtendSqiVPS.gf`.
+- the family was previously half-local and failed as a family
+- the chosen architecture for this cycle is stability first
+- the coordinator must not reintroduce unsupported local list-family logic
 
 ### 3.4 Contract-side rule
 
@@ -228,16 +218,6 @@ Only:
 
 - extension-specific lexical entries and lexical wrappers
 
-### Conditionally owned by `ExtendSqiVPS.gf`
-
-Only after the Completion Architecture Gate:
-
-- coherent `VPS` / `VPI` / `VPS2` / `VPI2` extension-family realization;
-- their list/coordination constructors;
-- extension-level saturation/bridging logic that belongs to this family.
-
-It must not duplicate core Albanian `VP`/`Cl` realization machinery.
-
 ---
 
 ## 6. Final override policy for this cycle
@@ -256,19 +236,18 @@ This cycle applies that rule strictly.
 
 ---
 
-## 7. VPS/VPI family transition policy
+## 7. Explicit inherited families
 
-The VPS/VPI/VPS2/VPI2 family was intentionally inherited during compiler stabilization. That historical decision remains valid for the v0.1.0 cycle but is no longer a permanent Completion constraint.
+The following remain inherited from `ExtendFunctor` for this cycle:
 
-Current policy:
+- VPS family
+- VPI family
+- VPS2 family
+- VPI2 family
+- list wrappers for those families
+- any `Base*` / `Cons*` / `Conj*` members belonging to that unsupported local family
 
-- keep the family inherited until the Architecture Gate establishes the Albanian contract;
-- treat inherited `variants {}` / `(0,0)` members as visible completion gaps;
-- when local ownership is activated, move the family coherently to `ExtendSqiVPS.gf`;
-- do not reintroduce isolated members in `ExtendSqi.gf`;
-- preserve core-vs-extension ownership: general verbal realization stays in core modules, while the `Extend` API family stays in the extension subsystem.
-
-The completed-family contract is defined in `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`. Any current transition/gate sequence belongs in `CURRENT_REPAIR_STATE.md` and the testing specification.
+These are intentionally not owned by local Albanian subsystem modules in this cycle.
 
 ---
 
@@ -283,54 +262,49 @@ The following are local Albanian subsystem families for this cycle:
 - VP bridge family
 - RNP family
 - lexical tail
-- VPS/VPI family, conditionally, once its coherent local ownership is activated
 
-Each locally owned subsystem is completed and validated as a family.
+Each of these is completed and validated as a family.
 
 ---
 
-## 9. Acceptance criteria for the Completion phase
+## 9. Acceptance criteria for this cycle
 
-The Albanian `Extend` layer is considered architecturally correct only when all of the following are true:
+The Albanian `Extend` layer is considered correct for this cycle only when all of the following are true:
 
 1. `ExtendSqi.gf` remains a thin coordinator.
-2. Every local override is owned by the correct subsystem file.
-3. No one-off VPS/VPI/VPS2/VPI2 family drift is present.
-4. Any locally owned VPS-family implementation is coherent and backed by the Architecture Gate.
+2. `ExtendSqiScaffolding.gf` is contract-correct.
+3. No unsupported local VPS/VPI/VPS2/VPI2 or VP-series-list logic is present.
+4. Every local override is owned by the correct subsystem file.
 5. No accidental category flattening has been introduced.
-6. Any core reopening is justified by a behavior test showing information loss at that boundary.
-7. The full Albanian extension layer compiles cleanly.
-8. No unexplained new lock/shape warning is introduced.
-9. `ExtendSqi`, `LangSqi`, and `AllSqi` regressions pass.
-10. Linguistic completion claims are supported by registered Wordbench scenarios and reviewed outputs.
+6. The full Albanian extension layer compiles cleanly.
+7. No new lock warnings are introduced by the extension layer.
+8. Final public-surface validation through `GrammarSqi` and `SyntaxSqi` passes.
 
 ---
 
 ## 10. Current implementation order
 
-The Completion phase uses capability gates rather than the old compiler-repair sequence:
+The implementation order for this cycle is fixed:
 
-1. Wordbench Architecture Gate scenarios (`vps_agreement`, `vps_temp_pol`);
-2. minimal verbal realization kernel where the tests prove information loss;
-3. finite VPS slice (`MkVPS`, `PredVPS`, lists/coordination);
-4. VPS question/relative integration;
-5. VPI + representative `VV` embedding/control;
-6. structured slash/clitic preservation;
-7. VPS2/VPI2 saturation and coordination;
-8. `ExtendSqi` → `LangSqi` → `AllSqi` regression;
-9. reviewed goldens and family release gate;
-10. remaining Structural/Construction/Irreg completion.
-
-See `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md` for the normative final-state contract; use `CURRENT_REPAIR_STATE.md` for the current gate/cursor.
+1. `ExtendSqiScaffolding.gf`
+2. `ExtendSqiHelpers.gf`
+3. `ExtendSqi.gf` coordinator lock
+4. `ExtendSqiVPBridge.gf`
+5. `ExtendSqiAPCN.gf`
+6. `ExtendSqiExistential.gf`
+7. `ExtendSqiRNP.gf`
+8. `ExtendSqiFocusPrep.gf`
+9. `ExtendSqiLexicon.gf`
+10. structural cleanup outside `Extend`
+11. final validation
 
 ---
 
 ## 11. Anti-drift rules
 
-The following are prohibited during the Completion phase:
+The following are prohibited during this cycle:
 
-- reintroducing VPS/VPI/VPS2/VPI2 implementation logic directly in the coordinator
-- reintroducing only a subset of the VPS/VPI family without a coherent ownership decision
+- reintroducing local VPS/VPI/VPS2/VPI2 or VP-series-list coordinator logic
 - moving subsystem logic into `ExtendSqi.gf`
 - fixing one function in a family while leaving the rest structurally inconsistent
 - flattening rich Albanian categories to strings for convenience
@@ -354,19 +328,8 @@ This target document is aligned to the current Albanian source dump and the Alba
 
 ## 13. Immediate next deliverable
 
-The immediate deliverable is:
+The next document to create from this target is:
 
-```text
-WP1 — Verbal Realization Architecture Gate
-```
+- `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md`
 
-It consists of a producer/consumer map plus the first two Wordbench behavior scenarios:
-
-```text
-vps_agreement
-vps_temp_pol
-```
-
-No full 24-function VPS/VPI implementation should precede this gate.
-
-The normative final-state specification is `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`; the current work package is tracked in `CURRENT_REPAIR_STATE.md`.
+That matrix will enumerate every function currently wired through `ExtendSqi.gf`, identify its subsystem owner, and mark it as either inherited or locally overridden for this cycle.

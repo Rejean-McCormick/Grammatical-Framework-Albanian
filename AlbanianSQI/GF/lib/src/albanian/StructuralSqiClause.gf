@@ -13,27 +13,27 @@ oper
   -- =========================================================
 
   -- Prepositions
-  above_Prep : Prep = P.mkPrep "sipër" ;
-  after_Prep : Prep = P.mkPrep "pas" ;
-  before_Prep : Prep = P.mkPrep "para" ;
-  behind_Prep : Prep = P.mkPrep "pas" ;
-  between_Prep : Prep = P.mkPrep "midis" ;
-  by8agent_Prep : Prep = P.mkPrep "nga" ;
-  by8means_Prep : Prep = P.mkPrep "me" ;
-  during_Prep : Prep = P.mkPrep "gjatë" ;
-  for_Prep : Prep = P.mkPrep "për" ;
-  from_Prep : Prep = P.mkPrep "nga" ;
-  in8front_Prep : Prep = P.mkPrep "përpara" ;
-  in_Prep : Prep = P.mkPrep "në" ;
-  on_Prep : Prep = P.mkPrep "mbi" ;
-  part_Prep : Prep = P.mkPrep "prej" ;
-  possess_Prep : Prep = P.mkPrep "i" ;
-  through_Prep : Prep = P.mkPrep "përmes" ;
-  to_Prep : Prep = P.mkPrep "në" ;
-  under_Prep : Prep = P.mkPrep "nën" ;
-  with_Prep : Prep = P.mkPrep "me" ;
-  without_Prep : Prep = P.mkPrep "pa" ;
-  except_Prep : Prep = P.mkPrep "përveç" ;
+  above_Prep : Prep = P.mkPrep "sipër" Ablat ;
+  after_Prep : Prep = P.mkPrep "pas" Ablat ;
+  before_Prep : Prep = P.mkPrep "para" Ablat ;
+  behind_Prep : Prep = P.mkPrep "pas" Ablat ;
+  between_Prep : Prep = P.mkPrep "midis" Ablat ;
+  by8agent_Prep : Prep = P.mkPrep "nga" Ablat ;
+  by8means_Prep : Prep = P.mkPrep "me" Acc ;
+  during_Prep : Prep = P.mkPrep "gjatë" Ablat ;
+  for_Prep : Prep = P.mkPrep "për" Acc ;
+  from_Prep : Prep = P.mkPrep "nga" Ablat ;
+  in8front_Prep : Prep = P.mkPrep "përpara" Ablat ;
+  in_Prep : Prep = P.mkPrep "në" Acc ;
+  on_Prep : Prep = P.mkPrep "mbi" Acc ;
+  part_Prep : Prep = P.mkPrep "prej" Ablat ;
+  possess_Prep : Prep = P.mkPrep "i" Dat ;
+  through_Prep : Prep = P.mkPrep "përmes" Ablat ;
+  to_Prep : Prep = P.mkPrep "në" Acc ;
+  under_Prep : Prep = P.mkPrep "nën" Acc ;
+  with_Prep : Prep = P.mkPrep "me" Acc ;
+  without_Prep : Prep = P.mkPrep "pa" Acc ;
+  except_Prep : Prep = P.mkPrep "përveç" Ablat ;
 
   -- Conjunctions and subordinators
   although_Subj : Subj = P.mkSubj "megjithëse" ;

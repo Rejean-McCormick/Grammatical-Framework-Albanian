@@ -11,6 +11,8 @@ oper
         Dat   => x ;
         Ablat => x
       } ;
+      acc_clit = [] ;
+      dat_clit = [] ;
       a = {gn = gn ; p = p}
     } ;
 

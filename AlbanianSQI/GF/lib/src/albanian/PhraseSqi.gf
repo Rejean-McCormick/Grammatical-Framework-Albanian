@@ -1,32 +1,22 @@
-concrete PhraseSqi of Phrase = CatSqi ** open Prelude, ResSqi in {
-
+concrete PhraseSqi of Phrase = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRes in {
   lin
-    PhrUtt pconj utt voc = lin Phr {s = pconj.s ++ utt.s ++ voc.s} ;
-
-    UttS s = lin Utt {s = s.s} ;
-    UttQS qs = lin Utt {s = qs.s} ;
-
-    -- Imp is intentionally shallow in CatSqi.  Number/politeness distinctions
-    -- are therefore not encoded in the lincat yet; keep all three abstract
-    -- constructors explicit and preserve polarity at the phrase boundary.
-    UttImpSg  pol imp = lin Utt {s = pol.s ++ imp.s} ;
-    UttImpPl  pol imp = lin Utt {s = pol.s ++ imp.s} ;
-    UttImpPol pol imp = lin Utt {s = pol.s ++ imp.s} ;
-
-    UttIP ip = lin Utt {s = ip.s} ;
-    UttIAdv iadv = lin Utt {s = iadv.s} ;
-    UttNP np = lin Utt {s = np.s ! Nom} ;
-    UttAdv adv = lin Utt {s = adv.s} ;
-    UttVP vp = lin Utt {s = vp.s} ;
-    UttCN cn = lin Utt {s = cn.s ! Indef ! Nom ! Sg} ;
-    UttCard card = lin Utt {s = card.s} ;
-    UttAP ap = lin Utt {s = ap.s ! Indef ! Nom ! Masc ! Sg} ;
-    UttInterj i = lin Utt {s = i.s} ;
-
-    NoPConj = lin PConj {s = []} ;
-    PConjConj conj = lin PConj {s = conj.s} ;
-
-    NoVoc = lin Voc {s = []} ;
-    VocNP np = lin Voc {s = "," ++ np.s ! Nom} ;
-
+    PhrUtt pconj utt voc = {s=pconj.s ++ utt.s ++ voc.s} ;
+    UttS s = s ;
+    UttQS s = s ;
+    UttImpSg p i = {s=i.s!p.p!Sg} ;
+    UttImpPl p i = {s=i.s!p.p!Pl} ;
+    UttImpPol p i = {s=i.s!p.p!Pl} ;
+    UttIP ip = {s=ip.s!Nom} ;
+    UttIAdv a = a ;
+    UttNP np = {s=np.s!Nom} ;
+    UttAdv a = a ;
+    UttVP vp = {s=realizeSubjVP vp Pos defaultAgr} ;
+    UttCN cn = {s=cn.s!Indef!Nom!Sg} ;
+    UttCard c = {s=c.s} ;
+    UttAP ap = {s=ap.s!Indef!Nom!Masc!Sg} ;
+    UttInterj i = i ;
+    NoPConj = {s=[]} ;
+    PConjConj c = c ;
+    NoVoc = {s=[]} ;
+    VocNP np = {s=SOFT_BIND ++ "," ++ np.s!Nom} ;
 }

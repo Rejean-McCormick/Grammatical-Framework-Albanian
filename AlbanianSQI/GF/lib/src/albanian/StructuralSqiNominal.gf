@@ -7,7 +7,7 @@ oper
 
   every_Det = SR.mkDetInv "çdo" Sg ;
   few_Det = SR.mkDetInv "pak" Pl ;
-  how8many_IDet = P.mkIDet "sa" ;
+  how8many_IDet = lin IDet {s=\_,_=>"sa"; n=Pl} ;
   many_Det = SR.mkDetInv "shumë" Pl ;
   most_Predet = P.mkPredet "shumica" ;
   much_Det = SR.mkDetInv "shumë" Sg ;
@@ -31,7 +31,18 @@ oper
                    "këtij" "këtyre"   "kësaj" "këtyre"
                    "këtij" "këtyre"   "kësaj" "këtyre" ;
 
-  which_IQuant = P.mkIQuant "cili" ;
+  which_IQuant = lin IQuant {
+    s = \c,g,n => case <c,g,n> of {
+      <Nom,Masc,Sg> => "cili" ; <Nom,Fem,Sg> => "cila" ;
+      <Nom,Masc,Pl> => "cilët" ; <Nom,Fem,Pl> => "cilat" ;
+      <Acc,Masc,Sg> => "cilin" ; <Acc,Fem,Sg> => "cilën" ;
+      <Acc,Masc,Pl> => "cilët" ; <Acc,Fem,Pl> => "cilat" ;
+      <Dat,Masc,Sg> => "cilit" ; <Dat,Fem,Sg> => "cilës" ;
+      <Dat,Masc,Pl> => "cilëve" ; <Dat,Fem,Pl> => "cilave" ;
+      <Ablat,Masc,Sg> => "cilit" ; <Ablat,Fem,Sg> => "cilës" ;
+      <Ablat,Masc,Pl> => "cilëve" ; <Ablat,Fem,Pl> => "cilave"
+    }
+  } ;
 
   -- Pronouns and noun-phrase constants
   everybody_NP = SR.mkNPConstP3 "të gjithë" ;
@@ -59,11 +70,21 @@ oper
   we_Pron =
     ResSqi.mkPron "ne" "ne" "neve" "nesh" "na" "na" GPl P1 ;
 
-  whatPl_IP = P.mkIP "çfarë" ;
-  whatSg_IP = P.mkIP "çfarë" ;
+  whatPl_IP = lin IP {
+    s=\_=>"çfarë"; a={gn=GPl;p=P3}
+  } ;
+  whatSg_IP = lin IP {
+    s=\_=>"çfarë"; a={gn=GSg Masc;p=P3}
+  } ;
 
-  whoPl_IP = P.mkIP "kush" ;
-  whoSg_IP = P.mkIP "kush" ;
+  whoPl_IP = lin IP {
+    s=table {Nom=>"kush"; Acc=>"kë"; Dat=>"kujt"; Ablat=>"kujt"};
+    a={gn=GPl;p=P3}
+  } ;
+  whoSg_IP = lin IP {
+    s=table {Nom=>"kush"; Acc=>"kë"; Dat=>"kujt"; Ablat=>"kujt"};
+    a={gn=GSg Masc;p=P3}
+  } ;
 
   youSg_Pron =
     ResSqi.mkPron "ti" "ty" "ty" "teje" "të" "të" (GSg Masc) P2 ;

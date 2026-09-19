@@ -1,14 +1,19 @@
+-- Public Albanian core grammar composition.
 concrete GrammarSqi of Grammar =
   NounSqi,
-  AdjectiveSqi,
-  NumeralSqi,
   VerbSqi,
+  AdjectiveSqi,
+  AdverbSqi,
+  NumeralSqi,
   SentenceSqi,
   QuestionSqi,
   RelativeSqi,
   ConjunctionSqi,
-  IdiomSqi,
+  PhraseSqi,
   TextSqi,
-  PhraseSqi
+  StructuralSqi,
+  IdiomSqi,
+  TenseSqi,
+  NamesSqi
   ** {
 } ;

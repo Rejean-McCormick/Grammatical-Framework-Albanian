@@ -1,147 +1,90 @@
--- GF/lib/src/albanian/ExtendSqiVPBridge.gf
-
+-- Bridges between rich Albanian VP/VPSlash values and extension categories.
 resource ExtendSqiVPBridge =
-  open GrammarSqi, CatSqi,
+  open GrammarSqi, CatSqi, ClauseSqiRes,
        (R = ResSqi), (P = ParamX), (PS = ParadigmsSqi),
-       ExtendSqiHelpers,
-       (NS = NounSqi), (AS = AdverbSqi) in {
+       ExtendSqiHelpers, (NS = NounSqi), (AS = AdverbSqi), (I = IrregSqi) in {
 
-  oper
-    -- =========================================================
-    -- VP / VPSLASH BRIDGE SUBSYSTEM
-    -- Strategy:
-    -- - prefer inherited/compositional Albanian paths whenever they exist
-    -- - keep temporary lossy bridges explicit and centralized
-    -- - allow shallow verbal wrappers where Albanian is already shallow
-    -- - keep rich complements rich as long as possible
-    -- - do not let VP-bridge functions become another AP/CN flattening zone
-    -- =========================================================
+oper
+  vp_agentAdv : NP -> Adv = \np ->
+    AS.PrepNP (PS.mkPrep "nga" R.Ablat) np ;
 
-    vp_npSurfaceAcc : NP -> Str =
-      \np -> np.s ! R.Acc ;
+  vp_PresPartAP : VP -> AP = \vp -> lin AP {
+    s=\_,_,_,_=>realizeGerundVP vp agrMascSg
+  } ;
 
-    vp_agentAdv : NP -> Adv =
-      \np -> AS.PrepNP (R.mkPrep "nga") np ;
+  vp_EmbedPresPart : VP -> SC = \vp -> lin SC {
+    s=realizeGerundVP vp agrMascSg
+  } ;
 
-    vp_compFromA2 : A2 -> Comp =
-      \a2 -> CompAP (UseA2 a2) ;
+  vp_EmbedSSlash : SSlash -> SC = \sslash -> lin SC {
+    s="çfarë" ++ sslash.s
+  } ;
 
-    vp_compFromN2 : N2 -> Comp =
-      \n2 -> CompCN (UseN2 n2) ;
+  vp_PastPartAP : VPSlash -> AP = \sl -> lin AP {
+    s=\_,_,g,n=>sl.v.participle ++ sl.post!(R.agrgP3 g n)
+  } ;
 
-    -- TEMPORARY fallback:
-    -- no Albanian AP-preserving participial constructor path has been surfaced yet.
-    vp_PresPartAP : VP -> AP =
-      \vp ->
-        mkCompatAPFromStr vp.s ;
+  vp_PastPartAgentAP : VPSlash -> NP -> AP = \sl,np -> lin AP {
+    s=\_,_,g,n=>sl.v.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
+  } ;
 
-    -- SC is shallow/string-like here, so direct embedding is acceptable.
-    vp_EmbedPresPart : VP -> SC =
-      \vp ->
-        lin SC {s = vp.s} ;
+  vp_PassVPSlash : VPSlash -> VP = \sl ->
+    appendVP (emptyVP (lin Verb I.jam_V))
+      (\a=>sl.v.participle ++ sl.post!a) ;
 
-    -- TEMPORARY compile probe / compatibility fallback.
-    -- ExtendFunctor leaves EmbedSSlash as variants {} in the pinned RGL.
-    -- Albanian SSlash is already flattened to {s : Str}, so this bridge can
-    -- only preserve the available surface string. This is NOT a final
-    -- linguistic realization of free-relative/slash embedding. Model
-    -- languages reconstruct or fill the slash more explicitly; Albanian
-    -- needs a later category/constructor decision before this can be final.
-    vp_EmbedSSlash : SSlash -> SC =
-      \sslash ->
-        lin SC {s = sslash.s} ;
+  vp_PassAgentVPSlash : VPSlash -> NP -> VP = \sl,np ->
+    appendVP (vp_PassVPSlash sl) (\_ => (vp_agentAdv np).s) ;
 
-    -- TEMPORARY fallback:
-    -- preserve subsystem ownership, but keep the lossy AP bridge explicit.
-    vp_PastPartAP : VPSlash -> AP =
-      \vpslash ->
-        mkCompatAPFromStr vpslash.s ;
+  vp_NominalizeVPSlashNP : VPSlash -> NP -> NP = \sl,np ->
+    let vp : VP = ComplSlash sl np
+    in lin NP {
+      s=\_=>realizeGerundVP vp agrMascSg ;
+      acc_clit=[] ; dat_clit=[] ; a=agrMascSg
+    } ;
 
-    -- TEMPORARY fallback:
-    -- build the agented passive through Albanian agent marking first,
-    -- then surface only for the provisional AP bridge.
-    vp_PastPartAgentAP : VPSlash -> NP -> AP =
-      \vpslash,np ->
-        mkCompatAPFromStr (vpslash.s ++ wordSep ++ (vp_agentAdv np).s) ;
+  vp_ProgrVPSlash : VPSlash -> VPSlash = \sl -> sl ** {
+    cl=\a=>"po" ++ sl.cl!a
+  } ;
 
-    -- VP/VPSlash are shallow in current Albanian CatSqi, so this remains
-    -- a direct coercion at the surface level.
-    vp_PassVPSlash : VPSlash -> VP =
-      \vpslash ->
-        lin VP {s = vpslash.s} ;
+  vp_A2VPSlash : A2 -> VPSlash = \a2 -> lin VPSlash {
+    v=lin Verb I.jam_V ;
+    cl=\_=>[] ;
+    post=\a=>(CompAP (UseA2 a2)).s!a ;
+    c2=a2.c2
+  } ;
 
-    -- Preferred passive+agent path: reuse Albanian prep government.
-    vp_PassAgentVPSlash : VPSlash -> NP -> VP =
-      \vpslash,np ->
-        AdvVP (lin VP {s = vpslash.s}) (vp_agentAdv np) ;
+  vp_N2VPSlash : N2 -> VPSlash = \n2 -> lin VPSlash {
+    v=lin Verb I.jam_V ;
+    cl=\_=>[] ;
+    post=\a=>(CompCN (UseN2 n2)).s!a ;
+    c2=n2.c2
+  } ;
 
-    -- TEMPORARY fallback:
-    -- nominalization is still compatibility-based, but keep the complement
-    -- realization explicit and centralized.
-    vp_NominalizeVPSlashNP : VPSlash -> NP -> NP =
-      \vpslash,np ->
-        mkCompatNPFromStr
-          (vpslash.s ++ wordSep ++ vp_npSurfaceAcc np)
-          R.Masc
-          P.Sg ;
+  vp_AdvIsNP : Adv -> NP -> Cl = \adv,np ->
+    PredVP np (UseComp (CompAdv adv)) ;
 
-    -- Same record shape; keep this as a pure coercion for now.
-    vp_ProgrVPSlash : VPSlash -> VPSlash =
-      \vpslash ->
-        vpslash ;
+  vp_AdvIsNPAP : Adv -> NP -> AP -> Cl = \adv,np,ap ->
+    PredVP np (AdvVP (UseComp (CompAP ap)) adv) ;
 
-    -- Preserve the full VPSlash category shape (including GF lock fields)
-    -- by starting from a real Albanian VPSlash constructor. The dummy verb
-    -- is only a structural scaffold: its surface string is replaced below.
-    -- This follows the model-language pattern used for A2VPSlash/N2VPSlash
-    -- while keeping the actual Albanian A2/N2 complement realization.
-    vp_dummyVPSlash : VPSlash =
-      SlashV2a (PS.mkV2 (PS.mkV "bëj")) ;
+  -- për të + participle is the productive Standard-Albanian purpose form.
+  vp_PurposeVP : VP -> Adv = \vp -> lin Adv {
+    s="për" ++ teWithClitic (vp.cl!agrMascSg) ++
+      vp.v.participle ++ vp.post!agrMascSg
+  } ;
 
-    vp_A2VPSlash : A2 -> VPSlash =
-      \a2 ->
-        let vp : VP = UseComp (vp_compFromA2 a2)
-        in vp_dummyVPSlash ** {
-          s = vp.s ++ wordSep ++ a2.c2.s
-        } ;
+  vp_WithoutVP : VP -> Adv = \vp -> lin Adv {
+    s="pa" ++ vp.cl!agrMascSg ++ vp.v.participle ++ vp.post!agrMascSg
+  } ;
 
-    vp_N2VPSlash : N2 -> VPSlash =
-      \n2 ->
-        let vp : VP = UseComp (vp_compFromN2 n2)
-        in vp_dummyVPSlash ** {
-          s = vp.s ++ wordSep ++ n2.c2.s
-        } ;
+  vp_ByVP : VP -> Adv = \vp -> lin Adv {
+    s=realizeGerundVP vp agrMascSg
+  } ;
 
-    -- Preferred inherited/functor-style composition path.
-    vp_AdvIsNP : Adv -> NP -> Cl =
-      \adv,np ->
-        PredVP np (UseComp (CompAdv adv)) ;
+  vp_InOrderToVP : VP -> Adv = \vp -> lin Adv {
+    s="që" ++ realizeSubjVP vp P.Pos agrMascSg
+  } ;
 
-    -- Preferred inherited/functor-style composition path.
-    vp_AdvIsNPAP : Adv -> NP -> AP -> Cl =
-      \adv,np,ap ->
-        PredVP np (AdvVP (UseComp (CompAP ap)) adv) ;
+  vp_CompoundAP : N -> A -> AP = \n,a ->
+    AdvAP (PositA a) (AS.PrepNP (PS.mkPrep "nga" R.Ablat) (NS.MassNP (UseN n))) ;
 
-    -- These targets are Adv/string-like, so shallow realization is acceptable.
-    vp_PurposeVP : VP -> Adv =
-      \vp ->
-        lin Adv {s = "për të" ++ wordSep ++ vp.s} ;
-
-    vp_WithoutVP : VP -> Adv =
-      \vp ->
-        lin Adv {s = "pa" ++ wordSep ++ vp.s} ;
-
-    vp_ByVP : VP -> Adv =
-      \vp ->
-        lin Adv {s = "nga" ++ wordSep ++ vp.s} ;
-
-    vp_InOrderToVP : VP -> Adv =
-      \vp ->
-        lin Adv {s = "që të" ++ wordSep ++ vp.s} ;
-
-    -- Constructor-based AP path; keeps AP shape instead of manufacturing one.
-    vp_CompoundAP : N -> A -> AP =
-      \n,a ->
-        AdvAP (PositA a) (AS.PrepNP (R.mkPrep "nga") (NS.MassNP (UseN n))) ;
-
-} ;
+}

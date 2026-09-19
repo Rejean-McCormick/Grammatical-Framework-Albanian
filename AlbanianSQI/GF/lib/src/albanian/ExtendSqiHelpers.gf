@@ -30,7 +30,7 @@ resource ExtendSqiHelpers =
       \ap -> ap.s ! R.Indef ! R.Nom ! R.Masc ! P.Sg ;
 
     verbPres3sg : R.Verb -> Str =
-      \v -> v.Indicative ! P.Pres ! P.Sg ! P.P3 ;
+      \v -> v.Indicative ! R.Pres ! P.Sg ! P.P3 ;
 
     prepSurfaceAcc : R.Prep -> NP -> Str =
       \prep,np -> prep.s ++ np.s ! R.Acc ;

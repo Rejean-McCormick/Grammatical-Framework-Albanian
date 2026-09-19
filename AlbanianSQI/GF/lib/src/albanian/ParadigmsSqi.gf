@@ -332,7 +332,7 @@ oper
     _ + "psi" => mkN106 form;
     _ + "ari" => mkN040 form;
     _ + "ëri" => mkN152 form;
-    _ + "uri" => mkN149 form;
+    _ + "uri" => mkN459 form;
     _ + "rri" => mkN040 form;
     _ + "bri" => mkN106 form;
     _ + "mri" => mkN106 form;
@@ -1146,6 +1146,7 @@ oper
     _ + "s" => mkV001 form;
     _ + "g" => mkV001 form;
     _ + "c" => mkV001 form;
+    _ + "ëj" => mkV042 form;
     _ + "j" => mkV028 form;
     _ + "q" => mkV001 form;
     _ + "em" => mkV041 form;

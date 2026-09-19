@@ -27,7 +27,8 @@ The current situation is:
 | `ExtendSqi` | Compiles successfully |
 | PMCFG generation | Working |
 | Final `ExtendSqi.gfo` | Produced successfully |
-| Full language-wide regression | Pending |
+| Core release gate (FIX22C) | Passed |
+| Public composition (`LexiconSqi` / `LangSqi` / `AllSqi`) | Passed |
 | Scenario/golden linguistic validation | Pending |
 | Linguistic completion of all extensions | In progress |
 
@@ -43,9 +44,28 @@ rather than:
 
 ## 2. What is confirmed working by the current compiler
 
-The latest Wordbench validation confirms the following with GF 3.12:
+The current Wordbench validation with GF 3.12 confirms a compiler-stable Albanian core.
+
+### FIX22C release-gate targets
+
+The following modules completed Wordbench quick validation successfully and produced their final `.gfo` artifacts:
+
+```text
+StructuralSqi.gf    OK
+GrammarSqi.gf       OK
+LexiconSqi.gf       OK
+ConstructionSqi.gf  OK
+ExtendSqi.gf        OK
+LangSqi.gf          OK
+AllSqi.gf           OK
+TestSqi.gf          OK
+```
+
+The former GF 3.12 PMCFG backend crash is absent from these runs.
 
 ### `ExtendSqiHelpers.gf`
+
+Earlier targeted validation also confirmed:
 
 ```text
 Status: OK
@@ -59,19 +79,40 @@ The helper layer used by the Albanian extension grammar compiles successfully.
 Status: OK
 ```
 
-The Albanian implementation of the GF `Extend` interface reaches PMCFG generation successfully.
-
-### Final compiled artifact
+The Albanian implementation of the GF `Extend` interface reaches PMCFG generation successfully and produces:
 
 ```text
 ExtendSqi.gfo
 ```
 
-is produced.
+### Public language composition
 
-This confirms that the main Albanian extension layer is no longer blocked by the previous GF backend failure.
+FIX22B resolved two paradigm-dispatch failures that prevented the public language surface from compiling:
+
+```gf
+_ + "ëj" => mkV042 form;
+```
+
+for `bëj` / `do_V2`, and:
+
+```gf
+_ + "uri" => mkN459 form;
+```
+
+for `dashuri` / `love_N`.
+
+After these repairs, Wordbench confirms successful compilation and final `.gfo` production for:
+
+```text
+LexiconSqi.gf
+LangSqi.gf
+AllSqi.gf
+```
+
+This establishes that the repaired compiler/structural core is stable enough to serve as the `albanian-rgl-core-v0.1.0` baseline.
 
 ---
+
 
 ## 3. Core Albanian type system
 
@@ -448,15 +489,15 @@ Some inherited `ExtendFunctor` functions remain intentionally empty.
 
 They are no longer a compiler blocker, but they still represent missing functional coverage.
 
-### Full regression
+### Behavioral regression
 
-The successful Wordbench runs used the `quick` mode.
+The successful FIX22C Wordbench release-gate runs used the `quick` mode.
 
-They establish compilation of the tested modules, but they do not constitute a full Albanian regression.
+They establish compiler/structural validation of the tested release-gate modules, but they do not constitute a sentence-level behavioral or golden Albanian regression.
 
 ### Scenario tests
 
-The latest successful runs report:
+The current release-gate runs report:
 
 ```text
 Scenarios seen: 0
@@ -484,28 +525,64 @@ It does not invalidate the fact that `ExtendSqi` now compiles, but it should be 
 
 ---
 
-## 16. Validation levels
+## 16. Release milestone — Core v0.1.0
+
+The compiler-stable foundation is published as the milestone:
+
+```text
+albanian-rgl-core-v0.1.0
+```
+
+The corresponding status snapshot is:
+
+```text
+docs/status/ALBANIAN_CORE_V0.1.0.md
+```
+
+The meaning of this milestone is deliberately narrow:
+
+- the principal Albanian compiler/structural layers compile with GF 3.12;
+- the public language composition reaches `AllSqi`;
+- final `.gfo` artifacts are produced for the FIX22C release-gate targets;
+- the former `GeneratePMCFG` backend crash is no longer present;
+- the core can now be treated as frozen unless higher-level evidence exposes a foundational defect.
+
+It does **not** mean that the Albanian RGL has reached full linguistic or behavioral completion.
+
+The remaining work belongs to the completion phase: functional coverage, scenario tests, golden linguistic validation, warning cleanup, and higher-level parity with mature RGL languages.
+
+---
+
+## 17. Validation levels
 
 To avoid overstating the project status, use the following meanings.
 
 ### Compiler-confirmed
 
-The current compiler has successfully accepted the relevant module.
+The current compiler has successfully accepted the relevant module in the current release-gate campaign.
 
-Currently confirmed at minimum for:
+FIX22C confirms this level for:
 
 ```text
-ExtendSqiHelpers.gf
+StructuralSqi.gf
+GrammarSqi.gf
+LexiconSqi.gf
+ConstructionSqi.gf
 ExtendSqi.gf
+LangSqi.gf
+AllSqi.gf
+TestSqi.gf
 ```
 
-with final `ExtendSqi.gfo` production.
+with final `.gfo` production for each target.
+
+Earlier targeted validation also confirmed `ExtendSqiHelpers.gf`.
 
 ### Implemented in source
 
-The subsystem has substantial concrete Albanian code and is wired into the grammar, but has not necessarily been re-run through the complete current regression suite.
+The subsystem has substantial concrete Albanian code and is wired into the grammar, but compiler acceptance alone does not imply complete linguistic validation.
 
-This applies broadly to:
+This applies broadly across the Albanian implementation, including:
 
 ```text
 CatSqi
@@ -514,6 +591,7 @@ MorphoSqi
 ParadigmsSqi
 NounSqi
 AdjectiveSqi
+AdverbSqi
 NumeralSqi
 VerbSqi
 SentenceSqi
@@ -523,57 +601,84 @@ ConjunctionSqi
 IdiomSqi
 TextSqi
 PhraseSqi
+TenseSqi
+NamesSqi
 LexiconSqi
 StructuralSqi family
+ConstructionSqi
+ExtendSqi family
 ```
+
+### Release-gate validated
+
+This level means the module passed the FIX22C Wordbench compiler/structural gate and produced its final `.gfo`.
+
+This is stronger than merely “implemented in source”, but still weaker than sentence-level behavioral validation.
 
 ### Linguistically validated
 
-This level should be reserved for constructions that have expected-output tests or equivalent linguistic evidence.
+This level should be reserved for constructions that have expected-output tests, golden examples, or equivalent linguistic evidence.
 
 The whole Albanian RGL has **not yet reached this level**.
 
 ---
 
-## 17. Remaining path to completion
 
-The remaining work is now mainly:
+## 18. Remaining path to completion
 
-1. run a language-wide Wordbench regression;
-2. establish sentence/scenario tests;
-3. validate morphology and syntax against expected Albanian outputs;
-4. resolve the remaining structural warning/open symbols;
-5. complete inherited or deliberately unfinished `Extend` functions;
+The compiler/structural release gate is now complete.
+
+The remaining work is mainly:
+
+1. establish Wordbench sentence/scenario suites;
+2. validate morphology and syntax against expected Albanian outputs;
+3. complete inherited or deliberately unfinished `Extend` functions;
+4. prioritize the VPS/VPI/VPS2/VPI2 family and other `(0,0)` coverage gaps;
+5. resolve the remaining structural warning/open-symbol areas such as `DConj` and `must_VV`;
 6. replace provisional extension realizations where linguistic refinement is still required;
-7. validate the standard lexicon through representative paradigms;
-8. produce a clean final regression with no unexplained warnings;
-9. only then declare Albanian RGL complete.
+7. strengthen `ConstructionSqi` where current implementations are shallow or string-based;
+8. validate the standard lexicon through representative paradigms and behavioral examples;
+9. align the public top-level language surface with the intended full RGL feature set;
+10. reduce unexplained compiler warnings;
+11. run a true behavioral/golden regression;
+12. only then declare Albanian RGL complete.
+
+The next phase is therefore **Albanian RGL Completion**, not foundational compiler repair.
 
 ---
 
-## 18. Current completion assessment
+
+## 19. Current completion assessment
 
 The most accurate description of the project today is:
 
 ```text
 The Albanian RGL has a substantial morphology, paradigm system,
-core grammar, lexicon, structural vocabulary, and extended grammar.
+core grammar, lexicon, structural vocabulary, construction layer,
+and extended grammar.
 
-The main Extend grammar now compiles successfully through PMCFG
-and produces ExtendSqi.gfo.
+The compiler/structural core now passes the FIX22C Wordbench release
+gate through AllSqi, and the former GF 3.12 PMCFG crash is resolved.
 
-The remaining work is primarily full regression, test coverage,
-linguistic validation, cleanup of known partial areas, and completion
-of functions that are still deliberately inherited or provisional.
+The core baseline is suitable for the tagged milestone
+albanian-rgl-core-v0.1.0.
+
+The remaining work is primarily behavioral test coverage, linguistic
+validation, warning cleanup, higher-level feature completion, and the
+replacement of inherited/provisional extension implementations where
+real Albanian behavior is still missing.
 ```
 
 ### Development phase
 
 ```text
-FOUNDATION:        WORKING
-CORE IMPLEMENTATION: SUBSTANTIAL
-EXTEND COMPILATION: WORKING
-FULL REGRESSION:   PENDING
-LINGUISTIC QA:     IN PROGRESS
-FINAL COMPLETION:  NOT YET
+FOUNDATION:            STABLE / FROZEN AT CORE v0.1.0
+CORE IMPLEMENTATION:   SUBSTANTIAL
+CORE RELEASE GATE:     PASS
+EXTEND COMPILATION:    WORKING
+PUBLIC AllSqi BUILD:   WORKING
+SCENARIO REGRESSION:   PENDING
+LINGUISTIC QA:         IN PROGRESS
+FEATURE COMPLETION:    IN PROGRESS
+FINAL RGL RELEASE:     NOT YET
 ```

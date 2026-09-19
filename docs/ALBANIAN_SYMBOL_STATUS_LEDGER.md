@@ -646,22 +646,26 @@ That is the function of this ledger.
 
 ---
 
-### Entry: inherited `VPS/VPI/VPS2/VPI2` coordinator family
+### Entry: `VPS/VPI/VPS2/VPI2` completion family
 - **kind:** architecture/family
-- **current_owner:** `ExtendFunctor` for this development cycle
-- **current_location:** inherited through `ExtendSqi`; explicit shallow boundary `lincat` declarations remain in `ExtendSqi.gf`
-- **primary_status:** `warning`
-- **why_this_status:** fix11 is compiler-confirmed to advance beyond the previous local `ComplVPIVV` crash. Inherited `variants {}` family members now generate `(0,0)` PMCFG entries as expected for incomplete coverage. The family remains warning-state because the Comp/Imp list constructors expose six missing-linearization warnings.
-- **allowed_use:** inherited family plus documented boundary `lincat` declarations only
-- **forbidden_use:** one-off local reintroduction of `MkVPS`, `MkVPI`, `ComplVPIVV`, list constructors, VPS2/VPI2 functions, or Comp/Imp list machinery without first changing the override matrix
-- **known_gap:** several inherited `ExtendFunctor` linearizers are `variants {}` and therefore represent explicit incomplete coverage, not linguistic completion
+- **current_owner:** `ExtendFunctor` provisionally; candidate local owner `ExtendSqiVPS.gf` after the Completion Architecture Gate
+- **current_location:** inherited through `ExtendSqi`; historical shallow boundary lincats are stabilization scaffolding, not a final contract
+- **primary_status:** `active_completion`
+- **compiler_status:** `compiler_baseline_passed`; inherited `(0,0)` members remain explicit coverage gaps
+- **linguistic_status:** `incomplete`
+- **why_this_status:** the v0.1.0 release gate proves the family is no longer a PMCFG survival issue. The next problem is architectural/linguistic: current core verbal realization can discard agreement, `Temp`/`Pol`, and open-complement information before the family can use it.
+- **allowed_use:** inherited placeholders during the Architecture Gate; coherent family migration to `ExtendSqiVPS.gf` once the contract and tests are established
+- **forbidden_use:** one-off local reintroduction in `ExtendSqi.gf`; treating `{s : Str}` or `(0,0)` as final coverage; copying a model-language record without Albanian evidence
+- **known_gap:** no final Albanian VPS/VPI representation, VPI embedding strategy, VV-control taxonomy, or VPS2/VPI2 clitic/saturation design is yet accepted
 - **exit_criteria:**
-  1. verbose GF 3.12 advances beyond the prior local `ComplVPIVV` hotspot or emits `ExtendSqi.gfo`,
-  2. no inherited family member is again present in the subtraction list,
-  3. no inherited family function is locally wired in the coordinator,
-  4. any later ownership change is family-wide, evidence-backed, and synchronized with the matrix/decision log
-- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
-- **related_docs:** ALB-DEC-022, ALB-DEC-033, override matrix, lockfield/boundary guide
+  1. producer/consumer map for `VP`, `Cl`, `VPSlash`, `Temp`, `Pol`, and `Agr`;
+  2. Wordbench `vps_agreement` and `vps_temp_pol` establish the first required core boundary changes;
+  3. finite VPS and VPI slices pass their capability scenarios;
+  4. structured slash/clitic behavior is validated before VPS2/VPI2 completion;
+  5. `ExtendSqi`, `LangSqi`, and `AllSqi` regressions pass;
+  6. required reviewed goldens exist before promotion to linguistically stable
+- **related_tests:** `vps_agreement`, `vps_temp_pol`, later VPS/VPI/VPS2/VPI2 scenario ladder
+- **related_docs:** `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`, ALB-DEC-042+, override matrix, minimal test suite
 
 ---
 
@@ -687,23 +691,16 @@ That is the function of this ledger.
 
 ### Entry: `Comp/Imp` list constructor family
 - **kind:** architecture/family
-- **current_owner_candidate:** `ExtendSqiScaffolding.gf` for family logic; `ExtendSqi.gf` for exact list-category wiring
-- **current_location:** `ListComp` / `ListImp` boundary in `ExtendSqi`
-- **primary_status:** `temporary family probe`
-- **compiler_status:** `not_run_after_change`
-- **linguistic_status:** `provisional`
-- **previous_evidence:** run `20260918_210629` reaches the final named PMCFG entry but still emits all six `no linearization` warnings before the final backend crash
-- **current_fix18_candidate:** implement `BaseComp`, `ConsComp`, `ConjComp`, `BaseImp`, `ConsImp`, `ConjImp` together using the current Albanian string-list coordination pattern
-- **why_this_status:** `ExtendFunctor` supplies no family implementation; Albanian `Comp`, `Imp`, `Conj`, `ListComp`, and `ListImp` are representation-compatible with the existing target-language string-list pattern in `ConjunctionSqi`
-- **allowed_use:** one coherent six-function probe with exact `lin ListComp` / `lin ListImp` boundary retyping
-- **forbidden_use:** piecemeal implementation; dummy strings; unrestricted variants; moving string-building logic into the coordinator; changing inherited VPS/VPI ownership
-- **exit_criteria:**
-  1. all six missing-linearization warnings disappear,
-  2. no new lock/category warning appears,
-  3. final PMCFG behavior is recorded explicitly,
-  4. targeted coordination tests are added before linguistic promotion
-- **related_tests:** full verbose `Quick -> ExtendSqi.gf`; later Comp/Imp coordination tests
-- **related_docs:** ALB-DEC-041, override matrix, current repair state, open questions
+- **current_owner:** accepted stabilization implementation; preserve current ownership/wiring
+- **primary_status:** `compiler_baseline_passed`
+- **compiler_status:** `release_gate_passed`
+- **linguistic_status:** `provisional` until targeted coordination goldens exist
+- **why_this_status:** the earlier fix18 family probe is historical. The published v0.1.0 baseline now compiles `ExtendSqi` and produces its final `.gfo`; this family is no longer the live PMCFG blocker.
+- **allowed_use:** preserve the accepted implementation and test it behaviorally when coordination coverage is added
+- **forbidden_use:** reopening the family because of stale fix18 notes; piecemeal replacement without a concrete regression
+- **exit_criteria:** targeted Comp/Imp coordination scenarios and reviewed outputs when this family becomes a linguistic QA target
+- **related_tests:** future Comp/Imp coordination scenarios
+- **related_docs:** ALB-DEC-041 as history, `status/ALBANIAN_CORE_V0.1.0.md`, current implementation status
 
 ### Entry: `PossPronRNP`
 - **kind:** symbol

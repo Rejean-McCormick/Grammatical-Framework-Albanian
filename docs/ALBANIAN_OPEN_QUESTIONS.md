@@ -1,444 +1,351 @@
 # ALBANIAN_OPEN_QUESTIONS
 
+**Date:** 2026-09-19  
+**Phase:** Albanian RGL Completion  
+**Baseline:** `albanian-rgl-core-v0.1.0`
+
 ## Purpose
 
-This file tracks unresolved or partially resolved design and implementation questions for the Albanian GF concrete syntax. It is intended to prevent silent drift during coding and refactoring.
+This file tracks design or linguistic questions that are genuinely unresolved in the current Completion phase.
 
-This is **not** a TODO dump. Each item should identify:
-- the exact subsystem or function family,
-- what is currently known,
-- what is still unknown,
-- what evidence should decide the issue,
+It is not a chronological repair log. Resolved compiler investigations belong in `ALBANIAN_DECISION_LOG.md`; the frozen release record belongs in `status/ALBANIAN_CORE_V0.1.0.md`.
+
+Each open question must identify:
+
+- the affected capability;
+- what is already known;
+- what remains unknown;
+- what evidence decides it;
 - what counts as closure.
 
----
-
-## Scope
-
-Primary scope:
-- `albanian/ExtendSqi.gf`
-- Albanian category/lincat shapes from the core Albanian modules
-- cross-module assumptions that affect `ExtendSqi`
-- comparisons with model languages only where Albanian evidence is incomplete
-
-Secondary scope:
-- any Albanian module whose category shape or constructor behavior is needed to settle an `ExtendSqi` implementation question
-
-Out of scope:
-- abstract signature invention
-- undocumented category redesigns copied from other languages without Albanian justification
-- “works syntactically” patches that ignore category shape warnings
+The normative completed-system target is `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`. This file records unresolved design/linguistic questions; `CURRENT_REPAIR_STATE.md` records the live implementation cursor.
 
 ---
 
-## Current Status Snapshot
+## Current priority order
 
-### Latest live facts — run `20260918_210629`
-- `PossPronRNP` remains PMCFG-confirmed as `(28,28)` under fix16.
-- `SlashBareV2S` is PMCFG-confirmed as `(1,1)` under fix17.
-- GF reaches the final named PMCFG declaration, then crashes during backend finalization.
-- The latest run has **no `missing lock_*` warning cluster**.
-- Six `no linearization` warnings remain for `Base/Cons/ConjComp` and `Base/Cons/ConjImp`; they are now the first unresolved structural family.
-
-### What this means
-The immediate repair target is the **Comp/Imp list boundary family**, not another isolated extension symbol. Its six functions must be treated as one family because they share category shape, list representation, coordination behavior, warning state, and ownership decision.
-
----
-
-## Priority Levels
-
-- **P0**: blocks compilation or strongly risks invalid type-shape fixes
-- **P1**: compiles but still structurally unsafe or warning-prone
-- **P2**: design/documentation debt that can cause later drift
+```text
+P0  verbal realization Architecture Gate
+P0  finite VPS agreement / Temp / Pol
+P0  Albanian VPI embedding strategy
+P1  VV control / complement selection
+P1  VPS2/VPI2 slash + clitic preservation
+P1  VPS question / relative / coordination integration
+P2  Structural DConj / must_VV cleanup
+P2  ConstructionSqi linguistic refinement
+P2  top-level Lang/All/Irreg/Markup completion
+```
 
 ---
 
-## P0 — Compile-Critical Open Questions
+## Q1. What is the minimal Albanian deferred verbal representation?
 
-### Q0. Does the Albanian `Comp` / `Imp` boundary family close the final PMCFG failure when implemented coherently?
+**Priority:** P0  
+**Capability:** `VP` / `Cl` / finite realization
 
-**Priority:** P0 — first unresolved structural family after fix17  
-**Symbols:** `BaseComp`, `ConsComp`, `ConjComp`, `BaseImp`, `ConsImp`, `ConjImp`  
-**Owner candidate:** `ExtendSqiScaffolding.gf` with thin coordinator wiring
+### Known
 
-**Current compiler evidence:**
-- run `20260918_210629` completes `SlashBareV2S` as `(1,1)`;
-- GF completes every later named declaration through `youPolPl_Pron`;
-- all six Comp/Imp linearizations are still reported missing;
-- backend PMCFG finalization then crashes and no final `ExtendSqi.gfo` is produced.
+- the compiler-stable core exists and should not be redesigned without behavioral evidence;
+- current `UseV` historically selects an indicative present 3sg form too early;
+- current `UseCl` historically ignores `Temp` and `Pol`;
+- mature VPS behavior requires some grammatical information to survive beyond `UseV`;
+- AI Compendium EP004 is directly applicable when later consumers still control realization.
 
-**Current category evidence:**
-- `Comp = {s : Str}`;
-- `Imp = {s : Str}`;
-- `Conj = {s : Str}`;
-- `[Comp] = {init,last : Str}` and `[Imp] = {init,last : Str}` in `ExtendSqi`;
-- `ConjunctionSqi` already implements the same string-list Base/Cons/Conj pattern for several Albanian categories.
+### Unknown
 
-**Evidence-backed fix18 hypothesis:**
-- implement all six together using the native Albanian string-list pattern;
-- keep exact `ListComp` / `ListImp` retyping in the coordinator to preserve category locks;
-- do not alter VPS/VPI inheritance or use model-language record shapes.
+- the smallest exact `VP` resource shape needed by Albanian;
+- whether `Cl` itself should be a table over selected clause dimensions or should delegate to another resource-level clause record;
+- which dimensions can be derived rather than stored;
+- which operation is the final realization boundary for ordinary finite clauses.
 
-**Closure criterion:**
-- all six warnings disappear;
-- no new lock/category warnings appear;
-- record whether final `ExtendSqi.gfo` is produced;
-- if PMCFG still fails after warnings disappear, reclassify the six functions as structurally repaired but not causal to the remaining backend crash.
+### Evidence required
 
----
-### Q1. What is the final correct implementation strategy for `PredAPVP`?
+- producer/consumer map for `Verb`, `VP`, `Cl`, `Temp`, `Pol`, `Agr`;
+- Wordbench `vps_agreement`;
+- Wordbench `vps_temp_pol`;
+- direct compiler regression after the smallest candidate change.
 
-**Subsystem:** AP/VP interaction
+### Closure
 
-**Current state:**
-- This was a historical top type-shape blocker. It is **not** the current first failure in run `20260918_153932`; keep it open as a regression/design question until the compiler reaches and validates it in the stabilized chain.
-- Historical Albanian implementations flattened AP to a surface string and combined it directly with VP.
-- That strategy is structurally suspect because it discards full AP shape.
-
-**Known facts:**
-- The failing pattern is category-shape related, not merely lexical.
-- `PredAPVP` belongs to the AP/CN/complement cluster that repeatedly triggered AP lock warnings.
-- `ExtendFunctor` suggests constructor-based composition is preferred where available.
-
-**Unknowns:**
-- Whether the final Albanian implementation should:
-  1. delegate fully to inherited grammar constructors,
-  2. build via a local Albanian AP constructor path,
-  3. use a dedicated Albanian helper such as `SentAP` compositionally,
-  4. or require a different clause-level route entirely.
-
-**What must decide it:**
-- exact `Extend.gf` signature
-- actual `ExtendFunctor.gf` implementation path
-- Albanian AP/Comp/Cl shapes from core modules
-- whether `SentAP` is legitimate Albanian-local infrastructure or only a temporary patch
-
-**Closure criterion:**
-- compiles with no direct type error
-- no `lock_AP` warning caused by `PredAPVP`
-- implementation uses a category-preserving path, not AP flattening
+Close when the minimum retained dimensions and the final consumer for each are documented, implemented, compiler-stable, and sufficient for the first finite VPS slice.
 
 ---
 
-### Q2. What is the final Albanian strategy for the existential family?
+## Q2. What is the final Albanian `VPS` contract?
 
-**Functions:**
-- `ExistS`
-- `ExistNPQS`
-- `ExistIPQS`
-- `ExistCN`
-- `ExistMassCN`
-- `ExistPluralCN`
-- `ExistsNP`
+**Priority:** P0  
+**Capability:** finite VPS
 
-**Subsystem:** existential constructions
+### Known
 
-**Current state:**
-- Earlier implementations flattened these to surface strings.
-- Run logs show structural/type mismatches for at least part of this family.
-- The CN-based members also triggered category-shape warnings in earlier runs.
+- historical `{s : Str}` VPS boundaries were stabilization scaffolding, not a final linguistic design;
+- Bulgarian provides a strong structural model where `MkVPS` consumes tense/polarity and `VPS` remains open on agreement;
+- English defines the required API coverage but is not an Albanian realization model.
 
-**Known facts:**
-- These functions are not ordinary string wrappers.
-- The family likely needs clause/question constructors from inherited grammar infrastructure.
-- CN-based existential forms should preserve category correctness rather than stringifying `CN`.
+### Working hypothesis
 
-**Unknowns:**
-- whether Albanian should simply inherit all available functor/default implementations
-- whether the language needs local article/indefiniteness policy for `ExistCN` / `ExistPluralCN`
-- whether mass/plural existential constructions need Albanian-specific article handling beyond the functor default
+```text
+MkVPS consumes the finite Temp/Pol context.
+VPS remains open on subject agreement.
+PredVPS supplies subject/agreement.
+```
 
-**What must decide it:**
-- exact `ExtendFunctor` composition for each function
-- Albanian NP/Det/CN constructors from `NounSqi.gf`
-- Albanian indefinite/article policy already used elsewhere
+A shape conceptually similar to `{s : Agr => Str}` is a candidate only.
 
-**Closure criterion:**
-- no existential-family type errors
-- no `lock_CN` warnings caused by existential CN members
-- documented policy for mass vs count vs plural existential forms
+### Unknown
 
----
+- whether Albanian needs additional order/mood/auxiliary dimensions at the `VPS` level;
+- whether those dimensions belong in `VPS` or below it in the core verbal resource.
 
-### Q3. How should the AP/CN conversion cluster be finalized without lock-field drift?
+### Evidence required
 
-**Functions:**
-- `ICompAP`
-- `AdjAsCN`
-- `AdjAsNP`
-- `CompoundAP`
-- `AdvIsNPAP`
-- `CompBareCN`
-- `CardCNCard`
-- `N2VPSlash`
+- at least two subject-agreement cases;
+- positive/negative polarity;
+- materially distinct tense/anteriority examples;
+- coordination behavior.
 
-**Subsystem:** AP/CN conversion and complement-building
+### Closure
 
-**Current state:**
-- This is the highest-warning cluster.
-- Earlier implementations repeatedly used `apStr`, `cnStr`, `apConst`, or `cnConst` to stand in for full category values.
-- That approach repeatedly triggered `lock_AP` / `lock_CN` warnings.
-
-**Known facts:**
-- Many of these functions either have a functor/default composition path or should be expressible through existing Albanian constructors.
-- `CardCNCard` already demonstrated the danger of returning the wrong category shape.
-- If these remain string-based, the file is likely to keep cycling through AP/CN type failures.
-
-**Unknowns:**
-- Which members should be fully inherited from `ExtendFunctor`
-- Which members are genuinely language-specific gaps (`variants {}`)
-- For each gap, which Albanian constructor chain preserves the right hidden fields and lock fields
-
-**What must decide it:**
-- `ExtendFunctor` exact defaults and gaps
-- Albanian AP/CN lincat definitions and constructors from core modules
-- model-language handling only where Albanian evidence is missing
-
-**Closure criterion:**
-- no `lock_AP` / `lock_CN` warnings in this cluster
-- no direct AP/CN type mismatch in `ExtendSqi`
-- every custom function justified in the decision log
+Close when `MkVPS`, `PredVPS`, `BaseVPS`, `ConsVPS`, and `ConjVPS` share one accepted contract and their Wordbench scenarios pass.
 
 ---
 
-### Q4. What is the final coherent strategy for the `RNP` family in Albanian?
+## Q3. What is the productive Albanian `VPI` realization?
 
-**Functions:**
-- `ReflRNP`
-- `ReflPron`
-- `ReflPoss`
-- `PredetRNP`
-- `AdvRNP`
-- `AdvRVP`
-- `AdvRAP`
-- `ReflA2RNP`
-- `PossPronRNP`
-- `ConjRNP`
-- `Base_rr_RNP`, `Base_nr_RNP`, `Base_rn_RNP`
-- `Cons_rr_RNP`, `Cons_nr_RNP`, `Cons_rn_RNP`
+**Priority:** P0  
+**Capability:** embedded/non-finite verbal construction
 
-**Subsystem:** reflexive/referential NP extension layer
+### Known
 
-**Current state:**
-- The earliest Albanian snapshot treated this family as flat strings.
-- Later repair attempts moved toward inherited `NP/ListNP` behavior.
-- Current verbose run `20260918_153932` makes `PossPronRNP` the first hard PMCFG blocker in this family.
-- Several RNP list/attachment functions already complete before that point, which is useful local evidence but does not by itself validate the whole family.
-- Bulgarian and German both show that the whole family must be treated as one subsystem.
+- no final VPS/VPI design was accepted before v0.1.0;
+- historical `vp.s` values are often already finite present-3sg strings and therefore cannot by themselves establish correct VPI behavior;
+- existing `për të`, `pa`, and `që të` VP-bridge strings are not proof of a general `VPI` contract;
+- Balkan model languages show that embedded verbal constructions can remain agreement-sensitive and clause-like rather than simple infinitive strings.
 
-**Known facts:**
-- This family should not be fixed member-by-member with unrelated shapes.
-- The German and Bulgarian references prove that a coherent subsystem design is necessary.
-- Albanian does not yet have a fully documented native `RNP` strategy.
+### Unknown
 
-**Unknowns:**
-- whether final Albanian should inherit `NP/ListNP` semantics throughout
-- whether Albanian needs a custom `RNP` record after all
-- whether `AdvRVP` and `AdvRAP` require richer agreement or object-role tracking than the inherited NP strategy can safely provide
+- when standard Albanian uses `të` + finite/subjunctive morphology for the `VPI` functions in the current abstract API;
+- whether multiple embedding strategies are needed;
+- how agreement, polarity, anteriority, and clitics interact with the embedded construction;
+- whether participial or other constructions belong to any `VPI` paths.
 
-**What must decide it:**
-- `ExtendFunctor` inheritance behavior
-- model-language comparison, especially Bulgarian vs German
-- Albanian clitic/case/agreement behavior where relevant
+### Evidence required
 
-**Closure criterion:**
-- all `RNP` functions compile under one coherent design
-- no raw-string remnants remain in the family
-- decision log records why inherited vs custom strategy was chosen
+- Albanian grammar/reference examples for representative governors;
+- Wordbench `vpi_embedding`;
+- representative `VV` examples;
+- parse/control tests when ambiguity or attachment matters.
+
+### Closure
+
+Close when `MkVPI` has a linguistically justified realization contract and the list/coordination/VV consumers can reuse it without string reconstruction.
 
 ---
 
-## P1 — Structural Safety Questions
+## Q4. Do Albanian `VV` lexemes select different complement forms or composition algorithms?
 
-### Q5. Should `SentAP`, `AdjOrd`, and `Cons_rn_RNP` exist in Albanian `ExtendSqi` at all?
+**Priority:** P1  
+**Capability:** `ComplVPIVV` / generalized VV complementation
 
-**Subsystem:** local extensions vs abstract alignment
+### Known
 
-**Current state:**
-- Earlier runs showed warnings that these functions are not in the abstract.
-- Some of them may be local repair helpers rather than legitimate abstract-concrete correspondences.
+- the current structural `ComplGenVV` path compiles but historically ignores `Ant` and `Pol`;
+- no accepted taxonomy for `want/can/must/begin` exists;
+- `must_VV` remains a separate known structural/open-symbol issue;
+- Compendium EP030 applies only if different governors select distinct typed embedded forms;
+- EP033 applies only if semantic subclasses require different composition algorithms.
 
-**Known facts:**
-- Unabstracted local functions are acceptable only if they are clearly local helpers and do not masquerade as abstract implementations.
-- If they remain in the `lin` block as if abstract functions, they increase drift risk.
+### Unknown
 
-**Unknowns:**
-- whether each should be:
-  1. removed,
-  2. renamed as `oper` helpers,
-  3. retained as legal local concrete additions,
-  4. or documented as deliberate Albanian-only extensions.
+- whether one Albanian VPI strategy covers the relevant `VV` lexicon;
+- whether some governors select different embedded forms;
+- whether control/raising distinctions require explicit metadata;
+- whether modal subclasses change polarity or clause construction.
 
-**Closure criterion:**
-- each non-abstract symbol is explicitly classified and documented
+### Evidence required
 
----
+A small reviewed set of representative governors, initially including available equivalents of:
 
-### Q6. What is the long-term policy for helper functions like `apStr`, `cnStr`, `apConst`, `cnConst`, `npConst`?
+```text
+want
+can
+must
+begin/start
+```
 
-**Subsystem:** implementation safety
+Do not infer the classes from English translations alone.
 
-**Current state:**
-- These helpers are useful, but they are also a major source of category flattening drift.
+### Closure
 
-**Known facts:**
-- `npConst` is usually safe when the target really is NP-like.
-- `apStr` / `cnStr` are dangerous when they are used to replace full category values.
-- `apConst` / `cnConst` can be structurally incomplete if hidden fields matter.
-
-**Unknowns:**
-- which helpers should remain approved,
-- which should be restricted to debugging or placeholder use,
-- which should be forbidden in final implementations.
-
-**Closure criterion:**
-- explicit helper policy recorded in the implementation-pattern and anti-drift docs
+Close when the simplest adequate strategy is known: one general composition path, EP030-style form selection, EP022-style control metadata, or EP033-style subclass dispatch.
 
 ---
 
-### Q7. When should Albanian override `ExtendFunctor`, and when should it inherit unchanged?
+## Q5. What information must `VPSlash` preserve for VPS2/VPI2?
 
-**Subsystem:** override policy
+**Priority:** P1  
+**Capability:** unsaturated verbal complements
 
-**Current state:**
-- Some current overrides appear necessary.
-- Others may simply reimplement what the functor already does, but less safely.
+### Known
 
-**Known facts:**
-- Constructor-based inheritance is lower-risk than string-based custom code.
-- Model languages override only where their concrete syntax truly diverges or needs a richer subsystem.
+- the current shallow `VPSlash = {s : Str}` boundary cannot preserve rich complement metadata by itself;
+- Albanian `Pron` already exposes `acc_clit` and `dat_clit`;
+- historical `ComplSlash` realizes the object as a surface accusative NP;
+- Romanian provides strong structural evidence for preserving complement government and clitic material separately until clause realization;
+- Compendium EP005/EP020 are relevant only if Albanian ordering behavior demonstrates separately movable slots/clitic clusters.
 
-**Unknowns:**
-- exact threshold for Albanian-local override vs inheritance
-- whether certain current overrides should be deleted entirely
+### Unknown
 
-**Closure criterion:**
-- every remaining override classified as one of:
-  - required Albanian-specific override
-  - inherited by default
-  - deprecated local approximation
+- exact complement metadata required by Albanian `VPSlash`;
+- direct/indirect-object case/government representation;
+- full NP versus clitic choice;
+- finite versus VPI clitic placement;
+- reflexive interaction;
+- whether clitic doubling or additional Albanian-specific conditions must be represented.
 
----
+### Evidence required
 
-## P2 — Documentation and Design Debt
+Wordbench scenarios:
 
-### Q8. Which model language should be primary for each subsystem?
+```text
+vps2_object
+vpi2_object
+clitic_acc
+clitic_dat
+clitic_refl
+```
 
-**Current state:**
-- Bulgarian is often the best minimal reference for the `RNP` family.
-- German is a richer but more structurally elaborate reference.
+plus Albanian reference examples.
 
-**Unknowns:**
-- whether a different model language is better for AP/CN conversion
-- whether any model language is close enough to Albanian existential behavior to guide the final design
+### Closure
 
-**Closure criterion:**
-- model-language comparison table completed in `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`
-
----
-
-### Q9. Which Albanian modules are still missing extraction into the language-wide documentation set?
-
-**Likely candidates:**
-- `AdjectiveSqi.gf`
-- `QuestionSqi.gf`
-- `SentenceSqi.gf`
-- `ConjunctionSqi.gf`
-- `VerbSqi.gf`
-- `RelativeSqi.gf`
-- `PhraseSqi.gf`
-
-**Unknowns:**
-- whether all critical category-shape and constructor patterns have been documented yet
-- whether any hidden dependency remains undocumented
-
-**Closure criterion:**
-- module dependency map and category reference both complete enough to support coding without re-auditing the whole dump
+Close when saturation does not require recovering government or clitic information from an emitted string and the same contract supports finite and embedded contexts.
 
 ---
 
-## Cross-Cutting Open Questions
+## Q6. How should `ResSqi` tense/mood parameters map to RGL `Temp`/`Ant`/`Pol` without provenance collisions?
 
-### Q10. What should count as “done” for Albanian `ExtendSqi`?
+**Priority:** P1  
+**Capability:** verbal realization kernel
 
-Proposed closure standard:
-- all compile errors gone
-- zero `lock_AP` / `lock_CN` warnings
-- no known category-shape mismatches in the active run
-- no abstract-function drift
-- all custom overrides documented by subsystem
-- minimal test suite defined for each repaired family
+### Known
 
-**Open point:**
-Should “done” also require a generation/regression test pass for representative examples?
+- FIX21 proved that same-named parameters from different modules can compile far enough to trigger PMCFG failure when used as table keys;
+- `ResSqi` owns its own verbal tense distinctions;
+- the public RGL layer supplies `Temp`, `Ant`, and `Pol` through shared interfaces.
 
----
+### Unknown
 
-### Q11. What is the official anti-drift review rule for future AI edits?
+- the exact centralized mapping from public clause-time semantics to Albanian morphological forms;
+- which distinctions are morphological and which are periphrastic/particle-based;
+- how mood/subjunctive behavior should be represented for VPI.
 
-**Proposed rule:**
-Any AI change to Albanian code must cite:
-1. abstract signature,
-2. functor/default implementation or explicit gap,
-3. Albanian lincat shape,
-4. Albanian or approved model-language evidence,
-5. subsystem-level impact.
+### Evidence required
 
-**Open point:**
-Should this rule be mandatory for every change, or only for changes touching category shape or inheritance?
+- exact type provenance audit;
+- named mapping functions with qualified parameter use where needed;
+- tense/polarity scenario matrix.
+
+### Closure
+
+Close when there is one documented mapping boundary and no helper mixes incompatible parameter types by unqualified constructor names.
 
 ---
 
-## Evidence Still Needed
+## Q7. What is the final interaction of VPS with questions and relatives?
 
-The following source material will help close the remaining questions faster:
+**Priority:** P1
 
-1. Clean source extraction for the exact relevant chunks of:
-   - `Extend.gf`
-   - `ExtendFunctor.gf`
-   - Albanian core constructor modules
-2. Explicit Albanian examples for:
-   - AP as complement
-   - existential clause/question behavior
-   - reflexive possessive NP constructions
-3. Additional model-language evidence for:
-   - AP/CN conversion functions left as `variants {}` in the functor
-4. A successful or near-successful compile run after each subsystem rewrite
+### Known
 
----
+The abstract family requires:
 
-## Closure Workflow
+```text
+QuestVPS
+SQuestVPS
+RelVPS
+```
 
-For each open question, use this sequence:
+### Unknown
 
-1. confirm exact abstract signature
-2. inspect `ExtendFunctor` for default vs `variants {}`
-3. inspect Albanian lincat and constructor source files
-4. inspect the approved model language for the same subsystem
-5. implement the smallest category-correct Albanian solution
-6. compile
-7. record the decision in `ALBANIAN_DECISION_LOG.md`
-8. remove the item from this file only after closure criteria are met
+- whether Albanian question/relative ordering requires additional deferred order information;
+- whether the ordinary clause kernel is sufficient without special VPS fields.
 
----
+### Evidence required
 
-## Initial Triage Order
+```text
+vps_question
+vps_relative
+```
 
-Recommended order for closing questions:
+plus comparison with existing `QuestionSqi` / `RelativeSqi` behavior.
 
-1. `PredAPVP`
-2. existential family
-3. AP/CN conversion cluster
-4. `RNP` family finalization
-5. non-abstract local symbol cleanup
-6. helper-policy cleanup
-7. model-language mapping completion
+### Closure
+
+Close when these functions reuse the finite kernel without duplicating a second verbal realization algorithm.
 
 ---
 
-## Change Log for This File
+## Q8. Which Structural warnings still represent real Completion work?
 
-### Initial version
-- seeded from Albanian codedump
-- aligned with current `ExtendSqi` debugging history
-- aligned with latest run evidence showing AP/CN and existential structural issues as the main remaining risk
+**Priority:** P2
+
+Known tracked items include:
+
+```text
+DConj-related legacy surface
+must_VV
+Prep/lock-related warnings when reproducible
+```
+
+`DConj` must first be checked against the current abstract RGL contract; stale abstract symbols should be removed rather than repaired as if still required.
+
+`must_VV` must be revisited after the VV/VPI architecture is known, so that it is not “fixed” with a temporary surface-only construction.
+
+### Closure
+
+Each item is either removed as stale, implemented through the accepted architecture, or documented as a deliberate unsupported feature with a test.
+
+---
+
+## Q9. Which `ConstructionSqi` realizations are still surface-only fallbacks?
+
+**Priority:** P2
+
+### Known
+
+`ConstructionSqi` compiles but some constructions remain simple/string-oriented.
+
+### Required work
+
+Classify each nontrivial construction as:
+
+```text
+linguistically validated
+structurally plausible / needs golden
+surface fallback / redesign required
+```
+
+Do not mix this audit into WP1 unless a construction directly blocks the verbal realization kernel.
+
+### Closure
+
+Representative construction families have Wordbench scenarios and no known shallow fallback is labeled as mature behavior.
+
+---
+
+## Q10. What remains for mature top-level RGL parity?
+
+**Priority:** P2
+
+Areas to revisit after the VPS/VPI family stabilizes:
+
+- `IrregSqi` coverage;
+- optional `MarkupSqi` integration if required by current RGL composition;
+- `LangSqi` / `AllSqi` parity with the intended public surface;
+- remaining `Extend` coverage gaps;
+- broader scenario/golden corpus.
+
+### Closure
+
+Close only when module coverage and behavior tests justify the intended final Albanian RGL release target.

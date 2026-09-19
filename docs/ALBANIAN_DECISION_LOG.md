@@ -1157,3 +1157,139 @@ SlashBareV2S = SlashV2S ;
 **Linguistic status:** provisional; compile success does not validate Albanian coordination semantics.
 
 ---
+
+---
+
+## ALB-DEC-042
+**Status:** accepted — Completion phase  
+**Date:** 2026-09-19  
+**Area:** post-v0.1.0 architecture / VPS-VPI family / core-freeze policy  
+
+**Decision:** The v0.1.0 compiler-stabilization rule that kept VPS/VPI/VPS2/VPI2 inherited is superseded for the Albanian RGL Completion phase. The thin-coordinator rule remains accepted, but the family may become a coherent Albanian-owned subsystem after a behavior-driven Architecture Gate.
+
+The first Completion work package is not a 24-function rewrite. It is:
+
+```text
+WP1 — Verbal Realization Architecture Gate
+```
+
+with:
+
+```text
+producer/consumer map
+vps_agreement
+vps_temp_pol
+first information-loss boundary
+minimal core/resource contract
+ExtendSqi -> LangSqi -> AllSqi regression
+```
+
+**Why:** The published core now passes the FIX22C release gate through `AllSqi` and the historical GF 3.12 PMCFG crash is resolved. The remaining VPS/VPI `(0,0)` entries are therefore coverage gaps rather than survival blockers. At the same time, higher-level analysis shows that current core verbal realization can destroy required information before `Extend` receives it: `UseV` historically fixes present 3sg, `UseCl` ignores `Temp`/`Pol`, and shallow `VPSlash` cannot guarantee preservation of complement/clitic information. This is exactly the evidence condition under which the v0.1.0 freeze policy allows a minimal core reopening.
+
+**Supersedes:**
+- ALB-DEC-022 only in its cycle-specific requirement that VPS/VPI remain inherited;
+- ALB-DEC-033 only in its cycle-specific prohibition on coherent local VPS/VPI ownership.
+
+**Preserves from ALB-DEC-022/033:**
+- `ExtendSqi.gf` remains a thin coordinator;
+- one-off VPS/VPI overrides remain prohibited;
+- family coherence is mandatory;
+- local implementation must not be justified by convenience alone;
+- the old failed coordinator-side local family is not resurrected as architecture.
+
+**Core-freeze rule:** `ResSqi`, `CatSqi`, `VerbSqi`, or `SentenceSqi` may be changed only when a Wordbench behavior scenario identifies a required distinction that is lost at that boundary. The repair must occur at the first safe information-loss boundary and remain minimal.
+
+**Preferred local owner after gate:**
+
+```text
+ExtendSqiVPS.gf
+```
+
+General `VP`/`Cl` realization remains core-owned.
+
+**Acceptance:** The Architecture Gate must pass before broad VPS/VPI family implementation begins.
+
+---
+
+## ALB-DEC-043
+**Status:** accepted working comparison policy  
+**Date:** 2026-09-19  
+**Area:** Compendium/model-language use for VPS/VPI Completion  
+
+**Decision:** Use model languages by architectural role rather than treating English as the implementation template.
+
+Working comparison order:
+
+```text
+Bulgarian  -> primary VPS/VPI structural model
+Greek      -> secondary embedded/subjunctive-like realization comparison
+Romanian   -> primary slash/clitic preservation stress model
+German     -> segmented realization / ordering stress model
+English    -> complete Extend API coverage reference
+```
+
+**Evidence:** The supplied Bulgarian implementation keeps `VPS` and `VPI` open on agreement (`Agr => Str`), lets `MkVPS` consume tense/polarity, and supplies subject agreement later in `PredVPS`. Romanian preserves complement and clitic information in richer VP/slash resources and centralizes clause assembly. German demonstrates mature segmentation of verbal and complement material. Greek supplies independent evidence for embedded particle/mood integration in a deferred clause realization system. English remains the best supplied reference for complete `Extend` function coverage.
+
+**Constraint:** None of these model languages is Albanian linguistic authority. Their particles, morphology, word order, tense inventories, and modal classes must not be copied without Albanian evidence.
+
+**Compendium mapping:**
+- EP004 is the primary pattern for deferred realization;
+- EP005 and EP019 are supporting patterns when discontinuity/final clause assembly are demonstrated;
+- EP020/EP021/EP022 are activated only when clitic, polarity, or control behavior requires them;
+- EP030 is used only if Albanian governors select genuinely different embedded forms;
+- EP033 is used only if modal subclasses require genuinely different composition algorithms.
+
+**Do not:** add fields or subclasses solely because a model language has them.
+
+---
+
+## ALB-DEC-044
+**Status:** accepted  
+**Date:** 2026-09-19  
+**Area:** Wordbench / linguistic acceptance for Completion capabilities  
+
+**Decision:** Completion work is gated by registered Wordbench behavioral scenarios. Compiler success is necessary but cannot promote a capability to linguistically stable status.
+
+The first mandatory Architecture Gate scenarios are:
+
+```text
+vps_agreement
+vps_temp_pol
+```
+
+The planned family ladder additionally includes:
+
+```text
+vps_coordination
+vps_question
+vps_relative
+vpi_embedding
+vpi_vv_control
+vps2_object
+vpi2_object
+clitic_acc
+clitic_dat
+clitic_refl
+```
+
+**Gold policy:** A diagnostic scenario may run without an approved golden while architecture is still under investigation. A golden is created or updated only after deterministic output has been linguistically reviewed. Required release scenarios must have current reviewed goldens.
+
+**Harness rule:** Wordbench remains canonical. Direct GF probes are limited to surgical debugging of a failure already exposed by Wordbench.
+
+**Why:** The v0.1.0 release-gate runs still reported `Scenarios seen: 0`, so compiler/structural stability must not be confused with linguistic validation.
+
+
+---
+
+## ALB-DEC-045
+**Status:** accepted  
+**Date:** 2026-09-19  
+**Area:** Completion documentation / final-state specification  
+
+**Decision:** `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md` is the normative **total final-state specification** of the completed Albanian RGL. It is not an implementation sequence, sprint plan, milestone ladder, or owner of the live work cursor.
+
+It defines the destination: final category contracts, realization boundaries, linguistic capability inventory, module responsibilities, public API coverage obligations, validation semantics, prohibited shortcuts, and the definition of a mature release.
+
+`CURRENT_REPAIR_STATE.md` owns the current implementation cursor and may use temporary work packages or evidence gates. `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md` owns test-shape policy. Historical decisions that mention WP1 or an Architecture Gate remain valid as records of the current transition, but they must not be interpreted as the structure of the final-state specification.
+
+**AI rule:** An AI implementing Albanian RGL must reason from the final-state specification first, inspect the live state second, and choose the smallest coherent change that moves the source toward the specified end state without violating frozen release history. It must not infer the target architecture from temporary placeholders in the current code.

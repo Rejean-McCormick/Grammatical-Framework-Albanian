@@ -115,7 +115,7 @@ The suite also assumes:
 - functions left as `variants {}` in `ExtendFunctor` require language-specific implementations and therefore need stronger tests,
 - `RNP = Grammar.NP` and `RNPList = Grammar.ListNP` is the default inherited strategy unless explicitly replaced by a coherent Albanian subsystem,
 - `ExtendSqi.gf` is a thin coordinator and must not become a second grammar core,
-- the VPS/VPI/VPS2/VPI2/list-wrapper family remains inherited in the current cycle unless architecture docs explicitly reopen it.
+- the VPS/VPI/VPS2/VPI2/list-wrapper family was inherited during core stabilization and is now part of the completed-system contract in `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`; inheritance is only a temporary implementation state, while active ownership-transition evidence is tracked in `CURRENT_REPAIR_STATE.md`.
 
 ### 3.3 Evidence and authority assumptions
 
@@ -146,7 +146,7 @@ A test plan that ignores these companion docs is incomplete.
 
 ## 4. Test philosophy
 
-The Albanian minimum suite is built on nine layers.
+The Albanian minimum suite is built on ten layers.
 
 ### 4.1 Compile-shape tests
 
@@ -183,6 +183,12 @@ These verify that touched files are not using stale comments as stronger evidenc
 ### 4.9 Status-ledger tests
 
 These verify that known fragile items remain consistent with the symbol ledger and that blocked symbols are not silently treated as stable.
+
+### 4.10 Behavioral capability scenarios
+
+These verify that a compiler-stable implementation actually preserves the grammatical distinctions required by the active capability. For the Completion phase, these scenarios are mandatory whenever a change alters a realization boundary such as `VP`, `Cl`, `VPSlash`, `VPS`, or `VPI`.
+
+A capability scenario must make a concrete acceptance claim such as agreement, tense/polarity selection, embedded realization, complement saturation, or clitic placement. A successful compile alone does not satisfy this layer.
 
 ---
 
@@ -226,6 +232,31 @@ Required:
 - confirm changed comments and docs do not contradict compile reality.
 
 ---
+
+
+### 5.4 Mode D — capability acceptance
+
+Run when a Completion capability crosses from architecture/prototype to accepted implementation.
+
+Required:
+
+- all Mode B subsystem checks;
+- registered Wordbench behavior scenarios for the capability;
+- regression through `ExtendSqi`, `LangSqi`, and `AllSqi` when the public extension surface is affected;
+- review of raw and normalized scenario output;
+- explicit linguistic review before creating or updating required goldens;
+- documentation synchronization in the live status, override matrix, decision log, and open-questions file where applicable.
+
+For VPS/VPI, the initial Architecture Gate scenarios are:
+
+```text
+vps_agreement
+vps_temp_pol
+vpi_embedding
+vpslash_object_preservation
+```
+
+The first two are mandatory before a broad VPS/VPI implementation is accepted.
 
 ## 6. Required global checks
 
@@ -925,3 +956,27 @@ The right question is not:
 
 The right question is:
 - “does it preserve Albanian category truth, constructor truth, helper truth, and subsystem truth without silently breaking its neighbors?”
+
+---
+
+## Completion addendum — VPS/VPI scenario ladder
+
+The VPS/VPI family must advance through scenario-backed capability gates rather than function count alone.
+
+| Scenario | Capability claim | Golden timing |
+|---|---|---|
+| `vps_agreement` | subject agreement survives to finite realization | after linguistic review |
+| `vps_temp_pol` | `Temp` and `Pol` materially affect finite realization | after linguistic review |
+| `vps_coordination` | VPS coordination preserves deferred agreement | after finite VPS architecture stabilizes |
+| `vps_question` | question formation reuses the finite realization kernel | after VPS question path stabilizes |
+| `vps_relative` | relative formation reuses the finite realization kernel | after VPS relative path stabilizes |
+| `vpi_embedding` | Albanian embedded verbal realization is explicit and repeatable | after VPI analysis is accepted |
+| `vpi_vv_control` | representative `VV` control/agreement behavior is correct | after VV class evidence is reviewed |
+| `vps2_object` | unsaturated finite complement is preserved to saturation | after structured slash contract stabilizes |
+| `vpi2_object` | unsaturated embedded complement is preserved to saturation | after VPI2 contract stabilizes |
+| `clitic_acc` | accusative clitic placement is correct | after clitic architecture stabilizes |
+| `clitic_dat` | dative clitic placement is correct | after clitic architecture stabilizes |
+| `clitic_refl` | reflexive realization and ordering are correct | after clitic architecture stabilizes |
+
+Missing goldens are acceptable during architecture exploration when the scenario is explicitly diagnostic. A capability is not linguistically release-ready until its required deterministic outputs have been reviewed and promoted to goldens.
+

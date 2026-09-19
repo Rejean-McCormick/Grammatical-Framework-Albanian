@@ -1,118 +1,219 @@
-# CURRENT_REPAIR_STATE
+# Albanian RGL — Current Development State
 
-Status: **live repair state — update after every evidence-changing Wordbench run**  
-Last evidence update: 2026-09-18  
-Target: `GF/lib/src/albanian/ExtendSqi.gf`
+**Status:** live state — update after every evidence-changing Wordbench run or capability-gate transition  
+**Date:** 2026-09-19  
+**Phase:** Albanian RGL Completion  
+**Baseline:** `albanian-rgl-core-v0.1.0`
 
-This file is intentionally short and volatile. It records **what is true in the latest reproducible run**, while the override matrix records stable ownership and the decision log records history.
+---
 
-## 1. Source / tool lock
+## 1. Current state
 
-- GF: `3.12.0`
-- GF executable used by Wordbench: `C:/mycode/Grammatical_Framework/gf-3.12-windows/gf.exe`
-- GF build commit previously recorded for this repair cycle: `fa2826d`
-- RGL root: `C:/mycode/Grammatical_Framework/gf-rgl`
-- pinned RGL commit used by the AI Compendium: `62c5030be182fdb1289dd472a28027fc5718dcde`
-- last compiler-validated cumulative Albanian repair state: through **fix17**
-- fix17 overlay SHA-256: `2e99c62ef82eed8b7f06c140785e61379044ee9f6e96909992672e9ce1f0aa8d`
-- active source candidate: **fix18 / complete `Comp` + `Imp` list boundary family — NOT YET RUN**
+The compiler-survival phase is complete.
 
-If any of these source/tool facts change, previous compiler evidence becomes stale until rerun.
-
-## 2. Latest Wordbench evidence
-
-Run: `20260918_210629`  
-Mode: `quick`  
-Target: `ExtendSqi.gf`  
-Overall status: **FAIL**  
-`ExtendSqi.gfo`: **not produced**; only a temporary `ExtendSqi.gfo.tmp...` artifact exists
-
-The raw verbose PMCFG tail is authoritative. Wordbench's summarized `OTHER: Voc` label remains a verbose-parser artifact rather than the current semantic blocker.
-
-### Relevant completed entries
+The current verified core release gate is:
 
 ```text
-+ PossPronRNP 324 (28,28)
-...
-+ SlashBareV2S 1 (1,1)
-+ StrandQuestSlash 1 (1,1)
-+ StrandRelSlash 1 (1,1)
-...
-+ youPolPl_Pron 1 (1,1)
-<GeneratePMCFG non-exhaustive-pattern crash after the final named entry>
+StructuralSqi.gf    OK
+GrammarSqi.gf       OK
+LexiconSqi.gf       OK
+ConstructionSqi.gf  OK
+ExtendSqi.gf        OK
+LangSqi.gf          OK
+AllSqi.gf           OK
+TestSqi.gf          OK
 ```
 
-Therefore:
+The historical GF 3.12 `GeneratePMCFG.hs` crash is resolved and the final `.gfo` files are produced for the release-gate targets.
 
-- fix16 `PossPronRNP` remains **PMCFG-confirmed structurally** as `(28,28)`;
-- fix17 `SlashBareV2S` is **PMCFG-confirmed structurally** as `(1,1)`;
-- GF now reaches the end of the named PMCFG declarations before crashing;
-- the six missing `Comp`/`Imp` list linearizations are the first unresolved structural family, but their causal role in the final PMCFG crash is **not yet proven**.
-
-## 3. Current warning state
-
-GF 3.12 reports exactly this boundary family:
+Current conceptual state:
 
 ```text
-Warning: no linearization of BaseComp
-Warning: no linearization of BaseImp
-Warning: no linearization of ConjComp
-Warning: no linearization of ConjImp
-Warning: no linearization of ConsComp
-Warning: no linearization of ConsImp
+FOUNDATION:            STABLE / FROZEN AT CORE v0.1.0
+CORE IMPLEMENTATION:   SUBSTANTIAL
+CORE RELEASE GATE:     PASS
+EXTEND COMPILATION:    WORKING
+PUBLIC AllSqi BUILD:   WORKING
+SCENARIO REGRESSION:   PENDING
+LINGUISTIC QA:         IN PROGRESS
+FEATURE COMPLETION:    IN PROGRESS
+FINAL RGL RELEASE:     NOT YET
 ```
 
-No current `missing lock_*` cluster is present.
+There is therefore **no current compiler blocker that should drive development order**.
 
-## 4. Current active symbol states
+---
 
-| Symbol/family | Compiler status | Linguistic status | Current rule |
-|---|---|---|---|
-| `FrontComplDirectVS` | `pmcfg_confirmed` | `provisional` | keep fix15 compositional path; direct-speech realization still needs targeted linguistic validation |
-| `PossPronRNP` | `pmcfg_confirmed` `(28,28)` | `provisional` | keep fix16 core-composition path |
-| `SlashBareV2S` | `pmcfg_confirmed` `(1,1)` | `provisional` | keep fix17 inherited `SlashV2S` path; dead local helper may be removed later |
-| VPS/VPI/VPS2/VPI2 inherited family | `pmcfg_incomplete_by_design` (`(0,0)` on `variants {}` members) | `incomplete` | keep inherited this cycle |
-| `Base/Cons/ConjComp` + `Base/Cons/ConjImp` | `not_run_after_change` (previous state: six missing-linearization warnings) | `provisional` | fix18 implements all six as one family in `ExtendSqiScaffolding`, with exact ListComp/ListImp retyping in the coordinator |
-| `ComplGenVV` | `pmcfg_confirmed` | `provisional` | structural reuse accepted; `Ant`/`Pol` semantics remain open |
+## 2. Validation limitation
 
-## 5. Active fix18 probe — `Comp` / `Imp` list boundary family
+The release-gate Wordbench runs were `quick` runs and still reported:
 
-### Evidence gate
-
-1. abstract `Extend` declares `[Comp]{2}`, `ConjComp : Conj -> ListComp -> Comp`, `[Imp]{2}`, and `ConjImp : Conj -> ListImp -> Imp`; generated `Base*`/`Cons*` constructors therefore require concrete linearizations;
-2. pinned `ExtendFunctor` supplies no `Base/Cons/ConjComp` or `Base/Cons/ConjImp` implementation;
-3. Albanian `CatSqi` has `Comp = {s : Str}`, `Imp = {s : Str}`, and `Conj = {s : Str}`;
-4. current `ExtendSqi` already fixes both list boundaries to `{init,last : Str}`;
-5. Albanian `ConjunctionSqi` already uses the exact string-list pattern for `S`, `Adv`, `AdV`, `IAdv`, and `RS`: Base splits first/last, Cons appends comma-separated material into `init`, and Conj joins `init`, conjunction, and `last`;
-6. run `20260918_210629` reaches the end of all named PMCFG entries, while these six linearizations are still explicitly absent;
-7. AI Compendium policy requires one coherent family patch rather than dummy outputs, unrestricted variants, or piecemeal warning suppression.
-
-### fix18 candidate
-
-Implement the six functions together in `ExtendSqiScaffolding.gf`, and keep `ExtendSqi.gf` as category-explicit wiring only:
-
-```gf
-BaseComp / ConsComp / ConjComp
-BaseImp  / ConsImp  / ConjImp
+```text
+Scenarios seen: 0
 ```
 
-The family mirrors current Albanian string-list coordination. `ListComp` and `ListImp` retyping remains in the concrete coordinator so the generated category locks are preserved at the exact boundary.
+Therefore the v0.1.0 baseline proves compiler/structural stability, not full linguistic behavior.
 
-### Acceptance gate
+The next evidence must come from registered behavioral scenarios and reviewed expected outputs.
 
-Run verbose `Quick -> ExtendSqi.gf`.
+---
 
-- **Primary PASS:** all six `no linearization` warnings disappear.
-- **Strong PASS:** `ExtendSqi.gfo` is produced and the final PMCFG crash disappears.
-- **Partial PASS:** warnings disappear but PMCFG still crashes after the final named entry; then fix18 is structurally useful but not the complete root-cause repair.
-- **FAIL:** new type/lock errors appear or one of the six linearizations is still missing; revert/minimize the family wiring rather than adding placeholders.
+## 3. Current highest-priority capability
 
-## 6. Documentation synchronization after the next run
+The first completion target is the coherent family:
 
-Always update:
+```text
+VPS / VPI / VPS2 / VPI2
+```
 
-- this file (`CURRENT_REPAIR_STATE.md`);
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md` for any symbol whose compiler/linguistic status changed;
-- `ALBANIAN_DECISION_LOG.md` when an experiment changes accepted reasoning;
-- `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md` only when stable ownership/acceptance truth changes;
-- `ALBANIAN_OPEN_QUESTIONS.md` only when an unresolved design question is answered or reprioritized.
+including:
+
+```text
+MkVPS
+BaseVPS
+ConsVPS
+ConjVPS
+PredVPS
+QuestVPS
+SQuestVPS
+RelVPS
+
+MkVPI
+BaseVPI
+ConsVPI
+ConjVPI
+ComplVPIVV
+
+MkVPS2
+BaseVPS2
+ConsVPS2
+ConjVPS2
+ComplVPS2
+ReflVPS2
+
+MkVPI2
+BaseVPI2
+ConsVPI2
+ConjVPI2
+ComplVPI2
+```
+
+Inherited `(0,0)` entries are now classified as **completion gaps**, not compiler defects.
+
+---
+
+## 4. Current architecture evidence
+
+The current core realizes verbal information too early for mature VPS/VPI behavior:
+
+- `UseV` is historically known to collapse a verb to an indicative present 3sg surface form;
+- `UseCl`/`UseQCl`/`UseRCl`/`UseSlash` historically ignore `Temp`/`Pol` at the final clause boundary;
+- `VPSlash` is currently too shallow to guarantee preservation of open-complement government and clitic information.
+
+This is sufficient evidence to begin an **Architecture Gate** before implementing the whole family.
+
+The core freeze may be reopened only minimally and only when a Wordbench scenario proves the exact information-loss boundary.
+
+---
+
+## 5. Active work package
+
+```text
+WP1 — Verbal Realization Architecture Gate
+```
+
+Required deliverables:
+
+1. producer/consumer map for `VP`, `Cl`, `VPSlash`, `Temp`, `Pol`, and `Agr`;
+2. Wordbench scenario `vps_agreement`;
+3. Wordbench scenario `vps_temp_pol`;
+4. exact localization of the first information-loss boundary for each scenario;
+5. minimal proposed verbal realization contract;
+6. compiler regression through `ExtendSqi`, `LangSqi`, and `AllSqi` after any accepted change.
+
+Do not implement all VPS/VPI functions before this gate is satisfied.
+
+---
+
+## 6. Model-language and Compendium guidance
+
+Current comparison policy:
+
+- **Bulgarian:** primary VPS/VPI structural model;
+- **Greek:** secondary embedded/subjunctive-like realization comparison;
+- **Romanian:** primary slash/clitic preservation stress model;
+- **German:** segmented-realization complexity/stress model;
+- **English:** coverage reference for the full `Extend` API.
+
+Primary Compendium pattern:
+
+```text
+EP004 — deferred realization tables
+```
+
+Supporting patterns are activated only when Albanian evidence requires them:
+
+```text
+EP005  segmented clause/VP slots
+EP019  single clause assembly point
+EP020  clitic cluster flattening
+EP021  polarity propagation
+EP022  control and argument metadata
+EP030  lexically selected non-finite complement forms
+EP033  modal composition by semantic subclass
+```
+
+---
+
+## 7. Current ownership rule
+
+`ExtendSqi.gf` remains a thin coordinator.
+
+Historical stabilization decisions that forced the VPS/VPI family to remain inherited were cycle-specific. During Completion, coherent Albanian ownership may be introduced **after** the Architecture Gate defines the family contract.
+
+If local ownership is activated, the preferred extension-level owner is:
+
+```text
+ExtendSqiVPS.gf
+```
+
+Core verbal realization machinery still belongs in the appropriate core resource/syntax modules.
+
+One-off local reintroduction of isolated VPS/VPI functions remains prohibited.
+
+---
+
+## 8. Wordbench execution policy
+
+Wordbench remains the canonical harness.
+
+Until the historical CLI composition issue is explicitly repaired, diagnostics may continue through the stabilized core API path:
+
+```python
+probe_language_path(...)
+resolve_configuration(...)
+execute_quick_run(...)
+```
+
+Direct GF probes are only for surgical isolation of a failure already observed through Wordbench.
+
+Goldens are added only after linguistic review of deterministic scenario output.
+
+---
+
+## 9. Documentation update rule
+
+When evidence changes:
+
+- update this file for live state;
+- update `status/ALBANIAN_IMPLEMENTATION_STATUS.md` when capability maturity changes;
+- update `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md` when stable ownership changes;
+- append `ALBANIAN_DECISION_LOG.md` when accepted reasoning changes;
+- update `ALBANIAN_OPEN_QUESTIONS.md` when a question is answered or reprioritized;
+- do **not** rewrite `status/ALBANIAN_CORE_V0.1.0.md` for post-release work.
+
+The governing Completion plan is:
+
+```text
+ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md
+```

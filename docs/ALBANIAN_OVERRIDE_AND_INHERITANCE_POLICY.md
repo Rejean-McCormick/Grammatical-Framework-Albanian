@@ -822,7 +822,7 @@ Allowed contents:
 Disallowed contents:
 - new local helper logic,
 - ad hoc coordinator-side record construction,
-- unsupported list-family or VPS-family machinery,
+- VPS-family implementation machinery directly in the coordinator,
 - repair code that belongs in a companion module.
 
 ### 14.2 Companion ownership rule
@@ -839,11 +839,13 @@ Current subsystem families include:
 - lexical tail,
 - helper inventory.
 
-### 14.3 Unsupported inherited-family rule
+### 14.3 VPS/VPI Completion ownership rule
 
-The VPS/VPI/VPS2/VPI2/list-wrapper family remains inherited in the current cycle unless explicitly re-opened by architecture documents.
+The VPS/VPI/VPS2/VPI2/list-wrapper family was inherited during core stabilization and is now explicitly reopened for coherent Completion work by `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`.
 
-No local Albanian subsystem should quietly reintroduce that family.
+Inheritance remains a temporary implementation state until the live evidence supports a safe transition. The final target contract is defined independently in `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`; local ownership may move to `ExtendSqiVPS.gf` only as one coherent family.
+
+No subsystem may quietly or piecemeal reintroduce the family, and `ExtendSqi.gf` itself remains wiring-only.
 
 ### 14.4 Family-coherence rule
 
@@ -854,7 +856,8 @@ This applies especially to:
 - the existential family,
 - the AP/CN conversion family,
 - the focus/preposition family,
-- the VP/VPSlash bridge family.
+- the VP/VPSlash bridge family,
+- the VPS/VPI/VPS2/VPI2 family when local Completion ownership is activated.
 
 If one member changes representation, the rest of the family must be checked immediately.
 

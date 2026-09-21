@@ -33,15 +33,28 @@ Out of scope:
 
 ## Current Status Snapshot
 
-### Latest live facts — run `20260918_210629`
-- `PossPronRNP` remains PMCFG-confirmed as `(28,28)` under fix16.
-- `SlashBareV2S` is PMCFG-confirmed as `(1,1)` under fix17.
-- GF reaches the final named PMCFG declaration, then crashes during backend finalization.
-- The latest run has **no `missing lock_*` warning cluster**.
-- Six `no linearization` warnings remain for `Base/Cons/ConjComp` and `Base/Cons/ConjImp`; they are now the first unresolved structural family.
+### Latest live facts — Global Scan `20260921_151446`
+- FIX22C remains the last known compiler-stable historical baseline.
+- The later mega-update is not compiler-stable.
+- Wordbench scanned 47 language-folder GF files: 5 PASS, 42 FAIL, 0 ERROR, 0 TIMEOUT.
+- All 42 failures currently converge on `ResSqi.gf:347:7`: `Unexpected token ']'`, expected `String`.
+- Static scan reports 139 `single_slash_eq` findings, 9 `untyped_case_str_pat` findings, and 26 trailing-space findings.
+- The four parent-directory public facades (`SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`) are not yet in the automatic 47-file Global Scan.
+- Scenarios seen: 0.
 
-### What this means
-The immediate repair target is the **Comp/Imp list boundary family**, not another isolated extension symbol. Its six functions must be treated as one family because they share category shape, list representation, coordination behavior, warning state, and ownership decision.
+### Immediate unresolved questions
+
+**Q-LIVE-1 — Syntax normalization scope (P0).** Which `single_slash_eq` hits are confirmed table abstractions by local type? Closure requires typed review plus clean compilation; no blind replacement.
+
+**Q-LIVE-2 — Empty-string pattern family (P0).** After repairing `ResSqi`, which additional `[] =>` sites are cases over `Str` and therefore require `"" =>`? `VerbSqi` already exposes two candidate sites.
+
+**Q-LIVE-3 — Global causality classification (P0).** After the first blocker moves, which failures are DIRECT versus DOWNSTREAM? Closure requires a new Global Scan and explicit supplemental facade compilation.
+
+**Q-LIVE-4 — VPS/VPI ownership after the mega-update (P1).** Current source both claims inheritance in comments and locally subtracts/implements the family. Closure requires exact `ExtendFunctor` coverage + Albanian lincat/behavior evidence + clean PMCFG/scenario validation, then one family-wide choice: coherent inheritance or a dedicated local companion. Coordinator-local substantive ownership is not an acceptable final state.
+
+**Q-LIVE-5 — Semantic completion restart point (P1).** Clitic semantics, coordination, VPS/VPI behavior, and other completion work resume only after FIX22C + facade compiler gates are restored.
+
+The older fix17/fix18 Comp/Imp/PMCFG questions below are retained as historical design context. They are **not the current priority order** and must not override current compiler evidence.
 
 ---
 
@@ -53,7 +66,11 @@ The immediate repair target is the **Comp/Imp list boundary family**, not anothe
 
 ---
 
-## P0 — Compile-Critical Open Questions
+## Historical / deferred questions from the pre-FIX22C repair cycle
+
+The numbered questions in this section remain useful architectural context where still unresolved, but their old priority labels are superseded by Q-LIVE-1 through Q-LIVE-5 above.
+
+### Former P0 — Compile-Critical Open Questions
 
 ### Q0. Does the Albanian `Comp` / `Imp` boundary family close the final PMCFG failure when implemented coherently?
 
@@ -322,38 +339,34 @@ The immediate repair target is the **Comp/Imp list boundary family**, not anothe
 
 ## P2 — Documentation and Design Debt
 
-### Q8. Which model language should be primary for each subsystem?
+### Q8. Which model-language patterns are useful for each subsystem?
 
 **Current state:**
-- Bulgarian is often the best minimal reference for the `RNP` family.
-- German is a richer but more structurally elaborate reference.
+- model languages are supporting engineering evidence, never primary linguistic authority;
+- the supplied corpus has now been summarized in `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`;
+- Bulgarian can be a useful minimal structural reference for some RNP work, while German can expose richer alternatives.
 
 **Unknowns:**
-- whether a different model language is better for AP/CN conversion
-- whether any model language is close enough to Albanian existential behavior to guide the final design
+- which compatible structural patterns are useful for AP/CN conversion, existentials, and other families after exact Albanian types are known;
+- whether a candidate pattern preserves all information required by Albanian consumers.
 
 **Closure criterion:**
-- model-language comparison table completed in `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`
+- every borrowed pattern has an explicit Albanian type/ownership rationale and targeted validation; no subsystem design depends on choosing a model language as linguistic authority.
 
 ---
 
-### Q9. Which Albanian modules are still missing extraction into the language-wide documentation set?
+### Q9. Is any additional documentation extraction required for safe implementation?
 
-**Likely candidates:**
-- `AdjectiveSqi.gf`
-- `QuestionSqi.gf`
-- `SentenceSqi.gf`
-- `ConjunctionSqi.gf`
-- `VerbSqi.gf`
-- `RelativeSqi.gf`
-- `PhraseSqi.gf`
+**Current state:**
+- the active bundle intentionally relies on current source + compiler for exact category/constructor facts rather than requiring a separate extraction document for every module;
+- missing historical helper/category extraction documents are not implicit authority.
 
 **Unknowns:**
-- whether all critical category-shape and constructor patterns have been documented yet
-- whether any hidden dependency remains undocumented
+- whether a recurring implementation question cannot be answered efficiently from the current source, ledger, plan, and tests;
+- whether that recurring evidence would justify a new focused support document.
 
 **Closure criterion:**
-- module dependency map and category reference both complete enough to support coding without re-auditing the whole dump
+- create a new extraction/reference document only for repeated, high-value evidence that cannot be kept reliably in the existing normative docs; do not recreate broad inventories merely to satisfy an old document list.
 
 ---
 
@@ -369,8 +382,8 @@ Proposed closure standard:
 - all custom overrides documented by subsystem
 - minimal test suite defined for each repaired family
 
-**Open point:**
-Should “done” also require a generation/regression test pass for representative examples?
+**Resolved rule:**
+Yes. “Done” requires representative generation/regression scenarios with Albanian-reviewed expected outputs in addition to compiler/structural success. A release with `Scenarios seen: 0` is not linguistically complete.
 
 ---
 

@@ -154,23 +154,17 @@ Rules:
 
 ### Level 5: support-document truth
 
-The current documentation suite includes operational support documents that refine how Levels 2–4 should be applied.
+Use only support documents that are actually present for the same source snapshot. In the current bundle, the active support set includes:
 
-These include:
-- `ALBANIAN_HELPER_REGISTRY.md`
-- `ALBANIAN_SHALLOW_CATEGORY_CONSTRUCTOR_MATRIX.md`
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md`
-- `ALBANIAN_STALE_COMMENT_TRACKER.md`
-- `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` for execution order;
+- `CURRENT_REPAIR_STATE.md` for live compiler evidence;
+- `ALBANIAN_SYMBOL_STATUS_LEDGER.md` for maturity/risk;
+- `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md` for minimum gates;
+- `ALBANIAN_OPEN_QUESTIONS.md` and `ALBANIAN_DECISION_LOG.md` for unresolved/accepted reasoning.
 
-Rules:
-- Use the helper registry to confirm exact helper type, maturity, and allowed use.
-- Use the shallow-category constructor matrix to confirm whether a shallow-looking category is actually constructible in the current module context.
-- Use the symbol status ledger to distinguish stable patterns from warning-state or provisional ones.
-- Use the stale comment tracker to avoid inheriting historical or misleading commentary into live code decisions.
-- Use the module extraction coverage file to know whether a module is already documented deeply enough or whether direct source re-audit is still required.
+If older notes name a helper registry, constructor matrix, stale-comment tracker, extraction-coverage file, or other companion that is not supplied, treat that reference as historical/optional rather than implicit authority. Re-audit the exact source directly.
 
-These support documents refine implementation discipline. They do not override abstract signatures or current compiler reality.
+These support documents refine implementation discipline. They do not override abstract signatures, target source, or current compiler reality.
 
 ### Level 6: model-language guidance
 
@@ -197,6 +191,29 @@ Rules:
 - No “quiet policy” should survive only in chat or commit intuition.
 
 ---
+
+## 3A. Syntax-integrity gate before override reasoning
+
+Before deciding to inherit, override, redesign a category, or copy a model-language pattern, confirm that the current expression is valid GF syntax.
+
+Project-wide notation rule:
+
+```gf
+\x -> expr       -- ordinary function abstraction
+\\x => expr      -- table abstraction
+"" => expr       -- empty Str pattern
+_ => []          -- empty surface result
+```
+
+A compiler parse error such as `Unexpected token ']'` is classified as a textual/syntax problem first. Do not infer an Albanian category redesign from it.
+
+Static-scan hits are evidence prompts, not blind-edit commands:
+
+- a `single_slash_eq` hit is repaired to `\\x =>` only when the local expected type is a table;
+- an `[] =>` hit is repaired to `"" =>` only when the scrutinee is `Str` and the intended branch is the empty string;
+- `=> []` results must not be changed by this rule.
+
+Model languages may corroborate GF engineering notation but still do not establish Albanian semantics.
 
 ## 4. Core inheritance policy
 
@@ -839,11 +856,16 @@ Current subsystem families include:
 - lexical tail,
 - helper inventory.
 
-### 14.3 Unsupported inherited-family rule
+### 14.3 Reopened VPS-family ownership rule
 
-The VPS/VPI/VPS2/VPI2/list-wrapper family remains inherited in the current cycle unless explicitly re-opened by architecture documents.
+The older inheritance-only rule for VPS/VPI/VPS2/VPI2/list wrappers is no longer an unconditional current-cycle rule. The mega-update explicitly subtracts and locally implements this family, so ownership is **provisional and must be revalidated** after syntax/compile recovery.
 
-No local Albanian subsystem should quietly reintroduce that family.
+The final choice must be family-coherent:
+
+- inherit the whole family when the inherited path is category-correct and behaviorally sufficient; or
+- localize the whole family in a dedicated Albanian companion when exact Albanian evidence requires richer ownership.
+
+Substantive family logic must not remain in the thin `ExtendSqi.gf` coordinator, and no module may quietly make a one-off ownership change.
 
 ### 14.4 Family-coherence rule
 
@@ -1085,21 +1107,19 @@ This policy forbids:
 
 ## 22. Maintenance and update obligations
 
-When this policy changes, the following must be checked for consistency:
+When this policy changes, check the documents that are actually present in the active bundle:
 
-- `ALBANIAN_SYNTAX_AND_CONSTRUCTOR_RULES.md`
-- `ALBANIAN_IMPLEMENTATION_PATTERNS.md`
-- `ALBANIAN_CATEGORY_AND_LINCAT_REFERENCE.md`
-- `ALBANIAN_LEXICAL_AND_FUNCTIONAL_ELEMENTS.md`
-- `ALBANIAN_FORBIDDEN_PATTERNS_AND_ANTI_DRIFT_RULES.md`
-- `ALBANIAN_DECISION_LOG.md`
-- `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`
-- `ALBANIAN_LANGUAGE_ARCHITECTURE.md`
-- `ALBANIAN_HELPER_REGISTRY.md`
-- `ALBANIAN_SHALLOW_CATEGORY_CONSTRUCTOR_MATRIX.md`
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md`
-- `ALBANIAN_STALE_COMMENT_TRACKER.md`
-- `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`;
+- `CURRENT_REPAIR_STATE.md`;
+- `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`;
+- `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md` (supporting evidence only);
+- `ALBANIAN_DECISION_LOG.md`;
+- `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`;
+- `ALBANIAN_SYMBOL_STATUS_LEDGER.md`;
+- `ALBANIAN_OPEN_QUESTIONS.md`;
+- relevant `ALBANIAN_EXTENDSQI_*` subsystem references.
+
+If a later bundle restores additional registries or matrices, they may be reintegrated only when their provenance matches the current source snapshot.
 
 If a new implementation lesson changes concrete coding discipline, update the decision log and the relevant operational documents, not just chat notes.
 
@@ -1107,23 +1127,18 @@ If a new implementation lesson changes concrete coding discipline, update the de
 
 ## 23. Recommended companion documents
 
-This policy is meant to be read together with:
+Primary companions in this bundle are:
 
-- `ALBANIAN_SYNTAX_AND_CONSTRUCTOR_RULES.md`
-- `ALBANIAN_IMPLEMENTATION_PATTERNS.md`
-- `ALBANIAN_CATEGORY_AND_LINCAT_REFERENCE.md`
-- `ALBANIAN_LEXICAL_AND_FUNCTIONAL_ELEMENTS.md`
-- `ALBANIAN_FORBIDDEN_PATTERNS_AND_ANTI_DRIFT_RULES.md`
-- `ALBANIAN_DECISION_LOG.md`
-- `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`
-- `ALBANIAN_LANGUAGE_ARCHITECTURE.md`
-- `ALBANIAN_HELPER_REGISTRY.md`
-- `ALBANIAN_SHALLOW_CATEGORY_CONSTRUCTOR_MATRIX.md`
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md`
-- `ALBANIAN_STALE_COMMENT_TRACKER.md`
-- `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`;
+- `CURRENT_REPAIR_STATE.md`;
+- `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`;
+- `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md` (supporting evidence only);
+- `ALBANIAN_DECISION_LOG.md`;
+- `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`;
+- `ALBANIAN_SYMBOL_STATUS_LEDGER.md`;
+- `ALBANIAN_OPEN_QUESTIONS.md`.
 
-The function of this file is policy-level control. It should not duplicate all the inventories, matrices, or ledgers that those companion documents hold.
+The function of this file is policy-level control. It should not duplicate inventories or ledgers maintained elsewhere. Missing historical companion files are not implicit dependencies.
 
 ---
 

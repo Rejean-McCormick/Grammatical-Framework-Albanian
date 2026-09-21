@@ -3,7 +3,7 @@ concrete VerbSqi of Verb = CatSqi **
   open Prelude, ParamX, ResSqi, (I = IrregSqi) in {
 
   oper
-    emptyAgrStr : Agr => Str = \_ => [] ;
+    emptyAgrStr : Agr => Str = \\_ => [] ;
 
     baseVP : Verb -> VP = \v -> lin VP {
       v = v ;
@@ -45,14 +45,15 @@ concrete VerbSqi of Verb = CatSqi **
       teWithClitic (vp.cl ! a) ++ subjunctiveFinite vp.v a ++ vp.post ! a ;
 
     saturateSlash : VPSlash -> NP -> VP = \sl,np ->
-      let c : Case = sl.c2.c ;
-          cli : Str = case sl.c2.s of {
-            [] => case c of {Acc => np.acc_clit ; Dat => np.dat_clit ; _ => []} ;
-            _  => []
-          }
-      in case cli of {
-        [] => addPost (slashToVP sl) (\\_ => sl.c2.s ++ np.s ! c) ;
-        _  => addClitic (slashToVP sl) (\\_ => cli)
+      let c : Case = sl.c2.c in
+      case <np.isPron,c> of {
+        <True,Acc> => addClitic (slashToVP sl) (\\_ => np.acc_clit) ;
+        <True,Dat> => addClitic (slashToVP sl) (\\_ => np.dat_clit) ;
+        <False,Dat> =>
+          addPost
+            (addClitic (slashToVP sl) (\\_ => datCliticAgr np.a))
+            (\\_ => sl.c2.s ++ np.s ! c) ;
+        _ => addPost (slashToVP sl) (\\_ => sl.c2.s ++ np.s ! c)
       } ;
 
   lin

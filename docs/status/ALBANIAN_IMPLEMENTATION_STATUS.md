@@ -1,50 +1,59 @@
 # Albanian RGL — Implementation Status
 
-**Date:** 2026-09-19  
+**Baseline date:** 2026-09-19  
+**Current-state synchronization:** 2026-09-21  
 **Project:** Grammatical Framework — Albanian RGL  
 **Compiler:** GF 3.12  
 **Validation tool:** GF Wordbench
 
 ---
 
-## 1. Overall status
+## 0. Current working-snapshot overlay — 2026-09-21
 
-The Albanian RGL now has a **working compiler-stable foundation**.
+This document contains substantial FIX22C baseline information. That baseline remains valid historical evidence for its exact source snapshot, but the later mega-update is **not currently compiler-stable**.
 
-The language is not finished yet, but it is no longer in a state where the main extension grammar is blocked by the compiler.
+Latest Wordbench Global Scan (`20260921_151446`, GF 3.12):
 
-The current situation is:
+```text
+47 language-folder GF files scanned
+5 PASS
+42 FAIL
+0 ERROR
+0 TIMEOUT
+0 scenarios
+```
 
-| Area | Status |
-|---|---|
-| Core Albanian category system | Implemented |
-| Albanian resource types | Implemented |
-| Morphology | Large implementation present |
-| Paradigm API | Implemented |
-| Core grammar | Implemented and assembled |
-| Standard lexicon | Large implementation present |
-| Structural vocabulary | Broad implementation present, with some open items |
-| `ExtendSqi` | Compiles successfully |
-| PMCFG generation | Working |
-| Final `ExtendSqi.gfo` | Produced successfully |
-| Core release gate (FIX22C) | Passed |
-| Public composition (`LexiconSqi` / `LangSqi` / `AllSqi`) | Passed |
-| Scenario/golden linguistic validation | Pending |
-| Linguistic completion of all extensions | In progress |
+The 42 failed compilations currently converge on `ResSqi.gf:347:7`, where a `case` over `Str` uses `[] =>` and GF reports `Unexpected token ']'` / `Expected: String`. The active work phase is therefore syntax-integrity recovery followed by a new global compile census.
 
-The project is therefore in the phase:
-
-> **stabilize, validate, and complete the Albanian language implementation**
-
-rather than:
-
-> **repair the compiler pipeline until Albanian builds at all**
+Operational order is normative in `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`.
 
 ---
 
-## 2. What is confirmed working by the current compiler
+## 1. Overall status
 
-The current Wordbench validation with GF 3.12 confirms a compiler-stable Albanian core.
+The Albanian project has two states that must not be conflated:
+
+| Area | FIX22C / v0.1.0 baseline | Current post-mega-update snapshot |
+|---|---|---|
+| Core category/resource architecture | compiler-validated baseline | present, but current compile is blocked before full revalidation |
+| Morphology/paradigm implementation | substantial and baseline-validated | present; must be revalidated after syntax gate |
+| Core grammar / Structural | passed historical gate | downstream-blocked by current `ResSqi` parse error |
+| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | not currently revalidated |
+| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | downstream-blocked in latest Global Scan |
+| Public facades (`SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`) | not part of the original eight-target FIX22C table | required supplemental gate after recovery |
+| Scenario/golden linguistic validation | pending | pending; `Scenarios seen: 0` in latest scan |
+
+Therefore the current project phase is:
+
+> **restore syntax and compiler integrity → re-establish the historical compiler gate and public facades → validate Albanian behavior → continue capability completion**
+
+The project is not back in the old pre-FIX22C PMCFG-repair phase. The historical PMCFG crash is a regression boundary, while the current first blocker is a newer syntax regression introduced after the baseline.
+
+---
+
+## 2. What FIX22C confirmed for the historical baseline
+
+The FIX22C Wordbench validation with GF 3.12 confirmed a compiler-stable Albanian core for that historical snapshot.
 
 ### FIX22C release-gate targets
 
@@ -412,21 +421,18 @@ That is a major functional milestone because `ExtendSqi` exercises a much broade
 
 ---
 
-## 12. Inherited extension families
+## 12. VPS/VPI extension-family ownership
 
-Not every function in `Extend` is locally implemented.
+At the FIX22C historical baseline, inheritance of the VPS/VPI/VPS2/VPI2 family was the compiler-stable path used to move past an earlier local PMCFG failure. That evidence remains valuable, but it is **not the current source state**.
 
-This is intentional.
+The post-FIX22C mega-update now subtracts and locally implements this family in `ExtendSqi.gf`, while stale comments in the same file still describe the family as inherited. The current source is therefore internally inconsistent and the family ownership is **provisional**.
 
-The current architecture uses `ExtendFunctor` as the default source of shared structure and only overrides functions where Albanian needs a language-specific implementation or where the inherited implementation is insufficient.
+After syntax/compiler recovery, the family must resolve to one coherent final state:
 
-In particular, the current cycle keeps the VPS/VPI/VPS2/VPI2 family inherited.
+- inheritance from `ExtendFunctor` if category-correct and behaviorally sufficient; or
+- a dedicated Albanian companion owner if exact Albanian evidence requires richer local structure.
 
-Some inherited functions can still have empty `variants {}` implementations.
-
-Current compiler evidence shows that those empty inherited entries **do not prevent `ExtendSqi.gfo` from being produced**.
-
-They therefore represent **coverage/completion work**, not a current compiler blocker.
+Substantive VPS/VPI-family realization logic is not a final responsibility of the thin `ExtendSqi.gf` coordinator.
 
 ---
 
@@ -460,7 +466,7 @@ A substantial standard lexicon is already present.
 
 ### Compiler pipeline
 
-GF 3.12 can now complete PMCFG generation for `ExtendSqi` and write the final GFO.
+GF 3.12 **did** complete PMCFG generation for `ExtendSqi` and write the final GFO at the FIX22C historical baseline. The current mega-update must re-establish that property.
 
 ---
 
@@ -511,17 +517,15 @@ A systematic comparison of generated Albanian against expected/golden forms is s
 
 ---
 
-## 15. Current warning to keep separate
+## 15. Historical warning to recheck after recovery
 
-Compilation currently has a tracked warning around:
+The FIX22C-era evidence tracked a warning around:
 
 ```text
 DConj
 ```
 
-This is a local structural/abstract-interface issue.
-
-It does not invalidate the fact that `ExtendSqi` now compiles, but it should be resolved during the structural cleanup phase.
+That warning was a local structural/abstract-interface issue at the historical baseline. The current mega-update is blocked earlier by syntax corruption, so the DConj warning must be **re-observed**, not assumed current, after the lower-level blocker is removed.
 
 ---
 
@@ -626,14 +630,14 @@ The whole Albanian RGL has **not yet reached this level**.
 
 ## 18. Remaining path to completion
 
-The compiler/structural release gate is now complete.
+The compiler/structural release gate was complete at FIX22C. The current mega-update must restore and then exceed that historical gate before completion work resumes.
 
 The remaining work is mainly:
 
 1. establish Wordbench sentence/scenario suites;
 2. validate morphology and syntax against expected Albanian outputs;
 3. complete inherited or deliberately unfinished `Extend` functions;
-4. prioritize the VPS/VPI/VPS2/VPI2 family and other `(0,0)` coverage gaps;
+4. revalidate VPS/VPI/VPS2/VPI2 ownership as a family, then address genuine `(0,0)` coverage gaps;
 5. resolve the remaining structural warning/open-symbol areas such as `DConj` and `must_VV`;
 6. replace provisional extension realizations where linguistic refinement is still required;
 7. strengthen `ConstructionSqi` where current implementations are shallow or string-based;

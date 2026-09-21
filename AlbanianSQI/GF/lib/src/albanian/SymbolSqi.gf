@@ -14,7 +14,7 @@ concrete SymbolSqi of Symbol = CatSqi
         lin NP {
           s = \\c => numStr ++ cnCase ! c ;
           acc_clit = [] ; dat_clit = [] ;
-          a = agr3 n g
+          a = agr3 n g ; isPron = False
         } ;
 
     cnCaseIndef : CatSqi.CN -> Number -> (Case => Str) = \cn,n ->
@@ -72,7 +72,7 @@ concrete SymbolSqi of Symbol = CatSqi
       lin NP {
         s = \\c => cnCaseWithDet d n ! c ++ syms.s ;
         acc_clit = [] ; dat_clit = [] ;
-        a = agr3 d.n n.g
+        a = agr3 d.n n.g ; isPron = False
       } ;
 
 } ;

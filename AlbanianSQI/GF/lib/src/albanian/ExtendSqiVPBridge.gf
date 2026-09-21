@@ -9,7 +9,7 @@ oper
     AS.PrepNP (PS.mkPrep "nga" R.Ablat) np ;
 
   vp_PresPartAP : VP -> AP = \vp -> lin AP {
-    s=\_,_,_,_=>realizeGerundVP vp agrMascSg
+    s=\\_,_,_,_ =>realizeGerundVP vp agrMascSg
   } ;
 
   vp_EmbedPresPart : VP -> SC = \vp -> lin SC {
@@ -21,42 +21,42 @@ oper
   } ;
 
   vp_PastPartAP : VPSlash -> AP = \sl -> lin AP {
-    s=\_,_,g,n=>sl.v.participle ++ sl.post!(R.agrgP3 g n)
+    s=\\_,_,g,n =>sl.v.participle ++ sl.post!(R.agrgP3 g n)
   } ;
 
   vp_PastPartAgentAP : VPSlash -> NP -> AP = \sl,np -> lin AP {
-    s=\_,_,g,n=>sl.v.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
+    s=\\_,_,g,n =>sl.v.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
   } ;
 
   vp_PassVPSlash : VPSlash -> VP = \sl ->
     appendVP (emptyVP (lin Verb I.jam_V))
-      (\a=>sl.v.participle ++ sl.post!a) ;
+      (\\a =>sl.v.participle ++ sl.post!a) ;
 
   vp_PassAgentVPSlash : VPSlash -> NP -> VP = \sl,np ->
-    appendVP (vp_PassVPSlash sl) (\_ => (vp_agentAdv np).s) ;
+    appendVP (vp_PassVPSlash sl) (\\_ => (vp_agentAdv np).s) ;
 
   vp_NominalizeVPSlashNP : VPSlash -> NP -> NP = \sl,np ->
     let vp : VP = ComplSlash sl np
     in lin NP {
-      s=\_=>realizeGerundVP vp agrMascSg ;
-      acc_clit=[] ; dat_clit=[] ; a=agrMascSg
+      s=\\_ =>realizeGerundVP vp agrMascSg ;
+      acc_clit=[] ; dat_clit=[] ; a=agrMascSg ; isPron=False
     } ;
 
   vp_ProgrVPSlash : VPSlash -> VPSlash = \sl -> sl ** {
-    cl=\a=>"po" ++ sl.cl!a
+    cl=\\a =>"po" ++ sl.cl!a
   } ;
 
   vp_A2VPSlash : A2 -> VPSlash = \a2 -> lin VPSlash {
     v=lin Verb I.jam_V ;
-    cl=\_=>[] ;
-    post=\a=>(CompAP (UseA2 a2)).s!a ;
+    cl=\\_ =>[] ;
+    post=\\a =>(CompAP (UseA2 a2)).s!a ;
     c2=a2.c2
   } ;
 
   vp_N2VPSlash : N2 -> VPSlash = \n2 -> lin VPSlash {
     v=lin Verb I.jam_V ;
-    cl=\_=>[] ;
-    post=\a=>(CompCN (UseN2 n2)).s!a ;
+    cl=\\_ =>[] ;
+    post=\\a =>(CompCN (UseN2 n2)).s!a ;
     c2=n2.c2
   } ;
 

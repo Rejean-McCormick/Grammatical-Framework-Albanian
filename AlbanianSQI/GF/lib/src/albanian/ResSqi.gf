@@ -143,14 +143,15 @@ oper
 
 oper
   -- Match CatSqi lincat Pron
-  Pron : Type = {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr} ;
+  Pron : Type = {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr ; isPron : Bool} ;
 
   mkPron : (_,_,_,_,_,_ : Str) -> GenNum -> Person -> Pron =
     \nom,acc,dat,ablat,accC,datC,gn,p ->
       { s = table {Nom => nom ; Acc => acc ; Dat => dat ; Ablat => ablat} ;
         acc_clit = accC ;
         dat_clit = datC ;
-        a = {gn = gn ; p = p}
+        a = {gn = gn ; p = p} ;
+        isPron = True
       } ;
 
 
@@ -296,7 +297,7 @@ oper
     in case <n,p> of {
       <Pl,_> => pres ;
       <Sg,P1> => p1 ;
-      <Sg,P2> => case p1 of {
+      <Sg,P2> => case <p1 : Str> of {
         "jam" => "jesh" ;
         "kam" => "kesh" ;
         "dua" => "duash" ;
@@ -306,12 +307,12 @@ oper
         "vij" => "vish" ;
         "them" => "thuash" ;
         _ + "j" => init p1 ++ "sh" ;
-        _ => case v.Indicative ! Pres ! Sg ! P2 of {
+        _ => case <v.Indicative ! Pres ! Sg ! P2 : Str> of {
           stem + "n" => stem ++ "sh" ;
           x => x
         }
       } ;
-      <Sg,P3> => case p1 of {
+      <Sg,P3> => case <p1 : Str> of {
         "jam" => "jetë" ;
         "kam" => "ketë" ;
         "dua" => "dojë" ;
@@ -321,7 +322,7 @@ oper
         "vij" => "vijë" ;
         "them" => "thotë" ;
         _ + "j" => p1 ++ BIND ++ "ë" ;
-        _ => case v.Indicative ! Pres ! Sg ! P2 of {
+        _ => case <v.Indicative ! Pres ! Sg ! P2 : Str> of {
           stem + "n" => stem ++ "ë" ;
           x => x
         }
@@ -333,18 +334,39 @@ oper
     Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kenë"}
   } ;
 
-  cliticFor : Case -> {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr} -> Str =
+  cliticFor : Case -> {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr ; isPron : Bool} -> Str =
     \c,np -> case c of {
       Acc => np.acc_clit ;
       Dat => np.dat_clit ;
       _   => []
     } ;
 
+  -- Weak object clitics determined from agreement.  These tables are used
+  -- where a slash phrase must preserve the clitic slot until its object is
+  -- supplied (notably VPS2/VPI2 shared-object coordination).
+  accCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
+    <Sg,P1> => "më" ;
+    <Sg,P2> => "të" ;
+    <Sg,P3> => "e" ;
+    <Pl,P1> => "na" ;
+    <Pl,P2> => "ju" ;
+    <Pl,P3> => "i"
+  } ;
+
+  datCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
+    <Sg,P1> => "më" ;
+    <Sg,P2> => "të" ;
+    <Sg,P3> => "i" ;
+    <Pl,P1> => "na" ;
+    <Pl,P2> => "ju" ;
+    <Pl,P3> => "u"
+  } ;
+
   -- të contracts with third-person object clitics in the future and in
   -- subjunctival complements: të + e -> ta, të + i -> t'i, të + u -> t'u.
   -- Other clitics remain separate (të më, të të, të na, të ju).
   teWithClitic : Str -> Str = \cl -> case cl of {
-    []  => "të" ;
+    ""  => "të" ;
     "e" => "ta" ;
     "i" => "t'i" ;
     "u" => "t'u" ;

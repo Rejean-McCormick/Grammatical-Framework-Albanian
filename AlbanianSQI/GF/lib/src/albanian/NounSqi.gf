@@ -50,12 +50,12 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
     DetCN det cn = {
       s = \\c => det.s ! c ! cn.g ++ cn.s ! det.spec ! c ! det.n ;
       acc_clit = noAcc ; dat_clit = noDat ;
-      a = agrgP3 cn.g det.n
+      a = agrgP3 cn.g det.n ; isPron = False
     } ;
 
     UsePN pn = {
       s = \\_ => pn.s ; acc_clit = noAcc ; dat_clit = noDat ;
-      a = agrgP3 Masc Sg
+      a = agrgP3 Masc Sg ; isPron = False
     } ;
 
     UsePron p = p ;
@@ -71,7 +71,7 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
 
     DetNP det = {
       s = \\c => det.s ! c ! Masc ; acc_clit=noAcc; dat_clit=noDat ;
-      a = agrgP3 Masc det.n
+      a = agrgP3 Masc det.n ; isPron = False
     } ;
 
     DetQuant quant num = {
@@ -104,7 +104,7 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
 
     MassNP cn = {
       s=\\c=>cn.s!Indef!c!Sg; acc_clit=noAcc; dat_clit=noDat;
-      a=agrgP3 cn.g Sg
+      a=agrgP3 cn.g Sg; isPron=False
     } ;
 
     PossPron p = {s=\\_,g,n=>possessiveForm p.a g n; spec=Def} ;
@@ -142,7 +142,7 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
 
     CountNP det np = {
       s=\\c=>det.s!c!Masc ++ "prej" ++ np.s!Ablat;
-      acc_clit=noAcc; dat_clit=noDat; a=agrgP3 Masc det.n
+      acc_clit=noAcc; dat_clit=noDat; a=agrgP3 Masc det.n; isPron=False
     } ;
 
     DetDAP det = {s=det.s; n=det.n} ;
@@ -152,6 +152,6 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
 
     QuantityNP decimal mu = {
       s=\\_=>case mu.isPre of {True=>mu.s++decimal.s; False=>decimal.s++mu.s};
-      acc_clit=noAcc; dat_clit=noDat; a=agrgP3 Masc decimal.n
+      acc_clit=noAcc; dat_clit=noDat; a=agrgP3 Masc decimal.n; isPron=False
     } ;
 }

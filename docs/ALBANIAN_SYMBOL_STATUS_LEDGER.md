@@ -8,12 +8,10 @@ This file exists to prevent AI drift and maintenance drift by making the current
 
 It complements, but does not replace:
 
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`
+- `CURRENT_REPAIR_STATE.md`
 - `ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`
-- `ALBANIAN_SYNTAX_AND_CONSTRUCTOR_RULES.md`
-- `ALBANIAN_IMPLEMENTATION_PATTERNS.md`
-- `ALBANIAN_CATEGORY_AND_LINCAT_REFERENCE.md`
-- `ALBANIAN_LEXICAL_AND_FUNCTIONAL_ELEMENTS.md`
-- `ALBANIAN_FORBIDDEN_PATTERNS_AND_ANTI_DRIFT_RULES.md`
+- `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`
 - `ALBANIAN_DECISION_LOG.md`
 - `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`
 
@@ -67,6 +65,27 @@ Use this ledger as a **status classifier**, not as a substitute for type-checkin
 If this ledger ever disagrees with current compiler reality, update the ledger.
 
 ---
+
+## Current global compiler overlay — 2026-09-21
+
+The latest post-mega-update snapshot is compile-blocked before most symbol-level maturity can be revalidated. Global Scan `20260921_151446` reports 42 failures that currently converge on the same `ResSqi.gf:347:7` parse error.
+
+Therefore:
+
+- prior symbol states such as `pmcfg_confirmed` remain **historical evidence for the snapshot that produced them**;
+- they do not mean the same symbol has been revalidated in the current mega-update;
+- any current target whose compile first fails in `ResSqi` is provisionally `compile_blocked_downstream` until that dependency is repaired;
+- `single_slash_eq` and invalid empty-`Str` pattern sites are tracked as a **syntax-integrity repair family**, not as linguistic maturity failures;
+- no symbol may be promoted based on the current scan until its owning module and nearest importer compile beyond the shared blocker.
+
+Canonical syntax invariant for ledger decisions:
+
+```gf
+\x -> expr       -- function
+\\x => expr      -- table
+"" => expr       -- empty Str pattern
+_ => []          -- empty result
+```
 
 ## 4. Status labels
 
@@ -525,16 +544,20 @@ Required named regression anchors include:
 
 ## 9. Relationship to other documents
 
-This ledger should be read together with:
+This ledger should be read together with the documents present in the active bundle:
 
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`
+- `CURRENT_REPAIR_STATE.md`
 - `ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`
-- `ALBANIAN_SYNTAX_AND_CONSTRUCTOR_RULES.md`
-- `ALBANIAN_IMPLEMENTATION_PATTERNS.md`
-- `ALBANIAN_CATEGORY_AND_LINCAT_REFERENCE.md`
-- `ALBANIAN_LEXICAL_AND_FUNCTIONAL_ELEMENTS.md`
-- `ALBANIAN_FORBIDDEN_PATTERNS_AND_ANTI_DRIFT_RULES.md`
+- `ALBANIAN_EXTENDSQI_FINAL_TARGET.md`
+- `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md`
+- `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`
+- `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`
 - `ALBANIAN_DECISION_LOG.md`
 - `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`
+- `ALBANIAN_OPEN_QUESTIONS.md`
+
+Older companion-document names not present in this bundle are historical references only and must not be treated as required authority.
 
 Recommended division of labor:
 - **architecture docs** define ownership and subsystem shape,
@@ -646,22 +669,23 @@ That is the function of this ledger.
 
 ---
 
-### Entry: inherited `VPS/VPI/VPS2/VPI2` coordinator family
+### Entry: VPS/VPI/VPS2/VPI2 ownership family
 - **kind:** architecture/family
-- **current_owner:** `ExtendFunctor` for this development cycle
-- **current_location:** inherited through `ExtendSqi`; explicit shallow boundary `lincat` declarations remain in `ExtendSqi.gf`
-- **primary_status:** `warning`
-- **why_this_status:** fix11 is compiler-confirmed to advance beyond the previous local `ComplVPIVV` crash. Inherited `variants {}` family members now generate `(0,0)` PMCFG entries as expected for incomplete coverage. The family remains warning-state because the Comp/Imp list constructors expose six missing-linearization warnings.
-- **allowed_use:** inherited family plus documented boundary `lincat` declarations only
-- **forbidden_use:** one-off local reintroduction of `MkVPS`, `MkVPI`, `ComplVPIVV`, list constructors, VPS2/VPI2 functions, or Comp/Imp list machinery without first changing the override matrix
-- **known_gap:** several inherited `ExtendFunctor` linearizers are `variants {}` and therefore represent explicit incomplete coverage, not linguistic completion
+- **current_owner:** provisional / unresolved after mega-update
+- **current_location:** the current `ExtendSqi.gf` subtracts, declares lincats for, and locally implements this family even though stale header comments still describe it as inherited
+- **primary_status:** `warning` / architecture decision pending
+- **why_this_status:** pre-FIX22C evidence showed that inheritance advanced past an earlier local `ComplVPIVV` PMCFG crash, but the later mega-update deliberately reopened local family ownership. The current source therefore cannot be described accurately as simply inherited, and coordinator-local family logic is not the accepted final architecture.
+- **allowed_use:** typed/compiler probes needed to determine whether inherited coverage is sufficient or whether Albanian needs a richer local family
+- **forbidden_use:** treating the mega-update as proof of final local ownership; treating old inheritance-only policy as still unconditional; one-off mixed ownership; leaving substantive family logic in the thin coordinator
+- **known_gap:** final ownership and Albanian behavior have not been validated on the post-mega-update source; current syntax corruption prevents meaningful PMCFG/scenario conclusions
 - **exit_criteria:**
-  1. verbose GF 3.12 advances beyond the prior local `ComplVPIVV` hotspot or emits `ExtendSqi.gfo`,
-  2. no inherited family member is again present in the subtraction list,
-  3. no inherited family function is locally wired in the coordinator,
-  4. any later ownership change is family-wide, evidence-backed, and synchronized with the matrix/decision log
-- **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
-- **related_docs:** ALB-DEC-022, ALB-DEC-033, override matrix, lockfield/boundary guide
+  1. restore syntax/compiler baseline,
+  2. inspect exact `ExtendFunctor` coverage and current Albanian lincats,
+  3. choose one coherent family owner: inherited or a dedicated local companion,
+  4. align `ExtendSqi.gf` subtraction/lincats/wiring to that choice,
+  5. pass compiler/PMCFG and targeted Albanian scenarios before promotion
+- **related_tests:** Global Compile Scan; `Quick -> ExtendSqi.gf`; targeted VPS/VPI agreement/complement/coordination scenarios
+- **related_docs:** recovery sequence, override matrix, final target, ALB-DEC-044
 
 ---
 
@@ -687,16 +711,17 @@ That is the function of this ledger.
 
 ### Entry: `Comp/Imp` list constructor family
 - **kind:** architecture/family
+- **record_scope:** historical pre-FIX22C repair family; retain for ownership rationale, not current priority
 - **current_owner_candidate:** `ExtendSqiScaffolding.gf` for family logic; `ExtendSqi.gf` for exact list-category wiring
 - **current_location:** `ListComp` / `ListImp` boundary in `ExtendSqi`
-- **primary_status:** `temporary family probe`
-- **compiler_status:** `not_run_after_change`
+- **primary_status:** `historical family probe`
+- **compiler_status:** `superseded_by_later_FIX22C_gate`
 - **linguistic_status:** `provisional`
 - **previous_evidence:** run `20260918_210629` reaches the final named PMCFG entry but still emits all six `no linearization` warnings before the final backend crash
-- **current_fix18_candidate:** implement `BaseComp`, `ConsComp`, `ConjComp`, `BaseImp`, `ConsImp`, `ConjImp` together using the current Albanian string-list coordination pattern
+- **historical_fix18_candidate:** implement `BaseComp`, `ConsComp`, `ConjComp`, `BaseImp`, `ConsImp`, `ConjImp` together using the current Albanian string-list coordination pattern
 - **why_this_status:** `ExtendFunctor` supplies no family implementation; Albanian `Comp`, `Imp`, `Conj`, `ListComp`, and `ListImp` are representation-compatible with the existing target-language string-list pattern in `ConjunctionSqi`
 - **allowed_use:** one coherent six-function probe with exact `lin ListComp` / `lin ListImp` boundary retyping
-- **forbidden_use:** piecemeal implementation; dummy strings; unrestricted variants; moving string-building logic into the coordinator; changing inherited VPS/VPI ownership
+- **forbidden_use:** piecemeal implementation; dummy strings; unrestricted variants; moving string-building logic into the coordinator; changing VPS/VPI ownership piecemeal or before the family-wide decision
 - **exit_criteria:**
   1. all six missing-linearization warnings disappear,
   2. no new lock/category warning appears,

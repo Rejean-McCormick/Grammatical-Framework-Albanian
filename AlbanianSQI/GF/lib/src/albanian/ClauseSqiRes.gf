@@ -15,20 +15,20 @@ oper
 
   emptyVP : Verb -> VP = \v -> lin VP {
     v = v ;
-    cl = \_ => [] ;
-    post = \_ => []
+    cl = \\_ => [] ;
+    post = \\_ => []
   } ;
 
   appendVP : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
-    post = \a => vp.post ! a ++ x ! a
+    post = \\a => vp.post ! a ++ x ! a
   } ;
 
   prependVP : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
-    post = \a => x ! a ++ vp.post ! a
+    post = \\a => x ! a ++ vp.post ! a
   } ;
 
   appendClitic : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
-    cl = \a => vp.cl ! a ++ x ! a
+    cl = \\a => vp.cl ! a ++ x ! a
   } ;
 
   -- Main finite realization.  Public ParamX tense is mapped to Albanian
@@ -47,7 +47,7 @@ oper
 
       <Anter,ParamX.Fut> => negation pol ++ "do" ++
         teWithClitic (vp.cl ! a) ++
-        haveAux ! ParamX.Pres ! agrNumber a ! a.p ++
+        haveSubj ! agrNumber a ! a.p ++
         vp.v.participle ++ vp.post ! a ;
 
       <Anter,ParamX.Cond> => negation pol ++ "do" ++

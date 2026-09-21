@@ -4,12 +4,11 @@
 -- POLICY:
 -- 1. ExtendFunctor is the default source of structure.
 -- 2. ExtendSqi.gf remains a thin coordinator only.
--- 3. The VPS/VPI/VPS2/VPI2/list family remains inherited from ExtendFunctor
---    in this development cycle, per ALB-DEC-022 and the override matrix.
--- 4. Local lincats below are boundary declarations only: they make the
---    inherited shallow family explicit and do not transfer function ownership.
--- 5. Companion modules own Albanian-specific subsystem logic.
--- 6. Rich-category safety is enforced in subsystem modules, not here.
+-- 3. The VPS/VPI/VPS2/VPI2/list family is owned locally because the shared
+--    functor leaves this family as empty variants.  Its substantive logic lives
+--    in ExtendSqiVPS; this file only declares the boundary lincats and wires it.
+-- 4. Companion modules own Albanian-specific subsystem logic.
+-- 5. Rich-category safety is enforced in subsystem modules, not here.
 
 concrete ExtendSqi of Extend =
   CatSqi ** ExtendFunctor -
@@ -34,9 +33,8 @@ concrete ExtendSqi of Extend =
 
     -- =========================================================
     -- VP-SERIES SUBSYSTEM
-    -- Inherited from ExtendFunctor in this cycle.
-    -- Boundary lincats remain explicit below, but no family member is
-    -- subtracted or locally reimplemented here.
+    -- Locally owned because the shared functor provides empty variants.
+    -- Substantive logic is delegated to ExtendSqiVPS.
     -- =========================================================
 
     -- =========================================================
@@ -84,6 +82,7 @@ concrete ExtendSqi of Extend =
        ExtendSqiAPCN,
        ExtendSqiFocusPrep,
        ExtendSqiVPBridge,
+       ExtendSqiVPS,
        ExtendSqiRNP,
        ExtendSqiLexicon
   in {
@@ -96,10 +95,10 @@ concrete ExtendSqi of Extend =
 
     -- Shared-object coordination keeps the complement government alive.
     -- The NP is saturated only by ComplVPS2/ComplVPI2.
-    VPS2   = {s : R.Agr => Str ; c2 : R.Compl} ;
-    [VPS2] = {first,last : R.Agr => Str ; c2 : R.Compl} ;
-    VPI2   = {s : R.Agr => Str ; c2 : R.Compl} ;
-    [VPI2] = {first,last : R.Agr => Str ; c2 : R.Compl} ;
+    VPS2   = {plain,pron : R.Agr => R.Agr => Str ; c2 : R.Compl} ;
+    [VPS2] = {plainFirst,plainLast,pronFirst,pronLast : R.Agr => R.Agr => Str ; c2 : R.Compl} ;
+    VPI2   = {plain,pron : R.Agr => R.Agr => Str ; c2 : R.Compl} ;
+    [VPI2] = {plainFirst,plainLast,pronFirst,pronLast : R.Agr => R.Agr => Str ; c2 : R.Compl} ;
 
     RNP = {s : R.Agr => R.Case => Str ; isPron : Bool} ;
     RNPList = {first,last : R.Agr => R.Case => Str} ;
@@ -110,36 +109,35 @@ concrete ExtendSqi of Extend =
   lin
     -- =========================================================
     -- FINITE / SUBJUNCTIVE VP COORDINATION
+    -- Coordinator wiring only; logic lives in ExtendSqiVPS.
     -- =========================================================
-    MkVPS t pol vp = {s=\a=>realizeVP vp t.t t.a pol.p a} ;
-    BaseVPS x y = {first=x.s; last=y.s} ;
-    ConsVPS x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last} ;
-    ConjVPS c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a} ;
-    PredVPS np x = {s=np.s!R.Nom ++ x.s!np.a} ;
-    SQuestVPS np x = {s="a" ++ np.s!R.Nom ++ x.s!np.a} ;
-    QuestVPS ip x = {s=ip.s!R.Nom ++ x.s!ip.a} ;
-    RelVPS rp x = {s=\a=>rp.s!R.Nom!a.gn ++ x.s!a} ;
+    MkVPS x1 x2 x3 = lin VPS (vps_MkVPS (lin Temp x1) (lin Pol x2) (lin VP x3)) ;
+    BaseVPS x1 x2 = lin ListVPS (vps_BaseVPS (lin VPS x1) (lin VPS x2)) ;
+    ConsVPS x1 x2 = lin ListVPS (vps_ConsVPS (lin VPS x1) (lin ListVPS x2)) ;
+    ConjVPS x1 x2 = lin VPS (vps_ConjVPS (lin Conj x1) (lin ListVPS x2)) ;
+    PredVPS x1 x2 = vps_PredVPS (lin NP x1) (lin VPS x2) ;
+    SQuestVPS x1 x2 = vps_SQuestVPS (lin NP x1) (lin VPS x2) ;
+    QuestVPS x1 x2 = vps_QuestVPS (lin IP x1) (lin VPS x2) ;
+    RelVPS x1 x2 = vps_RelVPS (lin RP x1) (lin VPS x2) ;
 
-    MkVPI vp = {s=\a=>realizeSubjVP vp P.Pos a} ;
-    BaseVPI x y = {first=x.s; last=y.s} ;
-    ConsVPI x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last} ;
-    ConjVPI c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a} ;
-    ComplVPIVV vv x = appendVP (emptyVP vv) (\a=>x.s!a) ;
+    MkVPI x1 = lin VPI (vps_MkVPI (lin VP x1)) ;
+    BaseVPI x1 x2 = lin ListVPI (vps_BaseVPI (lin VPI x1) (lin VPI x2)) ;
+    ConsVPI x1 x2 = lin ListVPI (vps_ConsVPI (lin VPI x1) (lin ListVPI x2)) ;
+    ConjVPI x1 x2 = lin VPI (vps_ConjVPI (lin Conj x1) (lin ListVPI x2)) ;
+    ComplVPIVV x1 x2 = vps_ComplVPIVV (lin VV x1) (lin VPI x2) ;
 
-    MkVPS2 t pol sl = {
-      s=\a=>realizeVP (vpFromSlash sl) t.t t.a pol.p a ; c2=sl.c2
-    } ;
-    BaseVPS2 x y = {first=x.s; last=y.s; c2=y.c2} ;
-    ConsVPS2 x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last; c2=xs.c2} ;
-    ConjVPS2 c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a; c2=xs.c2} ;
-    ComplVPS2 x np = {s=\a=>x.s!a ++ x.c2.s ++ np.s!x.c2.c} ;
-    ReflVPS2 x rnp = {s=\a=>x.s!a ++ x.c2.s ++ rnp.s!a!x.c2.c} ;
+    MkVPS2 x1 x2 x3 = lin VPS2 (vps_MkVPS2 (lin Temp x1) (lin Pol x2) (lin VPSlash x3)) ;
+    BaseVPS2 x1 x2 = lin ListVPS2 (vps_BaseVPS2 (lin VPS2 x1) (lin VPS2 x2)) ;
+    ConsVPS2 x1 x2 = lin ListVPS2 (vps_ConsVPS2 (lin VPS2 x1) (lin ListVPS2 x2)) ;
+    ConjVPS2 x1 x2 = lin VPS2 (vps_ConjVPS2 (lin Conj x1) (lin ListVPS2 x2)) ;
+    ComplVPS2 x1 x2 = lin VPS (vps_ComplVPS2 (lin VPS2 x1) (lin NP x2)) ;
+    ReflVPS2 x1 x2 = lin VPS (vps_ReflVPS2 (lin VPS2 x1) (lin RNP x2)) ;
 
-    MkVPI2 sl = {s=\a=>realizeSubjVP (vpFromSlash sl) P.Pos a; c2=sl.c2} ;
-    BaseVPI2 x y = {first=x.s; last=y.s; c2=y.c2} ;
-    ConsVPI2 x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a; last=xs.last; c2=xs.c2} ;
-    ConjVPI2 c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a; c2=xs.c2} ;
-    ComplVPI2 x np = {s=\a=>x.s!a ++ x.c2.s ++ np.s!x.c2.c} ;
+    MkVPI2 x1 = lin VPI2 (vps_MkVPI2 (lin VPSlash x1)) ;
+    BaseVPI2 x1 x2 = lin ListVPI2 (vps_BaseVPI2 (lin VPI2 x1) (lin VPI2 x2)) ;
+    ConsVPI2 x1 x2 = lin ListVPI2 (vps_ConsVPI2 (lin VPI2 x1) (lin ListVPI2 x2)) ;
+    ConjVPI2 x1 x2 = lin VPI2 (vps_ConjVPI2 (lin Conj x1) (lin ListVPI2 x2)) ;
+    ComplVPI2 x1 x2 = lin VPI (vps_ComplVPI2 (lin VPI2 x1) (lin NP x2)) ;
 
     -- =========================================================
     -- COMP / IMP LIST BOUNDARY FAMILY
@@ -266,20 +264,20 @@ concrete ExtendSqi of Extend =
     -- Strategy: one coherent RNP family.
     -- =========================================================
     ReflRNP x1 x2 = rnp_ReflRNP (lin VPSlash x1) (lin RNP x2) ;
-    ReflPron = rnp_ReflPron ;
-    ReflPoss x1 x2 = rnp_ReflPoss (lin Num x1) (lin CN x2) ;
-    PredetRNP x1 x2 = rnp_PredetRNP (lin Predet x1) (lin RNP x2) ;
-    AdvRNP x1 x2 x3 = rnp_AdvRNP (lin NP x1) (lin Prep x2) (lin RNP x3) ;
+    ReflPron = lin RNP rnp_ReflPron ;
+    ReflPoss x1 x2 = lin RNP (rnp_ReflPoss (lin Num x1) (lin CN x2)) ;
+    PredetRNP x1 x2 = lin RNP (rnp_PredetRNP (lin Predet x1) (lin RNP x2)) ;
+    AdvRNP x1 x2 x3 = lin RNP (rnp_AdvRNP (lin NP x1) (lin Prep x2) (lin RNP x3)) ;
     AdvRVP x1 x2 x3 = rnp_AdvRVP (lin VP x1) (lin Prep x2) (lin RNP x3) ;
     AdvRAP x1 x2 x3 = rnp_AdvRAP (lin AP x1) (lin Prep x2) (lin RNP x3) ;
     ReflA2RNP x1 x2 = rnp_ReflA2RNP (lin A2 x1) (lin RNP x2) ;
     PossPronRNP x1 x2 x3 x4 = rnp_PossPronRNP (lin Pron x1) (lin Num x2) (lin CN x3) (lin RNP x4) ;
-    ConjRNP x1 x2 = rnp_ConjRNP (lin Conj x1) (lin RNPList x2) ;
-    Base_rr_RNP x1 x2 = rnp_Base_rr_RNP (lin RNP x1) (lin RNP x2) ;
-    Base_nr_RNP x1 x2 = rnp_Base_nr_RNP (lin NP x1) (lin RNP x2) ;
-    Base_rn_RNP x1 x2 = rnp_Base_rn_RNP (lin RNP x1) (lin NP x2) ;
-    Cons_rr_RNP x1 x2 = rnp_Cons_rr_RNP (lin RNP x1) (lin RNPList x2) ;
-    Cons_nr_RNP x1 x2 = rnp_Cons_nr_RNP (lin NP x1) (lin RNPList x2) ;
+    ConjRNP x1 x2 = lin RNP (rnp_ConjRNP (lin Conj x1) (lin RNPList x2)) ;
+    Base_rr_RNP x1 x2 = lin RNPList (rnp_Base_rr_RNP (lin RNP x1) (lin RNP x2)) ;
+    Base_nr_RNP x1 x2 = lin RNPList (rnp_Base_nr_RNP (lin NP x1) (lin RNP x2)) ;
+    Base_rn_RNP x1 x2 = lin RNPList (rnp_Base_rn_RNP (lin RNP x1) (lin NP x2)) ;
+    Cons_rr_RNP x1 x2 = lin RNPList (rnp_Cons_rr_RNP (lin RNP x1) (lin RNPList x2)) ;
+    Cons_nr_RNP x1 x2 = lin RNPList (rnp_Cons_nr_RNP (lin NP x1) (lin RNPList x2)) ;
     -- =========================================================
     -- CONSTANTS / LEXICAL TAIL
     -- Strategy: lexical-only wiring.

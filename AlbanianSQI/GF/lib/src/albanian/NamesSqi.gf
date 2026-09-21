@@ -4,10 +4,11 @@ concrete NamesSqi of Names = CatSqi ** open ResSqi in {
 
 oper
   nameNP : Gender -> Number -> Str -> NP = \g,n,s -> lin NP {
-    s = \_ => s ;
+    s = \\_ => s ;
     acc_clit = [] ;
     dat_clit = [] ;
-    a = agrgP3 g n
+    a = agrgP3 g n ;
+    isPron = False
   } ;
 
 lin

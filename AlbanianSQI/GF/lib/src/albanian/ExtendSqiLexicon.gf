@@ -4,7 +4,7 @@ resource ExtendSqiLexicon =
 
 oper
   lex_ReflPossPron : Quant = lin Quant {
-    s=\_,_,_=>"vet" ; spec=R.Def
+    s=\\_,_,_ =>"vet" ; spec=R.Def
   } ;
 
   lex_iFem_Pron : Pron =
@@ -27,8 +27,8 @@ oper
     mkPronConst "ju" "ju" "juve" "ju" "ju" R.Fem Pl ;
 
   lex_dapAsNP : R.Gender -> DAP -> NP = \g,dap -> lin NP {
-    s=\c=>dap.s!c!g ;
-    acc_clit=[] ; dat_clit=[] ; a=R.agrgP3 g dap.n
+    s=\\c =>dap.s!c!g ;
+    acc_clit=[] ; dat_clit=[] ; a=R.agrgP3 g dap.n ; isPron=False
   } ;
 
   lex_UseDAP : DAP -> NP = \dap -> lex_dapAsNP R.Masc dap ;

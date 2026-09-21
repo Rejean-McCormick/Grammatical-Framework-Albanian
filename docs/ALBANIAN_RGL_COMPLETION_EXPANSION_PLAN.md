@@ -1,6 +1,7 @@
 # Albanian RGL Completion — Total Final-State Specification
 
 **Date:** 2026-09-19  
+**Operational synchronization:** 2026-09-21  
 **Baseline:** `albanian-rgl-core-v0.1.0`  
 **Target:** mature Albanian Resource Grammar Library implementation  
 **Status:** normative description of the completed system  
@@ -35,6 +36,12 @@ docs/status/ALBANIAN_CORE_V0.1.0.md
 ```
 
 The present document describes the **destination beyond that baseline**.
+
+### Operational prerequisite
+
+This document intentionally does not define patch order. The normative execution order is now `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`. As of 2026-09-21, the post-FIX22C mega-update has a syntax-level compile regression, so semantic completion work is gated behind syntax integrity, a full compile census, root-cause repair, and restoration of the historical FIX22C/public-facade compiler gates.
+
+A historical stable baseline must never be read as proof that a later working snapshot still compiles.
 
 ---
 
@@ -164,6 +171,21 @@ Pro-drop, null linking material, empty complementizers, omitted subjects, and ot
 Some Albanian categories should remain shallow. Others must be rich. A mature grammar does not make every category a string, and it does not make every category maximally complex.
 
 ---
+
+### 3.11 GF syntax integrity precedes architecture inference
+
+Textual GF syntax must be valid before a failure is interpreted as a category, inheritance, PMCFG, or linguistic-design problem.
+
+Canonical notation used by this project is:
+
+```gf
+\x -> expr       -- ordinary function abstraction
+\\x => expr      -- table abstraction
+"" => expr       -- empty Str pattern in a case over Str
+_ => []          -- empty surface result
+```
+
+When a static scanner flags `\x =>` or `[] =>`, the local expected/scrutinee type must be checked before editing. The notation may be repaired only when that type establishes the intended construct. A syntax repair does not authorize a change to Albanian semantics.
 
 ## 4. Authority and reference policy
 

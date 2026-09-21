@@ -1,5 +1,8 @@
 # ALBANIAN_FUTURE_EXTENDSQI_STRUCTURE
 
+> **Current execution note (2026-09-21):** this is an Extend/architecture reference, not the current first repair gate. The post-FIX22C mega-update is presently blocked by lower-level GF syntax integrity; follow `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` and `CURRENT_REPAIR_STATE.md` before applying this document tactically.
+
+
 ## Status of this document
 
 This is the **governing architecture and implementation-control document** for the future `GF/lib/src/albanian/ExtendSqi.gf`.
@@ -293,7 +296,7 @@ This is the operational control map for `ExtendSqi`.
 
 ## 8.1 VP-series scaffolding / list wrappers
 
-These VP-series items are expected to remain shallow/inherited in the current cycle unless Albanian evidence proves otherwise. Boundary lincats do not transfer function ownership.
+These VP-series items are a **reopened ownership family** after the mega-update. Do not assume either inheritance or local ownership from the current source alone. Boundary lincats do not transfer function ownership. After compiler recovery, decide the family coherently: retain inheritance if category-correct and sufficient, or move richer Albanian ownership into a dedicated companion if exact evidence requires it. Substantive realization logic must not remain in the coordinator.
 
 * `MkVPS`
 * `ConjVPS`

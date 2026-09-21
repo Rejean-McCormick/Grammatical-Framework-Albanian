@@ -5,40 +5,40 @@ concrete QuestionSqi of Question = CatSqi **
 
 lin
   -- Standard polar questions are introduced by a.
-  QuestCl cl = {s = \t,ant,pol => "a" ++ cl.s ! t ! ant ! pol} ;
+  QuestCl cl = {s = \\t,ant,pol => "a" ++ cl.s ! t ! ant ! pol} ;
 
   QuestVP ip vp = {
-    s = \t,ant,pol => ip.s ! Nom ++ realizeVP vp t ant pol ip.a
+    s = \\t,ant,pol => ip.s ! Nom ++ realizeVP vp t ant pol ip.a
   } ;
 
   QuestSlash ip cl = {
-    s = \t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol
+    s = \\t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol
   } ;
 
   QuestIAdv iadv cl = {
-    s = \t,ant,pol => iadv.s ++ cl.s ! t ! ant ! pol
+    s = \\t,ant,pol => iadv.s ++ cl.s ! t ! ant ! pol
   } ;
 
   QuestIComp icomp np = {
-    s = \t,ant,pol =>
-      let cop : VP = appendVP (emptyVP (lin Verb I.jam_V)) (\_ => np.s ! Nom)
+    s = \\t,ant,pol =>
+      let cop : VP = appendVP (emptyVP (lin Verb I.jam_V)) (\\_ => np.s ! Nom)
       in icomp.s ++ realizeVP cop t ant pol np.a
   } ;
 
   IdetCN idet cn = {
-    s = \c => idet.s ! c ! cn.g ++ cn.s ! Indef ! c ! idet.n ;
+    s = \\c => idet.s ! c ! cn.g ++ cn.s ! Indef ! c ! idet.n ;
     a = agrgP3 cn.g idet.n
   } ;
 
   IdetIP idet = {
-    s = \c => idet.s ! c ! Masc ;
+    s = \\c => idet.s ! c ! Masc ;
     a = agrgP3 Masc idet.n
   } ;
 
-  AdvIP ip adv = ip ** {s = \c => ip.s ! c ++ adv.s} ;
+  AdvIP ip adv = ip ** {s = \\c => ip.s ! c ++ adv.s} ;
 
   IdetQuant iq num = {
-    s = \c,g => iq.s ! c ! g ! num.n ++ num.s ;
+    s = \\c,g => iq.s ! c ! g ! num.n ++ num.s ;
     n = num.n
   } ;
 
@@ -48,12 +48,12 @@ lin
   CompIP ip = {s = ip.s ! Nom} ;
 
   ComplSlashIP sl ip = appendVP (vpFromSlash sl)
-    (\_ => sl.c2.s ++ ip.s ! sl.c2.c) ;
+    (\\_ => sl.c2.s ++ ip.s ! sl.c2.c) ;
 
-  AdvQVP vp iadv = appendVP vp (\_ => iadv.s) ;
-  AddAdvQVP qvp iadv = appendVP qvp (\_ => iadv.s) ;
+  AdvQVP vp iadv = appendVP vp (\\_ => iadv.s) ;
+  AddAdvQVP qvp iadv = appendVP qvp (\\_ => iadv.s) ;
 
   QuestQVP ip qvp = {
-    s = \t,ant,pol => ip.s ! Nom ++ realizeVP qvp t ant pol ip.a
+    s = \\t,ant,pol => ip.s ! Nom ++ realizeVP qvp t ant pol ip.a
   } ;
 }

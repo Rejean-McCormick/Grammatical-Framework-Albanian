@@ -6,7 +6,7 @@ oper
 
 oper
   regN : Str -> N   -- s;Indef;Nom;Sg
-    = \form -> <case form of {
+    = \form -> <case <form : Str> of {
     _ + "lth" => mkN001 form;
     _ + "kth" => mkN206 form;
     _ + "eth" => mkN005 form;
@@ -609,7 +609,7 @@ oper
   } : N> ;
 
   reg2N : Str -> Str -> N   -- s;Indef;Nom;Sg  s;Indef;Nom;Pl
-    = \form1, form2 -> <case <form1, form2> of {
+    = \form1, form2 -> <case <<form1 : Str>, <form2 : Str>> of {
     <_ + "mër", _ + "ëra"> => mkN009 form1;
     <_ + "orë", _ + "ëra"> => mkN110 form1;
     <_ + "adë", _ + "ada"> => mkN129 form1;
@@ -961,7 +961,7 @@ oper
   } : N> ;
 
   regA : Str -> A   -- s;Nom;Masc;Sg
-    = \form -> <case form of {
+    = \form -> <case <form : Str> of {
     _ + "kan" => mkA004 form;
     _ + "fën" => mkA011 form;
     _ + "bël" => mkA011 form;
@@ -1051,7 +1051,7 @@ oper
   } : A> ;
 
   reg2A : Str -> Str -> A   -- s;Nom;Masc;Sg  s;Nom;Masc;Pl
-    = \form1, form2 -> <case <form1, form2> of {
+    = \form1, form2 -> <case <<form1 : Str>, <form2 : Str>> of {
     <_ + "adh", _ + "h"> => mkA001 form1;
     <_ + "nor", _ + "ë"> => mkA004 form1;
     <_ + "re", _ + "yre"> => mkA003 form1;
@@ -1072,7 +1072,7 @@ oper
   } : A> ;
 
   regV : Str -> V   -- Indicative;Pres;Sg;P1
-    = \form -> <case form of {
+    = \form -> <case <form : Str> of {
     _ + "rap" => mkV013 form;
     _ + "jep" => mkV036 form;
     _ + "ket" => mkV078 form;
@@ -1160,7 +1160,7 @@ oper
   } : V> ;
 
   reg2V : Str -> Str -> V   -- Indicative;Pres;Sg;P1  participle
-    = \form1, form2 -> <case <form1, form2> of {
+    = \form1, form2 -> <case <<form1 : Str>, <form2 : Str>> of {
     <_ + "uaj", _ + "ar"> => mkV032 form1;
     <_ + "ell", _ + "r"> => mkV001 form1;
     <_ + "err", _ + "r"> => mkV001 form1;
@@ -1319,10 +1319,10 @@ mkIP : Str -> IP = \s -> lin IP {
   a = agrgP3 Masc Sg
 } ;
 mkIQuant : Str -> IQuant = \s -> lin IQuant {
-  s = \_,_,_ => s
+  s = \\_,_,_ => s
 } ;
 mkIDet : Str -> IDet = \s -> lin IDet {
-  s = \_,_ => s ;
+  s = \\_,_ => s ;
   n = Sg
 } ;
 
@@ -1407,11 +1407,12 @@ mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
 mkPConj : Str -> PConj = \s -> lin PConj {s=s} ;
 
 mkPron : (nom,acc,dat,ablat,acc_clit,dat_clit : Str) -> GenNum -> Person -> Pron =
-  \nom,acc,dat,ablat,acc_clit,dat_clit,gn,p -> lin Pron 
+  \nom,acc,dat,ablat,acc_clit,dat_clit,gn,p -> lin Pron
      {s = table Case [nom; acc; dat; ablat];
       acc_clit = acc_clit;
       dat_clit = dat_clit;
-      a = {gn=gn; p=p}
+      a = {gn=gn; p=p};
+      isPron = True
      } ;
 
 mkCard : Str -> Card = \s -> lin Card {s=s; n=Pl} ;

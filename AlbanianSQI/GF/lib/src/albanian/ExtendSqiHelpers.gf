@@ -31,7 +31,8 @@ oper
       } ;
       acc_clit = accCl ;
       dat_clit = datCl ;
-      a = R.agrgP3 g n
+      a = R.agrgP3 g n ;
+      isPron = True
     } ;
 
   adjComplStr : A -> R.Species -> R.Case -> R.Gender -> P.Number -> Str =
@@ -42,10 +43,11 @@ oper
 
   mkBareNpFromCn : P.Number -> CN -> NP =
     \n,cn -> lin NP {
-      s = \c => cn.s ! R.Indef ! c ! n ;
+      s = \\c => cn.s ! R.Indef ! c ! n ;
       acc_clit = [] ;
       dat_clit = [] ;
-      a = R.agrgP3 cn.g n
+      a = R.agrgP3 cn.g n ;
+      isPron = False
     } ;
 
   cnSurfaceNomSg : CN -> Str =
@@ -54,17 +56,18 @@ oper
   apSurfaceNomMascSgCompat : AP -> Str = apSurfaceNomMascSg ;
 
   mkCompatAPFromStr : Str -> AP =
-    \w -> lin AP {s = \_,_,_,_ => w} ;
+    \w -> lin AP {s = \\_,_,_,_ => w} ;
 
   mkCompatCNFromStr : Str -> R.Gender -> CN =
-    \w,g -> lin CN {s = \_,_,_ => w ; g = g} ;
+    \w,g -> lin CN {s = \\_,_,_ => w ; g = g} ;
 
   mkCompatNPFromStr : Str -> R.Gender -> P.Number -> NP =
     \w,g,n -> lin NP {
-      s = \_ => w ;
+      s = \\_ => w ;
       acc_clit = [] ;
       dat_clit = [] ;
-      a = R.agrgP3 g n
+      a = R.agrgP3 g n ;
+      isPron = False
     } ;
 
   vpSurfaceDefault : VP -> Str =

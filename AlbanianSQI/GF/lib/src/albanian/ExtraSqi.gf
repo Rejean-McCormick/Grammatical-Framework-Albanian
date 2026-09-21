@@ -3,7 +3,7 @@
 concrete ExtraSqi of ExtraSqiAbs = CatSqi **
   open Prelude, ParamX, ResSqi, GrammarSqi, ClauseSqiRes,
        ExtendSqiHelpers, ExtendSqiScaffolding, ExtendSqiAPCN,
-       ExtendSqiVPBridge, ExtendSqiRNP, (NS=NounSqi), (AS=AdverbSqi) in {
+       ExtendSqiVPBridge, ExtendSqiVPS, ExtendSqiRNP, (NS=NounSqi), (AS=AdverbSqi) in {
 
 lincat
   VPI = {s : Agr => Str} ;
@@ -26,17 +26,17 @@ lin
   StrandRelSlash = sc_StrandRelSlash ;
   EmptyRelSlash = sc_EmptyRelSlash ;
 
-  MkVPI vp = {s=\a=>realizeSubjVP vp Pos a} ;
-  BaseVPI x y = {first=x.s;last=y.s} ;
-  ConsVPI x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a;last=xs.last} ;
-  ConjVPI c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a} ;
-  ComplVPIVV vv x = appendVP (emptyVP vv) (\a=>x.s!a) ;
+  MkVPI x1 = lin VPI (vps_MkVPI (lin VP x1)) ;
+  BaseVPI x1 x2 = lin ListVPI (vps_BaseVPI (lin VPI x1) (lin VPI x2)) ;
+  ConsVPI x1 x2 = lin ListVPI (vps_ConsVPI (lin VPI x1) (lin ListVPI x2)) ;
+  ConjVPI x1 x2 = lin VPI (vps_ConjVPI (lin Conj x1) (lin ListVPI x2)) ;
+  ComplVPIVV x1 x2 = vps_ComplVPIVV (lin VV x1) (lin VPI x2) ;
 
-  MkVPS t p vp = {s=\a=>realizeVP vp t.t t.a p.p a} ;
-  BaseVPS x y = {first=x.s;last=y.s} ;
-  ConsVPS x xs = {first=\a=>x.s!a ++ "," ++ xs.first!a;last=xs.last} ;
-  ConjVPS c xs = {s=\a=>xs.first!a ++ c.s ++ xs.last!a} ;
-  PredVPS np x = {s=np.s!Nom ++ x.s!np.a} ;
+  MkVPS x1 x2 x3 = lin VPS (vps_MkVPS (lin Temp x1) (lin Pol x2) (lin VP x3)) ;
+  BaseVPS x1 x2 = lin ListVPS (vps_BaseVPS (lin VPS x1) (lin VPS x2)) ;
+  ConsVPS x1 x2 = lin ListVPS (vps_ConsVPS (lin VPS x1) (lin ListVPS x2)) ;
+  ConjVPS x1 x2 = lin VPS (vps_ConjVPS (lin Conj x1) (lin ListVPS x2)) ;
+  PredVPS x1 x2 = vps_PredVPS (lin NP x1) (lin VPS x2) ;
 
   ProDrop = sc_ProDrop ;
   ICompAP = apcn_ICompAP ;
@@ -44,13 +44,13 @@ lin
   CompIQuant = apcn_CompIQuant ;
   PrepCN prep cn = AS.PrepNP prep (NS.MassNP cn) ;
 
-  FocObj np cl = {s=\t,a,p=>np.s!Acc ++ cl.s!t!a!p} ;
-  FocAdv adv cl = {s=\t,a,p=>adv.s ++ cl.s!t!a!p} ;
-  FocAdV adv cl = {s=\t,a,p=>adv.s ++ cl.s!t!a!p} ;
-  FocAP ap np = {s=\_,_,_=>ap.s!Indef!Nom!agrGender np.a!agrNumber np.a ++ np.s!Nom} ;
-  FocNeg cl = {s=\t,a,_=>cl.s!t!a!Neg} ;
-  FocVP vp np = {s=\t,a,p=>realizeVP vp t a p np.a ++ np.s!Nom} ;
-  FocVV vv vp np = {s=\t,a,p=>
+  FocObj np cl = {s=\\t,a,p =>np.s!Acc ++ cl.s!t!a!p} ;
+  FocAdv adv cl = {s=\\t,a,p =>adv.s ++ cl.s!t!a!p} ;
+  FocAdV adv cl = {s=\\t,a,p =>adv.s ++ cl.s!t!a!p} ;
+  FocAP ap np = {s=\\_,_,_ =>ap.s!Indef!Nom!agrGender np.a!agrNumber np.a ++ np.s!Nom} ;
+  FocNeg cl = {s=\\t,a,_ =>cl.s!t!a!Neg} ;
+  FocVP vp np = {s=\\t,a,p =>realizeVP vp t a p np.a ++ np.s!Nom} ;
+  FocVV vv vp np = {s=\\t,a,p =>
     (PredVP np (ComplVV vv vp)).s!t!a!p
   } ;
   UseFoc t p foc = {s=foc.s!t.t!t.a!p.p} ;
@@ -75,14 +75,14 @@ lin
   AdjAsCN = apcn_AdjAsCN ;
 
   ReflRNP = rnp_ReflRNP ;
-  ReflPron = rnp_ReflPron ;
-  ReflPoss = rnp_ReflPoss ;
-  PredetRNP = rnp_PredetRNP ;
-  ConjRNP = rnp_ConjRNP ;
-  Base_rr_RNP = rnp_Base_rr_RNP ;
-  Base_nr_RNP = rnp_Base_nr_RNP ;
-  Base_rn_RNP = rnp_Base_rn_RNP ;
-  Cons_rr_RNP = rnp_Cons_rr_RNP ;
-  Cons_nr_RNP = rnp_Cons_nr_RNP ;
+  ReflPron = lin RNP rnp_ReflPron ;
+  ReflPoss x1 x2 = lin RNP (rnp_ReflPoss (lin Num x1) (lin CN x2)) ;
+  PredetRNP x1 x2 = lin RNP (rnp_PredetRNP (lin Predet x1) (lin RNP x2)) ;
+  ConjRNP x1 x2 = lin RNP (rnp_ConjRNP (lin Conj x1) (lin RNPList x2)) ;
+  Base_rr_RNP x1 x2 = lin RNPList (rnp_Base_rr_RNP (lin RNP x1) (lin RNP x2)) ;
+  Base_nr_RNP x1 x2 = lin RNPList (rnp_Base_nr_RNP (lin NP x1) (lin RNP x2)) ;
+  Base_rn_RNP x1 x2 = lin RNPList (rnp_Base_rn_RNP (lin RNP x1) (lin NP x2)) ;
+  Cons_rr_RNP x1 x2 = lin RNPList (rnp_Cons_rr_RNP (lin RNP x1) (lin RNPList x2)) ;
+  Cons_nr_RNP x1 x2 = lin RNPList (rnp_Cons_nr_RNP (lin NP x1) (lin RNPList x2)) ;
 
 }

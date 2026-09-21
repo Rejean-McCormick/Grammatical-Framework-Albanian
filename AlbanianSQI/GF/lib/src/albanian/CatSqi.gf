@@ -75,13 +75,15 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     NP = {
       s : Case => Str ;
       acc_clit, dat_clit : Str ;
-      a : Agr
+      a : Agr ;
+      isPron : Bool
     } ;
 
     Pron = {
       s : Case => Str ;
       acc_clit, dat_clit : Str ;
-      a : Agr
+      a : Agr ;
+      isPron : Bool
     } ;
 
   linref

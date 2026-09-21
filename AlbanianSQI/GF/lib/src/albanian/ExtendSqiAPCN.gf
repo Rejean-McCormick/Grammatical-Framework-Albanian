@@ -16,7 +16,7 @@ oper
     ImpersCl (UseComp (CompAP (SentAP ap (EmbedVP vp)))) ;
 
   apcn_AdjAsCN : AP -> CN = \ap -> lin CN {
-    s=\sp,c,n=>ap.s!sp!c!R.Masc!n ; g=R.Masc
+    s=\\sp,c,n =>ap.s!sp!c!R.Masc!n ; g=R.Masc
   } ;
 
   apcn_AdjAsNP : AP -> NP = \ap ->

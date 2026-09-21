@@ -18,19 +18,16 @@ It is the **minimum enforcement layer** required to prevent known Albanian drift
 
 It must be read together with:
 
-- `ALBANIAN_SYNTAX_AND_CONSTRUCTOR_RULES.md`
-- `ALBANIAN_IMPLEMENTATION_PATTERNS.md`
-- `ALBANIAN_CATEGORY_AND_LINCAT_REFERENCE.md`
-- `ALBANIAN_LEXICAL_AND_FUNCTIONAL_ELEMENTS.md`
-- `ALBANIAN_FORBIDDEN_PATTERNS_AND_ANTI_DRIFT_RULES.md`
-- `ALBANIAN_DECISION_LOG.md`
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`
+- `CURRENT_REPAIR_STATE.md`
+- `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`
 - `ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`
-- `ALBANIAN_LANGUAGE_ARCHITECTURE.md`
-- `ALBANIAN_HELPER_REGISTRY.md`
-- `ALBANIAN_SHALLOW_CATEGORY_CONSTRUCTOR_MATRIX.md`
+- `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md` (supporting engineering evidence only)
 - `ALBANIAN_SYMBOL_STATUS_LEDGER.md`
-- `ALBANIAN_STALE_COMMENT_TRACKER.md`
-- `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`
+- `ALBANIAN_OPEN_QUESTIONS.md`
+- `ALBANIAN_DECISION_LOG.md`
+
+Older references to helper registries, constructor matrices, stale-comment trackers, or extraction-coverage files are optional only when those files are actually present for the same snapshot. They are not required authority for this bundle.
 
 ---
 
@@ -53,7 +50,10 @@ This is a **language-wide** test specification, but it is especially shaped by t
 - importer/downstream failures that are really caused by a direct failure in the changed module,
 - stale comment or stale documentation assumptions treated as more authoritative than the current codedump and compiler,
 - uncontrolled use of compatibility wrappers as if they were canonical rich-category constructors,
-- and family-level breakage where one member is “fixed” but the rest of the subsystem is left incoherent.
+- family-level breakage where one member is “fixed” but the rest of the subsystem is left incoherent;
+- malformed GF notation introduced by source transformation, especially confusion between `\x ->` function abstraction and `\\x =>` table abstraction;
+- using `[] =>` as an empty-string pattern when a `case` scrutinee is `Str`;
+- and broad downstream compile fallout incorrectly counted as many independent bugs when one dependency fails first.
 
 The suite is intentionally **minimal**:
 it should be cheap enough to run often, but strong enough to catch the most expensive classes of Albanian breakage.
@@ -76,8 +76,8 @@ A change to Albanian GF code is **not complete** unless:
 8. subsystem-level invariants in this document are preserved,
 9. downstream importer cleanliness is rechecked when the edited module is publicly re-exported or façade-visible,
 10. any touched warning-state symbol remains consistent with `ALBANIAN_SYMBOL_STATUS_LEDGER.md`,
-11. any touched stale-comment zone is checked against `ALBANIAN_STALE_COMMENT_TRACKER.md`,
-12. and any newly introduced helper or helper-like builder is classifiable under `ALBANIAN_HELPER_REGISTRY.md`.
+11. touched comments are checked directly against current source/compiler evidence when they affect a decision,
+12. and any newly introduced helper or helper-like builder has an explicit exact input/output type and allowed-use rationale in source or the active ledger/decision record.
 
 A local “compiles for me” result is not sufficient.
 
@@ -115,7 +115,7 @@ The suite also assumes:
 - functions left as `variants {}` in `ExtendFunctor` require language-specific implementations and therefore need stronger tests,
 - `RNP = Grammar.NP` and `RNPList = Grammar.ListNP` is the default inherited strategy unless explicitly replaced by a coherent Albanian subsystem,
 - `ExtendSqi.gf` is a thin coordinator and must not become a second grammar core,
-- the VPS/VPI/VPS2/VPI2/list-wrapper family remains inherited in the current cycle unless architecture docs explicitly reopen it.
+- VPS/VPI/VPS2/VPI2/list-wrapper ownership is currently **reopened provisionally by the mega-update**; tests must not assume either inheritance or local ownership until the architecture decision is revalidated after compiler recovery.
 
 ### 3.3 Evidence and authority assumptions
 
@@ -130,23 +130,26 @@ When multiple evidence sources disagree, the suite uses this order for implement
 
 A stale code comment or stale earlier note is **not** sufficient evidence to override current compile reality.
 
-### 3.4 Support-doc integration assumptions
+### 3.4 Documentation-bundle integrity assumption
 
-This suite assumes the support docs now exist and are authoritative in their own narrow scopes:
-
-- `ALBANIAN_HELPER_REGISTRY.md` for helper exact-type and maturity classification,
-- `ALBANIAN_SHALLOW_CATEGORY_CONSTRUCTOR_MATRIX.md` for shallow-category constructor safety,
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md` for fragile symbol status,
-- `ALBANIAN_STALE_COMMENT_TRACKER.md` for comment-authority enforcement,
-- `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md` for coverage awareness when a change touches under-extracted modules.
-
-A test plan that ignores these companion docs is incomplete.
+A test plan may cite only documentation that is present and tied to the working snapshot. Missing companion documents are not implicit authority. The active operational order comes from `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; live facts come from `CURRENT_REPAIR_STATE.md`.
 
 ---
 
 ## 4. Test philosophy
 
-The Albanian minimum suite is built on nine layers.
+The Albanian minimum suite is built on ten layers.
+
+### 4.0 Syntax-integrity tests
+
+Before type/category tests, reject malformed GF notation and verify static-scan hits against local types. At minimum:
+
+- `\x ->` is used for ordinary functions;
+- `\\x =>` is used to construct tables such as `Agr => Str`;
+- a `case` over `Str` uses string patterns such as `""`, not `[]`;
+- `=> []` remains valid as an empty surface result and must not be rewritten by an empty-pattern fix.
+
+A syntax-integrity failure blocks higher-layer architectural conclusions for the affected dependency chain.
 
 ### 4.1 Compile-shape tests
 
@@ -218,7 +221,7 @@ Required:
 Run before calling a repair cycle complete.
 
 Required:
-- compile all Albanian files,
+- compile all 51 Albanian GF sources in the current layout: every `.gf` under `GF/lib/src/albanian` plus `SyntaxSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, and `TrySqi.gf`,
 - confirm targeted fragile regression set passes,
 - confirm no newly expanded warning clusters,
 - confirm façade modules still behave as thin façades/aggregators,
@@ -226,6 +229,19 @@ Required:
 - confirm changed comments and docs do not contradict compile reality.
 
 ---
+
+## 5.4 Global Scan inventory rule
+
+For cycle validation, Wordbench Diagnostic with an empty Target is the preferred compile census. It must continue after independent file failures and preserve per-file logs.
+
+The inventory and the repair order are different concepts:
+
+- inventory all targets to obtain the global portrait;
+- repair independent root causes before downstream victims;
+- classify a target as `blocked/downstream` when its raw compiler log points first to an already-known dependency failure;
+- do not count one dependency parse error as dozens of independent defects.
+
+Until Wordbench automatically includes the four parent-directory API facades, run those four explicitly after the 47-file language-folder Global Scan.
 
 ## 6. Required global checks
 
@@ -324,11 +340,11 @@ Used to catch:
 Must cover:
 - inherited `ExtendFunctor` defaults where they exist,
 - `variants {}` functions that require local Albanian implementations,
-- “do not create `ExtendSqiVPS.gf` / do not localize the VPS-family in this cycle” policy.
+- VPS-family ownership policy: final state must be coherent inheritance or a dedicated local companion; coordinator-local family logic is never the final state.
 
 Required checks:
 - default path preferred when category-correct,
-- unsupported inherited families remain inherited,
+- unsupported families remain inherited unless exact Albanian category/behavior evidence justifies a coherent local owner,
 - local override justifications exist where needed.
 
 ## 7.3 Family C — exact helper-type compatibility
@@ -341,7 +357,7 @@ Used to catch:
 - near-type helper reuse by family resemblance.
 
 Must cover:
-- helper lookup against `ALBANIAN_HELPER_REGISTRY.md`,
+- exact helper signature lookup in the current source and active ledger/decision evidence,
 - exact input/output category match,
 - helper status classification,
 - “presentation-only” vs “final rich-category constructor” distinction.
@@ -443,19 +459,18 @@ Required checks:
 - exit criteria checked before calling item “resolved”,
 - downstream effects documented when relevant.
 
-## 7.9 Family I — module extraction awareness
+## 7.9 Family I — source-evidence awareness
 
-Used to catch:
-- overconfidence when touching under-extracted modules,
-- assuming docs already fully define a module that is still coverage-incomplete.
+Used to catch overconfidence when documentation is shallower or older than the working source.
 
 Must cover:
-- touched module against `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`,
-- special caution path for `PENDING_TARGETED_EXTRACTION` and `PARTIALLY_EXTRACTED` modules.
+- direct inspection of the touched current module when documentation is incomplete or stale;
+- explicit source/type trace for category-critical changes;
+- full family review when one member suggests a representation-wide issue.
 
 Required checks:
-- under-extracted modules trigger stricter source recheck,
-- docs are not treated as deeper than they really are for those modules.
+- docs are never treated as deeper than the supplied source evidence;
+- missing optional companion documents do not block testing or become imaginary authority.
 
 ---
 
@@ -686,10 +701,10 @@ The following previously observed Albanian failure sites are **permanent regress
 - `mkDConj`
 - any helper-family entry marked `warning`, `fallback`, `temporary`, or `blocked by compile reality`
 
-### Regression set E — stale-comment anchored items
+### Regression set E — comment/source consistency
 
-- currently tracked stale-comment entries in `ALBANIAN_STALE_COMMENT_TRACKER.md`
-- at minimum, the already tracked `ConjunctionSqi.gf` / `DAP` comment hazard if touched
+- any comment used to justify a touched implementation must be checked against the current source and compiler behavior;
+- at minimum, comments around historically fragile Conjunction/DAP/Extend areas are non-authoritative until rechecked.
 
 These are permanent regression checks because Albanian recently failed on:
 
@@ -801,16 +816,13 @@ Required:
 - downstream cleanliness check,
 - no reintroduction of blocked or out-of-cycle families.
 
-### 11.5 If the touched file is under-extracted
-As classified by `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`:
-- `PENDING_TARGETED_EXTRACTION`
-- `PARTIALLY_EXTRACTED`
+### 11.5 If documentation coverage is incomplete
 
 Required:
-- stricter source audit before implementation,
-- do not rely on docs alone,
-- explicit cite/trace of the exact current module source,
-- and full family review if the module is category-critical.
+- stricter direct source audit before implementation;
+- do not rely on prose docs alone;
+- explicit trace of the exact current module source/type;
+- full family review if the module is category-critical.
 
 ---
 

@@ -1,5 +1,8 @@
 # Albanian Extend specifics: lock fields and coordinator boundary
 
+> **Current execution note (2026-09-21):** this is an Extend/architecture reference, not the current first repair gate. The post-FIX22C mega-update is presently blocked by lower-level GF syntax integrity; follow `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` and `CURRENT_REPAIR_STATE.md` before applying this document tactically.
+
+
 ## Status and purpose
 
 This document is the **tactical repair guide** for `ExtendSqi`.
@@ -636,29 +639,20 @@ A patch is only ready when all items below are true.
 
 ## Current watchlist template
 
-Maintain this section during active repair.
+Maintain this section during active `ExtendSqi` work, but do not use it to override a lower whole-language blocker.
 
-### Current first hard blocker
+### Current whole-language prerequisite
 
-- `PossPronRNP` — PMCFG crash after `+ PossPronRNP 324` in run `20260918_153932`
+- The post-FIX22C mega-update is currently blocked at `ResSqi.gf:347:7` by malformed `case Str` syntax.
+- Until syntax integrity and the global compiler gate are restored, no `ExtendSqi` symbol is the current first whole-language blocker.
+- Follow `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` and `CURRENT_REPAIR_STATE.md`.
 
-### Current lock-warning status
+### Extend-specific watchlist after the global gate reopens
 
-- no `missing lock_*` warnings in the latest run
-- historical lock-warning hotspots remain regression lessons, not current blocker labels
-
-### Current subsystem watchlist
-
-- RNP family, with `PossPronRNP` first
-- fronted direct-speech family for later linguistic validation only (`FrontComplDirectVS` is structurally PMCFG-confirmed)
-- DAP wrappers and AP/CN/existential families as regression zones, not current first blockers
-
-### Current boundary watchlist
-
-- `Base/Cons/ConjComp` and `Base/Cons/ConjImp`: six current `no linearization` warnings, one unresolved family
-- `VPI` / `VPI2` / `VPS` / `VPS2`: inherited `(0,0)` coverage remains incomplete by design this cycle
-- list-family `lincat` insertion by default
-- any inherited function still subtracted in `ExtendSqi.gf`
+- RNP/direct-speech/AP-CN/existential items remain regression zones and linguistic-validation targets.
+- Comp/Imp list constructors and the former fix18 notes are historical pre-FIX22C evidence, not an active compile priority.
+- VPI/VPI2/VPS/VPS2 are completion targets whose ownership/architecture must be re-evaluated against the current final-state plan when the compiler baseline is green.
+- Any recurrence of the former `GeneratePMCFG` crash is a release-blocking regression.
 
 ---
 

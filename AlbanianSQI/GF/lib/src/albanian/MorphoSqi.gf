@@ -110,7 +110,7 @@ mkN005 base_1 =
 
 mkN006 : Str -> N ;
 mkN006 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" =>
       let sg : Str = base_1+"ll" ;
           sgDef : Str = base_1+"lli" ;
@@ -220,7 +220,7 @@ mkN010 base_1 =
 
 mkN011 : Str -> N ;
 mkN011 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -445,7 +445,7 @@ mkN021 base_1 =
 
 mkN022 : Str -> N ;
 mkN022 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let sgInd : Str = base_1+"e" ;
           plInd : Str = base_1+"é" ;
@@ -581,7 +581,7 @@ mkN027 base_1 =
 
 mkN028 : Str -> N ;
 mkN028 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -604,7 +604,7 @@ mkN028 base =
 
 mkN029 : Str -> N ;
 mkN029 base =
-  case base of {
+  case <base : Str> of {
     base_1+"r" => lin N
       { s = table {
               Indef => table {
@@ -729,7 +729,7 @@ mkN034 base_1 =
 
 mkN035 : Str -> N ;
 mkN035 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -772,7 +772,7 @@ mkN036 base_1 =
 
 mkN037 : Str -> N ;
 mkN037 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -919,7 +919,7 @@ mkN042 base_1 =
 
 mkN043 : Str -> N ;
 mkN043 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" + base_2@(?+?) =>
       let sg = base_1+"a"+base_2 ;
           pl = base_1+"e"+base_2 ;
@@ -1026,7 +1026,7 @@ mkN047 base_1 =
 
 mkN048 : Str -> N ;
 mkN048 base =
-  case base of {
+  case <base : Str> of {
     st + "e" => lin N
       { s = table {
               Indef => table {
@@ -1069,7 +1069,7 @@ mkN049 base_1 =
 
 mkN050 : Str -> N ;
 mkN050 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "k" =>
       let sg = base_1 + "k" ;
           pl = base_1 + "q" ;
@@ -1095,7 +1095,7 @@ mkN050 base =
 
 mkN051 : Str -> N ;
 mkN051 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" => lin N
       { s = table {
               Indef => table {
@@ -1138,7 +1138,7 @@ mkN052 base_1 =
 
 mkN053 : Str -> N ;
 mkN053 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" => lin N
       { s = table {
               Indef => table {
@@ -1241,7 +1241,7 @@ mkN057 base_1 =
 
 mkN058 : Str -> N ;
 mkN058 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" => lin N
       { s = table {
               Indef => table {
@@ -1327,7 +1327,7 @@ mkN061 base_1 =
 
 mkN062 : Str -> N ;
 mkN062 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -1350,7 +1350,7 @@ mkN062 base =
 
 mkN063 : Str -> N ;
 mkN063 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -1393,7 +1393,7 @@ mkN064 base_1 =
 
 mkN065 : Str -> N ;
 mkN065 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a" =>
       let
         sgInd = base_1+"a" ;
@@ -1463,7 +1463,7 @@ mkN067 base_1 =
 
 mkN068 : Str -> N ;
 mkN068 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@("sh"|?) =>
       let
         sgInd = base_1+"ë"+base_2 ;
@@ -1532,7 +1532,7 @@ mkN070 base_1 =
 
 mkN071 : Str -> N ;
 mkN071 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -1555,7 +1555,7 @@ mkN071 base =
 
 mkN072 : Str -> N ;
 mkN072 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -1618,7 +1618,7 @@ mkN074 base_1 =
 
 mkN075 : Str -> N ;
 mkN075 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -1661,7 +1661,7 @@ mkN076 base_1 =
 
 mkN077 : Str -> N ;
 mkN077 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" => lin N
       { s = table {
               Indef => table {
@@ -1704,7 +1704,7 @@ mkN078 base_1 =
 
 mkN079 : Str -> N ;
 mkN079 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -2000,7 +2000,7 @@ mkN091 base_1 =
 
 mkN092 : Str -> N ;
 mkN092 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "i" + base_2@? =>
       let sg = base_1 + "i" + base_2 ;
           pl = base_1 + "je" + base_2
@@ -2025,7 +2025,7 @@ mkN092 base =
 
 mkN093 : Str -> N ;
 mkN093 base =
-  case base of {
+  case <base : Str> of {
     "ka" => lin N
       { s = table {
               Indef => table {
@@ -2068,7 +2068,7 @@ mkN094 base_1 =
 
 mkN095 : Str -> N ;
 mkN095 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "o" => lin N
       { s = table {
               Indef => table {
@@ -2091,7 +2091,7 @@ mkN095 base =
 
 mkN096 : Str -> N ;
 mkN096 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "e" + base_2@? =>
       let sg = base_1 + "e" + base_2 ;
           pl = base_1 + "i" + base_2 + "je" ;
@@ -2163,7 +2163,7 @@ mkN098 base_1 =
 
 mkN099 : Str -> N ;
 mkN099 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "m" =>
       let sg = base_1 + "m" in
       lin N { s = table {
@@ -2207,7 +2207,7 @@ mkN100 base_1 =
 
 mkN101 : Str -> N ;
 mkN101 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -2270,7 +2270,7 @@ mkN103 base_1 =
 
 mkN104 : Str -> N ;
 mkN104 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" => lin N
       { s = table {
               Indef => table {
@@ -2373,7 +2373,7 @@ mkN108 base_1 =
 
 mkN109 : Str -> N ;
 mkN109 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2396,7 +2396,7 @@ mkN109 base =
 
 mkN110 : Str -> N ;
 mkN110 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2442,7 +2442,7 @@ mkN111 base_1 =
 
 mkN112 : Str -> N ;
 mkN112 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@("rr"|?) => lin N
       { s = table {
               Indef => table {
@@ -2537,7 +2537,7 @@ mkN115 base_1 =
 
 mkN116 : Str -> N ;
 mkN116 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" => lin N
       { s = table {
               Indef => table {
@@ -2560,7 +2560,7 @@ mkN116 base =
 
 mkN117 : Str -> N ;
 mkN117 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -2603,7 +2603,7 @@ mkN118 base_1 =
 
 mkN119 : Str -> N ;
 mkN119 base =
-  case base of {
+  case <base : Str> of {
     base_1+"o"+base_2@?+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2667,7 +2667,7 @@ mkN121 base_1 =
 
 mkN122 : Str -> N ;
 mkN122 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" => lin N
       { s = table {
               Indef => table {
@@ -2690,7 +2690,7 @@ mkN122 base =
 
 mkN123 : Str -> N ;
 mkN123 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" => lin N
       { s = table {
               Indef => table {
@@ -2793,7 +2793,7 @@ mkN127 base_1 =
 
 mkN128 : Str -> N ;
 mkN128 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -2816,7 +2816,7 @@ mkN128 base =
 
 mkN129 : Str -> N ;
 mkN129 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2839,7 +2839,7 @@ mkN129 base =
 
 mkN130 : Str -> N ;
 mkN130 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2882,7 +2882,7 @@ mkN131 base_1 =
 
 mkN132 : Str -> N ;
 mkN132 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2905,7 +2905,7 @@ mkN132 base =
 
 mkN133 : Str -> N ;
 mkN133 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -2928,7 +2928,7 @@ mkN133 base =
 
 mkN134 : Str -> N ;
 mkN134 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -2991,7 +2991,7 @@ mkN136 base_1 =
 
 mkN137 : Str -> N ;
 mkN137 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@("rr"|?) => lin N
       { s = table {
               Indef => table {
@@ -3075,7 +3075,7 @@ mkN140 base_1 =
 mkN141 : Str -> N ;
 
 mkN141 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -3098,7 +3098,7 @@ mkN141 base =
 
 mkN142 : Str -> N ;
 mkN142 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -3141,7 +3141,7 @@ mkN143 base_1 =
 
 mkN144 : Str -> N ;
 mkN144 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -3184,7 +3184,7 @@ mkN145 base_1 =
 
 mkN146 : Str -> N ;
 mkN146 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3227,7 +3227,7 @@ mkN147 base_1 =
 
 mkN148 : Str -> N ;
 mkN148 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3250,7 +3250,7 @@ mkN148 base =
 
 mkN149 : Str -> N ;
 mkN149 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -3273,7 +3273,7 @@ mkN149 base =
 
 mkN150 : Str -> N ;
 mkN150 base =
-  case base of {
+  case <base : Str> of {
     base_1+"je" => lin N
       { s = table {
               Indef => table {
@@ -3336,7 +3336,7 @@ mkN152 base_1 =
 
 mkN153 : Str -> N ;
 mkN153 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ak" => lin N
       { s = table {
               Indef => table {
@@ -3379,7 +3379,7 @@ mkN154 base_1 =
 
 mkN155 : Str -> N ;
 mkN155 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -3422,7 +3422,7 @@ mkN156 base_1 =
 
 mkN157 : Str -> N ;
 mkN157 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ër" => lin N
       { s = table {
               Indef => table {
@@ -3465,7 +3465,7 @@ mkN158 base_1 =
 
 mkN159 : Str -> N ;
 mkN159 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -3488,7 +3488,7 @@ mkN159 base =
 
 mkN160 : Str -> N ;
 mkN160 base =
-  case base of {
+  case <base : Str> of {
     base_1+"hë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -3511,7 +3511,7 @@ mkN160 base =
 
 mkN161 : Str -> N ;
 mkN161 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3554,7 +3554,7 @@ mkN162 base_1 =
 
 mkN163 : Str -> N ;
 mkN163 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3577,7 +3577,7 @@ mkN163 base =
 
 mkN164 : Str -> N ;
 mkN164 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3600,7 +3600,7 @@ mkN164 base =
 
 mkN165 : Str -> N ;
 mkN165 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@?+"ë" => lin N
       (let sgI = base_1+"a"+base_2+"ë" ;
            plI = base_1+"e"+base_2+"ë"
@@ -3626,7 +3626,7 @@ mkN165 base =
 
 mkN166 : Str -> N ;
 mkN166 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -3649,7 +3649,7 @@ mkN166 base =
 
 mkN167 : Str -> N ;
 mkN167 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"lë" => lin N
       { s = table {
               Indef => table {
@@ -3672,7 +3672,7 @@ mkN167 base =
 
 mkN168 : Str -> N ;
 mkN168 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@? => lin N
       (let sg = base_1+"e"+base_2 ;
            pl = base_1+"i"+base_2+"je" ;
@@ -3699,7 +3699,7 @@ mkN168 base =
 
 mkN169 : Str -> N ;
 mkN169 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ;
            pl = base_1+"ëra" ;
@@ -3726,7 +3726,7 @@ mkN169 base =
 
 mkN170 : Str -> N ;
 mkN170 base =
-  case base of {
+  case <base : Str> of {
     "a"+base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3769,7 +3769,7 @@ mkN171 base_1 =
 
 mkN172 : Str -> N ;
 mkN172 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -3812,7 +3812,7 @@ mkN173 base_1 =
 
 mkN174 : Str -> N ;
 mkN174 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?)+"e" => lin N
       { s = table {
               Indef => table {
@@ -3835,7 +3835,7 @@ mkN174 base =
 
 mkN175 : Str -> N ;
 mkN175 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3858,7 +3858,7 @@ mkN175 base =
 
 mkN176 : Str -> N ;
 mkN176 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -3881,7 +3881,7 @@ mkN176 base =
 
 mkN177 : Str -> N ;
 mkN177 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" => lin N
       { s = table {
               Indef => table {
@@ -3964,7 +3964,7 @@ mkN180 base_1 =
 
 mkN181 : Str -> N ;
 mkN181 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@("ndth"|"dh"|?) => lin N
       { s = table {
               Indef => table {
@@ -3987,7 +3987,7 @@ mkN181 base =
 
 mkN182 : Str -> N ;
 mkN182 base =
-  case base of {
+  case <base : Str> of {
     base_1+"o" => lin N
       { s = table {
               Indef => table {
@@ -4010,7 +4010,7 @@ mkN182 base =
 
 mkN183 : Str -> N ;
 mkN183 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" => lin N
       { s = table {
               Indef => table {
@@ -4033,7 +4033,7 @@ mkN183 base =
 
 mkN184 : Str -> N ;
 mkN184 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4056,7 +4056,7 @@ mkN184 base =
 
 mkN185 : Str -> N ;
 mkN185 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4079,7 +4079,7 @@ mkN185 base =
 
 mkN186 : Str -> N ;
 mkN186 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? =>
       let sgInd : Str = base_1+"ë"+base_2 ;
           sgStem : Str = base_1+base_2 ;
@@ -4127,7 +4127,7 @@ mkN187 base_1 =
 
 mkN188 : Str -> N ;
 mkN188 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -4150,7 +4150,7 @@ mkN188 base =
 
 mkN189 : Str -> N ;
 mkN189 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4193,7 +4193,7 @@ mkN190 base_1 =
 
 mkN191 : Str -> N ;
 mkN191 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4236,7 +4236,7 @@ mkN192 base_1 =
 
 mkN193 : Str -> N ;
 mkN193 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4259,7 +4259,7 @@ mkN193 base =
 
 mkN194 : Str -> N ;
 mkN194 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4282,7 +4282,7 @@ mkN194 base =
 
 mkN195 : Str -> N ;
 mkN195 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua" => lin N
       { s = table {
               Indef => table {
@@ -4305,7 +4305,7 @@ mkN195 base =
 
 mkN196 : Str -> N ;
 mkN196 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"j"+base_3@(?+?)+"e" => lin N
       { s = table {
               Indef => table {
@@ -4328,7 +4328,7 @@ mkN196 base =
 
 mkN197 : Str -> N ;
 mkN197 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua" => lin N
       { s = table {
               Indef => table {
@@ -4351,7 +4351,7 @@ mkN197 base =
 
 mkN198 : Str -> N ;
 mkN198 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -4374,7 +4374,7 @@ mkN198 base =
 
 mkN199 : Str -> N ;
 mkN199 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4397,7 +4397,7 @@ mkN199 base =
 
 mkN200 : Str -> N ;
 mkN200 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i" => lin N
       { s = table {
               Indef => table {
@@ -4443,7 +4443,7 @@ oper
 
 mkN201 : Str -> N ;
 mkN201 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" => lin N
       { s = table {
               Indef => table {
@@ -4466,7 +4466,7 @@ mkN201 base =
 
 mkN202 : Str -> N ;
 mkN202 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "e" => lin N
       { s = table {
               Indef => table {
@@ -4509,7 +4509,7 @@ mkN203 base_1 =
 
 mkN204 : Str -> N ;
 mkN204 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" =>
       let sg = base_1 + "a" ;
           pl = base_1 + "ai"
@@ -4576,7 +4576,7 @@ mkN206 base_1 =
 
 mkN207 : Str -> N ;
 mkN207 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ll" =>
       let sg = base_1 + "ll" ;
           pl = base_1 + "j" ;
@@ -4602,7 +4602,7 @@ mkN207 base =
 
 mkN208 : Str -> N ;
 mkN208 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" + base_2@? => lin N
       { s = table {
               Indef => table {
@@ -4625,7 +4625,7 @@ mkN208 base =
 
 mkN209 : Str -> N ;
 mkN209 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" => lin N
       { s = table {
               Indef => table {
@@ -4668,7 +4668,7 @@ mkN210 base_1 =
 
 mkN211 : Str -> N ;
 mkN211 base =
-  case base of {
+  case <base : Str> of {
     base_1+"l" => lin N
       { s = table {
               Indef => table {
@@ -4691,7 +4691,7 @@ mkN211 base =
 
 mkN212 : Str -> N ;
 mkN212 base =
-  case base of {
+  case <base : Str> of {
     base_1+"alë" => lin N
       { s = table {
               Indef => table {
@@ -4734,7 +4734,7 @@ mkN213 base_1 =
 
 mkN214 : Str -> N ;
 mkN214 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ak" => lin N
       { s = table {
               Indef => table {
@@ -4757,7 +4757,7 @@ mkN214 base =
 
 mkN215 : Str -> N ;
 mkN215 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -4780,7 +4780,7 @@ mkN215 base =
 
 mkN216 : Str -> N ;
 mkN216 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -4803,7 +4803,7 @@ mkN216 base =
 
 mkN217 : Str -> N ;
 mkN217 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua"+base_2@? =>
       let
         sgInd = base_1+"ua"+base_2 ;
@@ -4831,7 +4831,7 @@ mkN217 base =
 
 mkN218 : Str -> N ;
 mkN218 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"k" =>
       let
         sgInd = base_1+base_2+"k" ;
@@ -4858,7 +4858,7 @@ mkN218 base =
 
 mkN219 : Str -> N ;
 mkN219 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -4881,7 +4881,7 @@ mkN219 base =
 
 mkN220 : Str -> N ;
 mkN220 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -4926,7 +4926,7 @@ mkN221 base_1 =
 
 mkN222 : Str -> N ;
 mkN222 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N {
       s = table {
         Indef => table {
@@ -4949,7 +4949,7 @@ mkN222 base =
 
 mkN223 : Str -> N ;
 mkN223 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N {
       s = table {
         Indef => table {
@@ -4972,7 +4972,7 @@ mkN223 base =
 
 mkN224 : Str -> N ;
 mkN224 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@? => lin N {
       s = table {
         Indef => table {
@@ -5015,7 +5015,7 @@ mkN225 base_1 =
 
 mkN226 : Str -> N ;
 mkN226 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" =>
       let plInd = base_1+"qe" in lin N {
         s = table {
@@ -5039,7 +5039,7 @@ mkN226 base =
 
 mkN227 : Str -> N ;
 mkN227 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let sg = base_1+"e" ; pl = base_1+"e" in lin N {
         s = table {
@@ -5063,7 +5063,7 @@ mkN227 base =
 
 mkN228 : Str -> N ;
 mkN228 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let sg = base_1+"e" ; pl = base_1+"e" in lin N {
         s = table {
@@ -5087,7 +5087,7 @@ mkN228 base =
 
 mkN229 : Str -> N ;
 mkN229 base =
-  case base of {
+  case <base : Str> of {
     "a"+base_1+"ë" =>
       let
         sgInd = "a"+base_1+"ë" ;
@@ -5175,7 +5175,7 @@ mkN232 base_1 =
 
 mkN233 : Str -> N ;
 mkN233 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -5198,7 +5198,7 @@ mkN233 base =
 
 mkN234 : Str -> N ;
 mkN234 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -5261,7 +5261,7 @@ mkN236 base_1 =
 
 mkN237 : Str -> N ;
 mkN237 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -5304,7 +5304,7 @@ mkN238 base_1 =
 
 mkN239 : Str -> N ;
 mkN239 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -5327,7 +5327,7 @@ mkN239 base =
 
 mkN240 : Str -> N ;
 mkN240 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -5416,7 +5416,7 @@ mkN243 base_1 =
 
 mkN244 : Str -> N ;
 mkN244 base =
-  case base of {
+  case <base : Str> of {
     "b"+base_1+"nor" => lin N
       (let sg = "b"+base_1+"nor" ;
            pl = "b"+base_1+"norë" ;
@@ -5465,7 +5465,7 @@ mkN245 base_1 =
 
 mkN246 : Str -> N ;
 mkN246 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -5511,7 +5511,7 @@ mkN247 base_1 =
 
 mkN248 : Str -> N ;
 mkN248 base =
-  case base of {
+  case <base : Str> of {
     base_1+"r" => lin N
       { s = table {
               Indef => table {
@@ -5534,7 +5534,7 @@ mkN248 base =
 
 mkN249 : Str -> N ;
 mkN249 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ;
            pl = base_1+"a" ;
@@ -5561,7 +5561,7 @@ mkN249 base =
 
 mkN250 : Str -> N ;
 mkN250 base =
-  case base of {
+  case <base : Str> of {
     base_1@(?+?)+"e"+base_2 => lin N
       { s = table {
               Indef => table {
@@ -5607,7 +5607,7 @@ mkN251 base_1 =
 
 mkN252 : Str -> N ;
 mkN252 base =
-  case base of {
+  case <base : Str> of {
     base_1+"uall" => lin N
       (let sg = base_1+"uall" ;
            sgDef = base_1+"ualli" ;
@@ -5678,7 +5678,7 @@ mkN254 base_1 =
 
 mkN255 : Str -> N ;
 mkN255 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ;
            pl = base_1+"a" ;
@@ -5728,7 +5728,7 @@ mkN256 base_1 =
 
 mkN257 : Str -> N ;
 mkN257 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?+?+?)+"ll" => lin N
       { s = table {
               Indef => table {
@@ -5751,7 +5751,7 @@ mkN257 base =
 
 mkN258 : Str -> N ;
 mkN258 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?) => lin N
       (let sg = base_1+base_2 ;
            defStem = base_1+"n"+base_2
@@ -5777,7 +5777,7 @@ mkN258 base =
 
 mkN259 : Str -> N ;
 mkN259 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -5800,7 +5800,7 @@ mkN259 base =
 
 mkN260 : Str -> N ;
 mkN260 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ;
            pl = base_1+"a" ;
@@ -5827,13 +5827,13 @@ mkN260 base =
 
 mkN261 : Str -> N ;
 mkN261 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?+?+?+?)+"ë"+base_3@? =>
       let
         indefS : Str = base_1+base_2+"ë"+base_3 ;
         indefOblS : Str = indefS+"i" ;
         defNomS : Str = base_1+"i"+base_2+base_3+"i" ;
-      in lin N 
+      in lin N
       { s = table {
               Indef => table {
                          Nom => table { Sg => indefS ; Pl => nonExist } ;
@@ -5879,7 +5879,7 @@ mkN262 base_1 =
 
 mkN263 : Str -> N ;
 mkN263 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -5947,7 +5947,7 @@ mkN265 base_1 =
 
 mkN266 : Str -> N ;
 mkN266 base =
-  case base of {
+  case <base : Str> of {
     base_1+"dhë" =>
       let
         indefS : Str = base_1+"dhë" ;
@@ -5955,7 +5955,7 @@ mkN266 base =
         indefPl : Str = base_1+"gë" ;
         defS : Str = base_1+"ga" ;
         defPl : Str = base_1+"gët" ;
-      in lin N 
+      in lin N
       { s = table {
               Indef => table {
                          Nom => table { Sg => indefS ; Pl => indefPl } ;
@@ -5977,7 +5977,7 @@ mkN266 base =
 
 mkN267 : Str -> N ;
 mkN267 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -6024,7 +6024,7 @@ mkN268 base_1 =
 
 mkN269 : Str -> N ;
 mkN269 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -6047,7 +6047,7 @@ mkN269 base =
 
 mkN270 : Str -> N ;
 mkN270 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -6070,7 +6070,7 @@ mkN270 base =
 
 mkN271 : Str -> N ;
 mkN271 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? =>
       let sgInd : Str = base_1+"ë"+base_2 ;
           plInd : Str = base_1+"ë"+base_2 ;   -- keep as invariable plural (as your original)
@@ -6162,7 +6162,7 @@ mkN274 base_1 =
 
 mkN275 : Str -> N ;
 mkN275 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let sgInd : Str = base_1+"e" ;
           plInd : Str = base_1+"je" ;
@@ -6254,7 +6254,7 @@ mkN278 base_1 =
 
 mkN279 : Str -> N ;
 mkN279 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let sgInd : Str = base_1+"ë" ;
           plInd : Str = base_1+"a" ;
@@ -6281,7 +6281,7 @@ mkN279 base =
 
 mkN280 : Str -> N ;
 mkN280 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? =>
       let sgInd : Str = base_1+"ë"+base_2 ;
           plInd : Str = base_1+base_2+"a" ;
@@ -6331,16 +6331,16 @@ oper
 
   -- fem schwa-final helpers
   femIndObl_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "e" ; _ => base + "e" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "e" ; _ => base + "e" } : Str> ;
 
   femDefNom_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "a" ; _ => base + "a" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "a" ; _ => base + "a" } : Str> ;
 
   femDefAcc_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "ën" ; _ => base + "n" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "ën" ; _ => base + "n" } : Str> ;
 
   femDefObl_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "ës" ; _ => base + "s" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "ës" ; _ => base + "s" } : Str> ;
 
 mkN281 : Str -> N ;
 mkN281 base_1 =
@@ -6365,7 +6365,7 @@ mkN281 base_1 =
 
 mkN282 : Str -> N ;
 mkN282 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "k" =>
       let sg = base_1 + "k" ;
           pl = base_1 + "q" ;
@@ -6391,7 +6391,7 @@ mkN282 base =
 
 mkN283 : Str -> N ;
 mkN283 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "y" + base_2@? + "ë" =>
       let sg = base_1 + "y" + base_2 + "ë" ;
           pl = base_1 + "y" + base_2 + "a"
@@ -6416,7 +6416,7 @@ mkN283 base =
 
 mkN284 : Str -> N ;
 mkN284 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" + base_2@? =>
       let sg = base_1 + "a" + base_2 ;
           pl = base_1 + "e" + base_2 + "e"
@@ -6441,7 +6441,7 @@ mkN284 base =
 
 mkN285 : Str -> N ;
 mkN285 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "të" + base_2@? =>
       let sg = base_1 + "të" + base_2 ;
           sgC = base_1 + "t" + base_2 ;    -- ë drops before suffixes
@@ -6510,7 +6510,7 @@ mkN287 base_1 =
 
 mkN288 : Str -> N ;
 mkN288 base =
-  case base of {
+  case <base : Str> of {
     base_1 + base_2@? =>
       let sg = base_1 + base_2 ;
           plBare = sg + "nj" ;
@@ -6559,7 +6559,7 @@ mkN289 base_1 =
 
 mkN290 : Str -> N ;
 mkN290 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" + base_2@? =>
       let sg = base_1 + "ë" + base_2 ;
           sgOb = base_1 + base_2 + "e" ;
@@ -6585,7 +6585,7 @@ mkN290 base =
 
 mkN291 : Str -> N ;
 mkN291 base =
-  case base of {
+  case <base : Str> of {
     "makth" => lin N
       { s = table {
               Indef => table {
@@ -6608,7 +6608,7 @@ mkN291 base =
 
 mkN292 : Str -> N ;
 mkN292 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?) => lin N
       { s = table {
               Indef => table {
@@ -6631,7 +6631,7 @@ mkN292 base =
 
 mkN293 : Str -> N ;
 mkN293 base =
-  case base of {
+  case <base : Str> of {
     base_1+"m"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -6654,7 +6654,7 @@ mkN293 base =
 
 mkN294 : Str -> N ;
 mkN294 base =
-  case base of {
+  case <base : Str> of {
     "a"+base_1 => lin N
       { s = table {
               Indef => table {
@@ -6677,7 +6677,7 @@ mkN294 base =
 
 mkN295 : Str -> N ;
 mkN295 base =
-  case base of {
+  case <base : Str> of {
     base_1@(?+?+?+?+?)+"ë"+base_2 => lin N
       { s = table {
               Indef => table {
@@ -6700,7 +6700,7 @@ mkN295 base =
 
 mkN296 : Str -> N ;
 mkN296 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"t" => lin N
       { s = table {
               Indef => table {
@@ -6723,7 +6723,7 @@ mkN296 base =
 
 mkN297 : Str -> N ;
 mkN297 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -6806,7 +6806,7 @@ mkN300 base_1 =
 
 mkN301 : Str -> N ;
 mkN301 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -6829,7 +6829,7 @@ mkN301 base =
 
 mkN302 : Str -> N ;
 mkN302 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -6852,7 +6852,7 @@ mkN302 base =
 
 mkN303 : Str -> N ;
 mkN303 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?+?+?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -6875,7 +6875,7 @@ mkN303 base =
 
 mkN304 : Str -> N ;
 mkN304 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@?+"ë" => lin N
       { s = table {
               Indef => table {
@@ -6898,7 +6898,7 @@ mkN304 base =
 
 mkN305 : Str -> N ;
 mkN305 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@("rr"|"ll"|?) => lin N
       { s = table {
               Indef => table {
@@ -6921,7 +6921,7 @@ mkN305 base =
 
 mkN306 : Str -> N ;
 mkN306 base =
-  case base of {
+  case <base : Str> of {
     base_1+"b" => lin N
       { s = table {
               Indef => table {
@@ -6964,7 +6964,7 @@ mkN307 base_1 =
 
 mkN308 : Str -> N ;
 mkN308 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a" => lin N
       { s = table {
               Indef => table {
@@ -6987,7 +6987,7 @@ mkN308 base =
 
 mkN309 : Str -> N ;
 mkN309 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -7010,7 +7010,7 @@ mkN309 base =
 
 mkN310 : Str -> N ;
 mkN310 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -7035,7 +7035,7 @@ mkN310 base =
 
 mkN311 : Str -> N ;
 mkN311 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -7082,7 +7082,7 @@ mkN311 base =
 
 mkN312 : Str -> N ;
 mkN312 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -7129,7 +7129,7 @@ mkN312 base =
 
 mkN313 : Str -> N ;
 mkN313 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -7176,7 +7176,7 @@ mkN313 base =
 
 mkN314 : Str -> N ;
 mkN314 base =
-  case base of {
+  case <base : Str> of {
     base_1+"uall" => lin N
       { s = table {
               Indef => table {
@@ -7223,7 +7223,7 @@ mkN314 base =
 
 mkN315 : Str -> N ;
 mkN315 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -7270,7 +7270,7 @@ mkN315 base =
 
 mkN316 : Str -> N ;
 mkN316 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -7405,7 +7405,7 @@ mkN318 base_1 =
 
 mkN319 : Str -> N ;
 mkN319 base =
-  case base of {
+  case <base : Str> of {
     base_1+"r"+base_2@(?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -7497,7 +7497,7 @@ mkN320 base_1 =
 
 mkN321 : Str -> N ;
 mkN321 base =
-  case base of {
+  case <base : Str> of {
     base_1+"lli" =>
       let
         sgInd = base_1+"ll" ;
@@ -7526,7 +7526,7 @@ mkN321 base =
 
 mkN322 : Str -> N ;
 mkN322 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ër" =>
       let
         sgInd = base_1+"ër" ;
@@ -7554,7 +7554,7 @@ mkN322 base =
 
 mkN323 : Str -> N ;
 mkN323 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?+?+?)+"ë" =>
       let
         sgInd = base_1+"e"+base_2+"ë" ;
@@ -7582,7 +7582,7 @@ mkN323 base =
 
 mkN324 : Str -> N ;
 mkN324 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let
         sgInd = base_1+"ë" ;
@@ -7610,7 +7610,7 @@ mkN324 base =
 
 mkN325 : Str -> N ;
 mkN325 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let
         sgInd = base_1+"ë" ;
@@ -7661,7 +7661,7 @@ mkN326 base_1 =
 
 mkN327 : Str -> N ;
 mkN327 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@? =>
       let
         sgInd = base_1+"y"+base_2 ;
@@ -7733,7 +7733,7 @@ mkN329 base_1 =
 
 mkN330 : Str -> N ;
 mkN330 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -7780,7 +7780,7 @@ mkN331 base_1 =
 
 mkN332 : Str -> N ;
 mkN332 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@?+"ë" =>
       let sgInd : Str = base_1+"a"+base_2+"ë" ;
           sgStem : Str = base_1+"a"+base_2 ;
@@ -7832,7 +7832,7 @@ mkN333 base_1 =
 
 mkN334 : Str -> N ;
 mkN334 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@?+base_3@?+"ë" =>
       let sgInd : Str = base_1+"i"+base_2+base_3+"ë" ;
           sgStem : Str = base_1+"i"+base_2+base_3 ;
@@ -7861,7 +7861,7 @@ mkN334 base =
 
 mkN335 : Str -> N ;
 mkN335 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -7906,7 +7906,7 @@ mkN336 base_1 =
 
 mkN337 : Str -> N ;
 mkN337 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let sgInd : Str = base_1+"ë" ;
           sgStem : Str = base_1 ;
@@ -7958,7 +7958,7 @@ mkN338 base_1 =
 
 mkN339 : Str -> N ;
 mkN339 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"e"+base_3@?+"e" =>
       let sgInd : Str = base_1+base_2+"e"+base_3+"e" ;
           plInd : Str = sgInd ;
@@ -7987,7 +7987,7 @@ mkN339 base =
 
 mkN340 : Str -> N ;
 mkN340 base =
-  case base of {
+  case <base : Str> of {
     base_1+"lë" =>
       let sgInd : Str = base_1+"lë" ;
           sgDatInd : Str = base_1+"le" ;
@@ -8014,7 +8014,7 @@ mkN340 base =
 
 mkN341 : Str -> N ;
 mkN341 base =
-  case base of {
+  case <base : Str> of {
     base_1+"l"+base_2@?+"ë" => lin N
       { s = table {
               Indef => table {
@@ -8061,7 +8061,7 @@ mkN341 base =
 
 mkN342 : Str -> N ;
 mkN342 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" => lin N
       { s = table {
               Indef => table {
@@ -8152,7 +8152,7 @@ mkN343 base_1 =
 
 mkN344 : Str -> N ;
 mkN344 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -8199,7 +8199,7 @@ mkN344 base =
 
 mkN345 : Str -> N ;
 mkN345 base =
-  case base of {
+  case <base : Str> of {
     base_1+"llë" => lin N
       { s = table {
               Indef => table {
@@ -8246,7 +8246,7 @@ mkN345 base =
 
 mkN346 : Str -> N ;
 mkN346 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -8293,7 +8293,7 @@ mkN346 base =
 
 mkN347 : Str -> N ;
 mkN347 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -8340,7 +8340,7 @@ mkN347 base =
 
 mkN348 : Str -> N ;
 mkN348 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -8387,7 +8387,7 @@ mkN348 base =
 
 mkN349 : Str -> N ;
 mkN349 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i" => lin N
       { s = table {
               Indef => table {
@@ -8434,7 +8434,7 @@ mkN349 base =
 
 mkN350 : Str -> N ;
 mkN350 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua" => lin N
       { s = table {
               Indef => table {
@@ -8481,7 +8481,7 @@ mkN350 base =
 
 mkN351 : Str -> N ;
 mkN351 base =
-  case base of {
+  case <base : Str> of {
     base_1+"llë" => lin N
       { s = table {
               Indef => table {
@@ -8504,7 +8504,7 @@ mkN351 base =
 
 mkN352 : Str -> N ;
 mkN352 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -8527,7 +8527,7 @@ mkN352 base =
 
 mkN353 : Str -> N ;
 mkN353 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -8550,7 +8550,7 @@ mkN353 base =
 
 mkN354 : Str -> N ;
 mkN354 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -8573,7 +8573,7 @@ mkN354 base =
 
 mkN355 : Str -> N ;
 mkN355 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -8636,7 +8636,7 @@ mkN357 base_1 =
 
 mkN358 : Str -> N ;
 mkN358 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -8679,7 +8679,7 @@ mkN359 base_1 =
 
 mkN360 : Str -> N ;
 mkN360 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ez"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -8728,7 +8728,7 @@ oper
 
 mkN361 : Str -> N ;
 mkN361 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "qe" => lin N
       { s = table {
               Indef => table {
@@ -8751,7 +8751,7 @@ mkN361 base =
 
 mkN362 : Str -> N ;
 mkN362 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "pri" => lin N
       { s = table {
               Indef => table {
@@ -8774,7 +8774,7 @@ mkN362 base =
 
 mkN363 : Str -> N ;
 mkN363 base =
-  case base of {
+  case <base : Str> of {
     base_1 + base_2@(?+?+?+?) =>
       let sg = base_1 + base_2 ;
           pl = base_1 + "r" + base_2 + "a"
@@ -8799,7 +8799,7 @@ mkN363 base =
 
 mkN364 : Str -> N ;
 mkN364 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" =>
       let sg = base_1 + "ë" ;
           pl = base_1 + "je"
@@ -8824,7 +8824,7 @@ mkN364 base =
 
 mkN365 : Str -> N ;
 mkN365 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" =>
       let sg = base_1 + "a" ;
           pl = base_1 + "e"
@@ -8849,7 +8849,7 @@ mkN365 base =
 
 mkN366 : Str -> N ;
 mkN366 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "e" => lin N
       { s = table {
               Indef => table {
@@ -8872,7 +8872,7 @@ mkN366 base =
 
 mkN367 : Str -> N ;
 mkN367 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "z" => lin N
       { s = table {
               Indef => table {
@@ -8895,7 +8895,7 @@ mkN367 base =
 
 mkN368 : Str -> N ;
 mkN368 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ak" =>
       let sg = base_1 + "ak" ;
           pl = base_1 + "eq"
@@ -8920,7 +8920,7 @@ mkN368 base =
 
 mkN369 : Str -> N ;
 mkN369 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" + base_2@(?+?) + "ër" =>
       let stem = base_1 + "a" + base_2 ;
           sg   = stem + "ër" ;
@@ -8947,7 +8947,7 @@ mkN369 base =
 
 mkN370 : Str -> N ;
 mkN370 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "k" =>
       let sg = base_1 + "k" ;
           pl = base_1 + "që"
@@ -8972,7 +8972,7 @@ mkN370 base =
 
 mkN371 : Str -> N ;
 mkN371 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@?+"rë" => lin N
       { s = table {
               Indef => table {
@@ -9019,7 +9019,7 @@ mkN371 base =
 
 mkN372 : Str -> N ;
 mkN372 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@?+base_3@(?+?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -9110,7 +9110,7 @@ mkN373 base_1 =
 
 mkN374 : Str -> N ;
 mkN374 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?)+"ër" => lin N
       { s = table {
               Indef => table {
@@ -9201,7 +9201,7 @@ mkN375 base_1 =
 
 mkN376 : Str -> N ;
 mkN376 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"ll" => lin N
       { s = table {
               Indef => table {
@@ -9248,7 +9248,7 @@ mkN376 base =
 
 mkN377 : Str -> N ;
 mkN377 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua" => lin N
       { s = table {
               Indef => table {
@@ -9295,7 +9295,7 @@ mkN377 base =
 
 mkN378 : Str -> N ;
 mkN378 base =
-  case base of {
+  case <base : Str> of {
     base_1+"all" => lin N
       { s = table {
               Indef => table {
@@ -9342,7 +9342,7 @@ mkN378 base =
 
 mkN379 : Str -> N ;
 mkN379 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -9389,7 +9389,7 @@ mkN379 base =
 
 mkN380 : Str -> N ;
 mkN380 base =
-  case base of {
+  case <base : Str> of {
     "r"+base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -9436,7 +9436,7 @@ mkN380 base =
 
 mkN381 : Str -> N ;
 mkN381 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?+?)+"ë" =>
       let
         sgInd = base_1+base_2+"ë" ;
@@ -9465,7 +9465,7 @@ mkN381 base =
 
 mkN382 : Str -> N ;
 mkN382 base =
-  case base of {
+  case <base : Str> of {
     base_1+"l" => lin N
       { s = table {
               Indef => table {
@@ -9488,7 +9488,7 @@ mkN382 base =
 
 mkN383 : Str -> N ;
 mkN383 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"ë" =>
       let
         sgInd = base_1+base_2+"ë" ;
@@ -9516,7 +9516,7 @@ mkN383 base =
 
 mkN384 : Str -> N ;
 mkN384 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -9539,7 +9539,7 @@ mkN384 base =
 
 mkN385 : Str -> N ;
 mkN385 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?) =>
       let
         sgInd = base_1+"ë"+base_2 ;
@@ -9567,7 +9567,7 @@ mkN385 base =
 
 mkN386 : Str -> N ;
 mkN386 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ll" =>
       let
         sgInd = base_1+"ll" ;
@@ -9594,7 +9594,7 @@ mkN386 base =
 
 mkN387 : Str -> N ;
 mkN387 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?)+"ë" =>
       let stem = base_1+"ë"+base_2 in
       lin N { s = table {
@@ -9618,7 +9618,7 @@ mkN387 base =
 
 mkN388 : Str -> N ;
 mkN388 base =
-  case base of {
+  case <base : Str> of {
     stem+"i" =>
       let
         sgInd = stem+"i" ;
@@ -9645,7 +9645,7 @@ mkN388 base =
 
 mkN389 : Str -> N ;
 mkN389 base =
-  case base of {
+  case <base : Str> of {
     base_1+"n" =>
       let
         sgInd = base_1+"n" ;
@@ -9672,7 +9672,7 @@ mkN389 base =
 
 mkN390 : Str -> N ;
 mkN390 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ke" =>
       let
         sgInd = base_1+"ke" ;
@@ -9699,7 +9699,7 @@ mkN390 base =
 
 mkN391 : Str -> N ;
 mkN391 base =
-  case base of {
+  case <base : Str> of {
     base_1+"all" => lin N
       { s = table {
               Indef => table {
@@ -9722,7 +9722,7 @@ mkN391 base =
 
 mkN392 : Str -> N ;
 mkN392 base =
-  case base of {
+  case <base : Str> of {
     "a"+base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -9765,7 +9765,7 @@ mkN393 base_1 =
 
 mkN394 : Str -> N ;
 mkN394 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -9788,7 +9788,7 @@ mkN394 base =
 
 mkN395 : Str -> N ;
 mkN395 base =
-  case base of {
+  case <base : Str> of {
     base_1+"gë" => lin N
       { s = table {
               Indef => table {
@@ -9831,7 +9831,7 @@ mkN396 base_1 =
 
 mkN397 : Str -> N ;
 mkN397 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -9854,7 +9854,7 @@ mkN397 base =
 
 mkN398 : Str -> N ;
 mkN398 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -9917,7 +9917,7 @@ mkN400 base_1 =
 
 mkN401 : Str -> N ;
 mkN401 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ;
            pl = base_1+"je" ;
@@ -9945,7 +9945,7 @@ mkN401 base =
 
 mkN402 : Str -> N ;
 mkN402 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       (let sg = base_1+"ë"+base_2 ;
            stem = base_1+base_2 ;
@@ -9993,7 +9993,7 @@ mkN403 base_1 =
 
 mkN404 : Str -> N ;
 mkN404 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
           Indef => table {
@@ -10046,7 +10046,7 @@ mkN405 base_1 =
 
 mkN406 : Str -> N ;
 mkN406 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ; pl = base_1+"ë" in {
         s = table {
@@ -10070,7 +10070,7 @@ mkN406 base =
 
 mkN407 : Str -> N ;
 mkN407 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ; pl = base_1+"e" ; defPl = base_1+"et" in {
         s = table {
@@ -10094,7 +10094,7 @@ mkN407 base =
 
 mkN408 : Str -> N ;
 mkN408 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       (let sg = base_1+"ë" ; pl = base_1+"ë" ; defPl = base_1+"ët" in {
         s = table {
@@ -10118,7 +10118,7 @@ mkN408 base =
 
 mkN409 : Str -> N ;
 mkN409 base =
-  case base of {
+  case <base : Str> of {
     base_1+"kë" => lin N
       (let sg = base_1+"kë" ;
            pl = base_1+"qe" ;
@@ -10176,7 +10176,7 @@ mkN410 base_1 =
 
 mkN411 : Str -> N ;
 mkN411 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -10223,7 +10223,7 @@ mkN411 base =
 
 mkN412 : Str -> N ;
 mkN412 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@?+"ë" =>
       let indeSg = base_1+"e"+base_2+"ë" ;
           stem   = base_1+"e"+base_2 ;
@@ -10250,7 +10250,7 @@ mkN412 base =
 
 mkN413 : Str -> N ;
 mkN413 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?) =>
       let indeSg = base_1+"e"+base_2 ;
           defSg  = base_1+"é"+base_2+"t" ;
@@ -10276,7 +10276,7 @@ mkN413 base =
 
 mkN414 : Str -> N ;
 mkN414 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -10343,7 +10343,7 @@ mkN415 base_1 =
 
 mkN416 : Str -> N ;
 mkN416 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -10386,7 +10386,7 @@ mkN417 base_1 =
 
 mkN418 : Str -> N ;
 mkN418 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -10409,7 +10409,7 @@ mkN418 base =
 
 mkN419 : Str -> N ;
 mkN419 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -10525,7 +10525,7 @@ mkN421 base_1 =
 
 mkN422 : Str -> N ;
 mkN422 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
           Indef => table {
@@ -10548,7 +10548,7 @@ mkN422 base =
 
 mkN423 : Str -> N ;
 mkN423 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       (let stem = base_1+base_2 ; pl = stem+"a" in {
         s = table {
@@ -10572,7 +10572,7 @@ mkN423 base =
 
 mkN424 : Str -> N ;
 mkN424 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@?+"ll" => lin N
       (let sg = base_1+"y"+base_2+"ll" ;
            pl = base_1+base_2+"j" in {
@@ -10657,7 +10657,7 @@ mkN425 base_1 =
 
 mkN426 : Str -> N ;
 mkN426 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j"+base_2@?+base_3@(?+?) => lin N
       (let sg = base_1+"j"+base_2+base_3 ;
            plI = base_1+base_2+"j"+base_3+"a" ;
@@ -10727,7 +10727,7 @@ mkN427 base_1 =
 
 mkN428 : Str -> N ;
 mkN428 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       (let stem = base_1+base_2 ; pl = stem+"a" in {
         s = table {
@@ -10772,7 +10772,7 @@ mkN429 base_1 =
 
 mkN430 : Str -> N ;
 mkN430 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       (let stem = base_1+base_2 ; pl = stem+"a" in {
         s = table {
@@ -10836,7 +10836,7 @@ mkN432 base_1 =
 
 mkN433 : Str -> N ;
 mkN433 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -10859,7 +10859,7 @@ mkN433 base =
 
 mkN434 : Str -> N ;
 mkN434 base =
-  case base of {
+  case <base : Str> of {
     base_1+"h"+base_2@(?+?+?+?+?)+"e" => lin N
       { s = table {
               Indef => table {
@@ -10882,7 +10882,7 @@ mkN434 base =
 
 mkN435 : Str -> N ;
 mkN435 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -10905,7 +10905,7 @@ mkN435 base =
 
 mkN436 : Str -> N ;
 mkN436 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -10928,7 +10928,7 @@ mkN436 base =
 
 mkN437 : Str -> N ;
 mkN437 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -10951,7 +10951,7 @@ mkN437 base =
 
 mkN438 : Str -> N ;
 mkN438 base =
-  case base of {
+  case <base : Str> of {
     stem+"ë" => lin N
       { s = table {
               Indef => table {
@@ -10990,7 +10990,7 @@ mkN438 base =
 
 mkN439 : Str -> N ;
 mkN439 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -11013,7 +11013,7 @@ mkN439 base =
 
 mkN440 : Str -> N ;
 mkN440 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -11036,7 +11036,7 @@ mkN440 base =
 
 mkN441 : Str -> N ;
 mkN441 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -11083,7 +11083,7 @@ mkN441 base =
 
 mkN442 : Str -> N ;
 mkN442 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -11130,7 +11130,7 @@ mkN442 base =
 
 mkN443 : Str -> N ;
 mkN443 base =
-  case base of {
+  case <base : Str> of {
     base_1+"â" => lin N
       { s = table {
               Indef => table {
@@ -11221,7 +11221,7 @@ mkN444 base_1 =
 
 mkN445 : Str -> N ;
 mkN445 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a" => lin N
       { s = table {
               Indef => table {
@@ -11268,7 +11268,7 @@ mkN445 base =
 
 mkN446 : Str -> N ;
 mkN446 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@(?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -11315,7 +11315,7 @@ mkN446 base =
 
 mkN447 : Str -> N ;
 mkN447 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@("sh"|?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -11406,7 +11406,7 @@ mkN448 base_1 =
 
 mkN449 : Str -> N ;
 mkN449 base =
-  case base of {
+  case <base : Str> of {
     base_1+"k" => lin N
       { s = table {
               Indef => table {
@@ -11453,7 +11453,7 @@ mkN449 base =
 
 mkN450 : Str -> N ;
 mkN450 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua" => lin N
       { s = table {
               Indef => table {
@@ -11497,14 +11497,14 @@ mkN450 base =
       };
     _ => error "Can't apply paradigm mkN450"
   } ;-- Updated: remove "guessed" noun-case endings by using the standard case suffix logic:
---  * Dat/Abl plural: -ve (indef = def) 
---  * Abl plural (indef): -sh 
---  * Masc sg def: -i / -u ; Acc sg def adds -n ; Dat/Abl sg def adds -t 
---  * Fem sg def: -a ; Acc sg def -n (often orthographic -ën) ; Dat/Abl sg def -s 
+--  * Dat/Abl plural: -ve (indef = def)
+--  * Abl plural (indef): -sh
+--  * Masc sg def: -i / -u ; Acc sg def adds -n ; Dat/Abl sg def adds -t
+--  * Fem sg def: -a ; Acc sg def -n (often orthographic -ën) ; Dat/Abl sg def -s
 
 mkN451 : Str -> N ;
 mkN451 base =
-  case base of {
+  case <base : Str> of {
     "manxu"+base_1+"anë" => lin N
       { s = table {
               Indef => table {
@@ -11517,7 +11517,7 @@ mkN451 base =
                                   Pl => "bo"+base_1+"zilokë"
                                 } ;
                          Dat => table {
-                                  -- treat as masc o-stem: indef oblique sg = -u form (like shok → shoku) 
+                                  -- treat as masc o-stem: indef oblique sg = -u form (like shok → shoku)
                                   Sg => "bo"+base_1+"ziloku" ;
                                   Pl => "bo"+base_1+"zilokëve"
                                 } ;
@@ -11573,7 +11573,7 @@ mkN452 base_1 =
 
 mkN453 : Str -> N ;
 mkN453 base =
-  case base of {
+  case <base : Str> of {
     base_1+"r" =>
       let sg : Str = base_1+"r" ;
           pl : Str = base_1+"nj" ;
@@ -11599,7 +11599,7 @@ mkN453 base =
 
 mkN454 : Str -> N ;
 mkN454 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -11622,7 +11622,7 @@ mkN454 base =
 
 mkN455 : Str -> N ;
 mkN455 base =
-  case base of {
+  case <base : Str> of {
     base_1+"rë" => lin N
       { s = table {
               Indef => table {
@@ -11665,7 +11665,7 @@ mkN456 base_1 =
 
 mkN457 : Str -> N ;
 mkN457 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let sg : Str = base_1+"e" ;
           pl : Str = base_1+"e" ;
@@ -11702,7 +11702,7 @@ mkN458 base_1 =
           Def => table {
                    Nom => table { Sg => base_1+"i" ;   Pl => base_1+"ët" } ;
                    Acc => table { Sg => base_1+"in" ;  Pl => base_1+"ët" } ;
-                   -- modern standard often uses -ve (not -vet) in plural obliques 
+                   -- modern standard often uses -ve (not -vet) in plural obliques
                    Dat => table { Sg => base_1+"it" ;  Pl => base_1+"ëve" } ;
                    Ablat=> table { Sg => base_1+"it" ; Pl => base_1+"ëve" }
                  }
@@ -11712,7 +11712,7 @@ mkN458 base_1 =
 
 mkN459 : Str -> N ;
 mkN459 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i" => lin N
       { s = table {
               Indef => table {
@@ -11735,7 +11735,7 @@ mkN459 base =
 
 mkN460 : Str -> N ;
 mkN460 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let sg : Str = base_1+"ë" ;
           pl : Str = base_1+"e" ;
@@ -11782,16 +11782,16 @@ oper
 
   -- fem (-ë type): drop final ë -> +e (indef obl), +a (def nom), +ës (def obl)
   femIndObl_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "e" ; _ => base + "e" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "e" ; _ => base + "e" } : Str> ;
 
   femDefNom_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "a" ; _ => base + "a" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "a" ; _ => base + "a" } : Str> ;
 
   femDefAcc_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "ën" ; _ => base + "n" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "ën" ; _ => base + "n" } : Str> ;
 
   femDefObl_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "ës" ; _ => base + "s" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "ës" ; _ => base + "s" } : Str> ;
 
 
 mkN461 : Str -> N ;
@@ -11816,7 +11816,7 @@ mkN461 base_1 =
 
 mkN462 : Str -> N ;
 mkN462 base =
-  case base of {
+  case <base : Str> of {
     "mjezditë" => lin N
       { s = table {
               Indef => table {
@@ -11839,7 +11839,7 @@ mkN462 base =
 
 mkN463 : Str -> N ;
 mkN463 base =
-  case base of {
+  case <base : Str> of {
     "mjeznatë" => lin N
       { s = table {
               Indef => table {
@@ -11943,7 +11943,7 @@ mkN467 base_1 =
 
 mkN468 : Str -> N ;
 mkN468 base =
-  case base of {
+  case <base : Str> of {
     st + "ë" => lin N
       { s = table {
               Indef => table {
@@ -12026,7 +12026,7 @@ mkN471 base_1 =
 
 mkN472 : Str -> N ;
 mkN472 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -12049,7 +12049,7 @@ mkN472 base =
 
 mkN473 : Str -> N ;
 mkN473 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -12072,7 +12072,7 @@ mkN473 base =
 
 mkN474 : Str -> N ;
 mkN474 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?+?+?+?+?)+"e" => lin N
       { s = table {
               Indef => table {
@@ -12095,7 +12095,7 @@ mkN474 base =
 
 mkN475 : Str -> N ;
 mkN475 base =
-  case base of {
+  case <base : Str> of {
     base_1+"eshë" => lin N
       { s = table {
               Indef => table {
@@ -12118,7 +12118,7 @@ mkN475 base =
 
 mkN476 : Str -> N ;
 mkN476 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -12141,7 +12141,7 @@ mkN476 base =
 
 mkN477 : Str -> N ;
 mkN477 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -12164,7 +12164,7 @@ mkN477 base =
 
 mkN478 : Str -> N ;
 mkN478 base =
-  case base of {
+  case <base : Str> of {
     "lu"+base_1+"neshë" => lin N
       { s = table {
               Indef => table {
@@ -12207,7 +12207,7 @@ mkN479 base_1 =
 
 mkN480 : Str -> N ;
 mkN480 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -12230,7 +12230,7 @@ mkN480 base =
 
 mkN481 : Str -> N ;
 mkN481 base =
-  case base of {
+  case <base : Str> of {
     base_1+"s" => lin N
       { s = table {
               Indef => table {
@@ -12322,7 +12322,7 @@ mkN482 base_1 =
 mkN483 : Str -> N ;
 
 mkN483 base =
-  case base of {
+  case <base : Str> of {
     "vnesht"+base_1+"ri" => lin N
       { s = table {
               Indef => table {
@@ -12369,7 +12369,7 @@ mkN483 base =
 
 mkN484 : Str -> N ;
 mkN484 base =
-  case base of {
+  case <base : Str> of {
     "vresht"+base_1+"ri" => lin N
       { s = table {
               Indef => table {
@@ -12416,7 +12416,7 @@ mkN484 base =
 
 mkN485 : Str -> N ;
 mkN485 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a" => lin N
       { s = table {
               Indef => table {
@@ -12463,7 +12463,7 @@ mkN485 base =
 
 mkN486 : Str -> N ;
 mkN486 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ishtë" => lin N
       { s = table {
               Indef => table {
@@ -12510,7 +12510,7 @@ mkN486 base =
 
 mkN487 : Str -> N ;
 mkN487 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?+?)+"tore" => lin N
       { s = table {
               Indef => table {
@@ -12557,7 +12557,7 @@ mkN487 base =
 
 mkN488 : Str -> N ;
 mkN488 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -12604,7 +12604,7 @@ mkN488 base =
 
 mkN489 : Str -> N ;
 mkN489 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -12710,7 +12710,7 @@ oper
 
 mkN491 : Str -> N ;
 mkN491 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let
         sg = base_1+"e" ;
@@ -12737,7 +12737,7 @@ mkN491 base =
 
 mkN492 : Str -> N ;
 mkN492 base =
-  case base of {
+  case <base : Str> of {
     base_1+"esore" =>
       let
         sg = base_1+"esore" ;
@@ -12832,7 +12832,7 @@ mkN494 base_1 =
 
 mkN495 : Str -> N ;
 mkN495 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let
         sg = base_1+"ë" ;
@@ -12860,7 +12860,7 @@ mkN495 base =
 
 mkN496 : Str -> N ;
 mkN496 base =
-  case base of {
+  case <base : Str> of {
     base_1+"o"+base_2@(?+?) =>
       let
         sg = base_1+"o"+base_2 ;
@@ -12951,7 +12951,7 @@ mkN498 base_1 =
 
 mkN499 : Str -> N ;
 mkN499 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua" => lin N
       { s = table {
               Indef => table {
@@ -13021,7 +13021,7 @@ mkN500 base_1 =
   } ;
 
 
-  
+
 mkN501 : Str -> N ;
 mkN501 base_1 =
   let
@@ -13049,7 +13049,7 @@ mkN501 base_1 =
 
 mkN502 : Str -> N ;
 mkN502 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -13072,7 +13072,7 @@ mkN502 base =
 
 mkN503 : Str -> N ;
 mkN503 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -13095,7 +13095,7 @@ mkN503 base =
 
 mkN504 : Str -> N ;
 mkN504 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -13118,7 +13118,7 @@ mkN504 base =
 
 mkN505 : Str -> N ;
 mkN505 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -13141,7 +13141,7 @@ mkN505 base =
 
 mkN506 : Str -> N ;
 mkN506 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?+?+?)+"ë" => lin N
       { s = table {
               Indef => table {
@@ -13164,7 +13164,7 @@ mkN506 base =
 
 mkN507 : Str -> N ;
 mkN507 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -13187,7 +13187,7 @@ mkN507 base =
 
 mkN508 : Str -> N ;
 mkN508 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ek" => lin N
       { s = table {
               Indef => table {
@@ -13210,12 +13210,12 @@ mkN508 base =
 
 mkN509 : Str -> N ;
 mkN509 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@? =>
       let
         indefS : Str = base_1+base_2 ;
         defS   : Str = base_1+"́"+base_2+"u" ;
-      in lin N 
+      in lin N
       { s = table {
               Indef => table {
                          Nom   => table { Sg => indefS ;        Pl => nonExist } ;
@@ -13237,7 +13237,7 @@ mkN509 base =
 
 mkN510 : Str -> N ;
 mkN510 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -13284,7 +13284,7 @@ mkN511 base_1 =
 
 mkN512 : Str -> N ;
 mkN512 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?) =>
       let sgInd : Str = base_1+"ë"+base_2 ;
           sgStem : Str = base_1+base_2 ;
@@ -13312,7 +13312,7 @@ mkN512 base =
 
 mkN513 : Str -> N ;
 mkN513 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@? =>
       let sgInd : Str = base_1+"a"+base_2 ;
           plInd : Str = base_1+"e"+base_2 ;
@@ -13339,7 +13339,7 @@ mkN513 base =
 
 mkN514 : Str -> N ;
 mkN514 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?)+"ë"+base_3@? =>
       let sgInd : Str = base_1+"ë"+base_2+"ë"+base_3 ;
           sgStem : Str = base_1+"e"+base_2+base_3 ;
@@ -13455,7 +13455,7 @@ mkN518 base_1 =
 
 mkN519 : Str -> N ;
 mkN519 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" =>
       let sgInd : Str = base_1+"e" ;
           plInd : Str = base_1+"e" ;
@@ -13482,7 +13482,7 @@ mkN519 base =
 
 mkN520 : Str -> N ;
 mkN520 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let sgInd : Str = base_1+"ë" ;
           sgStem : Str = base_1 ;
@@ -13550,7 +13550,7 @@ mkN522 base_1 =
 
 mkN523 : Str -> N ;
 mkN523 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -13593,7 +13593,7 @@ mkN524 base_1 =
 
 mkN525 : Str -> N ;
 mkN525 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?)+"f"+base_3@(?+?+?+?+?) => lin N
       { s = table {
               Indef => table {
@@ -13636,7 +13636,7 @@ mkN526 base_1 =
 
 mkN527 : Str -> N ;
 mkN527 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -13659,7 +13659,7 @@ mkN527 base =
 
 mkN528 : Str -> N ;
 mkN528 base =
-  case base of {
+  case <base : Str> of {
     base_1+"î" => lin N
       { s = table {
               Indef => table {
@@ -13682,7 +13682,7 @@ mkN528 base =
 
 mkN529 : Str -> N ;
 mkN529 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin N
       { s = table {
               Indef => table {
@@ -13773,7 +13773,7 @@ mkN531 base_1 =
 
 mkN532 : Str -> N ;
 mkN532 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "a" + base_2@(?+?) =>
       let sg = base_1 + "a" + base_2 ;
           pl = base_1 + "ë" + base_2 + "enj" ;
@@ -13819,7 +13819,7 @@ mkN533 base_1 =
 
 mkN534 : Str -> N ;
 mkN534 base =
-  case base of {
+  case <base : Str> of {
     st + "ë" => lin N
       { s = table {
               Indef => table {
@@ -13864,7 +13864,7 @@ mkN535 base_1 =
 
 mkN536 : Str -> N ;
 mkN536 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ue" => lin N
       { s = table {
               Indef => table {
@@ -13887,7 +13887,7 @@ mkN536 base =
 
 mkN537 : Str -> N ;
 mkN537 base =
-  case base of {
+  case <base : Str> of {
     st + "e" => lin N
       { s = table {
               Indef => table {
@@ -13931,7 +13931,7 @@ mkN538 base_1 =
 
 mkN539 : Str -> N ;
 mkN539 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "â" + base_2@(?+?+?) =>
       let sg = base_1 + "â" + base_2 ;
           pl = base_1 + "ë" + base_2
@@ -13996,16 +13996,16 @@ oper
 
   -- fem schwa-final helpers
   N54_femIndObl_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "e" ; _ => base + "e" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "e" ; _ => base + "e" } : Str> ;
 
   N54_femDefNom_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "a" ; _ => base + "a" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "a" ; _ => base + "a" } : Str> ;
 
   N54_femDefAcc_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "ën" ; _ => base + "n" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "ën" ; _ => base + "n" } : Str> ;
 
   N54_femDefObl_schwa : Str -> Str = \base ->
-    <case base of { st + "ë" => st + "ës" ; _ => base + "s" } : Str> ;
+    <case <base : Str> of { st + "ë" => st + "ës" ; _ => base + "s" } : Str> ;
 
 mkN541 : Str -> N ;
 mkN541 base_1 =
@@ -14031,7 +14031,7 @@ mkN541 base_1 =
 
 mkN542 : Str -> N ;
 mkN542 base =
-  case base of {
+  case <base : Str> of {
     st + "ë" =>
       let sg = st + "ë" ;
           pl = st + "a"
@@ -14056,7 +14056,7 @@ mkN542 base =
 
 mkN543 : Str -> N ;
 mkN543 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" + base_2@? =>
       let sgSurf = base_1 + "ë" + base_2 ;
           sgStem = base_1 + base_2 ;
@@ -14082,7 +14082,7 @@ mkN543 base =
 
 mkN544 : Str -> N ;
 mkN544 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ua" => lin N
       { s = table {
               Indef => table {
@@ -14148,7 +14148,7 @@ mkN546 base_1 =
 
 mkN547 : Str -> N ;
 mkN547 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" + base_2@? =>
       let sg = base_1 + "ë" + base_2 ;
           st = base_1 + base_2 ;
@@ -14174,7 +14174,7 @@ mkN547 base =
 
 mkN548 : Str -> N ;
 mkN548 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "u" + base_2@(?+?+?+?+?+?+?) =>
       let sg = base_1 + "u" + base_2 ;
           pl = base_1 + "o" + base_2 + "a"
@@ -14199,7 +14199,7 @@ mkN548 base =
 
 mkN549 : Str -> N ;
 mkN549 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "i" =>
       let sg  = base_1 + "i" ;
           pl  = base_1 + "iu" ;
@@ -14226,7 +14226,7 @@ mkN549 base =
 
 mkN550 : Str -> N ;
 mkN550 base =
-  case base of {
+  case <base : Str> of {
     st + "ë" =>
       let sg = st + "ë"
       in lin N { s = table {
@@ -14250,7 +14250,7 @@ mkN550 base =
 
 mkN551 : Str -> N ;
 mkN551 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -14341,7 +14341,7 @@ mkN552 base_1 =
 
 mkN553 : Str -> N ;
 mkN553 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a" => lin N
       { s = table {
               Indef => table {
@@ -14432,7 +14432,7 @@ mkN554 base_1 =
 
 mkN555 : Str -> N ;
 mkN555 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e" => lin N
       { s = table {
               Indef => table {
@@ -14479,7 +14479,7 @@ mkN555 base =
 
 mkN556 : Str -> N ;
 mkN556 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@?+"ë"+base_3@? => lin N
       { s = table {
               Indef => table {
@@ -14526,7 +14526,7 @@ mkN556 base =
 
 mkN557 : Str -> N ;
 mkN557 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ollë" => lin N
       { s = table {
               Indef => table {
@@ -14573,7 +14573,7 @@ mkN557 base =
 
 mkN558 : Str -> N ;
 mkN558 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@?+"e" => lin N
       { s = table {
               Indef => table {
@@ -14620,7 +14620,7 @@ mkN558 base =
 
 mkN559 : Str -> N ;
 mkN559 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin N
       { s = table {
               Indef => table {
@@ -14667,7 +14667,7 @@ mkN559 base =
 
 mkN560 : Str -> N ;
 mkN560 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@?+"ë"+base_3@? => lin N
       { s = table {
               Indef => table {
@@ -14731,7 +14731,7 @@ oper
 
 mkN561 : Str -> N ;
 mkN561 base =
-  case base of {
+  case <base : Str> of {
     stem + "i" => lin N
       { s = table {
               Indef => table {
@@ -14799,7 +14799,7 @@ mkN562 base_1 =
 
 mkN563 : Str -> N ;
 mkN563 base =
-  case base of {
+  case <base : Str> of {
     st + "e" =>
       lin N {
         s = table {
@@ -14883,7 +14883,7 @@ mkA004 base_1 =
 
 mkA005 : Str -> A ;
 mkA005 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? =>
       let
         mS = base_1+"ë"+base_2 ; mP = base_1+"ë"+base_2 ;
@@ -14917,7 +14917,7 @@ mkA006 base_1 =
 
 mkA007 : Str -> A ;
 mkA007 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i" =>
       let
         mS = base_1+"i" ;  mP = base_1+"inj" ;
@@ -14936,7 +14936,7 @@ mkA007 base =
 
 mkA008 : Str -> A ;
 mkA008 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i" =>
       let
         mS = base_1+"i" ;   mP = base_1+"inj" ;
@@ -14985,7 +14985,7 @@ mkA010 base_1 =
 
 mkA011 : Str -> A ;
 mkA011 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? => lin A
       { s = table {
               _ => table {
@@ -15006,7 +15006,7 @@ mkA011 base =
 
 mkA012 : Str -> A ;
 mkA012 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ak" => lin A
       { s = table {
               _ => table {
@@ -15027,7 +15027,7 @@ mkA012 base =
 
 mkA013 : Str -> A ;
 mkA013 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin A
       { s = table {
               _ => table {
@@ -15048,7 +15048,7 @@ mkA013 base =
 
 mkA014 : Str -> A ;
 mkA014 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?) => lin A
       { s = table {
               _ => table {
@@ -15087,7 +15087,7 @@ mkA015 base_1 =
 
 mkA016 : Str -> A ;
 mkA016 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@? => lin A
       { s = table {
               _ => table {
@@ -15108,7 +15108,7 @@ mkA016 base =
 
 mkA017 : Str -> A ;
 mkA017 base =
-  case base of {
+  case <base : Str> of {
     base_1+"o"+base_2@?+"ë"+base_3@? => lin A
       { s = table {
               _ => table {
@@ -15129,7 +15129,7 @@ mkA017 base =
 
 mkA018 : Str -> A ;
 mkA018 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@? => lin A
       { s = table {
               _ => table {
@@ -15187,7 +15187,7 @@ mkA020 base_1 =
 
 mkA021 : Str -> A ;
 mkA021 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@? =>
       let ms : Str = base_1+"ë"+base_2 ;
           mp : Str = base_1+base_2+"ë" ;
@@ -15206,7 +15206,7 @@ mkA021 base =
 
 mkA022 : Str -> A ;
 mkA022 base =
-  case base of {
+  case <base : Str> of {
     "j"+base_1 => lin A
       { s = table {
               Nom => table {
@@ -15233,7 +15233,7 @@ mkA022 base =
 
 mkA023 : Str -> A ;
 mkA023 base =
-  case base of {
+  case <base : Str> of {
     "y"+base_1+"ë" => lin A
       { s = table {
               Nom => table {
@@ -15260,7 +15260,7 @@ mkA023 base =
 
 mkA024 : Str -> A ;
 mkA024 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@?+"ë" =>
       let ms : Str = base_1+"e"+base_2+"ë" ;
           mp : Str = base_1+"e"+base_2+"ë" ;
@@ -15279,7 +15279,7 @@ mkA024 base =
 
 mkA025 : Str -> A ;
 mkA025 base =
-  case base of {
+  case <base : Str> of {
     base_1+"të"+base_2@? =>
       let ms : Str = base_1+"të"+base_2 ;
           mp : Str = base_1+base_2+"ë" ;
@@ -15298,7 +15298,7 @@ mkA025 base =
 
 mkA026 : Str -> A ;
 mkA026 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let ms : Str = base_1+"ë" ;
           mp : Str = base_1+"i" ;
@@ -15317,7 +15317,7 @@ mkA026 base =
 
 mkA027 : Str -> A ;
 mkA027 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let ms : Str = base_1+"ë" ;
           mp : Str = base_1+"a" ;
@@ -15336,7 +15336,7 @@ mkA027 base =
 
 mkA028 : Str -> A ;
 mkA028 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let ms : Str = base_1+"ë" ;
           mp : Str = base_1+"ë" ;
@@ -15355,7 +15355,7 @@ mkA028 base =
 
 mkA029 : Str -> A ;
 mkA029 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let ms : Str = base_1+"ë" ;
           mp : Str = base_1+"ë" ;
@@ -15437,7 +15437,7 @@ mkA032 base_1 =
 
 mkA033 : Str -> A ;
 mkA033 base =
-  case base of {
+  case <base : Str> of {
     base_1+"l"+base_2@(?+?+?+?)+"ë" => lin A
       { s = table {
               Nom   => table {
@@ -15488,7 +15488,7 @@ mkA033 base =
 
 mkA034 : Str -> A ;
 mkA034 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"m" => lin A
       { s = table {
               Nom   => table {
@@ -15515,7 +15515,7 @@ mkA034 base =
 
 mkA035 : Str -> A ;
 mkA035 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@?+"r" => lin A
       { s = table {
               Nom   => table {
@@ -15542,7 +15542,7 @@ mkA035 base =
 
 mkA036 : Str -> A ;
 mkA036 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?+?+?+?+?+?)+"ë"+base_3@? => lin A
       { s = table {
               Nom   => table {
@@ -15606,7 +15606,7 @@ oper
     \stem -> v0_mkPers stem stem stem (stem+"më") (stem+"ni") (stem+"në") ;
 
   v0_aor3 : Str -> Str = \stem ->
-    <case stem of {
+    <case <stem : Str> of {
       _+"k" => stem+"u" ;
       _+"g" => stem+"u" ;
       _+"h" => stem+"u" ;
@@ -15631,7 +15631,7 @@ oper
 
   v0_mkImpfAuto : Str -> Number => Person => Str =
     \stem ->
-      case stem of {
+      case <stem : Str> of {
         _+"a" => v0_mkImpfV stem ;
         _+"e" => v0_mkImpfV stem ;
         _+"i" => v0_mkImpfV stem ;
@@ -15649,7 +15649,7 @@ oper
     \pple -> v0_mkPers ("paça "+pple) ("paç "+pple) ("pastë "+pple) ("paçim "+pple) ("paçi "+pple) ("paçin "+pple) ;
 
   v0_shortPart : Str -> Str = \pple ->
-    <case pple of {
+    <case <pple : Str> of {
       st+"ë" => st ;  -- larë -> lar ; qenë -> qen ; lanë -> lan
       st+"r" => st ;  -- punuar -> punua ; pasur -> pasu ; shkruar -> shkrua
       _ => pple
@@ -15676,7 +15676,7 @@ oper
 
   v0_mkPresOpt : Str -> Number => Person => Str =
     \stem ->
-      case stem of {
+      case <stem : Str> of {
         _+"n" => v0_mkOptC stem ;
         _+"a" => v0_mkOptFsh stem ;
         _+"e" => v0_mkOptFsh stem ;
@@ -15709,7 +15709,7 @@ mkV001 base_1 =
 -- "pata" class (kam 'have'): pata/pate/pati..., participle pasur
 mkV002 : Str -> V ;
 mkV002 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ta" =>
       let pple = base_1+"sur" in
       lin V {
@@ -15724,9 +15724,9 @@ mkV002 base =
         participle = pple ;
         pres_optative = v0_mkPers "paça" "paç" "pastë" "paçim" "paçi" "paçin" ;
         perf_optative = v0_mkPerfOpt pple ;
-        pres_admirative = 
+        pres_admirative =
           v0_mkPers "paskam" "paske" "paska" "paskemi" "paskeni" "paskan" ;
-        imperf_admirative = 
+        imperf_admirative =
           v0_mkPers "paskësha" "paskëshe" "paskësh" "paskëshim" "paskëshit" "paskëshin"
       } ;
     _ => error "Can't apply paradigm mkV002"
@@ -15735,7 +15735,7 @@ mkV002 base =
 -- laj-class: laj/lan..., participle larë
 mkV003 : Str -> V ;
 mkV003 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let pple = base_1+"rë" in
       lin V {
@@ -15759,7 +15759,7 @@ mkV003 base =
 -- -s present, -t in 2/3sg; t-aorist; participle -tur
 mkV004 : Str -> V ;
 mkV004 base =
-  case base of {
+  case <base : Str> of {
     base_1+"s" =>
       let pres1 = base_1+"s" ;
           pres23 = base_1+"t" ;
@@ -15785,7 +15785,7 @@ mkV004 base =
 -- dal-class: dal/del..., aorist dol-, participle dalë
 mkV005 : Str -> V ;
 mkV005 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"l" =>
       let pres1 = base_1+base_2+"l" ;
           pres23 = base_1+"e"+"l" ;
@@ -15869,7 +15869,7 @@ mkV008 base_1 =
 -- lan-class (same stem as laj but base given as the n-form); participle kept as -në
 mkV009 : Str -> V ;
 mkV009 base =
-  case base of {
+  case <base : Str> of {
     base_1+"n" =>
       let pres1 = base_1+"j" ;
           pres2pl = base_1+"ni" ;
@@ -15894,7 +15894,7 @@ mkV009 base =
 
 mkV010 : Str -> V ;
 mkV010 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@? =>
       let presStem = base_1+"i"+base_2 ;
           aorStem  = base_1+"y"+base_2 ;
@@ -15918,7 +15918,7 @@ mkV010 base =
 
 mkV011 : Str -> V ;
 mkV011 base =
-  case base of {
+  case <base : Str> of {
 
     -- allow both <le> and <lë>-style input; output uses standard <ë>
     base_1+"e" => lin V
@@ -16103,7 +16103,7 @@ mkV011 base =
 
 mkV012 : Str -> V ;
 mkV012 base =
-  case base of {
+  case <base : Str> of {
     "t"+base_1 => lin V
       { Indicative = table {
                        Pres => table {
@@ -16258,7 +16258,7 @@ mkV014 base_1 = mkV013 base_1 ;
 
 mkV015 : Str -> V ;
 mkV015 base =
-  case base of {
+  case <base : Str> of {
     base_1+"s" => lin V
       { Indicative = table {
                        Pres => table {
@@ -16369,7 +16369,7 @@ mkV015 base =
 
 mkV016 : Str -> V ;
 mkV016 base =
-  case base of {
+  case <base : Str> of {
     base_1+"o"+base_2@?+"a" => lin V
       { Indicative = table {
                        Pres => table {
@@ -16562,7 +16562,7 @@ mkV018 base_1 =
 
 mkV019 : Str -> V ;
 mkV019 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@?+"r" => lin V
       { Indicative = table {
                        Pres => table {
@@ -16673,7 +16673,7 @@ mkV019 base =
 
 mkV020 : Str -> V ;
 mkV020 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@?+"e" => lin V
       { Indicative = table {
                        Pres => table {
@@ -16784,7 +16784,7 @@ mkV020 base =
 
 mkV021 : Str -> V ;
 mkV021 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ie"+base_2@? =>
       let
         presS : Str = base_1+"ie"+base_2 ;
@@ -16841,7 +16841,7 @@ mkV021 base =
 
 mkV022 : Str -> V ;
 mkV022 base =
-  case base of {
+  case <base : Str> of {
     base_1+"es" =>
       let
         presS : Str = base_1+"es" ;
@@ -16898,7 +16898,7 @@ mkV022 base =
 
 mkV023 : Str -> V ;
 mkV023 base =
-  case base of {
+  case <base : Str> of {
     base_1+"as" =>
       let
         presS : Str = base_1+"as" ;
@@ -16955,7 +16955,7 @@ mkV023 base =
 
 mkV024 : Str -> V ;
 mkV024 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         pres1 : Str = base_1+"j" ;
@@ -17018,7 +17018,7 @@ mkV024 base =
 
 mkV025 : Str -> V ;
 mkV025 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@?+"j" =>
       let
         stemY : Str = base_1+"y"+base_2 ;           -- e.g. fry-
@@ -17083,7 +17083,7 @@ mkV025 base =
 
 mkV026 : Str -> V ;
 mkV026 base =
-  case base of {
+  case <base : Str> of {
     base_1+"e"+base_2@(?+?) =>
       let
         presS : Str = base_1+"e"+base_2 ;
@@ -17140,7 +17140,7 @@ mkV026 base =
 
 mkV027 : Str -> V ;
 mkV027 base =
-  case base of {
+  case <base : Str> of {
     base_1+"on" =>
       let
         stem : Str = base_1 ;
@@ -17219,7 +17219,7 @@ mkV027 base =
 
 mkV028 : Str -> V ;
 mkV028 base =
-  case base of {
+  case <base : Str> of {
     base_1+"oj" =>
       let
         stem : Str = base_1 ;
@@ -17351,7 +17351,7 @@ mkV029 base_1 =
 
 mkV030 : Str -> V ;
 mkV030 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i" =>
       let
         presS : Str = base_1+"i" ;
@@ -17408,7 +17408,7 @@ mkV030 base =
 
 mkV031 : Str -> V ;
 mkV031 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@(?+?)+"em" =>
       let
         stem    = base_1+"i"+base_2 ;        -- non-active stem
@@ -17532,7 +17532,7 @@ mkV031 base =
 
 mkV032 : Str -> V ;
 mkV032 base =
-  case base of {
+  case <base : Str> of {
     base_1+"u"+base_2@?+"j" =>
       let
         presStem = base_1+"u"+base_2 ;       -- active -j class
@@ -17776,7 +17776,7 @@ mkV033 base_1 =
 
 mkV034 : Str -> V ;
 mkV034 base =
-  case base of {
+  case <base : Str> of {
     base_1+"s" =>
       let
         presStem = base_1+"s" ;
@@ -17900,7 +17900,7 @@ mkV034 base =
 
 mkV035 : Str -> V ;
 mkV035 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ie" =>
       let
         presSg  = base_1+"ie" ;
@@ -18024,7 +18024,7 @@ mkV035 base =
 
 mkV036 : Str -> V ;
 mkV036 base =
-  case base of {
+  case <base : Str> of {
     base_1+"je"+base_2@("p"|"rdh"|(?+?)) =>
       let
         presStem = base_1+"je"+base_2 ;
@@ -18148,7 +18148,7 @@ mkV036 base =
 
 mkV037 : Str -> V ;
 mkV037 base =
-  case base of {
+  case <base : Str> of {
     base_1+"sem" =>
       let
         stem    = base_1+"s" ;        -- non-active stem (qasem-type)
@@ -18272,7 +18272,7 @@ mkV037 base =
 
 mkV038 : Str -> V ;
 mkV038 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presStem = base_1 ;
@@ -18396,7 +18396,7 @@ mkV038 base =
 
 mkV039 : Str -> V ;
 mkV039 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@(?+?)+"em" =>
       let
         stem    = base_1+"i"+base_2 ;        -- non-active stem
@@ -18520,7 +18520,7 @@ mkV039 base =
 
 mkV040 : Str -> V ;
 mkV040 base =
-  case base of {
+  case <base : Str> of {
     base_1+"hem" =>
       let
         stem    = base_1 ;        -- non-active -hem family
@@ -18644,7 +18644,7 @@ mkV040 base =
 
 mkV041 : Str -> V ;
 mkV041 base =
-  case base of {
+  case <base : Str> of {
     base_1+"em" => lin V
       { Indicative = table {
                        Pres => table {
@@ -18740,7 +18740,7 @@ mkV041 base =
 
 mkV042 : Str -> V ;
 mkV042 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" => lin V
       { Indicative = table {
                        Pres => table {
@@ -18828,7 +18828,7 @@ mkV042 base =
 
 mkV043 : Str -> V ;
 mkV043 base =
-  case base of {
+  case <base : Str> of {
     base_1+"l"+base_2@? => lin V
       { Indicative = table {
                        Pres => table {
@@ -18916,7 +18916,7 @@ mkV043 base =
 
 mkV044 : Str -> V ;
 mkV044 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" => lin V
       { Indicative = table {
                        Pres => table {
@@ -19004,7 +19004,7 @@ mkV044 base =
 
 mkV045 : Str -> V ;
 mkV045 base =
-  case base of {
+  case <base : Str> of {
     base_1+"jek" => lin V
       { Indicative = table {
                        Pres => table {
@@ -19092,7 +19092,7 @@ mkV045 base =
 
 mkV046 : Str -> V ;
 mkV046 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@?+"em" => lin V
       { Indicative = table {
                        Pres => table {
@@ -19180,7 +19180,7 @@ mkV046 base =
 
 mkV047 : Str -> V ;
 mkV047 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"j" => lin V
       { Indicative = table {
                        Pres => table {
@@ -19268,7 +19268,7 @@ mkV047 base =
 
 mkV048 : Str -> V ;
 mkV048 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë"+base_2@(?+?)+"as" => lin V
       { Indicative = table {
                        Pres => table {
@@ -19356,7 +19356,7 @@ mkV048 base =
 
 mkV049 : Str -> V ;
 mkV049 base =
-  case base of {
+  case <base : Str> of {
     base_1+"je"+base_2@("l"|(?+?)) => lin V
       { Indicative = table {
                        Pres => table {
@@ -19444,7 +19444,7 @@ mkV049 base =
 
 mkV050 : Str -> V ;
 mkV050 base =
-  case base of {
+  case <base : Str> of {
     base_1+"o"+base_2@? => lin V
       { Indicative = table {
                        Pres => table {
@@ -19585,7 +19585,7 @@ oper
     <case s of { st + "e" => st ; _ => s } : Str> ;
 
   shortPple : Str -> Str = \pple ->
-    <case pple of {
+    <case <pple : Str> of {
       st + "r" => st ;
       st + "ë" => st ;
       _ => pple
@@ -19624,7 +19624,7 @@ oper
 
 mkV051 : Str -> V ;
 mkV051 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "je" + base_2@? + "r" =>
       let pres1 = base_1 + "je" + base_2 + "r" ;
           aor1  = base_1 + "o"  + base_2 + "a" ;
@@ -19649,7 +19649,7 @@ mkV051 base =
 
 mkV052 : Str -> V ;
 mkV052 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "r" + base_2@? =>
       let pres1 = base_1 + "r" + base_2 ;
           aor1  = pres1 ;               -- as in your original
@@ -19674,7 +19674,7 @@ mkV052 base =
 
 mkV053 : Str -> V ;
 mkV053 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "i" + base_2@(?+?) =>
       let pres1 = base_1 + "i" + base_2 ;
           aor1  = base_1 + "o" + base_2 + "a" ;
@@ -19699,7 +19699,7 @@ mkV053 base =
 
 mkV054 : Str -> V ;
 mkV054 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "j" =>
       let stem = base_1 ;
           aor1 = base_1 + "jta" ;
@@ -19723,7 +19723,7 @@ mkV054 base =
 
 mkV055 : Str -> V ;
 mkV055 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "em" =>
       let pres1 = base_1 + "em" ;
           aor1  = base_1 + "a" ;
@@ -19748,7 +19748,7 @@ mkV055 base =
 
 mkV056 : Str -> V ;
 mkV056 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "j" =>
       let stem = base_1 ;
           aor1 = base_1 + "na" ;
@@ -19773,7 +19773,7 @@ mkV056 base =
 
 mkV057 : Str -> V ;
 mkV057 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "n" =>
       let pres1 = base_1 + "n" ;
           aor1  = base_1 + "u" ;
@@ -19798,7 +19798,7 @@ mkV057 base =
 
 mkV058 : Str -> V ;
 mkV058 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "sh" + base_2@? =>
       let pres1 = base_1 + "sh" + base_2 ;
           aor1  = pres1 ;               -- as in your original
@@ -19844,7 +19844,7 @@ mkV059 base_1 =
 
 mkV060 : Str -> V ;
 mkV060 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "je" + base_2@(?+?) =>
       let pres1 = base_1 + "je" + base_2 ;
           aor1  = base_1 + "o"  + base_2 + "ja" ;
@@ -19869,16 +19869,16 @@ mkV060 base =
 -- Updated: fill full paradigms (present/aorist/imperfect/imperative/optative/admirative + perfect-as-"Past")
 -- Assumptions aligned to standard descriptions:
 --  * Active perfect = kam + participle
---  * Non-active (mediopassive) perfect = jam + participle 
+--  * Non-active (mediopassive) perfect = jam + participle
 --  * Non-active aorist uses clitic "u " + active aorist, but 3SG has no ending: u hap :
---  * Non-active present/imperfect are synthetic (-em/-esh/-et…, -esha/-eshe/-ej…) 
---  * Optative endings: -a, -, -të, -im, -i, -in; 3SG loses sh for -sh/-fsh; -ç -> s in 3SG 
---  * Admirative: short participle + (k)am/ke/ka/kemi/keni/kan; imperfect admirative uses -kësha etc 
---  * Perfect optative: optative of kam (or jam if non-active) + participle 
+--  * Non-active present/imperfect are synthetic (-em/-esh/-et…, -esha/-eshe/-ej…)
+--  * Optative endings: -a, -, -të, -im, -i, -in; 3SG loses sh for -sh/-fsh; -ç -> s in 3SG
+--  * Admirative: short participle + (k)am/ke/ka/kemi/keni/kan; imperfect admirative uses -kësha etc
+--  * Perfect optative: optative of kam (or jam if non-active) + participle
 
 mkV061 : Str -> V ;
 mkV061 base =
-  case base of {
+  case <base : Str> of {
     stem+"em" =>
       let part : Str = stem+"ur" ;
           short : Str = <case part of {
@@ -20008,7 +20008,7 @@ mkV062 stem =
         p+"ë" => p ;
         _     => part
       } : Str> ;
-      optSuf : Str = <case stem of {
+      optSuf : Str = <case <stem : Str> of {
         _+"n"  => "ç" ;
         _+"sh" => "ç" ;
         _      => "sh"
@@ -20072,7 +20072,7 @@ mkV062 stem =
 
 mkV063 : Str -> V ;
 mkV063 base =
-  case base of {
+  case <base : Str> of {
     pfx+"i"+mid@?+"em" =>
       let presStem : Str = pfx+"i"+mid ;
           aorStem  : Str = pfx+"o"+mid+"r" ;
@@ -20139,7 +20139,7 @@ mkV063 base =
 
 mkV064 : Str -> V ;
 mkV064 base =
-  case base of {
+  case <base : Str> of {
     pfx+"a"+sfx@? =>
       let presStem : Str = pfx+"a"+sfx ;
           aorStem  : Str = pfx+"e"+sfx ;
@@ -20194,7 +20194,7 @@ mkV064 base =
 
 mkV065 : Str -> V ;
 mkV065 base =
-  case base of {
+  case <base : Str> of {
     pfx+"sh"+sfx@? =>
       let presStem : Str = pfx+"sh"+sfx ;
           aorStem  : Str = pfx+"r"+sfx ;
@@ -20249,7 +20249,7 @@ mkV065 base =
 
 mkV066 : Str -> V ;
 mkV066 base =
-  case base of {
+  case <base : Str> of {
     "hë"+x+"a" =>
       let aorStem : Str = "hë"+x ;      -- hëngr-
           part    : Str = x+"ënë" ;     -- ngrënë
@@ -20312,7 +20312,7 @@ mkV066 base =
 
 mkV067 : Str -> V ;
 mkV067 base =
-  case base of {
+  case <base : Str> of {
     pfx+"ë"+sfx@? =>
       let presStem : Str = pfx+"ë"+sfx ;
           aorStem  : Str = pfx+sfx ;
@@ -20367,14 +20367,14 @@ mkV067 base =
 
 mkV068 : Str -> V ;
 mkV068 base =
-  case base of {
+  case <base : Str> of {
     root+"j" =>
       let part  : Str = root+"rë" ;
           short : Str = <case part of { p+"ë" => p ; p+"r" => p ; _ => part } : Str> ;
           aorT  : Str = root+"t" ;
       in lin V {
         Indicative = table {
-          Pres => table { -- laj-type: laj/lan/lan/lajmë/lani/lanë 
+          Pres => table { -- laj-type: laj/lan/lan/lajmë/lani/lanë
             Sg => table { P1 => root+"j" ; P2 => root+"n" ; P3 => root+"n" } ;
             Pl => table { P1 => root+"jmë" ; P2 => root+"ni" ; P3 => root+"në" }
           } ;
@@ -20421,7 +20421,7 @@ mkV068 base =
 
 mkV069 : Str -> V ;
 mkV069 base =
-  case base of {
+  case <base : Str> of {
     root+"n" =>
       let pres2 : Str = root+"n" ;
           part  : Str = root+"të" ;
@@ -20476,38 +20476,38 @@ mkV069 base =
 
 mkV070 : Str -> V ;
 mkV070 base =
-  case base of {
+  case <base : Str> of {
     root+"on" =>
       let part  : Str = root+"uar" ;
           short : Str = root+"ua" ; -- punuar -> punua-
       in lin V {
         Indicative = table {
-          Pres => table { -- punoj/punon/punon/punojmë/punoni/punojnë 
+          Pres => table { -- punoj/punon/punon/punojmë/punoni/punojnë
             Sg => table { P1 => root+"oj" ; P2 => root+"on" ; P3 => root+"on" } ;
             Pl => table { P1 => root+"ojmë" ; P2 => root+"oni" ; P3 => root+"ojnë" }
           } ;
-          Past => table { -- kam punuar 
+          Past => table { -- kam punuar
             Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
             Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
           } ;
-          Aorist => table { -- punova/punove/punoi/punuam/punuat/punuan 
+          Aorist => table { -- punova/punove/punoi/punuam/punuat/punuan
             Sg => table { P1 => root+"ova" ; P2 => root+"ove" ; P3 => root+"oi" } ;
             Pl => table { P1 => root+"uam" ; P2 => root+"uat" ; P3 => root+"uan" }
           } ;
-          Imperfect => table { -- punoja/punoje/punonte/punonim/punonit/punonin 
+          Imperfect => table { -- punoja/punoje/punonte/punonim/punonit/punonin
             Sg => table { P1 => root+"oja" ; P2 => root+"oje" ; P3 => root+"onte" } ;
             Pl => table { P1 => root+"onim" ; P2 => root+"onit" ; P3 => root+"onin" }
           }
         } ;
 
-        Imperative = table { -- puno / punoni 
+        Imperative = table { -- puno / punoni
           Sg => root+"o" ;
           Pl => root+"oni"
         } ;
 
         participle = part ;
 
-        pres_optative = table { -- punofsha... 
+        pres_optative = table { -- punofsha...
           Sg => table { P1 => root+"ofsha" ; P2 => root+"ofsh" ; P3 => root+"oftë" } ;
           Pl => table { P1 => root+"ofshim" ; P2 => root+"ofshi" ; P3 => root+"ofshin" }
         } ;
@@ -20517,7 +20517,7 @@ mkV070 base =
           Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
         } ;
 
-        pres_admirative = table { -- punuakam... 
+        pres_admirative = table { -- punuakam...
           Sg => table { P1 => short+"kam" ; P2 => short+"ke" ; P3 => short+"ka" } ;
           Pl => table { P1 => short+"kemi" ; P2 => short+"keni" ; P3 => short+"kan" }
         } ;
@@ -20532,7 +20532,7 @@ mkV070 base =
 
 mkV071 : Str -> V ;
 mkV071 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"j" => lin V
       { Indicative = table {
                        Pres => table {
@@ -20635,7 +20635,7 @@ mkV071 base =
 
 mkV072 : Str -> V ;
 mkV072 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"s" => lin V
       { Indicative = table {
                        Pres => table {
@@ -20738,7 +20738,7 @@ mkV072 base =
 
 mkV073 : Str -> V ;
 mkV073 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@?+"em" => lin V
       { Indicative = table {
                        Pres => table {
@@ -20841,7 +20841,7 @@ mkV073 base =
 
 mkV074 : Str -> V ;
 mkV074 base =
-  case base of {
+  case <base : Str> of {
     base_1+"in" => lin V
       { Indicative = table {
                        Pres => table {
@@ -20944,7 +20944,7 @@ mkV074 base =
 
 mkV075 : Str -> V ;
 mkV075 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin V
       { Indicative = table {
                        Pres => table {
@@ -21047,7 +21047,7 @@ mkV075 base =
 
 mkV076 : Str -> V ;
 mkV076 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@(?+?) => lin V
       { Indicative = table {
                        Pres => table {
@@ -21150,7 +21150,7 @@ mkV076 base =
 
 mkV077 : Str -> V ;
 mkV077 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@?+"j" => lin V
       { Indicative = table {
                        Pres => table {
@@ -21253,7 +21253,7 @@ mkV077 base =
 
 mkV078 : Str -> V ;
 mkV078 base =
-  case base of {
+  case <base : Str> of {
     base_1+"et" => lin V
       { Indicative = table {
                        Pres => table {
@@ -21356,7 +21356,7 @@ mkV078 base =
 
 mkV079 : Str -> V ;
 mkV079 base =
-  case base of {
+  case <base : Str> of {
     base_1+"y"+base_2@?+"b" => lin V
       { Indicative = table {
                        Pres => table {
@@ -21459,7 +21459,7 @@ mkV079 base =
 
 mkV080 : Str -> V ;
 mkV080 base =
-  case base of {
+  case <base : Str> of {
     base_1+"s" => lin V
       { Indicative = table {
                        Pres => table {
@@ -21594,14 +21594,14 @@ oper
 
   mkImperativeVowelStem : Str -> (Number => Str) = \stem ->
     table {
-      Sg => <case stem of { _ + "o" => stem ; _ + "e" => stem ; _ => stem + "j" } : Str> ;
+      Sg => <case <stem : Str> of { _ + "o" => stem ; _ + "e" => stem ; _ => stem + "j" } : Str> ;
       Pl => stem + "ni"
     } ;
 -- updated paradigms
 
 mkV081 : Str -> V ;
 mkV081 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "j" =>
       let stem = base_1 ;
           pple = base_1 + "va" ;            -- kept as you had it
@@ -21625,7 +21625,7 @@ mkV081 base =
 
 mkV082 : Str -> V ;
 mkV082 base =
-  case base of {
+  case <base : Str> of {
     base_1 + base_2@? + "j" =>
       let stem = base_1 + base_2 ;
           aor1 = stem + "jta" ;             -- FIX: jti -> jta
@@ -21649,7 +21649,7 @@ mkV082 base =
 
 mkV083 : Str -> V ;
 mkV083 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "e" =>
       let baseE = base_1 + "e" ;
           stem  = baseE ;                   -- vowel-stem for imperfect/imperative heuristics
@@ -21674,7 +21674,7 @@ mkV083 base =
 
 mkV084 : Str -> V ;
 mkV084 base =
-  case base of {
+  case <base : Str> of {
     "e" + base_1 + "a" =>
       let aor1 = "e" + base_1 + "a" ;
           pple = "a" + base_1 + "ur"
@@ -21703,7 +21703,7 @@ mkV084 base =
 
 mkV085 : Str -> V ;
 mkV085 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "j" =>
       let stem = base_1 ;
           aor1 = base_1 + "na" ;
@@ -21727,7 +21727,7 @@ mkV085 base =
 
 mkV086 : Str -> V ;
 mkV086 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ej" =>
       let stem = base_1 + "e" ;
           aor1 = base_1 + "eva" ;
@@ -21751,7 +21751,7 @@ mkV086 base =
 
 mkV087 : Str -> V ;
 mkV087 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "h" + base_2@? + "ë" + base_3@(?+?) + "as" =>
       let pres1 = base_1 + "h" + base_2 + "ë" + base_3 + "as" ;
           aor1  = base_1 + "h" + base_2 + "e" + base_3 + "a" ;
@@ -21781,7 +21781,7 @@ mkV087 base =
 
 mkV088 : Str -> V ;
 mkV088 base =
-  case base of {
+  case <base : Str> of {
     "vrokth" => lin V {
       Indicative = table {
         Pres => table {
@@ -21825,7 +21825,7 @@ mkV088 base =
 
 mkV089 : Str -> V ;
 mkV089 base =
-  case base of {
+  case <base : Str> of {
     base_1 + "ë" + base_2@(?+?) + "as" =>
       let pres1 = base_1 + "ë" + base_2 + "as" ;
           aor1  = base_1 + "i" + base_2 + "a" ;
@@ -21855,7 +21855,7 @@ mkV089 base =
 
 mkV090 : Str -> V ;
 mkV090 base =
-  case base of {
+  case <base : Str> of {
     base_1 + base_2@? + "j" =>
       let stem = base_1 + base_2 ;
           aor1  = base_1 + "u" + base_2 + "jta" ;
@@ -21879,7 +21879,7 @@ mkV090 base =
 
 mkV091 : Str -> V ;
 mkV091 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ie"+base_2@? =>
       let
         presStem = base_1+"ie" ;           -- e.g. zie-
@@ -22003,7 +22003,7 @@ mkV091 base =
 
 mkV092 : Str -> V ;
 mkV092 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ij" =>
       let
         presStem = base_1+"i" ;
@@ -22127,7 +22127,7 @@ mkV092 base =
 
 mkV093 : Str -> V ;
 mkV093 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presStem = base_1 ;
@@ -22251,7 +22251,7 @@ mkV093 base =
 
 mkV094 : Str -> V ;
 mkV094 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presStem = base_1 ;
@@ -22375,7 +22375,7 @@ mkV094 base =
 
 mkV095 : Str -> V ;
 mkV095 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presStem = base_1 ;
@@ -22499,7 +22499,7 @@ mkV095 base =
 
 mkV096 : Str -> V ;
 mkV096 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ohem" =>
       let
         -- present/imperfect are non-active (ohem family)
@@ -22623,7 +22623,7 @@ mkV096 base =
 
 mkV097 : Str -> V ;
 mkV097 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"hem" =>
       let
         part    = base_1+"y"+base_2+"r" ;
@@ -22746,7 +22746,7 @@ mkV097 base =
 
 mkV098 : Str -> V ;
 mkV098 base =
-  case base of {
+  case <base : Str> of {
     base_1+"at"+base_2@? =>
       let
         presStem = base_1+"at"+base_2 ;
@@ -22870,7 +22870,7 @@ mkV098 base =
 
 mkV099 : Str -> V ;
 mkV099 base =
-  case base of {
+  case <base : Str> of {
     base_1+"r"+base_2@(?+?+?+?) =>
       let
         presStem = base_1+"r"+base_2 ;
@@ -22994,7 +22994,7 @@ mkV099 base =
 
 mkV100 : Str -> V ;
 mkV100 base =
-  case base of {
+  case <base : Str> of {
     base_1+"s" =>
       let
         presStem = base_1+"s" ;
@@ -23169,7 +23169,7 @@ oper
 
 mkV101 : Str -> V ;
 mkV101 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ua"+base_2@?+"j" =>
       let
         presJ    = base_1+"ua"+base_2+"j" ;
@@ -23196,7 +23196,7 @@ mkV101 base =
 
 mkV102 : Str -> V ;
 mkV102 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presJ    = base_1+"j" ;
@@ -23223,7 +23223,7 @@ mkV102 base =
 
 mkV103 : Str -> V ;
 mkV103 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presJ    = base_1+"j" ;
@@ -23250,7 +23250,7 @@ mkV103 base =
 
 mkV104 : Str -> V ;
 mkV104 base =
-  case base of {
+  case <base : Str> of {
     base_1+"on" =>
       let
         root    = base_1 ;
@@ -23276,7 +23276,7 @@ mkV104 base =
 
 mkV105 : Str -> V ;
 mkV105 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         presJ    = base_1+"j" ;
@@ -23303,7 +23303,7 @@ mkV105 base =
 
 mkV106 : Str -> V ;
 mkV106 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" =>
       let
         pres1  = base_1+"ë" ;
@@ -23328,7 +23328,7 @@ mkV106 base =
 
 mkV107 : Str -> V ;
 mkV107 base =
-  case base of {
+  case <base : Str> of {
     "n"+base_1 =>
       let
         pres1  = "n"+base_1 ;
@@ -23353,7 +23353,7 @@ mkV107 base =
 
 mkV108 : Str -> V ;
 mkV108 base =
-  case base of {
+  case <base : Str> of {
     base_1+"oj" =>
       let
         root    = base_1 ;
@@ -23380,7 +23380,7 @@ mkV108 base =
 
 mkV109 : Str -> V ;
 mkV109 base =
-  case base of {
+  case <base : Str> of {
     base_1+"oj" =>
       let
         root    = base_1 ;
@@ -23407,7 +23407,7 @@ mkV109 base =
 
 mkV110 : Str -> V ;
 mkV110 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ih"+base_2@?+"m" =>
       let
         pres1   = base_1+"ih"+base_2+"m" ;
@@ -23519,7 +23519,7 @@ mkV111 base_1 =
 
 mkV112 : Str -> V ;
 mkV112 base =
-  case base of {
+  case <base : Str> of {
     base_1+"a"+base_2@(?+?) => lin V
       { Indicative = table {
                        Pres => table {
@@ -23607,7 +23607,7 @@ mkV112 base =
 
 mkV113 : Str -> V ;
 mkV113 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ij" => lin V
       { Indicative = table {
                        Pres => table {
@@ -23865,7 +23865,7 @@ mkV115 base_1 =
 
 mkV116 : Str -> V ;
 mkV116 base =
-  case base of {
+  case <base : Str> of {
     base_1+"hem" => lin V
       { Indicative = table {
                        Pres => table {
@@ -23953,7 +23953,7 @@ mkV116 base =
 
 mkV117 : Str -> V ;
 mkV117 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@(?+?+?) => lin V
       { Indicative = table {
                        Pres => table {
@@ -24041,7 +24041,7 @@ mkV117 base =
 
 mkV118 : Str -> V ;
 mkV118 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ë" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24129,7 +24129,7 @@ mkV118 base =
 
 mkV119 : Str -> V ;
 mkV119 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ej" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24217,7 +24217,7 @@ mkV119 base =
 
 mkV120 : Str -> V ;
 mkV120 base =
-  case base of {
+  case <base : Str> of {
     base_1+"h"+base_2@(?+?+?) => lin V
       { Indicative = table {
                        Pres => table {
@@ -24304,7 +24304,7 @@ mkV120 base =
 
 mkV121 : Str -> V ;
 mkV121 base =
-  case base of {
+  case <base : Str> of {
     base_1+"oj" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24419,7 +24419,7 @@ mkV121 base =
 
 mkV122 : Str -> V ;
 mkV122 base =
-  case base of {
+  case <base : Str> of {
     base_1+"âj" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24531,7 +24531,7 @@ mkV122 base =
 
 mkV123 : Str -> V ;
 mkV123 base =
-  case base of {
+  case <base : Str> of {
     base_1+"i"+base_2@?+"et" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24642,7 +24642,7 @@ mkV123 base =
 
 mkV124 : Str -> V ;
 mkV124 base =
-  case base of {
+  case <base : Str> of {
     base_1+"et" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24753,7 +24753,7 @@ mkV124 base =
 
 mkV125 : Str -> V ;
 mkV125 base =
-  case base of {
+  case <base : Str> of {
     base_1+base_2@?+"rrtë" => lin V
       { Indicative = table {
                        Pres => table {
@@ -24864,7 +24864,7 @@ mkV125 base =
 
 mkV126 : Str -> V ;
 mkV126 base =
-  case base of {
+  case <base : Str> of {
     base_1+"ash"+base_2@? => lin V
       { Indicative = table {
                        Pres => table {
@@ -25085,7 +25085,7 @@ mkV127 base_1 =
 -- mkV128 kept as-is (fully suppletive in your snippet)
 mkV128 : Str -> V ;
 mkV128 base =
-  case base of {
+  case <base : Str> of {
     "venj" => lin V
       { Indicative = table {
                        Pres => table {
@@ -25197,7 +25197,7 @@ mkV128 base =
 -- mkV129 / mkV130 left unchanged in your snippet (you had no reliable stem alternations encoded there)
 mkV129 : Str -> V ;
 mkV129 base =
-  case base of {
+  case <base : Str> of {
     base_1+"n" => lin V
       { Indicative = table {
                        Pres => table {
@@ -25308,7 +25308,7 @@ mkV129 base =
 
 mkV130 : Str -> V ;
 mkV130 base =
-  case base of {
+  case <base : Str> of {
     base_1+"nj" => lin V
       { Indicative = table {
                        Pres => table {
@@ -25419,7 +25419,7 @@ mkV130 base =
 
 mkV131 : Str -> V ;
 mkV131 base =
-  case base of {
+  case <base : Str> of {
     base_1+"oj" =>
       let
         stem : Str = base_1 ;
@@ -25495,7 +25495,7 @@ mkV131 base =
 
 mkV132 : Str -> V ;
 mkV132 base =
-  case base of {
+  case <base : Str> of {
     base_0+"j" =>
       let
         pres1 : Str = base_0+"j" ;
@@ -25564,7 +25564,7 @@ mkV132 base =
 
 mkV133 : Str -> V ;
 mkV133 base =
-  case base of {
+  case <base : Str> of {
     base_1+"j" =>
       let
         stem : Str = base_1 ;
@@ -25699,7 +25699,7 @@ mkV134 base_1 =
 
 mkV135 : Str -> V ;
 mkV135 base =
-  case base of {
+  case <base : Str> of {
     base_1+"r"+base_2@(?+?+?) =>
       let
         presS : Str = base_1+"r"+base_2 ;

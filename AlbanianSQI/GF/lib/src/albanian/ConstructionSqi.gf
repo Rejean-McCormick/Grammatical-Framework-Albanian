@@ -12,14 +12,14 @@ concrete ConstructionSqi of Construction = CatSqi **
       mkNoun w w w w w w w w w w w w w w w w g ;
 
     mkNPConst : Gender -> Number -> Str -> NP = \g,n,w -> lin NP {
-      s=\\_=>w; acc_clit=[]; dat_clit=[]; a=agrgP3 g n
+      s=\\_=>w; acc_clit=[]; dat_clit=[]; a=agrgP3 g n; isPron=False
     } ;
 
     baseVP : Verb -> VP = emptyVP ;
     addPost : VP -> (Agr => Str) -> VP = appendVP ;
 
     mkPred : Str -> Agr -> VP -> Cl = \subj,a,vp -> lin Cl {
-      s=\t,ant,pol=>mkClause subj a vp t ant pol
+      s=\\t,ant,pol =>mkClause subj a vp t ant pol
     } ;
 
     copVP : (Agr => Str) -> VP = \x -> appendVP (emptyVP (lin Verb I.jam_V)) x ;
@@ -112,7 +112,7 @@ concrete ConstructionSqi of Construction = CatSqi **
 
     n_units_of_NP c cn np = lin NP {
       s=\\cas=>c.s ++ cn.s!Indef!cas!Pl ++ "prej" ++ np.s!Ablat;
-      acc_clit=[]; dat_clit=[]; a=agrgP3 Masc Pl
+      acc_clit=[]; dat_clit=[]; a=agrgP3 Masc Pl; isPron=False
     } ;
 
     n_unit_CN c unit cn = {

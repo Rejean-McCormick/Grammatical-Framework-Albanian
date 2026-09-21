@@ -19,19 +19,19 @@ It complements those sources by recording what has already been learned from the
 
 ## Companion control documents
 
-This log is intentionally concise compared with the larger operational files. It should now be read together with the following documents:
+This log is intentionally concise compared with the larger operational files. For the **active bundle**, read it together with:
 
-- `ALBANIAN_HELPER_REGISTRY.md`
-- `ALBANIAN_SHALLOW_CATEGORY_CONSTRUCTOR_MATRIX.md`
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`
+- `CURRENT_REPAIR_STATE.md`
 - `ALBANIAN_SYMBOL_STATUS_LEDGER.md`
-- `ALBANIAN_STALE_COMMENT_TRACKER.md`
-- `ALBANIAN_MODULE_EXTRACTION_COVERAGE.md`
-- `ALBANIAN_CATEGORY_AND_LINCAT_REFERENCE.md`
-- `ALBANIAN_SYNTAX_AND_CONSTRUCTOR_RULES.md`
-- `ALBANIAN_IMPLEMENTATION_PATTERNS.md`
 - `ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`
-- `ALBANIAN_FORBIDDEN_PATTERNS_AND_ANTI_DRIFT_RULES.md`
+- `ALBANIAN_EXTENDSQI_FINAL_TARGET.md`
+- `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md`
+- `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`
 - `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`
+- `ALBANIAN_OPEN_QUESTIONS.md`
+
+Older decisions below may cite companion documents from earlier documentation sets that are **not present in this bundle**. Those citations are historical provenance only; they are not prerequisites for current work.
 
 The principle is:
 
@@ -584,7 +584,7 @@ Short machine-readable key.
 ---
 
 ## ALB-DEC-022
-**Status:** accepted  
+**Status:** superseded as an unconditional current ownership rule by ALB-DEC-044; historical PMCFG/architecture evidence retained  
 **Area:** `ExtendSqi` architecture  
 **Decision:** `ExtendSqi.gf` must remain a thin coordinator; companion modules own Albanian-specific subsystem logic; VPS/VPI/VPS2/VPI2/list-family machinery remains inherited in this cycle.
 
@@ -872,7 +872,7 @@ and then fails while generating:
 
 ---
 ## ALB-DEC-033
-**Status:** provisional validation of an accepted architecture  
+**Status:** superseded as the current ownership prescription by ALB-DEC-044; historical compiler experiment retained  
 **Area:** `ExtendSqi` / inherited VPS-VPI family / coordinator drift  
 **Decision:** Reconcile the live coordinator with accepted ALB-DEC-022: the VPS/VPI/VPS2/VPI2/list family remains inherited from `ExtendFunctor`; `ExtendSqi.gf` keeps only documented boundary `lincat` declarations and must not subtract or locally implement this family.
 
@@ -1155,5 +1155,82 @@ SlashBareV2S = SlashV2S ;
 4. if the warnings disappear but the final PMCFG crash remains, keep the family only if structurally clean and continue backend minimization.
 
 **Linguistic status:** provisional; compile success does not validate Albanian coordination semantics.
+
+---
+
+## ALB-DEC-042
+**Status:** accepted / current operational reset  
+**Date:** 2026-09-21  
+**Area:** whole-language compiler recovery after mega-update
+
+**Decision:** Supersede the pre-FIX22C fix17/fix18 repair order as the active work sequence. Treat FIX22C as the last known compiler-stable historical baseline and route the current mega-update through syntax-integrity recovery, Global Scan causality classification, compiler-baseline restoration, and only then linguistic/capability completion.
+
+**Evidence — Wordbench run `20260921_151446`:**
+- 47 language-folder `.gf` files scanned;
+- 5 PASS, 42 FAIL, 0 ERROR, 0 TIMEOUT;
+- every failed compilation currently reports the same first dependency error at `ResSqi.gf:347:7`;
+- GF diagnostic: `Unexpected token ']'`, `Expected: String`;
+- scenarios seen: 0;
+- automatic scan does not yet include `SyntaxSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, or `TrySqi.gf` in the parent source directory.
+
+**Consequence:** the 42 failures are not accepted as 42 independent Albanian bugs. `ResSqi` is the first confirmed direct blocker; downstream counts must be reclassified as evidence improves.
+
+**Operational authority:** `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`.
+
+---
+
+## ALB-DEC-043
+**Status:** accepted syntax invariant / model-language corroboration  
+**Date:** 2026-09-21  
+**Area:** GF notation integrity
+
+**Decision:** Enforce the following notation distinction before any category or linguistic redesign:
+
+```gf
+\x -> expr       -- ordinary function abstraction
+\\x => expr      -- table abstraction
+"" => expr       -- empty Str pattern
+_ => []          -- empty surface result
+```
+
+**Current source evidence:** `ResSqi.teWithClitic` uses `[] =>` while its scrutinee is `Str`, producing the current first parser error. `VerbSqi` contains two additional visible `[] =>` sites whose scrutinees are also `Str` and must be checked after the dependency blocker is removed.
+
+**Static-scan evidence:** 139 `single_slash_eq` hits across 17 files and 9 `untyped_case_str_pat` hits require typed review.
+
+**Model-language corroboration:** the supplied model-language bundle contains extensive double-backslash table abstractions and ordinary `->` lambdas, but no single-backslash `\x =>` form and no `[] =>` pattern in the supplied sources. This confirms an engineering convention; it does not establish Albanian linguistic realization.
+
+**Repair rule:** never perform a blind global replacement. The local expected type or case-scrutinee type must justify each syntax edit.
+
+---
+
+## ALB-DEC-044
+**Status:** accepted / ownership decision reopened; final owner pending evidence  
+**Date:** 2026-09-21  
+**Area:** `ExtendSqi` / VPS-VPI-VPS2-VPI2 family ownership
+
+**Decision:** The old inheritance-only prescription from ALB-DEC-022/033 is no longer an unconditional rule for the post-mega-update source. The current source has explicitly reopened the entire VPS/VPI/VPS2/VPI2/list family by subtracting it from `ExtendFunctor`, declaring local richer lincats, and implementing the family in `ExtendSqi.gf`. That source fact does **not** by itself make local ownership correct.
+
+**Current source contradiction:** the same `ExtendSqi.gf` still contains header commentary saying the family remains inherited. Therefore comments, subtraction/wiring, and architecture docs are not aligned.
+
+**Final decision boundary after compiler recovery:**
+
+1. choose **INHERIT** if the exact `ExtendFunctor` family is category-correct, sufficiently covered, and behaviorally adequate for Albanian; or
+2. choose **LOCAL_COMPANION** if exact Albanian lincats and linguistic behavior require richer agreement/complement/clitic/embedded-verbal structure. In that case substantive family logic belongs in a dedicated companion such as `ExtendSqiVPS.gf`, while `ExtendSqi.gf` stays a thin coordinator.
+
+**Not allowed:**
+- treating current coordinator-local code as accepted merely because it exists;
+- reverting to inheritance merely because the pre-FIX22C experiment compiled farther;
+- mixed one-off ownership across family members without an explicit typed boundary reason;
+- deciding the family while lower-level syntax corruption still prevents a meaningful current compiler/PMCFG comparison.
+
+**Evidence required for closure:**
+- syntax/compiler baseline restored;
+- exact abstract and `ExtendFunctor` coverage inspected;
+- current Albanian lincats/producers/consumers inspected;
+- both ownership alternatives evaluated at the family boundary when necessary;
+- clean PMCFG/compile result;
+- targeted Albanian scenarios for agreement, complementation, coordination, clitic interaction, and embedded verbal behavior.
+
+**Supersedes:** ALB-DEC-022/033 only as **unconditional current ownership prescriptions**. Their historical compiler observations remain valid provenance for the snapshots on which they were recorded.
 
 ---

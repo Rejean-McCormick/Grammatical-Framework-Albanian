@@ -9,6 +9,8 @@
 
 ## Status
 
+> **Historical milestone record.** This file describes the exact FIX22C / v0.1.0 baseline. It is not the status of later post-baseline working trees. As of 2026-09-21, the mega-update working snapshot has a syntax-level compile regression documented in `../CURRENT_REPAIR_STATE.md`. Do not rewrite this milestone to match later failures; use it as a regression baseline.
+
 The Albanian RGL has reached a compiler-stable core baseline.
 
 The main grammar, lexicon, construction layer, extension layer, public language facade, and top-level grammar compile successfully with GF 3.12.
@@ -168,7 +170,9 @@ It does **not** yet establish:
 
 ## Core policy after v0.1.0
 
-The compiler-stable core is now treated as frozen.
+The compiler-stable core is a protected regression baseline, not an absolute ban on foundational changes. A later change may reopen `ResSqi`, core categories, or morphology when concrete evidence shows a defect, but the historical FIX22C gate must then be re-established or the deviation explicitly recorded.
+
+The baseline should otherwise be treated as frozen.
 
 Changes to foundational representations such as `ResSqi`, core category representations, or basic morphology should be made only when a concrete test or higher-level implementation exposes a defect.
 
@@ -178,7 +182,9 @@ Development now moves upward toward capability completion.
 
 ## Next phase — Albanian RGL Completion
 
-The next development phase focuses on closing the gap with mature RGL languages such as English.
+This section records the capability priorities anticipated **at the FIX22C milestone**. It is not the current patch order for a later working tree. For the 2026-09-21 mega-update snapshot, follow `../ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` first.
+
+The post-baseline capability phase focuses on closing the gap with mature RGL languages such as English.
 
 Priorities:
 

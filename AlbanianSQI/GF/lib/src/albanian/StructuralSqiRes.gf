@@ -13,7 +13,8 @@ oper
       } ;
       acc_clit = [] ;
       dat_clit = [] ;
-      a = {gn = gn ; p = p}
+      a = {gn = gn ; p = p} ;
+      isPron = False
     } ;
 
   mkNPConstP3 : Str -> CatSqi.NP =

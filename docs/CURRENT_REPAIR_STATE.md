@@ -1,118 +1,164 @@
 # CURRENT_REPAIR_STATE
 
 Status: **live repair state — update after every evidence-changing Wordbench run**  
-Last evidence update: 2026-09-18  
-Target: `GF/lib/src/albanian/ExtendSqi.gf`
+Last evidence update: **2026-09-21**  
+Current phase: **post-mega-update syntax-integrity recovery**  
+Operational sequence: `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`
 
-This file is intentionally short and volatile. It records **what is true in the latest reproducible run**, while the override matrix records stable ownership and the decision log records history.
+This file records only the latest reproducible working-state facts. Historical FIX22C evidence remains valid for its exact earlier snapshot, but it must not be mistaken for the compiler state of the current post-update source.
 
 ## 1. Source / tool lock
 
-- GF: `3.12.0`
-- GF executable used by Wordbench: `C:/mycode/Grammatical_Framework/gf-3.12-windows/gf.exe`
-- GF build commit previously recorded for this repair cycle: `fa2826d`
-- RGL root: `C:/mycode/Grammatical_Framework/gf-rgl`
-- pinned RGL commit used by the AI Compendium: `62c5030be182fdb1289dd472a28027fc5718dcde`
-- last compiler-validated cumulative Albanian repair state: through **fix17**
-- fix17 overlay SHA-256: `2e99c62ef82eed8b7f06c140785e61379044ee9f6e96909992672e9ce1f0aa8d`
-- active source candidate: **fix18 / complete `Comp` + `Imp` list boundary family — NOT YET RUN**
+- GF: `3.12`
+- GF executable in latest Wordbench artifact: `C:/mycode/Grammatical_Framework/gf-3.12-windows/gf.exe`
+- RGL root in latest Wordbench artifact: `C:/mycode/Grammatical_Framework/gf-rgl`
+- historical last-known compiler-stable Albanian baseline: **FIX22C / `albanian-rgl-core-v0.1.0`**
+- current source state: **mega-update after FIX22C; not compiler-stable in the latest Global Scan**
+- latest Wordbench evidence: run `20260921_151446`, mode `diagnostic`, Global Scan
 
-If any of these source/tool facts change, previous compiler evidence becomes stale until rerun.
+If the source snapshot, GF version, RGL revision, or search paths change, current compiler claims must be rerun.
 
-## 2. Latest Wordbench evidence
+## 2. Latest Wordbench Global Scan
 
-Run: `20260918_210629`  
-Mode: `quick`  
-Target: `ExtendSqi.gf`  
-Overall status: **FAIL**  
-`ExtendSqi.gfo`: **not produced**; only a temporary `ExtendSqi.gfo.tmp...` artifact exists
-
-The raw verbose PMCFG tail is authoritative. Wordbench's summarized `OTHER: Voc` label remains a verbose-parser artifact rather than the current semantic blocker.
-
-### Relevant completed entries
+Run: `20260921_151446`  
+Mode: `diagnostic` / Global Scan  
+GF: `3.12`  
+Scenarios: `0`
 
 ```text
-+ PossPronRNP 324 (28,28)
-...
-+ SlashBareV2S 1 (1,1)
-+ StrandQuestSlash 1 (1,1)
-+ StrandRelSlash 1 (1,1)
-...
-+ youPolPl_Pron 1 (1,1)
-<GeneratePMCFG non-exhaustive-pattern crash after the final named entry>
+Files included: 47
+Files OK:        5
+Files failed:   42
+Files errored:   0
+Files skipped:   0
+Timeouts:        0
 ```
 
-Therefore:
-
-- fix16 `PossPronRNP` remains **PMCFG-confirmed structurally** as `(28,28)`;
-- fix17 `SlashBareV2S` is **PMCFG-confirmed structurally** as `(1,1)`;
-- GF now reaches the end of the named PMCFG declarations before crashing;
-- the six missing `Comp`/`Imp` list linearizations are the first unresolved structural family, but their causal role in the final PMCFG crash is **not yet proven**.
-
-## 3. Current warning state
-
-GF 3.12 reports exactly this boundary family:
+The five passing files are:
 
 ```text
-Warning: no linearization of BaseComp
-Warning: no linearization of BaseImp
-Warning: no linearization of ConjComp
-Warning: no linearization of ConjImp
-Warning: no linearization of ConsComp
-Warning: no linearization of ConsImp
+AllSqiAbs.gf
+ExtraSqiAbs.gf
+IrregSqiAbs.gf
+TenseSqi.gf
+TestAbs.gf
 ```
 
-No current `missing lock_*` cluster is present.
+The scan currently covers the `.gf` files in `GF/lib/src/albanian`. The four parent-directory API facades are not in this 47-file census and remain a required supplemental compile set:
 
-## 4. Current active symbol states
+```text
+SyntaxSqi.gf
+ConstructorsSqi.gf
+SymbolicSqi.gf
+TrySqi.gf
+```
 
-| Symbol/family | Compiler status | Linguistic status | Current rule |
-|---|---|---|---|
-| `FrontComplDirectVS` | `pmcfg_confirmed` | `provisional` | keep fix15 compositional path; direct-speech realization still needs targeted linguistic validation |
-| `PossPronRNP` | `pmcfg_confirmed` `(28,28)` | `provisional` | keep fix16 core-composition path |
-| `SlashBareV2S` | `pmcfg_confirmed` `(1,1)` | `provisional` | keep fix17 inherited `SlashV2S` path; dead local helper may be removed later |
-| VPS/VPI/VPS2/VPI2 inherited family | `pmcfg_incomplete_by_design` (`(0,0)` on `variants {}` members) | `incomplete` | keep inherited this cycle |
-| `Base/Cons/ConjComp` + `Base/Cons/ConjImp` | `not_run_after_change` (previous state: six missing-linearization warnings) | `provisional` | fix18 implements all six as one family in `ExtendSqiScaffolding`, with exact ListComp/ListImp retyping in the coordinator |
-| `ComplGenVV` | `pmcfg_confirmed` | `provisional` | structural reuse accepted; `Ant`/`Pol` semantics remain open |
+## 3. First independent compiler blocker
 
-## 5. Active fix18 probe — `Comp` / `Imp` list boundary family
+All 42 failed target compilations currently converge on the same first compiler diagnostic:
 
-### Evidence gate
+```text
+ResSqi.gf:347:7:
+Syntax error:
+  Unexpected token ']'.
+  Expected: String
+```
 
-1. abstract `Extend` declares `[Comp]{2}`, `ConjComp : Conj -> ListComp -> Comp`, `[Imp]{2}`, and `ConjImp : Conj -> ListImp -> Imp`; generated `Base*`/`Cons*` constructors therefore require concrete linearizations;
-2. pinned `ExtendFunctor` supplies no `Base/Cons/ConjComp` or `Base/Cons/ConjImp` implementation;
-3. Albanian `CatSqi` has `Comp = {s : Str}`, `Imp = {s : Str}`, and `Conj = {s : Str}`;
-4. current `ExtendSqi` already fixes both list boundaries to `{init,last : Str}`;
-5. Albanian `ConjunctionSqi` already uses the exact string-list pattern for `S`, `Adv`, `AdV`, `IAdv`, and `RS`: Base splits first/last, Cons appends comma-separated material into `init`, and Conj joins `init`, conjunction, and `last`;
-6. run `20260918_210629` reaches the end of all named PMCFG entries, while these six linearizations are still explicitly absent;
-7. AI Compendium policy requires one coherent family patch rather than dummy outputs, unrestricted variants, or piecemeal warning suppression.
-
-### fix18 candidate
-
-Implement the six functions together in `ExtendSqiScaffolding.gf`, and keep `ExtendSqi.gf` as category-explicit wiring only:
+Relevant source:
 
 ```gf
-BaseComp / ConsComp / ConjComp
-BaseImp  / ConsImp  / ConjImp
+teWithClitic : Str -> Str = \cl -> case cl of {
+  []  => "të" ;
+  "e" => "ta" ;
+  "i" => "t'i" ;
+  "u" => "t'u" ;
+  _   => "të" ++ cl
+} ;
 ```
 
-The family mirrors current Albanian string-list coordination. `ListComp` and `ListImp` retyping remains in the concrete coordinator so the generated category locks are preserved at the exact boundary.
+Because `cl : Str`, the empty branch must use a `Str` pattern such as `""`, not `[]`.
 
-### Acceptance gate
+**Current causal interpretation:** one confirmed direct parse blocker in `ResSqi` is producing widespread downstream failure. Wordbench 9 reports the 42 as `ambiguous`; that classification is conservative, but the raw logs show the common dependency error explicitly.
 
-Run verbose `Quick -> ExtendSqi.gf`.
+## 4. Syntax-integrity findings to resolve before architectural work
 
-- **Primary PASS:** all six `no linearization` warnings disappear.
-- **Strong PASS:** `ExtendSqi.gfo` is produced and the final PMCFG crash disappears.
-- **Partial PASS:** warnings disappear but PMCFG still crashes after the final named entry; then fix18 is structurally useful but not the complete root-cause repair.
-- **FAIL:** new type/lock errors appear or one of the six linearizations is still missing; revert/minimize the family wiring rather than adding placeholders.
+The Global Scan static layer reports:
 
-## 6. Documentation synchronization after the next run
+| Finding | Count | Interpretation |
+|---|---:|---|
+| `single_slash_eq` | 139 across 17 files | strong candidate for table-abstraction corruption; verify expected type before changing |
+| `untyped_case_str_pat` | 9 | inspect `case` scrutinee type; `[] =>` is invalid when the scrutinee is `Str` |
+| `trailing_spaces` | 26 | hygiene only; not a compiler root |
 
-Always update:
+Canonical notation for current repair:
 
-- this file (`CURRENT_REPAIR_STATE.md`);
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md` for any symbol whose compiler/linguistic status changed;
-- `ALBANIAN_DECISION_LOG.md` when an experiment changes accepted reasoning;
-- `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md` only when stable ownership/acceptance truth changes;
-- `ALBANIAN_OPEN_QUESTIONS.md` only when an unresolved design question is answered or reprioritized.
+```gf
+-- ordinary function
+\x -> expr
+
+-- table value, e.g. Agr => Str
+\\x => expr
+
+-- empty string pattern in case on Str
+"" => expr
+
+-- empty surface result
+_ => []
+```
+
+The supplied model-language sources corroborate this distinction: they use ordinary `->` lambdas and double-backslash `=>` table abstractions; the supplied corpus contains no single-backslash `\x =>` form and no `[] =>` pattern. This evidence is structural corroboration only; the exact Albanian local type remains decisive.
+
+## 5. Known same-family sites after `ResSqi`
+
+`VerbSqi.gf` already contains two visible empty-pattern sites that must be checked once `ResSqi` no longer masks them:
+
+```gf
+case sl.c2.s of {
+  [] => ...
+}
+
+case cli of {
+  [] => ...
+}
+```
+
+Both scrutinees are `Str` in the current source, so they belong to the same syntax-repair family. They do not justify editing unrelated modules before the first blocker is advanced.
+
+## 6. Current work order
+
+Do not resume the old fix17/fix18 or PMCFG-first repair sequence. That sequence was superseded by FIX22C and then by the later mega-update.
+
+Current order:
+
+1. repair confirmed parse/syntax corruption, starting with `ResSqi`;
+2. verify and repair `single_slash_eq` sites by expected type, never by blind replacement;
+3. rerun direct modules and Global Scan to reveal the next independent compiler layer;
+4. classify direct versus downstream failures;
+5. restore the FIX22C compiler gate plus `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`;
+6. only then run behavioral/linguistic scenarios and resume capability completion.
+
+## 7. Current status of earlier repair topics
+
+| Earlier topic | Current meaning |
+|---|---|
+| fix17 / `SlashBareV2S` | historical repair evidence; not current first blocker |
+| fix18 / Comp+Imp list family | historical pre-FIX22C repair hypothesis; not current first blocker |
+| former `GeneratePMCFG` crash | resolved at FIX22C baseline; keep as regression gate |
+| VPS/VPI/VPS2/VPI2 | **ownership reopened by mega-update**: current coordinator-local implementation is provisional; after compiler recovery choose coherent inheritance or a dedicated local companion |
+| FIX22C | last known compiler-stable historical baseline, not proof that the current mega-update compiles |
+
+### VPS-family source-policy contradiction
+
+The current `ExtendSqi.gf` is internally inconsistent: its header comments still describe VPS/VPI/VPS2/VPI2 as inherited, while its subtraction list, lincats, and `lin` section locally own that family. Treat this as a **provisional source state**, not an accepted architecture decision. Do not resolve it before the syntax-integrity/compiler gate; once that gate is green, decide the family as a whole according to `ALBANIAN_EXTENDSQI_FINAL_TARGET.md` and `ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md`.
+
+## 8. Documentation synchronization rule
+
+After each evidence-changing run update, at minimum:
+
+- this file;
+- `ALBANIAN_SYMBOL_STATUS_LEDGER.md` when symbol/compiler state changes;
+- `ALBANIAN_DECISION_LOG.md` when reasoning is accepted/rejected/superseded;
+- `ALBANIAN_OPEN_QUESTIONS.md` when priorities change;
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` only if the operational method itself changes.
+
+Stable architectural documents should not be rewritten merely because a transient compiler blocker moved.

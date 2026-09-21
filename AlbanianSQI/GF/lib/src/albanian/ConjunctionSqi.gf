@@ -36,7 +36,7 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
     } ;
     ConjNP c xs = {
       s=\\k=>xs.first!k ++ c.s ++ xs.last!k;
-      acc_clit=[]; dat_clit=[]; a=xs.a
+      acc_clit=[]; dat_clit=[]; a=xs.a; isPron=False
     } ;
 
     BaseAP x y = {first=x.s; last=y.s} ;

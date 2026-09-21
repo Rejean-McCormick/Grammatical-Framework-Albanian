@@ -8,8 +8,11 @@ Lint MorphoSqi.gf for the *same classes of failures* we hit in this conversation
   2) "cannot infer table type" hazards: untyped string-pattern tables like
        table { _ + "a" => ... ; ... ; _ => ... }
   3) Likely syntax hazards:
-       - unbalanced {} () in mkN blocks
+       - unbalanced {} () in the whole file and in mkN blocks
        - missing ';' between top-level table arms
+  4) Albanian Verb-record contract hazards:
+       - every `lin V { ... }` must carry Indicative, Subjunctive, and Imperative
+       - catches malformed field insertion before GF compilation
 
 Usage:
   python gf_morphosqi_lint.py path\to\MorphoSqi.gf
@@ -193,6 +196,38 @@ def check_balance(text: str) -> Tuple[int, int]:
             elif ch == ")":
                 paren -= 1
     return brace, paren
+
+
+def iter_lin_v_blocks(text: str) -> Iterable[Tuple[int, int, int]]:
+    """Yield (lin_idx, brace_open_idx, brace_close_idx) for each `lin V { ... }`."""
+    pattern = re.compile(r"\blin\s+V\s*\{")
+    for match in pattern.finditer(text):
+        brace_open = text.find("{", match.start())
+        if brace_open < 0:
+            continue
+        depth = 0
+        in_str = False
+        esc = False
+        for k in range(brace_open, len(text)):
+            ch = text[k]
+            if in_str:
+                if esc:
+                    esc = False
+                elif ch == "\\":
+                    esc = True
+                elif ch == '"':
+                    in_str = False
+                continue
+            if ch == '"':
+                in_str = True
+                continue
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    yield (match.start(), brace_open, k)
+                    break
 
 
 def iter_table_blocks(text: str) -> Iterable[Tuple[int, int, int]]:
@@ -384,6 +419,32 @@ def has_explicit_type_context(text: str, table_kw_idx: int) -> bool:
 def lint(text_raw: str) -> List[Finding]:
     findings: List[Finding] = []
     text = strip_line_comments_preserve_strings(text_raw)
+
+    # 0) whole-file delimiter balance.  This catches malformed record-field
+    # insertions outside mkN blocks (for example an accidental second `{`
+    # before a newly added Verb field).
+    whole_brace, whole_paren = check_balance(text)
+    if whole_brace != 0 or whole_paren != 0:
+        findings.append(Finding(
+            kind="file-unbalanced",
+            line=1,
+            msg=f"Whole file has unbalanced delimiters: '{{}}' delta={whole_brace}, '()' delta={whole_paren}",
+            preview="MorphoSqi.gf",
+        ))
+
+    # 0b) Verb record contract introduced by ALB-DEC-047.
+    for lin_idx, brace_open, brace_close in iter_lin_v_blocks(text):
+        body = text[brace_open + 1:brace_close]
+        line = index_to_line(text, lin_idx)
+        missing = [field for field in ("Indicative", "Subjunctive", "Imperative")
+                   if re.search(rf"\b{field}\s*=", body) is None]
+        if missing:
+            findings.append(Finding(
+                kind="verb-record-missing-field",
+                line=line,
+                msg="lin V record is missing required field(s): " + ", ".join(missing),
+                preview=text[lin_idx:min(len(text), lin_idx + 180)].replace("\n", "\\n"),
+            ))
 
     # 1) mkN cycles
     defs, _lines = extract_mk_defs(text)

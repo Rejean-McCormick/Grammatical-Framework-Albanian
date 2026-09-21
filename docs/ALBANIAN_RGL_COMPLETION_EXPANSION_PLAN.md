@@ -740,7 +740,7 @@ The final `Verb` resource exposes every lexical form needed by mature syntax, wh
 
 ### 12.1 Lexical finite inventory
 
-The lexical/morphological layer must supply the simple forms required for the supported Albanian system, including the existing indicative, imperative, optative and admirative forms and the missing embedded/subjunctive forms required by actual syntax.
+The lexical/morphological layer must supply the simple forms required for the supported Albanian system, including the existing indicative, imperative, optative and admirative forms and the embedded/subjunctive forms required by actual syntax. Subjunctive is an explicit morphology dimension: syntax must not derive it by inspecting an indicative `Str`.
 
 The final resource must clearly distinguish:
 
@@ -772,6 +772,18 @@ v.Indicative ! Pres ! Sg ! P3
 ```
 
 may exist only as a diagnostic/display helper. It cannot be the semantic representation of `UseV`, `ComplVV`, `SlashV2a`, or ordinary clause syntax.
+
+### 12.3.1 No late mood inference from surface strings
+
+The same rule applies to other persons and moods. Code equivalent to:
+
+```gf
+case <v.Indicative ! Pres ! Sg ! P1 : Str> of { ... }
+```
+
+must not be used in PMCFG-facing syntax to infer a subjunctive, imperative, or other grammatical form. If a grammatical distinction is productive and required by syntax, the morphology/paradigm layer supplies it as a typed table or equivalent structured field.
+
+A compatibility helper may select an already-built table; it may not reconstruct morphology from a realized string.
 
 ### 12.4 Irregular forms
 
@@ -829,6 +841,10 @@ VP
 ├── embedded/extraposed material where needed
 └── metadata required by VV/control constructions
 ```
+
+For the current GF 3.12 Albanian implementation, the validated design target is more specific: the lexical-to-VP boundary copies the **structured verb-form inventory needed downstream** (indicative, subjunctive, imperative, participle, optative, admirative) instead of forcing later consumers to project through a nested lexical `Verb` record. This is allowed because the distinctions remain structured; it is not equivalent to reducing VP to one `Str`.
+
+The current representation decision is evidence-driven by run `20260921_201720`, whose PMCFG trace descends through `VP.v.Indicative`. If a future supported GF backend handles an equivalent nested representation safely, the internal storage may change, but the no-late-string-inference invariant remains.
 
 ### 14.2 Clause semantic structure
 
@@ -1622,6 +1638,8 @@ The completed RGL must satisfy:
 
 ```text
 no GeneratePMCFG crash
+no PMCFG-facing mood reconstruction by `case` over realized verb strings
+no known nested-record projection that reproduces the GF 3.12 backend crash
 all public entry points produce their expected .gfo artifacts
 no parameter/table-key provenance mismatch
 no unexplained lock/retyping failure

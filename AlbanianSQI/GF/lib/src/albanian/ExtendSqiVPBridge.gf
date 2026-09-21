@@ -21,16 +21,16 @@ oper
   } ;
 
   vp_PastPartAP : VPSlash -> AP = \sl -> lin AP {
-    s=\\_,_,g,n =>sl.v.participle ++ sl.post!(R.agrgP3 g n)
+    s=\\_,_,g,n =>sl.participle ++ sl.post!(R.agrgP3 g n)
   } ;
 
   vp_PastPartAgentAP : VPSlash -> NP -> AP = \sl,np -> lin AP {
-    s=\\_,_,g,n =>sl.v.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
+    s=\\_,_,g,n =>sl.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
   } ;
 
   vp_PassVPSlash : VPSlash -> VP = \sl ->
     appendVP (emptyVP (lin Verb I.jam_V))
-      (\\a =>sl.v.participle ++ sl.post!a) ;
+      (\\a =>sl.participle ++ sl.post!a) ;
 
   vp_PassAgentVPSlash : VPSlash -> NP -> VP = \sl,np ->
     appendVP (vp_PassVPSlash sl) (\\_ => (vp_agentAdv np).s) ;
@@ -43,22 +43,19 @@ oper
     } ;
 
   vp_ProgrVPSlash : VPSlash -> VPSlash = \sl -> sl ** {
-    cl=\\a =>"po" ++ sl.cl!a
+    cl="po" ++ sl.cl ;
+    subjcl="të" ++ "po" ++ sl.cl
   } ;
 
-  vp_A2VPSlash : A2 -> VPSlash = \a2 -> lin VPSlash {
-    v=lin Verb I.jam_V ;
-    cl=\\_ =>[] ;
-    post=\\a =>(CompAP (UseA2 a2)).s!a ;
-    c2=a2.c2
-  } ;
+  vp_A2VPSlash : A2 -> VPSlash = \a2 ->
+    slashFromVP
+      (appendVP (emptyVP (lin Verb I.jam_V)) (CompAP (UseA2 a2)).s)
+      a2.c2 ;
 
-  vp_N2VPSlash : N2 -> VPSlash = \n2 -> lin VPSlash {
-    v=lin Verb I.jam_V ;
-    cl=\\_ =>[] ;
-    post=\\a =>(CompCN (UseN2 n2)).s!a ;
-    c2=n2.c2
-  } ;
+  vp_N2VPSlash : N2 -> VPSlash = \n2 ->
+    slashFromVP
+      (appendVP (emptyVP (lin Verb I.jam_V)) (CompCN (UseN2 n2)).s)
+      n2.c2 ;
 
   vp_AdvIsNP : Adv -> NP -> Cl = \adv,np ->
     PredVP np (UseComp (CompAdv adv)) ;
@@ -68,12 +65,12 @@ oper
 
   -- për të + participle is the productive Standard-Albanian purpose form.
   vp_PurposeVP : VP -> Adv = \vp -> lin Adv {
-    s="për" ++ teWithClitic (vp.cl!agrMascSg) ++
-      vp.v.participle ++ vp.post!agrMascSg
+    s="për" ++ vp.subjcl ++
+      vp.participle ++ vp.post!agrMascSg
   } ;
 
   vp_WithoutVP : VP -> Adv = \vp -> lin Adv {
-    s="pa" ++ vp.cl!agrMascSg ++ vp.v.participle ++ vp.post!agrMascSg
+    s="pa" ++ vp.cl ++ vp.participle ++ vp.post!agrMascSg
   } ;
 
   vp_ByVP : VP -> Adv = \vp -> lin Adv {

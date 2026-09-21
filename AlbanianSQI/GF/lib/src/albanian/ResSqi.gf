@@ -90,6 +90,7 @@ param
 oper
   Verb : Type = {
     Indicative       : Tense => Number => Person => Str ;
+    Subjunctive      : Number => Person => Str ;
     Imperative       : Number => Str ;
     participle       : Str ;
     pres_optative    : Number => Person => Str ;
@@ -97,6 +98,56 @@ oper
     pres_admirative  : Number => Person => Str ;
     imperf_admirative: Number => Person => Str
   } ;
+
+  -- Build the Standard-Albanian finite subjunctive once at the
+  -- morphology boundary.  Syntax must select this table directly and
+  -- must not infer mood later by inspecting an indicative surface string.
+  -- This preserves the previous productive/irregular rules while moving
+  -- their evaluation out of PMCFG-facing VP consumers.
+  subjunctiveFromPresent :
+    (Number => Person => Str) -> Number => Person => Str = \pres ->
+      let p1 : Str = pres ! Sg ! P1 ;
+          p2 : Str = pres ! Sg ! P2
+      in table {
+        Sg => table {
+          P1 => p1 ;
+          P2 => case <p1 : Str> of {
+            "jam" => "jesh" ;
+            "kam" => "kesh" ;
+            "dua" => "duash" ;
+            "di"  => "dish" ;
+            "ha"  => "hash" ;
+            "pi"  => "pish" ;
+            "vij" => "vish" ;
+            "them" => "thuash" ;
+            _ + "j" => init p1 ++ "sh" ;
+            _ => case <p2 : Str> of {
+              stem + "n" => stem ++ "sh" ;
+              x => x
+            }
+          } ;
+          P3 => case <p1 : Str> of {
+            "jam" => "jetë" ;
+            "kam" => "ketë" ;
+            "dua" => "dojë" ;
+            "di"  => "dijë" ;
+            "ha"  => "hajë" ;
+            "pi"  => "pijë" ;
+            "vij" => "vijë" ;
+            "them" => "thotë" ;
+            _ + "j" => p1 ++ BIND ++ "ë" ;
+            _ => case <p2 : Str> of {
+              stem + "n" => stem ++ "ë" ;
+              x => x
+            }
+          }
+        } ;
+        Pl => table {
+          P1 => pres ! Pl ! P1 ;
+          P2 => pres ! Pl ! P2 ;
+          P3 => pres ! Pl ! P3
+        }
+      } ;
 
   mkVerb :
     (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Verb =
@@ -120,6 +171,10 @@ oper
                           Pl => table {P1 => f22 ; P2 => f23 ; P3 => f24}
                         }
           } ;
+        Subjunctive = subjunctiveFromPresent (table {
+          Sg => table {P1 => f1 ; P2 => f2 ; P3 => f3} ;
+          Pl => table {P1 => f4 ; P2 => f5 ; P3 => f6}
+        }) ;
         Imperative = table {Sg => f25 ; Pl => f26} ;
         participle = f27 ;
         pres_optative = table {
@@ -281,53 +336,10 @@ oper
     }
   } ;
 
-  -- Albanian has no productive Standard-Albanian infinitive.  Embedded
-  -- verbal complements are normally introduced by të and select a finite
-  -- subjunctive form.  The morphology imported in this project predates a
-  -- dedicated subjunctive table, so the form is derived here from the rich
-  -- present paradigm.  Plural forms and 1sg are normally identical to the
-  -- corresponding present forms; 2sg/3sg need a small set of productive and
-  -- irregular rules.  Keeping this conversion centralized lets a future
-  -- MorphoSqi subjunctive table replace it without changing syntax.
+  -- Compatibility selector for callers that still need an Agr-shaped API.
+  -- No morphology is reconstructed here: the dedicated table is authoritative.
   subjunctiveFinite : Verb -> Agr -> Str = \v,a ->
-    let n : Number = agrNumber a ;
-        p : Person = a.p ;
-        p1 : Str = v.Indicative ! Pres ! Sg ! P1 ;
-        pres : Str = v.Indicative ! Pres ! n ! p
-    in case <n,p> of {
-      <Pl,_> => pres ;
-      <Sg,P1> => p1 ;
-      <Sg,P2> => case <p1 : Str> of {
-        "jam" => "jesh" ;
-        "kam" => "kesh" ;
-        "dua" => "duash" ;
-        "di"  => "dish" ;
-        "ha"  => "hash" ;
-        "pi"  => "pish" ;
-        "vij" => "vish" ;
-        "them" => "thuash" ;
-        _ + "j" => init p1 ++ "sh" ;
-        _ => case <v.Indicative ! Pres ! Sg ! P2 : Str> of {
-          stem + "n" => stem ++ "sh" ;
-          x => x
-        }
-      } ;
-      <Sg,P3> => case <p1 : Str> of {
-        "jam" => "jetë" ;
-        "kam" => "ketë" ;
-        "dua" => "dojë" ;
-        "di"  => "dijë" ;
-        "ha"  => "hajë" ;
-        "pi"  => "pijë" ;
-        "vij" => "vijë" ;
-        "them" => "thotë" ;
-        _ + "j" => p1 ++ BIND ++ "ë" ;
-        _ => case <v.Indicative ! Pres ! Sg ! P2 : Str> of {
-          stem + "n" => stem ++ "ë" ;
-          x => x
-        }
-      }
-    } ;
+    v.Subjunctive ! agrNumber a ! a.p ;
 
   haveSubj : Number => Person => Str = table {
     Sg => table {P1 => "kem" ; P2 => "kesh" ; P3 => "ketë"} ;
@@ -362,15 +374,23 @@ oper
     <Pl,P3> => "u"
   } ;
 
-  -- të contracts with third-person object clitics in the future and in
-  -- subjunctival complements: të + e -> ta, të + i -> t'i, të + u -> t'u.
-  -- Other clitics remain separate (të më, të të, të na, të ju).
-  teWithClitic : Str -> Str = \cl -> case cl of {
-    ""  => "të" ;
-    "e" => "ta" ;
-    "i" => "t'i" ;
-    "u" => "t'u" ;
-    _   => "të" ++ cl
+
+  subjAccCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
+    <Sg,P1> => "të" ++ "më" ;
+    <Sg,P2> => "të" ++ "të" ;
+    <Sg,P3> => "ta" ;
+    <Pl,P1> => "të" ++ "na" ;
+    <Pl,P2> => "të" ++ "ju" ;
+    <Pl,P3> => "t'i"
+  } ;
+
+  subjDatCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
+    <Sg,P1> => "të" ++ "më" ;
+    <Sg,P2> => "të" ++ "të" ;
+    <Sg,P3> => "t'i" ;
+    <Pl,P1> => "të" ++ "na" ;
+    <Pl,P2> => "të" ++ "ju" ;
+    <Pl,P3> => "t'u"
   } ;
 
 }

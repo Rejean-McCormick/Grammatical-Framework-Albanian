@@ -38,17 +38,35 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     RP = {s : Case => GenNum => Str} ;
     ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl} ;
 
-    -- VP keeps the lexical verb and separates clitics from post-verbal
-    -- material.  Finite tense/polarity is not chosen until SentenceSqi.
+    -- VP copies the morphosyntactic verb tables at the lexical boundary.
+    -- PMCFG-facing syntax therefore never has to descend through a nested
+    -- `VP.v.Indicative` record projection.  All currently represented
+    -- Albanian mood/form dimensions are preserved as structured tables.
     VP = {
-      v : Verb ;
-      cl : Agr => Str ;
+      indicative : Tense => Number => Person => Str ;
+      subjunctive : Number => Person => Str ;
+      imperative : Number => Str ;
+      participle : Str ;
+      pres_optative : Number => Person => Str ;
+      perf_optative : Number => Person => Str ;
+      pres_admirative : Number => Person => Str ;
+      imperf_admirative : Number => Person => Str ;
+      cl : Str ;
+      subjcl : Str ;
       post : Agr => Str
     } ;
 
     VPSlash = {
-      v : Verb ;
-      cl : Agr => Str ;
+      indicative : Tense => Number => Person => Str ;
+      subjunctive : Number => Person => Str ;
+      imperative : Number => Str ;
+      participle : Str ;
+      pres_optative : Number => Person => Str ;
+      perf_optative : Number => Person => Str ;
+      pres_admirative : Number => Person => Str ;
+      imperf_admirative : Number => Person => Str ;
+      cl : Str ;
+      subjcl : Str ;
       post : Agr => Str ;
       c2 : Compl
     } ;

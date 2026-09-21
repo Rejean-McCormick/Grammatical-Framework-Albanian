@@ -9,7 +9,7 @@
 
 ## Status
 
-> **Historical milestone record.** This file describes the exact FIX22C / v0.1.0 baseline. It is not the status of later post-baseline working trees. As of 2026-09-21, the mega-update working snapshot has a syntax-level compile regression documented in `../CURRENT_REPAIR_STATE.md`. Do not rewrite this milestone to match later failures; use it as a regression baseline.
+> **Historical milestone record.** This file describes the exact FIX22C / v0.1.0 baseline. It is not the status of later post-baseline working trees. As of 2026-09-21, the post-baseline working snapshot is again under compiler recovery, with the exact current blocker documented in `../CURRENT_REPAIR_STATE.md`. Do not rewrite this milestone to match later failures; use it as a regression baseline.
 
 The Albanian RGL has reached a compiler-stable core baseline.
 

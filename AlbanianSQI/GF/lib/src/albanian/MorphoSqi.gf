@@ -15698,6 +15698,7 @@ mkV001 base_1 =
       Aorist    => v0_mkAorCons base_1 ;
       Imperfect => v0_mkImpfC base_1
     } ;
+    Subjunctive = subjunctiveFromPresent (v0_mkPresCons base_1) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = pple ;
     pres_optative = v0_mkPresOpt base_1 ;
@@ -15720,6 +15721,7 @@ mkV002 base =
                            (base_1+"tëm") (base_1+"tët") (base_1+"tën") ;
           Imperfect => v0_mkPers "kisha" "kishe" "kishte" "kishim" "kishit" "kishin"
         } ;
+        Subjunctive = subjunctiveFromPresent (v0_mkPers "kam" "ke" "ka" "kemi" "keni" "kanë") ;
         Imperative = table { Sg => "ki" ; Pl => "keni" } ;
         participle = pple ;
         pres_optative = v0_mkPers "paça" "paç" "pastë" "paçim" "paçi" "paçin" ;
@@ -15746,6 +15748,8 @@ mkV003 base =
           Aorist => v0_mkAorV base_1 ;
           Imperfect => v0_mkImpfV base_1
         } ;
+        Subjunctive = subjunctiveFromPresent (v0_mkPers (base_1+"j") (base_1+"n") (base_1+"n")
+                           (base_1+"jmë") (base_1+"ni") (base_1+"në")) ;
         Imperative = table { Sg => base_1+"j" ; Pl => base_1+"ni" } ;
         participle = pple ;
         pres_optative = v0_mkOptFsh base_1 ;   -- lafsha...
@@ -15772,6 +15776,7 @@ mkV004 base =
           Aorist => v0_mkAorCons aorStem ;
           Imperfect => v0_mkImpfC pres1
         } ;
+        Subjunctive = subjunctiveFromPresent (v0_mkPers pres1 pres23 pres23 (pres1+"im") (pres1+"ni") (pres1+"in")) ;
         Imperative = table { Sg => pres23 ; Pl => pres1+"ni" } ;
         participle = pple ;
         pres_optative = v0_mkPresOpt aorStem ;
@@ -15800,6 +15805,7 @@ mkV005 base =
           Aorist => v0_mkAorCons aorStem ;
           Imperfect => v0_mkImpfC impStem
         } ;
+        Subjunctive = subjunctiveFromPresent (v0_mkPers pres1 pres23 pres23 (pres1+"im") pres2pl (pres1+"in")) ;
         Imperative = table { Sg => impStem ; Pl => pres2pl } ;
         participle = pple ;
         pres_optative = v0_mkPresOpt aorStem ;
@@ -15820,6 +15826,7 @@ mkV006 base_1 =
       Aorist    => v0_mkAorCons base_1 ;
       Imperfect => v0_mkImpfC base_1
     } ;
+    Subjunctive = subjunctiveFromPresent (v0_mkPresCons base_1) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = pple ;
     pres_optative = v0_mkPresOpt base_1 ;
@@ -15839,6 +15846,7 @@ mkV007 base_1 =
       Aorist    => v0_mkAorCons aorStem ;
       Imperfect => v0_mkImpfC base_1
     } ;
+    Subjunctive = subjunctiveFromPresent (v0_mkPresCons base_1) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = pple ;
     pres_optative = v0_mkPresOpt aorStem ;
@@ -15858,6 +15866,7 @@ mkV008 base_1 =
       Aorist    => v0_mkAorV base_1 ;
       Imperfect => v0_mkImpfV base_1
     } ;
+    Subjunctive = subjunctiveFromPresent (v0_mkPresAthem base_1) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = pple ;
     pres_optative = v0_mkOptFsh base_1 ;
@@ -15882,6 +15891,8 @@ mkV009 base =
           Aorist => v0_mkAorV base_1 ;
           Imperfect => v0_mkImpfV base_1
         } ;
+        Subjunctive = subjunctiveFromPresent (v0_mkPers pres1 (base_1+"n") (base_1+"n")
+                           (base_1+"jmë") pres2pl (base_1+"në")) ;
         Imperative = table { Sg => pres1 ; Pl => pres2pl } ;
         participle = pple ;
         pres_optative = v0_mkOptFsh base_1 ;
@@ -15906,6 +15917,7 @@ mkV010 base =
           Aorist    => v0_mkAorCons aorStem ;
           Imperfect => v0_mkImpfAuto presStem
         } ;
+        Subjunctive = subjunctiveFromPresent (v0_mkPresCons presStem) ;
         Imperative = table { Sg => presStem ; Pl => presStem+"ni" } ;
         participle = pple ;
         pres_optative = v0_mkPresOpt aorStem ;
@@ -15972,6 +15984,18 @@ mkV011 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ë" ;
+                                         P2 => base_1+"ë" ;
+                                         P3 => base_1+"ë"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ëmë" ;
+                                         P2 => base_1+"ëni" ;
+                                         P3 => base_1+"ënë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"ë" ;
                        Pl => base_1+"ëni"
@@ -16078,6 +16102,18 @@ mkV011 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ë" ;
+                                         P2 => base_1+"ë" ;
+                                         P3 => base_1+"ë"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ëmë" ;
+                                         P2 => base_1+"ëni" ;
+                                         P3 => base_1+"ënë"
+                                       }
+                               }) ;
         Imperative = table { Sg => base_1+"ë" ; Pl => base_1+"ëni" } ;
         participle = base_1+"ënë" ;
         pres_optative = table {
@@ -16155,6 +16191,18 @@ mkV012 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => "t"+base_1 ;
+                                         P2 => "t"+base_1 ;
+                                         P3 => "t"+base_1
+                                       } ;
+                                 Pl => table {
+                                         P1 => "t"+base_1+"im" ;
+                                         P2 => "t"+base_1+"ni" ;
+                                         P3 => "t"+base_1+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => "t"+base_1 ;
                        Pl => "t"+base_1+"ni"
@@ -16233,6 +16281,10 @@ mkV013 base_1 =
                                   Pl => table { P1 => base_1+"nim" ; P2 => base_1+"nit" ; P3 => base_1+"nin" }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table { P1 => base_1 ; P2 => base_1 ; P3 => base_1 } ;
+                             Pl => table { P1 => base_1+"im" ; P2 => base_1+"ni" ; P3 => base_1+"in" }
+                           }) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = base_1+"ë" ;
     pres_optative = table {
@@ -16310,6 +16362,18 @@ mkV015 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"s" ;
+                                         P2 => base_1+"s" ;
+                                         P3 => base_1+"s"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"sim" ;
+                                         P2 => base_1+"sni" ;
+                                         P3 => base_1+"sin"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"s" ;
                        Pl => base_1+"sni"
@@ -16421,6 +16485,18 @@ mkV016 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"o"+base_2+"a" ;
+                                         P2 => base_1+"o"+base_2+"a" ;
+                                         P3 => base_1+"o"+base_2+"a"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"o"+base_2+"am" ;
+                                         P2 => base_1+"o"+base_2+"ani" ;
+                                         P3 => base_1+"o"+base_2+"an"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"o"+base_2+"a" ;
                        Pl => base_1+"o"+base_2+"ani"
@@ -16499,6 +16575,10 @@ mkV017 base_1 =
                                   Pl => table { P1 => base_1+"nim" ; P2 => base_1+"nit" ; P3 => base_1+"nin" }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table { P1 => base_1 ; P2 => base_1 ; P3 => base_1 } ;
+                             Pl => table { P1 => base_1+"im" ; P2 => base_1+"ni" ; P3 => base_1+"in" }
+                           }) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = "(për)"+base_1+"ur" ;
     pres_optative = table {
@@ -16540,6 +16620,10 @@ mkV018 base_1 =
                                   Pl => table { P1 => base_1+"nim" ; P2 => base_1+"nit" ; P3 => base_1+"nin" }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table { P1 => base_1 ; P2 => base_1 ; P3 => base_1 } ;
+                             Pl => table { P1 => base_1+"im" ; P2 => base_1+"ni" ; P3 => base_1+"in" }
+                           }) ;
     Imperative = table { Sg => base_1 ; Pl => base_1+"ni" } ;
     participle = base_1+"ur" ;
     pres_optative = table {
@@ -16614,6 +16698,18 @@ mkV019 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"a"+base_2+"r" ;
+                                         P2 => base_1+"e"+base_2+"r" ;
+                                         P3 => base_1+"e"+base_2+"r"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"a"+base_2+"rim" ;
+                                         P2 => base_1+"e"+base_2+"rni" ;
+                                         P3 => base_1+"a"+base_2+"rin"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"e"+base_2+"r" ;
                        Pl => base_1+"e"+base_2+"rni"
@@ -16725,6 +16821,18 @@ mkV020 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"e"+base_2+"e" ;
+                                         P2 => base_1+"e"+base_2+"e" ;
+                                         P3 => base_1+"e"+base_2+"e"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"e"+base_2+"eim" ;
+                                         P2 => base_1+"e"+base_2+"eni" ;
+                                         P3 => base_1+"e"+base_2+"ein"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"e"+base_2+"e" ;
                        Pl => base_1+"e"+base_2+"eni"
@@ -16813,6 +16921,10 @@ mkV021 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+            Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+          }) ;
         Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
         participle = part ;
 
@@ -16870,6 +16982,10 @@ mkV022 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+            Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+          }) ;
         Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
         participle = part ;
 
@@ -16927,6 +17043,10 @@ mkV023 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+            Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+          }) ;
         Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
         participle = part ;
 
@@ -16990,6 +17110,10 @@ mkV024 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres23 ; P3 => pres23 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => base_1 ; Pl => pres2pl } ;
         participle = part ;
 
@@ -17055,6 +17179,10 @@ mkV025 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres23 ; P3 => pres23 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => stemY ; Pl => pres2pl } ;
         participle = part ;
 
@@ -17112,6 +17240,10 @@ mkV026 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+            Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+          }) ;
         Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
         participle = part ;
 
@@ -17191,6 +17323,10 @@ mkV027 base =
             Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres2 ; P3 => pres3 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => impSg ; Pl => pres2pl } ;
         participle = part ;
 
@@ -17270,6 +17406,10 @@ mkV028 base =
             Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres2 ; P3 => pres3 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => impSg ; Pl => pres2pl } ;
         participle = part ;
 
@@ -17325,6 +17465,10 @@ mkV029 base_1 =
         Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
       }
     } ;
+    Subjunctive = subjunctiveFromPresent (table {
+        Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+        Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+      }) ;
     Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
     participle = part ;
 
@@ -17380,6 +17524,10 @@ mkV030 base =
             Pl => table { P1 => impS+"nim" ; P2 => impS+"nit" ; P3 => impS+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+            Pl => table { P1 => presS+"më" ; P2 => presS+"ni" ; P3 => presS+"në" }
+          }) ;
         Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
         participle = part ;
 
@@ -17467,6 +17615,18 @@ mkV031 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => stem+"em" ;
+              P2 => stem+"esh" ;
+              P3 => stem+"et"
+            } ;
+            Pl => table {
+              P1 => stem+"emi" ;
+              P2 => stem+"eni" ;
+              P3 => stem+"en"
+            }
+          }) ;
 
         Imperative = table {
           Sg => stem+"u" ;
@@ -17591,6 +17751,18 @@ mkV032 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem+"j" ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"jnë"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem+"j" ;
@@ -17713,6 +17885,18 @@ mkV033 base_1 =
         }
       }
     } ;
+    Subjunctive = subjunctiveFromPresent (table {
+        Sg => table {
+          P1 => presStem ;
+          P2 => presStem ;
+          P3 => presStem
+        } ;
+        Pl => table {
+          P1 => presStem+"im" ;
+          P2 => presStem+"ni" ;
+          P3 => presStem+"in"
+        }
+      }) ;
 
     Imperative = table {
       Sg => presStem ;
@@ -17835,6 +18019,18 @@ mkV034 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem ;
+              P2 => presStem ;
+              P3 => presStem
+            } ;
+            Pl => table {
+              P1 => presStem+"im" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"in"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem ;
@@ -17959,6 +18155,18 @@ mkV035 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presSg ;
+              P2 => presSg ;
+              P3 => presSg
+            } ;
+            Pl => table {
+              P1 => base_1+"iem" ;
+              P2 => base_1+"ini" ;
+              P3 => base_1+"ien"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presSg ;
@@ -18083,6 +18291,18 @@ mkV036 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem ;
+              P2 => presStem ;
+              P3 => presStem
+            } ;
+            Pl => table {
+              P1 => presStem+"im" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"in"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem ;
@@ -18207,6 +18427,18 @@ mkV037 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => base_1+"sem" ;
+              P2 => stem+"esh" ;
+              P3 => stem+"et"
+            } ;
+            Pl => table {
+              P1 => stem+"emi" ;
+              P2 => stem+"eni" ;
+              P3 => stem+"en"
+            }
+          }) ;
 
         Imperative = table {
           Sg => stem+"u" ;
@@ -18331,6 +18563,18 @@ mkV038 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem+"j" ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"jnë"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem+"j" ;
@@ -18455,6 +18699,18 @@ mkV039 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => stem+"em" ;
+              P2 => stem+"esh" ;
+              P3 => stem+"et"
+            } ;
+            Pl => table {
+              P1 => stem+"emi" ;
+              P2 => stem+"eni" ;
+              P3 => stem+"en"
+            }
+          }) ;
 
         Imperative = table {
           Sg => stem+"u" ;
@@ -18579,6 +18835,18 @@ mkV040 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => stem+"hem" ;
+              P2 => stem+"hesh" ;
+              P3 => stem+"het"
+            } ;
+            Pl => table {
+              P1 => stem+"hemi" ;
+              P2 => stem+"heni" ;
+              P3 => stem+"hen"
+            }
+          }) ;
 
         Imperative = table {
           Sg => stem+"hu" ;
@@ -18696,6 +18964,18 @@ mkV041 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"em" ;
+                                         P2 => base_1+"esh" ;
+                                         P3 => base_1+"et"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"emi" ;
+                                         P2 => base_1+"eni" ;
+                                         P3 => base_1+"en"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"u" ;
                        Pl => base_1+"uni"
@@ -18784,6 +19064,18 @@ mkV042 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"j" ;
+                                         P2 => base_1+"n" ;
+                                         P3 => base_1+"n"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"jmë" ;
+                                         P2 => base_1+"ni" ;
+                                         P3 => base_1+"jnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"j" ;
                        Pl => base_1+"ni"
@@ -18872,6 +19164,18 @@ mkV043 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"l"+base_2 ;
+                                         P2 => base_1+"l"+base_2 ;
+                                         P3 => base_1+"l"+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"l"+base_2+"im" ;
+                                         P2 => base_1+"l"+base_2+"ni" ;
+                                         P3 => base_1+"l"+base_2+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"l"+base_2 ;
                        Pl => base_1+"l"+base_2+"ni"
@@ -18960,6 +19264,18 @@ mkV044 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"j" ;
+                                         P2 => base_1+"n" ;
+                                         P3 => base_1+"n"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"jmë" ;
+                                         P2 => base_1+"ni" ;
+                                         P3 => base_1+"jnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"j" ;
                        Pl => base_1+"ni"
@@ -19048,6 +19364,18 @@ mkV045 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"jek" ;
+                                         P2 => base_1+"jek" ;
+                                         P3 => base_1+"jek"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"jekim" ;
+                                         P2 => base_1+"jekni" ;
+                                         P3 => base_1+"jekin"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"jek" ;
                        Pl => base_1+"jekni"
@@ -19136,6 +19464,18 @@ mkV046 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"i"+base_2+"em" ;
+                                         P2 => base_1+"i"+base_2+"esh" ;
+                                         P3 => base_1+"i"+base_2+"et"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"i"+base_2+"emi" ;
+                                         P2 => base_1+"i"+base_2+"eni" ;
+                                         P3 => base_1+"i"+base_2+"en"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"i"+base_2+"u" ;
                        Pl => base_1+"i"+base_2+"uni"
@@ -19224,6 +19564,18 @@ mkV047 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+base_2+"j" ;
+                                         P2 => base_1+base_2+"n" ;
+                                         P3 => base_1+base_2+"n"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+base_2+"jmë" ;
+                                         P2 => base_1+base_2+"ni" ;
+                                         P3 => base_1+base_2+"jnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+base_2+"j" ;
                        Pl => base_1+base_2+"ni"
@@ -19312,6 +19664,18 @@ mkV048 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ë"+base_2+"as" ;
+                                         P2 => base_1+"ë"+base_2+"as" ;
+                                         P3 => base_1+"ë"+base_2+"as"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ë"+base_2+"asim" ;
+                                         P2 => base_1+"ë"+base_2+"asni" ;
+                                         P3 => base_1+"ë"+base_2+"asin"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"ë"+base_2+"as" ;
                        Pl => base_1+"ë"+base_2+"asni"
@@ -19400,6 +19764,18 @@ mkV049 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"je"+base_2 ;
+                                         P2 => base_1+"je"+base_2 ;
+                                         P3 => base_1+"je"+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"je"+base_2+"im" ;
+                                         P2 => base_1+"je"+base_2+"ni" ;
+                                         P3 => base_1+"je"+base_2+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"je"+base_2 ;
                        Pl => base_1+"je"+base_2+"ni"
@@ -19488,6 +19864,18 @@ mkV050 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"o"+base_2 ;
+                                         P2 => base_1+"o"+base_2 ;
+                                         P3 => base_1+"o"+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"o"+base_2+"im" ;
+                                         P2 => base_1+"o"+base_2+"ni" ;
+                                         P3 => base_1+"o"+base_2+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"o"+base_2 ;
                        Pl => base_1+"o"+base_2+"ni"
@@ -19637,6 +20025,7 @@ mkV051 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19662,6 +20051,7 @@ mkV052 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19687,6 +20077,7 @@ mkV053 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19711,6 +20102,7 @@ mkV054 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeBare stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19736,6 +20128,7 @@ mkV055 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19761,6 +20154,7 @@ mkV056 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19786,6 +20180,7 @@ mkV057 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19811,6 +20206,7 @@ mkV058 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19834,6 +20230,7 @@ mkV059 base_1 =
       Aorist    => mkAorTable aor1 ;
       Imperfect => mkImperfCons impSt
     } ;
+    Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
     Imperative = mkImperativeBare impSt ;
     participle = pple ;
     pres_optative = mkOptFromAor1 aor1 ;
@@ -19857,6 +20254,7 @@ mkV060 base =
           Aorist    => mkAorTable aor1 ;
           Imperfect => mkImperfCons impSt
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresCons pres1) ;
         Imperative = mkImperativeBare impSt ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -19937,6 +20335,18 @@ mkV061 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => stem+"em" ;
+              P2 => stem+"esh" ;
+              P3 => stem+"et"
+            } ;
+            Pl => table {
+              P1 => stem+"emi" ;
+              P2 => stem+"eni" ;
+              P3 => stem+"en"
+            }
+          }) ;
 
         Imperative = table { -- mediopassive imperative: -u attached; -ni after it
           Sg => stem+"u" ;
@@ -20036,6 +20446,10 @@ mkV062 stem =
         Pl => table { P1 => stem+"nim" ; P2 => stem+"nit" ; P3 => stem+"nin" }
       }
     } ;
+    Subjunctive = subjunctiveFromPresent (table {
+        Sg => table { P1 => stem ; P2 => stem ; P3 => stem } ;
+        Pl => table { P1 => stem+"im" ; P2 => stem+"ni" ; P3 => stem+"in" }
+      }) ;
 
     Imperative = table { Sg => stem ; Pl => stem+"ni" } ;
 
@@ -20109,6 +20523,10 @@ mkV063 base =
             Pl => table { P1 => presStem+"eshim" ; P2 => presStem+"eshit" ; P3 => presStem+"eshin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presStem+"em" ; P2 => presStem+"esh" ; P3 => presStem+"et" } ;
+            Pl => table { P1 => presStem+"emi" ; P2 => presStem+"eni" ; P3 => presStem+"en" }
+          }) ;
 
         Imperative = table { Sg => presStem+"u" ; Pl => presStem+"uni" } ;
 
@@ -20164,6 +20582,10 @@ mkV064 base =
             Pl => table { P1 => presStem+"nim" ; P2 => presStem+"nit" ; P3 => presStem+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presStem ; P2 => presStem ; P3 => presStem } ;
+            Pl => table { P1 => presStem+"im" ; P2 => presStem+"ni" ; P3 => presStem+"in" }
+          }) ;
 
         Imperative = table { Sg => presStem ; Pl => presStem+"ni" } ;
 
@@ -20219,6 +20641,10 @@ mkV065 base =
             Pl => table { P1 => presStem+"nim" ; P2 => presStem+"nit" ; P3 => presStem+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presStem ; P2 => presStem ; P3 => presStem } ;
+            Pl => table { P1 => presStem+"im" ; P2 => presStem+"ni" ; P3 => presStem+"in" }
+          }) ;
 
         Imperative = table { Sg => presStem ; Pl => presStem+"ni" } ;
 
@@ -20274,6 +20700,10 @@ mkV066 base =
             Pl => table { P1 => "hanim" ; P2 => "hanit" ; P3 => "hanin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {               -- ha paradigm
+            Sg => table { P1 => "ha" ; P2 => "ha" ; P3 => "ha" } ;
+            Pl => table { P1 => "hamë" ; P2 => "hani" ; P3 => "hanë" }
+          }) ;
 
         Imperative = table { Sg => "ha" ; Pl => "hani" } ;
 
@@ -20337,6 +20767,10 @@ mkV067 base =
             Pl => table { P1 => aorStem+"nim" ; P2 => aorStem+"nit" ; P3 => aorStem+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presStem ; P2 => presStem ; P3 => presStem } ;
+            Pl => table { P1 => presStem+"im" ; P2 => presStem+"ni" ; P3 => presStem+"in" }
+          }) ;
 
         Imperative = table { Sg => presStem ; Pl => presStem+"ni" } ;
 
@@ -20391,6 +20825,10 @@ mkV068 base =
             Pl => table { P1 => root+"nim" ; P2 => root+"nit" ; P3 => root+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table { -- laj-type: laj/lan/lan/lajmë/lani/lanë
+            Sg => table { P1 => root+"j" ; P2 => root+"n" ; P3 => root+"n" } ;
+            Pl => table { P1 => root+"jmë" ; P2 => root+"ni" ; P3 => root+"në" }
+          }) ;
 
         Imperative = table { Sg => root+"j" ; Pl => root+"ni" } ;
 
@@ -20446,6 +20884,10 @@ mkV069 base =
             Pl => table { P1 => root+"nim" ; P2 => root+"nit" ; P3 => root+"nin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table { -- treat as hyj-type given in 3sg: hyn / hyj / hyjmë / hyni / hyjnë
+            Sg => table { P1 => root+"j" ; P2 => pres2 ; P3 => pres2 } ;
+            Pl => table { P1 => root+"jmë" ; P2 => root+"ni" ; P3 => root+"jnë" }
+          }) ;
 
         Imperative = table { Sg => root+"j" ; Pl => root+"ni" } ;
 
@@ -20499,6 +20941,10 @@ mkV070 base =
             Pl => table { P1 => root+"onim" ; P2 => root+"onit" ; P3 => root+"onin" }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table { -- punoj/punon/punon/punojmë/punoni/punojnë
+            Sg => table { P1 => root+"oj" ; P2 => root+"on" ; P3 => root+"on" } ;
+            Pl => table { P1 => root+"ojmë" ; P2 => root+"oni" ; P3 => root+"ojnë" }
+          }) ;
 
         Imperative = table { -- puno / punoni
           Sg => root+"o" ;
@@ -20576,6 +21022,18 @@ mkV071 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+base_2+"j" ;
+                                         P2 => base_1+base_2+"n" ;
+                                         P3 => base_1+base_2+"n"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+base_2+"jmë" ;
+                                         P2 => base_1+base_2+"ni" ;
+                                         P3 => base_1+base_2+"jnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+base_2 ;
                        Pl => base_1+base_2+"ni"
@@ -20679,6 +21137,18 @@ mkV072 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+base_2+"s" ;
+                                         P2 => base_1+base_2+"s" ;
+                                         P3 => base_1+base_2+"s"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+base_2+"sim" ;
+                                         P2 => base_1+base_2+"sni" ;
+                                         P3 => base_1+base_2+"sin"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"it" ;
                        Pl => base_1+"it"+"ni"
@@ -20782,6 +21252,18 @@ mkV073 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"i"+base_2+"em" ;
+                                         P2 => base_1+"i"+base_2+"esh" ;
+                                         P3 => base_1+"i"+base_2+"et"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"i"+base_2+"emi" ;
+                                         P2 => base_1+"i"+base_2+"eni" ;
+                                         P3 => base_1+"i"+base_2+"en"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"i"+base_2 ;
                        Pl => base_1+"i"+base_2+"ni"
@@ -20885,6 +21367,18 @@ mkV074 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"oj" ;
+                                         P2 => base_1+"on" ;
+                                         P3 => base_1+"on"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ojmë" ;
+                                         P2 => base_1+"oni" ;
+                                         P3 => base_1+"ojnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"o" ;
                        Pl => base_1+"oni"
@@ -20988,6 +21482,18 @@ mkV075 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ë" ;
+                                         P2 => base_1+"ë" ;
+                                         P3 => base_1+"ë"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ëmë" ;
+                                         P2 => base_1+"ini" ;
+                                         P3 => base_1+"ënë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"ë" ;
                        Pl => base_1+"ini"
@@ -21091,6 +21597,18 @@ mkV076 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"y"+base_2 ;
+                                         P2 => base_1+"y"+base_2 ;
+                                         P3 => base_1+"y"+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => (base_1+"y"+base_2)+"im" ;
+                                         P2 => (base_1+"y"+base_2)+"ni" ;
+                                         P3 => (base_1+"y"+base_2)+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"y"+base_2 ;
                        Pl => (base_1+"y"+base_2)+"ni"
@@ -21194,6 +21712,18 @@ mkV077 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"y"+base_2+"j" ;
+                                         P2 => base_1+"y"+base_2+"n" ;
+                                         P3 => base_1+"y"+base_2+"n"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"y"+base_2+"jmë" ;
+                                         P2 => base_1+"y"+base_2+"ni" ;
+                                         P3 => base_1+"y"+base_2+"jnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"y"+base_2 ;
                        Pl => (base_1+"y"+base_2)+"ni"
@@ -21297,6 +21827,18 @@ mkV078 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"et" ;
+                                         P2 => base_1+"et" ;
+                                         P3 => base_1+"et"
+                                       } ;
+                                 Pl => table {
+                                         P1 => (base_1+"et")+"im" ;
+                                         P2 => (base_1+"et")+"ni" ;
+                                         P3 => (base_1+"et")+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1 ;
                        Pl => base_1+"ni"
@@ -21400,6 +21942,18 @@ mkV079 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"y"+base_2+"b" ;
+                                         P2 => base_1+"y"+base_2+"b" ;
+                                         P3 => base_1+"y"+base_2+"b"
+                                       } ;
+                                 Pl => table {
+                                         P1 => (base_1+"y"+base_2+"b")+"im" ;
+                                         P2 => (base_1+"y"+base_2+"b")+"ni" ;
+                                         P3 => (base_1+"y"+base_2+"b")+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"i"+base_2 ;
                        Pl => (base_1+"i"+base_2)+"ni"
@@ -21503,6 +22057,18 @@ mkV080 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"s" ;
+                                         P2 => base_1+"t" ;
+                                         P3 => base_1+"t"
+                                       } ;
+                                 Pl => table {
+                                         P1 => (base_1+"s")+"im" ;
+                                         P2 => (base_1+"s")+"ni" ;
+                                         P3 => (base_1+"s")+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"t" ;
                        Pl => (base_1+"t")+"ni"
@@ -21613,6 +22179,7 @@ mkV081 base =
           Aorist => mkAorTable aor1 ;
           Imperfect => mkImperfVowelStem stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeVowelStem stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21637,6 +22204,7 @@ mkV082 base =
           Aorist => mkAorTable aor1 ;
           Imperfect => mkImperfVowelStem stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeVowelStem stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21662,6 +22230,7 @@ mkV083 base =
           Aorist => mkAorTable aor1 ;
           Imperfect => mkImperfVowelStem stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresE baseE) ;
         Imperative = mkImperativeVowelStem stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21691,6 +22260,10 @@ mkV084 base =
             Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => aor1 ; P2 => nonExist ; P3 => nonExist } ;
+            Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
+          }) ;
         Imperative = table { Sg => nonExist ; Pl => nonExist } ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21715,6 +22288,7 @@ mkV085 base =
           Aorist => mkAorTable aor1 ;
           Imperfect => mkImperfVowelStem stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeVowelStem stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21739,6 +22313,7 @@ mkV086 base =
           Aorist => mkAorTable aor1 ;
           Imperfect => mkImperfVowelStem stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeVowelStem stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21769,6 +22344,10 @@ mkV087 base =
             Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => nonExist ; P3 => nonExist } ;
+            Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
+          }) ;
         Imperative = table { Sg => nonExist ; Pl => nonExist } ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21801,6 +22380,10 @@ mkV088 base =
           Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
         }
       } ;
+      Subjunctive = subjunctiveFromPresent (table {
+          Sg => table { P1 => "vrokth" ; P2 => nonExist ; P3 => nonExist } ;
+          Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
+        }) ;
       Imperative = table { Sg => nonExist ; Pl => nonExist } ;
       participle = "vrokthe" ;
       pres_optative = table {
@@ -21843,6 +22426,10 @@ mkV089 base =
             Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => nonExist ; P3 => nonExist } ;
+            Pl => table { P1 => nonExist ; P2 => nonExist ; P3 => nonExist }
+          }) ;
         Imperative = table { Sg => nonExist ; Pl => nonExist } ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21867,6 +22454,7 @@ mkV090 base =
           Aorist => mkAorTable aor1 ;
           Imperfect => mkImperfVowelStem stem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ stem) ;
         Imperative = mkImperativeVowelStem stem ;
         participle = pple ;
         pres_optative = mkOptFromAor1 aor1 ;
@@ -21938,6 +22526,18 @@ mkV091 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => base_1+"ie"+base_2 ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"jnë"
+            }
+          }) ;
 
         Imperative = table {
           Sg => base_1+"ie"+base_2 ;
@@ -22062,6 +22662,18 @@ mkV092 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => base_1+"ij" ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"jnë"
+            }
+          }) ;
 
         Imperative = table {
           Sg => base_1+"ij" ;
@@ -22186,6 +22798,18 @@ mkV093 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem+"j" ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"në"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem+"j" ;
@@ -22310,6 +22934,18 @@ mkV094 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem+"j" ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"në"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem+"j" ;
@@ -22434,6 +23070,18 @@ mkV095 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem+"j" ;
+              P2 => presStem+"n" ;
+              P3 => presStem+"n"
+            } ;
+            Pl => table {
+              P1 => presStem+"jmë" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"në"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem+"j" ;
@@ -22558,6 +23206,18 @@ mkV096 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => base_1+"ohem" ;
+              P2 => base_1+"ohesh" ;
+              P3 => base_1+"ohet"
+            } ;
+            Pl => table {
+              P1 => base_1+"ohemi" ;
+              P2 => base_1+"oheni" ;
+              P3 => base_1+"ohen"
+            }
+          }) ;
 
         Imperative = table {
           Sg => base_1+"ohu" ;
@@ -22681,6 +23341,18 @@ mkV097 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => base_1+base_2+"hem" ;
+              P2 => base_1+base_2+"hesh" ;
+              P3 => base_1+base_2+"het"
+            } ;
+            Pl => table {
+              P1 => base_1+base_2+"hemi" ;
+              P2 => base_1+base_2+"heni" ;
+              P3 => base_1+base_2+"hen"
+            }
+          }) ;
 
         Imperative = table {
           Sg => base_1+base_2+"hu" ;
@@ -22805,6 +23477,18 @@ mkV098 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem ;
+              P2 => presStem ;
+              P3 => presStem
+            } ;
+            Pl => table {
+              P1 => presStem+"im" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"in"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem ;
@@ -22929,6 +23613,18 @@ mkV099 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem ;
+              P2 => presStem ;
+              P3 => presStem
+            } ;
+            Pl => table {
+              P1 => presStem+"im" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"in"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem ;
@@ -23053,6 +23749,18 @@ mkV100 base =
             }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table {
+              P1 => presStem ;
+              P2 => presStem ;
+              P3 => presStem
+            } ;
+            Pl => table {
+              P1 => presStem+"im" ;
+              P2 => presStem+"ni" ;
+              P3 => presStem+"in"
+            }
+          }) ;
 
         Imperative = table {
           Sg => presStem ;
@@ -23184,6 +23892,7 @@ mkV101 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkImpf stemNoJ
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ2 stemNoJ presJ) ;
         Imperative = table { Sg => presJ ; Pl => stemNoJ+"ni" } ;
         participle = pple ;
         pres_optative = mkOptFsh presJ ;
@@ -23211,6 +23920,7 @@ mkV102 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkImpf stemNoJ
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ2 stemNoJ presJ) ;
         Imperative = table { Sg => presJ ; Pl => stemNoJ+"ni" } ;
         participle = pple ;
         pres_optative = mkOptFsh stemNoJ ;
@@ -23238,6 +23948,7 @@ mkV103 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkImpf stemNoJ
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ2 stemNoJ presJ) ;
         Imperative = table { Sg => presJ ; Pl => stemNoJ+"ni" } ;
         participle = pple ;
         pres_optative = mkOptFsh stemNoJ ;
@@ -23264,6 +23975,7 @@ mkV104 base =
           Aorist    => mkAorOj root ;
           Imperfect => mkImpf impStem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresOj root) ;
         Imperative = table { Sg => root+"o" ; Pl => root+"oni" } ;
         participle = pple ;
         pres_optative = mkOptFsh impStem ;
@@ -23291,6 +24003,7 @@ mkV105 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkImpf stemNoJ
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresJ2 stemNoJ presJ) ;
         Imperative = table { Sg => presJ ; Pl => stemNoJ+"ni" } ;
         participle = pple ;
         pres_optative = mkOptFsh presJ ;
@@ -23316,6 +24029,7 @@ mkV106 base =
           Aorist    => mkAorCons base_1 ;
           Imperfect => mkImpf base_1
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPers pres1 pres1 pres1 (base_1+"ëmë") (base_1+"ëni") (base_1+"ënë")) ;
         Imperative = table { Sg => pres1 ; Pl => base_1+"ëni" } ;
         participle = pple ;
         pres_optative = mkOptFsh base_1 ;
@@ -23341,6 +24055,7 @@ mkV107 base =
           Aorist    => mkAorCons base_1 ;
           Imperfect => mkImpf base_1
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPers pres1 nonExist nonExist nonExist nonExist nonExist) ;
         Imperative = table { Sg => nonExist ; Pl => nonExist } ;
         participle = pple ;
         pres_optative = mkOptFsh base_1 ;
@@ -23368,6 +24083,7 @@ mkV108 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkImpf impStem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresOj root) ;
         Imperative = table { Sg => root+"o" ; Pl => root+"oni" } ;
         participle = pple ;
         pres_optative = mkOptFsh impStem ;
@@ -23395,6 +24111,7 @@ mkV109 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkImpf impStem
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPresOj root) ;
         Imperative = table { Sg => root+"o" ; Pl => root+"oni" } ;
         participle = pple ;
         pres_optative = mkOptFsh impStem ;
@@ -23421,6 +24138,7 @@ mkV110 base =
           Aorist    => mkAorCons aorStem ;
           Imperfect => mkPers nonExist nonExist nonExist nonExist nonExist nonExist
         } ;
+        Subjunctive = subjunctiveFromPresent (mkPers pres1 nonExist nonExist nonExist nonExist nonExist) ;
         Imperative = table { Sg => nonExist ; Pl => nonExist } ;
         participle = pple ;
         pres_optative = mkPers nonExist nonExist nonExist nonExist nonExist nonExist ;
@@ -23477,6 +24195,18 @@ mkV111 base_1 =
                                         }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table {
+                                     P1 => base_1+"j" ;
+                                     P2 => base_1+"n" ;
+                                     P3 => base_1+"n"
+                                   } ;
+                             Pl => table {
+                                     P1 => base_1+"jmë" ;
+                                     P2 => base_1+"ni" ;
+                                     P3 => base_1+"jnë"
+                                   }
+                           }) ;
     Imperative = table {
                    Sg => base_1 ;
                    Pl => base_1+"ni"
@@ -23563,6 +24293,18 @@ mkV112 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"a"+base_2 ;
+                                         P2 => base_1+"e"+base_2 ;
+                                         P3 => base_1+"e"+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"a"+base_2+"im" ;
+                                         P2 => base_1+"i"+base_2+"ni" ;
+                                         P3 => base_1+"a"+base_2+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"i"+base_2 ;
                        Pl => base_1+"i"+base_2+"ni"
@@ -23651,6 +24393,18 @@ mkV113 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ij" ;
+                                         P2 => base_1+"in" ;
+                                         P3 => base_1+"in"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ijmë" ;
+                                         P2 => base_1+"ini" ;
+                                         P3 => base_1+"ijnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"i" ;
                        Pl => base_1+"ini"
@@ -23738,6 +24492,18 @@ mkV114 base_1 =
                                         }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table {
+                                     P1 => base_1 ;
+                                     P2 => base_1 ;
+                                     P3 => base_1
+                                   } ;
+                             Pl => table {
+                                     P1 => base_1+"im" ;
+                                     P2 => base_1+"ni" ;
+                                     P3 => base_1+"in"
+                                   }
+                           }) ;
     Imperative = table {
                    Sg => base_1 ;
                    Pl => base_1+"ni"
@@ -23823,6 +24589,18 @@ mkV115 base_1 =
                                         }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table {
+                                     P1 => base_1 ;
+                                     P2 => base_1 ;
+                                     P3 => base_1
+                                   } ;
+                             Pl => table {
+                                     P1 => base_1+"im" ;
+                                     P2 => base_1+"ni" ;
+                                     P3 => base_1+"in"
+                                   }
+                           }) ;
     Imperative = table {
                    Sg => base_1 ;
                    Pl => base_1+"ni"
@@ -23909,6 +24687,18 @@ mkV116 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"hem" ;
+                                         P2 => base_1+"hesh" ;
+                                         P3 => base_1+"het"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"hemi" ;
+                                         P2 => base_1+"heni" ;
+                                         P3 => base_1+"hen"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"hu" ;
                        Pl => base_1+"huni"
@@ -23997,6 +24787,18 @@ mkV117 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+base_2 ;
+                                         P2 => base_1+base_2 ;
+                                         P3 => base_1+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => (base_1+base_2)+"im" ;
+                                         P2 => (base_1+base_2)+"ni" ;
+                                         P3 => (base_1+base_2)+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+base_2 ;
                        Pl => (base_1+base_2)+"ni"
@@ -24085,6 +24887,18 @@ mkV118 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ë" ;
+                                         P2 => base_1+"ë" ;
+                                         P3 => base_1+"ë"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ëmë" ;
+                                         P2 => base_1+"ini" ;
+                                         P3 => base_1+"ënë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"ër" ;
                        Pl => base_1+"ini"
@@ -24173,6 +24987,18 @@ mkV119 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ej" ;
+                                         P2 => base_1+"en" ;
+                                         P3 => base_1+"en"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ejmë" ;
+                                         P2 => base_1+"eni" ;
+                                         P3 => base_1+"ejnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"ej" ;
                        Pl => base_1+"eni"
@@ -24261,6 +25087,18 @@ mkV120 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"h"+base_2 ;
+                                         P2 => base_1+"h"+base_2 ;
+                                         P3 => base_1+"h"+base_2
+                                       } ;
+                                 Pl => table {
+                                         P1 => (base_1+"h"+base_2)+"im" ;
+                                         P2 => (base_1+"h"+base_2)+"ni" ;
+                                         P3 => (base_1+"h"+base_2)+"in"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"h"+base_2 ;
                        Pl => (base_1+"h"+base_2)+"ni"
@@ -24358,6 +25196,18 @@ mkV121 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"oj" ;
+                                         P2 => base_1+"on" ;
+                                         P3 => base_1+"on"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"ojmë" ;
+                                         P2 => base_1+"oni" ;
+                                         P3 => base_1+"ojnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"o" ;
                        Pl => base_1+"oni"
@@ -24471,6 +25321,18 @@ mkV122 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"âj" ;
+                                         P2 => base_1+"ân" ;
+                                         P3 => base_1+"ân"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"âjmë" ;
+                                         P2 => base_1+"âni" ;
+                                         P3 => base_1+"âjnë"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"âj" ;
                        Pl => base_1+"âni"
@@ -24583,6 +25445,18 @@ mkV123 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"i"+base_2+"em" ;
+                                         P2 => base_1+"i"+base_2+"esh" ;
+                                         P3 => base_1+"i"+base_2+"et"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"i"+base_2+"emi" ;
+                                         P2 => base_1+"i"+base_2+"eni" ;
+                                         P3 => base_1+"i"+base_2+"en"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"i"+base_2+"u" ;
                        Pl => base_1+"i"+base_2+"uni"
@@ -24694,6 +25568,18 @@ mkV124 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"em" ;
+                                         P2 => base_1+"esh" ;
+                                         P3 => base_1+"et"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+"emi" ;
+                                         P2 => base_1+"eni" ;
+                                         P3 => base_1+"en"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"u" ;
                        Pl => base_1+"uni"
@@ -24805,6 +25691,18 @@ mkV125 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+base_2+"rr" ;
+                                         P2 => base_1+"err" ;
+                                         P3 => base_1+"err"
+                                       } ;
+                                 Pl => table {
+                                         P1 => base_1+base_2+"rrim" ;
+                                         P2 => base_1+"errni" ;
+                                         P3 => base_1+base_2+"rrin"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => base_1+"err" ;
                        Pl => base_1+"errni"
@@ -24916,6 +25814,18 @@ mkV126 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"ash"+base_2 ;
+                                         P2 => nonExist ;
+                                         P3 => nonExist
+                                       } ;
+                                 Pl => table {
+                                         P1 => nonExist ;
+                                         P2 => nonExist ;
+                                         P3 => nonExist
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => nonExist ;
                        Pl => nonExist
@@ -25027,6 +25937,18 @@ mkV127 base_1 =
                                         }
                                 }
                  } ;
+  Subjunctive = subjunctiveFromPresent (table {
+                             Sg => table {
+                                     P1 => base_1 ;
+                                     P2 => base_1 ;
+                                     P3 => base_1
+                                   } ;
+                             Pl => table {
+                                     P1 => base_1+"im" ;
+                                     P2 => base_1+"ni" ;
+                                     P3 => base_1+"in"
+                                   }
+                           }) ;
     Imperative = table {
                    Sg => base_1 ;
                    Pl => base_1+"ni"
@@ -25137,6 +26059,18 @@ mkV128 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => "venj" ;
+                                         P2 => "-" ;
+                                         P3 => "-"
+                                       } ;
+                                 Pl => table {
+                                         P1 => "-" ;
+                                         P2 => "-" ;
+                                         P3 => "-"
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => "-" ;
                        Pl => "-"
@@ -25249,6 +26183,18 @@ mkV129 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"n" ;
+                                         P2 => nonExist ;
+                                         P3 => nonExist
+                                       } ;
+                                 Pl => table {
+                                         P1 => nonExist ;
+                                         P2 => nonExist ;
+                                         P3 => nonExist
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => nonExist ;
                        Pl => nonExist
@@ -25360,6 +26306,18 @@ mkV130 base =
                                             }
                                     }
                      } ;
+      Subjunctive = subjunctiveFromPresent (table {
+                                 Sg => table {
+                                         P1 => base_1+"nj" ;
+                                         P2 => nonExist ;
+                                         P3 => nonExist
+                                       } ;
+                                 Pl => table {
+                                         P1 => nonExist ;
+                                         P2 => nonExist ;
+                                         P3 => nonExist
+                                       }
+                               }) ;
         Imperative = table {
                        Sg => nonExist ;
                        Pl => nonExist
@@ -25470,6 +26428,10 @@ mkV131 base =
             Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres2 ; P3 => pres3 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => impSg ; Pl => pres2pl } ;
         participle = part ;
 
@@ -25539,6 +26501,10 @@ mkV132 base =
             Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres23 ; P3 => pres23 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => impSg ; Pl => pres2pl } ;
         participle = part ;
 
@@ -25616,6 +26582,10 @@ mkV133 base =
             Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => pres1 ; P2 => pres23 ; P3 => pres23 } ;
+            Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
+          }) ;
         Imperative = table { Sg => impSg ; Pl => pres2pl } ;
         participle = part ;
 
@@ -25676,6 +26646,10 @@ mkV134 base_1 =
         Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
       }
     } ;
+  Subjunctive = subjunctiveFromPresent (table {
+        Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+        Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+      }) ;
     Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
     participle = part ;
 
@@ -25736,6 +26710,10 @@ mkV135 base =
             Pl => table { P1 => imp1pl ; P2 => imp2pl ; P3 => imp3pl }
           }
         } ;
+        Subjunctive = subjunctiveFromPresent (table {
+            Sg => table { P1 => presS ; P2 => presS ; P3 => presS } ;
+            Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
+          }) ;
         Imperative = table { Sg => presS ; Pl => presS+"ni" } ;
         participle = part ;
 

@@ -23,14 +23,14 @@ oper
 
   lexicalObjectVP : VPSlash -> R.Agr -> VP = \sl,objAgr ->
     case sl.c2.c of {
-      R.Dat => appendClitic (vpFromSlash sl) (\\_ => R.datCliticAgr objAgr) ;
+      R.Dat => appendClitic (vpFromSlash sl) (R.datCliticAgr objAgr) (R.subjDatCliticAgr objAgr) ;
       _ => vpFromSlash sl
     } ;
 
   pronominalObjectVP : VPSlash -> R.Agr -> VP = \sl,objAgr ->
     case sl.c2.c of {
-      R.Acc => appendClitic (vpFromSlash sl) (\\_ => R.accCliticAgr objAgr) ;
-      R.Dat => appendClitic (vpFromSlash sl) (\\_ => R.datCliticAgr objAgr) ;
+      R.Acc => appendClitic (vpFromSlash sl) (R.accCliticAgr objAgr) (R.subjAccCliticAgr objAgr) ;
+      R.Dat => appendClitic (vpFromSlash sl) (R.datCliticAgr objAgr) (R.subjDatCliticAgr objAgr) ;
       _ => vpFromSlash sl
     } ;
 

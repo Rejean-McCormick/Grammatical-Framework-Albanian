@@ -6,20 +6,46 @@ concrete VerbSqi of Verb = CatSqi **
     emptyAgrStr : Agr => Str = \\_ => [] ;
 
     baseVP : Verb -> VP = \v -> lin VP {
-      v = v ;
-      cl = emptyAgrStr ;
+      indicative = v.Indicative ;
+      subjunctive = v.Subjunctive ;
+      imperative = v.Imperative ;
+      participle = v.participle ;
+      pres_optative = v.pres_optative ;
+      perf_optative = v.perf_optative ;
+      pres_admirative = v.pres_admirative ;
+      imperf_admirative = v.imperf_admirative ;
+      cl = [] ;
+      subjcl = "të" ;
       post = emptyAgrStr
     } ;
 
     baseSlash : Verb -> Compl -> VPSlash = \v,c -> lin VPSlash {
-      v = v ;
-      cl = emptyAgrStr ;
+      indicative = v.Indicative ;
+      subjunctive = v.Subjunctive ;
+      imperative = v.Imperative ;
+      participle = v.participle ;
+      pres_optative = v.pres_optative ;
+      perf_optative = v.perf_optative ;
+      pres_admirative = v.pres_admirative ;
+      imperf_admirative = v.imperf_admirative ;
+      cl = [] ;
+      subjcl = "të" ;
       post = emptyAgrStr ;
       c2 = c
     } ;
 
     slashToVP : VPSlash -> VP = \sl -> lin VP {
-      v = sl.v ; cl = sl.cl ; post = sl.post
+      indicative = sl.indicative ;
+      subjunctive = sl.subjunctive ;
+      imperative = sl.imperative ;
+      participle = sl.participle ;
+      pres_optative = sl.pres_optative ;
+      perf_optative = sl.perf_optative ;
+      pres_admirative = sl.pres_admirative ;
+      imperf_admirative = sl.imperf_admirative ;
+      cl = sl.cl ;
+      subjcl = sl.subjcl ;
+      post = sl.post
     } ;
 
     addPost : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
@@ -30,28 +56,30 @@ concrete VerbSqi of Verb = CatSqi **
       post = \\a => vp.post ! a ++ x ! a
     } ;
 
-    addClitic : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
-      cl = \\a => vp.cl ! a ++ x ! a
+    addClitic : VP -> Str -> Str -> VP = \vp,x,sx -> vp ** {
+      cl = vp.cl ++ x ;
+      subjcl = sx
     } ;
 
-    addCliticSlash : VPSlash -> (Agr => Str) -> VPSlash = \vp,x -> vp ** {
-      cl = \\a => vp.cl ! a ++ x ! a
+    addCliticSlash : VPSlash -> Str -> Str -> VPSlash = \vp,x,sx -> vp ** {
+      cl = vp.cl ++ x ;
+      subjcl = sx
     } ;
 
     vpiStr : VP -> Agr -> Str = \vp,a ->
-      teWithClitic (vp.cl ! a) ++ subjunctiveFinite vp.v a ++ vp.post ! a ;
+      vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
 
     slashVpiStr : VPSlash -> Agr -> Str = \vp,a ->
-      teWithClitic (vp.cl ! a) ++ subjunctiveFinite vp.v a ++ vp.post ! a ;
+      vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
 
     saturateSlash : VPSlash -> NP -> VP = \sl,np ->
       let c : Case = sl.c2.c in
       case <np.isPron,c> of {
-        <True,Acc> => addClitic (slashToVP sl) (\\_ => np.acc_clit) ;
-        <True,Dat> => addClitic (slashToVP sl) (\\_ => np.dat_clit) ;
+        <True,Acc> => addClitic (slashToVP sl) np.acc_clit (subjAccCliticAgr np.a) ;
+        <True,Dat> => addClitic (slashToVP sl) np.dat_clit (subjDatCliticAgr np.a) ;
         <False,Dat> =>
           addPost
-            (addClitic (slashToVP sl) (\\_ => datCliticAgr np.a))
+            (addClitic (slashToVP sl) (datCliticAgr np.a) (subjDatCliticAgr np.a))
             (\\_ => sl.c2.s ++ np.s ! c) ;
         _ => addPost (slashToVP sl) (\\_ => sl.c2.s ++ np.s ! c)
       } ;
@@ -77,7 +105,7 @@ concrete VerbSqi of Verb = CatSqi **
 
     ComplSlash sl np = saturateSlash sl np ;
 
-    ReflVP sl = addClitic (slashToVP sl) (\\_ => "u") ;
+    ReflVP sl = addClitic (slashToVP sl) "u" "t'u" ;
 
     PassV2 v2 = addPost (baseVP (lin Verb I.jam_V)) (\\_ => v2.participle) ;
 
@@ -108,21 +136,48 @@ concrete VerbSqi of Verb = CatSqi **
       (\\_ => v3.c3.s ++ np.s ! v3.c3.c) ;
 
     SlashVV vv sl = lin VPSlash {
-      v = vv ;
-      cl = emptyAgrStr ;
+      indicative = vv.Indicative ;
+      subjunctive = vv.Subjunctive ;
+      imperative = vv.Imperative ;
+      participle = vv.participle ;
+      pres_optative = vv.pres_optative ;
+      perf_optative = vv.perf_optative ;
+      pres_admirative = vv.pres_admirative ;
+      imperf_admirative = vv.imperf_admirative ;
+      cl = [] ;
+      subjcl = "të" ;
       post = \\a => slashVpiStr sl a ;
       c2 = sl.c2
     } ;
 
     SlashV2VNP v2v np sl = lin VPSlash {
-      v = lin Verb v2v ;
-      cl = emptyAgrStr ;
+      indicative = v2v.Indicative ;
+      subjunctive = v2v.Subjunctive ;
+      imperative = v2v.Imperative ;
+      participle = v2v.participle ;
+      pres_optative = v2v.pres_optative ;
+      perf_optative = v2v.perf_optative ;
+      pres_admirative = v2v.pres_admirative ;
+      imperf_admirative = v2v.imperf_admirative ;
+      cl = [] ;
+      subjcl = "të" ;
       post = \\a => v2v.c2.s ++ np.s ! v2v.c2.c ++
                      v2v.c3.s ++ slashVpiStr sl a ;
       c2 = sl.c2
     } ;
 
     VPSlashPrep vp prep = lin VPSlash {
-      v = vp.v ; cl = vp.cl ; post = vp.post ; c2 = prep
+      indicative = vp.indicative ;
+      subjunctive = vp.subjunctive ;
+      imperative = vp.imperative ;
+      participle = vp.participle ;
+      pres_optative = vp.pres_optative ;
+      perf_optative = vp.perf_optative ;
+      pres_admirative = vp.pres_admirative ;
+      imperf_admirative = vp.imperf_admirative ;
+      cl = vp.cl ;
+      subjcl = vp.subjcl ;
+      post = vp.post ;
+      c2 = prep
     } ;
 }

@@ -36,12 +36,12 @@ concrete IdiomSqi of Idiom = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRe
       s=\\t,a,p=>(ExistIP ip).s!t!a!p ++ adv.s
     } ;
 
-    ProgrVP vp = vp ** {cl=\\a=>"po" ++ vp.cl!a} ;
+    ProgrVP vp = vp ** {cl="po" ++ vp.cl ; subjcl="të" ++ "po" ++ vp.cl} ;
 
     ImpPl1 vp = {s="le" ++ subjVP vp p1plAgr} ;
     ImpP3 np vp = {s="le" ++ np.s!Nom ++ subjVP vp np.a} ;
 
     SelfAdvVP vp = vp ** {post=\\a=>vp.post!a ++ "vetë"} ;
-    SelfAdVVP vp = vp ** {cl=\\a=>"vetë" ++ vp.cl!a} ;
+    SelfAdVVP vp = vp ** {cl="vetë" ++ vp.cl ; subjcl="të" ++ "vetë" ++ vp.cl} ;
     SelfNP np = np ** {s=\\c=>np.s!c ++ "vetë"} ;
 }

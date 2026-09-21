@@ -21,8 +21,7 @@ lin
 
   QuestIComp icomp np = {
     s = \\t,ant,pol =>
-      let cop : VP = appendVP (emptyVP (lin Verb I.jam_V)) (\\_ => np.s ! Nom)
-      in icomp.s ++ realizeVP cop t ant pol np.a
+      icomp.s ++ realizeVP (emptyVP (lin Verb I.jam_V)) t ant pol np.a ++ np.s ! Nom
   } ;
 
   IdetCN idet cn = {

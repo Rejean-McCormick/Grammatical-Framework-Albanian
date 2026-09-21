@@ -10,22 +10,26 @@
 
 ## 0. Current working-snapshot overlay — 2026-09-21
 
-This document contains substantial FIX22C baseline information. That baseline remains valid historical evidence for its exact source snapshot, but the later mega-update is **not currently compiler-stable**.
+This document contains substantial FIX22C baseline information. That baseline remains valid historical evidence for its exact source snapshot, but the later mega-update is **not yet compiler-stable**.
 
-Latest Wordbench Global Scan (`20260921_151446`, GF 3.12):
+Latest compiler evidence is Wordbench Global Scan `20260921_201720` on candidate (11), GF 3.12:
 
 ```text
-47 language-folder GF files scanned
-5 PASS
-42 FAIL
+47 automatically discovered language-folder targets
+27 PASS
+20 FAIL
 0 ERROR
 0 TIMEOUT
 0 scenarios
 ```
 
-The 42 failed compilations currently converge on `ResSqi.gf:347:7`, where a `case` over `Str` uses `[] =>` and GF reports `Unexpected token ']'` / `Expected: String`. The active work phase is therefore syntax-integrity recovery followed by a new global compile census.
+The earlier syntax-corruption layer is repaired, and the candidate (11) clitic repair removed the former `CProj "cl"` PMCFG family. The dominant remaining backend trace instead descends through `CProj "Indicative" (CProj "v" ...)`, reached by syntax that reconstructs subjunctive morphology from present-indicative surface strings.
 
-Operational order is normative in `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`.
+Candidate (12), pending local GF validation, moves this distinction to the morphology boundary: `ResSqi.Verb` has an explicit `Subjunctive` table and `VP`/`VPSlash` copy the complete currently represented verbal form inventory instead of retaining a nested `v : Verb`. The independent `LexiconSqi.distance_N3` prep-overload failure is also repaired with explicit case government.
+
+Candidate (12) static preflight over the complete 52-file source census is clean (Wordbench static scan 0 findings / 0 exceptions; `gf_morphosqi_lint.py` 0 findings). This is **not** compiler acceptance.
+
+Operational order is normative in `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; exact live facts are in `CURRENT_REPAIR_STATE.md`.
 
 ---
 
@@ -35,17 +39,17 @@ The Albanian project has two states that must not be conflated:
 
 | Area | FIX22C / v0.1.0 baseline | Current post-mega-update snapshot |
 |---|---|---|
-| Core category/resource architecture | compiler-validated baseline | present, but current compile is blocked before full revalidation |
-| Morphology/paradigm implementation | substantial and baseline-validated | present; must be revalidated after syntax gate |
-| Core grammar / Structural | passed historical gate | downstream-blocked by current `ResSqi` parse error |
-| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | not currently revalidated |
-| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | downstream-blocked in latest Global Scan |
+| Core category/resource architecture | compiler-validated baseline | representation changed in candidate (12); pending GF 3.12 revalidation |
+| Morphology/paradigm implementation | substantial and baseline-validated | explicit subjunctive table added in candidate (12); pending compiler and linguistic revalidation |
+| Core grammar / Structural | passed historical gate | partially recompiling in latest run; remaining result depends on Verb→VP PMCFG repair |
+| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | current run still fails through shared Verb→VP PMCFG path; candidate (12) pending |
+| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | latest run exposes shared PMCFG fallout plus an independent `distance_N3` overload; candidate (12) pending |
 | Public facades (`SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`) | not part of the original eight-target FIX22C table | required supplemental gate after recovery |
 | Scenario/golden linguistic validation | pending | pending; `Scenarios seen: 0` in latest scan |
 
 Therefore the current project phase is:
 
-> **restore syntax and compiler integrity → re-establish the historical compiler gate and public facades → validate Albanian behavior → continue capability completion**
+> **validate the candidate (12) Verb→VP morphology boundary → complete the 52-file compiler census → re-establish/exceed the historical compiler gate and public facades → validate Albanian behavior → continue capability completion**
 
 The project is not back in the old pre-FIX22C PMCFG-repair phase. The historical PMCFG crash is a regression boundary, while the current first blocker is a newer syntax regression introduced after the baseline.
 
@@ -630,7 +634,7 @@ The whole Albanian RGL has **not yet reached this level**.
 
 ## 18. Remaining path to completion
 
-The compiler/structural release gate was complete at FIX22C. The current mega-update must restore and then exceed that historical gate before completion work resumes.
+The compiler/structural release gate was complete at FIX22C. The current post-mega-update candidate is still in foundational compiler recovery and must restore and then exceed that historical gate before completion work resumes.
 
 The remaining work is mainly:
 
@@ -647,7 +651,7 @@ The remaining work is mainly:
 11. run a true behavioral/golden regression;
 12. only then declare Albanian RGL complete.
 
-The next phase is therefore **Albanian RGL Completion**, not foundational compiler repair.
+The immediate phase is therefore **foundational compiler recovery at the Verb→VP boundary**. Albanian RGL Completion resumes only after the compiler gate is green again.
 
 ---
 
@@ -661,28 +665,25 @@ The Albanian RGL has a substantial morphology, paradigm system,
 core grammar, lexicon, structural vocabulary, construction layer,
 and extended grammar.
 
-The compiler/structural core now passes the FIX22C Wordbench release
-gate through AllSqi, and the former GF 3.12 PMCFG crash is resolved.
+FIX22C remains the last compiler-stable historical baseline. The
+post-mega-update source has progressed from syntax corruption to a
+well-isolated GF 3.12 PMCFG representation problem at the Verb→VP
+boundary. Candidate (12) introduces explicit subjunctive morphology
+and removes the nested VP.v.Indicative path, but has not yet been
+compiler-validated.
 
-The core baseline is suitable for the tagged milestone
-albanian-rgl-core-v0.1.0.
-
-The remaining work is primarily behavioral test coverage, linguistic
-validation, warning cleanup, higher-level feature completion, and the
-replacement of inherited/provisional extension implementations where
-real Albanian behavior is still missing.
+Static preflight is clean across the full 52-file census. Scenario
+and golden linguistic validation remain pending.
 ```
 
 ### Development phase
 
 ```text
-FOUNDATION:            STABLE / FROZEN AT CORE v0.1.0
-CORE IMPLEMENTATION:   SUBSTANTIAL
-CORE RELEASE GATE:     PASS
-EXTEND COMPILATION:    WORKING
-PUBLIC AllSqi BUILD:   WORKING
-SCENARIO REGRESSION:   PENDING
-LINGUISTIC QA:         IN PROGRESS
-FEATURE COMPLETION:    IN PROGRESS
-FINAL RGL RELEASE:     NOT YET
+HISTORICAL FIX22C BASELINE:  COMPILER-STABLE
+CURRENT CANDIDATE (12):      STATIC-CLEAN / GF VALIDATION PENDING
+VERB→VP PMCFG RECOVERY:      ACTIVE
+FULL 52-FILE COMPILE GATE:   PENDING
+SCENARIO REGRESSION:         PENDING
+LINGUISTIC QA:               PENDING AFTER COMPILER RECOVERY
+FINAL RGL RELEASE:           NOT YET
 ```

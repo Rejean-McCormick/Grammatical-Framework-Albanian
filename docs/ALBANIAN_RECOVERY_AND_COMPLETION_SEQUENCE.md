@@ -23,28 +23,32 @@ The sequence here follows the GF Compendium rule that a non-compiling snapshot i
 
 ## 2. Current phase
 
-The FIX22C baseline is historical evidence that the core **did compile** before the later mega-update. The current post-update working snapshot is **not compiler-stable**.
+The FIX22C baseline is historical evidence that the core **did compile** before the later mega-update. The current post-update working snapshot is **not yet compiler-stable**, but the textual syntax-integrity layer is clean and the PMCFG repair has now reached the verbal-representation boundary.
 
-Wordbench Global Scan run `20260921_151446` (GF 3.12) scanned the 47 `.gf` files under `GF/lib/src/albanian`:
+Wordbench Global Scan run `20260921_201720` (GF 3.12), validating candidate (11), reported:
 
 ```text
 files included: 47
-PASS:           5
-FAIL:          42
+PASS:          27
+FAIL:          20
 ERROR:          0
 TIMEOUT:        0
 scenarios:      0
 ```
 
-All 42 compile failures currently converge on the same first compiler error:
+The run confirms that the clitic-specific repair from ALB-DEC-046 worked: the former `CProj "cl"` backend family disappeared. The dominant remaining PMCFG signature is instead a nested projection through `VP.v.Indicative ! Pres ! Sg ! P1`, reached through the old `subjunctiveFinite` implementation.
 
-```text
-ResSqi.gf:347:7
-Unexpected token ']'.
-Expected: String
-```
+Candidate (12) therefore changes the boundary rather than adding another surface-string workaround:
 
-The current first repair phase is therefore **syntax-integrity recovery**, not VPS/VPI completion, PMCFG redesign, or linguistic tuning.
+1. `ResSqi.Verb` owns an explicit `Subjunctive : Number => Person => Str` table;
+2. generated/paradigm verb constructors populate that table when morphology is built;
+3. `VP`/`VPSlash` copy all currently represented verbal tables/forms at the lexical boundary;
+4. PMCFG-facing syntax no longer carries or projects through `VP.v`;
+5. syntax selects `vp.subjunctive`, but never infers mood from `vp.indicative` strings.
+
+The same candidate fixes the independent `LexiconSqi.distance_N3` overload failure by making preposition government explicit.
+
+The current phase remains **G3 root-cause compiler/PMCFG recovery**. Syntax integrity is a regression gate, not the active first blocker.
 
 ---
 
@@ -80,13 +84,17 @@ These forms are syntax facts, not Albanian linguistic decisions.
 
 ### 4.2 Current syntax evidence
 
-The current scan reports:
+Candidate (12) has been scanned with the Wordbench static-scanning service over the complete current source census of **52 `.gf` files**:
 
-- `139` `single_slash_eq` findings across `17` files;
-- `9` `untyped_case_str_pat` findings;
-- `26` trailing-space findings.
+- static findings: `0`;
+- scan exceptions: `0`;
+- single-backslash table-abstraction corruption (`\x => ...`): `0`;
+- `[] => ...` used as a `Str` case pattern: `0`;
+- `gf_morphosqi_lint.py` findings: `0`.
 
 The model-language bundle corroborates the notation distinction: it contains extensive `\\x => ...` table abstractions and `\x -> ...` function abstractions, while no `\x => ...` or `[] => ...` pattern occurs in the supplied model sources. This is corroboration only; the current Albanian expected type and compiler remain authoritative.
+
+Heuristic morphology-inference candidates are evidence for review, not failures. They must not be rewritten merely to silence a detector without GF/compiler or linguistic evidence.
 
 ### 4.3 Repair rule
 
@@ -105,13 +113,13 @@ For every `[] => ...` finding:
 2. if it is `Str`, use a string pattern such as `"" => ...` when the intended case is the empty string;
 3. do not convert `=> []` result expressions, which are a different construct.
 
-### 4.4 Immediate first blocker
+### 4.4 Current G1 state
 
-Repair and compile `ResSqi.gf` first because all current downstream failures stop there. Then rerun the smallest importer chain before using the next Global Scan to reveal the next independent error.
+The former `ResSqi` parse blocker and the mass notation-corruption family remain repaired through candidate (12). G1 is therefore a **regression gate**, not the active repair frontier.
 
-Known same-family sites already visible in `VerbSqi.gf` must be checked after `ResSqi` is green; they are not evidence that every downstream module owns a separate bug.
+The next local GF 3.12 validation must confirm that no parse/notation failure reappears while testing the Verb→VP PMCFG repair derived from run `20260921_201720`.
 
-**G1 PASS:** the current Albanian source parses/compiles far enough that no malformed-notation error masks the next independent compiler layer.
+**G1 PASS:** the current Albanian source contains no known malformed-notation blocker and the local GF run reaches the next independent compiler layer.
 
 ---
 
@@ -132,13 +140,13 @@ The inventory is exhaustive even though repair remains root-cause ordered.
 
 The campaign must include all Albanian language sources:
 
-- all `.gf` files in `GF/lib/src/albanian`;
+- all **48** `.gf` files currently in `GF/lib/src/albanian`, including `ExtendSqiVPS.gf`;
 - `GF/lib/src/SyntaxSqi.gf`;
 - `GF/lib/src/ConstructorsSqi.gf`;
 - `GF/lib/src/SymbolicSqi.gf`;
 - `GF/lib/src/TrySqi.gf`.
 
-Until Wordbench includes those four parent-directory facades automatically, run them as an explicit supplemental batch and record that the Global Scan itself covered only 47/51 GF files.
+The latest compiler-evidence run (candidate 11, `20260921_201720`) still included only 47 files. It therefore missed **five** current targets: `ExtendSqiVPS.gf` plus the four parent-directory facades. Until Wordbench discovers all five automatically, compile them explicitly and record the automatic/supplemental split.
 
 ### Failure classification
 
@@ -151,7 +159,7 @@ For each failed target, distinguish:
 
 A large number of downstream failures must never be counted as the same number of independent Albanian defects.
 
-**G2 PASS:** all 51 GF sources have a recorded result and independent root causes are separated from dependency fallout.
+**G2 PASS:** all 52 GF sources have a recorded result and independent root causes are separated from dependency fallout.
 
 ---
 
@@ -177,6 +185,15 @@ For each patch:
 - periodically rerun the full Global Scan to update the census.
 
 Do not use empty strings, broad `variants {}`, record flattening, copied lock fields, or model-language surface behavior merely to make the compiler advance.
+
+For verbal PMCFG failures, apply the following additional boundary rule:
+
+- if syntax needs a grammatical distinction such as subjunctive mood, encode/select it as a typed morphology dimension before final clause realization;
+- do not recover that distinction by `case` analysis over a realized `Str`;
+- do not force PMCFG to descend through nested lexical records when the same required information can be copied as structured tables at the lexical-to-VP boundary;
+- preserve all downstream-used dimensions when changing that boundary. Moving `Verb` information into `VP` is acceptable only when the required tables/forms remain represented, not when they are collapsed to one surface string.
+
+Candidate (12) is the current application of this rule: explicit `Verb.Subjunctive`, structured VP form tables, no `VP.v` projection.
 
 ---
 

@@ -21,15 +21,15 @@ Use `ALBANIAN_EXTENDSQI_*` and `albanian_extend_specifics_lockfield_and_boundary
 FIX22C established the historical compiler-stable baseline `albanian-rgl-core-v0.1.0`. The later mega-update changed the source and the latest Global Scan no longer compiles the working tree. Therefore the current phase is:
 
 ```text
-syntax-integrity recovery
-  -> global compile census
-  -> direct/downstream root-cause repair
-  -> restore FIX22C + public API facade gates
+syntax-integrity gate: clean through candidate (12)
+  -> GF 3.12 validation of explicit subjunctive morphology / structured Verb→VP boundary
+  -> complete 52-file compile census
+  -> restore/exceed FIX22C + public API facade gates
   -> linguistic scenarios/goldens
   -> capability completion
 ```
 
-Do not resume PMCFG/VPS/VPI or higher semantic completion while a lower parse/syntax blocker masks the compiler graph.
+Do not treat static cleanliness as compiler success. The active acceptance test is the exact-source GF 3.12 rerun, followed by the complete 52-file census.
 
 ## Authority model
 

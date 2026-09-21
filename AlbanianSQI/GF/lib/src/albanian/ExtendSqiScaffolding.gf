@@ -95,9 +95,10 @@ oper
   sc_UttVPShort : VP -> Utt = \vp -> lin Utt {s=realizeImpVP vp P.Pos P.Sg} ;
 
   sc_ComplBareVS : VS -> S -> VP = \vs,s -> appendVP (emptyVP vs) (\\_ =>s.s) ;
-  sc_SlashBareV2S : V2S -> S -> VPSlash = \v2s,s -> lin VPSlash {
-    v=v2s ; cl=\\_ =>[] ; post=\\_ =>s.s ; c2=v2s.c2
-  } ;
+  sc_SlashBareV2S : V2S -> S -> VPSlash = \v2s,s ->
+    slashFromVP
+      (appendVP (emptyVP (lin Verb v2s)) (\\_ =>s.s))
+      v2s.c2 ;
 
   sc_ComplDirectVS : VS -> Utt -> VP = \vs,utt ->
     appendVP (emptyVP vs) (\\_ =>":" ++ utt.s) ;

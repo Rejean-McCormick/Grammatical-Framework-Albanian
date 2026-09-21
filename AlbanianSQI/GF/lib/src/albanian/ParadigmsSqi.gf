@@ -1247,6 +1247,10 @@ irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
         Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
       }
     } ;
+    Subjunctive = subjunctiveFromPresent (table {
+        Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
+        Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
+      }) ;
     Imperative = table {Sg=>impSg; Pl=>impPl} ;
     participle = part ;
     pres_optative = \\n,p => case <n,p> of {

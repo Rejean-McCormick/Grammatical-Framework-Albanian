@@ -221,7 +221,7 @@ Required:
 Run before calling a repair cycle complete.
 
 Required:
-- compile all 51 Albanian GF sources in the current layout: every `.gf` under `GF/lib/src/albanian` plus `SyntaxSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, and `TrySqi.gf`,
+- compile all 52 Albanian GF sources in the current layout: all 48 `.gf` files under `GF/lib/src/albanian` plus `SyntaxSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, and `TrySqi.gf`,
 - confirm targeted fragile regression set passes,
 - confirm no newly expanded warning clusters,
 - confirm façade modules still behave as thin façades/aggregators,
@@ -241,7 +241,7 @@ The inventory and the repair order are different concepts:
 - classify a target as `blocked/downstream` when its raw compiler log points first to an already-known dependency failure;
 - do not count one dependency parse error as dozens of independent defects.
 
-Until Wordbench automatically includes the four parent-directory API facades, run those four explicitly after the 47-file language-folder Global Scan.
+The latest Wordbench run included 47 language-folder files. Until discovery includes the new `ExtendSqiVPS.gf` and the four parent-directory API facades, run those five targets explicitly after the automatic Global Scan.
 
 ## 6. Required global checks
 
@@ -714,6 +714,48 @@ These are permanent regression checks because Albanian recently failed on:
 - and stale explanatory assumptions treated as stronger than the current code.
 
 Any future change touching any of these must rerun the full Albanian minimal suite.
+
+### Regression set F — Verb→VP morphology boundary / PMCFG
+
+This set is permanent after Wordbench run `20260921_201720`.
+
+Static/source invariants:
+
+- `ResSqi.Verb` exposes `Subjunctive : Number => Person => Str`;
+- every concrete `Verb` producer used by Albanian supplies that field directly or through an accepted constructor that supplies it;
+- `VP` and `VPSlash` do **not** carry a nested `v : Verb` field in the current GF 3.12 representation;
+- PMCFG-facing syntax does not infer mood by `case` analysis over `Indicative` or another realized `Str`;
+- `subjunctiveFinite`, if retained for compatibility, is selector-only and contains no surface-string classification;
+- the dead `teWithClitic : Str -> Str` late-string helper remains absent; clitic/subjunctive contractions are decided structurally when the object is introduced.
+
+Mandatory pre-compile lint after any bulk edit to `MorphoSqi.gf`:
+
+```text
+python gf_morphosqi_lint.py AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf
+```
+
+The lint must report `Findings: 0`. In addition to the historical morphology checks, it now verifies whole-file delimiter balance and requires every `lin V { ... }` block to expose `Indicative`, `Subjunctive`, and `Imperative`. This guard exists because candidate-(12) preflight caught malformed extra record openings that a lexical static scan alone did not detect.
+
+Required compile chain after any change to `Verb`, `VP`, `VPSlash`, subjunctive construction, or clitic fields:
+
+1. `ResSqi.gf`;
+2. `MorphoSqi.gf`;
+3. `ParadigmsSqi.gf`;
+4. `IrregSqi.gf`;
+5. `CatSqi.gf`;
+6. `VerbSqi.gf`;
+7. `SentenceSqi.gf`, `QuestionSqi.gf`, `RelativeSqi.gf`, `PhraseSqi.gf`, and `IdiomSqi.gf`;
+8. `ExtendSqi.gf` plus its local companions;
+9. `GrammarSqi.gf`, `LangSqi.gf`, `AllSqi.gf`;
+10. the four parent API facades.
+
+The following backend signature is a named non-regression condition:
+
+```text
+CProj "Indicative" (CProj "v" ...)
+```
+
+Candidate (12) is not accepted until GF 3.12 demonstrates that this family has disappeared. If it is replaced by another common backend trace, classify the new trace by its first shared producer instead of patching each importer separately.
 
 ---
 

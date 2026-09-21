@@ -80,6 +80,47 @@ Model languages may help compare two engineering alternatives:
 
 They do **not** decide which alternative Albanian needs. That decision requires exact `ExtendFunctor` coverage, current Albanian lincats/producers/consumers, current compiler/PMCFG evidence, and targeted Albanian scenarios.
 
+### Verb → VP morphology boundary and PMCFG
+
+The supplied model corpus gives strong **engineering** evidence for the current candidate (12) representation.
+
+**Romanian** encodes conjunctive/subjunctive morphology in the verb-form inventory itself:
+
+```gf
+Subjo SPres Sg P1
+Subjo SPres Sg P2
+Subjo SPres Sg P3
+...
+```
+
+Its VP realization then selects `verb ! Subjo SPres ...`; `ComplVV` composes that structured form with clitic/complement state. It does not recover subjunctive mood by inspecting an indicative surface string.
+
+**Bulgarian** builds a structured VP through `predV` and realizes embedded verbal material through helpers such as `daComplex`. Object/clitic state is carried separately. Again, syntax composes a prepared verbal representation rather than pattern-matching a realized indicative string to infer mood.
+
+**Greek** is an important qualification. Its VP can retain a lexical verb (`vp.v`), but the verb morphology itself already indexes mood (`VPres Con ...`). `ComplVV` selects the conjunctive form directly. Therefore **a nested verb record is not inherently invalid**; what current Albanian evidence rejects is the combination of a failing GF 3.12 nested projection and late mood inference from `Str`.
+
+**German** centralizes verbal realization behind VP helpers such as `predV`, `useVP`, and `useInfVP`. Consumers reuse that interface rather than reconstructing lexical mood independently.
+
+The transferable principle is therefore:
+
+```text
+morphology encodes the grammatical distinction
+        ↓
+VP preserves the structured information required by syntax
+        ↓
+syntax selects/composes it
+```
+
+not:
+
+```text
+syntax inspects a realized indicative string
+        ↓
+guesses another mood
+```
+
+For current Albanian, GF 3.12 run `20260921_201720` makes the more direct VP-table boundary preferable because PMCFG crashes while descending `VP.v.Indicative`. Candidate (12) therefore copies all currently represented verb-form tables into VP/VPSlash instead of keeping only a flattened string.
+
 ---
 
 ## 4. Anti-copy rule
@@ -100,6 +141,6 @@ If those items cannot be stated, do not transfer the model-language code.
 
 ## 5. Current conclusion
 
-The supplied model languages strongly corroborate the current **syntax-integrity repair** (`\x ->` versus `\\x =>`, and `""` versus `[]` in a `Str` pattern). They do not settle Albanian VPS-family ownership or any surface-language question.
+The supplied model languages strongly corroborate both the syntax-integrity repair (`\x ->` versus `\\x =>`, and `""` versus `[]` in a `Str` pattern) and the **engineering direction** of ALB-DEC-047: mood should be represented structurally before syntax consumes it. They do not establish Albanian subjunctive forms, clitic placement, VPS-family ownership, or any golden surface output.
 
 For operational order use `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; for current source facts use `CURRENT_REPAIR_STATE.md`.

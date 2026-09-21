@@ -7,7 +7,14 @@ oper
 
   every_Det = SR.mkDetInv "çdo" Sg ;
   few_Det = SR.mkDetInv "pak" Pl ;
-  how8many_IDet = lin IDet {s=\\_,_ =>"sa"; n=Pl} ;
+  how8many_IDet = lin IDet {
+    s = table {
+      Nom => table {Masc => "sa" ; Fem => "sa"} ;
+      Acc => table {Masc => "sa" ; Fem => "sa"} ;
+      Dat => table {Masc => "sa" ; Fem => "sa"} ;
+      Ablat => table {Masc => "sa" ; Fem => "sa"}
+    } ; n=Pl
+  } ;
   many_Det = SR.mkDetInv "shumë" Pl ;
   most_Predet = P.mkPredet "shumica" ;
   much_Det = SR.mkDetInv "shumë" Sg ;
@@ -32,15 +39,23 @@ oper
                    "këtij" "këtyre"   "kësaj" "këtyre" ;
 
   which_IQuant = lin IQuant {
-    s = \\c,g,n => case <c,g,n> of {
-      <Nom,Masc,Sg> => "cili" ; <Nom,Fem,Sg> => "cila" ;
-      <Nom,Masc,Pl> => "cilët" ; <Nom,Fem,Pl> => "cilat" ;
-      <Acc,Masc,Sg> => "cilin" ; <Acc,Fem,Sg> => "cilën" ;
-      <Acc,Masc,Pl> => "cilët" ; <Acc,Fem,Pl> => "cilat" ;
-      <Dat,Masc,Sg> => "cilit" ; <Dat,Fem,Sg> => "cilës" ;
-      <Dat,Masc,Pl> => "cilëve" ; <Dat,Fem,Pl> => "cilave" ;
-      <Ablat,Masc,Sg> => "cilit" ; <Ablat,Fem,Sg> => "cilës" ;
-      <Ablat,Masc,Pl> => "cilëve" ; <Ablat,Fem,Pl> => "cilave"
+    s = table {
+      Nom => table {
+        Masc => table {Sg => "cili" ; Pl => "cilët"} ;
+        Fem  => table {Sg => "cila" ; Pl => "cilat"}
+      } ;
+      Acc => table {
+        Masc => table {Sg => "cilin" ; Pl => "cilët"} ;
+        Fem  => table {Sg => "cilën" ; Pl => "cilat"}
+      } ;
+      Dat => table {
+        Masc => table {Sg => "cilit" ; Pl => "cilëve"} ;
+        Fem  => table {Sg => "cilës" ; Pl => "cilave"}
+      } ;
+      Ablat => table {
+        Masc => table {Sg => "cilit" ; Pl => "cilëve"} ;
+        Fem  => table {Sg => "cilës" ; Pl => "cilave"}
+      }
     }
   } ;
 
@@ -71,10 +86,12 @@ oper
     ResSqi.mkPron "ne" "ne" "neve" "nesh" "na" "na" GPl P1 ;
 
   whatPl_IP = lin IP {
-    s=\\_ =>"çfarë"; a={gn=GPl;p=P3}
+    s=table {Nom=>"çfarë"; Acc=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
+    a={gn=GPl;p=P3}
   } ;
   whatSg_IP = lin IP {
-    s=\\_ =>"çfarë"; a={gn=GSg Masc;p=P3}
+    s=table {Nom=>"çfarë"; Acc=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
+    a={gn=GSg Masc;p=P3}
   } ;
 
   whoPl_IP = lin IP {

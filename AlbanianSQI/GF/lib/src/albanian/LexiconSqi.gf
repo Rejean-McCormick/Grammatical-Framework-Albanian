@@ -4,7 +4,7 @@
 -- N = indefinite nominative singular; V = present 1sg where regular.
 
 concrete LexiconSqi of Lexicon = CatSqi **
-  open ParadigmsSqi, (SV = StructuralSqiVerbal) in {
+  open ParadigmsSqi, (SV = StructuralSqiVerbal), (R = ResSqi) in {
 
   flags optimize=all_subs ;
 
@@ -83,7 +83,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     die_V                    = mkV "vdes" ;
     dig_V                    = mkV "gërmoj" ;
     dirty_A                  = mkA "pis" ;
-    distance_N3              = mkN3Lex (mkN "distancë") (mkPrep "nga") (mkPrep "deri në") ;
+    distance_N3              = mkN3Lex (mkN "distancë") (mkPrep "nga" R.Ablat) (mkPrep "deri në" R.Acc) ;
     doctor_N                 = mkN "mjek" ;
     dog_N                    = mkN "qen" ;
     door_N                   = mkN "derë" ;
@@ -178,7 +178,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     learn_V2                 = mkV2 (mkV "mësoj") ;
     leather_N                = mkN "lëkurë" ;
     leave_V2                 = mkV2 (mkV "lë") ;
-    left_Ord                 = lin Ord {s = "i majtë"} ;
+    left_Ord                 = lin Ord {s = table {_ => table {_ => table {_ => "i majtë"}}}} ;
     leg_N                    = mkN "këmbë" ;
     lie_V                    = mkV "gënjej" ;
     like_V2                  = mkV2 (mkV "pëlqej") ;
@@ -239,7 +239,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     red_A                    = mkA "kuq" ;
     religion_N               = mkN "fe" ;
     restaurant_N             = mkN "restorant" ;
-    right_Ord                = lin Ord {s = "i djathtë"} ;
+    right_Ord                = lin Ord {s = table {_ => table {_ => table {_ => "i djathtë"}}}} ;
     river_N                  = mkN "lumë" ;
     road_N                   = mkN "rrugë" ;
     rock_N                   = mkN "shkëmb" ;

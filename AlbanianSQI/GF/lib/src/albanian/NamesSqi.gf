@@ -1,6 +1,6 @@
 -- Albanian names module.  Names become full NPs only at the consumer
 -- boundary; the lexical name categories themselves remain strings.
-concrete NamesSqi of Names = CatSqi ** open ResSqi in {
+concrete NamesSqi of Names = CatSqi ** open Prelude, ResSqi in {
 
 oper
   nameNP : Gender -> Number -> Str -> NP = \g,n,s -> lin NP {

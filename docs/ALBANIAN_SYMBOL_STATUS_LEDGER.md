@@ -655,13 +655,13 @@ That is the function of this ledger.
 - **current_owner:** `ExtendSqiScaffolding.gf`
 - **current_location:** `sc_ComplGenVV`, wired by `ExtendSqi.gf`
 - **primary_status:** `warning`
-- **why_this_status:** GF 3.12 now completes `ComplGenVV` as `+ ComplGenVV 4 (1,1)` through Albanian core `ComplVV`. Structural/PMCFG validation is positive; `Ant`/`Pol` remain a documented linguistic gap.
+- **why_this_status:** historical GF 3.12 evidence completed `ComplGenVV` through Albanian core `ComplVV`, but run `20260921_201720` exposed a shared backend failure in the underlying `ComplVV`/subjunctive path (`CProj "Indicative" (CProj "v" ...)`). Candidate (12) changes that Verb→VP boundary and therefore requires renewed compile evidence before structural/PMCFG status can be called positive; `Ant`/`Pol` also remain a documented linguistic gap.
 - **allowed_use:** bounded structural compile probe `\vv,_,_,vp -> ComplVV vv vp`
 - **forbidden_use:** claiming full generalized-VV semantics; importing `TenseSqi` representations into this `CommonX`-contract path; pre-emptively modifying later functions
 - **known_semantic_gap:** anteriority and polarity arguments remain ignored exactly as in the previous Albanian implementation
 - **exit_criteria:**
-  1. verbose GF 3.12 prints a completed PMCFG statistics tuple for `ComplGenVV`,
-  2. the run advances to the next function or emits `ExtendSqi.gfo`,
+  1. candidate (12) GF 3.12 validation clears the shared `ComplVV` / nested-`VP.v.Indicative` PMCFG failure,
+  2. verbose GF 3.12 prints a completed PMCFG statistics tuple for `ComplGenVV` and the run advances to the next function or emits `ExtendSqi.gfo`,
   3. no new type/lock warnings are introduced,
   4. after structural stabilization, design and test an Albanian realization for `Ant`/`Pol` before promotion to stable
 - **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
@@ -677,7 +677,7 @@ That is the function of this ledger.
 - **why_this_status:** pre-FIX22C evidence showed that inheritance advanced past an earlier local `ComplVPIVV` PMCFG crash, but the later mega-update deliberately reopened local family ownership. The current source therefore cannot be described accurately as simply inherited, and coordinator-local family logic is not the accepted final architecture.
 - **allowed_use:** typed/compiler probes needed to determine whether inherited coverage is sufficient or whether Albanian needs a richer local family
 - **forbidden_use:** treating the mega-update as proof of final local ownership; treating old inheritance-only policy as still unconditional; one-off mixed ownership; leaving substantive family logic in the thin coordinator
-- **known_gap:** final ownership and Albanian behavior have not been validated on the post-mega-update source; current syntax corruption prevents meaningful PMCFG/scenario conclusions
+- **known_gap:** final ownership and Albanian behavior have not been validated on the post-mega-update source. Textual syntax corruption is now repaired, but the current Verb→VP PMCFG boundary (candidate 12) still requires GF 3.12 validation before family-level PMCFG/scenario conclusions are meaningful
 - **exit_criteria:**
   1. restore syntax/compiler baseline,
   2. inspect exact `ExtendFunctor` coverage and current Albanian lincats,

@@ -33,26 +33,30 @@ Out of scope:
 
 ## Current Status Snapshot
 
-### Latest live facts — Global Scan `20260921_151446`
+### Latest live facts — Global Scan `20260921_201720`
 - FIX22C remains the last known compiler-stable historical baseline.
-- The later mega-update is not compiler-stable.
-- Wordbench scanned 47 language-folder GF files: 5 PASS, 42 FAIL, 0 ERROR, 0 TIMEOUT.
-- All 42 failures currently converge on `ResSqi.gf:347:7`: `Unexpected token ']'`, expected `String`.
-- Static scan reports 139 `single_slash_eq` findings, 9 `untyped_case_str_pat` findings, and 26 trailing-space findings.
-- The four parent-directory public facades (`SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`) are not yet in the automatic 47-file Global Scan.
+- Candidate (11) was validated with GF 3.12 in Wordbench Diagnostic / Global Scan.
+- Wordbench included 47 targets: **27 PASS, 20 FAIL, 0 ERROR, 0 TIMEOUT**.
+- ALB-DEC-046 is empirically supported for the clitic boundary: the former `CProj "cl"` PMCFG family disappeared.
+- The dominant remaining PMCFG family descends through `CProj "Indicative" (CProj "v" ...)`, reached by the old `subjunctiveFinite` path that inferred subjunctive morphology from present-indicative surface strings.
+- One independent overload failure remains in the run evidence: `LexiconSqi.distance_N3` calls an ambiguous one-argument `mkPrep`.
+- Candidate (12) moves finite subjunctive morphology into `ResSqi.Verb.Subjunctive`, copies the full currently represented verbal form inventory into `VP`/`VPSlash`, removes `VP.v`, and makes `subjunctiveFinite` a selector only.
+- Candidate (12) also gives `distance_N3` explicit case-governed two-argument prepositions.
+- Candidate (12) static gate over the full current **52-file** source census: **0 findings, 0 scan exceptions**; `gf_morphosqi_lint.py`: **0 findings**.
+- The current census is 48 language-folder modules plus four parent API facades. The latest automatic Wordbench run covered only 47, so five targets still require automatic-discovery support or explicit supplemental compilation.
 - Scenarios seen: 0.
 
 ### Immediate unresolved questions
 
-**Q-LIVE-1 — Syntax normalization scope (P0).** Which `single_slash_eq` hits are confirmed table abstractions by local type? Closure requires typed review plus clean compilation; no blind replacement.
+**Q-LIVE-1 — Explicit subjunctive / Verb→VP PMCFG acceptance (P0).** Does candidate (12) eliminate the repeated `CProj "Indicative" (CProj "v" ...)` GeneratePMCFG crash without introducing missing-field/type regressions in `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, or their importers? Closure requires a GF 3.12 rerun on the exact candidate.
 
-**Q-LIVE-2 — Empty-string pattern family (P0).** After repairing `ResSqi`, which additional `[] =>` sites are cases over `Str` and therefore require `"" =>`? `VerbSqi` already exposes two candidate sites.
+**Q-LIVE-2 — Lexicon typed-government closure (P0).** Does the explicit `mkPrep "nga" R.Ablat` / `mkPrep "deri në" R.Acc` repair clear `distance_N3` and its importers? Closure requires compilation; static overload readability alone is insufficient.
 
-**Q-LIVE-3 — Global causality classification (P0).** After the first blocker moves, which failures are DIRECT versus DOWNSTREAM? Closure requires a new Global Scan and explicit supplemental facade compilation.
+**Q-LIVE-3 — Complete compile census (P0).** The current target is 52 GF files. Closure requires recorded GF results for all 48 language-folder modules plus `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, and `TrySqi`; automatic Global Scan coverage must not be mistaken for the full census when it includes only 47.
 
-**Q-LIVE-4 — VPS/VPI ownership after the mega-update (P1).** Current source both claims inheritance in comments and locally subtracts/implements the family. Closure requires exact `ExtendFunctor` coverage + Albanian lincat/behavior evidence + clean PMCFG/scenario validation, then one family-wide choice: coherent inheritance or a dedicated local companion. Coordinator-local substantive ownership is not an acceptable final state.
+**Q-LIVE-4 — Behavioral adequacy of generated subjunctive tables (P1 after compiler recovery).** The candidate preserves the existing Albanian derivation rules but moves them to morphology construction time. After compilation is green, confirm those rules against Albanian reference evidence and reviewed scenarios; compiler acceptance alone does not establish linguistic correctness.
 
-**Q-LIVE-5 — Semantic completion restart point (P1).** Clitic semantics, coordination, VPS/VPI behavior, and other completion work resume only after FIX22C + facade compiler gates are restored.
+**Q-LIVE-5 — VPS/VPI ownership after compiler recovery (P1).** Local companion ownership is provisional. Closure requires clean GF/PMCFG validation plus Albanian scenario evidence, then a family-wide architecture decision consistent with the current lincats and `ExtendFunctor` coverage.
 
 The older fix17/fix18 Comp/Imp/PMCFG questions below are retained as historical design context. They are **not the current priority order** and must not override current compiler evidence.
 

@@ -1234,3 +1234,148 @@ _ => []          -- empty surface result
 **Supersedes:** ALB-DEC-022/033 only as **unconditional current ownership prescriptions**. Their historical compiler observations remain valid provenance for the snapshots on which they were recorded.
 
 ---
+
+
+## ALB-DEC-045
+**Status:** accepted for candidate validation  
+**Date:** 2026-09-21  
+**Area:** deferred VP representation / PMCFG boundary
+
+**Decision:** Narrow `VP.cl` and `VPSlash.cl` from `Agr => Str` to `Str`, while retaining agreement-sensitive post-verbal material as `post : Agr => Str`.
+
+**Evidence — Wordbench run `20260921_192039`:**
+- candidate (9): 22 PASS / 25 FAIL;
+- the dominant `GeneratePMCFG` trace at `ComplVV`, `EmbedVP`, `RelVP`, `UttVP`, `GenericCl`, and every importer shows PMCFG descending through `CProj ... "cl"` indexed by an `Agr` record;
+- the crash is therefore tied to representation complexity at the clitic field, not to the former parse blocker;
+- object clitic choice is determined by the saturated object (Acc/Dat/person-number), not by later subject agreement.
+
+**Implementation in candidate (10):**
+```gf
+VP = {
+  v : Verb ;
+  cl : Str ;
+  post : Agr => Str
+} ;
+```
+
+The same narrowing applies to `VPSlash`. `appendClitic`/`addClitic` now concatenate fixed strings. Agreement-sensitive AP/complement material remains in `post`.
+All legacy consumers were migrated to the narrowed field, including progressive/self VP updates and `ExtendSqiVPBridge` / `ExtendSqiScaffolding`; no `.cl ! agr` projection remains in candidate (10).
+
+**Additional fixes from the same run:**
+- open `Prelude` in `NamesSqi` for `Bool` constants;
+- open `ResSqi` in `StructuralSqiClause` for Albanian `Case` constructors;
+- replace underconstrained anonymous resource tables in `StructuralSqiNominal` with explicit case/gender tables;
+- expose `StructuralSqiVerbal.mkVConst` as the invariant-verb helper required by the expanded lexicon;
+- simplify `QuestionSqi.QuestIComp` and `ConstructionSqi.have_name_Cl` to avoid unnecessary intermediate VP record updates that produced `evalTerm ([])` backend crashes.
+
+**Acceptance:** rerun GF 3.12 Global Scan. The decision is retained only if the `CProj "cl"` PMCFG crash disappears without introducing a type/category regression.
+
+
+## ALB-DEC-046
+**Status:** accepted for candidate validation  
+**Date:** 2026-09-21  
+**Area:** PMCFG-safe clitic/subjunctive representation
+
+**Decision:** Supersede ALB-DEC-045's assumption that narrowing `cl` to `Str` is sufficient. Preserve `cl : Str`, but add `subjcl : Str` to `VP` and `VPSlash` and pre-resolve the `të` + object-clitic surface form when the clitic is introduced.
+
+**Evidence — Wordbench run `20260921_200140`:**
+- candidate (10): 24 PASS / 23 FAIL;
+- every remaining VP-related PMCFG crash still has `descend (... CProj ... "cl" ...)`;
+- direct failures appear at `ComplVV`, `GenericCl`, `UttVP`, `QuestQVP`, `RelVP`, and `EmbedVP`;
+- those consumers all eventually call `teWithClitic(vp.cl)`, whose implementation performs `case` over a projected runtime `Str`.
+
+**Candidate (11) representation:**
+```gf
+VP = {
+  v : Verb ;
+  cl : Str ;
+  subjcl : Str ;
+  post : Agr => Str
+} ;
+```
+
+`subjcl` is computed from grammatical object information, not by inspecting a string later. Accusative/dative agreement helpers produce `ta`, `t'i`, `t'u`, or uncontracted `të + clitic` as appropriate; reflexive `u` carries `t'u`. Progressive/self updates preserve the previous candidate's surface ordering without a dynamic string case.
+
+**Additional candidate (11) fixes from the same run:**
+- explicit constant tables for `left_Ord` and `right_Ord`;
+- explicit nested table for `which_IQuant`;
+- structural prepositions use `ResSqi.Compl`/`mkCompl` to avoid `Prep` overload ambiguity.
+
+**Acceptance:** rerun GF 3.12 Global Scan. ALB-DEC-046 is confirmed only if the `CProj "cl"` family disappears and no new clitic-placement regression is introduced.
+
+---
+
+## ALB-DEC-047
+**Status:** accepted for candidate validation  
+**Date:** 2026-09-21  
+**Area:** Albanian verbal morphology / `Verb` → `VP` PMCFG boundary
+
+**Decision:** Make finite subjunctive morphology an explicit field of `ResSqi.Verb`, and copy the complete currently represented verbal form inventory into `VP`/`VPSlash` at the lexical boundary. Syntax may select an already-structured subjunctive form; it must not reconstruct subjunctive morphology by inspecting an indicative surface string.
+
+**Evidence — Wordbench run `20260921_201720`:**
+
+- candidate (11): `27 PASS / 20 FAIL` over the 47 automatically discovered language-folder targets;
+- the former `CProj ... "cl"` PMCFG signature is gone, confirming the clitic-specific part of ALB-DEC-046;
+- the dominant new backend trace is:
+
+```text
+CProj "Indicative" (CProj "v" ...)
+  -> Pres
+  -> Sg
+  -> P1
+```
+
+- the trace occurs first at `ComplVV` and is reproduced through `GenericCl`, `UttVP`, `QuestQVP`, `RelVP`, `EmbedVP`, and importers;
+- those consumers share the old `subjunctiveFinite vp.v a` path;
+- `subjunctiveFinite` derived 2sg/3sg forms by `case` analysis over `v.Indicative ! Pres ! Sg ! P1` / P2 strings.
+
+**Representation in candidate (12):**
+
+```gf
+Verb = {
+  Indicative       : Tense => Number => Person => Str ;
+  Subjunctive      : Number => Person => Str ;
+  Imperative       : Number => Str ;
+  participle       : Str ;
+  pres_optative    : Number => Person => Str ;
+  perf_optative    : Number => Person => Str ;
+  pres_admirative  : Number => Person => Str ;
+  imperf_admirative: Number => Person => Str
+} ;
+```
+
+The existing productive/irregular subjunctive rules are retained by `subjunctiveFromPresent`, but they execute when morphology builds a `Verb`. Every generated/paradigm verb record supplies `Subjunctive` explicitly. `subjunctiveFinite` is reduced to a compatibility selector over this table.
+
+`VP` and `VPSlash` no longer carry `v : Verb`. They copy the structured tables/forms required by syntax:
+
+```gf
+indicative        : Tense => Number => Person => Str ;
+subjunctive       : Number => Person => Str ;
+imperative        : Number => Str ;
+participle        : Str ;
+pres_optative     : Number => Person => Str ;
+perf_optative     : Number => Person => Str ;
+pres_admirative   : Number => Person => Str ;
+imperf_admirative : Number => Person => Str ;
+cl, subjcl        : Str ;
+post              : Agr => Str ;
+```
+
+This preserves all verbal dimensions currently carried by `Verb`; it is not a broad flattening into strings.
+
+**Model-language corroboration:**
+
+- Romanian encodes conjunctive/subjunctive morphology directly in its verb-form table (`Subjo SPres Number Person`) and `ComplVV` selects it from the structured VP representation.
+- Bulgarian builds VP structure with `predV`/`daComplex` and keeps clitic/complement state separate rather than inferring mood from a realized indicative string.
+- Greek retains a lexical verb inside VP but its morphology itself encodes `Mood`; `ComplVV` selects `VPres Con ...` directly. This shows that keeping a verb record is not inherently wrong; the rejected Albanian pattern is the late string-derived mood reconstruction plus the failing nested projection in the current GF 3.12 backend.
+- German similarly centralizes verbal realization in VP helper APIs (`predV`, `useVP`, `useInfVP`) rather than reconstructing lexical mood in each consumer.
+
+Model evidence is engineering corroboration only; Albanian morphology and reference material remain the authority for actual forms.
+
+**Independent same-run repair:** `LexiconSqi.distance_N3` must call the two-argument `mkPrep` overload with explicit case government (`nga` + Ablative; `deri në` + Accusative), eliminating the remaining ambiguous overload failure without discarding complement typing.
+
+**Candidate-(12) structural preflight:** the migration was audited over all 135 `lin V` blocks in `MorphoSqi`. A bulk-edit defect that had inserted 51 extra record openings before `Subjunctive` was detected before packaging and repaired; brace/parenthesis balance is now zero and all 135 blocks contain `Indicative`, `Subjunctive`, and `Imperative`. `gf_morphosqi_lint.py` now enforces those invariants. This is source-structure evidence only, not GF compiler acceptance.
+
+**Acceptance gate:** rerun GF 3.12 Global Scan. ALB-DEC-047 is confirmed only if the `CProj "Indicative" (CProj "v" ...)` PMCFG family disappears and no new missing-field/type failure is introduced in `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, or their importers.
+
+**Supersedes:** the old implementation detail inside ALB-DEC-046 that still allowed syntax to call a string-reconstructing `subjunctiveFinite`. ALB-DEC-046 remains accepted for the clitic/subjcl boundary it successfully fixed.

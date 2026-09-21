@@ -53,9 +53,10 @@ concrete ConstructionSqi of Construction = CatSqi **
 
     has_age_VP c = addPost (baseVP (lin Verb I.kam_V)) (\\_=>c.s ++ "vjeç") ;
 
-    have_name_Cl np name =
-      mkPred (np.s!Nom) np.a
-        (addPost (baseVP (lin Verb (P.mkV "quhem"))) (\\_=>name.s!Nom)) ;
+    have_name_Cl np name = lin Cl {
+      s = \\t,ant,pol =>
+        np.s!Nom ++ realizeVP (baseVP (lin Verb (P.mkV "quhem"))) t ant pol np.a ++ name.s!Nom
+    } ;
 
     what_name_QCl np = {
       s=\\t,a,p=>"si" ++ (have_name_Cl np (mkNPConst Masc Sg [])).s!t!a!p

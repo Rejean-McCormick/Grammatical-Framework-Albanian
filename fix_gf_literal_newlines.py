@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 Fix GF sources that accidentally contain the *literal* text "\n" or "\n\n"
 in the middle of code (usually from a bad copy/paste or a generator).
 

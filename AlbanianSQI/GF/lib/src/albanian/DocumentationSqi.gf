@@ -78,6 +78,12 @@ lin InflectionV, InflectionV2, InflectionVV, InflectionVS, InflectionVQ, Inflect
            tr (intagAttr "th" "rowspan=\"3\"" "Pl" ++ th "P1" ++ td (x.Indicative ! Imperfect ! Pl ! P1)) ++
            tr (th "P2" ++ td (x.Indicative ! Imperfect ! Pl ! P2)) ++
            tr (th "P3" ++ td (x.Indicative ! Imperfect ! Pl ! P3)) ++
+           tr (intagAttr "th" "rowspan=\"6\"" "Subjunctive" ++ intagAttr "th" "rowspan=\"3\"" "Sg" ++ th "P1" ++ td (x.Subjunctive ! Sg ! P1)) ++
+           tr (th "P2" ++ td (x.Subjunctive ! Sg ! P2)) ++
+           tr (th "P3" ++ td (x.Subjunctive ! Sg ! P3)) ++
+           tr (intagAttr "th" "rowspan=\"3\"" "Pl" ++ th "P1" ++ td (x.Subjunctive ! Pl ! P1)) ++
+           tr (th "P2" ++ td (x.Subjunctive ! Pl ! P2)) ++
+           tr (th "P3" ++ td (x.Subjunctive ! Pl ! P3)) ++
            tr (intagAttr "th" "rowspan=\"2\"" "Imperative" ++ th "Sg" ++ td (x.Imperative ! Sg)) ++
            tr (th "Pl" ++ td (x.Imperative ! Pl)) ++
            tr (th "participle" ++ td (x.participle)) ++

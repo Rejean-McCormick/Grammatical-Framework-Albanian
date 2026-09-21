@@ -5,6 +5,9 @@ oper
   invariantV : Str -> CatSqi.V = \x ->
     P.irregV x x x x x x x x x ;
 
+  -- Constant/multiword verb helper used by the expanded LexiconSqi.
+  mkVConst : Str -> CatSqi.V = invariantV ;
+
   can8know_VV : CatSqi.VV =
     P.mkVV (P.irregV "di" "di" "di" "dimë" "dini" "dinë" "di" "dini" "ditur") ;
 

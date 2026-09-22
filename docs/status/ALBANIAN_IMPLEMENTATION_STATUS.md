@@ -1,35 +1,42 @@
 # Albanian RGL — Implementation Status
 
 **Baseline date:** 2026-09-19  
-**Current-state synchronization:** 2026-09-21  
+**Current-state synchronization:** 2026-09-22  
 **Project:** Grammatical Framework — Albanian RGL  
 **Compiler:** GF 3.12  
 **Validation tool:** GF Wordbench
 
 ---
 
-## 0. Current working-snapshot overlay — 2026-09-21
+## 0. Current working-snapshot overlay — 2026-09-22
 
-FIX22C remains historical evidence for its exact source. The current branch has now passed the major syntax and PMCFG recovery layers.
+FIX22C remains historical evidence for its exact source. The current source now includes the public-surface expansion (`MarkupSqi` in the language folder and `CombinatorsSqi` in the API folder) and has a complete source census of 54 GF files.
 
-Latest compiler evidence is Wordbench Global Scan `20260921_213424`, GF 3.12:
+Latest compiler evidence is Wordbench Global Scan `20260922_123316`, GF 3.12:
 
 ```text
-47 automatically discovered targets
-45 PASS
-2 FAIL
+49 automatically discovered language-folder targets
+22 PASS
+27 FAIL
 0 ERROR
 0 TIMEOUT
 0 scenarios
 ```
 
-ALB-DEC-047 remains compiler-confirmed: the run contains **no `GeneratePMCFG` crash**, and the former `CProj "cl"` and `CProj "Indicative" (CProj "v" ...)` signatures remain absent. The three direct ALB-DEC-048 repairs (`ExtendSqiRNP`, `ExtendSqiVPBridge`, `LexiconSqi`) compile, as do `ExtendSqi` and `ExtraSqi`.
+Raw GF stderr identifies one proven current root compiler blocker:
 
-The two remaining automatic-scan FAILs (`LangSqi`, `AllSqi`) share one module-composition cause: internal helper-name collision between `ConstructionSqi` and the already-composed grammar/verb layer. ALB-DEC-049 renames the Construction-only `baseVP`/`addPost` helpers to isolate that namespace without changing Albanian realization.
+```text
+ParadigmsSqi.gf:
+  circular definitions: mkA2
+```
 
-Static preflight over all 52 current GF files remains clean; `gf_morphosqi_lint.py` reports 0 findings. This is not a substitute for the next GF run or the five supplemental target compiles.
+The 27 failed importers are not accepted as 27 independent Albanian defects. Wordbench's current `Voc`/`Int` first-error labels are reporting artifacts and must be subordinated to raw GF stderr provenance.
 
-Operational order is normative in `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; exact live facts are in `CURRENT_REPAIR_STATE.md`.
+The same run also exposes nine structural `missing lock field` warnings (`lock_NP` x2, `lock_VP` x6, `lock_VPSlash` x1) that remain blocking under the project's lock-field policy.
+
+The five parent-directory API facades were not included by automatic discovery. Full compiler acceptance therefore requires **54/54**: 49 language-folder modules plus `CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, and `TrySqi`.
+
+Compendium evidence reaches T0; aggregate compile T8 fails; linguistic scenarios remain unassessed. Operational order is normative in `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; the next coherent code/tool cycle is defined in `ALBANIAN_NEXT_UPGRADE_20260922.md`.
 
 ---
 
@@ -39,17 +46,17 @@ The Albanian project has two states that must not be conflated:
 
 | Area | FIX22C / v0.1.0 baseline | Current post-mega-update snapshot |
 |---|---|---|
-| Core category/resource architecture | compiler-validated baseline | ALB-DEC-047 representation now compiler-confirmed on the 47-target run |
-| Morphology/paradigm implementation | substantial and baseline-validated | explicit subjunctive table compiles; linguistic scenario validation still pending |
-| Core grammar / Structural | passed historical gate | compiler-green in latest run |
-| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | PMCFG path recovered; current failure is downstream of missing `Prelude` in companion resources |
-| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | current failure is the local `distance_N3` preposition-construction issue plus importer fallout |
-| Public facades (`SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`) | not part of the original eight-target FIX22C table | required supplemental gate after recovery |
+| Core category/resource architecture | compiler-validated baseline | ALB-DEC-047 representation has historical/current-branch compiler evidence, but the present run is blocked earlier by `ParadigmsSqi` |
+| Morphology/paradigm implementation | substantial and baseline-validated | explicit subjunctive architecture has compiler evidence, but the public paradigms API currently fails on circular `mkA2`; linguistic scenario validation remains pending |
+| Core grammar / Structural | passed historical gate | some modules compile, but importer coverage is blocked by current `ParadigmsSqi.mkA2` circular definition |
+| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | historical PMCFG path remains the regression baseline; current failures are downstream of the `ParadigmsSqi` blocker unless a rerun proves otherwise |
+| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | current run reaches the shared `ParadigmsSqi.mkA2` circular-definition dependency |
+| Public facades (`CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, `TrySqi`) | not part of the original eight-target FIX22C table | required five-target supplemental gate; not discovered in the latest run |
 | Scenario/golden linguistic validation | pending | pending; `Scenarios seen: 0` in latest scan |
 
 Therefore the current project phase is:
 
-> **validate ALB-DEC-049 and obtain 47/47 → complete the five supplemental targets for 52/52 → validate Albanian behavior → continue capability completion**
+> **harden Paradigms overloads → close lock warnings → obtain 49/49 language compile → complete five API facades for 54/54 → harden Wordbench evidence → run reviewed Albanian scenarios/goldens → continue capability completion**
 
 The project is not back in the old pre-FIX22C PMCFG-repair phase. The historical PMCFG crash is a regression boundary, while the current first blocker is a newer syntax regression introduced after the baseline.
 
@@ -634,27 +641,22 @@ The whole Albanian RGL has **not yet reached this level**.
 
 ## 18. Remaining path to completion
 
-The compiler/structural release gate was complete at FIX22C. The current post-mega-update candidate is still in foundational compiler recovery and must restore and then exceed that historical gate before completion work resumes.
+The compiler/structural release gate was complete at FIX22C for that historical snapshot. The current expanded candidate must restore and exceed that gate before mature/completion work resumes.
 
-The remaining work is mainly:
+The immediate next upgrade is:
 
-1. establish Wordbench sentence/scenario suites;
-2. validate morphology and syntax against expected Albanian outputs;
-3. complete inherited or deliberately unfinished `Extend` functions;
-4. revalidate VPS/VPI/VPS2/VPI2 ownership as a family, then address genuine `(0,0)` coverage gaps;
-5. resolve the remaining structural warning/open-symbol areas such as `DConj` and `must_VV`;
-6. replace provisional extension realizations where linguistic refinement is still required;
-7. strengthen `ConstructionSqi` where current implementations are shallow or string-based;
-8. validate the standard lexicon through representative paradigms and behavioral examples;
-9. align the public top-level language surface with the intended full RGL feature set;
-10. reduce unexplained compiler warnings;
-11. run a true behavioral/golden regression;
-12. only then declare Albanian RGL complete.
+1. remove the proven `mkA2` circular overload and audit the related `ParadigmsSqi` self-dispatch families through typed core helpers;
+2. compile the dependency ladder to expose any next independent cause without counting importer fallout as separate defects;
+3. close the current nine `missing lock_*` warnings through category-preserving constructors/retyping;
+4. obtain **49/49** language-folder compilation;
+5. compile all five public facades, including `CombinatorsSqi`, to establish **54/54**;
+6. fix Wordbench fatal-diagnostic classification and source-lock reporting so the next run preserves causality cleanly;
+7. run reviewed Albanian sentence/scenario goldens;
+8. then resume remaining capability/linguistic completion from the completion plan.
 
-The immediate phase is therefore **foundational compiler recovery at the Verb→VP boundary**. Albanian RGL Completion resumes only after the compiler gate is green again.
+The exact upgrade contract is `ALBANIAN_NEXT_UPGRADE_20260922.md`.
 
 ---
-
 
 ## 19. Current completion assessment
 
@@ -663,27 +665,47 @@ The most accurate description of the project today is:
 ```text
 The Albanian RGL has a substantial morphology, paradigm system,
 core grammar, lexicon, structural vocabulary, construction layer,
-and extended grammar.
+extended grammar, Markup layer, and public API wrappers.
 
-FIX22C remains the last compiler-stable historical baseline. The
-post-mega-update source has progressed from syntax corruption to a
-well-isolated GF 3.12 PMCFG representation problem at the Verb→VP
-boundary. Candidate (12) introduces explicit subjunctive morphology
-and removes the nested VP.v.Indicative path, but has not yet been
-compiler-validated.
+FIX22C remains the last compiler-stable historical baseline for its
+exact source. The 2026-09-22 expanded snapshot contains 54 GF files.
+Wordbench reaches all 49 language-folder modules but GF 3.12 currently
+rejects ParadigmsSqi because mkA2 is circular; 27 reported target
+failures largely reflect that dependency path rather than 27 independent
+defects. Nine missing-lock warnings also remain structurally blocking.
 
-Static preflight is clean across the full 52-file census. Scenario
-and golden linguistic validation remain pending.
+The five public API facades are not yet included by automatic Wordbench
+discovery, and the latest run executes zero linguistic scenarios.
 ```
 
 ### Development phase
 
 ```text
-HISTORICAL FIX22C BASELINE:  COMPILER-STABLE
-CURRENT CANDIDATE (12):      STATIC-CLEAN / GF VALIDATION PENDING
-VERB→VP PMCFG RECOVERY:      ACTIVE
-FULL 52-FILE COMPILE GATE:   PENDING
-SCENARIO REGRESSION:         PENDING
+HISTORICAL FIX22C BASELINE:  COMPILER-STABLE FOR ITS SOURCE
+CURRENT 2026-09-22 SOURCE:   T0 SOURCE-LOCKED / T8 COMPILE FAIL
+PARADIGMS OVERLOAD HARDENING: ACTIVE NEXT UPGRADE
+LOCK-FIELD CLOSURE:          REQUIRED IN SAME STRUCTURAL CYCLE
+FULL 54-FILE COMPILE GATE:   PENDING
+API FACADE 5/5 GATE:         PENDING
+SCENARIO REGRESSION:         NOT ASSESSED (0 SCENARIOS)
 LINGUISTIC QA:               PENDING AFTER COMPILER RECOVERY
 FINAL RGL RELEASE:           NOT YET
 ```
+
+---
+
+## 19. 2026-09-22 next-upgrade candidate
+
+The planned structural recovery upgrade has been implemented as a candidate:
+all twelve audited `ParadigmsSqi` overload families now use typed non-overloaded
+core helpers, and the VP/VPSlash category shape is centralized in `ResSqi` and
+aliased by `CatSqi`. `AdverbSqi` no longer passes locked `NP` values through
+resource helpers typed as `NP`.
+
+Static candidate validation is green at **54 source files = 49 language + 5 API
+facades**. This is not yet a GF compiler result: the assembly environment does
+not contain the `gf` executable. The current release state therefore remains
+**compiler acceptance pending**, followed by scenarios/goldens.
+
+Operational details and the reproducible validator command are in
+`../ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md`.

@@ -94,15 +94,15 @@ oper
   sc_UttAdV : AdV -> Utt = \adv -> lin Utt {s=adv.s} ;
   sc_UttVPShort : VP -> Utt = \vp -> lin Utt {s=realizeImpVP vp P.Pos P.Sg} ;
 
-  sc_ComplBareVS : VS -> S -> VP = \vs,s -> appendVP (emptyVP vs) (\\_ =>s.s) ;
-  sc_SlashBareV2S : V2S -> S -> VPSlash = \v2s,s ->
+  sc_ComplBareVS : VS -> S -> R.VP = \vs,s -> appendVP (emptyVP vs) (\\_ =>s.s) ;
+  sc_SlashBareV2S : V2S -> S -> R.VPSlash = \v2s,s ->
     slashFromVP
       (appendVP (emptyVP (lin Verb v2s)) (\\_ =>s.s))
       v2s.c2 ;
 
-  sc_ComplDirectVS : VS -> Utt -> VP = \vs,utt ->
+  sc_ComplDirectVS : VS -> Utt -> R.VP = \vs,utt ->
     appendVP (emptyVP vs) (\\_ =>":" ++ utt.s) ;
-  sc_ComplDirectVQ : VQ -> Utt -> VP = \vq,utt ->
+  sc_ComplDirectVQ : VQ -> Utt -> R.VP = \vq,utt ->
     appendVP (emptyVP vq) (\\_ =>":" ++ utt.s) ;
 
   sc_FrontComplDirectVS : NP -> VS -> Utt -> Cl = \np,vs,utt ->
@@ -119,7 +119,7 @@ oper
     acc_clit=[] ; dat_clit=[] ; a=np1.a ; isPron=False
   } ;
 
-  sc_ComplGenVV : VV -> Ant -> Pol -> VP -> VP = \vv,ant,pol,vp ->
+  sc_ComplGenVV : VV -> Ant -> Pol -> R.VP -> R.VP = \vv,ant,pol,vp ->
     appendVP (emptyVP vv) (\\a =>realizeSubjAntVP vp ant.a pol.p a) ;
 
   sc_CompoundN : N -> N -> N = \modifier,head -> lin N {
@@ -138,7 +138,7 @@ oper
   sc_UncontractedNeg : Pol = lin Pol {s=[] ; p=P.Neg} ;
   sc_TPastSimple : Tense = lin Tense {s=[] ; t=P.Past} ;
 
-  sc_ComplSlashPartLast : VPSlash -> NP -> VP = \sl,np ->
+  sc_ComplSlashPartLast : R.VPSlash -> NP -> R.VP = \sl,np ->
     appendVP (vpFromSlash sl) (\\_ =>sl.c2.s ++ np.s!sl.c2.c) ;
 
   sc_DetNPMasc : Det -> NP = \det -> lin NP {

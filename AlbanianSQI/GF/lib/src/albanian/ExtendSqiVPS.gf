@@ -21,13 +21,13 @@ oper
     c2 : R.Compl
   } ;
 
-  lexicalObjectVP : VPSlash -> R.Agr -> VP = \sl,objAgr ->
+  lexicalObjectVP : R.VPSlash -> R.Agr -> R.VP = \sl,objAgr ->
     case sl.c2.c of {
       R.Dat => appendClitic (vpFromSlash sl) (R.datCliticAgr objAgr) (R.subjDatCliticAgr objAgr) ;
       _ => vpFromSlash sl
     } ;
 
-  pronominalObjectVP : VPSlash -> R.Agr -> VP = \sl,objAgr ->
+  pronominalObjectVP : R.VPSlash -> R.Agr -> R.VP = \sl,objAgr ->
     case sl.c2.c of {
       R.Acc => appendClitic (vpFromSlash sl) (R.accCliticAgr objAgr) (R.subjAccCliticAgr objAgr) ;
       R.Dat => appendClitic (vpFromSlash sl) (R.datCliticAgr objAgr) (R.subjDatCliticAgr objAgr) ;
@@ -63,7 +63,7 @@ oper
   vps_BaseVPI : VPSRec -> VPSRec -> VPSListRec = vps_BaseVPS ;
   vps_ConsVPI : VPSRec -> VPSListRec -> VPSListRec = vps_ConsVPS ;
   vps_ConjVPI : Conj -> VPSListRec -> VPSRec = vps_ConjVPS ;
-  vps_ComplVPIVV : VV -> VPSRec -> VP = \vv,x ->
+  vps_ComplVPIVV : VV -> VPSRec -> R.VP = \vv,x ->
     appendVP (emptyVP vv) (\\a =>x.s!a) ;
 
   vps_MkVPS2 : Temp -> Pol -> VPSlash -> VPS2Rec = \t,pol,sl -> {

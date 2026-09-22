@@ -7,7 +7,7 @@ oper
   RNPRec : Type = {s : R.Agr => R.Case => Str ; isPron : Bool} ;
   RNPListRec : Type = {first,last : R.Agr => R.Case => Str} ;
 
-  rnp_ReflRNP : VPSlash -> RNPRec -> VP = \sl,rnp -> case rnp.isPron of {
+  rnp_ReflRNP : R.VPSlash -> RNPRec -> R.VP = \sl,rnp -> case rnp.isPron of {
     True => appendClitic (vpFromSlash sl) "u" "t'u" ;
     False => appendVP (vpFromSlash sl) (\\a =>sl.c2.s ++ rnp.s!a!sl.c2.c)
   } ;
@@ -40,7 +40,7 @@ oper
     isPron=False
   } ;
 
-  rnp_AdvRVP : VP -> Prep -> RNPRec -> VP = \vp,prep,r ->
+  rnp_AdvRVP : R.VP -> Prep -> RNPRec -> R.VP = \vp,prep,r ->
     appendVP vp (\\a =>prep.s ++ r.s!a!prep.c) ;
 
   rnp_AdvRAP : AP -> Prep -> RNPRec -> AP = \ap,prep,r -> lin AP {

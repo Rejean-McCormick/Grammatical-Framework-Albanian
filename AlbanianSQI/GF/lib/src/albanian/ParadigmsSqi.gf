@@ -1,8 +1,24 @@
 resource ParadigmsSqi = MorphoSqi ** open Predef, Prelude, CatSqi, ResSqi in {
 
 oper
+  -- Public aliases mirror mature Paradigms APIs.
+  Gender : Type = ResSqi.Gender ;
+  Case   : Type = ResSqi.Case ;
+
+  masculine : Gender = Masc ;
+  feminine  : Gender = Fem ;
+
   singular : Number = Sg ;
   plural   : Number = Pl ;
+
+  nominative : Case = Nom ;
+  accusative : Case = Acc ;
+  dative     : Case = Dat ;
+  ablative   : Case = Ablat ;
+
+  invariantCase : Str -> (Case => Str) = \x -> table {
+    Nom => x ; Acc => x ; Dat => x ; Ablat => x
+  } ;
 
 oper
   regN : Str -> N   -- s;Indef;Nom;Sg
@@ -1205,15 +1221,68 @@ mkN = overload {
   mkN : Str -> Str -> N = reg2N   -- s;Indef;Nom;Sg  s;Indef;Nom;Pl
 } ;
 
+mkN2Core : N -> Prep -> N2 = \n,p ->
+  lin N2 n ** {c2=p} ;
+
 mkN2 = overload {
-  mkN2 : N -> N2 = \n -> lin N2 n ** {c2=noPrep};
-  mkN2 : N -> Prep -> N2 = \n,p -> lin N2 n ** {c2=p};
+  mkN2 : N -> N2 = \n -> mkN2Core n noPrep ;
+  mkN2 : N -> Prep -> N2 = \n,p -> mkN2Core n p ;
+  mkN2 : Str -> N2 = \x -> mkN2Core (mkN x) noPrep ;
+  mkN2 : Str -> Prep -> N2 = \x,p -> mkN2Core (mkN x) p ;
+  mkN2 : Str -> Str -> N2 = \x,p -> mkN2Core (mkN x) (mkPrep p) ;
 } ;
 
-mkPN : Str -> PN = \s -> lin PN {s=s} ;
-mkLN : Str -> LN = \s -> lin LN {s=s} ;
-mkGN : Str -> GN = \s -> lin GN {s=s} ;
-mkSN : Str -> SN = \s -> lin SN {s=s} ;
+mkN3 : N -> Prep -> Prep -> N3 = \n,p2,p3 ->
+  lin N3 n ** {c2=p2 ; c3=p3} ;
+
+-- Proper names. Short forms remain invariant for backwards compatibility;
+-- explicit forms carry Albanian case and agreement when applications know them.
+mkPN = overload {
+  mkPN : Str -> PN = \x -> lin PN {
+    s = invariantCase x ; a = agrgP3 Masc Sg
+  } ;
+  mkPN : Str -> Gender -> PN = \x,g -> lin PN {
+    s = invariantCase x ; a = agrgP3 g Sg
+  } ;
+  mkPN : Str -> Str -> Str -> Str -> Gender -> PN = \nom,acc,dat,abl,g -> lin PN {
+    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ;
+    a = agrgP3 g Sg
+  } ;
+  mkPN : N -> PN = \n -> lin PN {
+    s = \\c => n.s ! Def ! c ! Sg ; a = agrgP3 n.g Sg
+  }
+} ;
+
+mkLN = overload {
+  mkLN : Str -> LN = \x -> lin LN {
+    s = invariantCase x ; a = agrgP3 Masc Sg
+  } ;
+  mkLN : Str -> Gender -> Number -> LN = \x,g,n -> lin LN {
+    s = invariantCase x ; a = agrgP3 g n
+  } ;
+  mkLN : Str -> Str -> Str -> Str -> Gender -> Number -> LN = \nom,acc,dat,abl,g,n -> lin LN {
+    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ;
+    a = agrgP3 g n
+  }
+} ;
+
+mkGN = overload {
+  mkGN : Str -> GN = \x -> lin GN {s=invariantCase x ; g=Masc} ;
+  mkGN : Str -> Gender -> GN = \x,g -> lin GN {s=invariantCase x ; g=g} ;
+  mkGN : Str -> Str -> Str -> Str -> Gender -> GN = \nom,acc,dat,abl,g -> lin GN {
+    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ; g=g
+  }
+} ;
+
+mkSN = overload {
+  mkSN : Str -> SN = \x -> lin SN {
+    s = \\_ => invariantCase x ; p = invariantCase x
+  } ;
+  mkSN : Str -> Str -> Str -> SN = \male,female,pl -> lin SN {
+    s = table {Masc=>invariantCase male ; Fem=>invariantCase female} ;
+    p = invariantCase pl
+  }
+} ;
 
 mkA = overload {
   mkA : Str -> A = regA;   -- s;Nom;Masc;Sg
@@ -1222,9 +1291,15 @@ mkA = overload {
 
 unartA : A -> A = \a -> a**{clit=False} ;
 
+mkA2Core : A -> Prep -> A2 = \a,p ->
+  lin A2 a ** {c2=p} ;
+
 mkA2 = overload {
-  mkA2 : A -> A2 = \a -> lin A2 a ** {c2=noPrep} ;
-  mkA2 : A -> Prep -> A2 = \a,p -> lin A2 a ** {c2=p} ;
+  mkA2 : A -> A2 = \a -> mkA2Core a noPrep ;
+  mkA2 : A -> Prep -> A2 = \a,p -> mkA2Core a p ;
+  mkA2 : Str -> A2 = \a -> mkA2Core (mkA a) noPrep ;
+  mkA2 : Str -> Prep -> A2 = \a,p -> mkA2Core (mkA a) p ;
+  mkA2 : Str -> Str -> A2 = \a,p -> mkA2Core (mkA a) (mkPrep p) ;
 } ;
 
 irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
@@ -1276,46 +1351,98 @@ mkV = overload {
   mkV : Str -> Str -> V = reg2V   -- Indicative;Pres;Sg;P1  participle
 } ;
 
+mkV2Core : V -> Prep -> V2 = \v,p ->
+  lin V2 v ** {c2=p} ;
+
 mkV2 = overload {
-  mkV2 : V -> V2 = \v -> lin V2 v ** {c2=noPrep} ;
-  mkV2 : V -> Prep -> V2 = \v,p -> lin V2 v ** {c2=p} ;
+  mkV2 : V -> V2 = \v -> mkV2Core v noPrep ;
+  mkV2 : V -> Prep -> V2 = \v,p -> mkV2Core v p ;
+  mkV2 : Str -> V2 = \v -> mkV2Core (mkV v) noPrep ;
+  mkV2 : Str -> Prep -> V2 = \v,p -> mkV2Core (mkV v) p ;
+  mkV2 : Str -> Str -> V2 = \v,p -> mkV2Core (mkV v) (mkPrep p) ;
 } ;
 
-mkVV : V -> VV = \v -> lin VV v ;
-mkVS : V -> VS = \v -> lin VS v ;
-mkVQ : V -> VQ = \v -> lin VQ v ;
-mkVA : V -> VA = \v -> lin VA v ;
+mkVVCore : V -> VV = \v -> lin VV v ;
+mkVSCore : V -> VS = \v -> lin VS v ;
+mkVQCore : V -> VQ = \v -> lin VQ v ;
+mkVACore : V -> VA = \v -> lin VA v ;
+
+mkVV = overload {
+  mkVV : V -> VV = mkVVCore ;
+  mkVV : Str -> VV = \v -> mkVVCore (mkV v)
+} ;
+mkVS = overload {
+  mkVS : V -> VS = mkVSCore ;
+  mkVS : Str -> VS = \v -> mkVSCore (mkV v)
+} ;
+mkVQ = overload {
+  mkVQ : V -> VQ = mkVQCore ;
+  mkVQ : Str -> VQ = \v -> mkVQCore (mkV v)
+} ;
+mkVA = overload {
+  mkVA : V -> VA = mkVACore ;
+  mkVA : Str -> VA = \v -> mkVACore (mkV v)
+} ;
+
+mkV2VCore : V -> Prep -> Prep -> V2V = \v,p2,p3 ->
+  lin V2V v ** {c2=p2; c3=p3} ;
+mkV2SCore : V -> Prep -> Prep -> V2S = \v,p2,p3 ->
+  lin V2S v ** {c2=p2; c3=p3} ;
+mkV2QCore : V -> Prep -> Prep -> V2Q = \v,p2,p3 ->
+  lin V2Q v ** {c2=p2; c3=p3} ;
+mkV2ACore : V -> Prep -> Prep -> V2A = \v,p2,p3 ->
+  lin V2A v ** {c2=p2; c3=p3} ;
 
 mkV2V = overload {
-  mkV2V : V -> V2V = \v -> lin V2V v ** {c2,c3=noPrep} ;
-  mkV2V : V -> Prep -> Prep -> V2V = \v,p2,p3 -> lin V2V v ** {c2=p2; c3=p3} ;
+  mkV2V : V -> V2V = \v -> mkV2VCore v noPrep noPrep ;
+  mkV2V : V -> Prep -> Prep -> V2V = mkV2VCore ;
+  mkV2V : Str -> V2V = \v -> mkV2VCore (mkV v) noPrep noPrep ;
+  mkV2V : Str -> Prep -> Prep -> V2V = \v,p2,p3 -> mkV2VCore (mkV v) p2 p3 ;
 } ;
 
 mkV2S = overload {
-  mkV2S : V -> V2S = \v -> lin V2S v ** {c2,c3=noPrep} ;
-  mkV2S : V -> Prep -> Prep -> V2S = \v,p2,p3 -> lin V2S v ** {c2=p2; c3=p3} ;
+  mkV2S : V -> V2S = \v -> mkV2SCore v noPrep noPrep ;
+  mkV2S : V -> Prep -> Prep -> V2S = mkV2SCore ;
+  mkV2S : Str -> V2S = \v -> mkV2SCore (mkV v) noPrep noPrep ;
+  mkV2S : Str -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore (mkV v) p2 p3 ;
 } ;
 
 mkV2Q = overload {
-  mkV2Q : V -> V2Q = \v -> lin V2Q v ** {c2,c3=noPrep} ;
-  mkV2Q : V -> Prep -> Prep -> V2Q = \v,p2,p3 -> lin V2Q v ** {c2=p2; c3=p3} ;
+  mkV2Q : V -> V2Q = \v -> mkV2QCore v noPrep noPrep ;
+  mkV2Q : V -> Prep -> Prep -> V2Q = mkV2QCore ;
+  mkV2Q : Str -> V2Q = \v -> mkV2QCore (mkV v) noPrep noPrep ;
+  mkV2Q : Str -> Prep -> Prep -> V2Q = \v,p2,p3 -> mkV2QCore (mkV v) p2 p3 ;
 } ;
 
 mkV2A = overload {
-  mkV2A : V -> V2A = \v -> lin V2A v ** {c2,c3=noPrep} ;
-  mkV2A : V -> Prep -> Prep -> V2A = \v,p2,p3 -> lin V2A v ** {c2=p2; c3=p3} ;
+  mkV2A : V -> V2A = \v -> mkV2ACore v noPrep noPrep ;
+  mkV2A : V -> Prep -> Prep -> V2A = mkV2ACore ;
+  mkV2A : Str -> V2A = \v -> mkV2ACore (mkV v) noPrep noPrep ;
+  mkV2A : Str -> Prep -> Prep -> V2A = \v,p2,p3 -> mkV2ACore (mkV v) p2 p3 ;
 } ;
 
+mkV3Core : V -> Prep -> Prep -> V3 = \v,p2,p3 ->
+  lin V3 v ** {c2=p2; c3=p3} ;
+
 mkV3 = overload {
-  mkV3 : V -> V3 = \v -> lin V3 v ** {c2,c3=noPrep} ;
-  mkV3 : V -> Prep -> Prep -> V3 = \v,p2,p3 -> lin V3 v ** {c2=p2; c3=p3} ;
+  mkV3 : V -> V3 = \v -> mkV3Core v noPrep noPrep ;
+  mkV3 : V -> Prep -> V3 = \v,p3 -> mkV3Core v noPrep p3 ;
+  mkV3 : V -> Prep -> Prep -> V3 = mkV3Core ;
+  mkV3 : Str -> V3 = \v -> mkV3Core (mkV v) noPrep noPrep ;
+  mkV3 : Str -> Prep -> V3 = \v,p3 -> mkV3Core (mkV v) noPrep p3 ;
+  mkV3 : Str -> Str -> V3 = \v,p3 -> mkV3Core (mkV v) noPrep (mkPrep p3) ;
 } ;
 
 mkAdv : Str -> Adv = \s -> lin Adv {s=s} ;
 mkAdV : Str -> AdV = \s -> lin AdV {s=s} ;
 mkAdA : Str -> AdA = \s -> lin AdA {s=s} ;
 mkAdN : Str -> AdN = \s -> lin AdN {s=s} ;
-mkCAdv : Str -> CAdv = \s -> lin CAdv {s=s; p=""} ;
+mkCAdv = overload {
+  mkCAdv : Str -> CAdv = \s -> lin CAdv {s=s; p=[]} ;
+  mkCAdv : Str -> Str -> CAdv = \s,p -> lin CAdv {s=s; p=p}
+} ;
+
+mkOrd : Str -> Ord = \x -> lin Ord {s=\\_,_,_=>x} ;
 
 mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;
 mkIP : Str -> IP = \s -> lin IP {

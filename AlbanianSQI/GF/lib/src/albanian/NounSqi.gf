@@ -54,8 +54,8 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
     } ;
 
     UsePN pn = {
-      s = \\_ => pn.s ; acc_clit = noAcc ; dat_clit = noDat ;
-      a = agrgP3 Masc Sg ; isPron = False
+      s = pn.s ; acc_clit = noAcc ; dat_clit = noDat ;
+      a = pn.a ; isPron = False
     } ;
 
     UsePron p = p ;

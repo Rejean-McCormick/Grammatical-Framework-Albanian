@@ -38,45 +38,20 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     RP = {s : Case => GenNum => Str} ;
     ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl} ;
 
-    -- VP copies the morphosyntactic verb tables at the lexical boundary.
-    -- PMCFG-facing syntax therefore never has to descend through a nested
-    -- `VP.v.Indicative` record projection.  All currently represented
-    -- Albanian mood/form dimensions are preserved as structured tables.
-    VP = {
-      indicative : Tense => Number => Person => Str ;
-      subjunctive : Number => Person => Str ;
-      imperative : Number => Str ;
-      participle : Str ;
-      pres_optative : Number => Person => Str ;
-      perf_optative : Number => Person => Str ;
-      pres_admirative : Number => Person => Str ;
-      imperf_admirative : Number => Person => Str ;
-      cl : Str ;
-      subjcl : Str ;
-      post : Agr => Str
-    } ;
-
-    VPSlash = {
-      indicative : Tense => Number => Person => Str ;
-      subjunctive : Number => Person => Str ;
-      imperative : Number => Str ;
-      participle : Str ;
-      pres_optative : Number => Person => Str ;
-      perf_optative : Number => Person => Str ;
-      pres_admirative : Number => Person => Str ;
-      imperf_admirative : Number => Person => Str ;
-      cl : Str ;
-      subjcl : Str ;
-      post : Agr => Str ;
-      c2 : Compl
-    } ;
+    -- Shared category shapes live in ResSqi, matching the standard RGL
+    -- Cat/Res boundary and preventing lock-field loss through helper calls.
+    VP = ResSqi.VP ;
+    VPSlash = ResSqi.VPSlash ;
 
     Comp = {s : Agr => Str} ;
     DAP = {s : Case => Gender => Str ; n : Number} ;
-    GN = {s : Str} ;
-    LN = {s : Str} ;
-    PN = {s : Str} ;
-    SN = {s : Str} ;
+    -- Name categories preserve nominal case and agreement instead of
+    -- collapsing to an invariant string.  The one-string paradigms below
+    -- remain backwards-compatible by filling every case with that string.
+    GN = {s : Case => Str ; g : Gender} ;
+    LN = {s : Case => Str ; a : Agr} ;
+    PN = {s : Case => Str ; a : Agr} ;
+    SN = {s : Gender => Case => Str ; p : Case => Str} ;
 
     Imp = {s : Polarity => Number => Str} ;
 

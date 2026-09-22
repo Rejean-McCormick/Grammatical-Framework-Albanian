@@ -154,5 +154,6 @@ This compiler result upgrades the model-language comparison from prospective cor
 
 ## Latest compiler follow-up
 
-GF 3.12 run `20260921_213424` reaches **45 PASS / 2 FAIL** over the 47 automatically discovered targets, again with no `GeneratePMCFG` crash. This strengthens the compiler evidence for the structured Verb→VP recommendation. The two remaining failures are a local helper-name collision during `LangSqi` composition and are unrelated to the model-language representation comparison.
+GF 3.12 run `20260921_213424` reached **45 PASS / 2 FAIL** over the 47 automatically discovered targets with no `GeneratePMCFG` crash, strengthening the evidence for the structured Verb→VP recommendation in that snapshot.
 
+The later run `20260922_123316` reaches all 49 language-folder modules but is blocked by the independent `ParadigmsSqi.mkA2` circular-definition defect. Raw stderr does not reintroduce the former `GeneratePMCFG`, `CProj "cl"`, or nested `VP.v.Indicative` signatures as the first root cause. The 2026-09-22 failure therefore does not by itself argue against the structured Verb→VP representation; it gates further confirmation until `ParadigmsSqi` is repaired.

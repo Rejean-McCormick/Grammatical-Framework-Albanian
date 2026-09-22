@@ -1,151 +1,175 @@
 # Albanian current repair state
 
-**Updated:** 2026-09-21  
+**Updated:** 2026-09-22  
 **Compiler:** GF 3.12  
-**Validation tool:** GF Wordbench Diagnostic / Global Scan
+**Validation tool:** GF Wordbench Diagnostic / Global Scan  
+**Compendium protocol:** `TEST_RGL`
 
 ## 1. Evidence lock
 
-- current source snapshot supplied by the maintainer: `Code_snapshot_Grammatical_Framework-Albanian(20260921-213419).zip`
-- latest Wordbench run: `20260921_213424`
+- current source snapshot supplied by the maintainer: `Code_snapshot_Grammatical_Framework-Albanian(20260922-123534).zip`
+- latest Wordbench run: `20260922_123316`
 - GF executable recorded by the run: `C:/mycode/Grammatical_Framework/gf-3.12-windows/gf.exe`
 - RGL root recorded by the run: `C:/mycode/Grammatical_Framework/gf-rgl`
 - historical compiler-stable baseline: FIX22C / `albanian-rgl-core-v0.1.0`
+- current source census: **54 `.gf` files** = 49 language-folder sources + 5 parent-directory API facades
 
 Compiler claims below apply only to this source/run combination.
+
+### Evidence-integrity note
+
+The detailed Wordbench source lock records aggregate SHA-256:
+
+```text
+7293e6436ea09d8f2631179a19964eff0af7667a417b018f80928bbb2b5f450d
+```
+
+while `summary.md` displays a different source-lock hash. The 2026-09-22 manual cross-check matched the 49 automatically scanned source entries to the supplied snapshot. Treat the hash-display disagreement as a Wordbench reporting defect to repair; do not use the summary-only hash as stronger evidence than the detailed source lock.
 
 ## 2. Latest Global Scan
 
 ```text
-Files included:       47
-Files OK:             45
-Files failed:          2
+Files included:       49
+Files OK:             22
+Files failed:         27
 Files errored:         0
 Files skipped:         0
+Direct failures:       0   # classifier output, not accepted causal count
+Downstream failures:   0   # classifier output, not accepted causal count
+Ambiguous failures:   27
 Scenarios seen:        0
 GF:                  3.12
 ```
 
-The automatic scan is now **45/47 green**. The two reported failures are:
+The run is **22/49 green** at the automatic language-folder level, but the 27 reported failures do **not** represent 27 independent Albanian defects.
 
-- `LangSqi.gf`
-- `AllSqi.gf`
-
-They are not two independent linguistic/compiler defects. Both fail while composing `LangSqi`, with the same GF diagnostic:
+Raw GF stderr for `ParadigmsSqi` and its failed importers converges on one proven root diagnostic:
 
 ```text
-LangSqi.gf:
-  cannot unify the information
-    oper addPost = ClauseSqiRes.appendVP ;
-  in module ConstructionSqi with
-    oper addPost = \vp,x -> ...
-  in module VerbSqi
+ParadigmsSqi.gf:
+  circular definitions: mkA2
 ```
 
-All 45 other automatically discovered modules compile, including:
+The `summary.md` labels such as `Voc`, `Int`, and `N` are not the real GF error. They are artifacts of the current Wordbench first-error extraction, which is reading an early stderr token instead of the terminal fatal diagnostic.
 
-- `ConstructionSqi`
-- `LexiconSqi`
-- `ExtendSqiRNP`
-- `ExtendSqiVPBridge`
-- `ExtendSqi`
-- `ExtraSqi`
-- the full verbal/morphological core.
+Therefore the current first independent compiler blocker is:
 
-Therefore ALB-DEC-048's three repairs are compiler-confirmed individually. The remaining automatic-scan blocker is a **module-composition namespace collision**, not a PMCFG or Albanian morphology regression.
+> **`ParadigmsSqi.mkA2` contains recursive dispatch inside its own overload family and GF 3.12 rejects it as a circular definition.**
 
-## 3. PMCFG architecture status
+Importer failures must remain grouped as downstream until a post-fix rerun proves an additional independent cause.
 
-ALB-DEC-047 remains compiler-confirmed.
+## 3. Compendium evidence state
 
-Across runs `20260921_212128` and `20260921_213424`:
-
-- no `GeneratePMCFG` crash remains;
-- no `CProj "cl"` trace remains;
-- no `CProj "Indicative" (CProj "v" ...)` trace remains;
-- `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, `SentenceSqi`,
-  `QuestionSqi`, `RelativeSqi`, `IdiomSqi`, and `ConstructionSqi` compile.
-
-Normative representation invariant:
+The run's `compendium_matrix.json` reports:
 
 ```text
-morphology owns mood/form distinctions
-→ VP/VPSlash carry structured tables needed by syntax
-→ syntax selects forms
-→ syntax does not infer grammatical distinctions from realized strings
+highest_evidenced_level: T0
+T0  environment_and_source_integrity   PASS
+T1  resource_and_parameter_tests       NOT ASSESSED
+T2  morphology_tests                   NOT ASSESSED
+T3  public_paradigm_tests              NOT ASSESSED
+T4  category_construction              NOT ASSESSED
+T5  abstract_constructor_tests         NOT ASSESSED
+T6  feature_interactions               NOT ASSESSED
+T7  syntax_module_tests                NOT ASSESSED
+T8  aggregate_language_compile         FAIL
+T9  parse_and_generation_behavior      NOT ASSESSED
+T10 regression_validation              NOT ASSESSED
+T11 family_and_release_checks          NOT ASSESSED
 ```
 
-Do not reopen this architecture unless new compiler or linguistic evidence points back to it.
+This means the run establishes source/environment integrity and a failed aggregate compile. It does **not** establish the unexecuted intermediate levels, and it establishes no linguistic certification.
 
-## 4. Current direct repair — ALB-DEC-049
+`rgl_coverage.json` correspondingly reports `structural_incomplete`, 49 modules seen, and an empty `api_facade_modules` list.
 
-`ConstructionSqi` declared local helpers named `baseVP` and `addPost`.
-`VerbSqi`, already present through `GrammarSqi`, exports helpers with the same names.
+## 4. Current direct repair frontier — ALB-DEC-050 / ALB-DEC-051
 
-`addPost` is the first collision GF reports when `LangSqi` merges:
+### 4.1 Proven defect
+
+The current `mkA2` overload contains `Str` branches that call `mkA2` again from inside the same overload family. GF 3.12 treats that definition as circular.
+
+The repair rule is to introduce uniquely named, explicitly typed core helpers and make each overload branch call the helper directly. The overload must dispatch only at the public boundary; it must not redispatch by its own overloaded name.
+
+### 4.2 Required family audit
+
+The same source region contains other public overload families with self-dispatch patterns that must be audited in the same upgrade before declaring `ParadigmsSqi` repaired:
 
 ```text
-GrammarSqi,
-LexiconSqi,
-ConstructionSqi,
-DocumentationSqi
+mkN2
+mkA2              # proven current failure
+mkV2
+mkVV
+mkVS
+mkVQ
+mkVA
+mkV2V
+mkV2S
+mkV2Q
+mkV2A
+mkV3
 ```
 
-The current working source therefore renames the Construction-only helpers:
+Only `mkA2` is proven by the current compiler run to be the active circular-definition failure. The sibling list is a preventive same-pattern audit requirement, not a claim that every item already has an independently observed compiler error.
+
+The precedent is ALB-DEC-048: when GF 3.12 could not safely resolve an overloaded `mkPrep` path, the project moved construction behind a locally typed helper instead of relying on overload inference.
+
+## 5. Structural warning frontier
+
+The latest run contains nine `missing lock field` warnings in otherwise compiling modules:
 
 ```text
-baseVP  → constructionBaseVP
-addPost → constructionAddPost
+AdverbSqi.gf     lock_NP       x2
+PhraseSqi.gf     lock_VP       x1
+RelativeSqi.gf   lock_VP       x1
+SentenceSqi.gf   lock_VPSlash  x1
+SentenceSqi.gf   lock_VP       x4
 ```
 
-and updates all local uses in `ConstructionSqi`.
+Project policy already states that `missing lock_*` is evidence of category-shape damage until proved otherwise. These warnings are therefore **blocking structural defects for the next clean-build gate**, not cosmetic noise.
 
-The rename is deliberately broader than the first emitted error: a static namespace audit shows that after these two renames there are no remaining top-level `oper` name collisions between `ConstructionSqi` and the modules already composed into `GrammarSqi`.
+Do not copy lock fields manually merely to silence the compiler. Repair the constructor/retyping path that loses the category shape.
 
-This is a namespace repair only. It does not change Albanian surface realization or category structure.
+## 6. Complete compiler census — now 54, not 52
 
-## 5. Static/source preflight
-
-Current working source after ALB-DEC-049:
-
-- `.gf` files in complete current census: **52**
-- malformed single-backslash table abstractions: none known
-- `[] =>` used as a `Str` pattern: none known
-- `gf_morphosqi_lint.py`: **0 findings**
-- duplicated Construction-vs-Grammar top-level helper names after the rename: **0**
-
-Static checks are not a substitute for GF compiler acceptance.
-
-## 6. Complete compiler census still required
-
-The language folder contains 48 `.gf` files, but Wordbench Global Scan currently discovers only 47. It still omits:
+The current source tree contains:
 
 ```text
-AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf
+49 .gf files under AlbanianSQI/GF/lib/src/albanian
+ 5 .gf API facades under AlbanianSQI/GF/lib/src
+-------------------------------------------------
+54 GF files total
 ```
 
-The four public facades in the parent `src` directory are also outside the automatic 47-target scan:
+The five parent-directory API facades are:
 
 ```text
-AlbanianSQI/GF/lib/src/SyntaxSqi.gf
-AlbanianSQI/GF/lib/src/ConstructorsSqi.gf
-AlbanianSQI/GF/lib/src/SymbolicSqi.gf
-AlbanianSQI/GF/lib/src/TrySqi.gf
+CombinatorsSqi.gf
+ConstructorsSqi.gf
+SymbolicSqi.gf
+SyntaxSqi.gf
+TrySqi.gf
 ```
 
-Required complete compiler census: **52 GF files**.
+The 2026-09-22 Global Scan included all 49 language-folder files, including the newly present `MarkupSqi.gf`, but included **zero** API facades. A green `49/49` automatic scan is therefore necessary but not sufficient.
 
-A green `47/47` automatic scan is necessary but not sufficient; the five omitted targets must also be compiled and recorded.
+Required complete compiler census: **54/54 GF files**.
 
-## 7. Current work order
+Until Wordbench discovers the facades, compile those five explicitly and record the automatic/supplemental split.
 
-1. rerun GF 3.12 after ALB-DEC-049 and confirm `LangSqi` / `AllSqi` clear;
-2. establish a green **47/47** automatic Global Scan;
-3. compile the five omitted targets explicitly (or fix Wordbench discovery) to establish **52/52**;
-4. only after the 52-file compiler gate is green, run Albanian behavioral scenarios/goldens;
-5. then resume capability/completion expansion.
+## 7. Next upgrade — normative execution order
 
-Do not treat importer failures as independent root causes when stderr identifies a shared dependency or merge conflict.
+The next upgrade is one coherent recovery-and-validation cycle:
+
+1. **Paradigms overload hardening** — remove self-dispatch from `mkA2` and audit the sibling overload families listed in §4.2 through typed non-overloaded helpers.
+2. **Nearest-importer compiler ladder** — compile `ParadigmsSqi`, then affected lexical/verbal/structural importers, then `GrammarSqi`, `LangSqi`, and `AllSqi`; do not wait for the full scan to discover a local type error.
+3. **Lock-field closure** — eliminate the nine current `lock_NP` / `lock_VP` / `lock_VPSlash` warnings by preserving native category shape.
+4. **Full 54-file gate** — obtain 49/49 language-folder compile plus explicit/automatic PASS for all five API facades, including `CombinatorsSqi`.
+5. **Wordbench diagnostic hardening** — classify the actual GF fatal diagnostic rather than `Voc`/`Int`/`N`, group importer failures as downstream when stderr provenance is clear, and reconcile the source-lock hash displayed in the summary with the detailed lock.
+6. **Behavioral gate** — only after the structural/compiler gate is green, run reviewed Albanian scenarios/goldens for morphology, agreement, case, complementation, clitics, embedding, `PN`/Names, Markup-preserving composition, and public API usage.
+
+No completion-release claim is allowed from a zero-scenario run.
+
+The detailed scope and acceptance criteria are in `ALBANIAN_NEXT_UPGRADE_20260922.md`.
 
 ## 8. Historical progression
 
@@ -153,13 +177,15 @@ Do not treat importer failures as independent root causes when stderr identifies
 |---|---|
 | FIX22C | historical compiler-stable core baseline |
 | early post-mega scan | 5 PASS / 42 FAIL; syntax corruption/root parse blocker |
-| candidate (9/10 era) | syntax repaired; type/PMCFG defects exposed |
 | run `20260921_201720` | 27 PASS / 20 FAIL; nested `VP.v.Indicative` root identified |
 | ALB-DEC-047 | explicit `Verb.Subjunctive` and structured Verb→VP boundary |
 | run `20260921_212128` | 40 PASS / 7 FAIL; no PMCFG crash; ALB-DEC-047 confirmed |
 | ALB-DEC-048 | Prelude visibility + typed `distance_N3` prepositions |
-| run `20260921_213424` | **45 PASS / 2 FAIL; ALB-DEC-048 fixes compile; final blocker is `LangSqi` helper-name collision** |
-| current ALB-DEC-049 working source | Construction helper namespace isolated; pending GF rerun |
+| run `20260921_213424` | 45 PASS / 2 FAIL; final blocker was `LangSqi` helper-name collision |
+| ALB-DEC-049 overlay | Construction helper namespace isolated; public surface expanded with Markup/Combinators work |
+| run `20260922_123316` | **22 PASS / 27 FAIL over all 49 language-folder sources; one proven root compiler defect: `ParadigmsSqi.mkA2` circular definition; 0 scenarios; API facades not included** |
+
+Historical runs remain evidence for their exact source snapshots. They do not override the current source/run pair.
 
 ## 9. Documentation synchronization rule
 
@@ -168,6 +194,38 @@ After each evidence-changing run update, update at minimum:
 - this file;
 - `ALBANIAN_DECISION_LOG.md`;
 - `ALBANIAN_OPEN_QUESTIONS.md`;
+- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`;
 - `status/ALBANIAN_IMPLEMENTATION_STATUS.md`;
-- `DOCUMENTATION_SYNC_20260921.md`;
+- the latest `DOCUMENTATION_SYNC_*.md` note;
+- `ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md` when the target census changes;
 - symbol/test ledgers when their specific evidence changes.
+
+---
+
+## 10. Upgrade candidate implementation state — 2026-09-22
+
+The next-upgrade source edits are now implemented in the candidate tree.
+This changes the **source state**, not the latest external compiler evidence.
+Run `20260922_123316` remains the most recent GF 3.12 compiler result until a
+new run is produced from this candidate.
+
+Implemented candidate facts:
+
+```text
+Paradigms audited overload self-dispatch: removed (12/12 families)
+VP/VPSlash resource boundary:             centralized in ResSqi
+CatSqi VP/VPSlash lincats:                aliases to ResSqi types
+Adverb NP helper coercions:               removed
+complete source census:                   49 + 5 = 54 GF files
+static upgrade gate:                      PASS
+GF 3.12 compile gate:                     NOT RUN in assembly environment
+scenario/golden gate:                     NOT RUN
+```
+
+The immediate next action is therefore **validation, not another feature
+expansion**: run the supplied 54-target validator with GF 3.12, close any new
+independent compiler diagnostic it exposes, and only then proceed to the
+behavioral scenario/golden gate.
+
+See `ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md` for the exact implementation
+and evidence boundary.

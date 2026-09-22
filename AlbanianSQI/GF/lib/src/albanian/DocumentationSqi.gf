@@ -123,10 +123,19 @@ lin InflectionAdv, InflectionAdV, InflectionAdA, InflectionAdN = \x -> {
     } ;
 
 lin
-  InflectionPN x = simpleInflection "pn" "Emër i përveçëm" x.s ;
-  InflectionLN x = simpleInflection "ln" "Emër gjuhe" x.s ;
-  InflectionGN x = simpleInflection "gn" "Emër gjeografik" x.s ;
-  InflectionSN x = simpleInflection "sn" "Emër special" x.s ;
+  InflectionPN x = caseInflection "pn" "Emër i përveçëm" x.s ;
+  InflectionLN x = caseInflection "ln" "Emër vendi" x.s ;
+  InflectionGN x = caseInflection "gn" "Emër vetjak" x.s ;
+  InflectionSN x = {
+    t="sn" ;
+    s1=heading1 "Mbiemër familjar" ;
+    s2=frameTable (
+      tr (th "" ++ th "Nom" ++ th "Acc" ++ th "Dat" ++ th "Ablat") ++
+      tr (th "Masc" ++ td (x.s!Masc!Nom) ++ td (x.s!Masc!Acc) ++ td (x.s!Masc!Dat) ++ td (x.s!Masc!Ablat)) ++
+      tr (th "Fem" ++ td (x.s!Fem!Nom) ++ td (x.s!Fem!Acc) ++ td (x.s!Fem!Dat) ++ td (x.s!Fem!Ablat)) ++
+      tr (th "Pl" ++ td (x.p!Nom) ++ td (x.p!Acc) ++ td (x.p!Dat) ++ td (x.p!Ablat))) ;
+    s3=[]
+  } ;
   InflectionPrep x = simpleInflection "prep" "Parafjalë" x.s ;
 
   NoDefinition t = {s = t.s} ;
@@ -137,6 +146,17 @@ lin
   MkTag i = {s = i.t} ;
 
 oper
+  caseInflection : Str -> Str -> (Case => Str) -> {t : Str; s1,s2,s3 : Str} = \tag,label,forms -> {
+    t = tag ;
+    s1 = heading1 label ;
+    s2 = frameTable (
+      tr (th "Nom" ++ td (forms ! Nom)) ++
+      tr (th "Acc" ++ td (forms ! Acc)) ++
+      tr (th "Dat" ++ td (forms ! Dat)) ++
+      tr (th "Ablat" ++ td (forms ! Ablat))) ;
+    s3 = []
+  } ;
+
   simpleInflection : Str -> Str -> Str -> {t : Str; s1,s2,s3 : Str} = \tag,label,form -> {
     t = tag ;
     s1 = heading1 label ;

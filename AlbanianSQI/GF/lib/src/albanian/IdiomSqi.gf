@@ -1,9 +1,10 @@
-concrete IdiomSqi of Idiom = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRes in {
+concrete IdiomSqi of Idiom = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRes, (I=IrregSqi) in {
   oper
     defaultAgr : Agr = {gn=GSg Masc;p=P3} ;
     p1plAgr : Agr = {gn=GPl;p=P1} ;
 
     subjVP : VP -> Agr -> Str = \vp,a -> realizeSubjVP vp Pos a ;
+    cleftCop : VP = emptyVP (lin Verb I.jam_V) ;
 
     existWord : ParamX.Tense -> Anteriority -> Agr -> Str = \t,ant,a ->
       case ant of {
@@ -19,9 +20,11 @@ concrete IdiomSqi of Idiom = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRe
     GenericCl vp = {s=\\t,a,p=>"njeriu" ++ realizeVP vp t a p defaultAgr} ;
 
     CleftNP np rs = {
-      s=\\_,_,_=>"është" ++ np.s!Nom ++ rs.s!np.a
+      s=\\t,a,p=>realizeVP cleftCop t a p np.a ++ np.s!Nom ++ rs.s!np.a
     } ;
-    CleftAdv adv s = {s=\\_,_,_=>"është" ++ adv.s ++ "që" ++ s.s} ;
+    CleftAdv adv s = {
+      s=\\t,a,p=>realizeVP cleftCop t a p defaultAgr ++ adv.s ++ "që" ++ s.s
+    } ;
 
     ExistNP np = {
       s=\\t,a,p=>negation p ++ existWord t a np.a ++ np.s!Acc

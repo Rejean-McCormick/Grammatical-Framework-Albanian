@@ -1468,3 +1468,96 @@ The direct modules that previously failed under ALB-DEC-048 now compile: `Extend
 
 **Does not reopen:** ALB-DEC-047 Verb→VP architecture, ALB-DEC-048 Prelude/lexical-preposition fixes, or any Albanian linguistic decision.
 
+---
+
+## ALB-DEC-050
+**Status:** accepted from GF 3.12 evidence  
+**Date:** 2026-09-22  
+**Area:** current compiler root-cause classification
+
+**Decision:** Treat Wordbench run `20260922_123316` as one proven `ParadigmsSqi.mkA2` circular-definition blocker plus importer fallout unless a post-fix rerun exposes another independent diagnostic. Do not count the 27 failed targets as 27 Albanian defects.
+
+**Evidence:** 49 language-folder targets were included; 22 passed and 27 failed. Raw stderr from `ParadigmsSqi` and the failed import chain terminates in:
+
+```text
+ParadigmsSqi.gf:
+  circular definitions: mkA2
+```
+
+The Wordbench summary's `Voc`/`Int`/`N` labels are not the fatal GF diagnostic and must not override raw stderr provenance.
+
+**Implications:** repair `ParadigmsSqi` first, then rerun the dependency ladder. Importer counts are inventory data, not independent-defect counts.
+
+**Does not reopen:** ALB-DEC-047 verbal representation recovery, ALB-DEC-048 typed lexical-preposition repair, or ALB-DEC-049 namespace isolation.
+
+---
+
+## ALB-DEC-051
+**Status:** accepted for the next upgrade  
+**Date:** 2026-09-22  
+**Area:** `ParadigmsSqi` public overload implementation
+
+**Decision:** A public overload family must not implement one branch by calling the same overloaded public name again and relying on GF to redispatch. Public overloads dispatch once; implementation proceeds through uniquely named, explicitly typed core helpers.
+
+**Why:** GF 3.12 rejects the current `mkA2` family as circular. The project already has a compatible precedent in ALB-DEC-048, where overloaded `mkPrep` resolution was replaced by a local typed constructor path.
+
+**Mandatory audit set:** `mkN2`, `mkA2`, `mkV2`, `mkVV`, `mkVS`, `mkVQ`, `mkVA`, `mkV2V`, `mkV2S`, `mkV2Q`, `mkV2A`, `mkV3`.
+
+**Evidence boundary:** only `mkA2` is proven by the current run to be an active compiler failure. The sibling families are a preventive same-pattern audit, not pre-classified independent bugs.
+
+**Acceptance gate:** `ParadigmsSqi` plus representative nearest importers compile with no circular-definition diagnostic and no public-signature regression.
+
+---
+
+## ALB-DEC-052
+**Status:** accepted  
+**Date:** 2026-09-22  
+**Area:** complete source census / public API release surface
+
+**Decision:** The current complete Albanian GF compiler census is **54 files**, not 52.
+
+```text
+49 files  GF/lib/src/albanian/*.gf
+ 5 files  GF/lib/src/*.gf public facades
+54 total
+```
+
+The five facades are `CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, and `TrySqi`. `MarkupSqi` is part of the 49-file language-folder census.
+
+**Why:** the public-surface upgrade added `MarkupSqi` and `CombinatorsSqi`. The previous 52-file documentation contract predates those additions.
+
+**Acceptance gate:** 49/49 language-folder PASS plus 5/5 facade PASS, recorded as **54/54**. A Wordbench run that reports `api_facade_modules: []` is incomplete for release certification even if all automatically discovered language modules pass.
+
+---
+
+---
+
+## ALB-DEC-053
+**Status:** implemented candidate; GF 3.12 acceptance pending  
+**Date:** 2026-09-22  
+**Area:** overload implementation + VP/VPSlash resource/category boundary
+
+**Decision:** Implement ALB-DEC-051 by routing the twelve audited public
+`ParadigmsSqi` overload families through uniquely named typed core helpers, and
+repair the current VP/VPSlash lock-risk boundary by making `ResSqi` own the
+structural `VP`/`VPSlash` types while `CatSqi` aliases those resource types.
+Do not add hand-written `lock_*` fields merely to silence warnings.
+
+`AdverbSqi` also removes two resource helpers typed as locked `NP` and performs
+the required NP surface selection directly inside the concrete linearization.
+`ClauseSqiRes` now works directly with the resource-owned VP structures rather
+than opening `CatSqi` for them.
+
+**Static evidence:** the candidate contains 49 language modules plus five API
+facades (54 GF files total); all twelve audited overload blocks are present;
+no same-family self-dispatch remains; the structural VP/VPSlash aliases are in
+place; the static upgrade validator reports PASS with zero static errors and
+zero placeholder warnings.
+
+**Compiler evidence boundary:** GF is not installed in the assembly
+environment. Therefore ALB-DEC-053 is not yet accepted as compiler evidence.
+The authoritative acceptance gate is a GF 3.12 54/54 run with zero circular
+-definition diagnostics and zero `missing lock field lock_*` warnings.
+
+**Does not claim:** scenario/golden correctness, linguistic completion, or
+release certification.

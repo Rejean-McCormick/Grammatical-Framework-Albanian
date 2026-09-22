@@ -1,7 +1,7 @@
 # Albanian RGL Completion — Total Final-State Specification
 
 **Date:** 2026-09-19  
-**Operational synchronization:** 2026-09-21  
+**Operational synchronization:** 2026-09-22  
 **Baseline:** `albanian-rgl-core-v0.1.0`  
 **Target:** mature Albanian Resource Grammar Library implementation  
 **Status:** normative description of the completed system  
@@ -39,7 +39,7 @@ The present document describes the **destination beyond that baseline**.
 
 ### Operational prerequisite
 
-This document intentionally does not define patch order. The normative execution order is now `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`. As of 2026-09-21, the post-FIX22C mega-update has a syntax-level compile regression, so semantic completion work is gated behind syntax integrity, a full compile census, root-cause repair, and restoration of the historical FIX22C/public-facade compiler gates.
+This document intentionally does not define patch order. The normative execution order is `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`, with the current implementation cycle specified in `ALBANIAN_NEXT_UPGRADE_20260922.md`. As of 2026-09-22, source syntax integrity is no longer the first blocker: GF 3.12 rejects the current public paradigms layer with `circular definitions: mkA2`. Semantic completion work is therefore gated behind paradigms overload hardening, lock-field closure, the complete 54-file compiler census, restoration/exceeding of the historical FIX22C/public-facade gates, and then reviewed behavioral evidence.
 
 A historical stable baseline must never be read as proof that a later working snapshot still compiles.
 
@@ -267,6 +267,7 @@ The completed language should present a familiar mature-RGL structure while pres
 AlbanianSQI/GF/lib/src/
 ├── SyntaxSqi.gf
 ├── ConstructorsSqi.gf
+├── CombinatorsSqi.gf
 ├── SymbolicSqi.gf
 ├── TrySqi.gf
 └── albanian/
@@ -1435,9 +1436,9 @@ The final all-language entry point exposes all intended public Albanian surfaces
 
 `AllSqiAbs` must match that public surface; it must not remain `Lang ** {}` if `AllSqi` is intended to claim complete `Extend` coverage.
 
-### 37.4 `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`
+### 37.4 `SyntaxSqi`, `ConstructorsSqi`, `CombinatorsSqi`, `SymbolicSqi`, `TrySqi`
 
-These API wrappers must compile and expose the mature Albanian grammar without bypassing its rich categories. They are part of the release surface and participate in clean-build regression.
+These API wrappers must compile and expose the mature Albanian grammar without bypassing its rich categories. `CombinatorsSqi` is part of the standard public composition rather than an optional local convenience wrapper. All five wrappers are part of the release surface and participate in clean-build regression.
 
 ---
 
@@ -1581,6 +1582,8 @@ LangSqi
 AllSqi
 SyntaxSqi
 ConstructorsSqi
+CombinatorsSqi
+SymbolicSqi
 TrySqi
 ```
 
@@ -2296,7 +2299,7 @@ The common abstract-signature inventory above does not by itself close the compl
 - `NamesSqi`: case/agreement-aware named entities used by tests/examples or exposed as language resources;
 - `DocumentationSqi`: morphology/documentation operations consistent with the final paradigms;
 - `MarkupSqi`, if included in the pinned RGL composition: Albanian-safe markup composition with no loss of grammatical structure;
-- `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`, `LangSqi`, `AllSqi` and their abstract companions: public wrappers/compositions that expose the same validated semantics as the underlying concrete modules.
+- `SyntaxSqi`, `ConstructorsSqi`, `CombinatorsSqi`, `SymbolicSqi`, `TrySqi`, `LangSqi`, `AllSqi` and their abstract companions: public wrappers/compositions that expose the same validated semantics as the underlying concrete modules.
 
 No surface may be declared complete from file presence alone. Its declarations must be reconciled symbol-for-symbol with the pinned abstract interface.
 

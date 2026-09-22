@@ -28,11 +28,11 @@ oper
     s=\\_,_,g,n =>sl.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
   } ;
 
-  vp_PassVPSlash : VPSlash -> VP = \sl ->
+  vp_PassVPSlash : R.VPSlash -> R.VP = \sl ->
     appendVP (emptyVP (lin Verb I.jam_V))
       (\\a =>sl.participle ++ sl.post!a) ;
 
-  vp_PassAgentVPSlash : VPSlash -> NP -> VP = \sl,np ->
+  vp_PassAgentVPSlash : R.VPSlash -> NP -> R.VP = \sl,np ->
     appendVP (vp_PassVPSlash sl) (\\_ => (vp_agentAdv np).s) ;
 
   vp_NominalizeVPSlashNP : VPSlash -> NP -> NP = \sl,np ->
@@ -47,12 +47,12 @@ oper
     subjcl="të" ++ "po" ++ sl.cl
   } ;
 
-  vp_A2VPSlash : A2 -> VPSlash = \a2 ->
+  vp_A2VPSlash : A2 -> R.VPSlash = \a2 ->
     slashFromVP
       (appendVP (emptyVP (lin Verb I.jam_V)) (CompAP (UseA2 a2)).s)
       a2.c2 ;
 
-  vp_N2VPSlash : N2 -> VPSlash = \n2 ->
+  vp_N2VPSlash : N2 -> R.VPSlash = \n2 ->
     slashFromVP
       (appendVP (emptyVP (lin Verb I.jam_V)) (CompCN (UseN2 n2)).s)
       n2.c2 ;

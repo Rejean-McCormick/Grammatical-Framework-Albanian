@@ -1,7 +1,7 @@
 # Albanian RGL — Recovery and Completion Sequence
 
 **Status:** normative operational sequence  
-**Last synchronized:** 2026-09-21  
+**Last synchronized:** 2026-09-22  
 **Historical compiler baseline:** `albanian-rgl-core-v0.1.0` / FIX22C  
 **Current working-state authority:** `CURRENT_REPAIR_STATE.md`  
 **Final-state authority:** `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`
@@ -23,33 +23,31 @@ The sequence here follows the GF Compendium rule that a non-compiling snapshot i
 
 ## 2. Current phase
 
-The current branch has moved beyond syntax-corruption and PMCFG representation recovery.
-
-Wordbench Global Scan `20260921_213424` (GF 3.12) reported:
+Wordbench Global Scan `20260922_123316` (GF 3.12) reported:
 
 ```text
-files included: 47
-PASS:          45
-FAIL:           2
+files included: 49
+PASS:          22
+FAIL:          27
 ERROR:          0
 TIMEOUT:        0
 scenarios:      0
 ```
 
-This run reconfirms ALB-DEC-047 and confirms the three local ALB-DEC-048 fixes: `ExtendSqiRNP`, `ExtendSqiVPBridge`, `LexiconSqi`, `ExtendSqi`, and `ExtraSqi` now compile, and no `GeneratePMCFG` crash appears.
+All 49 current language-folder `.gf` files were discovered, including `ExtendSqiVPS.gf` and the new `MarkupSqi.gf`. The five parent-directory API facades were not discovered.
 
-The two remaining FAILs (`LangSqi`, `AllSqi`) share one root cause: GF cannot unify two exported internal helpers named `addPost` while composing `ConstructionSqi` with `GrammarSqi`/`VerbSqi`. A static namespace audit also identifies `baseVP` as a second same-name helper that would become a likely next collision once `addPost` is removed.
-
-ALB-DEC-049 therefore isolates the Construction-only helper namespace by renaming:
+The 27 reported failures are not accepted as 27 independent source defects. Raw stderr converges on the current first root cause:
 
 ```text
-baseVP  -> constructionBaseVP
-addPost -> constructionAddPost
+ParadigmsSqi.gf:
+  circular definitions: mkA2
 ```
 
-and updating only `ConstructionSqi` consumers.
+Wordbench's current `OTHER: Voc` / `OTHER: Int` / similar labels are diagnostic-extraction artifacts, not the GF root errors. Repair order therefore remains root-cause based.
 
-Therefore the active frontier remains **G3 root-cause compiler repair**, now reduced to a module-composition namespace issue. The next goal is a green automatic 47-target run, followed immediately by the five missing targets needed for the complete 52-file census.
+The current source census is **54 GF files**: 49 language-folder modules plus five public facades (`CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, `TrySqi`).
+
+The active frontier is **G3 root-cause compiler repair at the public paradigms boundary**, immediately followed by structural lock closure and a complete 54-file compile gate. Detailed scope is normative in `ALBANIAN_NEXT_UPGRADE_20260922.md`.
 
 ---
 
@@ -85,7 +83,7 @@ These forms are syntax facts, not Albanian linguistic decisions.
 
 ### 4.2 Current syntax evidence
 
-The current ALB-DEC-049 working source has been scanned with the Wordbench static-scanning service over the complete current source census of **52 `.gf` files**:
+The current 2026-09-22 source remains static-clean under the project scanners, and the complete current source census is **54 `.gf` files**:
 
 - static findings: `0`;
 - scan exceptions: `0`;
@@ -116,7 +114,7 @@ For every `[] => ...` finding:
 
 ### 4.4 Current G1 state
 
-The former `ResSqi` parse blocker and mass notation-corruption family remain repaired. G1 is a **regression gate**, not the active repair frontier. Run `20260921_213424` additionally reconfirms that the Verb→VP PMCFG repair does not reintroduce syntax failure.
+The former `ResSqi` parse blocker and mass notation-corruption family remain repaired. G1 is a **regression gate**, not the active repair frontier. The 2026-09-22 run reaches semantic/module checking and exposes the `mkA2` circular definition rather than a malformed-notation blocker. Historical PMCFG recovery remains a regression boundary.
 
 **G1 PASS:** the current Albanian source contains no known malformed-notation blocker and the local GF run reaches the next independent compiler layer.
 
@@ -137,15 +135,16 @@ The inventory is exhaustive even though repair remains root-cause ordered.
 
 ### Required coverage
 
-The campaign must include all Albanian language sources:
+The campaign must include all Albanian sources in the current layout:
 
-- all **48** `.gf` files currently in `GF/lib/src/albanian`, including `ExtendSqiVPS.gf`;
-- `GF/lib/src/SyntaxSqi.gf`;
+- all **49** `.gf` files currently in `GF/lib/src/albanian`, including `ExtendSqiVPS.gf` and `MarkupSqi.gf`;
+- `GF/lib/src/CombinatorsSqi.gf`;
 - `GF/lib/src/ConstructorsSqi.gf`;
 - `GF/lib/src/SymbolicSqi.gf`;
+- `GF/lib/src/SyntaxSqi.gf`;
 - `GF/lib/src/TrySqi.gf`.
 
-The latest compiler-evidence run (`20260921_213424`) still included only 47 files. It therefore missed **five** current targets: `ExtendSqiVPS.gf` plus the four parent-directory facades. Until Wordbench discovers all five automatically, compile them explicitly and record the automatic/supplemental split.
+The latest compiler-evidence run (`20260922_123316`) included all 49 language-folder files but **zero** parent-directory API facades. Until Wordbench discovers those five automatically, compile them explicitly and record the automatic/supplemental split.
 
 ### Failure classification
 
@@ -158,7 +157,7 @@ For each failed target, distinguish:
 
 A large number of downstream failures must never be counted as the same number of independent Albanian defects.
 
-**G2 PASS:** all 52 GF sources have a recorded result and independent root causes are separated from dependency fallout.
+**G2 PASS:** all 54 GF sources have a recorded result and independent root causes are separated from dependency fallout.
 
 ---
 
@@ -214,9 +213,10 @@ TestSqi.gf
 It must also compile the public API facades:
 
 ```text
-SyntaxSqi.gf
+CombinatorsSqi.gf
 ConstructorsSqi.gf
 SymbolicSqi.gf
+SyntaxSqi.gf
 TrySqi.gf
 ```
 

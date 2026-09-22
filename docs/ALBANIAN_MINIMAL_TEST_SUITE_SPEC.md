@@ -221,7 +221,7 @@ Required:
 Run before calling a repair cycle complete.
 
 Required:
-- compile all 52 Albanian GF sources in the current layout: all 48 `.gf` files under `GF/lib/src/albanian` plus `SyntaxSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, and `TrySqi.gf`,
+- compile all 54 Albanian GF sources in the current layout: all 49 `.gf` files under `GF/lib/src/albanian` plus `CombinatorsSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, `SyntaxSqi.gf`, and `TrySqi.gf`,
 - confirm targeted fragile regression set passes,
 - confirm no newly expanded warning clusters,
 - confirm façade modules still behave as thin façades/aggregators,
@@ -241,7 +241,7 @@ The inventory and the repair order are different concepts:
 - classify a target as `blocked/downstream` when its raw compiler log points first to an already-known dependency failure;
 - do not count one dependency parse error as dozens of independent defects.
 
-The latest Wordbench run included 47 language-folder files. Until discovery includes the new `ExtendSqiVPS.gf` and the four parent-directory API facades, run those five targets explicitly after the automatic Global Scan.
+The latest Wordbench run (`20260922_123316`) included all 49 language-folder files, including `ExtendSqiVPS.gf` and `MarkupSqi.gf`, but no parent-directory API facade. Until discovery includes `CombinatorsSqi.gf`, `ConstructorsSqi.gf`, `SymbolicSqi.gf`, `SyntaxSqi.gf`, and `TrySqi.gf`, run those five targets explicitly after the automatic Global Scan.
 
 ## 6. Required global checks
 
@@ -266,7 +266,10 @@ Examples:
 Review:
 - `lock_AP`
 - `lock_CN`
+- `lock_NP`
 - `lock_Prep`
+- `lock_VP`
+- `lock_VPSlash`
 - any new lock-like or shape-loss warnings
 
 No new warning is accepted silently.

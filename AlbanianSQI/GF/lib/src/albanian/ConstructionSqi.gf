@@ -15,6 +15,10 @@ concrete ConstructionSqi of Construction = CatSqi **
       s=\\_=>w; acc_clit=[]; dat_clit=[]; a=agrgP3 g n; isPron=False
     } ;
 
+    mkPNConst : Gender -> Str -> PN = \g,w -> lin PN {
+      s=\\_=>w ; a=agrgP3 g Sg
+    } ;
+
     constructionBaseVP : Verb -> VP = emptyVP ;
     constructionAddPost : VP -> (Agr => Str) -> VP = appendVP ;
 
@@ -36,9 +40,9 @@ concrete ConstructionSqi of Construction = CatSqi **
     yearAdv y = {s=y.s} ;
 
     monthN m = mkNConst Masc m.s ;
-    monthPN m = {s=m.s} ;
+    monthPN m = mkPNConst Masc m.s ;
     weekdayN w = mkNConst Fem w.s ;
-    weekdayPN w = {s=w.s} ;
+    weekdayPN w = mkPNConst Fem w.s ;
     weekdayLastAdv w = {s=w.s ++ "e" ++ "kaluar"} ;
     weekdayNextAdv w = {s=w.s ++ "e" ++ "ardhshme"} ;
     weekdayPunctualAdv w = {s="të" ++ w.s} ;
@@ -72,19 +76,7 @@ concrete ConstructionSqi of Construction = CatSqi **
         realizeVP (constructionBaseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
     } ;
 
-    where_go_QCl np = {
-      s=\\t,a,p=>"ku" ++ np.s!Nom ++ realizeVP (constructionBaseVP (lin Verb (P.mkV "shkoj"))) t a p np.a
-    } ;
-    where_come_from_QCl np = {
-      s=\\t,a,p=>"nga" ++ "ku" ++ np.s!Nom ++ realizeVP (constructionBaseVP (lin Verb I.vij_V)) t a p np.a
-    } ;
 
-    go_here_VP = constructionAddPost (constructionBaseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"këtu") ;
-    come_here_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"këtu") ;
-    come_from_here_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "këtu") ;
-    go_there_VP = constructionAddPost (constructionBaseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"atje") ;
-    come_there_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"atje") ;
-    come_from_there_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "atje") ;
 
     married_Cl np other =
       mkPred (np.s!Nom) np.a
@@ -135,7 +127,9 @@ concrete ConstructionSqi of Construction = CatSqi **
     } ;
 
     few_X_short_of_Y np x y = {
-      s=np.s!Nom ++ "ka" ++ "pak" ++ x.s!Indef!Acc!Pl ++
+      s=np.s!Nom ++
+        realizeVP (constructionBaseVP (lin Verb I.kam_V)) ParamX.Pres Simul Pos np.a ++
+        "pak" ++ x.s!Indef!Acc!Pl ++
         "më pak se" ++ y.s!Indef!Acc!Sg
     } ;
 

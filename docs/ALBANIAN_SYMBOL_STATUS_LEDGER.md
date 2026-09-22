@@ -655,7 +655,7 @@ That is the function of this ledger.
 - **current_owner:** `ExtendSqiScaffolding.gf`
 - **current_location:** `sc_ComplGenVV`, wired by `ExtendSqi.gf`
 - **primary_status:** `warning`
-- **why_this_status:** runs `20260921_212128` and `20260921_213424` confirm that the underlying `ComplVV`/subjunctive PMCFG failure is gone. In the latest run `ExtendSqi` and its companion resources compile, so the former compiler/import blocker is cleared. The status remains `warning` only because `ComplGenVV` still ignores its `Ant`/`Pol` arguments and therefore has a documented linguistic/semantic gap.
+- **why_this_status:** runs `20260921_212128` and `20260921_213424` confirm that the underlying `ComplVV`/subjunctive PMCFG failure is gone and that `ExtendSqi` compiled in those exact snapshots. The later run `20260922_123316` is blocked upstream by the independent `ParadigmsSqi.mkA2` circular definition, so it does not revoke the earlier local PMCFG evidence. The status remains `warning` because `ComplGenVV` still ignores its `Ant`/`Pol` arguments and therefore has a documented linguistic/semantic gap.
 - **allowed_use:** bounded structural compile probe `\vv,_,_,vp -> ComplVV vv vp`
 - **forbidden_use:** claiming full generalized-VV semantics; importing `TenseSqi` representations into this `CommonX`-contract path; pre-emptively modifying later functions
 - **known_semantic_gap:** anteriority and polarity arguments remain ignored exactly as in the previous Albanian implementation
@@ -676,7 +676,7 @@ That is the function of this ledger.
 - **why_this_status:** pre-FIX22C evidence showed that inheritance advanced past an earlier local `ComplVPIVV` PMCFG crash, but the later mega-update deliberately reopened local family ownership. The current source therefore cannot be described accurately as simply inherited, and coordinator-local family logic is not the accepted final architecture.
 - **allowed_use:** typed/compiler probes needed to determine whether inherited coverage is sufficient or whether Albanian needs a richer local family
 - **forbidden_use:** treating the mega-update as proof of final local ownership; treating old inheritance-only policy as still unconditional; one-off mixed ownership; leaving substantive family logic in the thin coordinator
-- **known_gap:** final ownership and Albanian behavior have not been validated on the post-mega-update source. Textual syntax corruption is now repaired, but the current Verb→VP PMCFG boundary (candidate 12) still requires GF 3.12 validation before family-level PMCFG/scenario conclusions are meaningful
+- **known_gap:** final ownership and Albanian behavior remain unresolved. The candidate-(12) Verb→VP representation was compiler-confirmed in runs `20260921_212128` and `20260921_213424`, but the family still lacks final ownership closure and reviewed Albanian scenarios; the later `20260922_123316` run is blocked independently in `ParadigmsSqi` before it can provide stronger family-level evidence
 - **exit_criteria:**
   1. restore syntax/compiler baseline,
   2. inspect exact `ExtendFunctor` coverage and current Albanian lincats,

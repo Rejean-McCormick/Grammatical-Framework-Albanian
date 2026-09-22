@@ -2,12 +2,12 @@
 -- This resource is intentionally below Sentence/Question/Relative/Extend so
 -- every consumer uses the same tense, polarity, agreement and clitic rules.
 resource ClauseSqiRes =
-  open Prelude, ParamX, ResSqi, CatSqi in {
+  open Prelude, ParamX, ResSqi in {
 
 oper
   defaultAgr : Agr = {gn = GSg Masc ; p = P3} ;
 
-  vpFromSlash : VPSlash -> VP = \sl -> lin VP {
+  vpFromSlash : VPSlash -> VP = \sl -> {
     indicative = sl.indicative ;
     subjunctive = sl.subjunctive ;
     imperative = sl.imperative ;
@@ -21,7 +21,7 @@ oper
     post = sl.post
   } ;
 
-  emptyVP : Verb -> VP = \v -> lin VP {
+  emptyVP : Verb -> VP = \v -> {
     indicative = v.Indicative ;
     subjunctive = v.Subjunctive ;
     imperative = v.Imperative ;
@@ -35,7 +35,7 @@ oper
     post = \\_ => []
   } ;
 
-  slashFromVP : VP -> Compl -> VPSlash = \vp,c -> lin VPSlash {
+  slashFromVP : VP -> Compl -> VPSlash = \vp,c -> {
     indicative = vp.indicative ;
     subjunctive = vp.subjunctive ;
     imperative = vp.imperative ;

@@ -1,27 +1,30 @@
--- Albanian names module.  Names become full NPs only at the consumer
--- boundary; the lexical name categories themselves remain strings.
+-- Albanian names with explicit case/agreement support.
 concrete NamesSqi of Names = CatSqi ** open Prelude, ResSqi in {
 
 oper
-  nameNP : Gender -> Number -> Str -> NP = \g,n,s -> lin NP {
-    s = \\_ => s ;
+  namedNP : (Case => Str) -> Agr -> NP = \forms,a -> lin NP {
+    s = forms ;
     acc_clit = [] ;
     dat_clit = [] ;
-    a = agrgP3 g n ;
+    a = a ;
     isPron = False
   } ;
 
 lin
-  GivenName n = nameNP Masc Sg n.s ;
-  MaleSurname n = nameNP Masc Sg n.s ;
-  FemaleSurname n = nameNP Fem Sg n.s ;
-  PlSurname n = nameNP Masc Pl n.s ;
-  FullName n s = nameNP Masc Sg (n.s ++ s.s) ;
+  GivenName n = namedNP n.s (agrgP3 n.g Sg) ;
+  MaleSurname n = namedNP (n.s ! Masc) (agrgP3 Masc Sg) ;
+  FemaleSurname n = namedNP (n.s ! Fem) (agrgP3 Fem Sg) ;
+  PlSurname n = namedNP n.p (agrgP3 Masc Pl) ;
 
-  UseLN n = nameNP Masc Sg n.s ;
-  PlainLN n = nameNP Masc Sg n.s ;
-  InLN n = {s = "në" ++ n.s} ;
-  AdjLN ap n = {
-    s = n.s ++ ap.s ! Def ! Nom ! Masc ! Sg
+  FullName n sn = namedNP
+    (\\c => n.s ! Nom ++ sn.s ! n.g ! c)
+    (agrgP3 n.g Sg) ;
+
+  UseLN n = namedNP n.s n.a ;
+  PlainLN n = namedNP n.s n.a ;
+  InLN n = {s = "në" ++ n.s ! Acc} ;
+  AdjLN ap n = n ** {
+    s = \\c => n.s ! c ++
+      ap.s ! Def ! c ! agrGender n.a ! agrNumber n.a
   } ;
 }

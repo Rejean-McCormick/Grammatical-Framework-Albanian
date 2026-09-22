@@ -72,7 +72,14 @@ concrete VerbSqi of Verb = CatSqi **
     slashVpiStr : VPSlash -> Agr -> Str = \vp,a ->
       vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
 
-    saturateSlash : VPSlash -> NP -> VP = \sl,np ->
+    NPRec : Type = {
+      s : Case => Str ;
+      acc_clit, dat_clit : Str ;
+      a : Agr ;
+      isPron : Bool
+    } ;
+
+    saturateSlash : VPSlash -> NPRec -> VP = \sl,np ->
       let c : Case = sl.c2.c in
       case <np.isPron,c> of {
         <True,Acc> => addClitic (slashToVP sl) np.acc_clit (subjAccCliticAgr np.a) ;

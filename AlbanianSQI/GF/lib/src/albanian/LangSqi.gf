@@ -6,7 +6,8 @@ concrete LangSqi of Lang =
   GrammarSqi,
   LexiconSqi,
   ConstructionSqi,
-  DocumentationSqi
+  DocumentationSqi,
+  MarkupSqi - [stringMark]
   ** {
 
 flags

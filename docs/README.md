@@ -6,30 +6,33 @@ This directory separates **operational order**, **live compiler state**, **stabl
 
 1. [`ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`](ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md) — normative order from a broken snapshot back to compiler stability, then linguistic completion.
 2. [`CURRENT_REPAIR_STATE.md`](CURRENT_REPAIR_STATE.md) — latest reproducible GF/Wordbench facts and the current first independent blocker.
-3. [`ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`](ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md) — normative description of the finished Albanian RGL; **not** an implementation order.
-4. [`ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`](ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md) — authority, category preservation, inheritance, helper, constructor, and model-language policy.
-5. [`ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`](ALBANIAN_MODEL_LANGUAGE_COMPARISON.md) — bounded engineering comparison of the supplied model languages; never Albanian linguistic authority.
-6. [`ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`](ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md) — minimum compiler, structural, Global Scan, and linguistic regression gates.
-7. [`ALBANIAN_SYMBOL_STATUS_LEDGER.md`](ALBANIAN_SYMBOL_STATUS_LEDGER.md) — symbol/pattern maturity and current compiler/linguistic status.
-8. [`ALBANIAN_OPEN_QUESTIONS.md`](ALBANIAN_OPEN_QUESTIONS.md) — unresolved design questions after the current blocker is accounted for.
-9. [`ALBANIAN_DECISION_LOG.md`](ALBANIAN_DECISION_LOG.md) — chronological evidence and why earlier experiments were accepted, rejected, or superseded.
+3. [`ALBANIAN_NEXT_UPGRADE_20260922.md`](ALBANIAN_NEXT_UPGRADE_20260922.md) — normative scope and acceptance gates for the next overload/lock/API/Wordbench upgrade.
+4. [`ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`](ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md) — normative description of the finished Albanian RGL; **not** an implementation order.
+5. [`ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md`](ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md) — authority, category preservation, inheritance, helper, constructor, and model-language policy.
+6. [`ALBANIAN_MODEL_LANGUAGE_COMPARISON.md`](ALBANIAN_MODEL_LANGUAGE_COMPARISON.md) — bounded engineering comparison of the supplied model languages; never Albanian linguistic authority.
+7. [`ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md`](ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md) — minimum compiler, structural, Global Scan, and linguistic regression gates.
+8. [`ALBANIAN_SYMBOL_STATUS_LEDGER.md`](ALBANIAN_SYMBOL_STATUS_LEDGER.md) — symbol/pattern maturity and current compiler/linguistic status.
+9. [`ALBANIAN_OPEN_QUESTIONS.md`](ALBANIAN_OPEN_QUESTIONS.md) — unresolved design questions after the current blocker is accounted for.
+10. [`ALBANIAN_DECISION_LOG.md`](ALBANIAN_DECISION_LOG.md) — chronological evidence and why earlier experiments were accepted, rejected, or superseded.
 
 Use `ALBANIAN_EXTENDSQI_*` and `albanian_extend_specifics_lockfield_and_boundary.md` as subsystem references. They do **not** override the current recovery sequence or current compiler evidence.
 
 ## Current development phase
 
-FIX22C established the historical compiler-stable baseline `albanian-rgl-core-v0.1.0`. The later mega-update changed the source and the latest Global Scan no longer compiles the working tree. Therefore the current phase is:
+FIX22C remains the historical compiler-stable baseline. The 2026-09-22 source expands the public surface to 54 GF files and the latest Global Scan reaches all 49 language-folder modules, but GF 3.12 currently stops on a proven circular `ParadigmsSqi.mkA2` overload definition. The active phase is therefore:
 
 ```text
-syntax-integrity gate: clean through candidate (12)
-  -> GF 3.12 validation of explicit subjunctive morphology / structured Verb→VP boundary
-  -> complete 52-file compile census
-  -> restore/exceed FIX22C + public API facade gates
+source/environment integrity: T0 evidenced
+  -> harden ParadigmsSqi overload families (mkA2 first)
+  -> close current lock_NP / lock_VP / lock_VPSlash warnings
+  -> obtain 49/49 language-folder compile
+  -> compile the 5 public API facades for a full 54/54 gate
+  -> harden Wordbench root-cause/source-lock reporting
   -> linguistic scenarios/goldens
-  -> capability completion
+  -> capability completion / release certification
 ```
 
-Do not treat static cleanliness as compiler success. The active acceptance test is the exact-source GF 3.12 rerun, followed by the complete 52-file census.
+Do not treat static cleanliness, 49/49 language-folder compilation, or a zero-scenario run as full Albanian completion. The active compiler acceptance target is **54/54**, followed by reviewed behavioral evidence.
 
 ## Authority model
 
@@ -86,3 +89,11 @@ When a new Wordbench run changes the first independent blocker, update `CURRENT_
 ## Bundle integrity note
 
 Some older documents mention companion files such as helper registries, constructor matrices, stale-comment trackers, or extraction-coverage files that are **not present in this documentation bundle**. Those references are not active authority unless the named file is actually supplied for the same source snapshot. This bundle is self-sufficient through the documents listed above.
+
+## 2026-09-22 upgrade implementation candidate
+
+The next-upgrade source candidate is now assembled. See
+`ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md` for the implemented overload and
+VP/VPSlash boundary changes, the 54-target validator, the optional Wordbench
+hardening patch, and the explicit distinction between static PASS and pending
+GF 3.12 compiler acceptance.

@@ -33,29 +33,32 @@ Out of scope:
 
 ## Current Status Snapshot
 
-### Latest live facts — Global Scan `20260921_213424`
+### Latest live facts — Global Scan `20260922_123316`
 - FIX22C remains the last historical compiler-stable baseline for its exact source.
-- ALB-DEC-047 remains compiler-confirmed: no `GeneratePMCFG`, `CProj "cl"`, or nested `VP.v.Indicative` failure is present.
-- Wordbench included 47 targets: **45 PASS, 2 FAIL, 0 ERROR, 0 TIMEOUT**.
-- The three ALB-DEC-048 direct repairs now compile: `ExtendSqiRNP`, `ExtendSqiVPBridge`, and `LexiconSqi`; their former importer failures (`ExtendSqi`, `ExtraSqi`) also clear.
-- The only automatic-scan blocker is a `LangSqi` module-composition conflict caused by same-name internal helpers (`addPost`; with `baseVP` proactively identified as the next likely collision) between `ConstructionSqi` and the already-composed grammar/verb layer.
-- ALB-DEC-049 renames the Construction-only helpers to `constructionAddPost` and `constructionBaseVP`.
-- Static gate over the full current **52-file** census remains clean; `gf_morphosqi_lint.py`: **0 findings**.
-- Automatic Wordbench coverage is still only 47 targets, so five targets require discovery repair or explicit supplemental compilation.
-- Scenarios seen: 0.
+- The current snapshot contains **54 GF files**: 49 language-folder modules and 5 parent-directory API facades.
+- Wordbench discovered all 49 language-folder modules: **22 PASS, 27 FAIL, 0 ERROR, 0 TIMEOUT**.
+- The five API facades (`CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, `TrySqi`) were not included by automatic discovery.
+- Raw compiler stderr identifies `ParadigmsSqi.gf: circular definitions: mkA2` as the first proven independent blocker shared by the failed import chain.
+- Wordbench labels such as `Voc` and `Int` are currently unreliable first-error summaries; raw GF stderr is the stronger root-cause evidence.
+- The current run contains nine `missing lock field` warnings: `lock_NP` x2, `lock_VP` x6, `lock_VPSlash` x1.
+- Compendium evidence reaches T0; T8 aggregate compile fails; T1-T7 and T9-T11 are not assessed.
+- Scenarios seen: 0; linguistic certification is not established.
 
 ### Immediate unresolved questions
 
-**Q-LIVE-1 — Lang/All composition acceptance (P0).** Does the ALB-DEC-049 namespace isolation clear `LangSqi` and `AllSqi` and produce a green 47/47 automatic Global Scan? Closure requires the next GF 3.12 run.
+**Q-LIVE-1 — Paradigms overload closure (P0).** After replacing `mkA2` self-dispatch with a uniquely typed core helper, do `ParadigmsSqi` and its nearest importers compile? The same-pattern audit must cover `mkN2`, `mkV2`, `mkVV`, `mkVS`, `mkVQ`, `mkVA`, `mkV2V`, `mkV2S`, `mkV2Q`, `mkV2A`, and `mkV3` before the family is considered hardened.
 
-**Q-LIVE-2 — Complete compile census (P0).** The current target is 52 GF files. Closure requires recorded GF results for all 48 language-folder modules plus `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, and `TrySqi`; 47 automatic targets are insufficient.
+**Q-LIVE-2 — Structural lock closure (P0).** Which constructor/retyping paths in `AdverbSqi`, `PhraseSqi`, `RelativeSqi`, and `SentenceSqi` lose the native category locks? Closure requires removing the current `lock_NP`, `lock_VP`, and `lock_VPSlash` warnings without fabricated lock fields or category flattening.
 
+**Q-LIVE-3 — Complete compile census (P0).** Closure requires a recorded **54/54** GF compiler result: 49 language-folder modules plus all five public API facades. A 49/49 automatic Global Scan is not sufficient while facade discovery remains empty.
 
-**Q-LIVE-3 — Behavioral adequacy of explicit subjunctive tables (P1 after compiler recovery).** ALB-DEC-047 is compiler-confirmed, but compiler success does not validate Albanian forms. Confirm subjunctive paradigms, clitic placement, tense/anteriority interactions, and complement behavior against Albanian reference evidence and reviewed scenarios.
+**Q-LIVE-4 — Public API composition (P0/P1).** Do `SyntaxSqi`, `ConstructorsSqi`, `CombinatorsSqi`, `SymbolicSqi`, and `TrySqi` compile against the final rich categories and expose the intended API without bypassing Albanian morphology/agreement?
 
-**Q-LIVE-4 — VPS/VPI ownership after compiler recovery (P1).** Local companion ownership remains provisional until the complete compiler census and scenario evidence are green.
+**Q-LIVE-5 — Wordbench causality/evidence reporting (P1).** Can the harness extract the actual terminal GF diagnostic, classify importers as downstream where provenance is clear, and make summary/detail source-lock identity consistent?
 
-The older fix17/fix18 Comp/Imp/PMCFG questions below are retained as historical design context. They are **not the current priority order**.
+**Q-LIVE-6 — Linguistic validation (P1 after compiler gate).** Once 54/54 is green, establish reviewed Albanian scenarios/goldens for paradigms, case/agreement, verbal complementation, clitics, embedding, proper names, Markup, and public API use.
+
+The historical questions below remain architectural context. They are **not** the current priority order.
 
 ---
 
@@ -452,7 +455,13 @@ Recommended order for closing questions:
 
 ## Change Log for This File
 
+### 2026-09-22 synchronization
+- replaces the old 45/47 live snapshot with Wordbench run `20260922_123316`;
+- moves the first active blocker to `ParadigmsSqi.mkA2` circular overload dispatch;
+- raises the complete compiler census from historical 52 to current 54 files;
+- adds `CombinatorsSqi`/`MarkupSqi` public-surface implications, lock-field closure, and Wordbench evidence hardening to the live questions.
+
 ### Initial version
 - seeded from Albanian codedump
 - aligned with current `ExtendSqi` debugging history
-- aligned with latest run evidence showing AP/CN and existential structural issues as the main remaining risk
+- aligned with the then-current pre-FIX22C repair evidence showing AP/CN and existential structural issues as the main remaining risk

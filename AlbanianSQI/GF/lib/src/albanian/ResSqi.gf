@@ -88,6 +88,26 @@ param
   Tense = Pres | Past | Imperfect | Aorist ;
 
 oper
+  -- Shared verb-phrase representation.  CatSqi aliases VP/VPSlash to these
+  -- resource types so clause helpers preserve category shape instead of
+  -- coercing locked concrete-category records through an ad-hoc structural type.
+  VP : Type = {
+    indicative : Tense => Number => Person => Str ;
+    subjunctive : Number => Person => Str ;
+    imperative : Number => Str ;
+    participle : Str ;
+    pres_optative : Number => Person => Str ;
+    perf_optative : Number => Person => Str ;
+    pres_admirative : Number => Person => Str ;
+    imperf_admirative : Number => Person => Str ;
+    cl : Str ;
+    subjcl : Str ;
+    post : Agr => Str
+  } ;
+
+  VPSlash : Type = VP ** {c2 : Compl} ;
+
+oper
   Verb : Type = {
     Indicative       : Tense => Number => Person => Str ;
     Subjunctive      : Number => Person => Str ;

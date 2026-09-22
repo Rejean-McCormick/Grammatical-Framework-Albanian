@@ -83,7 +83,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     die_V                    = mkV "vdes" ;
     dig_V                    = mkV "gërmoj" ;
     dirty_A                  = mkA "pis" ;
-    distance_N3              = mkN3Lex (mkN "distancë") (mkPrep "nga" R.Ablat) (mkPrep "deri në" R.Acc) ;
+    distance_N3              = mkN3Lex (mkN "distancë") (mkPrepLex "nga" R.Ablat) (mkPrepLex "deri në" R.Acc) ;
     doctor_N                 = mkN "mjek" ;
     dog_N                    = mkN "qen" ;
     door_N                   = mkN "derë" ;
@@ -359,6 +359,9 @@ concrete LexiconSqi of Lexicon = CatSqi **
     young_A                  = mkA "ri" ;
 
   oper
+    mkPrepLex : Str -> R.Case -> Prep = \s,c ->
+      lin Prep {s = s ; c = c} ;
+
     mkN3Lex : N -> Prep -> Prep -> N3 = \n,p2,p3 ->
       lin N3 n ** {c2 = p2 ; c3 = p3} ;
 

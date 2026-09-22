@@ -23,32 +23,33 @@ The sequence here follows the GF Compendium rule that a non-compiling snapshot i
 
 ## 2. Current phase
 
-The FIX22C baseline is historical evidence that the core **did compile** before the later mega-update. The current post-update working snapshot is **not yet compiler-stable**, but the textual syntax-integrity layer is clean and the PMCFG repair has now reached the verbal-representation boundary.
+The current branch has moved beyond syntax-corruption and PMCFG representation recovery.
 
-Wordbench Global Scan run `20260921_201720` (GF 3.12), validating candidate (11), reported:
+Wordbench Global Scan `20260921_213424` (GF 3.12) reported:
 
 ```text
 files included: 47
-PASS:          27
-FAIL:          20
+PASS:          45
+FAIL:           2
 ERROR:          0
 TIMEOUT:        0
 scenarios:      0
 ```
 
-The run confirms that the clitic-specific repair from ALB-DEC-046 worked: the former `CProj "cl"` backend family disappeared. The dominant remaining PMCFG signature is instead a nested projection through `VP.v.Indicative ! Pres ! Sg ! P1`, reached through the old `subjunctiveFinite` implementation.
+This run reconfirms ALB-DEC-047 and confirms the three local ALB-DEC-048 fixes: `ExtendSqiRNP`, `ExtendSqiVPBridge`, `LexiconSqi`, `ExtendSqi`, and `ExtraSqi` now compile, and no `GeneratePMCFG` crash appears.
 
-Candidate (12) therefore changes the boundary rather than adding another surface-string workaround:
+The two remaining FAILs (`LangSqi`, `AllSqi`) share one root cause: GF cannot unify two exported internal helpers named `addPost` while composing `ConstructionSqi` with `GrammarSqi`/`VerbSqi`. A static namespace audit also identifies `baseVP` as a second same-name helper that would become a likely next collision once `addPost` is removed.
 
-1. `ResSqi.Verb` owns an explicit `Subjunctive : Number => Person => Str` table;
-2. generated/paradigm verb constructors populate that table when morphology is built;
-3. `VP`/`VPSlash` copy all currently represented verbal tables/forms at the lexical boundary;
-4. PMCFG-facing syntax no longer carries or projects through `VP.v`;
-5. syntax selects `vp.subjunctive`, but never infers mood from `vp.indicative` strings.
+ALB-DEC-049 therefore isolates the Construction-only helper namespace by renaming:
 
-The same candidate fixes the independent `LexiconSqi.distance_N3` overload failure by making preposition government explicit.
+```text
+baseVP  -> constructionBaseVP
+addPost -> constructionAddPost
+```
 
-The current phase remains **G3 root-cause compiler/PMCFG recovery**. Syntax integrity is a regression gate, not the active first blocker.
+and updating only `ConstructionSqi` consumers.
+
+Therefore the active frontier remains **G3 root-cause compiler repair**, now reduced to a module-composition namespace issue. The next goal is a green automatic 47-target run, followed immediately by the five missing targets needed for the complete 52-file census.
 
 ---
 
@@ -84,7 +85,7 @@ These forms are syntax facts, not Albanian linguistic decisions.
 
 ### 4.2 Current syntax evidence
 
-Candidate (12) has been scanned with the Wordbench static-scanning service over the complete current source census of **52 `.gf` files**:
+The current ALB-DEC-049 working source has been scanned with the Wordbench static-scanning service over the complete current source census of **52 `.gf` files**:
 
 - static findings: `0`;
 - scan exceptions: `0`;
@@ -115,9 +116,7 @@ For every `[] => ...` finding:
 
 ### 4.4 Current G1 state
 
-The former `ResSqi` parse blocker and the mass notation-corruption family remain repaired through candidate (12). G1 is therefore a **regression gate**, not the active repair frontier.
-
-The next local GF 3.12 validation must confirm that no parse/notation failure reappears while testing the Verb→VP PMCFG repair derived from run `20260921_201720`.
+The former `ResSqi` parse blocker and mass notation-corruption family remain repaired. G1 is a **regression gate**, not the active repair frontier. Run `20260921_213424` additionally reconfirms that the Verb→VP PMCFG repair does not reintroduce syntax failure.
 
 **G1 PASS:** the current Albanian source contains no known malformed-notation blocker and the local GF run reaches the next independent compiler layer.
 
@@ -146,7 +145,7 @@ The campaign must include all Albanian language sources:
 - `GF/lib/src/SymbolicSqi.gf`;
 - `GF/lib/src/TrySqi.gf`.
 
-The latest compiler-evidence run (candidate 11, `20260921_201720`) still included only 47 files. It therefore missed **five** current targets: `ExtendSqiVPS.gf` plus the four parent-directory facades. Until Wordbench discovers all five automatically, compile them explicitly and record the automatic/supplemental split.
+The latest compiler-evidence run (`20260921_213424`) still included only 47 files. It therefore missed **five** current targets: `ExtendSqiVPS.gf` plus the four parent-directory facades. Until Wordbench discovers all five automatically, compile them explicitly and record the automatic/supplemental split.
 
 ### Failure classification
 

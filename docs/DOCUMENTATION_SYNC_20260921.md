@@ -1,6 +1,6 @@
 # Albanian documentation synchronization — 2026-09-21
 
-This note records the documentation synchronization performed across the post-FIX22C recovery campaign, including the GF 3.12 Global Scan evidence through run `20260921_201720` and candidate (12).
+This note records the documentation synchronization performed across the post-FIX22C recovery campaign, including GF 3.12 Global Scan evidence through run `20260921_212128` and the ALB-DEC-048 cleanup.
 
 ## Why the documentation changed
 
@@ -54,7 +54,7 @@ ALB-DEC-046 remains accepted for the clitic boundary: `cl : Str` and `subjcl : S
 
 ## Independent same-run repair
 
-`LexiconSqi.distance_N3` now selects the typed two-argument `mkPrep` overload with explicit Albanian case government (`nga` + Ablative, `deri në` + Accusative), addressing the remaining independent overload failure from run `20260921_201720`.
+The candidate after run `20260921_201720` attempted the typed two-argument `mkPrep` overload for `LexiconSqi.distance_N3`. Run `20260921_212128` proved that this was insufficient: GF 3.12 still could not resolve `ParadigmsSqi.mkPrep` for `Str` + aliased `R.Case`. ALB-DEC-048 therefore constructs `Prep` directly through a local typed helper while preserving `nga` + Ablative and `deri në` + Accusative government.
 
 ## VPS/VPI ownership
 
@@ -73,3 +73,30 @@ Candidate (12) has passed static preflight only:
 During this preflight, 51 accidental extra record openings from the bulk `Subjunctive` insertion were detected and repaired. `gf_morphosqi_lint.py` was strengthened so this structural class is now a permanent local guard rather than relying on the lexical scanner.
 
 It is **not** compiler-validated until an exact-source GF 3.12 Global Scan plus the five supplemental targets reports the result.
+
+
+## Run 20260921_212128 — ALB-DEC-047 confirmed
+
+The GF 3.12 Global Scan improved to **40 PASS / 7 FAIL** over 47 automatically discovered targets. Crucially, no `GeneratePMCFG` crash remains; the explicit `Verb.Subjunctive` and structured Verb→VP boundary are therefore compiler-confirmed for the scanned source.
+
+The seven FAILs reduce to three local source defects: missing `Prelude` visibility in `ExtendSqiRNP`, missing `Prelude` visibility in `ExtendSqiVPBridge`, and `LexiconSqi.distance_N3` overload resolution. ALB-DEC-048 fixes these without reopening the verbal architecture.
+
+Documentation synchronized in this pass: `CURRENT_REPAIR_STATE.md`, `ALBANIAN_DECISION_LOG.md`, `ALBANIAN_OPEN_QUESTIONS.md`, `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`, and `status/ALBANIAN_IMPLEMENTATION_STATUS.md`.
+
+## Run 20260921_213424 — ALB-DEC-048 direct fixes confirmed
+
+The GF 3.12 Global Scan now reports **45 PASS / 2 FAIL** over the same 47 automatically discovered targets.
+
+Confirmed by this run:
+
+- `ExtendSqiRNP`: PASS;
+- `ExtendSqiVPBridge`: PASS;
+- `LexiconSqi`: PASS;
+- `ExtendSqi`: PASS;
+- `ExtraSqi`: PASS;
+- no `GeneratePMCFG` failure.
+
+The remaining `LangSqi` and `AllSqi` failures share a single module-composition diagnostic: `ConstructionSqi.addPost` collides with an already-exported `addPost` from the grammar/verb layer. A namespace audit also finds `baseVP` duplicated across the same boundary. ALB-DEC-049 therefore renames both Construction-only helpers (`constructionAddPost`, `constructionBaseVP`) and changes no linguistic representation.
+
+The next compiler gate is 47/47 automatic targets, followed by the five omitted targets required for the complete 52-file census.
+

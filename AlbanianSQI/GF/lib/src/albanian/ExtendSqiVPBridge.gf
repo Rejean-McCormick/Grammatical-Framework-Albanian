@@ -1,6 +1,6 @@
 -- Bridges between rich Albanian VP/VPSlash values and extension categories.
 resource ExtendSqiVPBridge =
-  open GrammarSqi, CatSqi, ClauseSqiRes,
+  open Prelude, GrammarSqi, CatSqi, ClauseSqiRes,
        (R = ResSqi), (P = ParamX), (PS = ParadigmsSqi),
        ExtendSqiHelpers, (NS = NounSqi), (AS = AdverbSqi), (I = IrregSqi) in {
 

@@ -33,32 +33,29 @@ Out of scope:
 
 ## Current Status Snapshot
 
-### Latest live facts — Global Scan `20260921_201720`
-- FIX22C remains the last known compiler-stable historical baseline.
-- Candidate (11) was validated with GF 3.12 in Wordbench Diagnostic / Global Scan.
-- Wordbench included 47 targets: **27 PASS, 20 FAIL, 0 ERROR, 0 TIMEOUT**.
-- ALB-DEC-046 is empirically supported for the clitic boundary: the former `CProj "cl"` PMCFG family disappeared.
-- The dominant remaining PMCFG family descends through `CProj "Indicative" (CProj "v" ...)`, reached by the old `subjunctiveFinite` path that inferred subjunctive morphology from present-indicative surface strings.
-- One independent overload failure remains in the run evidence: `LexiconSqi.distance_N3` calls an ambiguous one-argument `mkPrep`.
-- Candidate (12) moves finite subjunctive morphology into `ResSqi.Verb.Subjunctive`, copies the full currently represented verbal form inventory into `VP`/`VPSlash`, removes `VP.v`, and makes `subjunctiveFinite` a selector only.
-- Candidate (12) also gives `distance_N3` explicit case-governed two-argument prepositions.
-- Candidate (12) static gate over the full current **52-file** source census: **0 findings, 0 scan exceptions**; `gf_morphosqi_lint.py`: **0 findings**.
-- The current census is 48 language-folder modules plus four parent API facades. The latest automatic Wordbench run covered only 47, so five targets still require automatic-discovery support or explicit supplemental compilation.
+### Latest live facts — Global Scan `20260921_213424`
+- FIX22C remains the last historical compiler-stable baseline for its exact source.
+- ALB-DEC-047 remains compiler-confirmed: no `GeneratePMCFG`, `CProj "cl"`, or nested `VP.v.Indicative` failure is present.
+- Wordbench included 47 targets: **45 PASS, 2 FAIL, 0 ERROR, 0 TIMEOUT**.
+- The three ALB-DEC-048 direct repairs now compile: `ExtendSqiRNP`, `ExtendSqiVPBridge`, and `LexiconSqi`; their former importer failures (`ExtendSqi`, `ExtraSqi`) also clear.
+- The only automatic-scan blocker is a `LangSqi` module-composition conflict caused by same-name internal helpers (`addPost`; with `baseVP` proactively identified as the next likely collision) between `ConstructionSqi` and the already-composed grammar/verb layer.
+- ALB-DEC-049 renames the Construction-only helpers to `constructionAddPost` and `constructionBaseVP`.
+- Static gate over the full current **52-file** census remains clean; `gf_morphosqi_lint.py`: **0 findings**.
+- Automatic Wordbench coverage is still only 47 targets, so five targets require discovery repair or explicit supplemental compilation.
 - Scenarios seen: 0.
 
 ### Immediate unresolved questions
 
-**Q-LIVE-1 — Explicit subjunctive / Verb→VP PMCFG acceptance (P0).** Does candidate (12) eliminate the repeated `CProj "Indicative" (CProj "v" ...)` GeneratePMCFG crash without introducing missing-field/type regressions in `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, or their importers? Closure requires a GF 3.12 rerun on the exact candidate.
+**Q-LIVE-1 — Lang/All composition acceptance (P0).** Does the ALB-DEC-049 namespace isolation clear `LangSqi` and `AllSqi` and produce a green 47/47 automatic Global Scan? Closure requires the next GF 3.12 run.
 
-**Q-LIVE-2 — Lexicon typed-government closure (P0).** Does the explicit `mkPrep "nga" R.Ablat` / `mkPrep "deri në" R.Acc` repair clear `distance_N3` and its importers? Closure requires compilation; static overload readability alone is insufficient.
+**Q-LIVE-2 — Complete compile census (P0).** The current target is 52 GF files. Closure requires recorded GF results for all 48 language-folder modules plus `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, and `TrySqi`; 47 automatic targets are insufficient.
 
-**Q-LIVE-3 — Complete compile census (P0).** The current target is 52 GF files. Closure requires recorded GF results for all 48 language-folder modules plus `SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, and `TrySqi`; automatic Global Scan coverage must not be mistaken for the full census when it includes only 47.
 
-**Q-LIVE-4 — Behavioral adequacy of generated subjunctive tables (P1 after compiler recovery).** The candidate preserves the existing Albanian derivation rules but moves them to morphology construction time. After compilation is green, confirm those rules against Albanian reference evidence and reviewed scenarios; compiler acceptance alone does not establish linguistic correctness.
+**Q-LIVE-3 — Behavioral adequacy of explicit subjunctive tables (P1 after compiler recovery).** ALB-DEC-047 is compiler-confirmed, but compiler success does not validate Albanian forms. Confirm subjunctive paradigms, clitic placement, tense/anteriority interactions, and complement behavior against Albanian reference evidence and reviewed scenarios.
 
-**Q-LIVE-5 — VPS/VPI ownership after compiler recovery (P1).** Local companion ownership is provisional. Closure requires clean GF/PMCFG validation plus Albanian scenario evidence, then a family-wide architecture decision consistent with the current lincats and `ExtendFunctor` coverage.
+**Q-LIVE-4 — VPS/VPI ownership after compiler recovery (P1).** Local companion ownership remains provisional until the complete compiler census and scenario evidence are green.
 
-The older fix17/fix18 Comp/Imp/PMCFG questions below are retained as historical design context. They are **not the current priority order** and must not override current compiler evidence.
+The older fix17/fix18 Comp/Imp/PMCFG questions below are retained as historical design context. They are **not the current priority order**.
 
 ---
 

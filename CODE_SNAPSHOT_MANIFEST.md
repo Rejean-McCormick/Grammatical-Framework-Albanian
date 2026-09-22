@@ -1,10 +1,24 @@
 # Code snapshot
 
-- generated_at: 2026-09-21T17:15:33.652092
+- generated_at: 2026-09-21T17:42:29
 - repository: Grammatical_Framework-Albanian
 - archive_layout: repository-relative paths
+- source_snapshot: `Code_snapshot_Grammatical_Framework-Albanian(20260921-213419).zip`
+- latest_gf_evidence: Wordbench run `20260921_213424` — 45 PASS / 2 FAIL over 47 automatic targets
+- current_patch: ALB-DEC-049 (`ConstructionSqi` internal helper namespace isolation)
+- full_expected_gf_census: 52 (`48` language-folder + `4` parent facades)
+
+## Local preflight
+
+- `gf_morphosqi_lint.py`: 0 findings
+- malformed single-backslash table abstractions: 0
+- `[] =>` Str-pattern hazards: 0
+- top-level `oper` collisions across `LangSqi` composition inputs after patch: 0
+- UTF-8 failures: 0
+- broken local documentation links: 0
 
 ## Snapshot files
+- `CODE_SNAPSHOT_MANIFEST.md` (5936 bytes)
 - `.gitignore` (591 bytes)
 - `.smartignore` (218 bytes)
 - `AlbanianSQI/GF/lib/src/ConstructorsSqi.gf` (243 bytes)
@@ -18,7 +32,7 @@
 - `AlbanianSQI/GF/lib/src/albanian/CatSqi.gf` (3373 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf` (4430 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf` (2427 bytes)
-- `AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf` (8074 bytes)
+- `AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf` (8338 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf` (8837 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqi.gf` (15505 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf` (808 bytes)
@@ -26,9 +40,9 @@
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf` (1388 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf` (2073 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqiLexicon.gf` (1301 bytes)
-- `AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf` (2638 bytes)
+- `AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf` (2647 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf` (6064 bytes)
-- `AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf` (2598 bytes)
+- `AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf` (2607 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf` (4453 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtraSqi.gf` (3513 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/ExtraSqiAbs.gf` (249 bytes)
@@ -37,7 +51,7 @@
 - `AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf` (1870 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/IrregSqiAbs.gf` (324 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/LangSqi.gf` (314 bytes)
-- `AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf` (17302 bytes)
+- `AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf` (17390 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf` (1074630 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf` (751 bytes)
 - `AlbanianSQI/GF/lib/src/albanian/NounSqi.gf` (4890 bytes)
@@ -69,26 +83,25 @@
 - `Albanian_ref/Lesson_50.html` (235194 bytes)
 - `Albanian_ref/Tosk_Dictionary_Master.html` (175423 bytes)
 - `Albanian_ref/Tosk_Glossary_Master.html` (216782 bytes)
-- `CODE_SNAPSHOT_MANIFEST.md` (5315 bytes)
 - `README.md` (34 bytes)
 - `detect_morphosqi_table_inference.py` (13934 bytes)
-- `docs/ALBANIAN_DECISION_LOG.md` (71056 bytes)
+- `docs/ALBANIAN_DECISION_LOG.md` (75854 bytes)
 - `docs/ALBANIAN_EXTENDSQI_FINAL_TARGET.md` (11683 bytes)
 - `docs/ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md` (29416 bytes)
 - `docs/ALBANIAN_FUTURE_EXTENDSQI_STRUCTURE.md` (23985 bytes)
 - `docs/ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md` (35395 bytes)
-- `docs/ALBANIAN_MODEL_LANGUAGE_COMPARISON.md` (6510 bytes)
-- `docs/ALBANIAN_OPEN_QUESTIONS.md` (19547 bytes)
+- `docs/ALBANIAN_MODEL_LANGUAGE_COMPARISON.md` (7745 bytes)
+- `docs/ALBANIAN_OPEN_QUESTIONS.md` (18581 bytes)
 - `docs/ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md` (48069 bytes)
-- `docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` (12045 bytes)
+- `docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` (11665 bytes)
 - `docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md` (87254 bytes)
-- `docs/ALBANIAN_SYMBOL_STATUS_LEDGER.md` (41560 bytes)
-- `docs/CURRENT_REPAIR_STATE.md` (8633 bytes)
-- `docs/DOCUMENTATION_SYNC_20260921.md` (4548 bytes)
+- `docs/ALBANIAN_SYMBOL_STATUS_LEDGER.md` (41320 bytes)
+- `docs/CURRENT_REPAIR_STATE.md` (6078 bytes)
+- `docs/DOCUMENTATION_SYNC_20260921.md` (6431 bytes)
 - `docs/README.md` (5396 bytes)
 - `docs/albanian_extend_specifics_lockfield_and_boundary.md` (23556 bytes)
 - `docs/status/ALBANIAN_CORE_V0.1.0.md` (5738 bytes)
-- `docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md` (20658 bytes)
+- `docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md` (20326 bytes)
 - `fix_gf_literal_newlines.py` (3847 bytes)
 - `gf_morphosqi_lint.py` (17726 bytes)
 - `gf_safe_fix.ps1` (9173 bytes)

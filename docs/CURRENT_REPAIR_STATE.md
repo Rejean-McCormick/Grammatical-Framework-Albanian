@@ -1,211 +1,173 @@
-# CURRENT_REPAIR_STATE
+# Albanian current repair state
 
-Status: **live repair state — update after every evidence-changing Wordbench run**  
-Last evidence update: **2026-09-21**  
-Current phase: **PMCFG/root-cause recovery at the Verb → VP morphology boundary**  
-Operational sequence: `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`
+**Updated:** 2026-09-21  
+**Compiler:** GF 3.12  
+**Validation tool:** GF Wordbench Diagnostic / Global Scan
 
-This file records the latest reproducible working-state facts. FIX22C remains the last historical compiler-stable baseline for its exact earlier snapshot; later runs supersede it only as evidence about the current source.
+## 1. Evidence lock
 
-## 1. Source / tool lock
+- current source snapshot supplied by the maintainer: `Code_snapshot_Grammatical_Framework-Albanian(20260921-213419).zip`
+- latest Wordbench run: `20260921_213424`
+- GF executable recorded by the run: `C:/mycode/Grammatical_Framework/gf-3.12-windows/gf.exe`
+- RGL root recorded by the run: `C:/mycode/Grammatical_Framework/gf-rgl`
+- historical compiler-stable baseline: FIX22C / `albanian-rgl-core-v0.1.0`
 
-- GF: `3.12`
-- GF executable in latest Wordbench artifact: `C:/mycode/Grammatical_Framework/gf-3.12-windows/gf.exe`
-- RGL root in latest Wordbench artifact: `C:/mycode/Grammatical_Framework/gf-rgl`
-- historical last-known compiler-stable Albanian baseline: **FIX22C / `albanian-rgl-core-v0.1.0`**
-- latest locally validated source before the current patch: **candidate (11)**
-- latest Wordbench evidence: run `20260921_201720`, mode `diagnostic`, Global Scan
-- current working source after that evidence: **candidate (12), pending local GF validation**
+Compiler claims below apply only to this source/run combination.
 
-If the source snapshot, GF version, RGL revision, or search paths change, compiler claims must be rerun.
-
-## 2. Latest Wordbench Global Scan
-
-Run: `20260921_201720`  
-Mode: `diagnostic` / Global Scan  
-GF: `3.12`  
-Scenarios: `0`
+## 2. Latest Global Scan
 
 ```text
 Files included:       47
-Files OK:             27
-Files failed:         20
+Files OK:             45
+Files failed:          2
 Files errored:         0
 Files skipped:         0
-Direct failures:      19
-Downstream failures:   0
-Ambiguous failures:    1
+Scenarios seen:        0
+GF:                  3.12
 ```
 
-This run confirms that ALB-DEC-046 removed the former `CProj ... "cl"` PMCFG family: the backend now advances beyond that representation. The dominant remaining crash instead descends through the nested lexical-verb projection:
+The automatic scan is now **45/47 green**. The two reported failures are:
+
+- `LangSqi.gf`
+- `AllSqi.gf`
+
+They are not two independent linguistic/compiler defects. Both fail while composing `LangSqi`, with the same GF diagnostic:
 
 ```text
-CProj "Indicative" (CProj "v" ...)
-  -> Pres
-  -> Sg
-  -> P1
+LangSqi.gf:
+  cannot unify the information
+    oper addPost = ClauseSqiRes.appendVP ;
+  in module ConstructionSqi with
+    oper addPost = \vp,x -> ...
+  in module VerbSqi
 ```
 
-The crash is reproduced at `ComplVV` and then by consumers such as `GenericCl`, `UttVP`, `QuestQVP`, `RelVP`, and `EmbedVP`. The common source is the old `subjunctiveFinite` strategy, which reconstructs the Albanian subjunctive in syntax by inspecting present-indicative surface strings.
+All 45 other automatically discovered modules compile, including:
 
-The automatic scan still does **not** represent the complete source census. The language folder contains 48 Albanian `.gf` modules while Wordbench included 47. The four parent-directory API facades also require supplemental compilation:
+- `ConstructionSqi`
+- `LexiconSqi`
+- `ExtendSqiRNP`
+- `ExtendSqiVPBridge`
+- `ExtendSqi`
+- `ExtraSqi`
+- the full verbal/morphological core.
+
+Therefore ALB-DEC-048's three repairs are compiler-confirmed individually. The remaining automatic-scan blocker is a **module-composition namespace collision**, not a PMCFG or Albanian morphology regression.
+
+## 3. PMCFG architecture status
+
+ALB-DEC-047 remains compiler-confirmed.
+
+Across runs `20260921_212128` and `20260921_213424`:
+
+- no `GeneratePMCFG` crash remains;
+- no `CProj "cl"` trace remains;
+- no `CProj "Indicative" (CProj "v" ...)` trace remains;
+- `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, `SentenceSqi`,
+  `QuestionSqi`, `RelativeSqi`, `IdiomSqi`, and `ConstructionSqi` compile.
+
+Normative representation invariant:
 
 ```text
-SyntaxSqi.gf
-ConstructorsSqi.gf
-SymbolicSqi.gf
-TrySqi.gf
+morphology owns mood/form distinctions
+→ VP/VPSlash carry structured tables needed by syntax
+→ syntax selects forms
+→ syntax does not infer grammatical distinctions from realized strings
 ```
 
-Therefore the complete current validation target remains **52 GF files**.
+Do not reopen this architecture unless new compiler or linguistic evidence points back to it.
 
-## 3. Current independent failure families from candidate (11)
+## 4. Current direct repair — ALB-DEC-049
 
-### 3.1 GeneratePMCFG / late subjunctive reconstruction
+`ConstructionSqi` declared local helpers named `baseVP` and `addPost`.
+`VerbSqi`, already present through `GrammarSqi`, exports helpers with the same names.
 
-The old representation was:
-
-```gf
-VP = {
-  v : Verb ;
-  cl : Str ;
-  subjcl : Str ;
-  post : Agr => Str
-} ;
-```
-
-and embedded/subjunctive realization eventually called:
-
-```gf
-subjunctiveFinite vp.v a
-```
-
-`subjunctiveFinite` projected `vp.v.Indicative ! Pres ! Sg ! P1` and then performed `case` analysis on that surface string to infer 2sg/3sg subjunctive forms. Run `20260921_201720` proves that this is too late in the representation: GF 3.12 PMCFG generation crashes while descending that nested projection.
-
-Candidate (12) moves the decision to the morphology boundary:
-
-```gf
-Verb = {
-  Indicative  : Tense => Number => Person => Str ;
-  Subjunctive : Number => Person => Str ;
-  ...
-} ;
-```
-
-All existing generated/paradigm `Verb` records now populate `Subjunctive` when the verb is built. The current productive/irregular derivation rules are preserved, but they are evaluated in morphology rather than in PMCFG-facing syntax.
-
-`VP`/`VPSlash` no longer retain `v : Verb`. They copy the structured morphosyntactic tables required downstream:
-
-```gf
-indicative        : Tense => Number => Person => Str ;
-subjunctive       : Number => Person => Str ;
-imperative        : Number => Str ;
-participle        : Str ;
-pres_optative     : Number => Person => Str ;
-perf_optative     : Number => Person => Str ;
-pres_admirative   : Number => Person => Str ;
-imperf_admirative : Number => Person => Str ;
-cl, subjcl        : Str ;
-post              : Agr => Str ;
-```
-
-This is **not** a flatten-to-`Str` workaround: all currently represented verbal distinctions remain structured. It removes only the nested `VP -> Verb -> Indicative` traversal and the late string-based mood inference.
-
-`subjunctiveFinite` remains only as a compatibility selector over `Verb.Subjunctive`; it no longer reconstructs morphology or performs `case Str`.
-
-### 3.2 Independent Lexicon overload failure
-
-The one ambiguous failure in run `20260921_201720` is `LexiconSqi.distance_N3`:
+`addPost` is the first collision GF reports when `LangSqi` merges:
 
 ```text
-no overload instance of ParadigmsSqi.mkPrep
-with value type Prep
-for argument list Str
+GrammarSqi,
+LexiconSqi,
+ConstructionSqi,
+DocumentationSqi
 ```
 
-Candidate (12) makes government explicit:
-
-```gf
-mkPrep "nga" R.Ablat
-mkPrep "deri në" R.Acc
-```
-
-and opens `ResSqi` under alias `R`. This both resolves overload selection and preserves typed case government.
-
-## 4. Status of ALB-DEC-045 / 046
-
-- **ALB-DEC-045:** retained for the useful narrowing `cl : Str`; its claim that this alone was sufficient was already superseded.
-- **ALB-DEC-046:** **confirmed for its stated clitic problem**. Candidate (11) removed the `CProj "cl"` crash family. `subjcl : Str` remains because it represents a grammatical clitic/future-subjunctive surface decision made when the object is introduced.
-- **ALB-DEC-047:** new current decision. Subjunctive morphology is explicit at `Verb` construction and copied into `VP`; syntax may select it but may not infer it from indicative strings.
-
-## 5. Syntax-integrity / preflight status for candidate (12)
-
-The Wordbench static-scanning service was run locally over all **52 `.gf` files** in the snapshot:
+The current working source therefore renames the Construction-only helpers:
 
 ```text
-files scanned: 52
-findings:       0
-scan errors:    0
+baseVP  → constructionBaseVP
+addPost → constructionAddPost
 ```
 
-`gf_morphosqi_lint.py` reports:
+and updates all local uses in `ConstructionSqi`.
+
+The rename is deliberately broader than the first emitted error: a static namespace audit shows that after these two renames there are no remaining top-level `oper` name collisions between `ConstructionSqi` and the modules already composed into `GrammarSqi`.
+
+This is a namespace repair only. It does not change Albanian surface realization or category structure.
+
+## 5. Static/source preflight
+
+Current working source after ALB-DEC-049:
+
+- `.gf` files in complete current census: **52**
+- malformed single-backslash table abstractions: none known
+- `[] =>` used as a `Str` pattern: none known
+- `gf_morphosqi_lint.py`: **0 findings**
+- duplicated Construction-vs-Grammar top-level helper names after the rename: **0**
+
+Static checks are not a substitute for GF compiler acceptance.
+
+## 6. Complete compiler census still required
+
+The language folder contains 48 `.gf` files, but Wordbench Global Scan currently discovers only 47. It still omits:
 
 ```text
-findings: 0
+AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf
 ```
 
-The candidate-(12) preflight also detected and repaired 51 malformed extra record openings introduced while bulk-populating `Subjunctive` in legacy `lin V` blocks. The linter now checks whole-file delimiter balance and the ALB-DEC-047 `lin V` contract. Final structural census:
+The four public facades in the parent `src` directory are also outside the automatic 47-target scan:
 
 ```text
-lin V blocks in MorphoSqi: 135
-missing Indicative/Subjunctive/Imperative fields: 0
-whole-file brace delta: 0
-whole-file parenthesis delta: 0
+AlbanianSQI/GF/lib/src/SyntaxSqi.gf
+AlbanianSQI/GF/lib/src/ConstructorsSqi.gf
+AlbanianSQI/GF/lib/src/SymbolicSqi.gf
+AlbanianSQI/GF/lib/src/TrySqi.gf
 ```
 
-The separate inference detector still reports heuristic candidates in generated morphology. They are **not** treated as compiler defects and are not changed without GF or linguistic evidence.
+Required complete compiler census: **52 GF files**.
 
-The following corruption families remain absent:
+A green `47/47` automatic scan is necessary but not sufficient; the five omitted targets must also be compiled and recorded.
 
-```text
-single-backslash table abstraction (\x =>): 0
-[] used as a case-pattern:                   0
-teWithClitic definition/use:                  0
-VP.v field / nested VP.v.Indicative access:  0
-```
+## 7. Current work order
 
-## 6. Current work order
+1. rerun GF 3.12 after ALB-DEC-049 and confirm `LangSqi` / `AllSqi` clear;
+2. establish a green **47/47** automatic Global Scan;
+3. compile the five omitted targets explicitly (or fix Wordbench discovery) to establish **52/52**;
+4. only after the 52-file compiler gate is green, run Albanian behavioral scenarios/goldens;
+5. then resume capability/completion expansion.
 
-1. validate candidate (12) with GF 3.12 Global Scan;
-2. verify that the `CProj "Indicative" (CProj "v" ...)` family disappears;
-3. classify any newly exposed compiler errors by independent root cause;
-4. continue until all 48 language-folder modules compile;
-5. compile the four parent API facades;
-6. restore/exceed the historical FIX22C compiler gate;
-7. only then run Albanian behavioral scenarios/goldens.
+Do not treat importer failures as independent root causes when stderr identifies a shared dependency or merge conflict.
 
-Do not reintroduce late string inspection, do not flatten rich categories merely to advance PMCFG, and do not count importer failures as independent bugs when they share the same first failing declaration.
+## 8. Historical progression
 
-## 7. Current status of earlier repair topics
-
-| Topic | Current meaning |
+| Snapshot/run | Evidence |
 |---|---|
-| FIX22C | historical compiler-stable baseline |
-| syntax corruption (`[] =>`, `\x =>`) | repaired; static gate clean |
-| candidate (10) | 24 PASS / 23 FAIL; proved `cl : Str` alone was insufficient |
-| candidate (11) | 27 PASS / 20 FAIL; confirmed `subjcl` removed `CProj "cl"`; exposed nested `VP.v.Indicative` as next root cause |
-| candidate (12) | explicit `Verb.Subjunctive` + structured Verb→VP boundary; pending local GF validation |
-| `subjunctiveFinite` | compatibility selector only; no string inference |
-| VPS/VPI/VPS2/VPI2 | local companion ownership remains provisional until clean GF/PMCFG validation |
-| linguistic scenarios | still blocked until compiler gate is green |
+| FIX22C | historical compiler-stable core baseline |
+| early post-mega scan | 5 PASS / 42 FAIL; syntax corruption/root parse blocker |
+| candidate (9/10 era) | syntax repaired; type/PMCFG defects exposed |
+| run `20260921_201720` | 27 PASS / 20 FAIL; nested `VP.v.Indicative` root identified |
+| ALB-DEC-047 | explicit `Verb.Subjunctive` and structured Verb→VP boundary |
+| run `20260921_212128` | 40 PASS / 7 FAIL; no PMCFG crash; ALB-DEC-047 confirmed |
+| ALB-DEC-048 | Prelude visibility + typed `distance_N3` prepositions |
+| run `20260921_213424` | **45 PASS / 2 FAIL; ALB-DEC-048 fixes compile; final blocker is `LangSqi` helper-name collision** |
+| current ALB-DEC-049 working source | Construction helper namespace isolated; pending GF rerun |
 
-## 8. Documentation synchronization rule
+## 9. Documentation synchronization rule
 
-After each evidence-changing run update, at minimum:
+After each evidence-changing run update, update at minimum:
 
 - this file;
-- `ALBANIAN_DECISION_LOG.md` when reasoning is accepted/rejected/superseded;
-- `ALBANIAN_SYMBOL_STATUS_LEDGER.md` when a public symbol contract changes;
-- `ALBANIAN_OPEN_QUESTIONS.md` when priorities change;
-- `ALBANIAN_MODEL_LANGUAGE_COMPARISON.md` when model evidence changes the engineering recommendation;
-- `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md` only if the operational method itself changes.
+- `ALBANIAN_DECISION_LOG.md`;
+- `ALBANIAN_OPEN_QUESTIONS.md`;
+- `status/ALBANIAN_IMPLEMENTATION_STATUS.md`;
+- `DOCUMENTATION_SYNC_20260921.md`;
+- symbol/test ledgers when their specific evidence changes.

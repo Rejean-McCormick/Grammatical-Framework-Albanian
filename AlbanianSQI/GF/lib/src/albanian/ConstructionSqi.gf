@@ -15,8 +15,8 @@ concrete ConstructionSqi of Construction = CatSqi **
       s=\\_=>w; acc_clit=[]; dat_clit=[]; a=agrgP3 g n; isPron=False
     } ;
 
-    baseVP : Verb -> VP = emptyVP ;
-    addPost : VP -> (Agr => Str) -> VP = appendVP ;
+    constructionBaseVP : Verb -> VP = emptyVP ;
+    constructionAddPost : VP -> (Agr => Str) -> VP = appendVP ;
 
     mkPred : Str -> Agr -> VP -> Cl = \subj,a,vp -> lin Cl {
       s=\\t,ant,pol =>mkClause subj a vp t ant pol
@@ -51,11 +51,11 @@ concrete ConstructionSqi of Construction = CatSqi **
     languageCN lang = mkNConst Fem ("gjuhë" ++ lang.s) ;
     languageNP lang = mkNPConst Fem Sg ("gjuha" ++ lang.s) ;
 
-    has_age_VP c = addPost (baseVP (lin Verb I.kam_V)) (\\_=>c.s ++ "vjeç") ;
+    has_age_VP c = constructionAddPost (constructionBaseVP (lin Verb I.kam_V)) (\\_=>c.s ++ "vjeç") ;
 
     have_name_Cl np name = lin Cl {
       s = \\t,ant,pol =>
-        np.s!Nom ++ realizeVP (baseVP (lin Verb (P.mkV "quhem"))) t ant pol np.a ++ name.s!Nom
+        np.s!Nom ++ realizeVP (constructionBaseVP (lin Verb (P.mkV "quhem"))) t ant pol np.a ++ name.s!Nom
     } ;
 
     what_name_QCl np = {
@@ -64,31 +64,31 @@ concrete ConstructionSqi of Construction = CatSqi **
 
     how_old_QCl np = {
       s=\\t,a,p=>"sa" ++ "vjeç" ++
-        realizeVP (baseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
+        realizeVP (constructionBaseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
     } ;
 
     how_far_QCl np = {
       s=\\t,a,p=>"sa" ++ "larg" ++
-        realizeVP (baseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
+        realizeVP (constructionBaseVP (lin Verb I.jam_V)) t a p np.a ++ np.s!Nom
     } ;
 
     where_go_QCl np = {
-      s=\\t,a,p=>"ku" ++ np.s!Nom ++ realizeVP (baseVP (lin Verb (P.mkV "shkoj"))) t a p np.a
+      s=\\t,a,p=>"ku" ++ np.s!Nom ++ realizeVP (constructionBaseVP (lin Verb (P.mkV "shkoj"))) t a p np.a
     } ;
     where_come_from_QCl np = {
-      s=\\t,a,p=>"nga" ++ "ku" ++ np.s!Nom ++ realizeVP (baseVP (lin Verb I.vij_V)) t a p np.a
+      s=\\t,a,p=>"nga" ++ "ku" ++ np.s!Nom ++ realizeVP (constructionBaseVP (lin Verb I.vij_V)) t a p np.a
     } ;
 
-    go_here_VP = addPost (baseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"këtu") ;
-    come_here_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"këtu") ;
-    come_from_here_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "këtu") ;
-    go_there_VP = addPost (baseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"atje") ;
-    come_there_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"atje") ;
-    come_from_there_VP = addPost (baseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "atje") ;
+    go_here_VP = constructionAddPost (constructionBaseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"këtu") ;
+    come_here_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"këtu") ;
+    come_from_here_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "këtu") ;
+    go_there_VP = constructionAddPost (constructionBaseVP (lin Verb (P.mkV "shkoj"))) (\\_=>"atje") ;
+    come_there_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"atje") ;
+    come_from_there_VP = constructionAddPost (constructionBaseVP (lin Verb I.vij_V)) (\\_=>"nga" ++ "atje") ;
 
     married_Cl np other =
       mkPred (np.s!Nom) np.a
-        (addPost (qualVP "i martuar" "e martuar") (\\_=>"me" ++ other.s!Acc)) ;
+        (constructionAddPost (qualVP "i martuar" "e martuar") (\\_=>"me" ++ other.s!Acc)) ;
 
     hungry_VP  = qualVP "i uritur" "e uritur" ;
     thirsty_VP = qualVP "i etur" "e etur" ;

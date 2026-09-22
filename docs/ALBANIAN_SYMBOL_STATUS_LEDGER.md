@@ -655,15 +655,14 @@ That is the function of this ledger.
 - **current_owner:** `ExtendSqiScaffolding.gf`
 - **current_location:** `sc_ComplGenVV`, wired by `ExtendSqi.gf`
 - **primary_status:** `warning`
-- **why_this_status:** historical GF 3.12 evidence completed `ComplGenVV` through Albanian core `ComplVV`, but run `20260921_201720` exposed a shared backend failure in the underlying `ComplVV`/subjunctive path (`CProj "Indicative" (CProj "v" ...)`). Candidate (12) changes that Verb→VP boundary and therefore requires renewed compile evidence before structural/PMCFG status can be called positive; `Ant`/`Pol` also remain a documented linguistic gap.
+- **why_this_status:** runs `20260921_212128` and `20260921_213424` confirm that the underlying `ComplVV`/subjunctive PMCFG failure is gone. In the latest run `ExtendSqi` and its companion resources compile, so the former compiler/import blocker is cleared. The status remains `warning` only because `ComplGenVV` still ignores its `Ant`/`Pol` arguments and therefore has a documented linguistic/semantic gap.
 - **allowed_use:** bounded structural compile probe `\vv,_,_,vp -> ComplVV vv vp`
 - **forbidden_use:** claiming full generalized-VV semantics; importing `TenseSqi` representations into this `CommonX`-contract path; pre-emptively modifying later functions
 - **known_semantic_gap:** anteriority and polarity arguments remain ignored exactly as in the previous Albanian implementation
 - **exit_criteria:**
-  1. candidate (12) GF 3.12 validation clears the shared `ComplVV` / nested-`VP.v.Indicative` PMCFG failure,
-  2. verbose GF 3.12 prints a completed PMCFG statistics tuple for `ComplGenVV` and the run advances to the next function or emits `ExtendSqi.gfo`,
-  3. no new type/lock warnings are introduced,
-  4. after structural stabilization, design and test an Albanian realization for `Ant`/`Pol` before promotion to stable
+  1. preserve the now-green GF 3.12 `ExtendSqi` compiler gate,
+  2. design and test an Albanian realization for the currently ignored `Ant`/`Pol` arguments,
+  3. add reviewed behavioral/golden coverage before promotion to stable
 - **related_tests:** `Quick -> ExtendSqi.gf` with GF verbose output enabled
 - **related_docs:** override matrix, decision log, `CommonX` contract, Compendium evidence/maturity rules
 

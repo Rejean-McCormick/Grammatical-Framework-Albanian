@@ -10,24 +10,24 @@
 
 ## 0. Current working-snapshot overlay — 2026-09-21
 
-This document contains substantial FIX22C baseline information. That baseline remains valid historical evidence for its exact source snapshot, but the later mega-update is **not yet compiler-stable**.
+FIX22C remains historical evidence for its exact source. The current branch has now passed the major syntax and PMCFG recovery layers.
 
-Latest compiler evidence is Wordbench Global Scan `20260921_201720` on candidate (11), GF 3.12:
+Latest compiler evidence is Wordbench Global Scan `20260921_213424`, GF 3.12:
 
 ```text
-47 automatically discovered language-folder targets
-27 PASS
-20 FAIL
+47 automatically discovered targets
+45 PASS
+2 FAIL
 0 ERROR
 0 TIMEOUT
 0 scenarios
 ```
 
-The earlier syntax-corruption layer is repaired, and the candidate (11) clitic repair removed the former `CProj "cl"` PMCFG family. The dominant remaining backend trace instead descends through `CProj "Indicative" (CProj "v" ...)`, reached by syntax that reconstructs subjunctive morphology from present-indicative surface strings.
+ALB-DEC-047 remains compiler-confirmed: the run contains **no `GeneratePMCFG` crash**, and the former `CProj "cl"` and `CProj "Indicative" (CProj "v" ...)` signatures remain absent. The three direct ALB-DEC-048 repairs (`ExtendSqiRNP`, `ExtendSqiVPBridge`, `LexiconSqi`) compile, as do `ExtendSqi` and `ExtraSqi`.
 
-Candidate (12), pending local GF validation, moves this distinction to the morphology boundary: `ResSqi.Verb` has an explicit `Subjunctive` table and `VP`/`VPSlash` copy the complete currently represented verbal form inventory instead of retaining a nested `v : Verb`. The independent `LexiconSqi.distance_N3` prep-overload failure is also repaired with explicit case government.
+The two remaining automatic-scan FAILs (`LangSqi`, `AllSqi`) share one module-composition cause: internal helper-name collision between `ConstructionSqi` and the already-composed grammar/verb layer. ALB-DEC-049 renames the Construction-only `baseVP`/`addPost` helpers to isolate that namespace without changing Albanian realization.
 
-Candidate (12) static preflight over the complete 52-file source census is clean (Wordbench static scan 0 findings / 0 exceptions; `gf_morphosqi_lint.py` 0 findings). This is **not** compiler acceptance.
+Static preflight over all 52 current GF files remains clean; `gf_morphosqi_lint.py` reports 0 findings. This is not a substitute for the next GF run or the five supplemental target compiles.
 
 Operational order is normative in `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; exact live facts are in `CURRENT_REPAIR_STATE.md`.
 
@@ -39,17 +39,17 @@ The Albanian project has two states that must not be conflated:
 
 | Area | FIX22C / v0.1.0 baseline | Current post-mega-update snapshot |
 |---|---|---|
-| Core category/resource architecture | compiler-validated baseline | representation changed in candidate (12); pending GF 3.12 revalidation |
-| Morphology/paradigm implementation | substantial and baseline-validated | explicit subjunctive table added in candidate (12); pending compiler and linguistic revalidation |
-| Core grammar / Structural | passed historical gate | partially recompiling in latest run; remaining result depends on Verb→VP PMCFG repair |
-| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | current run still fails through shared Verb→VP PMCFG path; candidate (12) pending |
-| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | latest run exposes shared PMCFG fallout plus an independent `distance_N3` overload; candidate (12) pending |
+| Core category/resource architecture | compiler-validated baseline | ALB-DEC-047 representation now compiler-confirmed on the 47-target run |
+| Morphology/paradigm implementation | substantial and baseline-validated | explicit subjunctive table compiles; linguistic scenario validation still pending |
+| Core grammar / Structural | passed historical gate | compiler-green in latest run |
+| `ExtendSqi` / PMCFG | passed historical gate; final `.gfo` produced | PMCFG path recovered; current failure is downstream of missing `Prelude` in companion resources |
+| `LexiconSqi` / `LangSqi` / `AllSqi` | passed historical gate | current failure is the local `distance_N3` preposition-construction issue plus importer fallout |
 | Public facades (`SyntaxSqi`, `ConstructorsSqi`, `SymbolicSqi`, `TrySqi`) | not part of the original eight-target FIX22C table | required supplemental gate after recovery |
 | Scenario/golden linguistic validation | pending | pending; `Scenarios seen: 0` in latest scan |
 
 Therefore the current project phase is:
 
-> **validate the candidate (12) Verb→VP morphology boundary → complete the 52-file compiler census → re-establish/exceed the historical compiler gate and public facades → validate Albanian behavior → continue capability completion**
+> **validate ALB-DEC-049 and obtain 47/47 → complete the five supplemental targets for 52/52 → validate Albanian behavior → continue capability completion**
 
 The project is not back in the old pre-FIX22C PMCFG-repair phase. The historical PMCFG crash is a regression boundary, while the current first blocker is a newer syntax regression introduced after the baseline.
 

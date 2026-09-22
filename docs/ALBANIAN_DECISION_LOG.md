@@ -1306,7 +1306,7 @@ VP = {
 ---
 
 ## ALB-DEC-047
-**Status:** accepted for candidate validation  
+**Status:** confirmed by GF 3.12 run `20260921_212128`  
 **Date:** 2026-09-21  
 **Area:** Albanian verbal morphology / `Verb` → `VP` PMCFG boundary
 
@@ -1372,10 +1372,99 @@ This preserves all verbal dimensions currently carried by `Verb`; it is not a br
 
 Model evidence is engineering corroboration only; Albanian morphology and reference material remain the authority for actual forms.
 
-**Independent same-run repair:** `LexiconSqi.distance_N3` must call the two-argument `mkPrep` overload with explicit case government (`nga` + Ablative; `deri në` + Accusative), eliminating the remaining ambiguous overload failure without discarding complement typing.
+**Independent same-run hypothesis (later rejected by run `20260921_212128`):** calling the two-argument `mkPrep` overload with explicit case government was attempted for `LexiconSqi.distance_N3`, but GF 3.12 still rejected overload resolution for `Str` + aliased `R.Case`. ALB-DEC-048 replaces that hypothesis with a local typed `Prep` constructor while preserving the same case government.
 
 **Candidate-(12) structural preflight:** the migration was audited over all 135 `lin V` blocks in `MorphoSqi`. A bulk-edit defect that had inserted 51 extra record openings before `Subjunctive` was detected before packaging and repaired; brace/parenthesis balance is now zero and all 135 blocks contain `Indicative`, `Subjunctive`, and `Imperative`. `gf_morphosqi_lint.py` now enforces those invariants. This is source-structure evidence only, not GF compiler acceptance.
 
-**Acceptance gate:** rerun GF 3.12 Global Scan. ALB-DEC-047 is confirmed only if the `CProj "Indicative" (CProj "v" ...)` PMCFG family disappears and no new missing-field/type failure is introduced in `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, or their importers.
+**Acceptance result — run `20260921_212128`:** confirmed. `MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `VerbSqi`, `SentenceSqi`, `QuestionSqi`, `RelativeSqi`, `IdiomSqi`, and `ConstructionSqi` compile; no `GeneratePMCFG`, `CProj "cl"`, or nested `VP.v.Indicative` failure remains in the 47-target Global Scan.
 
 **Supersedes:** the old implementation detail inside ALB-DEC-046 that still allowed syntax to call a string-reconstructing `subjunctiveFinite`. ALB-DEC-046 remains accepted for the clitic/subjcl boundary it successfully fixed.
+
+
+---
+
+## ALB-DEC-048
+**Status:** confirmed by GF 3.12 run `20260921_213424`  
+**Date:** 2026-09-21  
+**Area:** residual GF namespace and lexical-preposition cleanup
+
+**Decision:** Treat Wordbench run `20260921_212128` as confirmation of ALB-DEC-047 and reduce its seven reported FAILs to three independent ordinary source defects. Repair those defects locally without reopening the now-confirmed Verb→VP PMCFG architecture.
+
+**Evidence:**
+
+```text
+47 targets included
+40 PASS
+7 FAIL
+0 ERROR
+0 TIMEOUT
+0 GeneratePMCFG failures
+```
+
+The seven stderr logs identify three source causes:
+
+1. `ExtendSqiRNP`: `Bool`/`True`/`False` are unavailable because the resource does not open `Prelude`;
+2. `ExtendSqiVPBridge`: `False` is unavailable for the same reason;
+3. `LexiconSqi.distance_N3`: `ParadigmsSqi.mkPrep` does not resolve the desired `Prep` overload for `Str` + aliased `R.Case`.
+
+`ExtendSqi`, `ExtraSqi`, `LangSqi`, and `AllSqi` are importers of these failures, not four additional independent defects. The current Wordbench post-classifier still labels all seven `AMBIGUOUS`; stderr provenance is stronger evidence for this manual root-cause grouping.
+
+**Repair:**
+
+- open `Prelude` explicitly in `ExtendSqiRNP` and `ExtendSqiVPBridge`;
+- construct the lexical prepositions for `distance_N3` through a local typed helper:
+
+```gf
+mkPrepLex : Str -> R.Case -> Prep = \s,c ->
+  lin Prep {s = s ; c = c} ;
+```
+
+- preserve the explicit government `nga` + Ablative and `deri në` + Accusative.
+
+**Rationale:** namespace visibility is an import-boundary concern, while lexical case government is already known and should not depend on overload inference. Neither issue justifies changing `Verb`, `VP`, clitic state, or PMCFG-facing structure.
+
+**Acceptance gate:** rerun GF 3.12. The decision is confirmed if the seven automatic-scan FAILs disappear or if any remaining failure has a new independent diagnostic. Complete acceptance still requires the five targets omitted by automatic discovery to be compiled separately or added to Global Scan coverage.
+
+**Acceptance result — run `20260921_213424`:** confirmed for all three direct repairs. `ExtendSqiRNP`, `ExtendSqiVPBridge`, and `LexiconSqi` compile, as do the former importer failures `ExtendSqi` and `ExtraSqi`. The remaining `LangSqi`/`AllSqi` failures have a new independent module-composition namespace diagnostic and are handled by ALB-DEC-049.
+
+---
+
+## ALB-DEC-049
+**Status:** accepted for candidate validation  
+**Date:** 2026-09-21  
+**Area:** `LangSqi` module composition / internal helper namespace
+
+**Decision:** Internal helper names introduced by `ConstructionSqi` must not collide with helpers exported by modules already composed into `GrammarSqi`. Rename Construction-only `baseVP` and `addPost` to `constructionBaseVP` and `constructionAddPost` and update only their local consumers.
+
+**Compiler evidence — Wordbench run `20260921_213424`:**
+
+```text
+47 targets included
+45 PASS
+2 FAIL
+0 ERROR
+0 TIMEOUT
+0 GeneratePMCFG failures
+```
+
+The two failures are `LangSqi` and `AllSqi`. GF 3.12 reports the same composition error for both:
+
+```text
+LangSqi.gf:
+  cannot unify the information
+    oper addPost = ClauseSqiRes.appendVP ;
+  in module ConstructionSqi with
+    oper addPost = \vp,x -> ...
+  in module VerbSqi
+```
+
+The direct modules that previously failed under ALB-DEC-048 now compile: `ExtendSqiRNP`, `ExtendSqiVPBridge`, `LexiconSqi`, `ExtendSqi`, and `ExtraSqi`. This confirms those local fixes and isolates the remaining automatic-scan blocker to module composition.
+
+**Proactive namespace audit:** `ConstructionSqi` also defines `baseVP`, while `VerbSqi` already exports a helper with that name. GF stops at the first unification conflict, so fixing only `addPost` risks exposing `baseVP` immediately afterward. The accepted repair isolates both Construction-only names in the same coherent edit.
+
+**Rationale:** these helpers are implementation details, not public RGL functions and not Albanian linguistic categories. Renaming them does not alter linearization behavior, lincats, case government, clitic placement, or verbal morphology. It simply prevents accidental name unification across concrete-module composition.
+
+**Acceptance gate:** rerun GF 3.12. ALB-DEC-049 is confirmed when `LangSqi` and `AllSqi` compile in the automatic scan without a new independent diagnostic. A full release/compiler gate still requires the five targets omitted by automatic discovery, for a total of 52 `.gf` files.
+
+**Does not reopen:** ALB-DEC-047 Verb→VP architecture, ALB-DEC-048 Prelude/lexical-preposition fixes, or any Albanian linguistic decision.
+

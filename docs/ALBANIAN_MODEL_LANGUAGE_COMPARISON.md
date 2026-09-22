@@ -144,3 +144,15 @@ If those items cannot be stated, do not transfer the model-language code.
 The supplied model languages strongly corroborate both the syntax-integrity repair (`\x ->` versus `\\x =>`, and `""` versus `[]` in a `Str` pattern) and the **engineering direction** of ALB-DEC-047: mood should be represented structurally before syntax consumes it. They do not establish Albanian subjunctive forms, clitic placement, VPS-family ownership, or any golden surface output.
 
 For operational order use `ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`; for current source facts use `CURRENT_REPAIR_STATE.md`.
+
+
+## Compiler confirmation of the representation recommendation
+
+GF 3.12 run `20260921_212128` provides direct Albanian compiler evidence for the engineering recommendation above. After moving finite subjunctive morphology into `Verb.Subjunctive` and copying structured verbal tables across the Verb→VP boundary, the Global Scan reaches **40 PASS / 7 FAIL** and reports **no `GeneratePMCFG` crash**. The previous `CProj "cl"` and `CProj "Indicative" (CProj "v" ...)` signatures are absent.
+
+This compiler result upgrades the model-language comparison from prospective corroboration to corroboration of an Albanian implementation that the GF 3.12 backend accepts. It still does **not** validate the linguistic correctness of every subjunctive form or clitic placement; those require Albanian reference/golden evidence.
+
+## Latest compiler follow-up
+
+GF 3.12 run `20260921_213424` reaches **45 PASS / 2 FAIL** over the 47 automatically discovered targets, again with no `GeneratePMCFG` crash. This strengthens the compiler evidence for the structured Verb→VP recommendation. The two remaining failures are a local helper-name collision during `LangSqi` composition and are unrelated to the model-language representation comparison.
+

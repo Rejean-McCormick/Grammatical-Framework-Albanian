@@ -1,6 +1,6 @@
 -- Reflexive noun-phrase family for Albanian Extend.
 resource ExtendSqiRNP =
-  open GrammarSqi, CatSqi, ParamX, ClauseSqiRes,
+  open Prelude, GrammarSqi, CatSqi, ParamX, ClauseSqiRes,
        (R = ResSqi), ExtendSqiHelpers, (AS = AdverbSqi) in {
 
 oper

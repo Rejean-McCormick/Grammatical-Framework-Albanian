@@ -105,3 +105,19 @@ At minimum this synchronization updates:
 - `status/ALBANIAN_IMPLEMENTATION_STATUS.md`
 - new `ALBANIAN_NEXT_UPGRADE_20260922.md`
 - this synchronization note
+
+---
+
+## Postscript — 2026-09-23 diagnostic evidence
+
+Run `20260923_183542` supersedes the 2026-09-22 live compiler frontier: 54/54
+GF targets compile, structural lock warnings are zero, and the scenario campaign
+is 49/50. `CURRENT_REPAIR_STATE.md`, `ALBANIAN_OPEN_QUESTIONS.md`,
+`ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md`,
+`status/ALBANIAN_IMPLEMENTATION_STATUS.md`, and `ALBANIAN_DECISION_LOG.md` are
+synchronized to that evidence and to candidate decision ALB-DEC-054.
+
+The remaining scenario repair changes only C0371-C0375 from `P.mkVV "dua"` to
+canonical `St.want_VV`; a new GF 3.12 run is still required before claiming the
+behavioral gate closed.
+

@@ -1,12 +1,26 @@
 # Albanian RGL — Recovery and Completion Sequence
 
 **Status:** normative operational sequence  
-**Last synchronized:** 2026-09-22  
+**Last synchronized:** 2026-09-23  
 **Historical compiler baseline:** `albanian-rgl-core-v0.1.0` / FIX22C  
 **Current working-state authority:** `CURRENT_REPAIR_STATE.md`  
 **Final-state authority:** `ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md`
 
 ---
+
+## 0. 2026-09-23 gate transition
+
+Diagnostic run `20260923_183542` advances the project beyond the compiler and
+lock-closure gates described later in this historical sequence: 54/54 GF files
+compile and structural lock warnings are zero. The active gate is now behavioral
+scenario closure.
+
+The current scenario frontier is exactly one case group:
+`alb-complement-control` (C0371-C0380). Its observed root is GeneratePMCFG
+`Predef.error "Cannot find an inflection rule"`, traced to C0371-C0375 using
+`P.mkVV "dua"` instead of canonical irregular `St.want_VV`. The candidate fix
+has been applied; the next mandatory step is a GF 3.12 rerun and output review,
+not additional morphology expansion.
 
 ## 1. Purpose
 

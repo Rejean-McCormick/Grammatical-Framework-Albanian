@@ -1,12 +1,31 @@
 # Albanian RGL — Implementation Status
 
 **Baseline date:** 2026-09-19  
-**Current-state synchronization:** 2026-09-22  
+**Current-state synchronization:** 2026-09-23  
 **Project:** Grammatical Framework — Albanian RGL  
 **Compiler:** GF 3.12  
 **Validation tool:** GF Wordbench
 
 ---
+
+## 0A. Current evidence overlay — 2026-09-23
+
+GF 3.12 Wordbench diagnostic run `20260923_183542` establishes a new compiler
+state for the current branch: **54/54 GF targets compile**, all five public API
+facades are included, and structural lock warnings are **0**. The behavioral
+campaign executes all 50 scenarios with **49 OK / 1 FAIL / 0 ERROR**.
+
+The only failing scenario, `alb-complement-control`, fails during PGF generation
+before its cases can linearize. Raw stdout identifies `Internal error in
+GeneratePMCFG` with nested `Predef.error "Cannot find an inflection rule"`; the
+subsequent `empty grammar, no abstract` lines are downstream symptoms. The
+validation input used `P.mkVV "dua"` for C0371-C0375 even though *dua* is an
+irregular verb already represented by `IrregSqi.dua_V` and
+`StructuralSqi.want_VV`. The candidate campaign repair now uses `St.want_VV`
+for those five cases and awaits a GF 3.12 rerun.
+
+The older 2026-09-22 overlay is retained below as historical progression, not
+as the latest live state.
 
 ## 0. Current working-snapshot overlay — 2026-09-22
 
@@ -40,11 +59,11 @@ Compendium evidence reaches T0; aggregate compile T8 fails; linguistic scenarios
 
 ---
 
-## 1. Overall status
+## 1. Historical 2026-09-22 overall status
 
-The Albanian project has two states that must not be conflated:
+The table below records the pre-closure 2026-09-22 state. It is retained for progression history and must not override the 2026-09-23 evidence overlay above. The Albanian project had two states that must not be conflated:
 
-| Area | FIX22C / v0.1.0 baseline | Current post-mega-update snapshot |
+| Area | FIX22C / v0.1.0 baseline | 2026-09-22 post-mega-update snapshot |
 |---|---|---|
 | Core category/resource architecture | compiler-validated baseline | ALB-DEC-047 representation has historical/current-branch compiler evidence, but the present run is blocked earlier by `ParadigmsSqi` |
 | Morphology/paradigm implementation | substantial and baseline-validated | explicit subjunctive architecture has compiler evidence, but the public paradigms API currently fails on circular `mkA2`; linguistic scenario validation remains pending |
@@ -54,7 +73,7 @@ The Albanian project has two states that must not be conflated:
 | Public facades (`CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, `TrySqi`) | not part of the original eight-target FIX22C table | required five-target supplemental gate; not discovered in the latest run |
 | Scenario/golden linguistic validation | pending | pending; `Scenarios seen: 0` in latest scan |
 
-Therefore the current project phase is:
+At that historical point, the project phase was:
 
 > **harden Paradigms overloads → close lock warnings → obtain 49/49 language compile → complete five API facades for 54/54 → harden Wordbench evidence → run reviewed Albanian scenarios/goldens → continue capability completion**
 

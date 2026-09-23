@@ -33,30 +33,45 @@ Out of scope:
 
 ## Current Status Snapshot
 
-### Latest live facts — Global Scan `20260922_123316`
-- FIX22C remains the last historical compiler-stable baseline for its exact source.
-- The current snapshot contains **54 GF files**: 49 language-folder modules and 5 parent-directory API facades.
-- Wordbench discovered all 49 language-folder modules: **22 PASS, 27 FAIL, 0 ERROR, 0 TIMEOUT**.
-- The five API facades (`CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `SyntaxSqi`, `TrySqi`) were not included by automatic discovery.
-- Raw compiler stderr identifies `ParadigmsSqi.gf: circular definitions: mkA2` as the first proven independent blocker shared by the failed import chain.
-- Wordbench labels such as `Voc` and `Int` are currently unreliable first-error summaries; raw GF stderr is the stronger root-cause evidence.
-- The current run contains nine `missing lock field` warnings: `lock_NP` x2, `lock_VP` x6, `lock_VPSlash` x1.
-- Compendium evidence reaches T0; T8 aggregate compile fails; T1-T7 and T9-T11 are not assessed.
-- Scenarios seen: 0; linguistic certification is not established.
+### Latest live facts — Diagnostic run `20260923_183542`
+- GF 3.12 complete compiler census: **54/54 PASS**.
+- All five public API facades are included in the run.
+- Structural `missing lock field` warnings: **0**.
+- Scenarios: **50 seen, 49 OK, 1 FAIL, 0 ERROR**.
+- The sole failing scenario is `alb-complement-control`.
+- Raw stdout begins with `Internal error in GeneratePMCFG` and nested
+  `Predef.error "Cannot find an inflection rule"`; repeated `empty grammar, no
+  abstract` messages are downstream symptoms.
+- C0371-C0375 used `P.mkVV "dua"`, incorrectly routing irregular *dua* through
+  regular verb inference. The candidate repair uses `St.want_VV`, backed by
+  `IrregSqi.dua_V`.
+- A fresh GF 3.12 rerun is required before claiming 50/50 scenario success.
 
 ### Immediate unresolved questions
 
-**Q-LIVE-1 — Paradigms overload closure (P0).** After replacing `mkA2` self-dispatch with a uniquely typed core helper, do `ParadigmsSqi` and its nearest importers compile? The same-pattern audit must cover `mkN2`, `mkV2`, `mkVV`, `mkVS`, `mkVQ`, `mkVA`, `mkV2V`, `mkV2S`, `mkV2Q`, `mkV2A`, and `mkV3` before the family is considered hardened.
+**Q-LIVE-1 — Paradigms overload closure: CLOSED for the compiler gate.** The
+current snapshot compiles 54/54 under GF 3.12. Continue treating the typed-core
+overload rule as an architectural invariant.
 
-**Q-LIVE-2 — Structural lock closure (P0).** Which constructor/retyping paths in `AdverbSqi`, `PhraseSqi`, `RelativeSqi`, and `SentenceSqi` lose the native category locks? Closure requires removing the current `lock_NP`, `lock_VP`, and `lock_VPSlash` warnings without fabricated lock fields or category flattening.
+**Q-LIVE-2 — Structural lock closure: CLOSED for the current snapshot.** The
+latest run reports zero structural lock warnings.
 
-**Q-LIVE-3 — Complete compile census (P0).** Closure requires a recorded **54/54** GF compiler result: 49 language-folder modules plus all five public API facades. A 49/49 automatic Global Scan is not sufficient while facade discovery remains empty.
+**Q-LIVE-3 — Complete compile census: CLOSED.** The latest run records 54/54,
+including all five public facades.
 
-**Q-LIVE-4 — Public API composition (P0/P1).** Do `SyntaxSqi`, `ConstructorsSqi`, `CombinatorsSqi`, `SymbolicSqi`, and `TrySqi` compile against the final rich categories and expose the intended API without bypassing Albanian morphology/agreement?
+**Q-LIVE-4 — Public API composition: compiler gate CLOSED; behavioral review
+continues.** The facades compile, but behavioral scenario evidence remains the
+next authority for linguistic/API semantics.
 
-**Q-LIVE-5 — Wordbench causality/evidence reporting (P1).** Can the harness extract the actual terminal GF diagnostic, classify importers as downstream where provenance is clear, and make summary/detail source-lock identity consistent?
+**Q-LIVE-5 — Wordbench causality/evidence reporting: PARTIALLY OPEN.** The
+scenario runner now preserves zero-exit shell failures as structured evidence,
+but run `20260923_183542` still promoted downstream `empty grammar` over the
+preceding GeneratePMCFG root diagnostic. The paired Wordbench update adds root
+priority and classifies GeneratePMCFG as `INTERNAL`.
 
-**Q-LIVE-6 — Linguistic validation (P1 after compiler gate).** Once 54/54 is green, establish reviewed Albanian scenarios/goldens for paradigms, case/agreement, verbal complementation, clitics, embedding, proper names, Markup, and public API use.
+**Q-LIVE-6 — Linguistic validation: ONE SCENARIO REMAINS.** The current evidence
+is 49/50. Rerun `alb-complement-control` after the `St.want_VV` campaign repair,
+then review its actual C0371-C0380 outputs before any linguistic certification.
 
 The historical questions below remain architectural context. They are **not** the current priority order.
 

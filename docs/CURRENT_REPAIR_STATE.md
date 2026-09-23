@@ -1,11 +1,49 @@
 # Albanian current repair state
 
-**Updated:** 2026-09-22  
+**Updated:** 2026-09-23  
 **Compiler:** GF 3.12  
 **Validation tool:** GF Wordbench Diagnostic / Global Scan  
 **Compendium protocol:** `TEST_RGL`
 
-## 1. Evidence lock
+## 0. Evidence overlay — 2026-09-23
+
+Wordbench diagnostic run `20260923_183542` on GF 3.12 supersedes the older
+2026-09-22 current-run claims below wherever they conflict. The exact run
+reported:
+
+```text
+complete GF census:       54/54 OK
+structural lock warnings: 0
+scenarios:                50
+scenario OK:              49
+scenario FAIL:             1
+scenario ERROR:            0
+```
+
+The sole failing scenario was `alb-complement-control`. Its raw stdout begins
+with the root diagnostic:
+
+```text
+Internal error in GeneratePMCFG:
+    evalTerm (Predef.error "Cannot find an inflection rule")
+```
+
+and only afterwards emits repeated `empty grammar, no abstract` messages. The
+latter are downstream shell symptoms, not the primary cause.
+
+Source review localizes the candidate defect to validation cases C0371-C0375:
+`AlbCampaign038Sqi.gf` constructed Albanian *dua* through `P.mkVV "dua"`. The
+string overload delegates to regular verb inference, while *dua* is already
+modeled canonically as irregular `IrregSqi.dua_V` and exported as
+`StructuralSqi.want_VV`. The validation campaign now uses `St.want_VV` for
+C0371-C0375. C0376-C0380 are unchanged. The scenario input SHA-256 lock was
+updated accordingly.
+
+This is a candidate repair until a fresh GF 3.12 scenario run confirms it. It
+does **not** justify adding an irregular exception to `regV`, and it does not
+claim 50/50 behavioral success before rerun.
+
+## 1. Historical evidence lock — 2026-09-22
 
 - current source snapshot supplied by the maintainer: `Code_snapshot_Grammatical_Framework-Albanian(20260922-123534).zip`
 - latest Wordbench run: `20260922_123316`
@@ -26,7 +64,7 @@ The detailed Wordbench source lock records aggregate SHA-256:
 
 while `summary.md` displays a different source-lock hash. The 2026-09-22 manual cross-check matched the 49 automatically scanned source entries to the supplied snapshot. Treat the hash-display disagreement as a Wordbench reporting defect to repair; do not use the summary-only hash as stronger evidence than the detailed source lock.
 
-## 2. Latest Global Scan
+## 2. Historical Global Scan — 2026-09-22
 
 ```text
 Files included:       49

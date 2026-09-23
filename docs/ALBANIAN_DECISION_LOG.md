@@ -1533,7 +1533,7 @@ The five facades are `CombinatorsSqi`, `ConstructorsSqi`, `SymbolicSqi`, `Syntax
 ---
 
 ## ALB-DEC-053
-**Status:** implemented candidate; GF 3.12 acceptance pending  
+**Status:** accepted by GF 3.12 run `20260923_183542`  
 **Date:** 2026-09-22  
 **Area:** overload implementation + VP/VPSlash resource/category boundary
 
@@ -1554,10 +1554,41 @@ no same-family self-dispatch remains; the structural VP/VPSlash aliases are in
 place; the static upgrade validator reports PASS with zero static errors and
 zero placeholder warnings.
 
-**Compiler evidence boundary:** GF is not installed in the assembly
-environment. Therefore ALB-DEC-053 is not yet accepted as compiler evidence.
-The authoritative acceptance gate is a GF 3.12 54/54 run with zero circular
--definition diagnostics and zero `missing lock field lock_*` warnings.
+**Compiler evidence:** Wordbench diagnostic run `20260923_183542` on GF 3.12
+records 54/54 GF targets OK and zero structural `missing lock field` warnings.
+This closes the compiler/lock acceptance gate defined by ALB-DEC-053.
 
 **Does not claim:** scenario/golden correctness, linguistic completion, or
-release certification.
+release certification. The same run reports 49/50 scenarios and therefore moves
+the active frontier to ALB-DEC-054.
+
+---
+
+## ALB-DEC-054
+**Status:** implemented candidate; GF 3.12 scenario acceptance pending  
+**Date:** 2026-09-23  
+**Area:** behavioral campaign / irregular VV construction
+
+**Decision:** Validation cases C0371-C0375 must use the canonical structural
+Albanian desire verb `St.want_VV`; they must not construct *dua* through the
+regular-inference overload `P.mkVV "dua"`. Do not add an ad-hoc `dua` branch to
+`regV` merely to make the campaign import succeed.
+
+**Evidence:** Wordbench diagnostic run `20260923_183542` compiled all 54 GF
+targets and ran 50 scenarios, with only `alb-complement-control` failing. Its
+raw stdout begins with `Internal error in GeneratePMCFG` and nested
+`Predef.error "Cannot find an inflection rule"`, followed by downstream `empty
+grammar, no abstract` messages. `ParadigmsSqi.mkVV : Str -> VV` delegates to
+`mkV`, whose regular inference falls back to that exact error for unsupported
+forms. The project already defines `IrregSqi.dua_V` and exports it through
+`StructuralSqiVerbal.want_VV` / `StructuralSqi.want_VV`.
+
+**Implementation:** C0371-C0375 in `AlbCampaign038Sqi.gf` and their campaign
+manifest expressions now use `St.want_VV`; C0376-C0380 are unchanged. The
+scenario input SHA-256 declaration is updated.
+
+**Acceptance gate:** a fresh GF 3.12 run must import `AlbCampaign038Sqi` without
+GeneratePMCFG failure, execute C0371-C0380, and preserve 54/54 compiler success.
+Actual linguistic outputs remain subject to review; this decision alone does
+not establish 50/50 scenario correctness.
+

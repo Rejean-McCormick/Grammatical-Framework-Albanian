@@ -1,5 +1,5 @@
 -- GF_WORDBENCH_INPUT_SHA256 3756bced4c6cb801516acb7d4c43cd2a3f724c0955991ebf16e84de25fd7a36b validation/inputs/AlbCampaign038.gf
--- GF_WORDBENCH_INPUT_SHA256 810ab8a8fbeccdd84588b8f2ba3c21e89bd1913fd88d04d236a5f0e2f8c0f92d validation/inputs/AlbCampaign038Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 f18e9d50073b206e67ce7ef468484af27b4d37b51f8eb021a74a405bab81e384 validation/inputs/AlbCampaign038Sqi.gf
 i AlbCampaign038Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0371 want come"

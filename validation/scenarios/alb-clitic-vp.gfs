@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 545608d6531e9f24babfc6c9d10a68a562ba572e75b9cd7ae472c67670a894e2 validation/inputs/AlbCampaign037.gf
+-- GF_WORDBENCH_INPUT_SHA256 cb04e6fad145c1d1318f64b8b94a7545dba787e40e4c8bc5919e6c6403bffd10 validation/inputs/AlbCampaign037Sqi.gf
+i AlbCampaign037Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0361 reflexive love"
+l C0361
+ps "CASE C0362 reflexive see"
+l C0362
+ps "CASE C0363 passive love"
+l C0363
+ps "CASE C0364 passive loved by her"
+l C0364
+ps "CASE C0365 progressive come"
+l C0365
+ps "CASE C0366 progressive read book"
+l C0366
+ps "CASE C0367 negative reflexive"
+l C0367
+ps "CASE C0368 past passive"
+l C0368
+ps "CASE C0369 future progressive"
+l C0369
+ps "CASE C0370 negative progressive"
+l C0370
+ps "GF_WORDBENCH_END cases"
+q

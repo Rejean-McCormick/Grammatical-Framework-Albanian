@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 cb2eadc99815d8620dcdff28f99b01687408877d1f7fbb544d1e79b628b9d72e validation/inputs/AlbCampaign041.gf
+-- GF_WORDBENCH_INPUT_SHA256 2b21c630c0a551960e4240ee10c40ceb1cd079b79334a606e126ba099e7f44f2 validation/inputs/AlbCampaign041Sqi.gf
+i AlbCampaign041Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0401 who comes"
+l C0401
+ps "CASE C0402 who lives"
+l C0402
+ps "CASE C0403 who loves him"
+l C0403
+ps "CASE C0404 who gives it him"
+l C0404
+ps "CASE C0405 who says she comes"
+l C0405
+ps "CASE C0406 who wonders"
+l C0406
+ps "CASE C0407 who becomes good"
+l C0407
+ps "CASE C0408 who paints it red"
+l C0408
+ps "CASE C0409 who is good"
+l C0409
+ps "CASE C0410 who is in city"
+l C0410
+ps "GF_WORDBENCH_END cases"
+q

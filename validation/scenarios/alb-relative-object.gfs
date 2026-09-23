@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 cce5e9f2d9c59c2ddf0f2bc9fd889574c94c8433baffb89d2d423af66599bde9 validation/inputs/AlbCampaign042.gf
+-- GF_WORDBENCH_INPUT_SHA256 155e80863c5a45e025a9235aff881641ae6a3b71c497d040492af404ac19753b validation/inputs/AlbCampaign042Sqi.gf
+i AlbCampaign042Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0411 whom I love"
+l C0411
+ps "CASE C0412 whom she knows"
+l C0412
+ps "CASE C0413 whom we hear"
+l C0413
+ps "CASE C0414 whom they hate"
+l C0414
+ps "CASE C0415 whom he finds"
+l C0415
+ps "CASE C0416 man whom I love"
+l C0416
+ps "CASE C0417 woman-style girl whom he knows"
+l C0417
+ps "CASE C0418 book that I read"
+l C0418
+ps "CASE C0419 city that she knows"
+l C0419
+ps "CASE C0420 friend whom we love"
+l C0420
+ps "GF_WORDBENCH_END cases"
+q

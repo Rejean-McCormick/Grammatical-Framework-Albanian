@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 e688eb67d15b9939a6e2a70f91bef22bd6f426540e86ffb62025e376de4bbc59 validation/inputs/AlbCampaign033.gf
+-- GF_WORDBENCH_INPUT_SHA256 0eb74499ea315b3871bcccd5654a9e9f8c5c4244dbbc180182b71cd6d8ccb9af validation/inputs/AlbCampaign033Sqi.gf
+i AlbCampaign033Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0321 S and S"
+l C0321
+ps "CASE C0322 S or S"
+l C0322
+ps "CASE C0323 NP and NP"
+l C0323
+ps "CASE C0324 NP or NP"
+l C0324
+ps "CASE C0325 AP and AP"
+l C0325
+ps "CASE C0326 Adv and Adv"
+l C0326
+ps "CASE C0327 past conjunction"
+l C0327
+ps "CASE C0328 negative conjunction"
+l C0328
+ps "CASE C0329 three-like nested S"
+l C0329
+ps "CASE C0330 CN adjective"
+l C0330
+ps "GF_WORDBENCH_END cases"
+q

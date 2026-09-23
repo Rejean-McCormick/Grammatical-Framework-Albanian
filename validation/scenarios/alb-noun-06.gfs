@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 7817b01ce939c3d245a3d9cf2b263f0218c084515cfa33ffaf25c74c2d307c4c validation/inputs/AlbCampaign006.gf
+-- GF_WORDBENCH_INPUT_SHA256 287530817704606c448f80982fbcfb550be3a05ccc73daf21fd3ed569c8e6ee1 validation/inputs/AlbCampaign006Sqi.gf
+i AlbCampaign006Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0051 city_N indef nom sg"
+l C0051
+ps "CASE C0052 city_N def nom sg"
+l C0052
+ps "CASE C0053 city_N indef acc sg"
+l C0053
+ps "CASE C0054 city_N def acc sg"
+l C0054
+ps "CASE C0055 city_N indef dat sg"
+l C0055
+ps "CASE C0056 city_N def dat sg"
+l C0056
+ps "CASE C0057 city_N indef ablat sg"
+l C0057
+ps "CASE C0058 city_N def ablat sg"
+l C0058
+ps "CASE C0059 city_N indef nom pl"
+l C0059
+ps "CASE C0060 city_N def acc pl"
+l C0060
+ps "GF_WORDBENCH_END cases"
+q

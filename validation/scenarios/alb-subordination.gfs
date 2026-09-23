@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 5c55819b62ac61f526f9357671d14d0b83d4e4ff9f789d772dca385da7adcb82 validation/inputs/AlbCampaign043.gf
+-- GF_WORDBENCH_INPUT_SHA256 6e1bb7b35436cfdf27029c6b29db9519f8b4336edd52cbad831b88b16459fd10 validation/inputs/AlbCampaign043Sqi.gf
+i AlbCampaign043Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0421 when she comes I live"
+l C0421
+ps "CASE C0422 because she comes I live"
+l C0422
+ps "CASE C0423 although she comes I go"
+l C0423
+ps "CASE C0424 if she comes I go"
+l C0424
+ps "CASE C0425 when he lives she comes"
+l C0425
+ps "CASE C0426 because he lives she comes"
+l C0426
+ps "CASE C0427 negative main with when"
+l C0427
+ps "CASE C0428 past main with when"
+l C0428
+ps "CASE C0429 future main with if"
+l C0429
+ps "CASE C0430 conditional main with if"
+l C0430
+ps "GF_WORDBENCH_END cases"
+q

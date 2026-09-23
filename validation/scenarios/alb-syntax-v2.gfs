@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 dfd3784c2094eb161bf2c513e43769cf3503ba5522d7ac1a44183e6eb51fb338 validation/inputs/AlbCampaign027.gf
+-- GF_WORDBENCH_INPUT_SHA256 9bca814c8bb652bfc80b0d913c93cd332df6da1f946c3b7d788941a8fe557789 validation/inputs/AlbCampaign027Sqi.gf
+i AlbCampaign027Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0261 read_V2 object 1"
+l C0261
+ps "CASE C0262 love_V2 object 2"
+l C0262
+ps "CASE C0263 buy_V2 object 3"
+l C0263
+ps "CASE C0264 eat_V2 object 4"
+l C0264
+ps "CASE C0265 drink_V2 object 5"
+l C0265
+ps "CASE C0266 see_V2 object 6"
+l C0266
+ps "CASE C0267 hear_V2 object 7"
+l C0267
+ps "CASE C0268 find_V2 object 8"
+l C0268
+ps "CASE C0269 open_V2 object 9"
+l C0269
+ps "CASE C0270 close_V2 object 10"
+l C0270
+ps "GF_WORDBENCH_END cases"
+q

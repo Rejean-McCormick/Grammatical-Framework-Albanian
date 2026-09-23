@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 e7028ca389a1311efe7519562f0cbd19ae9341dd95a68a8fa237a13e2b6d3e02 validation/inputs/AlbCampaign001.gf
+-- GF_WORDBENCH_INPUT_SHA256 571442bedb745bd7c2366d5f3fb3534fb7a4792f413837482f2e29ba204ed8a2 validation/inputs/AlbCampaign001Sqi.gf
+i AlbCampaign001Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0001 book_N indef nom sg"
+l C0001
+ps "CASE C0002 book_N def nom sg"
+l C0002
+ps "CASE C0003 book_N indef acc sg"
+l C0003
+ps "CASE C0004 book_N def acc sg"
+l C0004
+ps "CASE C0005 book_N indef dat sg"
+l C0005
+ps "CASE C0006 book_N def dat sg"
+l C0006
+ps "CASE C0007 book_N indef ablat sg"
+l C0007
+ps "CASE C0008 book_N def ablat sg"
+l C0008
+ps "CASE C0009 book_N indef nom pl"
+l C0009
+ps "CASE C0010 book_N def acc pl"
+l C0010
+ps "GF_WORDBENCH_END cases"
+q

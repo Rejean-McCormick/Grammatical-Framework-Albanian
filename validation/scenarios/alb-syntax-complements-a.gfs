@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 32862fd25a12ec29c0d1750e1eb41fa1e8994f0c403e1d56d9708fd7cfe3cbfa validation/inputs/AlbCampaign029.gf
+-- GF_WORDBENCH_INPUT_SHA256 2cbf1fdc49977a9400d9182c3ed7a74278aa415ccf7d603e2f48686b91f53abc validation/inputs/AlbCampaign029Sqi.gf
+i AlbCampaign029Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0281 say that she comes"
+l C0281
+ps "CASE C0282 hope that she comes"
+l C0282
+ps "CASE C0283 fear that she comes"
+l C0283
+ps "CASE C0284 know whether she comes"
+l C0284
+ps "CASE C0285 wonder whether she comes"
+l C0285
+ps "CASE C0286 become good"
+l C0286
+ps "CASE C0287 become beautiful"
+l C0287
+ps "CASE C0288 be married to him"
+l C0288
+ps "CASE C0289 say negative embedded"
+l C0289
+ps "CASE C0290 know wh embedded"
+l C0290
+ps "GF_WORDBENCH_END cases"
+q

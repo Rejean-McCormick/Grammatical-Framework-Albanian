@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 3756bced4c6cb801516acb7d4c43cd2a3f724c0955991ebf16e84de25fd7a36b validation/inputs/AlbCampaign038.gf
+-- GF_WORDBENCH_INPUT_SHA256 810ab8a8fbeccdd84588b8f2ba3c21e89bd1913fd88d04d236a5f0e2f8c0f92d validation/inputs/AlbCampaign038Sqi.gf
+i AlbCampaign038Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0371 want come"
+l C0371
+ps "CASE C0372 want read"
+l C0372
+ps "CASE C0373 want live"
+l C0373
+ps "CASE C0374 negative want come"
+l C0374
+ps "CASE C0375 past want come"
+l C0375
+ps "CASE C0376 say she lives"
+l C0376
+ps "CASE C0377 know who comes"
+l C0377
+ps "CASE C0378 answer him she lives"
+l C0378
+ps "CASE C0379 ask him who comes"
+l C0379
+ps "CASE C0380 beg him come"
+l C0380
+ps "GF_WORDBENCH_END cases"
+q

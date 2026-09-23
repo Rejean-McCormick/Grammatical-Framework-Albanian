@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 7dc02a551912fa509b2da7f18648d35bd3ee5aa36e3dd62c8c39f66638b1db83 validation/inputs/AlbCampaign026.gf
+-- GF_WORDBENCH_INPUT_SHA256 d973ba33d946ede634cfefc9ef122971dc1a88eabcbf12e9a66200a9eadaa0ed validation/inputs/AlbCampaign026Sqi.gf
+i AlbCampaign026Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0251 I come"
+l C0251
+ps "CASE C0252 you go"
+l C0252
+ps "CASE C0253 he lives"
+l C0253
+ps "CASE C0254 she laughs"
+l C0254
+ps "CASE C0255 we play"
+l C0255
+ps "CASE C0256 you-pl breathe"
+l C0256
+ps "CASE C0257 they fly"
+l C0257
+ps "CASE C0258 John comes"
+l C0258
+ps "CASE C0259 Paris is city"
+l C0259
+ps "CASE C0260 I am ready"
+l C0260
+ps "GF_WORDBENCH_END cases"
+q

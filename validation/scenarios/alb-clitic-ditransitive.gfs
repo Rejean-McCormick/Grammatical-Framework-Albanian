@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 1d6f119b7b2cfd6a8f7c6339c4b2a2c71206a93c22448a83b9b6e271a115be9f validation/inputs/AlbCampaign036.gf
+-- GF_WORDBENCH_INPUT_SHA256 0e26497b327a9e6570de89387e8c8a550b0e0110231428e8e260538fec0cf27f validation/inputs/AlbCampaign036Sqi.gf
+i AlbCampaign036Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0351 give it to him"
+l C0351
+ps "CASE C0352 give it to her"
+l C0352
+ps "CASE C0353 give him it"
+l C0353
+ps "CASE C0354 send it to them"
+l C0354
+ps "CASE C0355 sell it to him"
+l C0355
+ps "CASE C0356 negative give it him"
+l C0356
+ps "CASE C0357 past give it him"
+l C0357
+ps "CASE C0358 future give it her"
+l C0358
+ps "CASE C0359 conditional send it them"
+l C0359
+ps "CASE C0360 negative past sell it him"
+l C0360
+ps "GF_WORDBENCH_END cases"
+q

@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 97693c4203a35b5bbab6b65d3e7702d942e16d11e084ff263773d5064f462dda validation/inputs/AlbCampaign040.gf
+-- GF_WORDBENCH_INPUT_SHA256 7064a0274ff856c146f1b44e1b3b609f2ce1f307968fa981a94333ddfefb508d validation/inputs/AlbCampaign040Sqi.gf
+i AlbCampaign040Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0391 who comes"
+l C0391
+ps "CASE C0392 who lives"
+l C0392
+ps "CASE C0393 who loves him"
+l C0393
+ps "CASE C0394 whom she loves"
+l C0394
+ps "CASE C0395 whom he knows"
+l C0395
+ps "CASE C0396 where she lives"
+l C0396
+ps "CASE C0397 why he comes"
+l C0397
+ps "CASE C0398 when she comes"
+l C0398
+ps "CASE C0399 with whom she lives"
+l C0399
+ps "CASE C0400 which city exists"
+l C0400
+ps "GF_WORDBENCH_END cases"
+q

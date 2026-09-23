@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 bba114884cd002b906f00207aaa195d16faa492ce3e074492fbf3edecc06cb32 validation/inputs/AlbCampaign050.gf
+-- GF_WORDBENCH_INPUT_SHA256 fff76bac0d269c893020d7e766769cbe6e10905e48ca0d8afd7cc17ae282bcc4 validation/inputs/AlbCampaign050Sqi.gf
+i AlbCampaign050Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0491 if she comes we will go"
+l C0491
+ps "CASE C0492 when she comes we will eat"
+l C0492
+ps "CASE C0493 although she comes he does not go"
+l C0493
+ps "CASE C0494 because she came he lived"
+l C0494
+ps "CASE C0495 John and Mary-like she"
+l C0495
+ps "CASE C0496 very good man comes"
+l C0496
+ps "CASE C0497 beautiful girl reads book"
+l C0497
+ps "CASE C0498 man in city loves her"
+l C0498
+ps "CASE C0499 who loves the beautiful girl"
+l C0499
+ps "CASE C0500 the man who loves her comes"
+l C0500
+ps "GF_WORDBENCH_END cases"
+q

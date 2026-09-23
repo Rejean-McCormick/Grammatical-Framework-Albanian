@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 a6a532f0d81c331c92e9d6c12044203fad6903a3bfe1e0978a90115f038e6502 validation/inputs/AlbCampaign049.gf
+-- GF_WORDBENCH_INPUT_SHA256 c8a6b54093e35891b4051088ce5b442c17d1d1198fdd32d1658f695d6d9ce66b validation/inputs/AlbCampaign049Sqi.gf
+i AlbCampaign049Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0481 past wh who came"
+l C0481
+ps "CASE C0482 future wh who comes"
+l C0482
+ps "CASE C0483 negative wh who comes"
+l C0483
+ps "CASE C0484 where did she live"
+l C0484
+ps "CASE C0485 why will he come"
+l C0485
+ps "CASE C0486 relative who did not come"
+l C0486
+ps "CASE C0487 relative who came past"
+l C0487
+ps "CASE C0488 book I did not read"
+l C0488
+ps "CASE C0489 city she knew past"
+l C0489
+ps "CASE C0490 friend we will love relative"
+l C0490
+ps "GF_WORDBENCH_END cases"
+q

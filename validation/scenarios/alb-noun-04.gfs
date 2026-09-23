@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 2d92e04deb289aa96da576de62d50290f196ed46c242c11eb7d34d143daea607 validation/inputs/AlbCampaign004.gf
+-- GF_WORDBENCH_INPUT_SHA256 fd2a310293a9612115e12ca8cefa690026594fcfdaeb88451e03c57301322f39 validation/inputs/AlbCampaign004Sqi.gf
+i AlbCampaign004Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0031 house_N indef nom sg"
+l C0031
+ps "CASE C0032 house_N def nom sg"
+l C0032
+ps "CASE C0033 house_N indef acc sg"
+l C0033
+ps "CASE C0034 house_N def acc sg"
+l C0034
+ps "CASE C0035 house_N indef dat sg"
+l C0035
+ps "CASE C0036 house_N def dat sg"
+l C0036
+ps "CASE C0037 house_N indef ablat sg"
+l C0037
+ps "CASE C0038 house_N def ablat sg"
+l C0038
+ps "CASE C0039 house_N indef nom pl"
+l C0039
+ps "CASE C0040 house_N def acc pl"
+l C0040
+ps "GF_WORDBENCH_END cases"
+q

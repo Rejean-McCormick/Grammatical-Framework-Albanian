@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 8d6ef2ea472239018da6c55d3195fd91b6768333c3b13789004733c37d8943cd validation/inputs/AlbCampaign031.gf
+-- GF_WORDBENCH_INPUT_SHA256 5268936cce515630477a38c2d492ba03eed7042c0b39fdac38ab84f0c99e7857 validation/inputs/AlbCampaign031Sqi.gf
+i AlbCampaign031Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0301 he good"
+l C0301
+ps "CASE C0302 she beautiful"
+l C0302
+ps "CASE C0303 he man"
+l C0303
+ps "CASE C0304 she doctor"
+l C0304
+ps "CASE C0305 John the man"
+l C0305
+ps "CASE C0306 Paris city"
+l C0306
+ps "CASE C0307 he in house"
+l C0307
+ps "CASE C0308 she with John"
+l C0308
+ps "CASE C0309 negative good"
+l C0309
+ps "CASE C0310 past doctor"
+l C0310
+ps "GF_WORDBENCH_END cases"
+q

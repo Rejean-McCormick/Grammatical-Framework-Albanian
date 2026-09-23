@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 79cb1da9f23c2bfd77b82b165d049cb0477fa77a3b55745dd7f51991b30601ac validation/inputs/AlbCampaign019.gf
+-- GF_WORDBENCH_INPUT_SHA256 a7f1310153674ea360267c7adb87a2fb3fe1ede3ac8378bff332ff9a2139848f validation/inputs/AlbCampaign019Sqi.gf
+i AlbCampaign019Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0181 say_VS pres sg p1"
+l C0181
+ps "CASE C0182 say_VS pres sg p2"
+l C0182
+ps "CASE C0183 say_VS pres sg p3"
+l C0183
+ps "CASE C0184 say_VS pres pl p1"
+l C0184
+ps "CASE C0185 say_VS pres pl p2"
+l C0185
+ps "CASE C0186 say_VS pres pl p3"
+l C0186
+ps "CASE C0187 say_VS past sg p3"
+l C0187
+ps "CASE C0188 say_VS aorist sg p3"
+l C0188
+ps "CASE C0189 say_VS imperfect sg p3"
+l C0189
+ps "CASE C0190 say_VS subj sg p3"
+l C0190
+ps "GF_WORDBENCH_END cases"
+q

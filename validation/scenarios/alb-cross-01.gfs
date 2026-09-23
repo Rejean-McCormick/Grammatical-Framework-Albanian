@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 db96e421671eda12f17e26594ab1e3fff014151d356e0a837937042192577afb validation/inputs/AlbCampaign048.gf
+-- GF_WORDBENCH_INPUT_SHA256 b2a05633849b5b05ae64152807b08e6bfdf2038e05f857643d226b627d6738a2 validation/inputs/AlbCampaign048Sqi.gf
+i AlbCampaign048Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0471 past negative love him"
+l C0471
+ps "CASE C0472 future negative read book"
+l C0472
+ps "CASE C0473 conditional negative give"
+l C0473
+ps "CASE C0474 past progressive come"
+l C0474
+ps "CASE C0475 future passive loved"
+l C0475
+ps "CASE C0476 negative passive loved by her"
+l C0476
+ps "CASE C0477 past say negative embedded"
+l C0477
+ps "CASE C0478 future know who comes"
+l C0478
+ps "CASE C0479 negative beg him come"
+l C0479
+ps "CASE C0480 past paint it red"
+l C0480
+ps "GF_WORDBENCH_END cases"
+q

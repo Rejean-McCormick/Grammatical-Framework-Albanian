@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 7949d3190dc786a3092a1d006ed00e3004e47f847ba6a3634c7ea0e1ed6cdc9c validation/inputs/AlbCampaign047.gf
+-- GF_WORDBENCH_INPUT_SHA256 e2d8889758b7e76081152cd483042cfeec63be39c9c82ab4ed4b7c9ca0dd554c validation/inputs/AlbCampaign047Sqi.gf
+i AlbCampaign047Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0461 mass beer"
+l C0461
+ps "CASE C0462 big house"
+l C0462
+ps "CASE C0463 beautiful city"
+l C0463
+ps "CASE C0464 house in city"
+l C0464
+ps "CASE C0465 John today-like in city"
+l C0465
+ps "CASE C0466 possessive my book"
+l C0466
+ps "CASE C0467 possessive his house"
+l C0467
+ps "CASE C0468 some house"
+l C0468
+ps "CASE C0469 many books"
+l C0469
+ps "CASE C0470 every city"
+l C0470
+ps "GF_WORDBENCH_END cases"
+q

@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 45a9af7fd525335921e69363931d919d92034a26a1fa36be9235534a4f2b2eb9 validation/inputs/AlbCampaign045.gf
+-- GF_WORDBENCH_INPUT_SHA256 c5783dc0dfc7880799938b39e8f5d6ff0e4b2cced51f0e4e2e7f2236da149892 validation/inputs/AlbCampaign045Sqi.gf
+i AlbCampaign045Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0441 card 1"
+l C0441
+ps "CASE C0442 card 2"
+l C0442
+ps "CASE C0443 card 5"
+l C0443
+ps "CASE C0444 card 10"
+l C0444
+ps "CASE C0445 card 21"
+l C0445
+ps "CASE C0446 one book"
+l C0446
+ps "CASE C0447 two books"
+l C0447
+ps "CASE C0448 five books"
+l C0448
+ps "CASE C0449 ten houses"
+l C0449
+ps "CASE C0450 twenty one cities"
+l C0450
+ps "GF_WORDBENCH_END cases"
+q

@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 c0e647cadc8cd881e5b236cee76f7ac20a133d991df62bddbff3dfa0c08093b3 validation/inputs/AlbCampaign030.gf
+-- GF_WORDBENCH_INPUT_SHA256 0a8cc9a3a5247487cac5e4f760327635d58ea470ca2c0b8688036c870356523a validation/inputs/AlbCampaign030Sqi.gf
+i AlbCampaign030Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0291 answer him that she comes"
+l C0291
+ps "CASE C0292 ask him whether she comes"
+l C0292
+ps "CASE C0293 beg him to come"
+l C0293
+ps "CASE C0294 paint it red"
+l C0294
+ps "CASE C0295 answer her that he lives"
+l C0295
+ps "CASE C0296 ask her who comes"
+l C0296
+ps "CASE C0297 beg her to live"
+l C0297
+ps "CASE C0298 paint book black"
+l C0298
+ps "CASE C0299 negative ask"
+l C0299
+ps "CASE C0300 past answer"
+l C0300
+ps "GF_WORDBENCH_END cases"
+q

@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 013223545bad905bc8f591fa7bdaf1a5a2abcb9f2b24c1015861b3365f5967d8 validation/inputs/AlbCampaign044.gf
+-- GF_WORDBENCH_INPUT_SHA256 18c5ac950c250fdc1dc4ae4857e3a705285c03d7a40c7688ff8ce45226971549 validation/inputs/AlbCampaign044Sqi.gf
+i AlbCampaign044Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0431 John nom"
+l C0431
+ps "CASE C0432 John acc"
+l C0432
+ps "CASE C0433 Paris nom"
+l C0433
+ps "CASE C0434 Paris dat"
+l C0434
+ps "CASE C0435 in Paris"
+l C0435
+ps "CASE C0436 from Paris"
+l C0436
+ps "CASE C0437 with John"
+l C0437
+ps "CASE C0438 to John"
+l C0438
+ps "CASE C0439 under house"
+l C0439
+ps "CASE C0440 without him"
+l C0440
+ps "GF_WORDBENCH_END cases"
+q

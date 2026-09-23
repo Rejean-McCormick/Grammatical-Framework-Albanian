@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 e29178b3f7d9ebabaab71cf71ed167982dba292e4cebf04557201cfed0dbdb82 validation/inputs/AlbCampaign046.gf
+-- GF_WORDBENCH_INPUT_SHA256 b6160fc64664334f8a0df09a6bd08386e3d11a96a3ee070edb1736dc5d3a01be validation/inputs/AlbCampaign046Sqi.gf
+i AlbCampaign046Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0451 exist house"
+l C0451
+ps "CASE C0452 exist city"
+l C0452
+ps "CASE C0453 exist the book"
+l C0453
+ps "CASE C0454 imperative come sg"
+l C0454
+ps "CASE C0455 imperative come pl"
+l C0455
+ps "CASE C0456 imperative read it sg"
+l C0456
+ps "CASE C0457 negative imperative come"
+l C0457
+ps "CASE C0458 comparative big than him"
+l C0458
+ps "CASE C0459 married reflexive-like"
+l C0459
+ps "CASE C0460 predet only him"
+l C0460
+ps "GF_WORDBENCH_END cases"
+q

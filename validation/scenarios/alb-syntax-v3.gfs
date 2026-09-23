@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 46fca6d448f50463ca80d376913ee26f48291256bcac61ffa1d0666564aa09b8 validation/inputs/AlbCampaign028.gf
+-- GF_WORDBENCH_INPUT_SHA256 b455c5679f27872366abdb921f1d32419fc6bbddbb7747fedc7ade2023f3a7fb validation/inputs/AlbCampaign028Sqi.gf
+i AlbCampaign028Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0271 give book to him"
+l C0271
+ps "CASE C0272 give apple to her"
+l C0272
+ps "CASE C0273 send book to him"
+l C0273
+ps "CASE C0274 sell house to her"
+l C0274
+ps "CASE C0275 add book to city"
+l C0275
+ps "CASE C0276 talk with him about her"
+l C0276
+ps "CASE C0277 give book to John"
+l C0277
+ps "CASE C0278 send apple to Paris"
+l C0278
+ps "CASE C0279 past give"
+l C0279
+ps "CASE C0280 negative give"
+l C0280
+ps "GF_WORDBENCH_END cases"
+q

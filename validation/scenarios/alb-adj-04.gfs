@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 801e0716f94ef70a9821e7e48e3172f73a6e04683e5aa661b858e2e55974f03a validation/inputs/AlbCampaign024.gf
+-- GF_WORDBENCH_INPUT_SHA256 79d978e05b24c8fd68b7cfc8c3a4dfa2698fcc1c168fd06bbb83016bb32dacc6 validation/inputs/AlbCampaign024Sqi.gf
+i AlbCampaign024Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0231 beautiful_A nom masc sg"
+l C0231
+ps "CASE C0232 beautiful_A nom fem sg"
+l C0232
+ps "CASE C0233 beautiful_A nom masc pl"
+l C0233
+ps "CASE C0234 beautiful_A nom fem pl"
+l C0234
+ps "CASE C0235 beautiful_A acc masc sg"
+l C0235
+ps "CASE C0236 beautiful_A acc fem sg"
+l C0236
+ps "CASE C0237 beautiful_A dat masc sg"
+l C0237
+ps "CASE C0238 beautiful_A dat fem sg"
+l C0238
+ps "CASE C0239 beautiful_A ablat masc pl"
+l C0239
+ps "CASE C0240 beautiful_A ablat fem pl"
+l C0240
+ps "GF_WORDBENCH_END cases"
+q

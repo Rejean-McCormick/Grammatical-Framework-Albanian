@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 e6b2d3b16844bee0e041429bf088b5c885346de687c8996707405a645841b697 validation/inputs/AlbCampaign032.gf
+-- GF_WORDBENCH_INPUT_SHA256 89c4a2d02d63e4a46889159acb2c6450299c89536b423908ebf8a816df6390ff validation/inputs/AlbCampaign032Sqi.gf
+i AlbCampaign032Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0311 come in house"
+l C0311
+ps "CASE C0312 live in city"
+l C0312
+ps "CASE C0313 always come"
+l C0313
+ps "CASE C0314 very good"
+l C0314
+ps "CASE C0315 very beautiful"
+l C0315
+ps "CASE C0316 book in house"
+l C0316
+ps "CASE C0317 John in city"
+l C0317
+ps "CASE C0318 come with him"
+l C0318
+ps "CASE C0319 negative live in city"
+l C0319
+ps "CASE C0320 past come with her"
+l C0320
+ps "GF_WORDBENCH_END cases"
+q

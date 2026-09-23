@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 48f1ca871dc3e8ac79df8301a21b9531ea26fe7b2b4b7984d40e4f5767f91dd6 validation/inputs/AlbCampaign039.gf
+-- GF_WORDBENCH_INPUT_SHA256 4c9a7fd6a0c8a220010749dca1e4728ab115431a200062823cfbfcb07c07286c validation/inputs/AlbCampaign039Sqi.gf
+i AlbCampaign039Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0381 does she come"
+l C0381
+ps "CASE C0382 does he live"
+l C0382
+ps "CASE C0383 did she come"
+l C0383
+ps "CASE C0384 will she come"
+l C0384
+ps "CASE C0385 would she come"
+l C0385
+ps "CASE C0386 does she not come"
+l C0386
+ps "CASE C0387 does he read book"
+l C0387
+ps "CASE C0388 does she love him"
+l C0388
+ps "CASE C0389 did he give it her"
+l C0389
+ps "CASE C0390 does John live"
+l C0390
+ps "GF_WORDBENCH_END cases"
+q

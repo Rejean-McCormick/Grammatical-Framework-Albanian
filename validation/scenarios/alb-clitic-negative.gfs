@@ -1,0 +1,26 @@
+-- GF_WORDBENCH_INPUT_SHA256 75baae30e95403c12e273ea5e099f070c85bf1d4af8abc01a17fed423215de9c validation/inputs/AlbCampaign035.gf
+-- GF_WORDBENCH_INPUT_SHA256 686abd9e639ade89d3590374fbd6245dca9e3d20441ce742b0f0c3fa5fb45aa7 validation/inputs/AlbCampaign035Sqi.gf
+i AlbCampaign035Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C0341 negative love object 1"
+l C0341
+ps "CASE C0342 negative love object 2"
+l C0342
+ps "CASE C0343 negative love object 3"
+l C0343
+ps "CASE C0344 negative love object 4"
+l C0344
+ps "CASE C0345 negative love object 5"
+l C0345
+ps "CASE C0346 negative love object 6"
+l C0346
+ps "CASE C0347 negative love object 7"
+l C0347
+ps "CASE C0348 negative love object 8"
+l C0348
+ps "CASE C0349 negative love object 9"
+l C0349
+ps "CASE C0350 negative love object 10"
+l C0350
+ps "GF_WORDBENCH_END cases"
+q

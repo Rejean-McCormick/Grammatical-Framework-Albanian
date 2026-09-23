@@ -1,0 +1,501 @@
+case_id,scenario_id,family,label,module,expression
+C0001,alb-noun-01,noun-morphology,book_N indef nom sg,AlbCampaign001,(L.book_N).s ! Indef ! Nom ! Sg
+C0002,alb-noun-01,noun-morphology,book_N def nom sg,AlbCampaign001,(L.book_N).s ! Def ! Nom ! Sg
+C0003,alb-noun-01,noun-morphology,book_N indef acc sg,AlbCampaign001,(L.book_N).s ! Indef ! Acc ! Sg
+C0004,alb-noun-01,noun-morphology,book_N def acc sg,AlbCampaign001,(L.book_N).s ! Def ! Acc ! Sg
+C0005,alb-noun-01,noun-morphology,book_N indef dat sg,AlbCampaign001,(L.book_N).s ! Indef ! Dat ! Sg
+C0006,alb-noun-01,noun-morphology,book_N def dat sg,AlbCampaign001,(L.book_N).s ! Def ! Dat ! Sg
+C0007,alb-noun-01,noun-morphology,book_N indef ablat sg,AlbCampaign001,(L.book_N).s ! Indef ! Ablat ! Sg
+C0008,alb-noun-01,noun-morphology,book_N def ablat sg,AlbCampaign001,(L.book_N).s ! Def ! Ablat ! Sg
+C0009,alb-noun-01,noun-morphology,book_N indef nom pl,AlbCampaign001,(L.book_N).s ! Indef ! Nom ! Pl
+C0010,alb-noun-01,noun-morphology,book_N def acc pl,AlbCampaign001,(L.book_N).s ! Def ! Acc ! Pl
+C0011,alb-noun-02,noun-morphology,boy_N indef nom sg,AlbCampaign002,(L.boy_N).s ! Indef ! Nom ! Sg
+C0012,alb-noun-02,noun-morphology,boy_N def nom sg,AlbCampaign002,(L.boy_N).s ! Def ! Nom ! Sg
+C0013,alb-noun-02,noun-morphology,boy_N indef acc sg,AlbCampaign002,(L.boy_N).s ! Indef ! Acc ! Sg
+C0014,alb-noun-02,noun-morphology,boy_N def acc sg,AlbCampaign002,(L.boy_N).s ! Def ! Acc ! Sg
+C0015,alb-noun-02,noun-morphology,boy_N indef dat sg,AlbCampaign002,(L.boy_N).s ! Indef ! Dat ! Sg
+C0016,alb-noun-02,noun-morphology,boy_N def dat sg,AlbCampaign002,(L.boy_N).s ! Def ! Dat ! Sg
+C0017,alb-noun-02,noun-morphology,boy_N indef ablat sg,AlbCampaign002,(L.boy_N).s ! Indef ! Ablat ! Sg
+C0018,alb-noun-02,noun-morphology,boy_N def ablat sg,AlbCampaign002,(L.boy_N).s ! Def ! Ablat ! Sg
+C0019,alb-noun-02,noun-morphology,boy_N indef nom pl,AlbCampaign002,(L.boy_N).s ! Indef ! Nom ! Pl
+C0020,alb-noun-02,noun-morphology,boy_N def acc pl,AlbCampaign002,(L.boy_N).s ! Def ! Acc ! Pl
+C0021,alb-noun-03,noun-morphology,girl_N indef nom sg,AlbCampaign003,(L.girl_N).s ! Indef ! Nom ! Sg
+C0022,alb-noun-03,noun-morphology,girl_N def nom sg,AlbCampaign003,(L.girl_N).s ! Def ! Nom ! Sg
+C0023,alb-noun-03,noun-morphology,girl_N indef acc sg,AlbCampaign003,(L.girl_N).s ! Indef ! Acc ! Sg
+C0024,alb-noun-03,noun-morphology,girl_N def acc sg,AlbCampaign003,(L.girl_N).s ! Def ! Acc ! Sg
+C0025,alb-noun-03,noun-morphology,girl_N indef dat sg,AlbCampaign003,(L.girl_N).s ! Indef ! Dat ! Sg
+C0026,alb-noun-03,noun-morphology,girl_N def dat sg,AlbCampaign003,(L.girl_N).s ! Def ! Dat ! Sg
+C0027,alb-noun-03,noun-morphology,girl_N indef ablat sg,AlbCampaign003,(L.girl_N).s ! Indef ! Ablat ! Sg
+C0028,alb-noun-03,noun-morphology,girl_N def ablat sg,AlbCampaign003,(L.girl_N).s ! Def ! Ablat ! Sg
+C0029,alb-noun-03,noun-morphology,girl_N indef nom pl,AlbCampaign003,(L.girl_N).s ! Indef ! Nom ! Pl
+C0030,alb-noun-03,noun-morphology,girl_N def acc pl,AlbCampaign003,(L.girl_N).s ! Def ! Acc ! Pl
+C0031,alb-noun-04,noun-morphology,house_N indef nom sg,AlbCampaign004,(L.house_N).s ! Indef ! Nom ! Sg
+C0032,alb-noun-04,noun-morphology,house_N def nom sg,AlbCampaign004,(L.house_N).s ! Def ! Nom ! Sg
+C0033,alb-noun-04,noun-morphology,house_N indef acc sg,AlbCampaign004,(L.house_N).s ! Indef ! Acc ! Sg
+C0034,alb-noun-04,noun-morphology,house_N def acc sg,AlbCampaign004,(L.house_N).s ! Def ! Acc ! Sg
+C0035,alb-noun-04,noun-morphology,house_N indef dat sg,AlbCampaign004,(L.house_N).s ! Indef ! Dat ! Sg
+C0036,alb-noun-04,noun-morphology,house_N def dat sg,AlbCampaign004,(L.house_N).s ! Def ! Dat ! Sg
+C0037,alb-noun-04,noun-morphology,house_N indef ablat sg,AlbCampaign004,(L.house_N).s ! Indef ! Ablat ! Sg
+C0038,alb-noun-04,noun-morphology,house_N def ablat sg,AlbCampaign004,(L.house_N).s ! Def ! Ablat ! Sg
+C0039,alb-noun-04,noun-morphology,house_N indef nom pl,AlbCampaign004,(L.house_N).s ! Indef ! Nom ! Pl
+C0040,alb-noun-04,noun-morphology,house_N def acc pl,AlbCampaign004,(L.house_N).s ! Def ! Acc ! Pl
+C0041,alb-noun-05,noun-morphology,friend_N indef nom sg,AlbCampaign005,(L.friend_N).s ! Indef ! Nom ! Sg
+C0042,alb-noun-05,noun-morphology,friend_N def nom sg,AlbCampaign005,(L.friend_N).s ! Def ! Nom ! Sg
+C0043,alb-noun-05,noun-morphology,friend_N indef acc sg,AlbCampaign005,(L.friend_N).s ! Indef ! Acc ! Sg
+C0044,alb-noun-05,noun-morphology,friend_N def acc sg,AlbCampaign005,(L.friend_N).s ! Def ! Acc ! Sg
+C0045,alb-noun-05,noun-morphology,friend_N indef dat sg,AlbCampaign005,(L.friend_N).s ! Indef ! Dat ! Sg
+C0046,alb-noun-05,noun-morphology,friend_N def dat sg,AlbCampaign005,(L.friend_N).s ! Def ! Dat ! Sg
+C0047,alb-noun-05,noun-morphology,friend_N indef ablat sg,AlbCampaign005,(L.friend_N).s ! Indef ! Ablat ! Sg
+C0048,alb-noun-05,noun-morphology,friend_N def ablat sg,AlbCampaign005,(L.friend_N).s ! Def ! Ablat ! Sg
+C0049,alb-noun-05,noun-morphology,friend_N indef nom pl,AlbCampaign005,(L.friend_N).s ! Indef ! Nom ! Pl
+C0050,alb-noun-05,noun-morphology,friend_N def acc pl,AlbCampaign005,(L.friend_N).s ! Def ! Acc ! Pl
+C0051,alb-noun-06,noun-morphology,city_N indef nom sg,AlbCampaign006,(L.city_N).s ! Indef ! Nom ! Sg
+C0052,alb-noun-06,noun-morphology,city_N def nom sg,AlbCampaign006,(L.city_N).s ! Def ! Nom ! Sg
+C0053,alb-noun-06,noun-morphology,city_N indef acc sg,AlbCampaign006,(L.city_N).s ! Indef ! Acc ! Sg
+C0054,alb-noun-06,noun-morphology,city_N def acc sg,AlbCampaign006,(L.city_N).s ! Def ! Acc ! Sg
+C0055,alb-noun-06,noun-morphology,city_N indef dat sg,AlbCampaign006,(L.city_N).s ! Indef ! Dat ! Sg
+C0056,alb-noun-06,noun-morphology,city_N def dat sg,AlbCampaign006,(L.city_N).s ! Def ! Dat ! Sg
+C0057,alb-noun-06,noun-morphology,city_N indef ablat sg,AlbCampaign006,(L.city_N).s ! Indef ! Ablat ! Sg
+C0058,alb-noun-06,noun-morphology,city_N def ablat sg,AlbCampaign006,(L.city_N).s ! Def ! Ablat ! Sg
+C0059,alb-noun-06,noun-morphology,city_N indef nom pl,AlbCampaign006,(L.city_N).s ! Indef ! Nom ! Pl
+C0060,alb-noun-06,noun-morphology,city_N def acc pl,AlbCampaign006,(L.city_N).s ! Def ! Acc ! Pl
+C0061,alb-noun-07,noun-morphology,man_N indef nom sg,AlbCampaign007,(L.man_N).s ! Indef ! Nom ! Sg
+C0062,alb-noun-07,noun-morphology,man_N def nom sg,AlbCampaign007,(L.man_N).s ! Def ! Nom ! Sg
+C0063,alb-noun-07,noun-morphology,man_N indef acc sg,AlbCampaign007,(L.man_N).s ! Indef ! Acc ! Sg
+C0064,alb-noun-07,noun-morphology,man_N def acc sg,AlbCampaign007,(L.man_N).s ! Def ! Acc ! Sg
+C0065,alb-noun-07,noun-morphology,man_N indef dat sg,AlbCampaign007,(L.man_N).s ! Indef ! Dat ! Sg
+C0066,alb-noun-07,noun-morphology,man_N def dat sg,AlbCampaign007,(L.man_N).s ! Def ! Dat ! Sg
+C0067,alb-noun-07,noun-morphology,man_N indef ablat sg,AlbCampaign007,(L.man_N).s ! Indef ! Ablat ! Sg
+C0068,alb-noun-07,noun-morphology,man_N def ablat sg,AlbCampaign007,(L.man_N).s ! Def ! Ablat ! Sg
+C0069,alb-noun-07,noun-morphology,man_N indef nom pl,AlbCampaign007,(L.man_N).s ! Indef ! Nom ! Pl
+C0070,alb-noun-07,noun-morphology,man_N def acc pl,AlbCampaign007,(L.man_N).s ! Def ! Acc ! Pl
+C0071,alb-noun-08,noun-morphology,apple_N indef nom sg,AlbCampaign008,(L.apple_N).s ! Indef ! Nom ! Sg
+C0072,alb-noun-08,noun-morphology,apple_N def nom sg,AlbCampaign008,(L.apple_N).s ! Def ! Nom ! Sg
+C0073,alb-noun-08,noun-morphology,apple_N indef acc sg,AlbCampaign008,(L.apple_N).s ! Indef ! Acc ! Sg
+C0074,alb-noun-08,noun-morphology,apple_N def acc sg,AlbCampaign008,(L.apple_N).s ! Def ! Acc ! Sg
+C0075,alb-noun-08,noun-morphology,apple_N indef dat sg,AlbCampaign008,(L.apple_N).s ! Indef ! Dat ! Sg
+C0076,alb-noun-08,noun-morphology,apple_N def dat sg,AlbCampaign008,(L.apple_N).s ! Def ! Dat ! Sg
+C0077,alb-noun-08,noun-morphology,apple_N indef ablat sg,AlbCampaign008,(L.apple_N).s ! Indef ! Ablat ! Sg
+C0078,alb-noun-08,noun-morphology,apple_N def ablat sg,AlbCampaign008,(L.apple_N).s ! Def ! Ablat ! Sg
+C0079,alb-noun-08,noun-morphology,apple_N indef nom pl,AlbCampaign008,(L.apple_N).s ! Indef ! Nom ! Pl
+C0080,alb-noun-08,noun-morphology,apple_N def acc pl,AlbCampaign008,(L.apple_N).s ! Def ! Acc ! Pl
+C0081,alb-noun-09,noun-morphology,mother_N2 indef nom sg,AlbCampaign009,(L.mother_N2).s ! Indef ! Nom ! Sg
+C0082,alb-noun-09,noun-morphology,mother_N2 def nom sg,AlbCampaign009,(L.mother_N2).s ! Def ! Nom ! Sg
+C0083,alb-noun-09,noun-morphology,mother_N2 indef acc sg,AlbCampaign009,(L.mother_N2).s ! Indef ! Acc ! Sg
+C0084,alb-noun-09,noun-morphology,mother_N2 def acc sg,AlbCampaign009,(L.mother_N2).s ! Def ! Acc ! Sg
+C0085,alb-noun-09,noun-morphology,mother_N2 indef dat sg,AlbCampaign009,(L.mother_N2).s ! Indef ! Dat ! Sg
+C0086,alb-noun-09,noun-morphology,mother_N2 def dat sg,AlbCampaign009,(L.mother_N2).s ! Def ! Dat ! Sg
+C0087,alb-noun-09,noun-morphology,mother_N2 indef ablat sg,AlbCampaign009,(L.mother_N2).s ! Indef ! Ablat ! Sg
+C0088,alb-noun-09,noun-morphology,mother_N2 def ablat sg,AlbCampaign009,(L.mother_N2).s ! Def ! Ablat ! Sg
+C0089,alb-noun-09,noun-morphology,mother_N2 indef nom pl,AlbCampaign009,(L.mother_N2).s ! Indef ! Nom ! Pl
+C0090,alb-noun-09,noun-morphology,mother_N2 def acc pl,AlbCampaign009,(L.mother_N2).s ! Def ! Acc ! Pl
+C0091,alb-noun-10,noun-morphology,language_N indef nom sg,AlbCampaign010,(L.language_N).s ! Indef ! Nom ! Sg
+C0092,alb-noun-10,noun-morphology,language_N def nom sg,AlbCampaign010,(L.language_N).s ! Def ! Nom ! Sg
+C0093,alb-noun-10,noun-morphology,language_N indef acc sg,AlbCampaign010,(L.language_N).s ! Indef ! Acc ! Sg
+C0094,alb-noun-10,noun-morphology,language_N def acc sg,AlbCampaign010,(L.language_N).s ! Def ! Acc ! Sg
+C0095,alb-noun-10,noun-morphology,language_N indef dat sg,AlbCampaign010,(L.language_N).s ! Indef ! Dat ! Sg
+C0096,alb-noun-10,noun-morphology,language_N def dat sg,AlbCampaign010,(L.language_N).s ! Def ! Dat ! Sg
+C0097,alb-noun-10,noun-morphology,language_N indef ablat sg,AlbCampaign010,(L.language_N).s ! Indef ! Ablat ! Sg
+C0098,alb-noun-10,noun-morphology,language_N def ablat sg,AlbCampaign010,(L.language_N).s ! Def ! Ablat ! Sg
+C0099,alb-noun-10,noun-morphology,language_N indef nom pl,AlbCampaign010,(L.language_N).s ! Indef ! Nom ! Pl
+C0100,alb-noun-10,noun-morphology,language_N def acc pl,AlbCampaign010,(L.language_N).s ! Def ! Acc ! Pl
+C0101,alb-verb-01,verb-morphology,come_V pres sg p1,AlbCampaign011,(L.come_V).Indicative ! Pres ! Sg ! P1
+C0102,alb-verb-01,verb-morphology,come_V pres sg p2,AlbCampaign011,(L.come_V).Indicative ! Pres ! Sg ! P2
+C0103,alb-verb-01,verb-morphology,come_V pres sg p3,AlbCampaign011,(L.come_V).Indicative ! Pres ! Sg ! P3
+C0104,alb-verb-01,verb-morphology,come_V pres pl p1,AlbCampaign011,(L.come_V).Indicative ! Pres ! Pl ! P1
+C0105,alb-verb-01,verb-morphology,come_V pres pl p2,AlbCampaign011,(L.come_V).Indicative ! Pres ! Pl ! P2
+C0106,alb-verb-01,verb-morphology,come_V pres pl p3,AlbCampaign011,(L.come_V).Indicative ! Pres ! Pl ! P3
+C0107,alb-verb-01,verb-morphology,come_V past sg p3,AlbCampaign011,(L.come_V).Indicative ! Past ! Sg ! P3
+C0108,alb-verb-01,verb-morphology,come_V aorist sg p3,AlbCampaign011,(L.come_V).Indicative ! Aorist ! Sg ! P3
+C0109,alb-verb-01,verb-morphology,come_V imperfect sg p3,AlbCampaign011,(L.come_V).Indicative ! Imperfect ! Sg ! P3
+C0110,alb-verb-01,verb-morphology,come_V subj sg p3,AlbCampaign011,(L.come_V).Subjunctive ! Sg ! P3
+C0111,alb-verb-02,verb-morphology,go_V pres sg p1,AlbCampaign012,(L.go_V).Indicative ! Pres ! Sg ! P1
+C0112,alb-verb-02,verb-morphology,go_V pres sg p2,AlbCampaign012,(L.go_V).Indicative ! Pres ! Sg ! P2
+C0113,alb-verb-02,verb-morphology,go_V pres sg p3,AlbCampaign012,(L.go_V).Indicative ! Pres ! Sg ! P3
+C0114,alb-verb-02,verb-morphology,go_V pres pl p1,AlbCampaign012,(L.go_V).Indicative ! Pres ! Pl ! P1
+C0115,alb-verb-02,verb-morphology,go_V pres pl p2,AlbCampaign012,(L.go_V).Indicative ! Pres ! Pl ! P2
+C0116,alb-verb-02,verb-morphology,go_V pres pl p3,AlbCampaign012,(L.go_V).Indicative ! Pres ! Pl ! P3
+C0117,alb-verb-02,verb-morphology,go_V past sg p3,AlbCampaign012,(L.go_V).Indicative ! Past ! Sg ! P3
+C0118,alb-verb-02,verb-morphology,go_V aorist sg p3,AlbCampaign012,(L.go_V).Indicative ! Aorist ! Sg ! P3
+C0119,alb-verb-02,verb-morphology,go_V imperfect sg p3,AlbCampaign012,(L.go_V).Indicative ! Imperfect ! Sg ! P3
+C0120,alb-verb-02,verb-morphology,go_V subj sg p3,AlbCampaign012,(L.go_V).Subjunctive ! Sg ! P3
+C0121,alb-verb-03,verb-morphology,live_V pres sg p1,AlbCampaign013,(L.live_V).Indicative ! Pres ! Sg ! P1
+C0122,alb-verb-03,verb-morphology,live_V pres sg p2,AlbCampaign013,(L.live_V).Indicative ! Pres ! Sg ! P2
+C0123,alb-verb-03,verb-morphology,live_V pres sg p3,AlbCampaign013,(L.live_V).Indicative ! Pres ! Sg ! P3
+C0124,alb-verb-03,verb-morphology,live_V pres pl p1,AlbCampaign013,(L.live_V).Indicative ! Pres ! Pl ! P1
+C0125,alb-verb-03,verb-morphology,live_V pres pl p2,AlbCampaign013,(L.live_V).Indicative ! Pres ! Pl ! P2
+C0126,alb-verb-03,verb-morphology,live_V pres pl p3,AlbCampaign013,(L.live_V).Indicative ! Pres ! Pl ! P3
+C0127,alb-verb-03,verb-morphology,live_V past sg p3,AlbCampaign013,(L.live_V).Indicative ! Past ! Sg ! P3
+C0128,alb-verb-03,verb-morphology,live_V aorist sg p3,AlbCampaign013,(L.live_V).Indicative ! Aorist ! Sg ! P3
+C0129,alb-verb-03,verb-morphology,live_V imperfect sg p3,AlbCampaign013,(L.live_V).Indicative ! Imperfect ! Sg ! P3
+C0130,alb-verb-03,verb-morphology,live_V subj sg p3,AlbCampaign013,(L.live_V).Subjunctive ! Sg ! P3
+C0131,alb-verb-04,verb-morphology,eat_V2 pres sg p1,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Sg ! P1
+C0132,alb-verb-04,verb-morphology,eat_V2 pres sg p2,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Sg ! P2
+C0133,alb-verb-04,verb-morphology,eat_V2 pres sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Sg ! P3
+C0134,alb-verb-04,verb-morphology,eat_V2 pres pl p1,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Pl ! P1
+C0135,alb-verb-04,verb-morphology,eat_V2 pres pl p2,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Pl ! P2
+C0136,alb-verb-04,verb-morphology,eat_V2 pres pl p3,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Pl ! P3
+C0137,alb-verb-04,verb-morphology,eat_V2 past sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Past ! Sg ! P3
+C0138,alb-verb-04,verb-morphology,eat_V2 aorist sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Aorist ! Sg ! P3
+C0139,alb-verb-04,verb-morphology,eat_V2 imperfect sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Imperfect ! Sg ! P3
+C0140,alb-verb-04,verb-morphology,eat_V2 subj sg p3,AlbCampaign014,(L.eat_V2).Subjunctive ! Sg ! P3
+C0141,alb-verb-05,verb-morphology,drink_V2 pres sg p1,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Sg ! P1
+C0142,alb-verb-05,verb-morphology,drink_V2 pres sg p2,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Sg ! P2
+C0143,alb-verb-05,verb-morphology,drink_V2 pres sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Sg ! P3
+C0144,alb-verb-05,verb-morphology,drink_V2 pres pl p1,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Pl ! P1
+C0145,alb-verb-05,verb-morphology,drink_V2 pres pl p2,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Pl ! P2
+C0146,alb-verb-05,verb-morphology,drink_V2 pres pl p3,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Pl ! P3
+C0147,alb-verb-05,verb-morphology,drink_V2 past sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Past ! Sg ! P3
+C0148,alb-verb-05,verb-morphology,drink_V2 aorist sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Aorist ! Sg ! P3
+C0149,alb-verb-05,verb-morphology,drink_V2 imperfect sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Imperfect ! Sg ! P3
+C0150,alb-verb-05,verb-morphology,drink_V2 subj sg p3,AlbCampaign015,(L.drink_V2).Subjunctive ! Sg ! P3
+C0151,alb-verb-06,verb-morphology,buy_V2 pres sg p1,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Sg ! P1
+C0152,alb-verb-06,verb-morphology,buy_V2 pres sg p2,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Sg ! P2
+C0153,alb-verb-06,verb-morphology,buy_V2 pres sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Sg ! P3
+C0154,alb-verb-06,verb-morphology,buy_V2 pres pl p1,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Pl ! P1
+C0155,alb-verb-06,verb-morphology,buy_V2 pres pl p2,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Pl ! P2
+C0156,alb-verb-06,verb-morphology,buy_V2 pres pl p3,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Pl ! P3
+C0157,alb-verb-06,verb-morphology,buy_V2 past sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Past ! Sg ! P3
+C0158,alb-verb-06,verb-morphology,buy_V2 aorist sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Aorist ! Sg ! P3
+C0159,alb-verb-06,verb-morphology,buy_V2 imperfect sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Imperfect ! Sg ! P3
+C0160,alb-verb-06,verb-morphology,buy_V2 subj sg p3,AlbCampaign016,(L.buy_V2).Subjunctive ! Sg ! P3
+C0161,alb-verb-07,verb-morphology,love_V2 pres sg p1,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Sg ! P1
+C0162,alb-verb-07,verb-morphology,love_V2 pres sg p2,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Sg ! P2
+C0163,alb-verb-07,verb-morphology,love_V2 pres sg p3,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Sg ! P3
+C0164,alb-verb-07,verb-morphology,love_V2 pres pl p1,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Pl ! P1
+C0165,alb-verb-07,verb-morphology,love_V2 pres pl p2,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Pl ! P2
+C0166,alb-verb-07,verb-morphology,love_V2 pres pl p3,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Pl ! P3
+C0167,alb-verb-07,verb-morphology,love_V2 past sg p3,AlbCampaign017,(L.love_V2).Indicative ! Past ! Sg ! P3
+C0168,alb-verb-07,verb-morphology,love_V2 aorist sg p3,AlbCampaign017,(L.love_V2).Indicative ! Aorist ! Sg ! P3
+C0169,alb-verb-07,verb-morphology,love_V2 imperfect sg p3,AlbCampaign017,(L.love_V2).Indicative ! Imperfect ! Sg ! P3
+C0170,alb-verb-07,verb-morphology,love_V2 subj sg p3,AlbCampaign017,(L.love_V2).Subjunctive ! Sg ! P3
+C0171,alb-verb-08,verb-morphology,give_V3 pres sg p1,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Sg ! P1
+C0172,alb-verb-08,verb-morphology,give_V3 pres sg p2,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Sg ! P2
+C0173,alb-verb-08,verb-morphology,give_V3 pres sg p3,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Sg ! P3
+C0174,alb-verb-08,verb-morphology,give_V3 pres pl p1,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Pl ! P1
+C0175,alb-verb-08,verb-morphology,give_V3 pres pl p2,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Pl ! P2
+C0176,alb-verb-08,verb-morphology,give_V3 pres pl p3,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Pl ! P3
+C0177,alb-verb-08,verb-morphology,give_V3 past sg p3,AlbCampaign018,(L.give_V3).Indicative ! Past ! Sg ! P3
+C0178,alb-verb-08,verb-morphology,give_V3 aorist sg p3,AlbCampaign018,(L.give_V3).Indicative ! Aorist ! Sg ! P3
+C0179,alb-verb-08,verb-morphology,give_V3 imperfect sg p3,AlbCampaign018,(L.give_V3).Indicative ! Imperfect ! Sg ! P3
+C0180,alb-verb-08,verb-morphology,give_V3 subj sg p3,AlbCampaign018,(L.give_V3).Subjunctive ! Sg ! P3
+C0181,alb-verb-09,verb-morphology,say_VS pres sg p1,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Sg ! P1
+C0182,alb-verb-09,verb-morphology,say_VS pres sg p2,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Sg ! P2
+C0183,alb-verb-09,verb-morphology,say_VS pres sg p3,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Sg ! P3
+C0184,alb-verb-09,verb-morphology,say_VS pres pl p1,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Pl ! P1
+C0185,alb-verb-09,verb-morphology,say_VS pres pl p2,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Pl ! P2
+C0186,alb-verb-09,verb-morphology,say_VS pres pl p3,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Pl ! P3
+C0187,alb-verb-09,verb-morphology,say_VS past sg p3,AlbCampaign019,(L.say_VS).Indicative ! Past ! Sg ! P3
+C0188,alb-verb-09,verb-morphology,say_VS aorist sg p3,AlbCampaign019,(L.say_VS).Indicative ! Aorist ! Sg ! P3
+C0189,alb-verb-09,verb-morphology,say_VS imperfect sg p3,AlbCampaign019,(L.say_VS).Indicative ! Imperfect ! Sg ! P3
+C0190,alb-verb-09,verb-morphology,say_VS subj sg p3,AlbCampaign019,(L.say_VS).Subjunctive ! Sg ! P3
+C0191,alb-verb-10,verb-morphology,become_VA pres sg p1,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Sg ! P1
+C0192,alb-verb-10,verb-morphology,become_VA pres sg p2,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Sg ! P2
+C0193,alb-verb-10,verb-morphology,become_VA pres sg p3,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Sg ! P3
+C0194,alb-verb-10,verb-morphology,become_VA pres pl p1,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Pl ! P1
+C0195,alb-verb-10,verb-morphology,become_VA pres pl p2,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Pl ! P2
+C0196,alb-verb-10,verb-morphology,become_VA pres pl p3,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Pl ! P3
+C0197,alb-verb-10,verb-morphology,become_VA past sg p3,AlbCampaign020,(L.become_VA).Indicative ! Past ! Sg ! P3
+C0198,alb-verb-10,verb-morphology,become_VA aorist sg p3,AlbCampaign020,(L.become_VA).Indicative ! Aorist ! Sg ! P3
+C0199,alb-verb-10,verb-morphology,become_VA imperfect sg p3,AlbCampaign020,(L.become_VA).Indicative ! Imperfect ! Sg ! P3
+C0200,alb-verb-10,verb-morphology,become_VA subj sg p3,AlbCampaign020,(L.become_VA).Subjunctive ! Sg ! P3
+C0201,alb-adj-01,adjective-agreement,good_A nom masc sg,AlbCampaign021,(L.good_A).s ! Nom ! Masc ! Sg
+C0202,alb-adj-01,adjective-agreement,good_A nom fem sg,AlbCampaign021,(L.good_A).s ! Nom ! Fem ! Sg
+C0203,alb-adj-01,adjective-agreement,good_A nom masc pl,AlbCampaign021,(L.good_A).s ! Nom ! Masc ! Pl
+C0204,alb-adj-01,adjective-agreement,good_A nom fem pl,AlbCampaign021,(L.good_A).s ! Nom ! Fem ! Pl
+C0205,alb-adj-01,adjective-agreement,good_A acc masc sg,AlbCampaign021,(L.good_A).s ! Acc ! Masc ! Sg
+C0206,alb-adj-01,adjective-agreement,good_A acc fem sg,AlbCampaign021,(L.good_A).s ! Acc ! Fem ! Sg
+C0207,alb-adj-01,adjective-agreement,good_A dat masc sg,AlbCampaign021,(L.good_A).s ! Dat ! Masc ! Sg
+C0208,alb-adj-01,adjective-agreement,good_A dat fem sg,AlbCampaign021,(L.good_A).s ! Dat ! Fem ! Sg
+C0209,alb-adj-01,adjective-agreement,good_A ablat masc pl,AlbCampaign021,(L.good_A).s ! Ablat ! Masc ! Pl
+C0210,alb-adj-01,adjective-agreement,good_A ablat fem pl,AlbCampaign021,(L.good_A).s ! Ablat ! Fem ! Pl
+C0211,alb-adj-02,adjective-agreement,bad_A nom masc sg,AlbCampaign022,(L.bad_A).s ! Nom ! Masc ! Sg
+C0212,alb-adj-02,adjective-agreement,bad_A nom fem sg,AlbCampaign022,(L.bad_A).s ! Nom ! Fem ! Sg
+C0213,alb-adj-02,adjective-agreement,bad_A nom masc pl,AlbCampaign022,(L.bad_A).s ! Nom ! Masc ! Pl
+C0214,alb-adj-02,adjective-agreement,bad_A nom fem pl,AlbCampaign022,(L.bad_A).s ! Nom ! Fem ! Pl
+C0215,alb-adj-02,adjective-agreement,bad_A acc masc sg,AlbCampaign022,(L.bad_A).s ! Acc ! Masc ! Sg
+C0216,alb-adj-02,adjective-agreement,bad_A acc fem sg,AlbCampaign022,(L.bad_A).s ! Acc ! Fem ! Sg
+C0217,alb-adj-02,adjective-agreement,bad_A dat masc sg,AlbCampaign022,(L.bad_A).s ! Dat ! Masc ! Sg
+C0218,alb-adj-02,adjective-agreement,bad_A dat fem sg,AlbCampaign022,(L.bad_A).s ! Dat ! Fem ! Sg
+C0219,alb-adj-02,adjective-agreement,bad_A ablat masc pl,AlbCampaign022,(L.bad_A).s ! Ablat ! Masc ! Pl
+C0220,alb-adj-02,adjective-agreement,bad_A ablat fem pl,AlbCampaign022,(L.bad_A).s ! Ablat ! Fem ! Pl
+C0221,alb-adj-03,adjective-agreement,big_A nom masc sg,AlbCampaign023,(L.big_A).s ! Nom ! Masc ! Sg
+C0222,alb-adj-03,adjective-agreement,big_A nom fem sg,AlbCampaign023,(L.big_A).s ! Nom ! Fem ! Sg
+C0223,alb-adj-03,adjective-agreement,big_A nom masc pl,AlbCampaign023,(L.big_A).s ! Nom ! Masc ! Pl
+C0224,alb-adj-03,adjective-agreement,big_A nom fem pl,AlbCampaign023,(L.big_A).s ! Nom ! Fem ! Pl
+C0225,alb-adj-03,adjective-agreement,big_A acc masc sg,AlbCampaign023,(L.big_A).s ! Acc ! Masc ! Sg
+C0226,alb-adj-03,adjective-agreement,big_A acc fem sg,AlbCampaign023,(L.big_A).s ! Acc ! Fem ! Sg
+C0227,alb-adj-03,adjective-agreement,big_A dat masc sg,AlbCampaign023,(L.big_A).s ! Dat ! Masc ! Sg
+C0228,alb-adj-03,adjective-agreement,big_A dat fem sg,AlbCampaign023,(L.big_A).s ! Dat ! Fem ! Sg
+C0229,alb-adj-03,adjective-agreement,big_A ablat masc pl,AlbCampaign023,(L.big_A).s ! Ablat ! Masc ! Pl
+C0230,alb-adj-03,adjective-agreement,big_A ablat fem pl,AlbCampaign023,(L.big_A).s ! Ablat ! Fem ! Pl
+C0231,alb-adj-04,adjective-agreement,beautiful_A nom masc sg,AlbCampaign024,(L.beautiful_A).s ! Nom ! Masc ! Sg
+C0232,alb-adj-04,adjective-agreement,beautiful_A nom fem sg,AlbCampaign024,(L.beautiful_A).s ! Nom ! Fem ! Sg
+C0233,alb-adj-04,adjective-agreement,beautiful_A nom masc pl,AlbCampaign024,(L.beautiful_A).s ! Nom ! Masc ! Pl
+C0234,alb-adj-04,adjective-agreement,beautiful_A nom fem pl,AlbCampaign024,(L.beautiful_A).s ! Nom ! Fem ! Pl
+C0235,alb-adj-04,adjective-agreement,beautiful_A acc masc sg,AlbCampaign024,(L.beautiful_A).s ! Acc ! Masc ! Sg
+C0236,alb-adj-04,adjective-agreement,beautiful_A acc fem sg,AlbCampaign024,(L.beautiful_A).s ! Acc ! Fem ! Sg
+C0237,alb-adj-04,adjective-agreement,beautiful_A dat masc sg,AlbCampaign024,(L.beautiful_A).s ! Dat ! Masc ! Sg
+C0238,alb-adj-04,adjective-agreement,beautiful_A dat fem sg,AlbCampaign024,(L.beautiful_A).s ! Dat ! Fem ! Sg
+C0239,alb-adj-04,adjective-agreement,beautiful_A ablat masc pl,AlbCampaign024,(L.beautiful_A).s ! Ablat ! Masc ! Pl
+C0240,alb-adj-04,adjective-agreement,beautiful_A ablat fem pl,AlbCampaign024,(L.beautiful_A).s ! Ablat ! Fem ! Pl
+C0241,alb-adj-05,adjective-agreement,new_A nom masc sg,AlbCampaign025,(L.new_A).s ! Nom ! Masc ! Sg
+C0242,alb-adj-05,adjective-agreement,new_A nom fem sg,AlbCampaign025,(L.new_A).s ! Nom ! Fem ! Sg
+C0243,alb-adj-05,adjective-agreement,new_A nom masc pl,AlbCampaign025,(L.new_A).s ! Nom ! Masc ! Pl
+C0244,alb-adj-05,adjective-agreement,new_A nom fem pl,AlbCampaign025,(L.new_A).s ! Nom ! Fem ! Pl
+C0245,alb-adj-05,adjective-agreement,new_A acc masc sg,AlbCampaign025,(L.new_A).s ! Acc ! Masc ! Sg
+C0246,alb-adj-05,adjective-agreement,new_A acc fem sg,AlbCampaign025,(L.new_A).s ! Acc ! Fem ! Sg
+C0247,alb-adj-05,adjective-agreement,new_A dat masc sg,AlbCampaign025,(L.new_A).s ! Dat ! Masc ! Sg
+C0248,alb-adj-05,adjective-agreement,new_A dat fem sg,AlbCampaign025,(L.new_A).s ! Dat ! Fem ! Sg
+C0249,alb-adj-05,adjective-agreement,new_A ablat masc pl,AlbCampaign025,(L.new_A).s ! Ablat ! Masc ! Pl
+C0250,alb-adj-05,adjective-agreement,new_A ablat fem pl,AlbCampaign025,(L.new_A).s ! Ablat ! Fem ! Pl
+C0251,alb-syntax-basic,syntax-core,I come,AlbCampaign026,(S.mkS (S.mkCl S.i_NP L.come_V)).s
+C0252,alb-syntax-basic,syntax-core,you go,AlbCampaign026,(S.mkS (S.mkCl S.you_NP L.go_V)).s
+C0253,alb-syntax-basic,syntax-core,he lives,AlbCampaign026,(S.mkS (S.mkCl S.he_NP L.live_V)).s
+C0254,alb-syntax-basic,syntax-core,she laughs,AlbCampaign026,(S.mkS (S.mkCl S.she_NP L.laugh_V)).s
+C0255,alb-syntax-basic,syntax-core,we play,AlbCampaign026,(S.mkS (S.mkCl S.we_NP L.play_V)).s
+C0256,alb-syntax-basic,syntax-core,you-pl breathe,AlbCampaign026,(S.mkS (S.mkCl S.youPl_NP L.breathe_V)).s
+C0257,alb-syntax-basic,syntax-core,they fly,AlbCampaign026,(S.mkS (S.mkCl S.they_NP L.fly_V)).s
+C0258,alb-syntax-basic,syntax-core,John comes,AlbCampaign026,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.come_V)).s
+C0259,alb-syntax-basic,syntax-core,Paris is city,AlbCampaign026,(S.mkS (S.mkCl (S.mkNP L.paris_PN) L.city_N)).s
+C0260,alb-syntax-basic,syntax-core,I am ready,AlbCampaign026,(S.mkS (S.mkCl S.i_NP L.ready_A)).s
+C0261,alb-syntax-v2,syntax-core,read_V2 object 1,AlbCampaign027,(S.mkS (S.mkCl S.i_NP L.read_V2 (S.mkNP S.theSg_Det L.book_N))).s
+C0262,alb-syntax-v2,syntax-core,love_V2 object 2,AlbCampaign027,(S.mkS (S.mkCl S.i_NP L.love_V2 S.he_NP)).s
+C0263,alb-syntax-v2,syntax-core,buy_V2 object 3,AlbCampaign027,(S.mkS (S.mkCl S.i_NP L.buy_V2 (S.mkNP S.aSg_Det L.apple_N))).s
+C0264,alb-syntax-v2,syntax-core,eat apple,AlbCampaign027,(S.mkS (S.mkCl S.i_NP L.eat_V2 (S.mkNP S.aSg_Det L.apple_N))).s
+C0265,alb-syntax-v2,syntax-core,drink beer,AlbCampaign027,(S.mkS (S.mkCl S.i_NP L.drink_V2 (S.mkNP L.beer_N))).s
+C0266,alb-syntax-v2,syntax-core,see_V2 object 6,AlbCampaign027,(S.mkS (S.mkCl S.she_NP L.see_V2 S.she_NP)).s
+C0267,alb-syntax-v2,syntax-core,hear_V2 object 7,AlbCampaign027,(S.mkS (S.mkCl S.she_NP L.hear_V2 S.he_NP)).s
+C0268,alb-syntax-v2,syntax-core,find_V2 object 8,AlbCampaign027,(S.mkS (S.mkCl S.she_NP L.find_V2 (S.mkNP S.theSg_Det L.book_N))).s
+C0269,alb-syntax-v2,syntax-core,open_V2 object 9,AlbCampaign027,(S.mkS (S.mkCl S.she_NP L.open_V2 S.it_NP)).s
+C0270,alb-syntax-v2,syntax-core,close_V2 object 10,AlbCampaign027,(S.mkS (S.mkCl S.she_NP L.close_V2 (S.mkNP S.theSg_Det L.house_N))).s
+C0271,alb-syntax-v3,syntax-core,give book to him,AlbCampaign028,(S.mkS (S.mkCl S.i_NP L.give_V3 (S.mkNP S.theSg_Det L.book_N) S.he_NP)).s
+C0272,alb-syntax-v3,syntax-core,give apple to her,AlbCampaign028,(S.mkS (S.mkCl S.i_NP L.give_V3 (S.mkNP S.aSg_Det L.apple_N) S.she_NP)).s
+C0273,alb-syntax-v3,syntax-core,send book to him,AlbCampaign028,(S.mkS (S.mkCl S.she_NP L.send_V3 (S.mkNP S.theSg_Det L.book_N) S.he_NP)).s
+C0274,alb-syntax-v3,syntax-core,sell house to her,AlbCampaign028,(S.mkS (S.mkCl S.he_NP L.sell_V3 (S.mkNP S.theSg_Det L.house_N) S.she_NP)).s
+C0275,alb-syntax-v3,syntax-core,add book to city,AlbCampaign028,(S.mkS (S.mkCl S.i_NP L.add_V3 (S.mkNP S.theSg_Det L.book_N) (S.mkNP S.theSg_Det L.city_N))).s
+C0276,alb-syntax-v3,syntax-core,talk with him about her,AlbCampaign028,(S.mkS (S.mkCl S.i_NP L.talk_V3 S.he_NP S.she_NP)).s
+C0277,alb-syntax-v3,syntax-core,give book to John,AlbCampaign028,(S.mkS (S.mkCl S.we_NP L.give_V3 (S.mkNP S.theSg_Det L.book_N) (S.mkNP L.john_PN))).s
+C0278,alb-syntax-v3,syntax-core,send apple to Paris,AlbCampaign028,(S.mkS (S.mkCl S.they_NP L.send_V3 (S.mkNP S.aSg_Det L.apple_N) (S.mkNP L.paris_PN))).s
+C0279,alb-syntax-v3,syntax-core,past give,AlbCampaign028,(S.mkS S.pastTense (S.mkCl S.i_NP L.give_V3 (S.mkNP S.theSg_Det L.book_N) S.he_NP)).s
+C0280,alb-syntax-v3,syntax-core,negative give,AlbCampaign028,(S.mkS S.negativePol (S.mkCl S.i_NP L.give_V3 (S.mkNP S.theSg_Det L.book_N) S.he_NP)).s
+C0281,alb-syntax-complements-a,syntax-core,say that she comes,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.say_VS (S.mkS (S.mkCl S.she_NP L.come_V)))).s
+C0282,alb-syntax-complements-a,syntax-core,hope that she comes,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.hope_VS (S.mkS (S.mkCl S.she_NP L.come_V)))).s
+C0283,alb-syntax-complements-a,syntax-core,fear that she comes,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.fear_VS (S.mkS (S.mkCl S.she_NP L.come_V)))).s
+C0284,alb-syntax-complements-a,syntax-core,know whether she comes,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.know_VQ (S.mkQS (S.mkQCl (S.mkCl S.she_NP L.come_V))))).s
+C0285,alb-syntax-complements-a,syntax-core,wonder whether she comes,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.wonder_VQ (S.mkQS (S.mkQCl (S.mkCl S.she_NP L.come_V))))).s
+C0286,alb-syntax-complements-a,syntax-core,become good,AlbCampaign029,(S.mkS (S.mkCl S.he_NP L.become_VA L.good_A)).s
+C0287,alb-syntax-complements-a,syntax-core,become beautiful,AlbCampaign029,(S.mkS (S.mkCl S.she_NP L.become_VA L.beautiful_A)).s
+C0288,alb-syntax-complements-a,syntax-core,be married to him,AlbCampaign029,(S.mkS (S.mkCl S.she_NP L.married_A2 S.he_NP)).s
+C0289,alb-syntax-complements-a,syntax-core,say negative embedded,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.say_VS (S.mkS S.negativePol (S.mkCl S.she_NP L.come_V)))).s
+C0290,alb-syntax-complements-a,syntax-core,know wh embedded,AlbCampaign029,(S.mkS (S.mkCl S.i_NP L.know_VQ (S.mkQS (S.mkQCl S.who_IP L.come_V)))).s
+C0291,alb-syntax-complements-b,syntax-core,answer him that she comes,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.answer_V2S S.he_NP (S.mkS (S.mkCl S.she_NP L.come_V)))).s
+C0292,alb-syntax-complements-b,syntax-core,ask him whether she comes,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.ask_V2Q S.he_NP (S.mkQS (S.mkQCl (S.mkCl S.she_NP L.come_V))))).s
+C0293,alb-syntax-complements-b,syntax-core,beg him to come,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.beg_V2V S.he_NP (S.mkVP L.come_V))).s
+C0294,alb-syntax-complements-b,syntax-core,paint it red,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.paint_V2A S.it_NP L.red_A)).s
+C0295,alb-syntax-complements-b,syntax-core,answer her that he lives,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.answer_V2S S.she_NP (S.mkS (S.mkCl S.he_NP L.live_V)))).s
+C0296,alb-syntax-complements-b,syntax-core,ask her who comes,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.ask_V2Q S.she_NP (S.mkQS (S.mkQCl S.who_IP L.come_V)))).s
+C0297,alb-syntax-complements-b,syntax-core,beg her to live,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.beg_V2V S.she_NP (S.mkVP L.live_V))).s
+C0298,alb-syntax-complements-b,syntax-core,paint book black,AlbCampaign030,(S.mkS (S.mkCl S.i_NP L.paint_V2A (S.mkNP S.theSg_Det L.book_N) L.black_A)).s
+C0299,alb-syntax-complements-b,syntax-core,negative ask,AlbCampaign030,(S.mkS S.negativePol (S.mkCl S.i_NP L.ask_V2Q S.he_NP (S.mkQS (S.mkQCl (S.mkCl S.she_NP L.come_V))))).s
+C0300,alb-syntax-complements-b,syntax-core,past answer,AlbCampaign030,(S.mkS S.pastTense (S.mkCl S.i_NP L.answer_V2S S.he_NP (S.mkS (S.mkCl S.she_NP L.come_V)))).s
+C0301,alb-syntax-copular,syntax-core,he good,AlbCampaign031,(S.mkS (S.mkCl S.he_NP L.good_A)).s
+C0302,alb-syntax-copular,syntax-core,she beautiful,AlbCampaign031,(S.mkS (S.mkCl S.she_NP L.beautiful_A)).s
+C0303,alb-syntax-copular,syntax-core,he man,AlbCampaign031,(S.mkS (S.mkCl S.he_NP L.man_N)).s
+C0304,alb-syntax-copular,syntax-core,she doctor,AlbCampaign031,(S.mkS (S.mkCl S.she_NP L.doctor_N)).s
+C0305,alb-syntax-copular,syntax-core,John the man,AlbCampaign031,(S.mkS (S.mkCl (S.mkNP L.john_PN) (S.mkNP S.theSg_Det L.man_N))).s
+C0306,alb-syntax-copular,syntax-core,Paris city,AlbCampaign031,(S.mkS (S.mkCl (S.mkNP L.paris_PN) L.city_N)).s
+C0307,alb-syntax-copular,syntax-core,he in house,AlbCampaign031,(S.mkS (S.mkCl S.he_NP (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.house_N)))).s
+C0308,alb-syntax-copular,syntax-core,she with John,AlbCampaign031,(S.mkS (S.mkCl S.she_NP (S.mkAdv St.with_Prep (S.mkNP L.john_PN)))).s
+C0309,alb-syntax-copular,syntax-core,negative good,AlbCampaign031,(S.mkS S.negativePol (S.mkCl S.he_NP L.good_A)).s
+C0310,alb-syntax-copular,syntax-core,past doctor,AlbCampaign031,(S.mkS S.pastTense (S.mkCl S.she_NP L.doctor_N)).s
+C0311,alb-syntax-adverbial,syntax-core,come in house,AlbCampaign032,(S.mkS (S.mkCl S.i_NP (S.mkVP (S.mkVP L.come_V) (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.house_N))))).s
+C0312,alb-syntax-adverbial,syntax-core,live in city,AlbCampaign032,(S.mkS (S.mkCl S.he_NP (S.mkVP (S.mkVP L.live_V) (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N))))).s
+C0313,alb-syntax-adverbial,syntax-core,always come,AlbCampaign032,(S.mkS (S.mkCl S.i_NP (S.mkVP St.always_AdV (S.mkVP L.come_V)))).s
+C0314,alb-syntax-adverbial,syntax-core,very good,AlbCampaign032,(S.mkS (S.mkCl S.he_NP (S.mkAP St.very_AdA L.good_A))).s
+C0315,alb-syntax-adverbial,syntax-core,very beautiful,AlbCampaign032,(S.mkS (S.mkCl S.she_NP (S.mkAP St.very_AdA L.beautiful_A))).s
+C0316,alb-syntax-adverbial,syntax-core,book in house,AlbCampaign032,(S.mkNP S.theSg_Det (S.mkCN L.book_N (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.house_N)))).s ! Nom
+C0317,alb-syntax-adverbial,syntax-core,John in city,AlbCampaign032,(S.mkNP (S.mkNP L.john_PN) (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N))).s ! Nom
+C0318,alb-syntax-adverbial,syntax-core,come with him,AlbCampaign032,(S.mkS (S.mkCl S.i_NP (S.mkVP (S.mkVP L.come_V) (S.mkAdv St.with_Prep S.he_NP)))).s
+C0319,alb-syntax-adverbial,syntax-core,negative live in city,AlbCampaign032,(S.mkS S.negativePol (S.mkCl S.he_NP (S.mkVP (S.mkVP L.live_V) (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N))))).s
+C0320,alb-syntax-adverbial,syntax-core,past come with her,AlbCampaign032,(S.mkS S.pastTense (S.mkCl S.i_NP (S.mkVP (S.mkVP L.come_V) (S.mkAdv St.with_Prep S.she_NP)))).s
+C0321,alb-syntax-coordination,syntax-core,S and S,AlbCampaign033,(S.mkS St.and_Conj (S.mkS (S.mkCl S.i_NP L.come_V)) (S.mkS (S.mkCl S.she_NP L.live_V))).s
+C0322,alb-syntax-coordination,syntax-core,S or S,AlbCampaign033,(S.mkS St.or_Conj (S.mkS (S.mkCl S.i_NP L.come_V)) (S.mkS (S.mkCl S.she_NP L.live_V))).s
+C0323,alb-syntax-coordination,syntax-core,NP and NP,AlbCampaign033,(S.mkNP St.and_Conj S.he_NP S.she_NP).s ! Nom
+C0324,alb-syntax-coordination,syntax-core,NP or NP,AlbCampaign033,(S.mkNP St.or_Conj S.i_NP S.you_NP).s ! Nom
+C0325,alb-syntax-coordination,syntax-core,AP and AP,AlbCampaign033,(S.mkAP St.and_Conj (S.mkAP L.good_A) (S.mkAP L.beautiful_A)).s ! Indef ! Nom ! Masc ! Sg
+C0326,alb-syntax-coordination,syntax-core,Adv and Adv,AlbCampaign033,(S.mkAdv St.and_Conj (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.house_N)) (S.mkAdv St.with_Prep S.he_NP)).s
+C0327,alb-syntax-coordination,syntax-core,past conjunction,AlbCampaign033,(S.mkS St.and_Conj (S.mkS S.pastTense (S.mkCl S.i_NP L.come_V)) (S.mkS (S.mkCl S.she_NP L.live_V))).s
+C0328,alb-syntax-coordination,syntax-core,negative conjunction,AlbCampaign033,(S.mkS St.and_Conj (S.mkS S.negativePol (S.mkCl S.i_NP L.come_V)) (S.mkS (S.mkCl S.she_NP L.live_V))).s
+C0329,alb-syntax-coordination,syntax-core,three-like nested S,AlbCampaign033,(S.mkS St.and_Conj (S.mkS St.and_Conj (S.mkS (S.mkCl S.i_NP L.come_V)) (S.mkS (S.mkCl S.she_NP L.live_V))) (S.mkS (S.mkCl S.he_NP L.go_V))).s
+C0330,alb-syntax-coordination,syntax-core,CN adjective,AlbCampaign033,(S.mkNP S.theSg_Det (S.mkCN L.big_A L.house_N)).s ! Nom
+C0331,alb-clitic-objects,clitics-negation,John loves object 1,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.i_NP)).s
+C0332,alb-clitic-objects,clitics-negation,John loves object 2,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.you_NP)).s
+C0333,alb-clitic-objects,clitics-negation,John loves object 3,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.he_NP)).s
+C0334,alb-clitic-objects,clitics-negation,John loves object 4,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.she_NP)).s
+C0335,alb-clitic-objects,clitics-negation,John loves object 5,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.it_NP)).s
+C0336,alb-clitic-objects,clitics-negation,John loves object 6,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.we_NP)).s
+C0337,alb-clitic-objects,clitics-negation,John loves object 7,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.youPl_NP)).s
+C0338,alb-clitic-objects,clitics-negation,John loves object 8,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.they_NP)).s
+C0339,alb-clitic-objects,clitics-negation,John loves object 9,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 (S.mkNP L.paris_PN))).s
+C0340,alb-clitic-objects,clitics-negation,John loves the house,AlbCampaign034,(S.mkS (S.mkCl (S.mkNP L.john_PN) L.love_V2 (S.mkNP S.theSg_Det L.house_N))).s
+C0341,alb-clitic-negative,clitics-negation,John negative-love object 1,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.i_NP)).s
+C0342,alb-clitic-negative,clitics-negation,John negative-love object 2,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.you_NP)).s
+C0343,alb-clitic-negative,clitics-negation,John negative-love object 3,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.he_NP)).s
+C0344,alb-clitic-negative,clitics-negation,John negative-love object 4,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.she_NP)).s
+C0345,alb-clitic-negative,clitics-negation,John negative-love object 5,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.it_NP)).s
+C0346,alb-clitic-negative,clitics-negation,John negative-love object 6,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.we_NP)).s
+C0347,alb-clitic-negative,clitics-negation,John negative-love object 7,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.youPl_NP)).s
+C0348,alb-clitic-negative,clitics-negation,John negative-love object 8,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 S.they_NP)).s
+C0349,alb-clitic-negative,clitics-negation,John negative-love object 9,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 (S.mkNP L.paris_PN))).s
+C0350,alb-clitic-negative,clitics-negation,John does not love the house,AlbCampaign035,(S.mkS S.negativePol (S.mkCl (S.mkNP L.john_PN) L.love_V2 (S.mkNP S.theSg_Det L.house_N))).s
+C0351,alb-clitic-ditransitive,clitics-negation,give it to him,AlbCampaign036,(S.mkS (S.mkCl S.i_NP L.give_V3 S.it_NP S.he_NP)).s
+C0352,alb-clitic-ditransitive,clitics-negation,give it to her,AlbCampaign036,(S.mkS (S.mkCl S.i_NP L.give_V3 S.it_NP S.she_NP)).s
+C0353,alb-clitic-ditransitive,clitics-negation,give him it,AlbCampaign036,(S.mkS (S.mkCl S.i_NP L.give_V3 S.he_NP S.it_NP)).s
+C0354,alb-clitic-ditransitive,clitics-negation,send it to them,AlbCampaign036,(S.mkS (S.mkCl S.i_NP L.send_V3 S.it_NP S.they_NP)).s
+C0355,alb-clitic-ditransitive,clitics-negation,sell it to him,AlbCampaign036,(S.mkS (S.mkCl S.i_NP L.sell_V3 S.it_NP S.he_NP)).s
+C0356,alb-clitic-ditransitive,clitics-negation,negative give it him,AlbCampaign036,(S.mkS S.negativePol (S.mkCl S.i_NP L.give_V3 S.it_NP S.he_NP)).s
+C0357,alb-clitic-ditransitive,clitics-negation,past give it him,AlbCampaign036,(S.mkS S.pastTense (S.mkCl S.i_NP L.give_V3 S.it_NP S.he_NP)).s
+C0358,alb-clitic-ditransitive,clitics-negation,future give it her,AlbCampaign036,(S.mkS S.futureTense (S.mkCl S.i_NP L.give_V3 S.it_NP S.she_NP)).s
+C0359,alb-clitic-ditransitive,clitics-negation,conditional send it them,AlbCampaign036,(S.mkS S.conditionalTense (S.mkCl S.i_NP L.send_V3 S.it_NP S.they_NP)).s
+C0360,alb-clitic-ditransitive,clitics-negation,negative past sell it him,AlbCampaign036,(S.mkS S.pastTense S.negativePol (S.mkCl S.i_NP L.sell_V3 S.it_NP S.he_NP)).s
+C0361,alb-clitic-vp,clitics-negation,reflexive love,AlbCampaign037,(S.mkS (S.mkCl S.he_NP (S.reflexiveVP L.love_V2))).s
+C0362,alb-clitic-vp,clitics-negation,reflexive see,AlbCampaign037,(S.mkS (S.mkCl S.she_NP (S.reflexiveVP L.see_V2))).s
+C0363,alb-clitic-vp,clitics-negation,passive love,AlbCampaign037,(S.mkS (S.mkCl S.he_NP (S.passiveVP L.love_V2))).s
+C0364,alb-clitic-vp,clitics-negation,passive loved by her,AlbCampaign037,(S.mkS (S.mkCl S.he_NP (S.passiveVP L.love_V2 S.she_NP))).s
+C0365,alb-clitic-vp,clitics-negation,progressive come,AlbCampaign037,(S.mkS (S.mkCl S.i_NP (S.progressiveVP (S.mkVP L.come_V)))).s
+C0366,alb-clitic-vp,clitics-negation,progressive read book,AlbCampaign037,(S.mkS (S.mkCl S.i_NP (S.progressiveVP (S.mkVP L.read_V2 (S.mkNP S.theSg_Det L.book_N))))).s
+C0367,alb-clitic-vp,clitics-negation,negative reflexive,AlbCampaign037,(S.mkS S.negativePol (S.mkCl S.he_NP (S.reflexiveVP L.love_V2))).s
+C0368,alb-clitic-vp,clitics-negation,past passive,AlbCampaign037,(S.mkS S.pastTense (S.mkCl S.he_NP (S.passiveVP L.love_V2))).s
+C0369,alb-clitic-vp,clitics-negation,future progressive,AlbCampaign037,(S.mkS S.futureTense (S.mkCl S.i_NP (S.progressiveVP (S.mkVP L.come_V)))).s
+C0370,alb-clitic-vp,clitics-negation,negative progressive,AlbCampaign037,(S.mkS S.negativePol (S.mkCl S.i_NP (S.progressiveVP (S.mkVP L.come_V)))).s
+C0371,alb-complement-control,clitics-negation,want come,AlbCampaign038,"(S.mkS (S.mkCl S.i_NP (P.mkVV ""dua"") (S.mkVP L.come_V))).s"
+C0372,alb-complement-control,clitics-negation,want read,AlbCampaign038,"(S.mkS (S.mkCl S.i_NP (P.mkVV ""dua"") (S.mkVP L.read_V2 (S.mkNP S.theSg_Det L.book_N)))).s"
+C0373,alb-complement-control,clitics-negation,want live,AlbCampaign038,"(S.mkS (S.mkCl S.he_NP (P.mkVV ""dua"") (S.mkVP L.live_V))).s"
+C0374,alb-complement-control,clitics-negation,negative want come,AlbCampaign038,"(S.mkS S.negativePol (S.mkCl S.i_NP (P.mkVV ""dua"") (S.mkVP L.come_V))).s"
+C0375,alb-complement-control,clitics-negation,past want come,AlbCampaign038,"(S.mkS S.pastTense (S.mkCl S.i_NP (P.mkVV ""dua"") (S.mkVP L.come_V))).s"
+C0376,alb-complement-control,clitics-negation,say she lives,AlbCampaign038,(S.mkS (S.mkCl S.i_NP L.say_VS (S.mkS (S.mkCl S.she_NP L.live_V)))).s
+C0377,alb-complement-control,clitics-negation,know who comes,AlbCampaign038,(S.mkS (S.mkCl S.i_NP L.know_VQ (S.mkQS (S.mkQCl S.who_IP L.come_V)))).s
+C0378,alb-complement-control,clitics-negation,answer him she lives,AlbCampaign038,(S.mkS (S.mkCl S.i_NP L.answer_V2S S.he_NP (S.mkS (S.mkCl S.she_NP L.live_V)))).s
+C0379,alb-complement-control,clitics-negation,ask him who comes,AlbCampaign038,(S.mkS (S.mkCl S.i_NP L.ask_V2Q S.he_NP (S.mkQS (S.mkQCl S.who_IP L.come_V)))).s
+C0380,alb-complement-control,clitics-negation,beg him come,AlbCampaign038,(S.mkS (S.mkCl S.i_NP L.beg_V2V S.he_NP (S.mkVP L.come_V))).s
+C0381,alb-question-yesno,questions-relatives,does she come,AlbCampaign039,(S.mkQS (S.mkCl S.she_NP L.come_V)).s
+C0382,alb-question-yesno,questions-relatives,does he live,AlbCampaign039,(S.mkQS (S.mkCl S.he_NP L.live_V)).s
+C0383,alb-question-yesno,questions-relatives,did she come,AlbCampaign039,(S.mkQS S.pastTense (S.mkQCl (S.mkCl S.she_NP L.come_V))).s
+C0384,alb-question-yesno,questions-relatives,will she come,AlbCampaign039,(S.mkQS S.futureTense (S.mkQCl (S.mkCl S.she_NP L.come_V))).s
+C0385,alb-question-yesno,questions-relatives,would she come,AlbCampaign039,(S.mkQS S.conditionalTense (S.mkQCl (S.mkCl S.she_NP L.come_V))).s
+C0386,alb-question-yesno,questions-relatives,does she not come,AlbCampaign039,(S.mkQS S.negativePol (S.mkQCl (S.mkCl S.she_NP L.come_V))).s
+C0387,alb-question-yesno,questions-relatives,does he read book,AlbCampaign039,(S.mkQS (S.mkCl S.he_NP L.read_V2 (S.mkNP S.theSg_Det L.book_N))).s
+C0388,alb-question-yesno,questions-relatives,does she love him,AlbCampaign039,(S.mkQS (S.mkCl S.she_NP L.love_V2 S.he_NP)).s
+C0389,alb-question-yesno,questions-relatives,did he give it her,AlbCampaign039,(S.mkQS S.pastTense (S.mkQCl (S.mkCl S.he_NP L.give_V3 S.it_NP S.she_NP))).s
+C0390,alb-question-yesno,questions-relatives,does John live,AlbCampaign039,(S.mkQS (S.mkCl (S.mkNP L.john_PN) L.live_V)).s
+C0391,alb-question-wh,questions-relatives,who comes,AlbCampaign040,(S.mkQS (S.mkQCl S.who_IP L.come_V)).s
+C0392,alb-question-wh,questions-relatives,who lives,AlbCampaign040,(S.mkQS (S.mkQCl S.who_IP L.live_V)).s
+C0393,alb-question-wh,questions-relatives,who loves him,AlbCampaign040,(S.mkQS (S.mkQCl S.who_IP L.love_V2 S.he_NP)).s
+C0394,alb-question-wh,questions-relatives,whom she loves,AlbCampaign040,(S.mkQS (S.mkQCl S.who_IP S.she_NP L.love_V2)).s
+C0395,alb-question-wh,questions-relatives,whom he knows,AlbCampaign040,(S.mkQS (S.mkQCl S.who_IP S.he_NP L.know_V2)).s
+C0396,alb-question-wh,questions-relatives,where she lives,AlbCampaign040,(S.mkQS (S.mkQCl St.where_IAdv (S.mkCl S.she_NP L.live_V))).s
+C0397,alb-question-wh,questions-relatives,why he comes,AlbCampaign040,(S.mkQS (S.mkQCl St.why_IAdv (S.mkCl S.he_NP L.come_V))).s
+C0398,alb-question-wh,questions-relatives,when she comes,AlbCampaign040,(S.mkQS (S.mkQCl St.when_IAdv (S.mkCl S.she_NP L.come_V))).s
+C0399,alb-question-wh,questions-relatives,with whom she lives,AlbCampaign040,(S.mkQS (S.mkQCl St.with_Prep S.who_IP (S.mkCl S.she_NP L.live_V))).s
+C0400,alb-question-wh,questions-relatives,which city exists,AlbCampaign040,(S.mkQS (S.mkQCl (S.mkIP St.which_IQuant L.city_N))).s
+C0401,alb-relative-subject,questions-relatives,who comes,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.come_V)).s ! (S.i_NP).a
+C0402,alb-relative-subject,questions-relatives,who lives,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.live_V)).s ! (S.he_NP).a
+C0403,alb-relative-subject,questions-relatives,who loves him,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.love_V2 S.he_NP)).s ! (S.she_NP).a
+C0404,alb-relative-subject,questions-relatives,who gives it him,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.give_V3 S.it_NP S.he_NP)).s ! (S.he_NP).a
+C0405,alb-relative-subject,questions-relatives,who says she comes,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.say_VS (S.mkS (S.mkCl S.she_NP L.come_V)))).s ! (S.he_NP).a
+C0406,alb-relative-subject,questions-relatives,who wonders,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.wonder_VQ (S.mkQS (S.mkQCl (S.mkCl S.she_NP L.come_V))))).s ! (S.he_NP).a
+C0407,alb-relative-subject,questions-relatives,who becomes good,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.become_VA L.good_A)).s ! (S.he_NP).a
+C0408,alb-relative-subject,questions-relatives,who paints it red,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.paint_V2A S.it_NP L.red_A)).s ! (S.he_NP).a
+C0409,alb-relative-subject,questions-relatives,who is good,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP L.good_A)).s ! (S.he_NP).a
+C0410,alb-relative-subject,questions-relatives,who is in city,AlbCampaign041,(S.mkRS (S.mkRCl S.which_RP (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N)))).s ! (S.he_NP).a
+C0411,alb-relative-object,questions-relatives,whom I love,AlbCampaign042,(S.mkRS (S.mkRCl S.which_RP S.i_NP L.love_V2)).s ! (S.he_NP).a
+C0412,alb-relative-object,questions-relatives,whom she knows,AlbCampaign042,(S.mkRS (S.mkRCl S.which_RP S.she_NP L.know_V2)).s ! (S.he_NP).a
+C0413,alb-relative-object,questions-relatives,whom we hear,AlbCampaign042,(S.mkRS (S.mkRCl S.which_RP S.we_NP L.hear_V2)).s ! (S.he_NP).a
+C0414,alb-relative-object,questions-relatives,whom they hate,AlbCampaign042,(S.mkRS (S.mkRCl S.which_RP S.they_NP L.hate_V2)).s ! (S.he_NP).a
+C0415,alb-relative-object,questions-relatives,whom he finds,AlbCampaign042,(S.mkRS (S.mkRCl S.which_RP S.he_NP L.find_V2)).s ! (S.he_NP).a
+C0416,alb-relative-object,questions-relatives,man whom I love,AlbCampaign042,(S.mkNP S.theSg_Det (S.mkCN L.man_N (S.mkRS (S.mkRCl S.which_RP S.i_NP L.love_V2)))).s ! Nom
+C0417,alb-relative-object,questions-relatives,woman-style girl whom he knows,AlbCampaign042,(S.mkNP S.theSg_Det (S.mkCN L.girl_N (S.mkRS (S.mkRCl S.which_RP S.he_NP L.know_V2)))).s ! Nom
+C0418,alb-relative-object,questions-relatives,book that I read,AlbCampaign042,(S.mkNP S.theSg_Det (S.mkCN L.book_N (S.mkRS (S.mkRCl S.which_RP S.i_NP L.read_V2)))).s ! Nom
+C0419,alb-relative-object,questions-relatives,city that she knows,AlbCampaign042,(S.mkNP S.theSg_Det (S.mkCN L.city_N (S.mkRS (S.mkRCl S.which_RP S.she_NP L.know_V2)))).s ! Nom
+C0420,alb-relative-object,questions-relatives,friend whom we love,AlbCampaign042,(S.mkNP S.theSg_Det (S.mkCN L.friend_N (S.mkRS (S.mkRCl S.which_RP S.we_NP L.love_V2)))).s ! Nom
+C0421,alb-subordination,questions-relatives,when she comes I live,AlbCampaign043,(S.mkS (S.mkAdv St.when_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS (S.mkCl S.i_NP L.live_V))).s
+C0422,alb-subordination,questions-relatives,because she comes I live,AlbCampaign043,(S.mkS (S.mkAdv St.because_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS (S.mkCl S.i_NP L.live_V))).s
+C0423,alb-subordination,questions-relatives,although she comes I go,AlbCampaign043,(S.mkS (S.mkAdv St.although_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS (S.mkCl S.i_NP L.go_V))).s
+C0424,alb-subordination,questions-relatives,if she comes I go,AlbCampaign043,(S.mkS (S.mkAdv St.if_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS (S.mkCl S.i_NP L.go_V))).s
+C0425,alb-subordination,questions-relatives,when he lives she comes,AlbCampaign043,(S.mkS (S.mkAdv St.when_Subj (S.mkS (S.mkCl S.he_NP L.live_V))) (S.mkS (S.mkCl S.she_NP L.come_V))).s
+C0426,alb-subordination,questions-relatives,because he lives she comes,AlbCampaign043,(S.mkS (S.mkAdv St.because_Subj (S.mkS (S.mkCl S.he_NP L.live_V))) (S.mkS (S.mkCl S.she_NP L.come_V))).s
+C0427,alb-subordination,questions-relatives,negative main with when,AlbCampaign043,(S.mkS (S.mkAdv St.when_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.negativePol (S.mkCl S.i_NP L.go_V))).s
+C0428,alb-subordination,questions-relatives,past main with when,AlbCampaign043,(S.mkS (S.mkAdv St.when_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.pastTense (S.mkCl S.i_NP L.go_V))).s
+C0429,alb-subordination,questions-relatives,future main with if,AlbCampaign043,(S.mkS (S.mkAdv St.if_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.futureTense (S.mkCl S.i_NP L.go_V))).s
+C0430,alb-subordination,questions-relatives,conditional main with if,AlbCampaign043,(S.mkS (S.mkAdv St.if_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.conditionalTense (S.mkCl S.i_NP L.go_V))).s
+C0431,alb-names-preps,names-preps-numerals,John nom,AlbCampaign044,(L.john_PN).s ! Nom
+C0432,alb-names-preps,names-preps-numerals,John acc,AlbCampaign044,(L.john_PN).s ! Acc
+C0433,alb-names-preps,names-preps-numerals,Paris nom,AlbCampaign044,(L.paris_PN).s ! Nom
+C0434,alb-names-preps,names-preps-numerals,Paris dat,AlbCampaign044,(L.paris_PN).s ! Dat
+C0435,alb-names-preps,names-preps-numerals,in Paris,AlbCampaign044,(S.mkAdv St.in_Prep (S.mkNP L.paris_PN)).s
+C0436,alb-names-preps,names-preps-numerals,from Paris,AlbCampaign044,(S.mkAdv St.from_Prep (S.mkNP L.paris_PN)).s
+C0437,alb-names-preps,names-preps-numerals,with John,AlbCampaign044,(S.mkAdv St.with_Prep (S.mkNP L.john_PN)).s
+C0438,alb-names-preps,names-preps-numerals,to John,AlbCampaign044,(S.mkAdv St.to_Prep (S.mkNP L.john_PN)).s
+C0439,alb-names-preps,names-preps-numerals,under house,AlbCampaign044,(S.mkAdv St.under_Prep (S.mkNP S.theSg_Det L.house_N)).s
+C0440,alb-names-preps,names-preps-numerals,without him,AlbCampaign044,(S.mkAdv St.without_Prep S.he_NP).s
+C0441,alb-numerals,names-preps-numerals,card 1,AlbCampaign045,"(S.mkCard ""1"").s"
+C0442,alb-numerals,names-preps-numerals,card 2,AlbCampaign045,"(S.mkCard ""2"").s"
+C0443,alb-numerals,names-preps-numerals,card 5,AlbCampaign045,"(S.mkCard ""5"").s"
+C0444,alb-numerals,names-preps-numerals,card 10,AlbCampaign045,"(S.mkCard ""10"").s"
+C0445,alb-numerals,names-preps-numerals,card 21,AlbCampaign045,"(S.mkCard ""21"").s"
+C0446,alb-numerals,names-preps-numerals,one book,AlbCampaign045,"(S.mkNP (S.mkCard ""1"") L.book_N).s ! Nom"
+C0447,alb-numerals,names-preps-numerals,two books,AlbCampaign045,"(S.mkNP (S.mkCard ""2"") L.book_N).s ! Nom"
+C0448,alb-numerals,names-preps-numerals,five books,AlbCampaign045,"(S.mkNP (S.mkCard ""5"") L.book_N).s ! Nom"
+C0449,alb-numerals,names-preps-numerals,ten houses,AlbCampaign045,"(S.mkNP (S.mkCard ""10"") L.house_N).s ! Nom"
+C0450,alb-numerals,names-preps-numerals,twenty one cities,AlbCampaign045,"(S.mkNP (S.mkCard ""21"") L.city_N).s ! Nom"
+C0451,alb-construction-01,construction-stress,exist house,AlbCampaign046,(S.mkS (S.mkCl L.house_N)).s
+C0452,alb-construction-01,construction-stress,exist city,AlbCampaign046,(S.mkS (S.mkCl L.city_N)).s
+C0453,alb-construction-01,construction-stress,exist the book,AlbCampaign046,(S.mkS (S.mkCl (S.mkNP S.theSg_Det L.book_N))).s
+C0454,alb-construction-01,construction-stress,imperative come sg,AlbCampaign046,(S.mkImp L.come_V).s ! Pos ! Sg
+C0455,alb-construction-01,construction-stress,imperative come pl,AlbCampaign046,(S.mkImp L.come_V).s ! Pos ! Pl
+C0456,alb-construction-01,construction-stress,imperative read it sg,AlbCampaign046,(S.mkImp L.read_V2 S.it_NP).s ! Pos ! Sg
+C0457,alb-construction-01,construction-stress,negative imperative come,AlbCampaign046,(S.mkImp L.come_V).s ! Neg ! Sg
+C0458,alb-construction-01,construction-stress,comparative big than him,AlbCampaign046,(S.mkAP L.big_A S.he_NP).s ! Indef ! Nom ! Masc ! Sg
+C0459,alb-construction-01,construction-stress,married reflexive-like,AlbCampaign046,(S.reflAP L.married_A2).s ! Indef ! Nom ! Masc ! Sg
+C0460,alb-construction-01,construction-stress,predet only him,AlbCampaign046,(S.mkNP St.only_Predet S.he_NP).s ! Nom
+C0461,alb-construction-02,construction-stress,mass beer,AlbCampaign047,(S.mkNP L.beer_N).s ! Nom
+C0462,alb-construction-02,construction-stress,big house,AlbCampaign047,(S.mkNP S.theSg_Det (S.mkCN L.big_A L.house_N)).s ! Nom
+C0463,alb-construction-02,construction-stress,beautiful city,AlbCampaign047,(S.mkNP S.theSg_Det (S.mkCN L.beautiful_A L.city_N)).s ! Nom
+C0464,alb-construction-02,construction-stress,house in city,AlbCampaign047,(S.mkNP S.theSg_Det (S.mkCN L.house_N (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N)))).s ! Nom
+C0465,alb-construction-02,construction-stress,John today-like in city,AlbCampaign047,(S.mkNP (S.mkNP L.john_PN) (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N))).s ! Nom
+C0466,alb-construction-02,construction-stress,possessive my book,AlbCampaign047,(S.mkNP St.i_Pron L.book_N).s ! Nom
+C0467,alb-construction-02,construction-stress,possessive his house,AlbCampaign047,(S.mkNP St.he_Pron L.house_N).s ! Nom
+C0468,alb-construction-02,construction-stress,some house,AlbCampaign047,(S.mkNP St.someSg_Det L.house_N).s ! Nom
+C0469,alb-construction-02,construction-stress,many books,AlbCampaign047,(S.mkNP St.many_Det L.book_N).s ! Nom
+C0470,alb-construction-02,construction-stress,every city,AlbCampaign047,(S.mkNP St.every_Det L.city_N).s ! Nom
+C0471,alb-cross-01,cross-feature-stress,past negative love him,AlbCampaign048,(S.mkS S.pastTense S.negativePol (S.mkCl S.i_NP L.love_V2 S.he_NP)).s
+C0472,alb-cross-01,cross-feature-stress,future negative read book,AlbCampaign048,(S.mkS S.futureTense S.negativePol (S.mkCl S.she_NP L.read_V2 (S.mkNP S.theSg_Det L.book_N))).s
+C0473,alb-cross-01,cross-feature-stress,conditional negative give,AlbCampaign048,(S.mkS S.conditionalTense S.negativePol (S.mkCl S.he_NP L.give_V3 S.it_NP S.she_NP)).s
+C0474,alb-cross-01,cross-feature-stress,past progressive come,AlbCampaign048,(S.mkS S.pastTense (S.mkCl S.i_NP (S.progressiveVP (S.mkVP L.come_V)))).s
+C0475,alb-cross-01,cross-feature-stress,future passive loved,AlbCampaign048,(S.mkS S.futureTense (S.mkCl S.he_NP (S.passiveVP L.love_V2))).s
+C0476,alb-cross-01,cross-feature-stress,negative passive loved by her,AlbCampaign048,(S.mkS S.negativePol (S.mkCl S.he_NP (S.passiveVP L.love_V2 S.she_NP))).s
+C0477,alb-cross-01,cross-feature-stress,past say negative embedded,AlbCampaign048,(S.mkS S.pastTense (S.mkCl S.i_NP L.say_VS (S.mkS S.negativePol (S.mkCl S.she_NP L.come_V)))).s
+C0478,alb-cross-01,cross-feature-stress,future know who comes,AlbCampaign048,(S.mkS S.futureTense (S.mkCl S.i_NP L.know_VQ (S.mkQS (S.mkQCl S.who_IP L.come_V)))).s
+C0479,alb-cross-01,cross-feature-stress,negative beg him come,AlbCampaign048,(S.mkS S.negativePol (S.mkCl S.i_NP L.beg_V2V S.he_NP (S.mkVP L.come_V))).s
+C0480,alb-cross-01,cross-feature-stress,past paint it red,AlbCampaign048,(S.mkS S.pastTense (S.mkCl S.i_NP L.paint_V2A S.it_NP L.red_A)).s
+C0481,alb-cross-02,cross-feature-stress,past wh who came,AlbCampaign049,(S.mkQS S.pastTense (S.mkQCl S.who_IP L.come_V)).s
+C0482,alb-cross-02,cross-feature-stress,future wh who comes,AlbCampaign049,(S.mkQS S.futureTense (S.mkQCl S.who_IP L.come_V)).s
+C0483,alb-cross-02,cross-feature-stress,negative wh who comes,AlbCampaign049,(S.mkQS S.negativePol (S.mkQCl S.who_IP L.come_V)).s
+C0484,alb-cross-02,cross-feature-stress,where did she live,AlbCampaign049,(S.mkQS S.pastTense (S.mkQCl St.where_IAdv (S.mkCl S.she_NP L.live_V))).s
+C0485,alb-cross-02,cross-feature-stress,why will he come,AlbCampaign049,(S.mkQS S.futureTense (S.mkQCl St.why_IAdv (S.mkCl S.he_NP L.come_V))).s
+C0486,alb-cross-02,cross-feature-stress,relative who did not come,AlbCampaign049,(S.mkRS S.negativePol (S.mkRCl S.which_RP L.come_V)).s ! (S.he_NP).a
+C0487,alb-cross-02,cross-feature-stress,relative who came past,AlbCampaign049,(S.mkRS S.pastTense (S.mkRCl S.which_RP L.come_V)).s ! (S.he_NP).a
+C0488,alb-cross-02,cross-feature-stress,book I did not read,AlbCampaign049,(S.mkNP S.theSg_Det (S.mkCN L.book_N (S.mkRS S.negativePol (S.mkRCl S.which_RP S.i_NP L.read_V2)))).s ! Nom
+C0489,alb-cross-02,cross-feature-stress,city she knew past,AlbCampaign049,(S.mkNP S.theSg_Det (S.mkCN L.city_N (S.mkRS S.pastTense (S.mkRCl S.which_RP S.she_NP L.know_V2)))).s ! Nom
+C0490,alb-cross-02,cross-feature-stress,friend we will love relative,AlbCampaign049,(S.mkNP S.theSg_Det (S.mkCN L.friend_N (S.mkRS S.futureTense (S.mkRCl S.which_RP S.we_NP L.love_V2)))).s ! Nom
+C0491,alb-cross-03,cross-feature-stress,if she comes we will go,AlbCampaign050,(S.mkS (S.mkAdv St.if_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.futureTense (S.mkCl S.we_NP L.go_V))).s
+C0492,alb-cross-03,cross-feature-stress,when she comes we will eat,AlbCampaign050,(S.mkS (S.mkAdv St.when_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.futureTense (S.mkCl S.we_NP L.eat_V2 (S.mkNP S.aSg_Det L.apple_N)))).s
+C0493,alb-cross-03,cross-feature-stress,although she comes he does not go,AlbCampaign050,(S.mkS (S.mkAdv St.although_Subj (S.mkS (S.mkCl S.she_NP L.come_V))) (S.mkS S.negativePol (S.mkCl S.he_NP L.go_V))).s
+C0494,alb-cross-03,cross-feature-stress,because she came he lived,AlbCampaign050,(S.mkS (S.mkAdv St.because_Subj (S.mkS S.pastTense (S.mkCl S.she_NP L.come_V))) (S.mkS S.pastTense (S.mkCl S.he_NP L.live_V))).s
+C0495,alb-cross-03,cross-feature-stress,John and Mary-like she,AlbCampaign050,(S.mkS (S.mkCl (S.mkNP St.and_Conj (S.mkNP L.john_PN) S.she_NP) L.come_V)).s
+C0496,alb-cross-03,cross-feature-stress,very good man comes,AlbCampaign050,(S.mkS (S.mkCl (S.mkNP S.theSg_Det (S.mkCN (S.mkAP St.very_AdA L.good_A) L.man_N)) L.come_V)).s
+C0497,alb-cross-03,cross-feature-stress,beautiful girl reads book,AlbCampaign050,(S.mkS (S.mkCl (S.mkNP S.theSg_Det (S.mkCN L.beautiful_A L.girl_N)) L.read_V2 (S.mkNP S.theSg_Det L.book_N))).s
+C0498,alb-cross-03,cross-feature-stress,man in city loves her,AlbCampaign050,(S.mkS (S.mkCl (S.mkNP S.theSg_Det (S.mkCN L.man_N (S.mkAdv St.in_Prep (S.mkNP S.theSg_Det L.city_N)))) L.love_V2 S.she_NP)).s
+C0499,alb-cross-03,cross-feature-stress,who loves the beautiful girl,AlbCampaign050,(S.mkQS (S.mkQCl S.who_IP L.love_V2 (S.mkNP S.theSg_Det (S.mkCN L.beautiful_A L.girl_N)))).s
+C0500,alb-cross-03,cross-feature-stress,the man who loves her comes,AlbCampaign050,(S.mkS (S.mkCl (S.mkNP S.theSg_Det (S.mkCN L.man_N (S.mkRS (S.mkRCl S.which_RP L.love_V2 S.she_NP)))) L.come_V)).s

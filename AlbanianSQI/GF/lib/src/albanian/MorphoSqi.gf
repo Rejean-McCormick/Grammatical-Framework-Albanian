@@ -15643,10 +15643,10 @@ oper
       } ;
 
   v0_mkPerf : Str -> Number => Person => Str =
-    \pple -> v0_mkPers ("kam "+pple) ("ke "+pple) ("ka "+pple) ("kemi "+pple) ("keni "+pple) ("kanë "+pple) ;
+    \pple -> v0_mkPers ("kam" ++pple) ("ke" ++pple) ("ka" ++pple) ("kemi" ++pple) ("keni" ++pple) ("kanë" ++pple) ;
 
   v0_mkPerfOpt : Str -> Number => Person => Str =
-    \pple -> v0_mkPers ("paça "+pple) ("paç "+pple) ("pastë "+pple) ("paçim "+pple) ("paçi "+pple) ("paçin "+pple) ;
+    \pple -> v0_mkPers ("paça" ++pple) ("paç" ++pple) ("pastë" ++pple) ("paçim" ++pple) ("paçit" ++ pple) ("paçin" ++pple) ;
 
   v0_shortPart : Str -> Str = \pple ->
     <case <pple : Str> of {
@@ -15724,7 +15724,7 @@ mkV002 base =
         Subjunctive = subjunctiveFromPresent (v0_mkPers "kam" "ke" "ka" "kemi" "keni" "kanë") ;
         Imperative = table { Sg => "ki" ; Pl => "keni" } ;
         participle = pple ;
-        pres_optative = v0_mkPers "paça" "paç" "pastë" "paçim" "paçi" "paçin" ;
+        pres_optative = v0_mkPers "paça" "paç" "pastë" "paçim" "paçit" "paçin" ;
         perf_optative = v0_mkPerfOpt pple ;
         pres_admirative =
           v0_mkPers "paskam" "paske" "paska" "paskemi" "paskeni" "paskan" ;
@@ -15949,14 +15949,14 @@ mkV011 base =
                                } ;
                        Past => table {  -- present perfect: kam + participle
                                  Sg => table {
-                                         P1 => "kam "+base_1+"ënë" ;
-                                         P2 => "ke "+base_1+"ënë" ;
-                                         P3 => "ka "+base_1+"ënë"
+                                         P1 => "kam" ++base_1+"ënë" ;
+                                         P2 => "ke" ++base_1+"ënë" ;
+                                         P3 => "ka" ++base_1+"ënë"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"ënë" ;
-                                         P2 => "keni "+base_1+"ënë" ;
-                                         P3 => "kanë "+base_1+"ënë"
+                                         P1 => "kemi" ++base_1+"ënë" ;
+                                         P2 => "keni" ++base_1+"ënë" ;
+                                         P3 => "kanë" ++base_1+"ënë"
                                        }
                                } ;
                        Aorist => table { -- sigmatic aorist (…ashë / …e / …a / …amë / …atë / …anë)
@@ -16015,14 +16015,14 @@ mkV011 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"ënë" ;
-                                  P2 => "paç "+base_1+"ënë" ;
-                                  P3 => "pastë "+base_1+"ënë"
+                                  P1 => "paça" ++base_1+"ënë" ;
+                                  P2 => "paç" ++base_1+"ënë" ;
+                                  P3 => "pastë" ++base_1+"ënë"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"ënë" ;
-                                  P2 => "paçi "+base_1+"ënë" ;
-                                  P3 => "paçin "+base_1+"ënë"
+                                  P1 => "paçim" ++base_1+"ënë" ;
+                                  P2 => "paçit" ++ base_1+"ënë" ;
+                                  P3 => "paçin" ++base_1+"ënë"
                                 }
                         } ;
         pres_admirative = table { -- short participle + present of kam (suffixed)
@@ -16067,14 +16067,14 @@ mkV011 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"ënë" ;
-                                         P2 => "ke "+base_1+"ënë" ;
-                                         P3 => "ka "+base_1+"ënë"
+                                         P1 => "kam" ++base_1+"ënë" ;
+                                         P2 => "ke" ++base_1+"ënë" ;
+                                         P3 => "ka" ++base_1+"ënë"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"ënë" ;
-                                         P2 => "keni "+base_1+"ënë" ;
-                                         P3 => "kanë "+base_1+"ënë"
+                                         P1 => "kemi" ++base_1+"ënë" ;
+                                         P2 => "keni" ++base_1+"ënë" ;
+                                         P3 => "kanë" ++base_1+"ënë"
                                        }
                                } ;
                        Aorist => table {
@@ -16121,8 +16121,8 @@ mkV011 base =
                           Pl => table { P1 => base_1+"ënçim" ; P2 => base_1+"ënçi" ; P3 => base_1+"ënçin" }
                         } ;
         perf_optative = table {
-                          Sg => table { P1 => "paça "+base_1+"ënë" ; P2 => "paç "+base_1+"ënë" ; P3 => "pastë "+base_1+"ënë" } ;
-                          Pl => table { P1 => "paçim "+base_1+"ënë" ; P2 => "paçi "+base_1+"ënë" ; P3 => "paçin "+base_1+"ënë" }
+                          Sg => table { P1 => "paça" ++base_1+"ënë" ; P2 => "paç" ++base_1+"ënë" ; P3 => "pastë" ++base_1+"ënë" } ;
+                          Pl => table { P1 => "paçim" ++base_1+"ënë" ; P2 => "paçit" ++ base_1+"ënë" ; P3 => "paçin" ++base_1+"ënë" }
                         } ;
         pres_admirative = table {
                             Sg => table { P1 => base_1+"ënkam" ; P2 => base_1+"ënke" ; P3 => base_1+"ënka" } ;
@@ -16156,14 +16156,14 @@ mkV012 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+"d"+base_1+"ë" ;
-                                         P2 => "ke "+"d"+base_1+"ë" ;
-                                         P3 => "ka "+"d"+base_1+"ë"
+                                         P1 => "kam" ++"d"+base_1+"ë" ;
+                                         P2 => "ke" ++"d"+base_1+"ë" ;
+                                         P3 => "ka" ++"d"+base_1+"ë"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+"d"+base_1+"ë" ;
-                                         P2 => "keni "+"d"+base_1+"ë" ;
-                                         P3 => "kanë "+"d"+base_1+"ë"
+                                         P1 => "kemi" ++"d"+base_1+"ë" ;
+                                         P2 => "keni" ++"d"+base_1+"ë" ;
+                                         P3 => "kanë" ++"d"+base_1+"ë"
                                        }
                                } ;
                        Aorist => table {
@@ -16222,14 +16222,14 @@ mkV012 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+"d"+base_1+"ë" ;
-                                  P2 => "paç "+"d"+base_1+"ë" ;
-                                  P3 => "pastë "+"d"+base_1+"ë"
+                                  P1 => "paça" ++"d"+base_1+"ë" ;
+                                  P2 => "paç" ++"d"+base_1+"ë" ;
+                                  P3 => "pastë" ++"d"+base_1+"ë"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+"d"+base_1+"ë" ;
-                                  P2 => "paçi "+"d"+base_1+"ë" ;
-                                  P3 => "paçin "+"d"+base_1+"ë"
+                                  P1 => "paçim" ++"d"+base_1+"ë" ;
+                                  P2 => "paçit" ++ "d"+base_1+"ë" ;
+                                  P3 => "paçin" ++"d"+base_1+"ë"
                                 }
                         } ;
         pres_admirative = table {
@@ -16269,8 +16269,8 @@ mkV013 base_1 =
                              Pl => table { P1 => base_1+"im" ; P2 => base_1+"ni" ; P3 => base_1+"in" }
                            } ;
                    Past => table {
-                             Sg => table { P1 => "kam "+base_1+"ë" ; P2 => "ke "+base_1+"ë" ; P3 => "ka "+base_1+"ë" } ;
-                             Pl => table { P1 => "kemi "+base_1+"ë" ; P2 => "keni "+base_1+"ë" ; P3 => "kanë "+base_1+"ë" }
+                             Sg => table { P1 => "kam" ++base_1+"ë" ; P2 => "ke" ++base_1+"ë" ; P3 => "ka" ++base_1+"ë" } ;
+                             Pl => table { P1 => "kemi" ++base_1+"ë" ; P2 => "keni" ++base_1+"ë" ; P3 => "kanë" ++base_1+"ë" }
                            } ;
                    Aorist => table {
                                Sg => table { P1 => base_1+"a" ; P2 => base_1+"e" ; P3 => base_1+"i" } ;
@@ -16292,8 +16292,8 @@ mkV013 base_1 =
                       Pl => table { P1 => base_1+"shim" ; P2 => base_1+"shi" ; P3 => base_1+"shin" }
                     } ;
     perf_optative = table {
-                      Sg => table { P1 => "paça "+base_1+"ë" ; P2 => "paç "+base_1+"ë" ; P3 => "pastë "+base_1+"ë" } ;
-                      Pl => table { P1 => "paçim "+base_1+"ë" ; P2 => "paçi "+base_1+"ë" ; P3 => "paçin "+base_1+"ë" }
+                      Sg => table { P1 => "paça" ++base_1+"ë" ; P2 => "paç" ++base_1+"ë" ; P3 => "pastë" ++base_1+"ë" } ;
+                      Pl => table { P1 => "paçim" ++base_1+"ë" ; P2 => "paçit" ++ base_1+"ë" ; P3 => "paçin" ++base_1+"ë" }
                     } ;
     pres_admirative = table {
                         Sg => table { P1 => base_1+"kam" ; P2 => base_1+"ke" ; P3 => base_1+"ka" } ;
@@ -16327,14 +16327,14 @@ mkV015 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"të" ;
-                                         P2 => "ke "+base_1+"të" ;
-                                         P3 => "ka "+base_1+"të"
+                                         P1 => "kam" ++base_1+"të" ;
+                                         P2 => "ke" ++base_1+"të" ;
+                                         P3 => "ka" ++base_1+"të"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"të" ;
-                                         P2 => "keni "+base_1+"të" ;
-                                         P3 => "kanë "+base_1+"të"
+                                         P1 => "kemi" ++base_1+"të" ;
+                                         P2 => "keni" ++base_1+"të" ;
+                                         P3 => "kanë" ++base_1+"të"
                                        }
                                } ;
                        Aorist => table {
@@ -16393,14 +16393,14 @@ mkV015 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"të" ;
-                                  P2 => "paç "+base_1+"të" ;
-                                  P3 => "pastë "+base_1+"të"
+                                  P1 => "paça" ++base_1+"të" ;
+                                  P2 => "paç" ++base_1+"të" ;
+                                  P3 => "pastë" ++base_1+"të"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"të" ;
-                                  P2 => "paçi "+base_1+"të" ;
-                                  P3 => "paçin "+base_1+"të"
+                                  P1 => "paçim" ++base_1+"të" ;
+                                  P2 => "paçit" ++ base_1+"të" ;
+                                  P3 => "paçin" ++base_1+"të"
                                 }
                         } ;
         pres_admirative = table {
@@ -16450,14 +16450,14 @@ mkV016 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"a"+base_2+"rë" ;
-                                         P2 => "ke "+base_1+"a"+base_2+"rë" ;
-                                         P3 => "ka "+base_1+"a"+base_2+"rë"
+                                         P1 => "kam" ++base_1+"a"+base_2+"rë" ;
+                                         P2 => "ke" ++base_1+"a"+base_2+"rë" ;
+                                         P3 => "ka" ++base_1+"a"+base_2+"rë"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"a"+base_2+"rë" ;
-                                         P2 => "keni "+base_1+"a"+base_2+"rë" ;
-                                         P3 => "kanë "+base_1+"a"+base_2+"rë"
+                                         P1 => "kemi" ++base_1+"a"+base_2+"rë" ;
+                                         P2 => "keni" ++base_1+"a"+base_2+"rë" ;
+                                         P3 => "kanë" ++base_1+"a"+base_2+"rë"
                                        }
                                } ;
                        Aorist => table {
@@ -16516,14 +16516,14 @@ mkV016 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"a"+base_2+"rë" ;
-                                  P2 => "paç "+base_1+"a"+base_2+"rë" ;
-                                  P3 => "pastë "+base_1+"a"+base_2+"rë"
+                                  P1 => "paça" ++base_1+"a"+base_2+"rë" ;
+                                  P2 => "paç" ++base_1+"a"+base_2+"rë" ;
+                                  P3 => "pastë" ++base_1+"a"+base_2+"rë"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"a"+base_2+"rë" ;
-                                  P2 => "paçi "+base_1+"a"+base_2+"rë" ;
-                                  P3 => "paçin "+base_1+"a"+base_2+"rë"
+                                  P1 => "paçim" ++base_1+"a"+base_2+"rë" ;
+                                  P2 => "paçit" ++ base_1+"a"+base_2+"rë" ;
+                                  P3 => "paçin" ++base_1+"a"+base_2+"rë"
                                 }
                         } ;
         pres_admirative = table {
@@ -16563,8 +16563,8 @@ mkV017 base_1 =
                              Pl => table { P1 => base_1+"im" ; P2 => base_1+"ni" ; P3 => base_1+"in" }
                            } ;
                    Past => table {
-                             Sg => table { P1 => "kam "+"(për)"+base_1+"ur" ; P2 => "ke "+"(për)"+base_1+"ur" ; P3 => "ka "+"(për)"+base_1+"ur" } ;
-                             Pl => table { P1 => "kemi "+"(për)"+base_1+"ur" ; P2 => "keni "+"(për)"+base_1+"ur" ; P3 => "kanë "+"(për)"+base_1+"ur" }
+                             Sg => table { P1 => "kam" ++"(për)"+base_1+"ur" ; P2 => "ke" ++"(për)"+base_1+"ur" ; P3 => "ka" ++"(për)"+base_1+"ur" } ;
+                             Pl => table { P1 => "kemi" ++"(për)"+base_1+"ur" ; P2 => "keni" ++"(për)"+base_1+"ur" ; P3 => "kanë" ++"(për)"+base_1+"ur" }
                            } ;
                    Aorist => table {
                                Sg => table { P1 => "(për)"+base_1+"a" ; P2 => "(për)"+base_1+"e" ; P3 => "(për)"+base_1+"i" } ;
@@ -16586,8 +16586,8 @@ mkV017 base_1 =
                       Pl => table { P1 => base_1+"shim" ; P2 => base_1+"shi" ; P3 => base_1+"shin" }
                     } ;
     perf_optative = table {
-                      Sg => table { P1 => "paça "+"(për)"+base_1+"ur" ; P2 => "paç "+"(për)"+base_1+"ur" ; P3 => "pastë "+"(për)"+base_1+"ur" } ;
-                      Pl => table { P1 => "paçim "+"(për)"+base_1+"ur" ; P2 => "paçi "+"(për)"+base_1+"ur" ; P3 => "paçin "+"(për)"+base_1+"ur" }
+                      Sg => table { P1 => "paça" ++"(për)"+base_1+"ur" ; P2 => "paç" ++"(për)"+base_1+"ur" ; P3 => "pastë" ++"(për)"+base_1+"ur" } ;
+                      Pl => table { P1 => "paçim" ++"(për)"+base_1+"ur" ; P2 => "paçit" ++ "(për)"+base_1+"ur" ; P3 => "paçin" ++"(për)"+base_1+"ur" }
                     } ;
     pres_admirative = table {
                         Sg => table { P1 => "(për)"+base_1+"ukam" ; P2 => "(për)"+base_1+"uke" ; P3 => "(për)"+base_1+"uka" } ;
@@ -16608,8 +16608,8 @@ mkV018 base_1 =
                              Pl => table { P1 => base_1+"im" ; P2 => base_1+"ni" ; P3 => base_1+"in" }
                            } ;
                    Past => table {
-                             Sg => table { P1 => "kam "+base_1+"ur" ; P2 => "ke "+base_1+"ur" ; P3 => "ka "+base_1+"ur" } ;
-                             Pl => table { P1 => "kemi "+base_1+"ur" ; P2 => "keni "+base_1+"ur" ; P3 => "kanë "+base_1+"ur" }
+                             Sg => table { P1 => "kam" ++base_1+"ur" ; P2 => "ke" ++base_1+"ur" ; P3 => "ka" ++base_1+"ur" } ;
+                             Pl => table { P1 => "kemi" ++base_1+"ur" ; P2 => "keni" ++base_1+"ur" ; P3 => "kanë" ++base_1+"ur" }
                            } ;
                    Aorist => table {
                                Sg => table { P1 => base_1 ; P2 => base_1+"e" ; P3 => base_1+"i" } ;
@@ -16631,8 +16631,8 @@ mkV018 base_1 =
                       Pl => table { P1 => base_1+"shim" ; P2 => base_1+"shi" ; P3 => base_1+"shin" }
                     } ;
     perf_optative = table {
-                      Sg => table { P1 => "paça "+base_1+"ur" ; P2 => "paç "+base_1+"ur" ; P3 => "pastë "+base_1+"ur" } ;
-                      Pl => table { P1 => "paçim "+base_1+"ur" ; P2 => "paçi "+base_1+"ur" ; P3 => "paçin "+base_1+"ur" }
+                      Sg => table { P1 => "paça" ++base_1+"ur" ; P2 => "paç" ++base_1+"ur" ; P3 => "pastë" ++base_1+"ur" } ;
+                      Pl => table { P1 => "paçim" ++base_1+"ur" ; P2 => "paçit" ++ base_1+"ur" ; P3 => "paçin" ++base_1+"ur" }
                     } ;
     pres_admirative = table {
                         Sg => table { P1 => base_1+"ukam" ; P2 => base_1+"uke" ; P3 => base_1+"uka" } ;
@@ -16663,14 +16663,14 @@ mkV019 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"a"+base_2+"rë" ;
-                                         P2 => "ke "+base_1+"a"+base_2+"rë" ;
-                                         P3 => "ka "+base_1+"a"+base_2+"rë"
+                                         P1 => "kam" ++base_1+"a"+base_2+"rë" ;
+                                         P2 => "ke" ++base_1+"a"+base_2+"rë" ;
+                                         P3 => "ka" ++base_1+"a"+base_2+"rë"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"a"+base_2+"rë" ;
-                                         P2 => "keni "+base_1+"a"+base_2+"rë" ;
-                                         P3 => "kanë "+base_1+"a"+base_2+"rë"
+                                         P1 => "kemi" ++base_1+"a"+base_2+"rë" ;
+                                         P2 => "keni" ++base_1+"a"+base_2+"rë" ;
+                                         P3 => "kanë" ++base_1+"a"+base_2+"rë"
                                        }
                                } ;
                        Aorist => table {
@@ -16729,14 +16729,14 @@ mkV019 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"a"+base_2+"rë" ;
-                                  P2 => "paç "+base_1+"a"+base_2+"rë" ;
-                                  P3 => "pastë "+base_1+"a"+base_2+"rë"
+                                  P1 => "paça" ++base_1+"a"+base_2+"rë" ;
+                                  P2 => "paç" ++base_1+"a"+base_2+"rë" ;
+                                  P3 => "pastë" ++base_1+"a"+base_2+"rë"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"a"+base_2+"rë" ;
-                                  P2 => "paçi "+base_1+"a"+base_2+"rë" ;
-                                  P3 => "paçin "+base_1+"a"+base_2+"rë"
+                                  P1 => "paçim" ++base_1+"a"+base_2+"rë" ;
+                                  P2 => "paçit" ++ base_1+"a"+base_2+"rë" ;
+                                  P3 => "paçin" ++base_1+"a"+base_2+"rë"
                                 }
                         } ;
         pres_admirative = table {
@@ -16786,14 +16786,14 @@ mkV020 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"aj"+base_2+"ur" ;
-                                         P2 => "ke "+base_1+"aj"+base_2+"ur" ;
-                                         P3 => "ka "+base_1+"aj"+base_2+"ur"
+                                         P1 => "kam" ++base_1+"aj"+base_2+"ur" ;
+                                         P2 => "ke" ++base_1+"aj"+base_2+"ur" ;
+                                         P3 => "ka" ++base_1+"aj"+base_2+"ur"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"aj"+base_2+"ur" ;
-                                         P2 => "keni "+base_1+"aj"+base_2+"ur" ;
-                                         P3 => "kanë "+base_1+"aj"+base_2+"ur"
+                                         P1 => "kemi" ++base_1+"aj"+base_2+"ur" ;
+                                         P2 => "keni" ++base_1+"aj"+base_2+"ur" ;
+                                         P3 => "kanë" ++base_1+"aj"+base_2+"ur"
                                        }
                                } ;
                        Aorist => table {
@@ -16852,14 +16852,14 @@ mkV020 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"aj"+base_2+"ur" ;
-                                  P2 => "paç "+base_1+"aj"+base_2+"ur" ;
-                                  P3 => "pastë "+base_1+"aj"+base_2+"ur"
+                                  P1 => "paça" ++base_1+"aj"+base_2+"ur" ;
+                                  P2 => "paç" ++base_1+"aj"+base_2+"ur" ;
+                                  P3 => "pastë" ++base_1+"aj"+base_2+"ur"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"aj"+base_2+"ur" ;
-                                  P2 => "paçi "+base_1+"aj"+base_2+"ur" ;
-                                  P3 => "paçin "+base_1+"aj"+base_2+"ur"
+                                  P1 => "paçim" ++base_1+"aj"+base_2+"ur" ;
+                                  P2 => "paçit" ++ base_1+"aj"+base_2+"ur" ;
+                                  P3 => "paçin" ++base_1+"aj"+base_2+"ur"
                                 }
                         } ;
         pres_admirative = table {
@@ -16909,8 +16909,8 @@ mkV021 base =
             Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorS+"a" ; P2 => aorS+"e" ; P3 => aorS+"i" } ;
@@ -16934,8 +16934,8 @@ mkV021 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -16970,8 +16970,8 @@ mkV022 base =
             Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorS+"a" ; P2 => aorS+"e" ; P3 => aorS+"i" } ;
@@ -16995,8 +16995,8 @@ mkV022 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17031,8 +17031,8 @@ mkV023 base =
             Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorS+"a" ; P2 => aorS+"e" ; P3 => aorS+"i" } ;
@@ -17056,8 +17056,8 @@ mkV023 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17098,8 +17098,8 @@ mkV024 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -17123,8 +17123,8 @@ mkV024 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17167,8 +17167,8 @@ mkV025 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorBase+"va" ; P2 => aorBase+"ve" ; P3 => aorBase+"u" } ;
@@ -17192,8 +17192,8 @@ mkV025 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17228,8 +17228,8 @@ mkV026 base =
             Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorS+"a" ; P2 => aorS+"e" ; P3 => aorS+"i" } ;
@@ -17253,8 +17253,8 @@ mkV026 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17311,8 +17311,8 @@ mkV027 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aor1 ; P2 => aor2 ; P3 => aor3 } ;
@@ -17336,8 +17336,8 @@ mkV027 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17394,8 +17394,8 @@ mkV028 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aor1 ; P2 => aor2 ; P3 => aor3 } ;
@@ -17419,8 +17419,8 @@ mkV028 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17453,8 +17453,8 @@ mkV029 base_1 =
         Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
       } ;
       Past => table {
-        Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-        Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+        Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+        Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
       } ;
       Aorist => table {
         Sg => table { P1 => aorS+"a" ; P2 => aorS+"e" ; P3 => aorS+"i" } ;
@@ -17478,8 +17478,8 @@ mkV029 base_1 =
     } ;
 
     perf_optative = table {
-      Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-      Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+      Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+      Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
     } ;
 
     pres_admirative = table {
@@ -17512,8 +17512,8 @@ mkV030 base =
             Pl => table { P1 => presS+"më" ; P2 => presS+"ni" ; P3 => presS+"në" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -17537,8 +17537,8 @@ mkV030 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
 
         pres_admirative = table {
@@ -17580,14 +17580,14 @@ mkV031 base =
           } ;
           Past => table {  -- perfect (non-active)
             Sg => table {
-              P1 => "jam"+" "+part ;
-              P2 => "je"+" "+part ;
-              P3 => "është"+" "+part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi"+" "+part ;
-              P2 => "jeni"+" "+part ;
-              P3 => "janë"+" "+part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table {
@@ -17650,14 +17650,14 @@ mkV031 base =
 
         perf_optative = table { -- qof- + participle (non-active)
           Sg => table {
-            P1 => "qofsha"+" "+part ;
-            P2 => "qofsh"+" "+part ;
-            P3 => "qoftë"+" "+part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim"+" "+part ;
-            P2 => "qofshi"+" "+part ;
-            P3 => "qofshin"+" "+part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -17716,14 +17716,14 @@ mkV032 base =
           } ;
           Past => table { -- perfect (active)
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table { -- keep P1 as original shape
@@ -17786,14 +17786,14 @@ mkV032 base =
 
         perf_optative = table { -- paça + participle (active)
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -17850,14 +17850,14 @@ mkV033 base_1 =
       } ;
       Past => table {
         Sg => table {
-          P1 => "kam"+" "+part ;
-          P2 => "ke"+" "+part ;
-          P3 => "ka"+" "+part
+          P1 => "kam" ++ part ;
+          P2 => "ke" ++ part ;
+          P3 => "ka" ++ part
         } ;
         Pl => table {
-          P1 => "kemi"+" "+part ;
-          P2 => "keni"+" "+part ;
-          P3 => "kanë"+" "+part
+          P1 => "kemi" ++ part ;
+          P2 => "keni" ++ part ;
+          P3 => "kanë" ++ part
         }
       } ;
       Aorist => table {
@@ -17920,14 +17920,14 @@ mkV033 base_1 =
 
     perf_optative = table {
       Sg => table {
-        P1 => "paça"+" "+part ;
-        P2 => "paç"+" "+part ;
-        P3 => "pastë"+" "+part
+        P1 => "paça" ++ part ;
+        P2 => "paç" ++ part ;
+        P3 => "pastë" ++ part
       } ;
       Pl => table {
-        P1 => "paçim"+" "+part ;
-        P2 => "paçi"+" "+part ;
-        P3 => "paçin"+" "+part
+        P1 => "paçim" ++ part ;
+        P2 => "paçit" ++ part ;
+        P3 => "paçin" ++ part
       }
     } ;
 
@@ -17984,14 +17984,14 @@ mkV034 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -18054,14 +18054,14 @@ mkV034 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -18120,14 +18120,14 @@ mkV035 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -18190,14 +18190,14 @@ mkV035 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -18256,14 +18256,14 @@ mkV036 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -18326,14 +18326,14 @@ mkV036 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -18392,14 +18392,14 @@ mkV037 base =
           } ;
           Past => table { -- perfect (non-active)
             Sg => table {
-              P1 => "jam"+" "+part ;
-              P2 => "je"+" "+part ;
-              P3 => "është"+" "+part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi"+" "+part ;
-              P2 => "jeni"+" "+part ;
-              P3 => "janë"+" "+part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table {
@@ -18462,14 +18462,14 @@ mkV037 base =
 
         perf_optative = table { -- qof- + participle
           Sg => table {
-            P1 => "qofsha"+" "+part ;
-            P2 => "qofsh"+" "+part ;
-            P3 => "qoftë"+" "+part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim"+" "+part ;
-            P2 => "qofshi"+" "+part ;
-            P3 => "qofshin"+" "+part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -18528,14 +18528,14 @@ mkV038 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -18598,14 +18598,14 @@ mkV038 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -18664,14 +18664,14 @@ mkV039 base =
           } ;
           Past => table { -- perfect (non-active)
             Sg => table {
-              P1 => "jam"+" "+part ;
-              P2 => "je"+" "+part ;
-              P3 => "është"+" "+part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi"+" "+part ;
-              P2 => "jeni"+" "+part ;
-              P3 => "janë"+" "+part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table {
@@ -18734,14 +18734,14 @@ mkV039 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "qofsha"+" "+part ;
-            P2 => "qofsh"+" "+part ;
-            P3 => "qoftë"+" "+part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim"+" "+part ;
-            P2 => "qofshi"+" "+part ;
-            P3 => "qofshin"+" "+part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -18800,14 +18800,14 @@ mkV040 base =
           } ;
           Past => table { -- perfect (non-active)
             Sg => table {
-              P1 => "jam"+" "+part ;
-              P2 => "je"+" "+part ;
-              P3 => "është"+" "+part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi"+" "+part ;
-              P2 => "jeni"+" "+part ;
-              P3 => "janë"+" "+part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table {
@@ -18870,14 +18870,14 @@ mkV040 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "qofsha"+" "+part ;
-            P2 => "qofsh"+" "+part ;
-            P3 => "qoftë"+" "+part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim"+" "+part ;
-            P2 => "qofshi"+" "+part ;
-            P3 => "qofshin"+" "+part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -19942,8 +19942,8 @@ oper
 
   mkPerfTable : Str -> (Number => (Person => Str)) = \pple ->
     table {
-      Sg => table { P1 => "kam " + pple ; P2 => "ke " + pple ; P3 => "ka " + pple } ;
-      Pl => table { P1 => "kemi " + pple ; P2 => "keni " + pple ; P3 => "kanë " + pple }
+      Sg => table { P1 => "kam" ++ pple ; P2 => "ke" ++ pple ; P3 => "ka" ++ pple } ;
+      Pl => table { P1 => "kemi" ++ pple ; P2 => "keni" ++ pple ; P3 => "kanë" ++ pple }
     } ;
 
   -- Conservative consonant-stem present: 1/2/3sg = citation; pl = +im/+ni/+in
@@ -20002,8 +20002,8 @@ oper
 
   mkPerfOpt : Str -> (Number => (Person => Str)) = \pple ->
     table {
-      Sg => table { P1 => "paça " + pple ; P2 => "paç " + pple ; P3 => "pastë " + pple } ;
-      Pl => table { P1 => "paçim " + pple ; P2 => "paçi " + pple ; P3 => "paçin " + pple }
+      Sg => table { P1 => "paça" ++ pple ; P2 => "paç" ++ pple ; P3 => "pastë" ++ pple } ;
+      Pl => table { P1 => "paçim" ++ pple ; P2 => "paçit" ++ pple ; P3 => "paçin" ++ pple }
     } ;
 
 -- =========================
@@ -20300,14 +20300,14 @@ mkV061 base =
           } ;
           Past => table {   -- perfect mediopassive: jam + participle
             Sg => table {
-              P1 => "jam " + part ;
-              P2 => "je "  + part ;
-              P3 => "është " + part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi " + part ;
-              P2 => "jeni " + part ;
-              P3 => "janë " + part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table { -- mediopassive aorist: u + active aorist; 3sg has no ending
@@ -20370,14 +20370,14 @@ mkV061 base =
 
         perf_optative = table { -- perfect optative (non-active): qof- + participle
           Sg => table {
-            P1 => "qofsha " + part ;
-            P2 => "qofsh "  + part ;
-            P3 => "qoftë "  + part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim " + part ;
-            P2 => "qofshi "  + part ;
-            P3 => "qofshin " + part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -20434,8 +20434,8 @@ mkV062 stem =
         Pl => table { P1 => stem+"im" ; P2 => stem+"ni" ; P3 => stem+"in" }
       } ;
       Past => table { -- perfect active: kam + participle
-        Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-        Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+        Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+        Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
       } ;
       Aorist => table { -- keep your 1sg -ë, extend with regular endings
         Sg => table { P1 => stem+"ë" ; P2 => stem+"e" ; P3 => stem+"i" } ;
@@ -20469,8 +20469,8 @@ mkV062 stem =
     } ;
 
     perf_optative = table {
-      Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-      Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+      Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+      Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
     } ;
 
     pres_admirative = table {
@@ -20503,8 +20503,8 @@ mkV063 base =
             Pl => table { P1 => presStem+"emi" ; P2 => presStem+"eni" ; P3 => presStem+"en" }
           } ;
           Past => table {
-            Sg => table { P1 => "jam " + part ; P2 => "je " + part ; P3 => "është " + part } ;
-            Pl => table { P1 => "jemi " + part ; P2 => "jeni " + part ; P3 => "janë " + part }
+            Sg => table { P1 => "jam" ++ part ; P2 => "je" ++ part ; P3 => "është" ++ part } ;
+            Pl => table { P1 => "jemi" ++ part ; P2 => "jeni" ++ part ; P3 => "janë" ++ part }
           } ;
           Aorist => table {
             Sg => table {
@@ -20538,8 +20538,8 @@ mkV063 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "qofsha " + part ; P2 => "qofsh " + part ; P3 => "qoftë " + part } ;
-          Pl => table { P1 => "qofshim " + part ; P2 => "qofshi " + part ; P3 => "qofshin " + part }
+          Sg => table { P1 => "qofsha" ++ part ; P2 => "qofsh" ++ part ; P3 => "qoftë" ++ part } ;
+          Pl => table { P1 => "qofshim" ++ part ; P2 => "qofshit" ++ part ; P3 => "qofshin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20570,8 +20570,8 @@ mkV064 base =
             Pl => table { P1 => presStem+"im" ; P2 => presStem+"ni" ; P3 => presStem+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -20597,8 +20597,8 @@ mkV064 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20629,8 +20629,8 @@ mkV065 base =
             Pl => table { P1 => presStem+"im" ; P2 => presStem+"ni" ; P3 => presStem+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -20656,8 +20656,8 @@ mkV065 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20688,8 +20688,8 @@ mkV066 base =
             Pl => table { P1 => "hamë" ; P2 => "hani" ; P3 => "hanë" }
           } ;
           Past => table {               -- kam ngrënë
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table {             -- hëngra, hëngre, hëngri, ...
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -20723,8 +20723,8 @@ mkV066 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20755,8 +20755,8 @@ mkV067 base =
             Pl => table { P1 => presStem+"im" ; P2 => presStem+"ni" ; P3 => presStem+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -20782,8 +20782,8 @@ mkV067 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20813,8 +20813,8 @@ mkV068 base =
             Pl => table { P1 => root+"jmë" ; P2 => root+"ni" ; P3 => root+"në" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorT+"a" ; P2 => aorT+"e" ; P3 => aorT+"i" } ;
@@ -20840,8 +20840,8 @@ mkV068 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20872,8 +20872,8 @@ mkV069 base =
             Pl => table { P1 => root+"jmë" ; P2 => root+"ni" ; P3 => root+"jnë" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table { -- keep your 1sg -ti, extend as t-aorist
             Sg => table { P1 => aorT+"i" ; P2 => aorT+"e" ; P3 => aorT+"i" } ;
@@ -20899,8 +20899,8 @@ mkV069 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table {
@@ -20929,8 +20929,8 @@ mkV070 base =
             Pl => table { P1 => root+"ojmë" ; P2 => root+"oni" ; P3 => root+"ojnë" }
           } ;
           Past => table { -- kam punuar
-            Sg => table { P1 => "kam " + part ; P2 => "ke " + part ; P3 => "ka " + part } ;
-            Pl => table { P1 => "kemi " + part ; P2 => "keni " + part ; P3 => "kanë " + part }
+            Sg => table { P1 => "kam" ++ part ; P2 => "ke" ++ part ; P3 => "ka" ++ part } ;
+            Pl => table { P1 => "kemi" ++ part ; P2 => "keni" ++ part ; P3 => "kanë" ++ part }
           } ;
           Aorist => table { -- punova/punove/punoi/punuam/punuat/punuan
             Sg => table { P1 => root+"ova" ; P2 => root+"ove" ; P3 => root+"oi" } ;
@@ -20959,8 +20959,8 @@ mkV070 base =
         } ;
 
         perf_optative = table {
-          Sg => table { P1 => "paça " + part ; P2 => "paç " + part ; P3 => "pastë " + part } ;
-          Pl => table { P1 => "paçim " + part ; P2 => "paçi " + part ; P3 => "paçin " + part }
+          Sg => table { P1 => "paça" ++ part ; P2 => "paç" ++ part ; P3 => "pastë" ++ part } ;
+          Pl => table { P1 => "paçim" ++ part ; P2 => "paçit" ++ part ; P3 => "paçin" ++ part }
         } ;
 
         pres_admirative = table { -- punuakam...
@@ -21053,14 +21053,14 @@ mkV071 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"y"+base_2+"r") ;
-                                  P2 => "paç"+" "+(base_1+"y"+base_2+"r") ;
-                                  P3 => "pastë"+" "+(base_1+"y"+base_2+"r")
+                                  P1 => "paça" ++ (base_1+"y"+base_2+"r") ;
+                                  P2 => "paç" ++ (base_1+"y"+base_2+"r") ;
+                                  P3 => "pastë" ++ (base_1+"y"+base_2+"r")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"y"+base_2+"r") ;
-                                  P2 => "paçi"+" "+(base_1+"y"+base_2+"r") ;
-                                  P3 => "paçin"+" "+(base_1+"y"+base_2+"r")
+                                  P1 => "paçim" ++ (base_1+"y"+base_2+"r") ;
+                                  P2 => "paçit" ++ (base_1+"y"+base_2+"r") ;
+                                  P3 => "paçin" ++ (base_1+"y"+base_2+"r")
                                 }
                         } ;
         pres_admirative = table {
@@ -21168,14 +21168,14 @@ mkV072 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+base_2+"rë") ;
-                                  P2 => "paç"+" "+(base_1+base_2+"rë") ;
-                                  P3 => "pastë"+" "+(base_1+base_2+"rë")
+                                  P1 => "paça" ++ (base_1+base_2+"rë") ;
+                                  P2 => "paç" ++ (base_1+base_2+"rë") ;
+                                  P3 => "pastë" ++ (base_1+base_2+"rë")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+base_2+"rë") ;
-                                  P2 => "paçi"+" "+(base_1+base_2+"rë") ;
-                                  P3 => "paçin"+" "+(base_1+base_2+"rë")
+                                  P1 => "paçim" ++ (base_1+base_2+"rë") ;
+                                  P2 => "paçit" ++ (base_1+base_2+"rë") ;
+                                  P3 => "paçin" ++ (base_1+base_2+"rë")
                                 }
                         } ;
         pres_admirative = table {
@@ -21283,14 +21283,14 @@ mkV073 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P2 => "paç"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P3 => "pastë"+" "+(base_1+"i"+base_2+"ur")
+                                  P1 => "paça" ++ (base_1+"i"+base_2+"ur") ;
+                                  P2 => "paç" ++ (base_1+"i"+base_2+"ur") ;
+                                  P3 => "pastë" ++ (base_1+"i"+base_2+"ur")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P2 => "paçi"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P3 => "paçin"+" "+(base_1+"i"+base_2+"ur")
+                                  P1 => "paçim" ++ (base_1+"i"+base_2+"ur") ;
+                                  P2 => "paçit" ++ (base_1+"i"+base_2+"ur") ;
+                                  P3 => "paçin" ++ (base_1+"i"+base_2+"ur")
                                 }
                         } ;
         pres_admirative = table {
@@ -21398,14 +21398,14 @@ mkV074 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"uar") ;
-                                  P2 => "paç"+" "+(base_1+"uar") ;
-                                  P3 => "pastë"+" "+(base_1+"uar")
+                                  P1 => "paça" ++ (base_1+"uar") ;
+                                  P2 => "paç" ++ (base_1+"uar") ;
+                                  P3 => "pastë" ++ (base_1+"uar")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"uar") ;
-                                  P2 => "paçi"+" "+(base_1+"uar") ;
-                                  P3 => "paçin"+" "+(base_1+"uar")
+                                  P1 => "paçim" ++ (base_1+"uar") ;
+                                  P2 => "paçit" ++ (base_1+"uar") ;
+                                  P3 => "paçin" ++ (base_1+"uar")
                                 }
                         } ;
         pres_admirative = table {
@@ -21513,14 +21513,14 @@ mkV075 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"ënë") ;
-                                  P2 => "paç"+" "+(base_1+"ënë") ;
-                                  P3 => "pastë"+" "+(base_1+"ënë")
+                                  P1 => "paça" ++ (base_1+"ënë") ;
+                                  P2 => "paç" ++ (base_1+"ënë") ;
+                                  P3 => "pastë" ++ (base_1+"ënë")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"ënë") ;
-                                  P2 => "paçi"+" "+(base_1+"ënë") ;
-                                  P3 => "paçin"+" "+(base_1+"ënë")
+                                  P1 => "paçim" ++ (base_1+"ënë") ;
+                                  P2 => "paçit" ++ (base_1+"ënë") ;
+                                  P3 => "paçin" ++ (base_1+"ënë")
                                 }
                         } ;
         pres_admirative = table {
@@ -21628,14 +21628,14 @@ mkV076 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"y"+base_2+"ur") ;
-                                  P2 => "paç"+" "+(base_1+"y"+base_2+"ur") ;
-                                  P3 => "pastë"+" "+(base_1+"y"+base_2+"ur")
+                                  P1 => "paça" ++ (base_1+"y"+base_2+"ur") ;
+                                  P2 => "paç" ++ (base_1+"y"+base_2+"ur") ;
+                                  P3 => "pastë" ++ (base_1+"y"+base_2+"ur")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"y"+base_2+"ur") ;
-                                  P2 => "paçi"+" "+(base_1+"y"+base_2+"ur") ;
-                                  P3 => "paçin"+" "+(base_1+"y"+base_2+"ur")
+                                  P1 => "paçim" ++ (base_1+"y"+base_2+"ur") ;
+                                  P2 => "paçit" ++ (base_1+"y"+base_2+"ur") ;
+                                  P3 => "paçin" ++ (base_1+"y"+base_2+"ur")
                                 }
                         } ;
         pres_admirative = table {
@@ -21743,14 +21743,14 @@ mkV077 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+("r"+base_1+"y"+base_2+"r") ;
-                                  P2 => "paç"+" "+("r"+base_1+"y"+base_2+"r") ;
-                                  P3 => "pastë"+" "+("r"+base_1+"y"+base_2+"r")
+                                  P1 => "paça" ++ ("r"+base_1+"y"+base_2+"r") ;
+                                  P2 => "paç" ++ ("r"+base_1+"y"+base_2+"r") ;
+                                  P3 => "pastë" ++ ("r"+base_1+"y"+base_2+"r")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+("r"+base_1+"y"+base_2+"r") ;
-                                  P2 => "paçi"+" "+("r"+base_1+"y"+base_2+"r") ;
-                                  P3 => "paçin"+" "+("r"+base_1+"y"+base_2+"r")
+                                  P1 => "paçim" ++ ("r"+base_1+"y"+base_2+"r") ;
+                                  P2 => "paçit" ++ ("r"+base_1+"y"+base_2+"r") ;
+                                  P3 => "paçin" ++ ("r"+base_1+"y"+base_2+"r")
                                 }
                         } ;
         pres_admirative = table {
@@ -21858,14 +21858,14 @@ mkV078 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"ur") ;
-                                  P2 => "paç"+" "+(base_1+"ur") ;
-                                  P3 => "pastë"+" "+(base_1+"ur")
+                                  P1 => "paça" ++ (base_1+"ur") ;
+                                  P2 => "paç" ++ (base_1+"ur") ;
+                                  P3 => "pastë" ++ (base_1+"ur")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"ur") ;
-                                  P2 => "paçi"+" "+(base_1+"ur") ;
-                                  P3 => "paçin"+" "+(base_1+"ur")
+                                  P1 => "paçim" ++ (base_1+"ur") ;
+                                  P2 => "paçit" ++ (base_1+"ur") ;
+                                  P3 => "paçin" ++ (base_1+"ur")
                                 }
                         } ;
         pres_admirative = table {
@@ -21973,14 +21973,14 @@ mkV079 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P2 => "paç"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P3 => "pastë"+" "+(base_1+"i"+base_2+"ur")
+                                  P1 => "paça" ++ (base_1+"i"+base_2+"ur") ;
+                                  P2 => "paç" ++ (base_1+"i"+base_2+"ur") ;
+                                  P3 => "pastë" ++ (base_1+"i"+base_2+"ur")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P2 => "paçi"+" "+(base_1+"i"+base_2+"ur") ;
-                                  P3 => "paçin"+" "+(base_1+"i"+base_2+"ur")
+                                  P1 => "paçim" ++ (base_1+"i"+base_2+"ur") ;
+                                  P2 => "paçit" ++ (base_1+"i"+base_2+"ur") ;
+                                  P3 => "paçin" ++ (base_1+"i"+base_2+"ur")
                                 }
                         } ;
         pres_admirative = table {
@@ -22088,14 +22088,14 @@ mkV080 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça"+" "+(base_1+"tur") ;
-                                  P2 => "paç"+" "+(base_1+"tur") ;
-                                  P3 => "pastë"+" "+(base_1+"tur")
+                                  P1 => "paça" ++ (base_1+"tur") ;
+                                  P2 => "paç" ++ (base_1+"tur") ;
+                                  P3 => "pastë" ++ (base_1+"tur")
                                 } ;
                           Pl => table {
-                                  P1 => "paçim"+" "+(base_1+"tur") ;
-                                  P2 => "paçi"+" "+(base_1+"tur") ;
-                                  P3 => "paçin"+" "+(base_1+"tur")
+                                  P1 => "paçim" ++ (base_1+"tur") ;
+                                  P2 => "paçit" ++ (base_1+"tur") ;
+                                  P3 => "paçin" ++ (base_1+"tur")
                                 }
                         } ;
         pres_admirative = table {
@@ -22491,14 +22491,14 @@ mkV091 base =
           } ;
           Past => table {  -- present perfect
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table { -- past definite
@@ -22561,14 +22561,14 @@ mkV091 base =
 
         perf_optative = table { -- paça + participle
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -22627,14 +22627,14 @@ mkV092 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -22697,14 +22697,14 @@ mkV092 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -22763,14 +22763,14 @@ mkV093 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -22833,14 +22833,14 @@ mkV093 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -22899,14 +22899,14 @@ mkV094 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -22969,14 +22969,14 @@ mkV094 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -23035,14 +23035,14 @@ mkV095 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -23105,14 +23105,14 @@ mkV095 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -23171,14 +23171,14 @@ mkV096 base =
           } ;
           Past => table { -- perfect (non-active uses jam)
             Sg => table {
-              P1 => "jam"+" "+part ;
-              P2 => "je"+" "+part ;
-              P3 => "është"+" "+part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi"+" "+part ;
-              P2 => "jeni"+" "+part ;
-              P3 => "janë"+" "+part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table { -- aorist stem (still stored without u-)
@@ -23241,14 +23241,14 @@ mkV096 base =
 
         perf_optative = table { -- perfect optative (non-active uses qof-)
           Sg => table {
-            P1 => "qofsha"+" "+part ;
-            P2 => "qofsh"+" "+part ;
-            P3 => "qoftë"+" "+part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim"+" "+part ;
-            P2 => "qofshi"+" "+part ;
-            P3 => "qofshin"+" "+part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -23306,14 +23306,14 @@ mkV097 base =
           } ;
           Past => table { -- perfect (non-active uses jam)
             Sg => table {
-              P1 => "jam"+" "+part ;
-              P2 => "je"+" "+part ;
-              P3 => "është"+" "+part
+              P1 => "jam" ++ part ;
+              P2 => "je" ++ part ;
+              P3 => "është" ++ part
             } ;
             Pl => table {
-              P1 => "jemi"+" "+part ;
-              P2 => "jeni"+" "+part ;
-              P3 => "janë"+" "+part
+              P1 => "jemi" ++ part ;
+              P2 => "jeni" ++ part ;
+              P3 => "janë" ++ part
             }
           } ;
           Aorist => table {
@@ -23376,14 +23376,14 @@ mkV097 base =
 
         perf_optative = table { -- perfect optative (non-active uses qof-)
           Sg => table {
-            P1 => "qofsha"+" "+part ;
-            P2 => "qofsh"+" "+part ;
-            P3 => "qoftë"+" "+part
+            P1 => "qofsha" ++ part ;
+            P2 => "qofsh" ++ part ;
+            P3 => "qoftë" ++ part
           } ;
           Pl => table {
-            P1 => "qofshim"+" "+part ;
-            P2 => "qofshi"+" "+part ;
-            P3 => "qofshin"+" "+part
+            P1 => "qofshim" ++ part ;
+            P2 => "qofshit" ++ part ;
+            P3 => "qofshin" ++ part
           }
         } ;
 
@@ -23442,14 +23442,14 @@ mkV098 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -23512,14 +23512,14 @@ mkV098 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -23578,14 +23578,14 @@ mkV099 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -23648,14 +23648,14 @@ mkV099 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -23714,14 +23714,14 @@ mkV100 base =
           } ;
           Past => table {
             Sg => table {
-              P1 => "kam"+" "+part ;
-              P2 => "ke"+" "+part ;
-              P3 => "ka"+" "+part
+              P1 => "kam" ++ part ;
+              P2 => "ke" ++ part ;
+              P3 => "ka" ++ part
             } ;
             Pl => table {
-              P1 => "kemi"+" "+part ;
-              P2 => "keni"+" "+part ;
-              P3 => "kanë"+" "+part
+              P1 => "kemi" ++ part ;
+              P2 => "keni" ++ part ;
+              P3 => "kanë" ++ part
             }
           } ;
           Aorist => table {
@@ -23784,14 +23784,14 @@ mkV100 base =
 
         perf_optative = table {
           Sg => table {
-            P1 => "paça"+" "+part ;
-            P2 => "paç"+" "+part ;
-            P3 => "pastë"+" "+part
+            P1 => "paça" ++ part ;
+            P2 => "paç" ++ part ;
+            P3 => "pastë" ++ part
           } ;
           Pl => table {
-            P1 => "paçim"+" "+part ;
-            P2 => "paçi"+" "+part ;
-            P3 => "paçin"+" "+part
+            P1 => "paçim" ++ part ;
+            P2 => "paçit" ++ part ;
+            P3 => "paçin" ++ part
           }
         } ;
 
@@ -23854,17 +23854,17 @@ oper
 
   -- Perfect (analytic): kam/ke/ka/kemi/keni/kanë + participle
   mkPerf : Str -> Number => Person => Str =
-    \pple -> mkPers ("kam"+" "+pple) ("ke"+" "+pple) ("ka"+" "+pple)
-                   ("kemi"+" "+pple) ("keni"+" "+pple) ("kanë"+" "+pple) ;
+    \pple -> mkPers ("kam" ++ pple) ("ke" ++ pple) ("ka" ++ pple)
+                   ("kemi" ++ pple) ("keni" ++ pple) ("kanë" ++ pple) ;
 
   -- Optative (regular -fsh- implementation): punofsha/punofsh/punoftë/punofshim/punofshi/punofshin
   mkOptFsh : Str -> Number => Person => Str =
     \stem -> mkPers (stem+"fsha") (stem+"fsh") (stem+"ftë") (stem+"fshim") (stem+"fshi") (stem+"fshin") ;
 
-  -- Perfect optative: paça/paç/pastë/paçim/paçi/paçin + participle
+  -- Perfect optative: paça/paç/pastë/paçim/paçit/paçin + participle
   mkPerfOpt2 : Str -> Number => Person => Str =
-    \pple -> mkPers ("paça"+" "+pple) ("paç"+" "+pple) ("pastë"+" "+pple)
-                   ("paçim"+" "+pple) ("paçi"+" "+pple) ("paçin"+" "+pple) ;
+    \pple -> mkPers ("paça" ++ pple) ("paç" ++ pple) ("pastë" ++ pple)
+                   ("paçim" ++ pple) ("paçit" ++ pple) ("paçin" ++ pple) ;
 
   -- Admirative present: shortPart + kam/ke/ka/kemi/keni/kan
   mkAdmPresShort : Str -> Number => Person => Str =
@@ -25160,14 +25160,14 @@ mkV121 base =
                        -- present perfect
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"uar" ;
-                                         P2 => "ke "+base_1+"uar" ;
-                                         P3 => "ka "+base_1+"uar"
+                                         P1 => "kam" ++base_1+"uar" ;
+                                         P2 => "ke" ++base_1+"uar" ;
+                                         P3 => "ka" ++base_1+"uar"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"uar" ;
-                                         P2 => "keni "+base_1+"uar" ;
-                                         P3 => "kanë "+base_1+"uar"
+                                         P1 => "kemi" ++base_1+"uar" ;
+                                         P2 => "keni" ++base_1+"uar" ;
+                                         P3 => "kanë" ++base_1+"uar"
                                        }
                                } ;
                        -- past definite
@@ -25228,14 +25228,14 @@ mkV121 base =
         -- perfect optative: paça + participle
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"uar" ;
-                                  P2 => "paç "+base_1+"uar" ;
-                                  P3 => "pastë "+base_1+"uar"
+                                  P1 => "paça" ++base_1+"uar" ;
+                                  P2 => "paç" ++base_1+"uar" ;
+                                  P3 => "pastë" ++base_1+"uar"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"uar" ;
-                                  P2 => "paçi "+base_1+"uar" ;
-                                  P3 => "paçin "+base_1+"uar"
+                                  P1 => "paçim" ++base_1+"uar" ;
+                                  P2 => "paçit" ++ base_1+"uar" ;
+                                  P3 => "paçin" ++base_1+"uar"
                                 }
                         } ;
         -- admirative: participle-stem (punua-) + present/imperfect of kam
@@ -25286,14 +25286,14 @@ mkV122 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+"â" ;
-                                         P2 => "ke "+base_1+"â" ;
-                                         P3 => "ka "+base_1+"â"
+                                         P1 => "kam" ++base_1+"â" ;
+                                         P2 => "ke" ++base_1+"â" ;
+                                         P3 => "ka" ++base_1+"â"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+"â" ;
-                                         P2 => "keni "+base_1+"â" ;
-                                         P3 => "kanë "+base_1+"â"
+                                         P1 => "kemi" ++base_1+"â" ;
+                                         P2 => "keni" ++base_1+"â" ;
+                                         P3 => "kanë" ++base_1+"â"
                                        }
                                } ;
                        Aorist => table {
@@ -25353,14 +25353,14 @@ mkV122 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+"â" ;
-                                  P2 => "paç "+base_1+"â" ;
-                                  P3 => "pastë "+base_1+"â"
+                                  P1 => "paça" ++base_1+"â" ;
+                                  P2 => "paç" ++base_1+"â" ;
+                                  P3 => "pastë" ++base_1+"â"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+"â" ;
-                                  P2 => "paçi "+base_1+"â" ;
-                                  P3 => "paçin "+base_1+"â"
+                                  P1 => "paçim" ++base_1+"â" ;
+                                  P2 => "paçit" ++ base_1+"â" ;
+                                  P3 => "paçin" ++base_1+"â"
                                 }
                         } ;
         pres_admirative = table {
@@ -25410,14 +25410,14 @@ mkV123 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "jam "+base_1+"a"+base_2+"ë" ;
-                                         P2 => "je "+base_1+"a"+base_2+"ë" ;
-                                         P3 => "është "+base_1+"a"+base_2+"ë"
+                                         P1 => "jam" ++ base_1+"a"+base_2+"ë" ;
+                                         P2 => "je" ++ base_1+"a"+base_2+"ë" ;
+                                         P3 => "është" ++ base_1+"a"+base_2+"ë"
                                        } ;
                                  Pl => table {
-                                         P1 => "jemi "+base_1+"a"+base_2+"ë" ;
-                                         P2 => "jeni "+base_1+"a"+base_2+"ë" ;
-                                         P3 => "janë "+base_1+"a"+base_2+"ë"
+                                         P1 => "jemi" ++ base_1+"a"+base_2+"ë" ;
+                                         P2 => "jeni" ++ base_1+"a"+base_2+"ë" ;
+                                         P3 => "janë" ++ base_1+"a"+base_2+"ë"
                                        }
                                } ;
                        Aorist => table {
@@ -25476,14 +25476,14 @@ mkV123 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "qofsha "+base_1+"a"+base_2+"ë" ;
-                                  P2 => "qofsh "+base_1+"a"+base_2+"ë" ;
-                                  P3 => "qoftë "+base_1+"a"+base_2+"ë"
+                                  P1 => "qofsha" ++base_1+"a"+base_2+"ë" ;
+                                  P2 => "qofsh" ++base_1+"a"+base_2+"ë" ;
+                                  P3 => "qoftë" ++base_1+"a"+base_2+"ë"
                                 } ;
                           Pl => table {
-                                  P1 => "qofshim "+base_1+"a"+base_2+"ë" ;
-                                  P2 => "qofshi "+base_1+"a"+base_2+"ë" ;
-                                  P3 => "qofshin "+base_1+"a"+base_2+"ë"
+                                  P1 => "qofshim" ++base_1+"a"+base_2+"ë" ;
+                                  P2 => "qofshit" ++ base_1+"a"+base_2+"ë" ;
+                                  P3 => "qofshin" ++base_1+"a"+base_2+"ë"
                                 }
                         } ;
         pres_admirative = table {
@@ -25533,14 +25533,14 @@ mkV124 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "jam "+base_1+"ur" ;
-                                         P2 => "je "+base_1+"ur" ;
-                                         P3 => "është "+base_1+"ur"
+                                         P1 => "jam" ++ base_1+"ur" ;
+                                         P2 => "je" ++ base_1+"ur" ;
+                                         P3 => "është" ++ base_1+"ur"
                                        } ;
                                  Pl => table {
-                                         P1 => "jemi "+base_1+"ur" ;
-                                         P2 => "jeni "+base_1+"ur" ;
-                                         P3 => "janë "+base_1+"ur"
+                                         P1 => "jemi" ++ base_1+"ur" ;
+                                         P2 => "jeni" ++ base_1+"ur" ;
+                                         P3 => "janë" ++ base_1+"ur"
                                        }
                                } ;
                        Aorist => table {
@@ -25599,14 +25599,14 @@ mkV124 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "qofsha "+base_1+"ur" ;
-                                  P2 => "qofsh "+base_1+"ur" ;
-                                  P3 => "qoftë "+base_1+"ur"
+                                  P1 => "qofsha" ++base_1+"ur" ;
+                                  P2 => "qofsh" ++base_1+"ur" ;
+                                  P3 => "qoftë" ++base_1+"ur"
                                 } ;
                           Pl => table {
-                                  P1 => "qofshim "+base_1+"ur" ;
-                                  P2 => "qofshi "+base_1+"ur" ;
-                                  P3 => "qofshin "+base_1+"ur"
+                                  P1 => "qofshim" ++base_1+"ur" ;
+                                  P2 => "qofshit" ++ base_1+"ur" ;
+                                  P3 => "qofshin" ++base_1+"ur"
                                 }
                         } ;
         pres_admirative = table {
@@ -25656,14 +25656,14 @@ mkV125 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+base_2+"rrë" ;
-                                         P2 => "ke "+base_1+base_2+"rrë" ;
-                                         P3 => "ka "+base_1+base_2+"rrë"
+                                         P1 => "kam" ++base_1+base_2+"rrë" ;
+                                         P2 => "ke" ++base_1+base_2+"rrë" ;
+                                         P3 => "ka" ++base_1+base_2+"rrë"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+base_2+"rrë" ;
-                                         P2 => "keni "+base_1+base_2+"rrë" ;
-                                         P3 => "kanë "+base_1+base_2+"rrë"
+                                         P1 => "kemi" ++base_1+base_2+"rrë" ;
+                                         P2 => "keni" ++base_1+base_2+"rrë" ;
+                                         P3 => "kanë" ++base_1+base_2+"rrë"
                                        }
                                } ;
                        Aorist => table {
@@ -25722,14 +25722,14 @@ mkV125 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+base_2+"rrë" ;
-                                  P2 => "paç "+base_1+base_2+"rrë" ;
-                                  P3 => "pastë "+base_1+base_2+"rrë"
+                                  P1 => "paça" ++base_1+base_2+"rrë" ;
+                                  P2 => "paç" ++base_1+base_2+"rrë" ;
+                                  P3 => "pastë" ++base_1+base_2+"rrë"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+base_2+"rrë" ;
-                                  P2 => "paçi "+base_1+base_2+"rrë" ;
-                                  P3 => "paçin "+base_1+base_2+"rrë"
+                                  P1 => "paçim" ++base_1+base_2+"rrë" ;
+                                  P2 => "paçit" ++ base_1+base_2+"rrë" ;
+                                  P3 => "paçin" ++base_1+base_2+"rrë"
                                 }
                         } ;
         pres_admirative = table {
@@ -25779,14 +25779,14 @@ mkV126 base =
                                } ;
                        Past => table {
                                  Sg => table {
-                                         P1 => "kam "+base_1+base_2+"në" ;
-                                         P2 => "ke "+base_1+base_2+"në" ;
-                                         P3 => "ka "+base_1+base_2+"në"
+                                         P1 => "kam" ++base_1+base_2+"në" ;
+                                         P2 => "ke" ++base_1+base_2+"në" ;
+                                         P3 => "ka" ++base_1+base_2+"në"
                                        } ;
                                  Pl => table {
-                                         P1 => "kemi "+base_1+base_2+"në" ;
-                                         P2 => "keni "+base_1+base_2+"në" ;
-                                         P3 => "kanë "+base_1+base_2+"në"
+                                         P1 => "kemi" ++base_1+base_2+"në" ;
+                                         P2 => "keni" ++base_1+base_2+"në" ;
+                                         P3 => "kanë" ++base_1+base_2+"në"
                                        }
                                } ;
                        Aorist => table {
@@ -25846,14 +25846,14 @@ mkV126 base =
                         } ;
         perf_optative = table {
                           Sg => table {
-                                  P1 => "paça "+base_1+base_2+"në" ;
-                                  P2 => "paç "+base_1+base_2+"në" ;
-                                  P3 => "pastë "+base_1+base_2+"në"
+                                  P1 => "paça" ++base_1+base_2+"në" ;
+                                  P2 => "paç" ++base_1+base_2+"në" ;
+                                  P3 => "pastë" ++base_1+base_2+"në"
                                 } ;
                           Pl => table {
-                                  P1 => "paçim "+base_1+base_2+"në" ;
-                                  P2 => "paçi "+base_1+base_2+"në" ;
-                                  P3 => "paçin "+base_1+base_2+"në"
+                                  P1 => "paçim" ++base_1+base_2+"në" ;
+                                  P2 => "paçit" ++ base_1+base_2+"në" ;
+                                  P3 => "paçin" ++base_1+base_2+"në"
                                 }
                         } ;
         pres_admirative = table {
@@ -25902,14 +25902,14 @@ mkV127 base_1 =
                            } ;
                    Past => table {
                              Sg => table {
-                                     P1 => "kam "+base_1+"un" ;
-                                     P2 => "ke "+base_1+"un" ;
-                                     P3 => "ka "+base_1+"un"
+                                     P1 => "kam" ++base_1+"un" ;
+                                     P2 => "ke" ++base_1+"un" ;
+                                     P3 => "ka" ++base_1+"un"
                                    } ;
                              Pl => table {
-                                     P1 => "kemi "+base_1+"un" ;
-                                     P2 => "keni "+base_1+"un" ;
-                                     P3 => "kanë "+base_1+"un"
+                                     P1 => "kemi" ++base_1+"un" ;
+                                     P2 => "keni" ++base_1+"un" ;
+                                     P3 => "kanë" ++base_1+"un"
                                    }
                            } ;
                    Aorist => table {
@@ -25968,14 +25968,14 @@ mkV127 base_1 =
                     } ;
     perf_optative = table {
                       Sg => table {
-                              P1 => "paça "+base_1+"un" ;
-                              P2 => "paç "+base_1+"un" ;
-                              P3 => "pastë "+base_1+"un"
+                              P1 => "paça" ++base_1+"un" ;
+                              P2 => "paç" ++base_1+"un" ;
+                              P3 => "pastë" ++base_1+"un"
                             } ;
                       Pl => table {
-                              P1 => "paçim "+base_1+"un" ;
-                              P2 => "paçi "+base_1+"un" ;
-                              P3 => "paçin "+base_1+"un"
+                              P1 => "paçim" ++base_1+"un" ;
+                              P2 => "paçit" ++ base_1+"un" ;
+                              P3 => "paçin" ++base_1+"un"
                             }
                     } ;
     pres_admirative = table {
@@ -26416,8 +26416,8 @@ mkV131 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aor1 ; P2 => aor2 ; P3 => aor3 } ;
@@ -26440,8 +26440,8 @@ mkV131 base =
           Pl => table { P1 => optFsh+"im" ; P2 => optFsh+"i" ; P3 => optFsh+"in" }
         } ;
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
         pres_admirative = table {
           Sg => table { P1 => partStem+"kam" ; P2 => partStem+"ke" ; P3 => partStem+"ka" } ;
@@ -26489,8 +26489,8 @@ mkV132 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorStem+"a" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -26513,8 +26513,8 @@ mkV132 base =
           Pl => table { P1 => optFsh+"im" ; P2 => optFsh+"i" ; P3 => optFsh+"in" }
         } ;
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
         pres_admirative = table {
           Sg => table { P1 => partStem+"kam" ; P2 => partStem+"ke" ; P3 => partStem+"ka" } ;
@@ -26570,8 +26570,8 @@ mkV133 base =
             Pl => table { P1 => pres1pl ; P2 => pres2pl ; P3 => pres3pl }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aor1 ; P2 => aor2 ; P3 => aor3 } ;
@@ -26594,8 +26594,8 @@ mkV133 base =
           Pl => table { P1 => optFsh+"im" ; P2 => optFsh+"i" ; P3 => optFsh+"in" }
         } ;
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
         pres_admirative = table {
           Sg => table { P1 => partStem+"kam" ; P2 => partStem+"ke" ; P3 => partStem+"ka" } ;
@@ -26634,8 +26634,8 @@ mkV134 base_1 =
         Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
       } ;
       Past => table {
-        Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-        Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+        Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+        Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
       } ;
       Aorist => table {
         Sg => table { P1 => aorStem+"i" ; P2 => aorStem+"e" ; P3 => aorStem+"i" } ;
@@ -26658,8 +26658,8 @@ mkV134 base_1 =
       Pl => table { P1 => optSh+"im" ; P2 => optSh+"i" ; P3 => optSh+"in" }
     } ;
     perf_optative = table {
-      Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-      Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+      Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+      Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
     } ;
     pres_admirative = table {
       Sg => table { P1 => partStem+"kam" ; P2 => partStem+"ke" ; P3 => partStem+"ka" } ;
@@ -26698,8 +26698,8 @@ mkV135 base =
             Pl => table { P1 => presS+"im" ; P2 => presS+"ni" ; P3 => presS+"in" }
           } ;
           Past => table {
-            Sg => table { P1 => "kam "+part ; P2 => "ke "+part ; P3 => "ka "+part } ;
-            Pl => table { P1 => "kemi "+part ; P2 => "keni "+part ; P3 => "kanë "+part }
+            Sg => table { P1 => "kam" ++part ; P2 => "ke" ++part ; P3 => "ka" ++part } ;
+            Pl => table { P1 => "kemi" ++part ; P2 => "keni" ++part ; P3 => "kanë" ++part }
           } ;
           Aorist => table {
             Sg => table { P1 => aorBase+"a" ; P2 => aorBase+"e" ; P3 => aorBase+"i" } ;
@@ -26722,8 +26722,8 @@ mkV135 base =
           Pl => table { P1 => optSh+"im" ; P2 => optSh+"i" ; P3 => optSh+"in" }
         } ;
         perf_optative = table {
-          Sg => table { P1 => "paça "+part ; P2 => "paç "+part ; P3 => "pastë "+part } ;
-          Pl => table { P1 => "paçim "+part ; P2 => "paçi "+part ; P3 => "paçin "+part }
+          Sg => table { P1 => "paça" ++part ; P2 => "paç" ++part ; P3 => "pastë" ++part } ;
+          Pl => table { P1 => "paçim" ++part ; P2 => "paçit" ++ part ; P3 => "paçin" ++part }
         } ;
         pres_admirative = table {
           Sg => table { P1 => partStem+"kam" ; P2 => partStem+"ke" ; P3 => partStem+"ka" } ;

@@ -34,6 +34,9 @@ oper
     \g,n -> {gn = genNum g n ; p = P3} ;
 
 
+param
+  DetPlacement = PreNominal | PostNominal ;
+
 oper
   Noun : Type = {s : Species => Case => Number => Str ; g : Gender} ;
 
@@ -155,7 +158,7 @@ oper
             "pi"  => "pijë" ;
             "vij" => "vijë" ;
             "them" => "thotë" ;
-            _ + "j" => p1 ++ BIND ++ "ë" ;
+            _ + "j" => p1 + "ë" ;
             _ => case <p2 : Str> of {
               stem + "n" => stem ++ "ë" ;
               x => x
@@ -231,7 +234,7 @@ oper
 
 
 oper
-  Quant : Type = {s : Case => Gender => Number => Str ; spec : Species} ;
+  Quant : Type = {s : Case => Gender => Number => Str ; spec : Species ; placement : DetPlacement} ;
 
   mkQuant : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Quant =
     \f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16 -> {
@@ -253,54 +256,65 @@ oper
                       Fem  => table {Sg => f15 ; Pl => f16}
                     }
           } ;
-      spec = Indef
+      spec = Indef ;
+      placement = PreNominal
     } ;
 
 
 oper
-  Det : Type = {s : Case => Gender => Str ; n : Number ; spec : Species} ;
+  Det : Type = {s : Case => Gender => Str ; n : Number ; spec : Species ; placement : DetPlacement} ;
 
   mkDet : (Number -> Species -> Case -> Gender -> Str) -> Det = \f -> {
     s = \\c,g => f Sg Indef c g ;
     n = Sg ;
-    spec = Indef
+    spec = Indef ;
+    placement = PreNominal
   } ;
 
   mkNum : Str -> Number -> {s : Str ; n : Number} = \s,n -> {s=s ; n=n} ;
 
 
 oper
+  -- Albanian linking article for articulated adjectives.  The article varies
+  -- with definiteness, case, gender and number; keep the full distinction here
+  -- instead of letting downstream syntax guess from a surface string.
   link_clitic : Species => Case => Gender => Number => Str =
     table {
       Indef => table {
-        Nom => table { _ => table { _ => "i" } } ;
+        Nom => table {
+          Masc => table {Sg => "i" ; Pl => "të"} ;
+          Fem  => table {Sg => "e" ; Pl => "të"}
+        } ;
         Acc => table {
-                 Masc => table {Sg => "të" ; Pl => "e"} ;
-                 Fem  => table {Sg => "të" ; Pl => "e"}
-               } ;
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "të" ; Pl => "të"}
+        } ;
         Dat => table {
-                 Masc => table {Sg => "të" ; Pl => "të"} ;
-                 Fem  => table {Sg => "të" ; Pl => "të"}
-               } ;
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "të" ; Pl => "të"}
+        } ;
         Ablat => table {
-                   Masc => table {Sg => "të" ; Pl => "të"} ;
-                   Fem  => table {Sg => "të" ; Pl => "të"}
-                 }
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "të" ; Pl => "të"}
+        }
       } ;
       Def => table {
-        Nom => table { _ => table { _ => "i" } } ;
+        Nom => table {
+          Masc => table {Sg => "i" ; Pl => "e"} ;
+          Fem  => table {Sg => "e" ; Pl => "e"}
+        } ;
         Acc => table {
-                 Masc => table {Sg => "e" ; Pl => "e"} ;
-                 Fem  => table {Sg => "e" ; Pl => "e"}
-               } ;
+          Masc => table {Sg => "e" ; Pl => "e"} ;
+          Fem  => table {Sg => "e" ; Pl => "e"}
+        } ;
         Dat => table {
-                 Masc => table {Sg => "të" ; Pl => "të"} ;
-                 Fem  => table {Sg => "të" ; Pl => "të"}
-               } ;
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "së" ; Pl => "të"}
+        } ;
         Ablat => table {
-                   Masc => table {Sg => "të" ; Pl => "të"} ;
-                   Fem  => table {Sg => "të" ; Pl => "të"}
-                 }
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "së" ; Pl => "të"}
+        }
       }
     } ;
 

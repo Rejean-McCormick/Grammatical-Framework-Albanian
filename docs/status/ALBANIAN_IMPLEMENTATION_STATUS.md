@@ -728,3 +728,49 @@ not contain the `gf` executable. The current release state therefore remains
 
 Operational details and the reproducible validator command are in
 `../ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md`.
+
+---
+
+## 2026-09-23 behavioral surface-hygiene overlay
+
+The compiler/execution frontier has advanced beyond the older status text above. GF 3.12 run `20260923_194006` reports **54/54 compilation and 50/50 scenario execution**. That run is structurally green but not yet linguistically certified because it contains three empty CASE realizations and six visible `&+` token-binding artifacts.
+
+ALB-DEC-055 is implemented as the corrective overlay: `ResSqi` joins productive `-jë` morphology without `BIND`; `IrregSqi` owns exact paradigms for `blej`, `them`, and `bëhem`; `LexiconSqi` consumes those irregular values; and `ParadigmsSqi.irregVFull` preserves their full represented tense/mood inventory. GF 3.12 rerun acceptance is pending. The next successful run must be both 54/54 + 50/50 **and** free of the nine recorded surface defects.
+
+---
+
+## 2026-09-23 ALB-DEC-056 parameter-provenance correction
+
+Run `20260923_201645` is a compile-regression checkpoint, not evidence against
+the irregular/surface design of ALB-DEC-055. `ResSqi`, `ParadigmsSqi`, and
+`IrregSqiAbs` reached successful compilation; `IrregSqi` failed at renaming on
+unqualified `Number`/`Person`, and its import closure then failed downstream.
+
+The corrected candidate opens `(P = ParamX)` in `IrregSqi` and qualifies all
+common number/person constructors in the local helper tables. GF 3.12 acceptance
+is pending a rerun. Surface-hygiene acceptance remains pending the same rerun;
+no linguistic certification is claimed from compile recovery alone.
+
+---
+
+## 2026-09-24 linguistic root-repair candidate (ALB-DEC-057)
+
+The current accepted runtime baseline is no longer the old compiler-failure state:
+GF 3.12 run `20260923_214430` completed **54/54 compile + 50/50 scenarios**, with
+zero structural-lock warnings.  Linguistic certification remains explicitly
+`NOT ESTABLISHED`.
+
+The current source candidate implements the next linguistic repair layer:
+
+- token-safe auxiliary + participle composition across productive verb families;
+- full irregular paradigms for the audited high-alternation verbs and auxiliaries;
+- a public worst-case `NForms -> Gender -> N` constructor and explicit paradigms for
+  `libër`, `djalë`, `burrë`, and `mollë`;
+- a full Species/Case/Gender/Number articulated-adjective linking-article table;
+- typed dative government for audited V3 indirect objects;
+- typed pre/post nominal placement for `Quant`/`Det` and case-sensitive ordinary
+  possessive morphology.
+
+Status: **IMPLEMENTED CANDIDATE / GF 3.12 RERUN PENDING**.  The local assembly
+machine lacks `gf`; no compiler or linguistic certification is inferred from static
+checks.

@@ -71,6 +71,6 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
     } ;
     ConjDet c xs = {
       s=\\k,g=>xs.first!k!g ++ c.s ++ xs.last!k!g;
-      n=xs.n; spec=Def
+      n=xs.n; spec=Def; placement=PreNominal
     } ;
 }

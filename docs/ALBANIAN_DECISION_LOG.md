@@ -1565,7 +1565,7 @@ the active frontier to ALB-DEC-054.
 ---
 
 ## ALB-DEC-054
-**Status:** implemented candidate; GF 3.12 scenario acceptance pending  
+**Status:** accepted by GF 3.12 run `20260923_194006`  
 **Date:** 2026-09-23  
 **Area:** behavioral campaign / irregular VV construction
 
@@ -1587,8 +1587,167 @@ forms. The project already defines `IrregSqi.dua_V` and exports it through
 manifest expressions now use `St.want_VV`; C0376-C0380 are unchanged. The
 scenario input SHA-256 declaration is updated.
 
-**Acceptance gate:** a fresh GF 3.12 run must import `AlbCampaign038Sqi` without
-GeneratePMCFG failure, execute C0371-C0380, and preserve 54/54 compiler success.
-Actual linguistic outputs remain subject to review; this decision alone does
-not establish 50/50 scenario correctness.
+**Acceptance result:** GF 3.12 run `20260923_194006` imports `AlbCampaign038Sqi`
+without GeneratePMCFG failure, preserves 54/54 compilation, and records 50/50
+scenario execution. This closes the execution defect addressed by ALB-DEC-054.
+The same run exposed nine surface-quality defects (three empty CASE outputs and
+six visible `&+` bindings), which are handled separately by ALB-DEC-055.
+---
 
+## ALB-DEC-055
+**Status:** implemented overlay; GF 3.12 acceptance rerun pending  
+**Date:** 2026-09-23  
+**Area:** surface hygiene / irregular lexical paradigms / token binding
+
+**Decision:** Repair the nine surface defects exposed by run `20260923_194006`
+at their owning linguistic layers rather than normalizing them away or weakening
+tests.
+
+1. Productive Albanian present-subjunctive `-j -> -jë` formation uses ordinary
+   intra-word string concatenation (`+ "ë"`). `BIND` is not inserted inside the
+   inflected word. The Compendium classifies unexpected token binding as a
+   blocking orthography/tokenization defect and prohibits normalization that
+   collapses token boundaries. Model-language `BIND` use is treated only as an
+   engineering reference; Albanian surface morphology remains authoritative.
+2. `blej`, `them`, and mediopassive `bëhem` are routed through exact irregular
+   verb tables. Their lexical entries must not depend on generic `mkV047` /
+   `mkV041` cells that contain `Past => nonExist` or synthesize the wrong stem.
+3. Add `ParadigmsSqi.irregVFull` as an explicit-table constructor for irregular
+   verbs whose tense/mood distinctions cannot be represented by the compact
+   legacy `irregV`. Keep legacy `irregV` unchanged outside this audited scope.
+4. `LexiconSqi` references canonical `IrregSqi` values for `buy_V2`, `say_VS`,
+   and `become_VA`; no ad-hoc `regV` exception is introduced.
+
+**Target forms represented by this overlay:** `ka blerë`, `ka thënë`,
+`është bërë`, productive subjunctives such as `shkojë` / `jetojë` / `blejë`,
+and the exact ordinary/marked paradigms stored for the three irregular lexemes.
+Active perfects use `kam`; mediopassive `bëhem` uses `jam`.
+
+**Compendium/model-language rationale:** the Compendium V/V2 contracts require
+a complete finite/nonfinite paradigm and forbid discarding paradigm cells. The
+Albanian model-language policy permits borrowing representation patterns only,
+not foreign surface forms. The chosen design therefore makes the irregular
+information explicit in Albanian morphology while preserving existing category
+and valency structure.
+
+**Acceptance gate:** rerun GF 3.12 and require: 54/54 compile; 50/50 scenario
+execution; zero empty CASE surfaces; zero literal `&+` in Albanian CASE output;
+C0157 = `ka blerë`; C0187 = `ka thënë`; C0197 = `është bërë`; and the six former
+subjunctive-binding cases contain joined orthographic forms rather than a token
+binding marker. Linguistic certification beyond these audited forms remains a
+separate reviewed-golden gate.
+
+
+---
+
+## ALB-DEC-056 — Qualify ParamX in local irregular-table helpers after GF 3.12 renaming failure
+
+**Date:** 2026-09-23  
+**Evidence:** diagnostic run `20260923_201645`  
+**Area:** irregular morphology / parameter provenance / compile recovery
+
+**Observed failure:** the ALB-DEC-055 candidate reaches `IrregSqi.gf` and fails
+in GF renaming before the new irregular paradigms can be evaluated:
+
+```text
+IrregSqi.gf:3-7:
+  Happened in the renaming of personTable
+   constant not found: Number
+   constant not found: Person
+IrregSqi.gf:9:
+  Happened in the renaming of numberTable
+   constant not found: Number
+```
+
+The 26 additional failed compile targets are importers of this one source
+failure. All 50 scenario failures are likewise unavailable-grammar fallout and
+must not be counted as independent Albanian defects.
+
+**Decision:** preserve the ALB-DEC-055 irregular design, but make common
+parameter provenance explicit in `IrregSqi`:
+
+```gf
+open ParadigmsSqi, (P = ParamX)
+```
+
+and use `P.Number`, `P.Person`, `P.Sg`, `P.Pl`, `P.P1`, `P.P2`, `P.P3` in the
+local helper tables. Do not move these local table helpers into the public
+`ParadigmsSqi` API merely to obtain scope, and do not revert `blej`, `them`, or
+`bëhem` to productive `regV` inference.
+
+**Rationale:** this follows the permanent parameter-provenance invariant in the
+Albanian completion plan and the `(P = ParamX)` qualification pattern used by
+approved model languages and existing Albanian Extend helpers. It repairs the
+scope error without widening the public paradigm surface.
+
+**Acceptance sequence:** compile `IrregSqi.gf`, then `LexiconSqi.gf`, then the
+language/public entrypoints, then rerun the 54/54 + 50/50 diagnostic campaign.
+The ALB-DEC-055 surface acceptance conditions remain unchanged: zero empty CASE
+outputs, zero visible `&+`, and the audited irregular perfect forms must be
+realized.
+
+---
+
+## ALB-DEC-057 — Root-level linguistic repair: explicit paradigms, token-safe compounds, typed government, agreement, and possessive placement
+
+**Date:** 2026-09-24  
+**Evidence baseline:** GF 3.12 diagnostic run `20260923_214430`  
+**Area:** morphology / paradigms / nominal inflection / agreement / government / possessives
+
+**Baseline established before this decision:** run `20260923_214430` is structurally green
+at **54/54 compiled targets and 50/50 executed scenarios**, with zero direct/downstream/
+ambiguous failures and zero structural-lock warnings.  The earlier ALB-DEC-055/056
+surface defects are closed in that run: all CASE blocks are non-empty and no literal
+`&+` remains in audited Albanian output.  The run is nevertheless *not* linguistic
+certification; it exposes deeper morphology/agreement/government defects in otherwise
+successful surfaces.
+
+**Observed root families:**
+
+1. productive compound-tense code joins an auxiliary and participle inside one token
+   (`"ka " + pple` and analogous forms), yielding surfaces such as `kashkuar`;
+2. lexemes with suppletion or stem alternation (`vij`, `jap`, `shoh`, `dua`, `gjej`)
+   are routed through insufficient smart/compact paradigms;
+3. suffix-only noun inference assigns some high-frequency lexemes to the wrong class
+   (`libër`, `djalë`, `burrë`, `mollë`);
+4. the articulated-adjective linking article is collapsed in `ResSqi` instead of
+   preserving the already available Species/Case/Gender/Number distinctions;
+5. several V3 lexical entries encode a grammatical dative as the surface preposition
+   `te`, bypassing the typed `Compl`/clitic machinery;
+6. `Quant`/`Det` do not preserve whether a determiner-like element is pre- or
+   post-nominal, so ordinary possessives are forced into pre-nominal order.
+
+**Decision:**
+
+- Keep `MorphoSqi` as the owner of productive inflection families and
+  `ParadigmsSqi` as the public constructor facade.  Repair compound tense token
+  boundaries throughout the productive families with `++` between auxiliary and
+  participle; do not normalize fused output downstream.
+- Treat `irregVFull` as the explicit worst-case escape hatch and route the audited
+  irregular/high-alternation lexemes through `IrregSqi`.  Expand `kam` and `jam`
+  themselves to full paradigms because they are the compound-tense auxiliaries.
+- Add a worst-case `NForms` + `mkNFull` noun constructor and use it for the four
+  audited ambiguous/irregular nouns instead of widening unsafe suffix inference.
+- Rebuild `ResSqi.link_clitic` over the full existing
+  `Species => Case => Gender => Number` key space; do not patch `AdjCN` or `CompAP`,
+  which already propagate the needed agreement information.
+- Use typed `Dat` government (`mkPrep [] Dat`) for audited V3 indirect objects;
+  retain surface prepositions only where the lexical relation is genuinely
+  prepositional.
+- Add `DetPlacement = PreNominal | PostNominal` to the shared nominal resource and
+  carry it through `Quant` and `Det`.  Ordinary possessive pronouns are
+  `PostNominal`; articles/default quantifiers remain `PreNominal`.  Possessive forms
+  are selected by possessor agreement plus possessed noun case/gender/number.
+
+**Engineering provenance:** this follows the Compendium smart-paradigm ladder,
+explicit-error-guard, specialized-conjugation, typed-government, and centralized
+orthography/tokenization patterns.  Croatian/German/Italian/Romanian model languages
+are used only as representation evidence (worst-case noun/verb constructors, rich
+agreement, typed dative V3); Albanian forms and ordering come from Albanian evidence.
+
+**Acceptance boundary:** this overlay is a *candidate* until rerun with GF 3.12.
+Acceptance requires, at minimum, the previous structural gates (54/54 + 50/50,
+zero structural-lock warnings), no reintroduction of empty CASE/visible `&+`, and
+review of the targeted changed surfaces.  Broad T9/golden linguistic certification
+must be performed from independently reviewed expected forms; the generated output
+must never be promoted automatically to gold.

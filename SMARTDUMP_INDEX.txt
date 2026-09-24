@@ -1,11 +1,11 @@
 SMART DUMPER INDEX
 ==================
-generated_at: 2026-09-23T19:19:54.649599
+generated_at: 2026-09-24T14:18:10.674075
 source_root: C:\mycode\Grammatical_Framework\Grammatical_Framework-Albanian
-zip_file: Grammatical_Framework_Albanian_updated_20260923.zip
+zip_file: Code_snapshot_Grammatical_Framework-Albanian.zip
 embedded_index: SMARTDUMP_INDEX.txt
-file_count: 240
-total_bytes: 2007646
+file_count: 241
+total_bytes: 2044805
 compression: ZIP_DEFLATED level 1
 
 FILES
@@ -16,9 +16,9 @@ AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf	1647 bytes
 AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf	834 bytes
 AlbanianSQI/GF/lib/src/albanian/AllSqi.gf	148 bytes
 AlbanianSQI/GF/lib/src/albanian/AllSqiAbs.gf	61 bytes
-AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2690 bytes
+AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2744 bytes
 AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	4396 bytes
-AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2427 bytes
+AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2449 bytes
 AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf	7642 bytes
 AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf	9602 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqi.gf	15614 bytes
@@ -26,9 +26,9 @@ AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf	808 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiExistential.gf	1193 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf	1388 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf	2073 bytes
-AlbanianSQI/GF/lib/src/albanian/ExtendSqiLexicon.gf	1301 bytes
+AlbanianSQI/GF/lib/src/albanian/ExtendSqiLexicon.gf	1327 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf	2655 bytes
-AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf	6080 bytes
+AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf	6110 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf	2619 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf	4463 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtraSqi.gf	4175 bytes
@@ -36,27 +36,27 @@ AlbanianSQI/GF/lib/src/albanian/ExtraSqiAbs.gf	249 bytes
 AlbanianSQI/GF/lib/src/albanian/gf_dryrun_patch.py	3782 bytes
 AlbanianSQI/GF/lib/src/albanian/GrammarSqi.gf	293 bytes
 AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	1712 bytes
-AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf	1870 bytes
-AlbanianSQI/GF/lib/src/albanian/IrregSqiAbs.gf	324 bytes
+AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf	10602 bytes
+AlbanianSQI/GF/lib/src/albanian/IrregSqiAbs.gf	371 bytes
 AlbanianSQI/GF/lib/src/albanian/LangSqi.gf	342 bytes
-AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	17390 bytes
+AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	19003 bytes
 AlbanianSQI/GF/lib/src/albanian/MarkupSqi.gf	594 bytes
-AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf	1074630 bytes
+AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf	1074832 bytes
 AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf	796 bytes
-AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	4873 bytes
+AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	6727 bytes
 AlbanianSQI/GF/lib/src/albanian/NumeralSqi.gf	3607 bytes
-AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	52502 bytes
+AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	54260 bytes
 AlbanianSQI/GF/lib/src/albanian/PhraseSqi.gf	699 bytes
 AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf	1486 bytes
 AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf	512 bytes
-AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	14058 bytes
+AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	14477 bytes
 AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf	1480 bytes
 AlbanianSQI/GF/lib/src/albanian/StructuralSqi.gf	3954 bytes
 AlbanianSQI/GF/lib/src/albanian/StructuralSqiClause.gf	3499 bytes
 AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	3519 bytes
-AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf	1429 bytes
+AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf	1491 bytes
 AlbanianSQI/GF/lib/src/albanian/StructuralSqiVerbal.gf	842 bytes
-AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2057 bytes
+AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2591 bytes
 AlbanianSQI/GF/lib/src/albanian/TenseSqi.gf	301 bytes
 AlbanianSQI/GF/lib/src/albanian/TestAbs.gf	42 bytes
 AlbanianSQI/GF/lib/src/albanian/TestSqi.gf	114 bytes
@@ -69,7 +69,7 @@ AlbanianSQI/GF/lib/src/SyntaxSqi.gf	140 bytes
 AlbanianSQI/GF/lib/src/TrySqi.gf	246 bytes
 CODE_SNAPSHOT_MANIFEST.md	14183 bytes
 detect_morphosqi_table_inference.py	13934 bytes
-docs/ALBANIAN_DECISION_LOG.md	81975 bytes
+docs/ALBANIAN_DECISION_LOG.md	90593 bytes
 docs/albanian_extend_specifics_lockfield_and_boundary.md	23556 bytes
 docs/ALBANIAN_EXTENDSQI_FINAL_TARGET.md	11683 bytes
 docs/ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md	29416 bytes
@@ -77,18 +77,19 @@ docs/ALBANIAN_FUTURE_EXTENDSQI_STRUCTURE.md	23985 bytes
 docs/ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md	35590 bytes
 docs/ALBANIAN_MODEL_LANGUAGE_COMPARISON.md	8048 bytes
 docs/ALBANIAN_NEXT_UPGRADE_20260922.md	8755 bytes
-docs/ALBANIAN_OPEN_QUESTIONS.md	18861 bytes
+docs/ALBANIAN_OPEN_QUESTIONS.md	21260 bytes
 docs/ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md	48069 bytes
-docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md	12300 bytes
+docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md	14313 bytes
 docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md	87699 bytes
 docs/ALBANIAN_SYMBOL_STATUS_LEDGER.md	41517 bytes
 docs/ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md	6065 bytes
-docs/CURRENT_REPAIR_STATE.md	11967 bytes
+docs/CURRENT_REPAIR_STATE.md	14971 bytes
 docs/DOCUMENTATION_SYNC_20260921.md	6431 bytes
-docs/DOCUMENTATION_SYNC_20260922.md	4434 bytes
-docs/README.md	6182 bytes
+docs/DOCUMENTATION_SYNC_20260922.md	5478 bytes
+docs/DOCUMENTATION_SYNC_20260924.md	1692 bytes
+docs/README.md	6577 bytes
 docs/status/ALBANIAN_CORE_V0.1.0.md	5738 bytes
-docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md	22939 bytes
+docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md	25580 bytes
 fix_gf_literal_newlines.py	3847 bytes
 gf_morphosqi_lint.py	17726 bytes
 gf_safe_fix.ps1	9173 bytes

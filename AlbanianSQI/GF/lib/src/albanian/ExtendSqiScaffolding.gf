@@ -29,7 +29,8 @@ oper
 
   sc_GenNP : NP -> Quant = \np -> lin Quant {
     s=\\c,g,n =>R.link_clitic!R.Indef!c!g!n ++ np.s!R.Ablat ;
-    spec=R.Def
+    spec=R.Def ;
+    placement=R.PostNominal
   } ;
 
   sc_GenIP : IP -> IQuant = \ip -> lin IQuant {

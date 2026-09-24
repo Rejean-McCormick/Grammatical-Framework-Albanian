@@ -1,0 +1,31 @@
+--- /mnt/data/consolidated_src/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	2026-09-24 09:28:06.000000000 +0000
++++ /mnt/data/Albanian_CONSOLIDATED_20260924/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	2026-09-24 19:06:34.361261793 +0000
+@@ -35,7 +35,7 @@
+     } ;
+ 
+   lin
+-    add_V3                   = mkV3 (mkV "shtoj") noPrep (mkPrep [] Dat) ;
++    add_V3                   = mkV3 (mkV "shtoj") noPrep (mkPrep [] dative) ;
+     airplane_N               = mkN032 "aeroplan" ;
+     alas_Interj              = mkInterj "medet" ;
+     already_Adv              = mkAdv "tashmë" ;
+@@ -156,7 +156,7 @@
+     fun_AV                   = mkA "zbavitës" ;
+     garden_N                 = mkN "kopsht" ;
+     girl_N                   = mkN "vajzë" ;
+-    give_V3                  = mkV3 (lin V I.jap_V) noPrep (mkPrep [] Dat) ;
++    give_V3                  = mkV3 (lin V I.jap_V) noPrep (mkPrep [] dative) ;
+     glove_N                  = mkN "dorezë" ;
+     gold_N                   = mkN "ar" ;
+     good_A                   = mkA "mirë" ;
+@@ -288,8 +288,8 @@
+     seed_N                   = mkN "farë" ;
+     seek_V2                  = mkV2 (mkV "kërkoj") ;
+     see_V2                   = mkV2 (lin V I.shoh_V) ;
+-    sell_V3                  = mkV3 (mkV "shes") noPrep (mkPrep [] Dat) ;
+-    send_V3                  = mkV3 (mkV "dërgoj") noPrep (mkPrep [] Dat) ;
++    sell_V3                  = mkV3 (mkV "shes") noPrep (mkPrep [] dative) ;
++    send_V3                  = mkV3 (mkV "dërgoj") noPrep (mkPrep [] dative) ;
+     sew_V                    = mkV "qep" ;
+     sharp_A                  = mkA "mprehtë" ;
+     sheep_N                  = mkN "dele" ;

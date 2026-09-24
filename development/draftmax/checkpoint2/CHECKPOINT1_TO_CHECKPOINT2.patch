@@ -1,0 +1,777 @@
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	2026-09-24 17:46:05.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	2026-09-24 18:07:47.804743609 +0000
+@@ -1,6 +1,6 @@
+ -- Shared Albanian clause/VP realization kernel.
+ -- This resource is intentionally below Sentence/Question/Relative/Extend so
+--- every consumer uses the same tense, polarity, agreement and clitic rules.
++-- every consumer uses the same tense, polarity, agreement, voice and clitic rules.
+ resource ClauseSqiRes =
+   open Prelude, ParamX, ResSqi in {
+ 
+@@ -16,8 +16,11 @@
+     perf_optative = sl.perf_optative ;
+     pres_admirative = sl.pres_admirative ;
+     imperf_admirative = sl.imperf_admirative ;
+-    cl = sl.cl ;
+-    subjcl = sl.subjcl ;
++    clitics = sl.clitics ;
++    preverb = sl.preverb ;
++    voice = sl.voice ;
++    voiceUse = sl.voiceUse ;
++    perfAux = sl.perfAux ;
+     post = sl.post
+   } ;
+ 
+@@ -30,8 +33,11 @@
+     perf_optative = v.perf_optative ;
+     pres_admirative = v.pres_admirative ;
+     imperf_admirative = v.imperf_admirative ;
+-    cl = [] ;
+-    subjcl = "të" ;
++    clitics = emptyCliticCluster ;
++    preverb = [] ;
++    voice = v.voice ;
++    voiceUse = v.voiceUse ;
++    perfAux = v.perfAux ;
+     post = \\_ => []
+   } ;
+ 
+@@ -44,8 +50,11 @@
+     perf_optative = vp.perf_optative ;
+     pres_admirative = vp.pres_admirative ;
+     imperf_admirative = vp.imperf_admirative ;
+-    cl = vp.cl ;
+-    subjcl = vp.subjcl ;
++    clitics = vp.clitics ;
++    preverb = vp.preverb ;
++    voice = vp.voice ;
++    voiceUse = vp.voiceUse ;
++    perfAux = vp.perfAux ;
+     post = vp.post ;
+     c2 = c
+   } ;
+@@ -58,69 +67,120 @@
+     post = \\a => x ! a ++ vp.post ! a
+   } ;
+ 
++  addAccCliticVP : VP -> Str -> VP = \vp,x -> vp ** {
++    clitics = setAccClitic vp.clitics x
++  } ;
++
++  addDatCliticVP : VP -> Str -> VP = \vp,x -> vp ** {
++    clitics = setDatClitic vp.clitics x
++  } ;
++
++  addReflCliticVP : VP -> Str -> VP = \vp,x -> vp ** {
++    clitics = setReflClitic vp.clitics x
++  } ;
++
++  -- Compatibility shim for checkpoint-1 clients.  New code must use one of
++  -- the role-specific operations above; sx is deliberately ignored because
++  -- të-contraction is now owned by the realization boundary.
+   appendClitic : VP -> Str -> Str -> VP = \vp,x,sx -> vp ** {
+-    cl = vp.cl ++ x ;
+-    subjcl = sx
++    clitics = appendLegacyClitic vp.clitics x
++  } ;
++
++  addPreverbVP : VP -> Str -> VP = \vp,x -> vp ** {
++    preverb = x ++ vp.preverb
+   } ;
+ 
+-  -- Main finite realization.  Public ParamX tense is mapped to Albanian
++  markNonActiveVP : VP -> VP = \vp -> vp ** {
++    voice=NonActiveVoice ; voiceUse=PlainVoice ; perfAux=AuxJam
++  } ;
++  markPassiveVP : VP -> VP = \vp -> vp ** {
++    voice=NonActiveVoice ; voiceUse=PassiveVoice ; perfAux=AuxJam
++  } ;
++  markReflexiveVP : VP -> VP = \vp -> vp ** {
++    voice=NonActiveVoice ; voiceUse=ReflexiveVoice ; perfAux=AuxJam
++  } ;
++
++  -- Plain finite heads keep a preverb such as po/vetë outside the weak
++  -- pronoun cluster.  In the simple aorist a non-active VP contributes u to
++  -- the typed cluster so dative+u fusion can be handled centrally.
++  finiteHead : VP -> Tense -> Str = \vp,t ->
++    vp.preverb ++ flattenClitics (addVoiceClitic vp.voice t vp.clitics) ;
++
++  -- Positive subjunctive/future places clitics after të.  Contraction is
++  -- possible only when no intervening preverbal particle is present.
++  subjHead : VP -> Str = \vp -> case vp.preverb of {
++    [] => teWithClitics vp.clitics ;
++    x  => "të" ++ x ++ flattenClitics vp.clitics
++  } ;
++
++  negSubjHead : VP -> Str = \vp ->
++    "të" ++ "mos" ++ vp.preverb ++ flattenClitics vp.clitics ;
++
++  impHead : VP -> Polarity -> Str = \vp,pol -> case pol of {
++    Pos => vp.preverb ++ flattenClitics vp.clitics ;
++    Neg => "mos" ++ vp.preverb ++ flattenClitics vp.clitics
++  } ;
++
++  -- Main finite realization. Public ParamX tense is mapped to Albanian
+   -- morphology only here; ResSqi.Tense never leaks into public RGL tables.
+   realizeVP : VP -> ParamX.Tense -> Anteriority -> Polarity -> Agr -> Str =
+     \vp,t,ant,pol,a -> case <ant,t> of {
+       <Simul,ParamX.Fut> => negation pol ++ "do" ++
+-        vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
++        subjHead vp ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
+ 
+       <Simul,ParamX.Cond> => negation pol ++ "do" ++
+-        vp.subjcl ++
++        subjHead vp ++
+         vp.indicative ! Imperfect ! agrNumber a ! a.p ++ vp.post ! a ;
+ 
+-      <Simul,_> => negation pol ++ vp.cl ++
++      <Simul,_> => negation pol ++ finiteHead vp (sqiTense t) ++
+         vp.indicative ! sqiTense t ! agrNumber a ! a.p ++ vp.post ! a ;
+ 
+       <Anter,ParamX.Fut> => negation pol ++ "do" ++
+-        vp.subjcl ++
+-        haveSubj ! agrNumber a ! a.p ++
++        subjHead vp ++
++        perfectAuxSubj vp.perfAux (agrNumber a) a.p ++
+         vp.participle ++ vp.post ! a ;
+ 
+       <Anter,ParamX.Cond> => negation pol ++ "do" ++
+-        vp.subjcl ++
+-        haveAux ! ParamX.Past ! agrNumber a ! a.p ++
++        subjHead vp ++
++        perfectAuxFinite vp.perfAux ParamX.Past (agrNumber a) a.p ++
+         vp.participle ++ vp.post ! a ;
+ 
+-      <Anter,_> => negation pol ++ vp.cl ++
+-        haveAux ! t ! agrNumber a ! a.p ++ vp.participle ++ vp.post ! a
++      <Anter,_> => negation pol ++ vp.preverb ++ flattenClitics vp.clitics ++
++        perfectAuxFinite vp.perfAux t (agrNumber a) a.p ++
++        vp.participle ++ vp.post ! a
+     } ;
+ 
+-  -- Standard-Albanian finite complement introduced by të.  Negative
+-  -- subjunctives use të mos; positive forms contract të with e/i/u clitics.
++  -- Standard-Albanian finite complement introduced by të. Negative
++  -- subjunctives use të mos; positive forms centralize të-contraction.
+   realizeSubjVP : VP -> Polarity -> Agr -> Str = \vp,pol,a -> case pol of {
+-    Pos => vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
+-    Neg => "të" ++ "mos" ++ vp.cl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a
++    Pos => subjHead vp ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
++    Neg => negSubjHead vp ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a
+   } ;
+ 
+   realizeSubjAntVP : VP -> Anteriority -> Polarity -> Agr -> Str =
+     \vp,ant,pol,a -> case ant of {
+       Simul => realizeSubjVP vp pol a ;
+       Anter => case pol of {
+-        Pos => vp.subjcl ++
+-          haveSubj ! agrNumber a ! a.p ++ vp.participle ++ vp.post ! a ;
+-        Neg => "të" ++ "mos" ++ vp.cl ++
+-          haveSubj ! agrNumber a ! a.p ++ vp.participle ++ vp.post ! a
++        Pos => subjHead vp ++
++          perfectAuxSubj vp.perfAux (agrNumber a) a.p ++ vp.participle ++ vp.post ! a ;
++        Neg => negSubjHead vp ++
++          perfectAuxSubj vp.perfAux (agrNumber a) a.p ++ vp.participle ++ vp.post ! a
+       }
+     } ;
+ 
++  -- Albanian permits proclitic weak pronouns with positive imperatives and
++  -- requires them after mos in negative imperatives.  We use the universally
++  -- valid proclitic order here; enclitic plural placement before -ni requires
++  -- morphology-aware segmentation and is intentionally not guessed.
+   realizeImpVP : VP -> Polarity -> Number -> Str = \vp,pol,n ->
+-    let a : Agr = {gn = case n of {Sg => GSg Masc ; Pl => (GPl Masc)} ; p = P2}
+-    in case pol of {
+-      Pos => vp.cl ++ vp.imperative ! n ++ vp.post ! a ;
+-      Neg => "mos" ++ vp.cl ++ vp.imperative ! n ++ vp.post ! a
+-    } ;
++    let a : Agr = {gn = case n of {Sg => GSg Masc ; Pl => GPl Masc} ; p = P2}
++    in impHead vp pol ++ vp.imperative ! n ++ vp.post ! a ;
+ 
+   realizePartVP : VP -> Agr -> Str = \vp,a ->
+-    vp.cl ++ vp.participle ++ vp.post ! a ;
++    vp.preverb ++ flattenClitics vp.clitics ++ vp.participle ++ vp.post ! a ;
+ 
+   realizeGerundVP : VP -> Agr -> Str = \vp,a ->
+-    "duke" ++ vp.cl ++ vp.participle ++ vp.post ! a ;
++    "duke" ++ vp.preverb ++ flattenClitics vp.clitics ++ vp.participle ++ vp.post ! a ;
+ 
+   mkClause : Str -> Agr -> VP -> ParamX.Tense -> Anteriority -> Polarity -> Str =
+     \subj,a,vp,t,ant,pol -> subj ++ realizeVP vp t ant pol a ;
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2026-09-24 17:45:32.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2026-09-24 18:06:42.701331851 +0000
+@@ -9,7 +9,7 @@
+     [IAdv] = {first,last : Str} ;
+     [NP] = {first,last : Case => Str ; a : Agr} ;
+     [AP] = {first,last : Species => Case => Gender => Number => Str} ;
+-    [CN] = {first,last : Species => Case => Number => Str ; g : Gender} ;
++    [CN] = {first,last : Species => Case => Number => Str ; g : Number => Gender} ;
+     [DAP] = {first,last : Case => Gender => Str ; n : Number} ;
+ 
+   oper
+@@ -29,6 +29,12 @@
+       p = coordPerson a.p b.p
+     } ;
+ 
++    coordNounGender : (Number => Gender) -> (Number => Gender) -> Number => Gender =
++      \g1,g2 => table {
++        Sg => case <g1 ! Sg,g2 ! Sg> of {<Fem,Fem>=>Fem ; _=>Masc} ;
++        Pl => case <g1 ! Pl,g2 ! Pl> of {<Fem,Fem>=>Fem ; _=>Masc}
++      } ;
++
+   lin
+     BaseS x y = {first=x.s; last=y.s} ;
+     ConsS x xs = {first=x.s ++ "," ++ xs.first; last=xs.last} ;
+@@ -71,10 +77,10 @@
+     } ;
+     ConjRS c xs = {s=\\a=>xs.first!a ++ c.s ++ xs.last!a} ;
+ 
+-    BaseCN x y = {first=x.s; last=y.s; g=x.g} ;
++    BaseCN x y = {first=x.s; last=y.s; g=coordNounGender x.g y.g} ;
+     ConsCN x xs = {
+       first=\\sp,k,n=>x.s!sp!k!n ++ "," ++ xs.first!sp!k!n;
+-      last=xs.last; g=xs.g
++      last=xs.last; g=coordNounGender x.g xs.g
+     } ;
+     ConjCN c xs = {
+       s=\\sp,k,n=>xs.first!sp!k!n ++ c.s ++ xs.last!sp!k!n;
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	2026-09-24 17:46:05.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	2026-09-24 18:05:12.227680785 +0000
+@@ -39,12 +39,12 @@
+       s=\\t,a,p=>(ExistIP ip).s!t!a!p ++ adv.s
+     } ;
+ 
+-    ProgrVP vp = vp ** {cl="po" ++ vp.cl ; subjcl="të" ++ "po" ++ vp.cl} ;
++    ProgrVP vp = addPreverbVP vp "po" ;
+ 
+     ImpPl1 vp = {s="le" ++ subjVP vp p1plAgr} ;
+     ImpP3 np vp = {s="le" ++ np.s!Nom ++ subjVP vp np.a} ;
+ 
+     SelfAdvVP vp = vp ** {post=\\a=>vp.post!a ++ "vetë"} ;
+-    SelfAdVVP vp = vp ** {cl="vetë" ++ vp.cl ; subjcl="të" ++ "vetë" ++ vp.cl} ;
++    SelfAdVVP vp = addPreverbVP vp "vetë" ;
+     SelfNP np = np ** {s=\\c=>np.s!c ++ "vetë"} ;
+ }
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	2026-09-24 17:46:05.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	2026-09-24 18:06:42.701596738 +0000
+@@ -173,7 +173,7 @@
+     ApposCN cn np = cn ** {s=\\sp,c,n=>cn.s!sp!c!n ++ np.s!c} ;
+ 
+     PossNP cn np = cn ** {
+-      s=\\sp,c,n=>cn.s!sp!c!n ++ genitiveLink cn.g n ++ np.s!Dat
++      s=\\sp,c,n=>cn.s!sp!c!n ++ genitiveLink (cn.g ! n) n ++ np.s!Gen
+     } ;
+     PartNP cn np = cn ** {s=\\sp,c,n=>cn.s!sp!c!n ++ "prej" ++ np.s!Ablat} ;
+ 
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	2026-09-24 17:45:32.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	2026-09-24 18:06:22.074053759 +0000
+@@ -1230,16 +1230,18 @@
+     Indef => table {
+       Nom => table {Sg => f.indefNomSg ; Pl => f.indefNomPl} ;
+       Acc => table {Sg => f.indefAccSg ; Pl => f.indefAccPl} ;
++      Gen => table {Sg => f.indefDatSg ; Pl => f.indefDatPl} ;
+       Dat => table {Sg => f.indefDatSg ; Pl => f.indefDatPl} ;
+       Ablat => table {Sg => f.indefAblSg ; Pl => f.indefAblPl}
+     } ;
+     Def => table {
+       Nom => table {Sg => f.defNomSg ; Pl => f.defNomPl} ;
+       Acc => table {Sg => f.defAccSg ; Pl => f.defAccPl} ;
++      Gen => table {Sg => f.defDatSg ; Pl => f.defDatPl} ;
+       Dat => table {Sg => f.defDatSg ; Pl => f.defDatPl} ;
+       Ablat => table {Sg => f.defAblSg ; Pl => f.defAblPl}
+     }
+-  } ; g = g
++  } ; g = table {Sg => g ; Pl => g}
+ } ;
+ 
+ mkN = overload {
+@@ -1271,11 +1273,11 @@
+     s = invariantCase x ; a = agrgP3 g Sg
+   } ;
+   mkPN : Str -> Str -> Str -> Str -> Gender -> PN = \nom,acc,dat,abl,g -> lin PN {
+-    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ;
++    s = table {Nom=>nom ; Acc=>acc ; Gen=>dat ; Dat=>dat ; Ablat=>abl} ;
+     a = agrgP3 g Sg
+   } ;
+   mkPN : N -> PN = \n -> lin PN {
+-    s = \\c => n.s ! Def ! c ! Sg ; a = agrgP3 n.g Sg
++    s = \\c => n.s ! Def ! c ! Sg ; a = agrgP3 (n.g ! Sg) Sg
+   }
+ } ;
+ 
+@@ -1287,16 +1289,17 @@
+     s = invariantCase x ; a = agrgP3 g n
+   } ;
+   mkLN : Str -> Str -> Str -> Str -> Gender -> Number -> LN = \nom,acc,dat,abl,g,n -> lin LN {
+-    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ;
++    s = table {Nom=>nom ; Acc=>acc ; Gen=>dat ; Dat=>dat ; Ablat=>abl} ;
+     a = agrgP3 g n
+   }
+ } ;
+ 
+ mkGN = overload {
+-  mkGN : Str -> GN = \x -> lin GN {s=invariantCase x ; g=Masc} ;
+-  mkGN : Str -> Gender -> GN = \x,g -> lin GN {s=invariantCase x ; g=g} ;
++  mkGN : Str -> GN = \x -> lin GN {s=invariantCase x ; g=table {Sg=>Masc ; Pl=>Masc}} ;
++  mkGN : Str -> Gender -> GN = \x,g -> lin GN {s=invariantCase x ; g=table {Sg=>g ; Pl=>g}} ;
+   mkGN : Str -> Str -> Str -> Str -> Gender -> GN = \nom,acc,dat,abl,g -> lin GN {
+-    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ; g=g
++    s = table {Nom=>nom ; Acc=>acc ; Gen=>dat ; Dat=>dat ; Ablat=>abl} ;
++    g=table {Sg=>g ; Pl=>g}
+   }
+ } ;
+ 
+@@ -1347,7 +1350,10 @@
+     pres_optative = presOpt ;
+     perf_optative = perfOpt ;
+     pres_admirative = presAdm ;
+-    imperf_admirative = imperfAdm
++    imperf_admirative = imperfAdm ;
++    voice = ActiveVoice ;
++    voiceUse = PlainVoice ;
++    perfAux = AuxKam
+   } ;
+ 
+ irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
+@@ -1391,7 +1397,10 @@
+     imperf_admirative = \\n,p => case <n,p> of {
+       <Sg,P1>=>p1sg; <Sg,P2>=>p2sg; <Sg,P3>=>p3sg;
+       <Pl,P1>=>p1pl; <Pl,P2>=>p2pl; <Pl,P3>=>p3pl
+-    }
++    } ;
++    voice = ActiveVoice ;
++    voiceUse = PlainVoice ;
++    perfAux = AuxKam
+   } ;
+ 
+ mkV = overload {
+@@ -1399,6 +1408,20 @@
+   mkV : Str -> Str -> V = reg2V   -- Indicative;Pres;Sg;P1  participle
+ } ;
+ 
++-- Voice annotations are intentionally separate from morphology construction.
++-- markNonActiveV assumes the finite tables already contain the synthetic
++-- non-active present/imperfect forms; it switches compound auxiliary and
++-- clause-level non-active behavior without guessing those forms.
++markNonActiveV : V -> V = \v -> lin V v ** {
++  voice=NonActiveVoice ; voiceUse=PlainVoice ; perfAux=AuxJam
++} ;
++markPassiveV : V -> V = \v -> lin V v ** {
++  voice=NonActiveVoice ; voiceUse=PassiveVoice ; perfAux=AuxJam
++} ;
++markReflexiveV : V -> V = \v -> lin V v ** {
++  voice=NonActiveVoice ; voiceUse=ReflexiveVoice ; perfAux=AuxJam
++} ;
++
+ mkV2Core : V -> Prep -> V2 = \v,p ->
+   lin V2 v ** {c2=p} ;
+ 
+@@ -1494,7 +1517,7 @@
+ 
+ mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;
+ mkIP : Str -> IP = \s -> lin IP {
+-  s = table {Nom=>s; Acc=>s; Dat=>s; Ablat=>s} ;
++  s = table {Nom=>s; Acc=>s; Gen=>s; Dat=>s; Ablat=>s} ;
+   a = agrgP3 Masc Sg
+ } ;
+ mkIQuant : Str -> IQuant = \s -> lin IQuant {
+@@ -1534,6 +1557,16 @@
+                                     Pl => f8
+                                   }
+                          } ;
++                  Gen => table {
++                           Masc => table {
++                                     Sg => f9 ;
++                                     Pl => f10
++                                   } ;
++                           Fem => table {
++                                    Sg => f11 ;
++                                    Pl => f12
++                                  }
++                         } ;
+                   Dat => table {
+                            Masc => table {
+                                      Sg => f9 ;
+@@ -1570,6 +1603,10 @@
+                            Masc => f3 ;
+                            Fem => f4
+                          } ;
++                  Gen => table {
++                           Masc => f5 ;
++                           Fem => f6
++                         } ;
+                   Dat => table {
+                            Masc => f5 ;
+                            Fem => f6
+@@ -1589,7 +1626,7 @@
+ 
+ mkPron : (nom,acc,dat,ablat,acc_clit,dat_clit : Str) -> GenNum -> Person -> Pron =
+   \nom,acc,dat,ablat,acc_clit,dat_clit,gn,p -> lin Pron
+-     {s = table Case [nom; acc; dat; ablat];
++     {s = table {Nom=>nom; Acc=>acc; Gen=>dat; Dat=>dat; Ablat=>ablat};
+       acc_clit = acc_clit;
+       dat_clit = dat_clit;
+       a = {gn=gn; p=p};
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	2026-09-24 17:45:32.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	2026-09-24 18:04:26.490218854 +0000
+@@ -102,11 +102,64 @@
+ 
+ param
+   Tense = Pres | Past | Imperfect | Aorist ;
++  Voice = ActiveVoice | NonActiveVoice ;
++  VoiceUse = PlainVoice | PassiveVoice | ReflexiveVoice ;
++  PerfectAux = AuxKam | AuxJam ;
+ 
+ oper
+-  -- Shared verb-phrase representation.  CatSqi aliases VP/VPSlash to these
+-  -- resource types so clause helpers preserve category shape instead of
+-  -- coercing locked concrete-category records through an ad-hoc structural type.
++  -- Object clitics stay typed until the final clause-realization boundary.
++  -- dat precedes acc in Albanian; refl is the non-active/reflexive u-slot.
++  -- extra is a compatibility escape hatch for legacy clients and is never
++  -- populated by the new role-specific constructors.
++  CliticCluster : Type = {dat,acc,refl,extra : Str} ;
++
++  emptyCliticCluster : CliticCluster = {dat=[] ; acc=[] ; refl=[] ; extra=[]} ;
++
++  setDatClitic : CliticCluster -> Str -> CliticCluster = \c,x -> c ** {dat=x} ;
++  setAccClitic : CliticCluster -> Str -> CliticCluster = \c,x -> c ** {acc=x} ;
++  setReflClitic : CliticCluster -> Str -> CliticCluster = \c,x -> c ** {refl=x} ;
++  appendLegacyClitic : CliticCluster -> Str -> CliticCluster = \c,x ->
++    c ** {extra=c.extra ++ x} ;
++
++  -- Albanian dative + accusative/reflexive weak-pronoun fusion.
++  fuseWeakClitics : Str -> Str -> Str = \dat,acc -> case <dat,acc> of {
++    <[],a> => a ;
++    <d,[]> => d ;
++    <"më","e"> => "ma" ; <"më","i"> => "m'i" ; <"më","u"> => "m'u" ;
++    <"të","e"> => "ta" ; <"të","i"> => "t'i" ; <"të","u"> => "t'u" ;
++    <"i","e">  => "ia" ; <"i","i">  => "ia" ; <"i","u">  => "iu" ;
++    <"na","e"> => "na" ++ "e" ; <"na","i"> => "na" ++ "i" ; <"na","u"> => "na" ++ "u" ;
++    <"ju","e"> => "jua" ; <"ju","i"> => "jua" ; <"ju","u"> => "ju" ;
++    <"u","e">  => "ua" ; <"u","i">  => "ua" ; <"u","u">  => "ju" ;
++    _ => dat ++ acc
++  } ;
++
++  clusterObject : CliticCluster -> Str = \c -> case c.acc of {
++    [] => c.refl ;
++    x  => x
++  } ;
++
++  flattenClitics : CliticCluster -> Str = \c ->
++    fuseWeakClitics c.dat (clusterObject c) ++ c.extra ;
++
++  -- të contracts only when it is immediately adjacent to the cluster.
++  -- If another preverbal particle (e.g. po, mos) intervenes, callers emit
++  -- të separately and use flattenClitics after that particle.
++  teWithClitics : CliticCluster -> Str = \c -> case <flattenClitics c : Str> of {
++    [] => "të" ;
++    "e" => "ta" ;
++    "i" => "t'i" ;
++    "u" => "t'u" ;
++    "ia" => "t'ia" ;
++    "iu" => "t'iu" ;
++    "ua" => "t'ua" ;
++    "jua" => "t'jua" ;
++    "ju" => "t'ju" ;
++    x => "të" ++ x
++  } ;
++
++  -- Shared verb-phrase representation.  Clitics, preverbal particles,
++  -- voice and perfect-auxiliary choice are all explicit state.
+   VP : Type = {
+     indicative : Tense => Number => Person => Str ;
+     subjunctive : Number => Person => Str ;
+@@ -116,8 +169,11 @@
+     perf_optative : Number => Person => Str ;
+     pres_admirative : Number => Person => Str ;
+     imperf_admirative : Number => Person => Str ;
+-    cl : Str ;
+-    subjcl : Str ;
++    clitics : CliticCluster ;
++    preverb : Str ;
++    voice : Voice ;
++    voiceUse : VoiceUse ;
++    perfAux : PerfectAux ;
+     post : Agr => Str
+   } ;
+ 
+@@ -132,7 +188,23 @@
+     pres_optative    : Number => Person => Str ;
+     perf_optative    : Number => Person => Str ;
+     pres_admirative  : Number => Person => Str ;
+-    imperf_admirative: Number => Person => Str
++    imperf_admirative: Number => Person => Str ;
++    voice            : Voice ;
++    voiceUse         : VoiceUse ;
++    perfAux          : PerfectAux
++  } ;
++
++  -- These operations annotate paradigms; they do not invent the synthetic
++  -- present/imperfect non-active morphology.  Exact non-active paradigms must
++  -- supply those finite forms (e.g. through irregVFull) before being marked.
++  markNonActiveVerb : Verb -> Verb = \v -> v ** {
++    voice=NonActiveVoice ; voiceUse=PlainVoice ; perfAux=AuxJam
++  } ;
++  markPassiveVerb : Verb -> Verb = \v -> v ** {
++    voice=NonActiveVoice ; voiceUse=PassiveVoice ; perfAux=AuxJam
++  } ;
++  markReflexiveVerb : Verb -> Verb = \v -> v ** {
++    voice=NonActiveVoice ; voiceUse=ReflexiveVoice ; perfAux=AuxJam
+   } ;
+ 
+   -- Build the Standard-Albanian finite subjunctive once at the
+@@ -228,7 +300,10 @@
+         imperf_admirative = table {
+                                Sg => table {P1 => f46 ; P2 => f47 ; P3 => f48} ;
+                                Pl => table {P1 => f49 ; P2 => f50 ; P3 => f51}
+-                             }
++                             } ;
++        voice = ActiveVoice ;
++        voiceUse = PlainVoice ;
++        perfAux = AuxKam
+       } ;
+ 
+ 
+@@ -238,7 +313,7 @@
+ 
+   mkPron : (_,_,_,_,_,_ : Str) -> GenNum -> Person -> Pron =
+     \nom,acc,dat,ablat,accC,datC,gn,p ->
+-      { s = table {Nom => nom ; Acc => acc ; Dat => dat ; Ablat => ablat} ;
++      { s = table {Nom => nom ; Acc => acc ; Gen => dat ; Dat => dat ; Ablat => ablat} ;
+         acc_clit = accC ;
+         dat_clit = datC ;
+         a = {gn = gn ; p = p} ;
+@@ -260,6 +335,10 @@
+                      Masc => table {Sg => f5 ;  Pl => f6} ;
+                      Fem  => table {Sg => f7 ;  Pl => f8}
+                    } ;
++            Gen => table {
++                     Masc => table {Sg => f9 ;  Pl => f10} ;
++                     Fem  => table {Sg => f11 ; Pl => f12}
++                   } ;
+             Dat => table {
+                      Masc => table {Sg => f9 ;  Pl => f10} ;
+                      Fem  => table {Sg => f11 ; Pl => f12}
+@@ -391,6 +470,31 @@
+     }
+   } ;
+ 
++  beAux : ParamX.Tense => Number => Person => Str = table {
++    ParamX.Pres => table {
++      Sg => table {P1 => "jam" ; P2 => "je" ; P3 => "është"} ;
++      Pl => table {P1 => "jemi" ; P2 => "jeni" ; P3 => "janë"}
++    } ;
++    ParamX.Past => table {
++      Sg => table {P1 => "isha" ; P2 => "ishe" ; P3 => "ishte"} ;
++      Pl => table {P1 => "ishim" ; P2 => "ishit" ; P3 => "ishin"}
++    } ;
++    ParamX.Fut => table {
++      Sg => table {P1 => "do të jem" ; P2 => "do të jesh" ; P3 => "do të jetë"} ;
++      Pl => table {P1 => "do të jemi" ; P2 => "do të jeni" ; P3 => "do të jenë"}
++    } ;
++    ParamX.Cond => table {
++      Sg => table {P1 => "do të isha" ; P2 => "do të ishe" ; P3 => "do të ishte"} ;
++      Pl => table {P1 => "do të ishim" ; P2 => "do të ishit" ; P3 => "do të ishin"}
++    }
++  } ;
++
++  perfectAuxFinite : PerfectAux -> ParamX.Tense -> Number -> Person -> Str =
++    \aux,t,n,p -> case aux of {
++      AuxKam => haveAux ! t ! n ! p ;
++      AuxJam => beAux ! t ! n ! p
++    } ;
++
+   -- Compatibility selector for callers that still need an Agr-shaped API.
+   -- No morphology is reconstructed here: the dedicated table is authoritative.
+   subjunctiveFinite : Verb -> Agr -> Str = \v,a ->
+@@ -401,6 +505,28 @@
+     Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kenë"}
+   } ;
+ 
++  beSubj : Number => Person => Str = table {
++    Sg => table {P1 => "jem" ; P2 => "jesh" ; P3 => "jetë"} ;
++    Pl => table {P1 => "jemi" ; P2 => "jeni" ; P3 => "jenë"}
++  } ;
++
++  perfectAuxSubj : PerfectAux -> Number -> Person -> Str = \aux,n,p ->
++    case aux of {
++      AuxKam => haveSubj ! n ! p ;
++      AuxJam => beSubj ! n ! p
++    } ;
++
++  -- Non-active aorist uses preverbal u.  Present/imperfect non-active forms
++  -- are synthetic and therefore belong in the verb paradigm itself.
++  addVoiceClitic : Voice -> Tense -> CliticCluster -> CliticCluster = \v,t,c ->
++    case <v,t> of {
++      <NonActiveVoice,Aorist> => case c.acc of {
++        [] => c ** {refl="u"} ;
++        _  => c ** {extra=c.extra ++ "u"}
++      } ;
++      _ => c
++    } ;
++
+   cliticFor : Case -> {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr ; isPron : Bool} -> Str =
+     \c,np -> case c of {
+       Acc => np.acc_clit ;
+@@ -430,22 +556,10 @@
+   } ;
+ 
+ 
+-  subjAccCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
+-    <Sg,P1> => "të" ++ "më" ;
+-    <Sg,P2> => "të" ++ "të" ;
+-    <Sg,P3> => "ta" ;
+-    <Pl,P1> => "të" ++ "na" ;
+-    <Pl,P2> => "të" ++ "ju" ;
+-    <Pl,P3> => "t'i"
+-  } ;
+-
+-  subjDatCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
+-    <Sg,P1> => "të" ++ "më" ;
+-    <Sg,P2> => "të" ++ "të" ;
+-    <Sg,P3> => "t'i" ;
+-    <Pl,P1> => "të" ++ "na" ;
+-    <Pl,P2> => "të" ++ "ju" ;
+-    <Pl,P3> => "t'u"
+-  } ;
++  subjAccCliticAgr : Agr -> Str = \a ->
++    teWithClitics (setAccClitic emptyCliticCluster (accCliticAgr a)) ;
++
++  subjDatCliticAgr : Agr -> Str = \a ->
++    teWithClitics (setDatClitic emptyCliticCluster (datCliticAgr a)) ;
+ 
+ }
+\ No newline at end of file
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	2026-09-24 17:46:05.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	2026-09-24 18:06:42.701543678 +0000
+@@ -11,6 +11,7 @@
+     s = table {
+       Nom => table {Masc => "sa" ; Fem => "sa"} ;
+       Acc => table {Masc => "sa" ; Fem => "sa"} ;
++      Gen => table {Masc => "sa" ; Fem => "sa"} ;
+       Dat => table {Masc => "sa" ; Fem => "sa"} ;
+       Ablat => table {Masc => "sa" ; Fem => "sa"}
+     } ; n=Pl
+@@ -48,6 +49,10 @@
+         Masc => table {Sg => "cilin" ; Pl => "cilët"} ;
+         Fem  => table {Sg => "cilën" ; Pl => "cilat"}
+       } ;
++      Gen => table {
++        Masc => table {Sg => "cilit" ; Pl => "cilëve"} ;
++        Fem  => table {Sg => "cilës" ; Pl => "cilave"}
++      } ;
+       Dat => table {
+         Masc => table {Sg => "cilit" ; Pl => "cilëve"} ;
+         Fem  => table {Sg => "cilës" ; Pl => "cilave"}
+@@ -86,20 +91,20 @@
+     ResSqi.mkPron "ne" "ne" "neve" "nesh" "na" "na" (GPl Masc) P1 ;
+ 
+   whatPl_IP = lin IP {
+-    s=table {Nom=>"çfarë"; Acc=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
++    s=table {Nom=>"çfarë"; Acc=>"çfarë"; Gen=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
+     a={gn=(GPl Masc);p=P3}
+   } ;
+   whatSg_IP = lin IP {
+-    s=table {Nom=>"çfarë"; Acc=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
++    s=table {Nom=>"çfarë"; Acc=>"çfarë"; Gen=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
+     a={gn=GSg Masc;p=P3}
+   } ;
+ 
+   whoPl_IP = lin IP {
+-    s=table {Nom=>"kush"; Acc=>"kë"; Dat=>"kujt"; Ablat=>"kujt"};
++    s=table {Nom=>"kush"; Acc=>"kë"; Gen=>"kujt"; Dat=>"kujt"; Ablat=>"kujt"};
+     a={gn=(GPl Masc);p=P3}
+   } ;
+   whoSg_IP = lin IP {
+-    s=table {Nom=>"kush"; Acc=>"kë"; Dat=>"kujt"; Ablat=>"kujt"};
++    s=table {Nom=>"kush"; Acc=>"kë"; Gen=>"kujt"; Dat=>"kujt"; Ablat=>"kujt"};
+     a={gn=GSg Masc;p=P3}
+   } ;
+ 
+diff -ruN /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf
+--- /tmp/albanian_work/Albanian_DRAFTMAX_checkpoint1_20260924/payload/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2026-09-24 17:46:05.000000000 +0000
++++ /mnt/data/Albanian_DRAFTMAX_checkpoint2_20260924/payload/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2026-09-24 18:06:42.701473974 +0000
+@@ -7,7 +7,7 @@
+ 
+   oper
+     agr3 : Number -> Gender -> Agr = \n,g ->
+-      { gn = case n of {Sg => GSg g ; Pl => (GPl Masc)} ; p = P3 } ;
++      { gn = case n of {Sg => GSg g ; Pl => GPl g} ; p = P3 } ;
+ 
+     mkNP_NumCN : Str -> Number -> Gender -> (Case => Str) -> CatSqi.NP =
+       \numStr,n,g,cnCase ->
+@@ -21,6 +21,7 @@
+       table {
+         Nom   => cn.s ! Indef ! Nom   ! n ;
+         Acc   => cn.s ! Indef ! Acc   ! n ;
++        Gen   => cn.s ! Indef ! Gen   ! n ;
+         Dat   => cn.s ! Indef ! Dat   ! n ;
+         Ablat => cn.s ! Indef ! Ablat ! n
+       } ;
+@@ -28,20 +29,24 @@
+     cnCaseWithDet : CatSqi.Det -> CatSqi.CN -> (Case => Str) = \det,cn ->
+       table {
+         Nom => case det.placement of {
+-          PreNominal => det.s ! Nom ! cn.g ++ cn.s ! det.spec ! Nom ! det.n ;
+-          PostNominal => cn.s ! det.spec ! Nom ! det.n ++ det.s ! Nom ! cn.g
++          PreNominal => det.s ! Nom ! (cn.g ! det.n) ++ cn.s ! det.spec ! Nom ! det.n ;
++          PostNominal => cn.s ! det.spec ! Nom ! det.n ++ det.s ! Nom ! (cn.g ! det.n)
+         } ;
+         Acc => case det.placement of {
+-          PreNominal => det.s ! Acc ! cn.g ++ cn.s ! det.spec ! Acc ! det.n ;
+-          PostNominal => cn.s ! det.spec ! Acc ! det.n ++ det.s ! Acc ! cn.g
++          PreNominal => det.s ! Acc ! (cn.g ! det.n) ++ cn.s ! det.spec ! Acc ! det.n ;
++          PostNominal => cn.s ! det.spec ! Acc ! det.n ++ det.s ! Acc ! (cn.g ! det.n)
++        } ;
++        Gen => case det.placement of {
++          PreNominal => det.s ! Gen ! (cn.g ! det.n) ++ cn.s ! det.spec ! Gen ! det.n ;
++          PostNominal => cn.s ! det.spec ! Gen ! det.n ++ det.s ! Gen ! (cn.g ! det.n)
+         } ;
+         Dat => case det.placement of {
+-          PreNominal => det.s ! Dat ! cn.g ++ cn.s ! det.spec ! Dat ! det.n ;
+-          PostNominal => cn.s ! det.spec ! Dat ! det.n ++ det.s ! Dat ! cn.g
++          PreNominal => det.s ! Dat ! (cn.g ! det.n) ++ cn.s ! det.spec ! Dat ! det.n ;
++          PostNominal => cn.s ! det.spec ! Dat ! det.n ++ det.s ! Dat ! (cn.g ! det.n)
+         } ;
+         Ablat => case det.placement of {
+-          PreNominal => det.s ! Ablat ! cn.g ++ cn.s ! det.spec ! Ablat ! det.n ;
+-          PostNominal => cn.s ! det.spec ! Ablat ! det.n ++ det.s ! Ablat ! cn.g
++          PreNominal => det.s ! Ablat ! (cn.g ! det.n) ++ cn.s ! det.spec ! Ablat ! det.n ;
++          PostNominal => cn.s ! det.spec ! Ablat ! det.n ++ det.s ! Ablat ! (cn.g ! det.n)
+         }
+       } ;
+ 
+@@ -68,13 +73,13 @@
+       let
+         n : CatSqi.CN = lin CN cn ;
+       in
+-      mkNP_NumCN i.s Pl n.g (cnCaseIndef n Pl) ;
++      mkNP_NumCN i.s Pl (n.g ! Pl) (cnCaseIndef n Pl) ;
+ 
+     CNNumNP cn c =
+       let
+         n : CatSqi.CN = lin CN cn ;
+       in
+-      mkNP_NumCN c.s Pl n.g (cnCaseIndef n Pl) ;
++      mkNP_NumCN c.s Pl (n.g ! Pl) (cnCaseIndef n Pl) ;
+ 
+     CNSymbNP det cn syms =
+       let
+@@ -84,7 +89,7 @@
+       lin NP {
+         s = \\c => cnCaseWithDet d n ! c ++ syms.s ;
+         acc_clit = [] ; dat_clit = [] ;
+-        a = agr3 d.n n.g ; isPron = False
++        a = agr3 d.n (n.g ! d.n) ; isPron = False
+       } ;
+ 
+ } ;
+\ No newline at end of file

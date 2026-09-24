@@ -1,0 +1,38 @@
+PASS  five-case parameter
+PASS  number-sensitive plural gender
+PASS  number-sensitive noun gender
+PASS  typed clitic cluster
+PASS  flat VP cl field removed
+PASS  subjcl removed
+PASS  central dative+accusative fusion
+PASS  central të contraction
+PASS  typed voice state
+PASS  typed perfect auxiliary
+PASS  active defaults to kam
+PASS  non-active marks jam
+PASS  aorist non-active u slot
+PASS  clause realizes typed clitics
+PASS  imperative ordering centralized
+PASS  perfect realization uses typed auxiliary
+PASS  progressive uses preverb state
+PASS  CN coordination gender number-sensitive
+PASS  symbol plural agreement preserves gender
+PASS  symbol tables include genitive
+PASS  possessive NP requests Gen
+PASS  structural interrogatives include Gen
+PASS  paradigm pronoun includes Gen
+PASS  paradigm N full includes Gen
+PASS  paradigm exact verbs carry voice state
+PASS  voice annotation API exposed
+PASS  delimiter balance CatSqi.gf — { 42/42 ( 0/0 [ 1/1
+PASS  delimiter balance ClauseSqiRes.gf — { 23/23 ( 9/9 [ 3/3
+PASS  delimiter balance ConjunctionSqi.gf — { 43/43 ( 3/3 [ 11/11
+PASS  delimiter balance IdiomSqi.gf — { 17/17 ( 5/5 [ 0/0
+PASS  delimiter balance NounSqi.gf — { 59/59 ( 8/8 [ 6/6
+PASS  delimiter balance ParadigmsSqi.gf — { 152/152 ( 37/37 [ 2/2
+PASS  delimiter balance RelativeSqi.gf — { 7/7 ( 0/0 [ 0/0
+PASS  delimiter balance ResSqi.gf — { 200/200 ( 13/13 [ 14/14
+PASS  delimiter balance StructuralSqiNominal.gf — { 37/37 ( 13/13 [ 0/0
+PASS  delimiter balance SymbolSqi.gf — { 13/13 ( 18/18 [ 5/5
+
+Summary: 36/36 checks passed

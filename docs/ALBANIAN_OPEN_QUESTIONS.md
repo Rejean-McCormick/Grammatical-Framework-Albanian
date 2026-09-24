@@ -480,3 +480,44 @@ Recommended order for closing questions:
 - seeded from Albanian codedump
 - aligned with current `ExtendSqi` debugging history
 - aligned with the then-current pre-FIX22C repair evidence showing AP/CN and existential structural issues as the main remaining risk
+
+---
+
+## 2026-09-23 surface-hygiene closure candidate
+
+The nine concrete surface defects from run `20260923_194006` are no longer open design questions; ALB-DEC-055 gives them a bounded implementation. They remain **acceptance-pending** until a GF 3.12 rerun proves zero empty CASE outputs and zero literal `&+` in Albanian CASE results. Broader linguistic-golden review remains open and must not be inferred from scenario execution alone.
+
+---
+
+## 2026-09-23 ALB-DEC-056 status note
+
+The `Number` / `Person` failure from run `20260923_201645` is closed as a design
+question: it is a parameter-provenance bug in the overlay and is corrected by
+qualified `(P = ParamX)` use in `IrregSqi`. The only remaining question for this
+surface-hygiene cycle is empirical acceptance under GF 3.12: do the corrected
+sources return to 54/54 + 50/50 with zero empty CASE realizations and zero
+visible `&+` markers?
+
+---
+
+## 2026-09-24 open questions after ALB-DEC-057
+
+The former empty-CASE / visible-`&+` questions are closed by run `20260923_214430`.
+The following remain outside the acceptance claim of ALB-DEC-057 and require reviewed
+linguistic evidence rather than further speculative generalization:
+
+1. **Remaining compact irregulars.** Audit legacy `IrregSqi.irregV` users and Lexicon
+   `mkV` entries (for example `njoh` and other stem-changing verbs) against accepted
+   Albanian principal parts before migrating them to full tables.
+2. **Marked/low-frequency mood cells.** The campaign heavily exercises ordinary
+   indicative/subjunctive behavior; marked admirative/optative cells added to full
+   irregular tables require dedicated linguistic goldens before certification.
+3. **Kinship and other special possessive placement.** ALB-DEC-057 models the ordinary
+   post-nominal possessive pattern.  Lexically restricted pre-nominal possessive
+   constructions, if required by the abstract API, need a separate evidence-backed
+   subtype/policy rather than weakening the general placement distinction.
+4. **Proper-name oblique morphology.** `PN` is case-indexed, but many lexical proper
+   names are still invariant.  A V3 dative with a full proper-name NP therefore needs
+   explicit review before claiming complete dative realization.
+5. **Full 500-case linguistic gold set.** Passing execution is not certification.
+   Expected strings/accepted variants must be independently reviewed and versioned.

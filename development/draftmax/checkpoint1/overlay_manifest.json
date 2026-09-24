@@ -1,0 +1,56 @@
+{
+  "base": "Albanian linguistic completion overlay 20260924 applied to snapshot 20260923-194448",
+  "status": "DRAFT-MAX; not GF compile validated",
+  "files": [
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "before_sha256": "8fb7b05b7ad8af60f19894cafdfdc878a885467d969e9e308fb4efae86199210",
+      "after_sha256": "826e99912965e3eba39e071b856d992809709981bec476765aaf1043d0e8c163"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "before_sha256": "34ec8dc40f03a240a2369f62e58c4eda7392d9395b7040c488fbca51afe0cb36",
+      "after_sha256": "dca1510fbceb451d94b7df9eb7a3e322fd25c0f0a85833e5c966d8f680b16f22"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "before_sha256": "bb9cd704c812e1e98741b86c05fa0a1cf50901de90f6114eacb474be3d7620ac",
+      "after_sha256": "05b9a7c061d9a13e26d647f78117a41a47682958b7f810619275cba5d656994f"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "before_sha256": "960eef4064513d988ca345fb993fddb0a37e1453ba8f76f5e54c5cd3a2089b73",
+      "after_sha256": "d71b43966b3026e9da8921ad91802243a8b6f596f544dd4da5413d6250aaf472"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "before_sha256": "36bd0c213d2c538abdb66ebf1c7517cb952331f97a45bb6d994b1b2d66f19c70",
+      "after_sha256": "8a8eafbf3fe150f71873d1bea4780f20359f3af27c0aab078483cb18fe5036ae"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "before_sha256": "b65f668abd6dc093d5a3eb58ed4eeb44917aa0f4ee97560775f3e4090811cc51",
+      "after_sha256": "0a8660bebe7e6884fae39cd6f8f5b6374ef586e22e4bbc3dc211b9872e43c070"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "before_sha256": "0cf99fc89948f01a987d99c0c4adaee0d2ed545bcf396afa4e903dde37905b70",
+      "after_sha256": "7f70a2171b1da7108d9dadfcfe9eb7c56522e989500f8bf0da1d86a206e195f2"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "before_sha256": "0ce1f35dcedb68d6084d30e781d013b5aa1376526095d7659f5b640ce8e23727",
+      "after_sha256": "751fff77582a83c04a6268491a2be91359bb20332d83d9a5396c90d373a8b4b8"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "before_sha256": "f1291088e6e36c05bf282e6ab628328b89640bac098a0d2cd73bbfb557fb0946",
+      "after_sha256": "1e78d8fd661fb3955e2b7b48f65b7792c961bc34eb4dc0c55644a494aeac9462"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "before_sha256": "198b6debe7481749c316095aa0951358eca31490a0cca6a38c4659557236ba40",
+      "after_sha256": "b0df3c61a3024ed16c6593107f3ae7f6731f3a0ae014e52e22cd36612bad4d09"
+    }
+  ]
+}

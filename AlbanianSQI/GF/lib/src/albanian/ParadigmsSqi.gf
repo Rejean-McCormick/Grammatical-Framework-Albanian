@@ -1216,6 +1216,31 @@ oper
     _ => regV form1
   } : V> ;
 
+-- Worst-case noun constructor from observable Albanian forms.
+NForms : Type = {
+  indefNomSg, indefNomPl, indefAccSg, indefAccPl,
+  indefDatSg, indefDatPl, indefAblSg, indefAblPl,
+  defNomSg, defNomPl, defAccSg, defAccPl,
+  defDatSg, defDatPl, defAblSg, defAblPl : Str
+} ;
+
+mkNFull : NForms -> Gender -> N = \f,g -> lin N {
+  s = table {
+    Indef => table {
+      Nom => table {Sg => f.indefNomSg ; Pl => f.indefNomPl} ;
+      Acc => table {Sg => f.indefAccSg ; Pl => f.indefAccPl} ;
+      Dat => table {Sg => f.indefDatSg ; Pl => f.indefDatPl} ;
+      Ablat => table {Sg => f.indefAblSg ; Pl => f.indefAblPl}
+    } ;
+    Def => table {
+      Nom => table {Sg => f.defNomSg ; Pl => f.defNomPl} ;
+      Acc => table {Sg => f.defAccSg ; Pl => f.defAccPl} ;
+      Dat => table {Sg => f.defDatSg ; Pl => f.defDatPl} ;
+      Ablat => table {Sg => f.defAblSg ; Pl => f.defAblPl}
+    }
+  } ; g = g
+} ;
+
 mkN = overload {
   mkN : Str -> N = regN;   -- s;Indef;Nom;Sg
   mkN : Str -> Str -> N = reg2N   -- s;Indef;Nom;Sg  s;Indef;Nom;Pl
@@ -1301,6 +1326,28 @@ mkA2 = overload {
   mkA2 : Str -> Prep -> A2 = \a,p -> mkA2Core (mkA a) p ;
   mkA2 : Str -> Str -> A2 = \a,p -> mkA2Core (mkA a) (mkPrep p) ;
 } ;
+
+-- Exact irregular-verb constructor.  Use this when regular inference or the
+-- compact legacy irregV constructor would erase real tense/mood distinctions.
+-- Every table is supplied explicitly; no surface-string inference is performed.
+irregVFull :
+  (pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm : Number => Person => Str) ->
+  (imp : Number => Str) -> Str -> V =
+  \pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm,imp,part -> lin V {
+    Indicative = table {
+      Pres => pres ;
+      Past => past ;
+      Aorist => aor ;
+      Imperfect => imperf
+    } ;
+    Subjunctive = subj ;
+    Imperative = imp ;
+    participle = part ;
+    pres_optative = presOpt ;
+    perf_optative = perfOpt ;
+    pres_admirative = presAdm ;
+    imperf_admirative = imperfAdm
+  } ;
 
 irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
   \p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part -> lin V {
@@ -1507,7 +1554,8 @@ oper mkQuant : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Quant =
                                     }
                            }
                 } ;
-            spec = Indef
+            spec = Indef ;
+      placement = PreNominal
           } ;
 
 oper mkDet : (_,_,_,_,_,_,_,_ : Str) -> Number -> Det =
@@ -1531,7 +1579,8 @@ oper mkDet : (_,_,_,_,_,_,_,_ : Str) -> Number -> Det =
                            }
                 } ;
             spec = Indef ;
-            n = n
+            n = n ;
+            placement = PreNominal
           } ;
 
 mkConj : Str -> Conj = \s -> lin Conj {s=s} ;

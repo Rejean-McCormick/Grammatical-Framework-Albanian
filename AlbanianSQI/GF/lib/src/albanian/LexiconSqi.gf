@@ -4,19 +4,45 @@
 -- N = indefinite nominative singular; V = present 1sg where regular.
 
 concrete LexiconSqi of Lexicon = CatSqi **
-  open ParadigmsSqi, (SV = StructuralSqiVerbal), (R = ResSqi) in {
+  open ParadigmsSqi, (I = IrregSqi), (SV = StructuralSqiVerbal), (R = ResSqi) in {
 
   flags optimize=all_subs ;
 
+  oper
+    bookNForms : NForms = {
+      indefNomSg="libër"; indefNomPl="libra"; indefAccSg="libër"; indefAccPl="libra";
+      indefDatSg="libri"; indefDatPl="librave"; indefAblSg="libri"; indefAblPl="librash";
+      defNomSg="libri"; defNomPl="librat"; defAccSg="librin"; defAccPl="librat";
+      defDatSg="librit"; defDatPl="librave"; defAblSg="librit"; defAblPl="librave"
+    } ;
+    boyNForms : NForms = {
+      indefNomSg="djalë"; indefNomPl="djem"; indefAccSg="djalë"; indefAccPl="djem";
+      indefDatSg="djali"; indefDatPl="djemve"; indefAblSg="djali"; indefAblPl="djemsh";
+      defNomSg="djali"; defNomPl="djemtë"; defAccSg="djalin"; defAccPl="djemtë";
+      defDatSg="djalit"; defDatPl="djemve"; defAblSg="djalit"; defAblPl="djemve"
+    } ;
+    manNForms : NForms = {
+      indefNomSg="burrë"; indefNomPl="burra"; indefAccSg="burrë"; indefAccPl="burra";
+      indefDatSg="burri"; indefDatPl="burrave"; indefAblSg="burri"; indefAblPl="burrash";
+      defNomSg="burri"; defNomPl="burrat"; defAccSg="burrin"; defAccPl="burrat";
+      defDatSg="burrit"; defDatPl="burrave"; defAblSg="burrit"; defAblPl="burrave"
+    } ;
+    appleNForms : NForms = {
+      indefNomSg="mollë"; indefNomPl="mollë"; indefAccSg="mollë"; indefAccPl="mollë";
+      indefDatSg="molle"; indefDatPl="mollëve"; indefAblSg="molle"; indefAblPl="mollësh";
+      defNomSg="molla"; defNomPl="mollët"; defAccSg="mollën"; defAccPl="mollët";
+      defDatSg="mollës"; defDatPl="mollëve"; defAblSg="mollës"; defAblPl="mollëve"
+    } ;
+
   lin
-    add_V3                   = mkV3 (mkV "shtoj") (mkPrep "") (mkPrep "te") ;
+    add_V3                   = mkV3 (mkV "shtoj") noPrep (mkPrep [] dative) ;
     airplane_N               = mkN032 "aeroplan" ;
     alas_Interj              = mkInterj "medet" ;
     already_Adv              = mkAdv "tashmë" ;
     animal_N                 = mkN "kafshë" ;
     answer_V2S               = mkV2S (mkV "përgjigjem") ;
     apartment_N              = mkN "apartament" ;
-    apple_N                  = mkN069 "mollë" ;
+    apple_N                  = mkNFull appleNForms feminine ;
     art_N                    = mkN "art" ;
     ashes_N                  = mkN "hi" ;
     ask_V2Q                  = mkV2Q (mkV "pyes") ;
@@ -26,7 +52,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     bank_N                   = mkN "bankë" ;
     bark_N                   = mkN "lëvore" ;
     beautiful_A              = mkA "bukur" ;
-    become_VA                = mkVA (mkV "bëhem") ;
+    become_VA                = mkVA (lin V I.behem_V) ;
     beer_N                   = mkN "birrë" ;
     beg_V2V                  = mkV2V (mkV "lutem") ;
     belly_N                  = mkN "bark" ;
@@ -40,10 +66,10 @@ concrete LexiconSqi of Lexicon = CatSqi **
     blue_A                   = mkA "kaltër" ;
     boat_N                   = mkN "varkë" ;
     bone_N                   = mkN "kockë" ;
-    book_N                   = mkN "libër" ;
+    book_N                   = mkNFull bookNForms masculine ;
     boot_N                   = mkN "çizme" ;
     boss_N                   = mkN "shef" ;
-    boy_N                    = mkN "djalë" ;
+    boy_N                    = mkNFull boyNForms masculine ;
     bread_N                  = mkN "bukë" ;
     break_V2                 = mkV2 (mkV "thyej") ;
     breast_N                 = mkN "gji" ;
@@ -53,7 +79,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     brown_A                  = mkA "kafe" ;
     burn_V                   = mkV "digjem" ;
     butter_N                 = mkN "gjalpë" ;
-    buy_V2                   = mkV2 (mkV "blej") ;
+    buy_V2                   = mkV2 (lin V I.blej_V) ;
     camera_N                 = mkN "kamerë" ;
     cap_N                    = mkN "kapelë" ;
     car_N                    = mkN "makinë" ;
@@ -71,7 +97,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     cloud_N                  = mkN "re" ;
     coat_N                   = mkN "pallto" ;
     cold_A                   = mkA "ftohtë" ;
-    come_V                   = mkV "vij" ;
+    come_V                   = lin V I.vij_V ;
     computer_N               = mkN "kompjuter" ;
     correct_A                = mkA "saktë" ;
     country_N                = mkN "vend" ;
@@ -95,7 +121,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     ear_N                    = mkN "vesh" ;
     earth_N                  = mkN "tokë" ;
     easy_A2V                 = mkA2 (mkA "lehtë") ;
-    eat_V2                   = mkV2 (mkV066 "hënga") ;
+    eat_V2                   = mkV2 (lin V I.ha_V) ;
     egg_N                    = mkN "vezë" ;
     empty_A                  = mkA "bosh" ;
     enemy_N                  = mkN "armik" ;
@@ -109,7 +135,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     fear_V2                  = mkV2 (mkV "druaj") ;
     feather_N                = mkN "pendë" ;
     fight_V2                 = mkV2 (mkV "luftoj") ;
-    find_V2                  = mkV2 (mkV "gjej") ;
+    find_V2                  = mkV2 (lin V I.gjej_V) ;
     fingernail_N             = mkN "thua" ;
     fire_N                   = mkN "zjarr" ;
     fish_N                   = mkN "peshk" ;
@@ -130,7 +156,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     fun_AV                   = mkA "zbavitës" ;
     garden_N                 = mkN "kopsht" ;
     girl_N                   = mkN "vajzë" ;
-    give_V3                  = mkV3 (mkV "jap") (mkPrep "") (mkPrep "te") ;
+    give_V3                  = mkV3 (lin V I.jap_V) noPrep (mkPrep [] dative) ;
     glove_N                  = mkN "dorezë" ;
     gold_N                   = mkN "ar" ;
     good_A                   = mkA "mirë" ;
@@ -190,7 +216,7 @@ concrete LexiconSqi of Lexicon = CatSqi **
     louse_N                  = mkN "morr" ;
     love_N                   = mkN "dashuri" ;
     love_V2                  = mkV2 (mkV "dashuroj") ;
-    man_N                    = mkN "burrë" ;
+    man_N                    = mkNFull manNForms masculine ;
     married_A2               = mkA2 (mkA "martuar") (mkPrep "me") ;
     meat_N                   = mkN "mish" ;
     milk_N                   = mkN "qumësht" ;
@@ -254,16 +280,16 @@ concrete LexiconSqi of Lexicon = CatSqi **
     run_V                    = mkV "vrapoj" ;
     salt_N                   = mkN "kripë" ;
     sand_N                   = mkN "rërë" ;
-    say_VS                   = mkVS (mkV "them") ;
+    say_VS                   = mkVS (lin V I.them_V) ;
     school_N                 = mkN "shkollë" ;
     science_N                = mkN "shkencë" ;
     scratch_V2               = mkV2 (mkV "gërvisht") ;
     sea_N                    = mkN "det" ;
     seed_N                   = mkN "farë" ;
     seek_V2                  = mkV2 (mkV "kërkoj") ;
-    see_V2                   = mkV2 (mkV "shoh") ;
-    sell_V3                  = mkV3 (mkV "shes") (mkPrep "") (mkPrep "te") ;
-    send_V3                  = mkV3 (mkV "dërgoj") (mkPrep "") (mkPrep "te") ;
+    see_V2                   = mkV2 (lin V I.shoh_V) ;
+    sell_V3                  = mkV3 (mkV "shes") noPrep (mkPrep [] dative) ;
+    send_V3                  = mkV3 (mkV "dërgoj") noPrep (mkPrep [] dative) ;
     sew_V                    = mkV "qep" ;
     sharp_A                  = mkA "mprehtë" ;
     sheep_N                  = mkN "dele" ;

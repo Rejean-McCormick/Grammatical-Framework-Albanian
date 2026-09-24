@@ -1,0 +1,13 @@
+{
+  "baseline_file_count": 241,
+  "baseline_missing": [],
+  "active_modified_baseline_files": [
+    "AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf"
+  ],
+  "validation_file_count": 154,
+  "validation_changed": [],
+  "checkpoint1_preserved_files": 15,
+  "checkpoint2_preserved_files": 19,
+  "gf_available_in_execution_environment": false,
+  "morphosqi_lint_findings": 0
+}

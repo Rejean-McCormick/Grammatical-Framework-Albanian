@@ -1,0 +1,34 @@
+{
+  "schema": "gf-wordbench-linguistic-review-request-v1",
+  "request_id": "LR-7122f2f431a17b5c8a93cf1a",
+  "run_id": "20260924_181733",
+  "source_lock_sha256": "24ec08e102cbc8a66683a1d3031527a71c71452d1e5a9d1e55d5d45788c27536",
+  "gf_version": "3.12",
+  "language_key": "albanian",
+  "language_variety": "Standard Albanian",
+  "reviewer_instructions": [
+    "Judge the generated text only as linguistic evidence; do not infer success from GF exit status.",
+    "Use verdict valid only when the text is grammatical and natural in the stated language variety.",
+    "Use valid_variant for grammatical alternatives that are acceptable but marked, stylistic, or context-dependent.",
+    "Use questionable whenever confidence is insufficient; uncertainty must not be promoted to a passing golden.",
+    "Use invalid for ungrammatical, morphologically wrong, syntactically wrong, or clearly non-standard output.",
+    "Preserve Unicode and quote the exact problematic substring in issues when useful.",
+    "Return one review record for every requested scenario and echo each output_sha256 exactly."
+  ],
+  "response_contract": {
+    "schema": "gf-wordbench-linguistic-review-response-v1",
+    "verdicts": [
+      "valid",
+      "valid_variant",
+      "questionable",
+      "invalid"
+    ],
+    "confidence": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "rule": "questionable/invalid/low-confidence outputs are never gold-eligible"
+  },
+  "scenarios": []
+}

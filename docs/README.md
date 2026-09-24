@@ -97,3 +97,11 @@ The next-upgrade source candidate is now assembled. See
 VP/VPSlash boundary changes, the 54-target validator, the optional Wordbench
 hardening patch, and the explicit distinction between static PASS and pending
 GF 3.12 compiler acceptance.
+
+## 2026-09-24 current evidence pointer
+
+The live accepted GF evidence is run `20260923_214430`: 54/54 compile and 50/50
+scenario execution, with linguistic certification still not established.  The
+post-run linguistic correction candidate is recorded in `ALBANIAN_DECISION_LOG.md`
+(ALB-DEC-057) and `DOCUMENTATION_SYNC_20260924.md`; GF 3.12 acceptance of that
+candidate is pending a new rerun.

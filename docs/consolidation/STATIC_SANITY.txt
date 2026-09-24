@@ -1,0 +1,6 @@
+Consolidated active-source sanity checks
+=======================================
+bare mkPrep [] Dat occurrences in LexiconSqi: 0
+mkPrep [] dative occurrences in LexiconSqi: 4
+baseline active files missing: 0
+GF executable in current environment: not installed

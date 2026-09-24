@@ -267,3 +267,59 @@ behavioral scenario/golden gate.
 
 See `ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md` for the exact implementation
 and evidence boundary.
+
+---
+
+## 2026-09-23 surface-hygiene overlay
+
+Run `20260923_194006` is now the live execution baseline: **54/54** GF targets compile and **50/50** scenarios execute. It also exposes nine non-crashing surface defects: C0157/C0187/C0197 are empty and C0120/C0130/C0160/C0170/C0373/C0472 contain a visible `&+` token-binding marker.
+
+ALB-DEC-055 repairs those defects at their owning layers: intra-word `-jë` morphology no longer uses `BIND`; `blej`, `them`, and `bëhem` use exact irregular tables through `IrregSqi`; and `LexiconSqi` points to those canonical values. No scenario text or scenario SHA is changed by this overlay.
+
+The assembly environment still lacks the `gf` executable, so **GF 3.12 acceptance of ALB-DEC-055 is pending a project rerun**. Static source checks and `gf_morphosqi_lint.py` are green. Linguistic certification remains a reviewed-golden task even after the nine surface defects close.
+
+---
+
+## 2026-09-23 ALB-DEC-056 compile-recovery overlay
+
+GF 3.12 run `20260923_201645` rejected the first ALB-DEC-055 candidate during
+renaming of `IrregSqi.personTable` / `numberTable`: `Number` and `Person` were
+used unqualified even though their owner is `ParamX`. This is one direct source
+failure with importer/scenario fallout, not 77 independent defects.
+
+The current overlay keeps the surface-hygiene design and qualifies the common
+parameters through `(P = ParamX)`. The next evidence sequence is deliberately
+narrow: `IrregSqi` -> `LexiconSqi` -> public language entrypoints -> full 54/54
++ 50/50 campaign. Only that rerun can establish whether the nine surface defects
+from `20260923_194006` are closed.
+
+---
+
+## 2026-09-24 ALB-DEC-057 linguistic root-repair candidate
+
+The live accepted execution baseline is now GF 3.12 run `20260923_214430`:
+
+```text
+compile census:                 54/54 OK
+scenario execution:             50/50 OK
+direct/downstream/ambiguous:    0 / 0 / 0
+structural-lock warnings:       0
+reviewable scenarios:           50/50
+linguistic certification:       NOT ESTABLISHED
+```
+
+That run accepts ALB-DEC-055/056 technically and closes the previously targeted
+three empty CASE outputs and six visible `&+` artifacts.  It also exposes the next
+layer of defects: irregular verb paradigms, fused compound tenses, unsafe noun-class
+inference, collapsed articulated-adjective linking articles, lexicalized V3 dative
+prepositions, and possessive placement/case morphology.
+
+ALB-DEC-057 is implemented in the current candidate at the owning boundaries:
+`MorphoSqi`, `ParadigmsSqi`, `IrregSqi`, `LexiconSqi`, `ResSqi`, `NounSqi`, and the
+small set of record constructors affected by `DetPlacement`.  Scenario sources and
+scenario locks are unchanged.
+
+The assembly environment does not contain the `gf` executable.  Therefore the
+current candidate has **static validation only** and must not be described as GF 3.12
+accepted.  The next action is targeted dependency compilation followed by the full
+54-target/50-scenario rerun and reviewed linguistic comparison.

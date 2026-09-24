@@ -4,7 +4,7 @@ resource ExtendSqiLexicon =
 
 oper
   lex_ReflPossPron : Quant = lin Quant {
-    s=\\_,_,_ =>"vet" ; spec=R.Def
+    s=\\_,_,_ =>"vet" ; spec=R.Def ; placement=R.PostNominal
   } ;
 
   lex_iFem_Pron : Pron =

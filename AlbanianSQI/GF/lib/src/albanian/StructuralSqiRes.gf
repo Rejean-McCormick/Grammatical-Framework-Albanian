@@ -29,7 +29,8 @@ oper
         Ablat => table {Masc => x ; Fem => x}
       } ;
       spec = Indef ;
-      n = n
+      n = n ;
+      placement = PreNominal
     } ;
 
   mkQuantInv : Str -> CatSqi.Quant =
@@ -52,7 +53,8 @@ oper
           Fem  => table {Sg => x ; Pl => x}
         }
       } ;
-      spec = Indef
+      spec = Indef ;
+      placement = PreNominal
     } ;
 
 } ;

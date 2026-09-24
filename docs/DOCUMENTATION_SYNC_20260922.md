@@ -121,3 +121,20 @@ The remaining scenario repair changes only C0371-C0375 from `P.mkVV "dua"` to
 canonical `St.want_VV`; a new GF 3.12 run is still required before claiming the
 behavioral gate closed.
 
+---
+
+## Postscript — 2026-09-23 surface-hygiene overlay
+
+Run `20260923_194006` supersedes the earlier 49/50 frontier: the source compiles 54/54 and executes 50/50 scenarios. Review of raw CASE output nevertheless found three empty realizations and six visible `&+` markers. ALB-DEC-055 records the corrective overlay and the distinction between execution success and linguistic/surface acceptance. The current docs now require a GF 3.12 rerun with zero instances of both defect classes before this surface-hygiene checkpoint closes.
+
+---
+
+## Postscript — 2026-09-23 ALB-DEC-056
+
+Run `20260923_201645` found a single new direct compile root in the
+surface-hygiene candidate: `IrregSqi` used `Number`/`Person` from `ParamX`
+without bringing that module into scope. The synchronized candidate now uses
+`open ParadigmsSqi, (P = ParamX)` and qualified `P.*` parameter constructors.
+The 26 importer failures and 50 unavailable scenarios are recorded as causal
+fallout, not independent Albanian defects. GF 3.12 rerun acceptance remains
+required.

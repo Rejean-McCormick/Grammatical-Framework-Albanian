@@ -1,0 +1,71 @@
+{
+  "base": "Albanian linguistic completion overlay 20260924 applied to snapshot 20260923-194448",
+  "status": "DRAFT-MAX checkpoint 2; static validation 36/36; GF compile not certified (full target snapshot and gf executable unavailable)",
+  "files": [
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "before_sha256": "8fb7b05b7ad8af60f19894cafdfdc878a885467d969e9e308fb4efae86199210",
+      "checkpoint1_sha256": "826e99912965e3eba39e071b856d992809709981bec476765aaf1043d0e8c163",
+      "checkpoint2_sha256": "826e99912965e3eba39e071b856d992809709981bec476765aaf1043d0e8c163"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "before_sha256": "34ec8dc40f03a240a2369f62e58c4eda7392d9395b7040c488fbca51afe0cb36",
+      "checkpoint1_sha256": "dca1510fbceb451d94b7df9eb7a3e322fd25c0f0a85833e5c966d8f680b16f22",
+      "checkpoint2_sha256": "54ebc801010c3013165dee61345d05fa789c86c71e2580552d3c4ff549252c22"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "before_sha256": "bb9cd704c812e1e98741b86c05fa0a1cf50901de90f6114eacb474be3d7620ac",
+      "checkpoint1_sha256": "05b9a7c061d9a13e26d647f78117a41a47682958b7f810619275cba5d656994f",
+      "checkpoint2_sha256": "de4fa2b4e86a20ea44c4e7ea23abfaa29a8c317a103bbec4e5f95ff349ea0b98"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "before_sha256": "960eef4064513d988ca345fb993fddb0a37e1453ba8f76f5e54c5cd3a2089b73",
+      "checkpoint1_sha256": "d71b43966b3026e9da8921ad91802243a8b6f596f544dd4da5413d6250aaf472",
+      "checkpoint2_sha256": "1dad0bcc5c5146f1a877f4bcb4013d3701b0df62917a8dece420041ef2a3ee28"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "before_sha256": "36bd0c213d2c538abdb66ebf1c7517cb952331f97a45bb6d994b1b2d66f19c70",
+      "checkpoint1_sha256": "8a8eafbf3fe150f71873d1bea4780f20359f3af27c0aab078483cb18fe5036ae",
+      "checkpoint2_sha256": "ad5d7c79c17b304c96aa90be75aeb7fe06535530c502b978d9c87e5e975bfbf7"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "before_sha256": "b65f668abd6dc093d5a3eb58ed4eeb44917aa0f4ee97560775f3e4090811cc51",
+      "checkpoint1_sha256": "0a8660bebe7e6884fae39cd6f8f5b6374ef586e22e4bbc3dc211b9872e43c070",
+      "checkpoint2_sha256": "283527a520f2545df848489dd1cdecac9d0a29709268803ca9efeda320db3574"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "before_sha256": "0cf99fc89948f01a987d99c0c4adaee0d2ed545bcf396afa4e903dde37905b70",
+      "checkpoint1_sha256": "7f70a2171b1da7108d9dadfcfe9eb7c56522e989500f8bf0da1d86a206e195f2",
+      "checkpoint2_sha256": "7f70a2171b1da7108d9dadfcfe9eb7c56522e989500f8bf0da1d86a206e195f2"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "before_sha256": "0ce1f35dcedb68d6084d30e781d013b5aa1376526095d7659f5b640ce8e23727",
+      "checkpoint1_sha256": "751fff77582a83c04a6268491a2be91359bb20332d83d9a5396c90d373a8b4b8",
+      "checkpoint2_sha256": "f218c6929b1da391701fd5624a4e10a6f7d12a204ba425568f3ff740ea5966f0"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "before_sha256": "f1291088e6e36c05bf282e6ab628328b89640bac098a0d2cd73bbfb557fb0946",
+      "checkpoint1_sha256": "1e78d8fd661fb3955e2b7b48f65b7792c961bc34eb4dc0c55644a494aeac9462",
+      "checkpoint2_sha256": "59014432a6ae855c700cc319f55259f05dba9860edf8ae2771eecfa47ac1eaac"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "before_sha256": "198b6debe7481749c316095aa0951358eca31490a0cca6a38c4659557236ba40",
+      "checkpoint1_sha256": "b0df3c61a3024ed16c6593107f3ae7f6731f3a0ae014e52e22cd36612bad4d09",
+      "checkpoint2_sha256": "e5d89e5ead56b82e356d8fde2ad242b0bbb4087e1338def89274f853d833b08a"
+    }
+  ],
+  "validation": {
+    "static": "36/36 checks passed",
+    "gf_compile": "not run",
+    "reason": "full target snapshot absent from supplied artifacts and gf executable unavailable"
+  }
+}

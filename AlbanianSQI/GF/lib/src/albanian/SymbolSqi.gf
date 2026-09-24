@@ -27,10 +27,22 @@ concrete SymbolSqi of Symbol = CatSqi
 
     cnCaseWithDet : CatSqi.Det -> CatSqi.CN -> (Case => Str) = \det,cn ->
       table {
-        Nom   => det.s ! Nom   ! cn.g ++ cn.s ! det.spec ! Nom   ! det.n ;
-        Acc   => det.s ! Acc   ! cn.g ++ cn.s ! det.spec ! Acc   ! det.n ;
-        Dat   => det.s ! Dat   ! cn.g ++ cn.s ! det.spec ! Dat   ! det.n ;
-        Ablat => det.s ! Ablat ! cn.g ++ cn.s ! det.spec ! Ablat ! det.n
+        Nom => case det.placement of {
+          PreNominal => det.s ! Nom ! cn.g ++ cn.s ! det.spec ! Nom ! det.n ;
+          PostNominal => cn.s ! det.spec ! Nom ! det.n ++ det.s ! Nom ! cn.g
+        } ;
+        Acc => case det.placement of {
+          PreNominal => det.s ! Acc ! cn.g ++ cn.s ! det.spec ! Acc ! det.n ;
+          PostNominal => cn.s ! det.spec ! Acc ! det.n ++ det.s ! Acc ! cn.g
+        } ;
+        Dat => case det.placement of {
+          PreNominal => det.s ! Dat ! cn.g ++ cn.s ! det.spec ! Dat ! det.n ;
+          PostNominal => cn.s ! det.spec ! Dat ! det.n ++ det.s ! Dat ! cn.g
+        } ;
+        Ablat => case det.placement of {
+          PreNominal => det.s ! Ablat ! cn.g ++ cn.s ! det.spec ! Ablat ! det.n ;
+          PostNominal => cn.s ! det.spec ! Ablat ! det.n ++ det.s ! Ablat ! cn.g
+        }
       } ;
 
   lin

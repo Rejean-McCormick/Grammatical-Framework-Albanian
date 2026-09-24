@@ -62,8 +62,8 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     AP = {s : Species => Case => Gender => Number => Str} ;
     CN = Noun ;
     Num = {s : Str ; n : Number} ;
-    Quant = {s : Case => Gender => Number => Str ; spec : Species} ;
-    Det = {s : Case => Gender => Str ; spec : Species ; n : Number} ;
+    Quant = {s : Case => Gender => Number => Str ; spec : Species ; placement : DetPlacement} ;
+    Det = {s : Case => Gender => Str ; spec : Species ; n : Number ; placement : DetPlacement} ;
 
     NP = {
       s : Case => Str ;

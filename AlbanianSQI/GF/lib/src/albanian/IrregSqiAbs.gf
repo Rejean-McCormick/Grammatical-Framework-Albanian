@@ -1,11 +1,14 @@
 abstract IrregSqiAbs = Cat ** {
 fun
   bej_V  : V ;
+  behem_V : V ;
+  blej_V  : V ;
   bie_V  : V ;
   dal_V  : V ;
   dua_V  : V ;
   eci_V  : V ;
   ha_V   : V ;
+  gjej_V : V ;
   hyj_V  : V ;
   iki_V  : V ;
   jam_V  : V ;

@@ -1,0 +1,10 @@
+AlbanianSQI/GF/lib/src/albanian/CatSqi.gf
+AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf
+AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf
+AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf
+AlbanianSQI/GF/lib/src/albanian/NounSqi.gf
+AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf
+AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf
+AlbanianSQI/GF/lib/src/albanian/ResSqi.gf
+AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf
+AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf

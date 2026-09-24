@@ -297,3 +297,57 @@ freeze evidence
 ```
 
 This sequence supersedes any older note that names fix17, fix18, the Comp/Imp warning family, or the former PMCFG crash as the **current first blocker**. Those records remain historical evidence only.
+
+---
+
+## 2026-09-23 G5 surface-hygiene checkpoint
+
+G4 is now evidenced by run `20260923_194006` at 54/54, and scenario execution reaches 50/50. Before G5 can be treated as linguistically reviewed, ALB-DEC-055 requires a surface-hygiene rerun: all CASE blocks must realize non-empty output, no literal `&+` may leak into Albanian surface text, and the audited irregular perfects for `blej`, `them`, and `bëhem` must realize their explicit forms. This checkpoint precedes creation/approval of broad goldens; normalization may not hide these defects.
+
+---
+
+## 2026-09-23 targeted recovery after run `20260923_201645`
+
+Before repeating the full G4/G5 campaign, validate the ALB-DEC-056 dependency
+ladder in this order:
+
+```text
+IrregSqi.gf
+  -> LexiconSqi.gf
+  -> GrammarSqi / LangSqi / AllSqi
+  -> 5 public API facades
+  -> complete 54-target census
+  -> 50 scenario campaign
+  -> surface-hygiene audit / reviewed goldens
+```
+
+This ordering follows the Compendium rule that the smallest changed module and
+its dependency chain must compile before aggregate validation is used as
+acceptance evidence.
+
+---
+
+## 2026-09-24 G5 linguistic root-repair acceptance sequence
+
+Run `20260923_214430` establishes the structural/execution baseline at 54/54 + 50/50.
+For ALB-DEC-057, validate in dependency order rather than using the aggregate run as
+the first compiler probe:
+
+```text
+ResSqi / CatSqi
+  -> ParadigmsSqi
+  -> IrregSqi + IrregSqiAbs
+  -> NounSqi + VerbSqi
+  -> LexiconSqi + Structural modules
+  -> GrammarSqi / LangSqi / AllSqi
+  -> 5 public API facades
+  -> complete 54-target compile census
+  -> targeted scenarios (verbs, nouns, adjectives, V3, possessives)
+  -> all 50 scenarios
+  -> reviewed 500-CASE linguistic comparison
+  -> approved goldens / T9 evidence
+```
+
+Do not regenerate expected goldens from the candidate output.  A compiler-green and
+scenario-green rerun proves structural and execution stability only; linguistic
+acceptance requires independently reviewed expected forms or accepted variants.

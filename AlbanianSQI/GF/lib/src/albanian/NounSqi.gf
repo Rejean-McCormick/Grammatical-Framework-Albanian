@@ -17,38 +17,75 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
       Sg => case g of {Masc => "i" ; Fem => "e"}
     } ;
 
-    possessiveForm : Agr -> Gender -> Number -> Str = \a,g,n ->
+    possSg : Str -> Str -> Str -> Case -> Str = \nom,acc,obl,c -> case c of {
+      Nom => nom ; Acc => acc ; Dat => obl ; Ablat => obl
+    } ;
+
+    possPl : Str -> Str -> Case -> Str = \direct,obl,c -> case c of {
+      Nom => direct ; Acc => direct ; Dat => obl ; Ablat => obl
+    } ;
+
+    -- Possessive morphology is selected from the possessor agreement and the
+    -- possessed noun's case/gender/number.  Position is handled separately by
+    -- Quant.placement so ordinary possessives remain post-nominal.
+    possessiveForm : Agr -> Case -> Gender -> Number -> Str = \a,c,g,n ->
       case a.p of {
         P1 => case a.gn of {
           GSg _ => case <g,n> of {
-            <Masc,Sg> => "im" ; <Fem,Sg> => "ime" ;
-            <Masc,Pl> => "e mi" ; <Fem,Pl> => "e mia"
+            <Masc,Sg> => possSg "im" "tim" "tim" c ;
+            <Fem,Sg>  => possSg "ime" "time" "sime" c ;
+            <Masc,Pl> => possPl "e mi" "të mi" c ;
+            <Fem,Pl>  => possPl "e mia" "të mia" c
           } ;
           GPl => case <g,n> of {
-            <Masc,Sg> => "ynë" ; <Fem,Sg> => "jonë" ;
-            <Masc,Pl> => "tanë" ; <Fem,Pl> => "tona"
+            <Masc,Sg> => possSg "ynë" "tonë" "tonë" c ;
+            <Fem,Sg>  => possSg "jonë" "tonë" "sonë" c ;
+            <Masc,Pl> => possPl "tanë" "tanë" c ;
+            <Fem,Pl>  => possPl "tona" "tona" c
           }
         } ;
         P2 => case a.gn of {
           GSg _ => case <g,n> of {
-            <Masc,Sg> => "yt" ; <Fem,Sg> => "jote" ;
-            <Masc,Pl> => "e tu" ; <Fem,Pl> => "e tua"
+            <Masc,Sg> => possSg "yt" "tënd" "tënd" c ;
+            <Fem,Sg>  => possSg "jote" "tënde" "sate" c ;
+            <Masc,Pl> => possPl "e tu" "të tu" c ;
+            <Fem,Pl>  => possPl "e tua" "të tua" c
           } ;
           GPl => case <g,n> of {
-            <Masc,Sg> => "juaj" ; <Fem,Sg> => "juaj" ;
-            <Masc,Pl> => "tuaj" ; <Fem,Pl> => "tuaja"
+            <Masc,Sg> => possSg "juaj" "tuaj" "tuaj" c ;
+            <Fem,Sg>  => possSg "juaj" "tuaj" "suaj" c ;
+            <Masc,Pl> => possPl "tuaj" "tuaj" c ;
+            <Fem,Pl>  => possPl "tuaja" "tuaja" c
           }
         } ;
         P3 => case a.gn of {
-          GSg Masc => case g of {Masc => "i tij" ; Fem => "e tij"} ;
-          GSg Fem  => case g of {Masc => "i saj" ; Fem => "e saj"} ;
-          GPl      => case g of {Masc => "i tyre" ; Fem => "e tyre"}
+          GSg Masc => case <g,n> of {
+            <Masc,Sg> => possSg "i tij" "e tij" "të tij" c ;
+            <Fem,Sg>  => possSg "e tij" "e tij" "së tij" c ;
+            <Masc,Pl> => possPl "e tij" "të tij" c ;
+            <Fem,Pl>  => possPl "e tij" "të tij" c
+          } ;
+          GSg Fem => case <g,n> of {
+            <Masc,Sg> => possSg "i saj" "e saj" "të saj" c ;
+            <Fem,Sg>  => possSg "e saj" "e saj" "së saj" c ;
+            <Masc,Pl> => possPl "e saj" "të saj" c ;
+            <Fem,Pl>  => possPl "e saj" "të saj" c
+          } ;
+          GPl => case <g,n> of {
+            <Masc,Sg> => possSg "i tyre" "e tyre" "të tyre" c ;
+            <Fem,Sg>  => possSg "e tyre" "e tyre" "së tyre" c ;
+            <Masc,Pl> => possPl "e tyre" "të tyre" c ;
+            <Fem,Pl>  => possPl "e tyre" "të tyre" c
+          }
         }
       } ;
 
   lin
     DetCN det cn = {
-      s = \\c => det.s ! c ! cn.g ++ cn.s ! det.spec ! c ! det.n ;
+      s = \\c => case det.placement of {
+        PreNominal => det.s ! c ! cn.g ++ cn.s ! det.spec ! c ! det.n ;
+        PostNominal => cn.s ! det.spec ! c ! det.n ++ det.s ! c ! cn.g
+      } ;
       acc_clit = noAcc ; dat_clit = noDat ;
       a = agrgP3 cn.g det.n ; isPron = False
     } ;
@@ -76,12 +113,12 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
 
     DetQuant quant num = {
       s = \\c,g => quant.s ! c ! g ! num.n ++ num.s ;
-      n = num.n ; spec = quant.spec
+      n = num.n ; spec = quant.spec ; placement = quant.placement
     } ;
 
     DetQuantOrd quant num ord = {
       s = \\c,g => quant.s ! c ! g ! num.n ++ num.s ++ ord.s ! c ! g ! num.n ;
-      n = num.n ; spec = quant.spec
+      n = num.n ; spec = quant.spec ; placement = quant.placement
     } ;
 
     NumSg = {s=[]; n=Sg} ;
@@ -99,15 +136,15 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
       s = \\c,g,n => "i" ++ numeral.s ++ "më" ++ positiveA a c g n
     } ;
 
-    IndefArt = {s = \\_,_ => table {Sg => "një" ; Pl => []}; spec=Indef} ;
-    DefArt = {s = \\_,_,_ => []; spec=Def} ;
+    IndefArt = {s = \\_,_ => table {Sg => "një" ; Pl => []}; spec=Indef; placement=PreNominal} ;
+    DefArt = {s = \\_,_,_ => []; spec=Def; placement=PreNominal} ;
 
     MassNP cn = {
       s=\\c=>cn.s!Indef!c!Sg; acc_clit=noAcc; dat_clit=noDat;
       a=agrgP3 cn.g Sg; isPron=False
     } ;
 
-    PossPron p = {s=\\_,g,n=>possessiveForm p.a g n; spec=Def} ;
+    PossPron p = {s=\\c,g,n=>possessiveForm p.a c g n; spec=Def; placement=PostNominal} ;
 
     UseN n = n ;
     UseN2 n = n ;

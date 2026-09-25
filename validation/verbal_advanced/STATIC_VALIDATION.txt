@@ -1,0 +1,18 @@
+# Conversation 4 final RC static validation — 2026-09-25
+
+Conversation 4 structural validator: PASS
+Morpho V records tagged: 135/135
+Protected required scenarios: 52
+Registered optional advanced scenario: 1 (alb-verb-advanced)
+Advanced verbal matrix cases: 98 (V001..V098 aligned across TSV/abstract/concrete/gfs)
+Dict + MorphoDict unified validator: PASS
+MorphoDict validator: PASS
+Dict validator: PASS
+MorphoSqi heuristic lint: 0 findings
+Python validator compileall: PASS
+Wordbench language probe on reconstructed standard RGL layout: PASS
+Wordbench scenario contract check: PASS (0 errors, 0 warnings)
+Wordbench advanced scenario contract check: PASS (0 errors, 0 warnings)
+
+GF executable in this environment: NOT AVAILABLE
+Fresh GF 3.12 / Wordbench compile+execution certification: PENDING EXTERNAL RUN

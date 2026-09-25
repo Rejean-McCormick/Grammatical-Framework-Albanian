@@ -1,9 +1,13 @@
 resource ResSqi = ParamX-[Tense,Past,Pres] ** open Prelude in {
 
-oper
-  Compl : Type = {s : Str ; c : Case} ;
+param
+  ComplKind = OrdinaryCompl | GenitiveCompl ;
 
-  mkCompl : Str -> Case -> Compl = \s,c -> {s = s ; c = c} ;
+oper
+  Compl : Type = {s : Str ; c : Case ; kind : ComplKind} ;
+
+  mkCompl : Str -> Case -> Compl = \s,c -> {s = s ; c = c ; kind = OrdinaryCompl} ;
+  mkGenitiveCompl : Compl = {s = [] ; c = Gen ; kind = GenitiveCompl} ;
 
   -- In CatSqi: Prep = Compl.  Government is therefore carried all the
   -- way to the final nominal-realization boundary instead of being
@@ -15,11 +19,18 @@ oper
 
 param
   Species = Indef | Def ;
-  Case = Nom | Acc | Dat | Ablat ;
+
+  -- Five syntax cases are kept distinct.  Genitive and dative are
+  -- morphologically syncretic in the core nominal paradigms, but Gen remains
+  -- visible to syntax so nyje selection and government are never guessed from
+  -- a surface form.
+  Case = Nom | Acc | Gen | Dat | Ablat ;
+  MorphCase = MNom | MAcc | MDat | MAblat ;
   Gender = Masc | Fem ;
 
 param
-  GenNum = GSg Gender | GPl ;
+  GenNum = GSg Gender | GPl Gender ;
+  WeakClitic = NoWeak | Weak Number Person ;
 
 oper
   Agr : Type = {gn : GenNum ; p : Person} ;
@@ -27,73 +38,115 @@ oper
   genNum : Gender -> Number -> GenNum = \g,n ->
     case n of {
       Sg => GSg g ;
-      Pl => GPl
+      Pl => GPl g
     } ;
 
   agrgP3 : Gender -> Number -> Agr =
     \g,n -> {gn = genNum g n ; p = P3} ;
+
+  headlessNominalFallbackGender : Gender = Masc ;
+  headlessNominalFallbackAgr : Number -> Agr = \n  -> agrgP3 headlessNominalFallbackGender n ;
+  coordinationFallbackAgr : Agr = agrgP3 Masc Pl ;
+
+  morphCase : Case -> MorphCase = \c -> case c of {
+    Nom => MNom ;
+    Acc => MAcc ;
+    Gen => MDat ;
+    Dat => MDat ;
+    Ablat => MAblat
+  } ;
 
 
 param
   DetPlacement = PreNominal | PostNominal ;
 
 oper
-  Noun : Type = {s : Species => Case => Number => Str ; g : Gender} ;
+  Noun : Type = {s : Species => MorphCase => Number => Str ; g : Number => Gender} ;
 
   mkNoun : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Gender -> Noun =
     \f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,g ->
       { s = table {
               Indef => table {
-                         Nom => table {Sg => f1 ;  Pl => f2} ;
-                         Acc => table {Sg => f3 ;  Pl => f4} ;
-                         Dat => table {Sg => f5 ;  Pl => f6} ;
-                         Ablat => table {Sg => f7 ; Pl => f8}
+                         MNom => table {Sg => f1 ;  Pl => f2} ;
+                         MAcc => table {Sg => f3 ;  Pl => f4} ;
+                         MDat => table {Sg => f5 ;  Pl => f6} ;
+                         MAblat => table {Sg => f7 ; Pl => f8}
                        } ;
               Def => table {
-                       Nom => table {Sg => f9 ;  Pl => f10} ;
-                       Acc => table {Sg => f11 ; Pl => f12} ;
-                       Dat => table {Sg => f13 ; Pl => f14} ;
-                       Ablat => table {Sg => f15 ; Pl => f16}
+                       MNom => table {Sg => f9 ;  Pl => f10} ;
+                       MAcc => table {Sg => f11 ; Pl => f12} ;
+                       MDat => table {Sg => f13 ; Pl => f14} ;
+                       MAblat => table {Sg => f15 ; Pl => f16}
                      }
             } ;
-        g = g
+        g = table {Sg => g ; Pl => g}
       } ;
 
+  nounForm : Noun -> Species -> Case -> Number -> Str = \n,sp,c,num ->
+    n.s ! sp ! morphCase c ! num ;
 
-oper
-  Adj : Type = {s : Case => Gender => Number => Str ; clit : Bool} ;
+  setNounGender : Noun -> Gender -> Gender -> Noun = \n,gsg,gpl -> n ** {
+    g = table {Sg => gsg ; Pl => gpl}
+  } ;
 
-  mkAdj : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Bool -> Adj =
-    \f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,clit ->
-      { s = table {
-              Nom => table {
-                       Masc => table {Sg => f1 ;  Pl => f2} ;
-                       Fem  => table {Sg => f3 ;  Pl => f4}
-                     } ;
-              Acc => table {
-                       Masc => table {Sg => f5 ;  Pl => f6} ;
-                       Fem  => table {Sg => f7 ;  Pl => f8}
-                     } ;
-              Dat => table {
-                       Masc => table {Sg => f9 ;  Pl => f10} ;
-                       Fem  => table {Sg => f11 ; Pl => f12}
-                     } ;
-              Ablat => table {
-                         Masc => table {Sg => f13 ; Pl => f14} ;
-                         Fem  => table {Sg => f15 ; Pl => f16}
-                       }
-            } ;
-        clit = clit
-      } ;
+  -- N is the lexical/morphological noun; CN is the grammatical-case surface
+  -- consumed by syntax.  This boundary is what allows Gen and Dat to remain
+  -- distinct syntactically while sharing MDat in noun morphology.
+  CNoun : Type = {s : Species => Case => Number => Str ; g : Number => Gender} ;
+
+  useNoun : Noun -> CNoun = \n -> {
+    s = \sp,c,num => nounForm n sp c num ;
+    g = n.g
+  } ;
+
+  cnForm : CNoun -> Species -> Case -> Number -> Str = \cn,sp,c,num -> cn.s ! sp ! c ! num ;
 
 
 param
-  Tense = Pres | Past | Imperfect | Aorist ;
+  AdjClass = Articulated | Unarticulated ;
+
+oper
+  -- Lexical adjective morphology carries only distinctions realized by the
+  -- adjective itself.  Case/definiteness are realization context and are
+  -- handled by the central nyje service, not duplicated in lexical tables.
+  -- The class is number-sensitive because tjetër is explicitly documented as
+  -- unarticulated in the singular but articulated in the plural.
+  Adj : Type = {s : Gender => Number => Str ; cls : Number => AdjClass} ;
+
+  articulatedAdjClass : Number => AdjClass = table {Sg => Articulated ; Pl => Articulated} ;
+  unarticulatedAdjClass : Number => AdjClass = table {Sg => Unarticulated ; Pl => Unarticulated} ;
+  splitAdjClass : AdjClass -> AdjClass -> Number => AdjClass = \sg,pl -> table {Sg => sg ; Pl => pl} ;
+
+  mkAdj : (_,_,_,_ : Str) -> (Number => AdjClass) -> Adj = \mS,mP,fS,fP,cls -> {
+    s = table {
+      Masc => table {Sg => mS ; Pl => mP} ;
+      Fem  => table {Sg => fS ; Pl => fP}
+    } ;
+    cls = cls
+  } ;
+
+  adjForm : Adj -> Gender -> Number -> Str = \a,g,n -> a.s ! g ! n ;
+
+
+
+param
+  Tense = Pres | Perfect | Imperfect | Aorist ;
+  MorphVoice = ActiveMorph | NonActiveMorph ;
+  VoiceUse = PlainUse | PassiveUse | ReflexiveUse | ReciprocalUse ;
+  Progressivity = NeutralProgressive | Progressive ;
+  PerfectAux = AuxKam | AuxJam ;
 
 oper
   -- Shared verb-phrase representation.  CatSqi aliases VP/VPSlash to these
   -- resource types so clause helpers preserve category shape instead of
   -- coercing locked concrete-category records through an ad-hoc structural type.
+  -- Weak objects stay typed until the final clause-realization boundary.
+  -- `preClitic` carries genuine preverbal non-clitic material (for example
+  -- SelfAdVVP); `progressive` carries po separately.  Neither field may be
+  -- used to encode a pronominal clitic.
+  WeakArg : Type = WeakClitic ;
+  CliticCluster : Type = {dat, acc : WeakArg ; refl : Bool} ;
+
   VP : Type = {
     indicative : Tense => Number => Person => Str ;
     subjunctive : Number => Person => Str ;
@@ -103,12 +156,17 @@ oper
     perf_optative : Number => Person => Str ;
     pres_admirative : Number => Person => Str ;
     imperf_admirative : Number => Person => Str ;
-    cl : Str ;
-    subjcl : Str ;
-    post : Agr => Str
+    clitics : CliticCluster ;
+    -- compatibility Bool retained during consolidation; progressivity is canonical
+    progressive : Bool ;
+    progressivity : Progressivity ;
+    preClitic : Str ;
+    post : Agr => Str ;
+    morphVoice : MorphVoice ;
+    voiceUse : VoiceUse
   } ;
 
-  VPSlash : Type = VP ** {c2 : Compl} ;
+  VPSlash : Type = VP ** {c2 : Compl ; gapPost : Agr => Agr => Str} ;
 
 oper
   Verb : Type = {
@@ -119,7 +177,14 @@ oper
     pres_optative    : Number => Person => Str ;
     perf_optative    : Number => Person => Str ;
     pres_admirative  : Number => Person => Str ;
-    imperf_admirative: Number => Person => Str
+    imperf_admirative: Number => Person => Str ;
+    morphVoice       : MorphVoice ;
+    perfectAux       : PerfectAux
+  } ;
+
+  markNonActiveVerb : Verb -> Verb = \v -> v ** {
+    morphVoice = NonActiveMorph ;
+    perfectAux = AuxJam
   } ;
 
   -- Build the Standard-Albanian finite subjunctive once at the
@@ -181,7 +246,7 @@ oper
                      Sg => table {P1 => f1 ;  P2 => f2 ;  P3 => f3} ;
                      Pl => table {P1 => f4 ;  P2 => f5 ;  P3 => f6}
                    } ;
-            Past => table {
+            Perfect => table {
                      Sg => table {P1 => f7 ;  P2 => f8 ;  P3 => f9} ;
                      Pl => table {P1 => f10 ; P2 => f11 ; P3 => f12}
                    } ;
@@ -215,22 +280,133 @@ oper
         imperf_admirative = table {
                                Sg => table {P1 => f46 ; P2 => f47 ; P3 => f48} ;
                                Pl => table {P1 => f49 ; P2 => f50 ; P3 => f51}
-                             }
+                             } ;
+        morphVoice = ActiveMorph ;
+        perfectAux = AuxKam
       } ;
 
 
 oper
-  -- Match CatSqi lincat Pron
-  Pron : Type = {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr ; isPron : Bool} ;
+  -- Pronouns/NPS retain strong case forms and agreement.  Weak object forms
+  -- are derived from agreement at the syntax boundary; there is no second
+  -- string-valued clitic authority on the nominal record.
+  Pron : Type = {s : Case => Str ; a : Agr ; isPron : Bool} ;
 
-  mkPron : (_,_,_,_,_,_ : Str) -> GenNum -> Person -> Pron =
-    \nom,acc,dat,ablat,accC,datC,gn,p ->
-      { s = table {Nom => nom ; Acc => acc ; Dat => dat ; Ablat => ablat} ;
-        acc_clit = accC ;
-        dat_clit = datC ;
+  mkPron : (_,_,_,_ : Str) -> GenNum -> Person -> Pron =
+    \nom,acc,gendat,ablat,gn,p ->
+      { s = table {
+          Nom => nom ; Acc => acc ; Gen => gendat ; Dat => gendat ; Ablat => ablat
+        } ;
         a = {gn = gn ; p = p} ;
         isPron = True
       } ;
+
+
+oper
+  emptyClitics : CliticCluster = {dat=NoWeak ; acc=NoWeak ; refl=False} ;
+
+  weakFromAgr : Agr -> WeakArg = \a -> Weak (agrNumber a) a.p ;
+
+  putAccClitic : CliticCluster -> Agr -> CliticCluster = \cc,a ->
+    case cc.acc of {
+      NoWeak => cc ** {acc=weakFromAgr a} ;
+      _ => Predef.error "Albanian clitic cluster already has an accusative slot"
+    } ;
+
+  putDatClitic : CliticCluster -> Agr -> CliticCluster = \cc,a ->
+    case cc.dat of {
+      NoWeak => cc ** {dat=weakFromAgr a} ;
+      _ => Predef.error "Albanian clitic cluster already has a dative slot"
+    } ;
+
+  putReflClitic : CliticCluster -> CliticCluster = \cc ->
+    case cc.refl of {
+      False => cc ** {refl=True} ;
+      True => Predef.error "Albanian clitic cluster already has a reflexive slot"
+    } ;
+
+  weakAcc : WeakArg -> Str = \w -> case w of {
+    NoWeak => [] ;
+    Weak Sg P1 => "më" ;
+    Weak Sg P2 => "të" ;
+    Weak Sg P3 => "e" ;
+    Weak Pl P1 => "na" ;
+    Weak Pl P2 => "ju" ;
+    Weak Pl P3 => "i"
+  } ;
+
+  weakDat : WeakArg -> Str = \w -> case w of {
+    NoWeak => [] ;
+    Weak Sg P1 => "më" ;
+    Weak Sg P2 => "të" ;
+    Weak Sg P3 => "i" ;
+    Weak Pl P1 => "na" ;
+    Weak Pl P2 => "ju" ;
+    Weak Pl P3 => "u"
+  } ;
+
+  datAccSg : WeakArg -> Str = \d -> case d of {
+    Weak Sg P1 => "ma" ;
+    Weak Sg P2 => "ta" ;
+    Weak Sg P3 => "ia" ;
+    Weak Pl P1 => "na" ++ "e" ;
+    Weak Pl P2 => "jua" ;
+    Weak Pl P3 => "ua" ;
+    NoWeak => "e"
+  } ;
+
+  datAccPl : WeakArg -> Str = \d -> case d of {
+    Weak Sg P1 => "m'i" ;
+    Weak Sg P2 => "t'i" ;
+    Weak Sg P3 => "ia" ;
+    Weak Pl P1 => "na" ++ "i" ;
+    Weak Pl P2 => "jua" ;
+    Weak Pl P3 => "ua" ;
+    NoWeak => "i"
+  } ;
+
+  datRefl : WeakArg -> Str = \d -> case d of {
+    Weak Sg P1 => "m'u" ;
+    Weak Sg P2 => "t'u" ;
+    Weak Sg P3 => "iu" ;
+    Weak Pl P1 => "na" ++ "u" ;
+    Weak Pl P2 => "ju" ;
+    Weak Pl P3 => "ju" ;
+    NoWeak => "u"
+  } ;
+
+  -- This is the sole owner of Dat+Acc/Refl ordering and fusion.  The supplied
+  -- Albanian reference explicitly gives the 6 x {e,i,u} matrix; other
+  -- Dat+Acc person combinations are rejected rather than guessed.
+  flattenClitics : CliticCluster -> Str = \cc ->
+    case <cc.dat,cc.acc,cc.refl> of {
+      <NoWeak,NoWeak,False> => [] ;
+      <NoWeak,a,False> => weakAcc a ;
+      <d,NoWeak,False> => weakDat d ;
+      <NoWeak,NoWeak,True> => "u" ;
+      <d,NoWeak,True> => datRefl d ;
+      <d,Weak Sg P3,False> => datAccSg d ;
+      <d,Weak Pl P3,False> => datAccPl d ;
+      <NoWeak,a,True> => Predef.error "Albanian Acc+Refl cluster not licensed by the locked C5 evidence" ;
+      <d,a,False> => Predef.error "Albanian Dat+Acc cluster outside the locked 18-cell paradigm" ;
+      <d,a,True> => Predef.error "Albanian three-slot Dat+Acc+Refl cluster not licensed by the locked C5 evidence"
+    } ;
+
+  -- të contracts only after the cluster has been flattened.  e gives ta;
+  -- vowel-/j-initial licensed clusters lose the vowel of të.
+  teWithClitics : CliticCluster -> Str = \cc ->
+    case <flattenClitics cc : Str> of {
+      "" => "të" ;
+      "e" => "ta" ;
+      "i" => "t'i" ;
+      "u" => "t'u" ;
+      "ia" => "t'ia" ;
+      "iu" => "t'iu" ;
+      "jua" => "t'jua" ;
+      "ju" => "t'ju" ;
+      "ua" => "t'ua" ;
+      x => "të" ++ x
+    } ;
 
 
 oper
@@ -246,6 +422,10 @@ oper
             Acc => table {
                      Masc => table {Sg => f5 ;  Pl => f6} ;
                      Fem  => table {Sg => f7 ;  Pl => f8}
+                   } ;
+            Gen => table {
+                     Masc => table {Sg => f9 ;  Pl => f10} ;
+                     Fem  => table {Sg => f11 ; Pl => f12}
                    } ;
             Dat => table {
                      Masc => table {Sg => f9 ;  Pl => f10} ;
@@ -275,27 +455,35 @@ oper
 
 
 oper
-  -- Albanian linking article for articulated adjectives.  The article varies
-  -- with definiteness, case, gender and number; keep the full distinction here
-  -- instead of letting downstream syntax guess from a surface string.
-  link_clitic : Species => Case => Gender => Number => Str =
+  -- Albanian linking article / nyje.  The matrix follows the supplied
+  -- Standard/Tosk Lesson 10 rule set directly:
+  --   i  = masculine singular nominative;
+  --   së = feminine singular genitive/dative/ablative;
+  --   e  = feminine nominative OR definite accusative singular OR
+  --        definite nominative/accusative plural;
+  --   të = elsewhere.
+  nyje : Species => Case => Gender => Number => Str =
     table {
       Indef => table {
         Nom => table {
           Masc => table {Sg => "i" ; Pl => "të"} ;
-          Fem  => table {Sg => "e" ; Pl => "të"}
+          Fem  => table {Sg => "e" ; Pl => "e"}
         } ;
         Acc => table {
           Masc => table {Sg => "të" ; Pl => "të"} ;
           Fem  => table {Sg => "të" ; Pl => "të"}
         } ;
+        Gen => table {
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "së" ; Pl => "të"}
+        } ;
         Dat => table {
           Masc => table {Sg => "të" ; Pl => "të"} ;
-          Fem  => table {Sg => "të" ; Pl => "të"}
+          Fem  => table {Sg => "së" ; Pl => "të"}
         } ;
         Ablat => table {
           Masc => table {Sg => "të" ; Pl => "të"} ;
-          Fem  => table {Sg => "të" ; Pl => "të"}
+          Fem  => table {Sg => "së" ; Pl => "të"}
         }
       } ;
       Def => table {
@@ -306,6 +494,10 @@ oper
         Acc => table {
           Masc => table {Sg => "e" ; Pl => "e"} ;
           Fem  => table {Sg => "e" ; Pl => "e"}
+        } ;
+        Gen => table {
+          Masc => table {Sg => "të" ; Pl => "të"} ;
+          Fem  => table {Sg => "së" ; Pl => "të"}
         } ;
         Dat => table {
           Masc => table {Sg => "të" ; Pl => "të"} ;
@@ -318,16 +510,28 @@ oper
       }
     } ;
 
+  -- Compatibility name retained for existing modules; new code should use nyje.
+  link_clitic : Species => Case => Gender => Number => Str = nyje ;
+
+
+  -- Contextual adjective realization.  Only this boundary combines lexical
+  -- adjective morphology with the Albanian linking article.
+  realizeAdj : Adj -> Species -> Case -> Gender -> Number -> Str = \a,sp,c,g,n ->
+    case a.cls ! n of {
+      Articulated   => nyje ! sp ! c ! g ! n ++ adjForm a g n ;
+      Unarticulated => adjForm a g n
+    } ;
+
 
 oper
   agrNumber : Agr -> Number = \a -> case a.gn of {
     GSg _ => Sg ;
-    GPl   => Pl
+    GPl _ => Pl
   } ;
 
   agrGender : Agr -> Gender = \a -> case a.gn of {
     GSg g => g ;
-    GPl   => Masc
+    GPl g => g
   } ;
 
   -- Public RGL tense and Albanian morphological tense are deliberately
@@ -335,7 +539,7 @@ oper
   -- never use a ParamX constructor as a key of Verb.Indicative.
   sqiTense : ParamX.Tense -> Tense = \t -> case t of {
     ParamX.Pres => Pres ;
-    ParamX.Past => Aorist ;
+    ParamX.Past => Imperfect ;
     ParamX.Fut  => Pres ;
     ParamX.Cond => Imperfect
   } ;
@@ -356,7 +560,7 @@ oper
       Sg => table {P1 => "kam" ; P2 => "ke" ; P3 => "ka"} ;
       Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kanë"}
     } ;
-    ParamX.Past => table {
+    ParamX.Perfect => table {
       Sg => table {P1 => "kisha" ; P2 => "kishe" ; P3 => "kishte"} ;
       Pl => table {P1 => "kishim" ; P2 => "kishit" ; P3 => "kishin"}
     } ;
@@ -380,51 +584,32 @@ oper
     Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kenë"}
   } ;
 
-  cliticFor : Case -> {s : Case => Str ; acc_clit, dat_clit : Str ; a : Agr ; isPron : Bool} -> Str =
-    \c,np -> case c of {
-      Acc => np.acc_clit ;
-      Dat => np.dat_clit ;
-      _   => []
+  perfectAux : MorphVoice -> ParamX.Tense -> Number -> Person -> Str = \mv,t,n,p ->
+    case mv of {
+      ActiveMorph => haveAux ! t ! n ! p ;
+      NonActiveMorph => beAux ! t ! n ! p
     } ;
 
-  -- Weak object clitics determined from agreement.  These tables are used
-  -- where a slash phrase must preserve the clitic slot until its object is
-  -- supplied (notably VPS2/VPI2 shared-object coordination).
-  accCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
-    <Sg,P1> => "më" ;
-    <Sg,P2> => "të" ;
-    <Sg,P3> => "e" ;
-    <Pl,P1> => "na" ;
-    <Pl,P2> => "ju" ;
-    <Pl,P3> => "i"
-  } ;
+  perfectSubj : MorphVoice -> Number -> Person -> Str = \mv,n,p ->
+    case mv of {
+      ActiveMorph => haveSubj ! n ! p ;
+      NonActiveMorph => beSubj ! n ! p
+    } ;
 
-  datCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
-    <Sg,P1> => "më" ;
-    <Sg,P2> => "të" ;
-    <Sg,P3> => "i" ;
-    <Pl,P1> => "na" ;
-    <Pl,P2> => "ju" ;
-    <Pl,P3> => "u"
-  } ;
+  aorAnteriorAux : MorphVoice -> Number -> Person -> Str = \mv,n,p ->
+    case mv of {
+      ActiveMorph => haveAorAux ! n ! p ;
+      NonActiveMorph => beAorAux ! n ! p
+    } ;
 
+  cliticFor : Case -> {s : Case => Str ; a : Agr ; isPron : Bool} -> WeakArg =
+    \c,np -> case c of {
+      Acc => weakFromAgr np.a ;
+      Dat => weakFromAgr np.a ;
+      _   => NoWeak
+    } ;
 
-  subjAccCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
-    <Sg,P1> => "të" ++ "më" ;
-    <Sg,P2> => "të" ++ "të" ;
-    <Sg,P3> => "ta" ;
-    <Pl,P1> => "të" ++ "na" ;
-    <Pl,P2> => "të" ++ "ju" ;
-    <Pl,P3> => "t'i"
-  } ;
-
-  subjDatCliticAgr : Agr -> Str = \a -> case <agrNumber a,a.p> of {
-    <Sg,P1> => "të" ++ "më" ;
-    <Sg,P2> => "të" ++ "të" ;
-    <Sg,P3> => "t'i" ;
-    <Pl,P1> => "të" ++ "na" ;
-    <Pl,P2> => "të" ++ "ju" ;
-    <Pl,P3> => "t'u"
-  } ;
+  accCliticAgr : Agr -> Str = \a -> weakAcc (weakFromAgr a) ;
+  datCliticAgr : Agr -> Str = \a -> weakDat (weakFromAgr a) ;
 
 }

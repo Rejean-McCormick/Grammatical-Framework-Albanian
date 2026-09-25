@@ -1,5 +1,5 @@
--- GF_WORDBENCH_INPUT_SHA256 e7028ca389a1311efe7519562f0cbd19ae9341dd95a68a8fa237a13e2b6d3e02 validation/inputs/AlbCampaign001.gf
--- GF_WORDBENCH_INPUT_SHA256 571442bedb745bd7c2366d5f3fb3534fb7a4792f413837482f2e29ba204ed8a2 validation/inputs/AlbCampaign001Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 ca0cdb7c5530b7b7ff8306a06f22649e12a5cb434147a0ad55421407c7b12002 validation/inputs/AlbCampaign001.gf
+-- GF_WORDBENCH_INPUT_SHA256 f8ef3b6359626d4922467404de921d2949595919effbfa74abb3ddf4adb38df0 validation/inputs/AlbCampaign001Sqi.gf
 i AlbCampaign001Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0001 book_N indef nom sg"
@@ -22,5 +22,13 @@ ps "CASE C0009 book_N indef nom pl"
 l C0009
 ps "CASE C0010 book_N def acc pl"
 l C0010
+ps "CASE NOMGEN1 book_N indef gen sg"
+l NOMGEN1
+ps "CASE NOMGEN2 book_N def gen sg"
+l NOMGEN2
+ps "CASE NOMAGR1 simbol ambigeneric gender sg"
+l NOMAGR1
+ps "CASE NOMAGR2 simbol ambigeneric gender pl"
+l NOMAGR2
 ps "GF_WORDBENCH_END cases"
 q

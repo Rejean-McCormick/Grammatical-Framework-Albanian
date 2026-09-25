@@ -13,11 +13,12 @@ oper
 
   nominative : Case = Nom ;
   accusative : Case = Acc ;
+  genitive   : Case = Gen ;
   dative     : Case = Dat ;
   ablative   : Case = Ablat ;
 
   invariantCase : Str -> (Case => Str) = \x -> table {
-    Nom => x ; Acc => x ; Dat => x ; Ablat => x
+    Nom => x ; Acc => x ; Gen => x ; Dat => x ; Ablat => x
   } ;
 
 oper
@@ -624,7 +625,7 @@ oper
     _ => error "Cannot find an inflection rule"
   } : N> ;
 
-  reg2N : Str -> Str -> N   -- s;Indef;Nom;Sg  s;Indef;Nom;Pl
+  reg2NRaw : Str -> Str -> N   -- s;Indef;Nom;Sg  s;Indef;Nom;Pl
     = \form1, form2 -> <case <<form1 : Str>, <form2 : Str>> of {
     <_ + "mër", _ + "ëra"> => mkN009 form1;
     <_ + "orë", _ + "ëra"> => mkN110 form1;
@@ -1066,7 +1067,7 @@ oper
     _ => error "Cannot find an inflection rule"
   } : A> ;
 
-  reg2A : Str -> Str -> A   -- s;Nom;Masc;Sg  s;Nom;Masc;Pl
+  reg2ARaw : Str -> Str -> A   -- s;Nom;Masc;Sg  s;Nom;Masc;Pl
     = \form1, form2 -> <case <<form1 : Str>, <form2 : Str>> of {
     <_ + "adh", _ + "h"> => mkA001 form1;
     <_ + "nor", _ + "ë"> => mkA004 form1;
@@ -1175,7 +1176,7 @@ oper
     _ => error "Cannot find an inflection rule"
   } : V> ;
 
-  reg2V : Str -> Str -> V   -- Indicative;Pres;Sg;P1  participle
+  reg2VRaw : Str -> Str -> V   -- Indicative;Pres;Sg;P1  participle
     = \form1, form2 -> <case <<form1 : Str>, <form2 : Str>> of {
     <_ + "uaj", _ + "ar"> => mkV032 form1;
     <_ + "ell", _ + "r"> => mkV001 form1;
@@ -1216,6 +1217,53 @@ oper
     _ => regV form1
   } : V> ;
 
+-- Consolidated C1 strict principal-part guards. Observable forms must not be
+-- silently discarded by generated selector fallbacks.
+reg2N : Str -> Str -> N = \form1,form2 ->
+  let n : N = reg2NRaw form1 form2
+  in case pbool2bool (Predef.eqStr (n.s ! Indef ! MNom ! Pl) form2) of {
+    True => n ;
+    False => error "reg2N: incompatible plural principal part; use reg3N or mkNFull"
+  } ;
+
+reg2A : Str -> Str -> A = \form1,form2 ->
+  let a : A = reg2ARaw form1 form2
+  in case pbool2bool (Predef.eqStr (a.s ! Masc ! Pl) form2) of {
+    True => a ;
+    False => error "reg2A: incompatible plural principal part; use reg3A or mkAFull"
+  } ;
+
+reg2V : Str -> Str -> V = \form1,form2 ->
+  let v : V = reg2VRaw form1 form2
+  in case pbool2bool (Predef.eqStr v.participle form2) of {
+    True => v ;
+    False => error "reg2V: incompatible participle principal part; use reg3V or explicit irregular/full constructor"
+  } ;
+
+reg3N : Str -> Str -> Str -> N = \lemma,plural,defNomSg ->
+  let n : N = reg2N lemma plural
+  in case pbool2bool (Predef.eqStr (n.s ! Def ! MNom ! Sg) defNomSg) of {
+    True => n ; False => error "reg3N: incompatible definite nominative singular principal part"
+  } ;
+
+reg3A : Str -> Str -> Str -> A = \mascSg,mascPl,femSg ->
+  let a : A = reg2A mascSg mascPl
+  in case pbool2bool (Predef.eqStr (a.s ! Fem ! Sg) femSg) of {
+    True => a ; False => error "reg3A: incompatible feminine singular principal part"
+  } ;
+
+reg3V : Str -> Str -> Str -> V = \pres1sg,aor1sg,part ->
+  let v : V = reg2V pres1sg part
+  in case pbool2bool (Predef.eqStr (v.Indicative ! Aorist ! Sg ! P1) aor1sg) of {
+    True => v ; False => error "reg3V: incompatible aorist principal part"
+  } ;
+
+reg4V : Str -> Str -> Str -> Str -> V = \pres1sg,aor1sg,part,imperf1sg ->
+  let v : V = reg3V pres1sg aor1sg part
+  in case pbool2bool (Predef.eqStr (v.Indicative ! Imperfect ! Sg ! P1) imperf1sg) of {
+    True => v ; False => error "reg4V: incompatible imperfect principal part"
+  } ;
+
 -- Worst-case noun constructor from observable Albanian forms.
 NForms : Type = {
   indefNomSg, indefNomPl, indefAccSg, indefAccPl,
@@ -1227,23 +1275,32 @@ NForms : Type = {
 mkNFull : NForms -> Gender -> N = \f,g -> lin N {
   s = table {
     Indef => table {
-      Nom => table {Sg => f.indefNomSg ; Pl => f.indefNomPl} ;
-      Acc => table {Sg => f.indefAccSg ; Pl => f.indefAccPl} ;
-      Dat => table {Sg => f.indefDatSg ; Pl => f.indefDatPl} ;
-      Ablat => table {Sg => f.indefAblSg ; Pl => f.indefAblPl}
+      MNom => table {Sg => f.indefNomSg ; Pl => f.indefNomPl} ;
+      MAcc => table {Sg => f.indefAccSg ; Pl => f.indefAccPl} ;
+      MDat => table {Sg => f.indefDatSg ; Pl => f.indefDatPl} ;
+      MAblat => table {Sg => f.indefAblSg ; Pl => f.indefAblPl}
     } ;
     Def => table {
-      Nom => table {Sg => f.defNomSg ; Pl => f.defNomPl} ;
-      Acc => table {Sg => f.defAccSg ; Pl => f.defAccPl} ;
-      Dat => table {Sg => f.defDatSg ; Pl => f.defDatPl} ;
-      Ablat => table {Sg => f.defAblSg ; Pl => f.defAblPl}
+      MNom => table {Sg => f.defNomSg ; Pl => f.defNomPl} ;
+      MAcc => table {Sg => f.defAccSg ; Pl => f.defAccPl} ;
+      MDat => table {Sg => f.defDatSg ; Pl => f.defDatPl} ;
+      MAblat => table {Sg => f.defAblSg ; Pl => f.defAblPl}
     }
-  } ; g = g
+  } ; g = table {Sg => g ; Pl => g}
 } ;
+
+setNounGender : N -> Gender -> Gender -> N = ResSqi.setNounGender ;
+mkNAmbig : N -> Gender -> Gender -> N = \n,gsg,gpl -> setNounGender n gsg gpl ;
+
+-- Full-table constructor with independent singular/plural gender.  This is the
+-- non-lossy public path for ambigeneric irregular nouns.
+mkNFullGenders : NForms -> Gender -> Gender -> N = \f,gsg,gpl ->
+  setNounGender (mkNFull f gsg) gsg gpl ;
 
 mkN = overload {
   mkN : Str -> N = regN;   -- s;Indef;Nom;Sg
-  mkN : Str -> Str -> N = reg2N   -- s;Indef;Nom;Sg  s;Indef;Nom;Pl
+  mkN : Str -> Str -> N = reg2N ;
+  mkN : Str -> Str -> Str -> N = reg3N
 } ;
 
 mkN2Core : N -> Prep -> N2 = \n,p ->
@@ -1269,12 +1326,17 @@ mkPN = overload {
   mkPN : Str -> Gender -> PN = \x,g -> lin PN {
     s = invariantCase x ; a = agrgP3 g Sg
   } ;
+  mkPN : Str -> Str -> Str -> Str -> Str -> Gender -> PN = \nom,acc,gen,dat,abl,g -> lin PN {
+    s = table {Nom=>nom ; Acc=>acc ; Gen=>gen ; Dat=>dat ; Ablat=>abl} ;
+    a = agrgP3 g Sg
+  } ;
+  -- Legacy four-case shortcut: Gen is intentionally syncretized with Dat.
   mkPN : Str -> Str -> Str -> Str -> Gender -> PN = \nom,acc,dat,abl,g -> lin PN {
-    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ;
+    s = table {Nom=>nom ; Acc=>acc ; Gen=>dat ; Dat=>dat ; Ablat=>abl} ;
     a = agrgP3 g Sg
   } ;
   mkPN : N -> PN = \n -> lin PN {
-    s = \\c => n.s ! Def ! c ! Sg ; a = agrgP3 n.g Sg
+    s = \\c => nounForm n Def c Sg ; a = agrgP3 (n.g ! Sg) Sg
   }
 } ;
 
@@ -1285,17 +1347,26 @@ mkLN = overload {
   mkLN : Str -> Gender -> Number -> LN = \x,g,n -> lin LN {
     s = invariantCase x ; a = agrgP3 g n
   } ;
+  mkLN : Str -> Str -> Str -> Str -> Str -> Gender -> Number -> LN = \nom,acc,gen,dat,abl,g,n -> lin LN {
+    s = table {Nom=>nom ; Acc=>acc ; Gen=>gen ; Dat=>dat ; Ablat=>abl} ;
+    a = agrgP3 g n
+  } ;
+  -- Legacy four-case shortcut: Gen is intentionally syncretized with Dat.
   mkLN : Str -> Str -> Str -> Str -> Gender -> Number -> LN = \nom,acc,dat,abl,g,n -> lin LN {
-    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ;
+    s = table {Nom=>nom ; Acc=>acc ; Gen=>dat ; Dat=>dat ; Ablat=>abl} ;
     a = agrgP3 g n
   }
 } ;
 
 mkGN = overload {
-  mkGN : Str -> GN = \x -> lin GN {s=invariantCase x ; g=Masc} ;
-  mkGN : Str -> Gender -> GN = \x,g -> lin GN {s=invariantCase x ; g=g} ;
+  mkGN : Str -> GN = \x -> lin GN {s=invariantCase x ; g=table {Sg=>Masc; Pl=>Masc}} ;
+  mkGN : Str -> Gender -> GN = \x,g -> lin GN {s=invariantCase x ; g=table {Sg=>g; Pl=>g}} ;
+  mkGN : Str -> Str -> Str -> Str -> Str -> Gender -> GN = \nom,acc,gen,dat,abl,g -> lin GN {
+    s = table {Nom=>nom ; Acc=>acc ; Gen=>gen ; Dat=>dat ; Ablat=>abl} ; g=table {Sg=>g; Pl=>g}
+  } ;
+  -- Legacy four-case shortcut: Gen is intentionally syncretized with Dat.
   mkGN : Str -> Str -> Str -> Str -> Gender -> GN = \nom,acc,dat,abl,g -> lin GN {
-    s = table {Nom=>nom ; Acc=>acc ; Dat=>dat ; Ablat=>abl} ; g=g
+    s = table {Nom=>nom ; Acc=>acc ; Gen=>dat ; Dat=>dat ; Ablat=>abl} ; g=table {Sg=>g; Pl=>g}
   }
 } ;
 
@@ -1309,12 +1380,33 @@ mkSN = overload {
   }
 } ;
 
-mkA = overload {
-  mkA : Str -> A = regA;   -- s;Nom;Masc;Sg
-  mkA : Str -> Str -> A = reg2A   -- s;Nom;Masc;Sg  s;Nom;Masc;Pl
+AForms : Type = {mascSg, mascPl, femSg, femPl : Str} ;
+
+mkAFull : AForms -> AdjClass -> A = \f,cls -> lin A {
+  s = table {
+    Masc => table {Sg => f.mascSg ; Pl => f.mascPl} ;
+    Fem  => table {Sg => f.femSg ; Pl => f.femPl}
+  } ;
+  cls = table {Sg => cls ; Pl => cls}
 } ;
 
-unartA : A -> A = \a -> a**{clit=False} ;
+mkAFullByNumber : AForms -> AdjClass -> AdjClass -> A = \f,sgCls,plCls -> lin A {
+  s = table {
+    Masc => table {Sg => f.mascSg ; Pl => f.mascPl} ;
+    Fem  => table {Sg => f.femSg ; Pl => f.femPl}
+  } ;
+  cls = splitAdjClass sgCls plCls
+} ;
+
+mkA = overload {
+  mkA : Str -> A = regA;   -- lexical masculine singular
+  mkA : Str -> Str -> A = reg2A ;
+  mkA : Str -> Str -> Str -> A = reg3A
+} ;
+
+artA : A -> A = \a -> a ** {cls = articulatedAdjClass} ;
+unartA : A -> A = \a -> a ** {cls = unarticulatedAdjClass} ;
+artAByNumber : A -> AdjClass -> AdjClass -> A = \a,sgCls,plCls -> a ** {cls = splitAdjClass sgCls plCls} ;
 
 mkA2Core : A -> Prep -> A2 = \a,p ->
   lin A2 a ** {c2=p} ;
@@ -1327,16 +1419,15 @@ mkA2 = overload {
   mkA2 : Str -> Str -> A2 = \a,p -> mkA2Core (mkA a) (mkPrep p) ;
 } ;
 
--- Exact irregular-verb constructor.  Use this when regular inference or the
--- compact legacy irregV constructor would erase real tense/mood distinctions.
--- Every table is supplied explicitly; no surface-string inference is performed.
-irregVFull :
+-- Exact full-table verb constructor. Use this whenever smart inference would
+-- erase real tense/mood distinctions. No surface-string inference is performed.
+mkVFull :
   (pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm : Number => Person => Str) ->
   (imp : Number => Str) -> Str -> V =
   \pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm,imp,part -> lin V {
     Indicative = table {
       Pres => pres ;
-      Past => past ;
+      Perfect => past ;
       Aorist => aor ;
       Imperfect => imperf
     } ;
@@ -1346,9 +1437,51 @@ irregVFull :
     pres_optative = presOpt ;
     perf_optative = perfOpt ;
     pres_admirative = presAdm ;
-    imperf_admirative = imperfAdm
+    imperf_admirative = imperfAdm ;
+    morphVoice = ActiveMorph ;
+    perfectAux = AuxKam
   } ;
 
+-- Backwards-compatible exact constructor name.
+irregVFull :
+  (pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm : Number => Person => Str) ->
+  (imp : Number => Str) -> Str -> V =
+  mkVFull ;
+
+mkNonActiveVFull :
+  (pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm : Number => Person => Str) ->
+  (imp : Number => Str) -> Str -> V =
+  \pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm,imp,part ->
+    markNonActiveVerb (mkVFull pres past aor imperf subj presOpt perfOpt presAdm imperfAdm imp part) ;
+
+-- Compatibility-only subjunctive selector for the compact irregV API.
+-- ResSqi.subjunctiveFromPresent is intentionally lexical-exception-free; the
+-- historical irregV constructor nevertheless preserved a small set of lexical
+-- P2/P3 singular overrides. Keep those overrides here so old callers do not
+-- regress while new irregulars move to mkVFull/mkNonActiveVFull.
+legacyIrregSubjunctive : (Number => Person => Str) -> Number => Person => Str = \pres ->
+  let q : Number => Person => Str = subjunctiveFromPresent pres ;
+      p1 : Str = pres ! Sg ! P1
+  in table {
+    Sg => table {
+      P1 => q ! Sg ! P1 ;
+      P2 => case <p1 : Str> of {
+        "jam" => "jesh" ; "kam" => "kesh" ; "dua" => "duash" ; "di" => "dish" ;
+        "ha" => "hash" ; "pi" => "pish" ; "vij" => "vish" ; "them" => "thuash" ;
+        _ => q ! Sg ! P2
+      } ;
+      P3 => case <p1 : Str> of {
+        "jam" => "jetë" ; "kam" => "ketë" ; "dua" => "dojë" ; "di" => "dijë" ;
+        "ha" => "hajë" ; "pi" => "pijë" ; "vij" => "vijë" ; "them" => "thotë" ;
+        _ => q ! Sg ! P3
+      }
+    } ;
+    Pl => q ! Pl
+  } ;
+
+-- LEGACY-COMPATIBILITY ONLY. This compact constructor repeats present forms
+-- into other paradigms and therefore is not linguistic certification. New
+-- irregular entries must use mkVFull/mkNonActiveVFull or a productive family.
 irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
   \p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part -> lin V {
     Indicative = table {
@@ -1356,7 +1489,7 @@ irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
         Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
         Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
       } ;
-      Past => table {
+      Perfect => table {
         Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
         Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
       } ;
@@ -1369,7 +1502,7 @@ irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
         Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
       }
     } ;
-    Subjunctive = subjunctiveFromPresent (table {
+    Subjunctive = legacyIrregSubjunctive (table {
         Sg => table {P1=>p1sg; P2=>p2sg; P3=>p3sg} ;
         Pl => table {P1=>p1pl; P2=>p2pl; P3=>p3pl}
       }) ;
@@ -1390,12 +1523,16 @@ irregV : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl,impSg,impPl,part : Str) -> V =
     imperf_admirative = \\n,p => case <n,p> of {
       <Sg,P1>=>p1sg; <Sg,P2>=>p2sg; <Sg,P3>=>p3sg;
       <Pl,P1>=>p1pl; <Pl,P2>=>p2pl; <Pl,P3>=>p3pl
-    }
+    } ;
+    morphVoice = ActiveMorph ;
+    perfectAux = AuxKam
   } ;
 
 mkV = overload {
   mkV : Str -> V = regV;   -- Indicative;Pres;Sg;P1
-  mkV : Str -> Str -> V = reg2V   -- Indicative;Pres;Sg;P1  participle
+  mkV : Str -> Str -> V = reg2V ;
+  mkV : Str -> Str -> Str -> V = reg3V ;
+  mkV : Str -> Str -> Str -> Str -> V = reg4V
 } ;
 
 mkV2Core : V -> Prep -> V2 = \v,p ->
@@ -1410,7 +1547,7 @@ mkV2 = overload {
 } ;
 
 mkVVCore : V -> VV = \v -> lin VV v ;
-mkVSCore : V -> VS = \v -> lin VS v ;
+mkVSCore : V -> Str -> VS = \v,c -> lin VS v ** {scomp=c} ;
 mkVQCore : V -> VQ = \v -> lin VQ v ;
 mkVACore : V -> VA = \v -> lin VA v ;
 
@@ -1419,8 +1556,10 @@ mkVV = overload {
   mkVV : Str -> VV = \v -> mkVVCore (mkV v)
 } ;
 mkVS = overload {
-  mkVS : V -> VS = mkVSCore ;
-  mkVS : Str -> VS = \v -> mkVSCore (mkV v)
+  mkVS : V -> VS = \v -> mkVSCore v "që" ;
+  mkVS : V -> Str -> VS = mkVSCore ;
+  mkVS : Str -> VS = \v -> mkVSCore (mkV v) "që" ;
+  mkVS : Str -> Str -> VS = \v,c -> mkVSCore (mkV v) c
 } ;
 mkVQ = overload {
   mkVQ : V -> VQ = mkVQCore ;
@@ -1433,8 +1572,8 @@ mkVA = overload {
 
 mkV2VCore : V -> Prep -> Prep -> V2V = \v,p2,p3 ->
   lin V2V v ** {c2=p2; c3=p3} ;
-mkV2SCore : V -> Prep -> Prep -> V2S = \v,p2,p3 ->
-  lin V2S v ** {c2=p2; c3=p3} ;
+mkV2SCore : V -> Prep -> Prep -> Str -> V2S = \v,p2,p3,c ->
+  lin V2S v ** {c2=p2; c3=p3; scomp=c} ;
 mkV2QCore : V -> Prep -> Prep -> V2Q = \v,p2,p3 ->
   lin V2Q v ** {c2=p2; c3=p3} ;
 mkV2ACore : V -> Prep -> Prep -> V2A = \v,p2,p3 ->
@@ -1448,10 +1587,12 @@ mkV2V = overload {
 } ;
 
 mkV2S = overload {
-  mkV2S : V -> V2S = \v -> mkV2SCore v noPrep noPrep ;
-  mkV2S : V -> Prep -> Prep -> V2S = mkV2SCore ;
-  mkV2S : Str -> V2S = \v -> mkV2SCore (mkV v) noPrep noPrep ;
-  mkV2S : Str -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore (mkV v) p2 p3 ;
+  mkV2S : V -> V2S = \v -> mkV2SCore v noPrep noPrep "që" ;
+  mkV2S : V -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore v p2 p3 "që" ;
+  mkV2S : V -> Prep -> Prep -> Str -> V2S = mkV2SCore ;
+  mkV2S : Str -> V2S = \v -> mkV2SCore (mkV v) noPrep noPrep "që" ;
+  mkV2S : Str -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore (mkV v) p2 p3 "që" ;
+  mkV2S : Str -> Prep -> Prep -> Str -> V2S = \v,p2,p3,c -> mkV2SCore (mkV v) p2 p3 c ;
 } ;
 
 mkV2Q = overload {
@@ -1493,7 +1634,7 @@ mkOrd : Str -> Ord = \x -> lin Ord {s=\\_,_,_=>x} ;
 
 mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;
 mkIP : Str -> IP = \s -> lin IP {
-  s = table {Nom=>s; Acc=>s; Dat=>s; Ablat=>s} ;
+  s = table {Nom=>s; Acc=>s; Gen=>s; Dat=>s; Ablat=>s} ;
   a = agrgP3 Masc Sg
 } ;
 mkIQuant : Str -> IQuant = \s -> lin IQuant {
@@ -1533,6 +1674,16 @@ oper mkQuant : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Quant =
                                     Pl => f8
                                   }
                          } ;
+                  Gen => table {
+                           Masc => table {
+                                     Sg => f9 ;
+                                     Pl => f10
+                                   } ;
+                           Fem => table {
+                                    Sg => f11 ;
+                                    Pl => f12
+                                  }
+                         } ;
                   Dat => table {
                            Masc => table {
                                      Sg => f9 ;
@@ -1569,6 +1720,10 @@ oper mkDet : (_,_,_,_,_,_,_,_ : Str) -> Number -> Det =
                            Masc => f3 ;
                            Fem => f4
                          } ;
+                  Gen => table {
+                           Masc => f5 ;
+                           Fem => f6
+                         } ;
                   Dat => table {
                            Masc => f5 ;
                            Fem => f6
@@ -1586,14 +1741,12 @@ oper mkDet : (_,_,_,_,_,_,_,_ : Str) -> Number -> Det =
 mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
 mkPConj : Str -> PConj = \s -> lin PConj {s=s} ;
 
-mkPron : (nom,acc,dat,ablat,acc_clit,dat_clit : Str) -> GenNum -> Person -> Pron =
-  \nom,acc,dat,ablat,acc_clit,dat_clit,gn,p -> lin Pron
-     {s = table Case [nom; acc; dat; ablat];
-      acc_clit = acc_clit;
-      dat_clit = dat_clit;
-      a = {gn=gn; p=p};
-      isPron = True
-     } ;
+mkPron : (nom,acc,dat,ablat,accWeakCompat,datWeakCompat : Str) -> Gender -> Number -> Person -> Pron =
+  \nom,acc,dat,ablat,accWeakCompat,datWeakCompat,g,n,p -> lin Pron {
+    s = table Case [nom; acc; dat; dat; ablat] ;
+    a = {gn=genNum g n ; p=p} ;
+    isPron = True
+  } ;
 
 mkCard : Str -> Card = \s -> lin Card {s=s; n=Pl} ;
 mkACard : Str -> ACard = \s -> lin ACard {s=s} ;

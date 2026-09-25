@@ -1,0 +1,1799 @@
+{
+  "bundle": "Albanian RGL Total Documentation v2 — Compendium Aligned",
+  "generated_at": "2026-09-25",
+  "canonical_authority": "canonical/",
+  "compendium_alignment": {
+    "archive": "DocGF-Compendium(4).zip",
+    "sha256": "c635c426af5f16efbf798cc7ee87c2976247f08944385191a22c826e22b38ef7"
+  },
+  "canonical_markdown_count": 29,
+  "files_count_excluding_manifest": 357,
+  "broken_canonical_links": [],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1163,
+      "sha256": "2f103770fffdb143eba039994b380eef261b6e12d8ba9129604735c361781510"
+    },
+    {
+      "path": "canonical/00_START_HERE.md",
+      "bytes": 4208,
+      "sha256": "b6c0efaaf0945bf969a38bb7232a09c7ec2a8ca766a8e8b618898bdda0f24788"
+    },
+    {
+      "path": "canonical/01_GLOBAL_CONSTITUTION.md",
+      "bytes": 4646,
+      "sha256": "b9c55671343809a813b035e127fa48ca7a3db1842dbcac91ca5c85651bc494b7"
+    },
+    {
+      "path": "canonical/02_SOURCE_LOCK_AND_BASELINE.md",
+      "bytes": 4632,
+      "sha256": "78de1260ce09f3a6c294a3a81eef0ad120f08468ae33ae07d2024fbabd1335e7"
+    },
+    {
+      "path": "canonical/03_FINAL_PRODUCT_AND_DEFINITION_OF_DONE.md",
+      "bytes": 2407,
+      "sha256": "153aa1dbebee48c68280ebedc563e004a2ea0ff03676dade474fd67a4da3061d"
+    },
+    {
+      "path": "canonical/04_WORKSTREAM_OWNERSHIP.md",
+      "bytes": 2080,
+      "sha256": "c872401b22172d892de01d0860c3fd6f9928fb405ebddac23dc0b62c749716fd"
+    },
+    {
+      "path": "canonical/05_GLOBAL_ARCHITECTURE.md",
+      "bytes": 1462,
+      "sha256": "c18ee1d4e44bc70fef2594fe1096bce770cba91aafc31f6eccfca0c44c0d6c01"
+    },
+    {
+      "path": "canonical/06_ALBANIAN_GRAMMATICAL_FEATURE_MODEL.md",
+      "bytes": 3370,
+      "sha256": "1274d250f053805849e285741169290b34a2e38ae5009ee0b7a72cc0d41ed0a8"
+    },
+    {
+      "path": "canonical/07_MORPHOLOGY_CORE.md",
+      "bytes": 1729,
+      "sha256": "0bb627db354015c4af96aa2cf979cda9df2b28d24bf3ff03d422a7f56a5c44f5"
+    },
+    {
+      "path": "canonical/08_NOMINAL_SYSTEM.md",
+      "bytes": 1473,
+      "sha256": "aa3383e5eb3ad1ea80f865807dd7a8cccf1160c687bb6bca319eed3184ebe492"
+    },
+    {
+      "path": "canonical/09_VERBAL_TAM_VOICE.md",
+      "bytes": 1604,
+      "sha256": "70e6030672ce6d0d7fb54dfa6faa22390d94b0e1f3204036473edd0adc9308eb"
+    },
+    {
+      "path": "canonical/10_CLITICS_PRONOUNS_CASE_PREPOSITIONS.md",
+      "bytes": 1298,
+      "sha256": "6fd60ac27fa01f1999ecf33ddd08054dfe57b5467acafca319e2f3074a2a7948"
+    },
+    {
+      "path": "canonical/11_CLAUSE_SYNTAX.md",
+      "bytes": 1429,
+      "sha256": "57cdce0b7fc743b1a042096fb1089464d2d2441a250d11455c41e696227d00e4"
+    },
+    {
+      "path": "canonical/12_VALENCY_COMPLEMENTS_COORDINATION_CONSTRUCTIONS.md",
+      "bytes": 1129,
+      "sha256": "475244f2cb7c3e4a9c8a93111f6fcdada82db5e615b263b300c6608e786fea21"
+    },
+    {
+      "path": "canonical/13_DICT_AND_LEXICON.md",
+      "bytes": 1408,
+      "sha256": "63558fa0c7886fd80760cb21ff12b5ecb2d17d16395c11947d7eb13c3e438780"
+    },
+    {
+      "path": "canonical/14_MORPHODICT.md",
+      "bytes": 1426,
+      "sha256": "b5aeb3a86f6176df46f083f5334b1deef9ab381e121d7e531a3c0f751c2e97c3"
+    },
+    {
+      "path": "canonical/15_PUBLIC_API_AND_ENGLISH_PARITY.md",
+      "bytes": 1229,
+      "sha256": "ae39e1181ba9682037a30b0b8458393e57e85e78f0a3d6fce72949ab8716b314"
+    },
+    {
+      "path": "canonical/16_STRUCTURAL_EXTEND_EXTRA_DOCUMENTATION.md",
+      "bytes": 1160,
+      "sha256": "941f449d3cddc54d30a22b149c7df5bb1d90e9b57221bf1926b5b964b5798648"
+    },
+    {
+      "path": "canonical/17_TESTING_CERTIFICATION_AND_RELEASE_LEVELS.md",
+      "bytes": 2194,
+      "sha256": "781796ff229f67a6288749c1869a92701db4cfc5635634bdc16494b9b41d1020"
+    },
+    {
+      "path": "canonical/18_EVIDENCE_VARIETY_AND_GOLD_POLICY.md",
+      "bytes": 1437,
+      "sha256": "deb2b1c16b84809482b6b8a4fc187891be835185edf4226bb6016d85606ab721"
+    },
+    {
+      "path": "canonical/19_GLOBAL_DECISION_REGISTER.md",
+      "bytes": 2492,
+      "sha256": "3a98f166b96920860a523e6dc114f56c3d781aced8e40311e600075cd6e570f0"
+    },
+    {
+      "path": "canonical/20_GLOBAL_OPEN_QUESTIONS.md",
+      "bytes": 1677,
+      "sha256": "379c071486bb0fea531998fabb3a7ca2ac318c60add5e25e28b59bf2fe45a95e"
+    },
+    {
+      "path": "canonical/21_MIGRATION_ROADMAP.md",
+      "bytes": 2484,
+      "sha256": "71d4427fd3f3bb00d4e0d71e17b1a79239ad32f8ce45e4b4cee4295de404c1fc"
+    },
+    {
+      "path": "canonical/22_RELEASE_GATES.md",
+      "bytes": 3798,
+      "sha256": "f6d2d5f28e3360db38fddddfb7334058f85fd6c82543c0a09390d18e059b64d1"
+    },
+    {
+      "path": "canonical/23_ALIGNMENT_REPORT.md",
+      "bytes": 7561,
+      "sha256": "10404ae73cfdbaaefb91f6934f14889dd34009dcc840fa2d622def49b049cf2c"
+    },
+    {
+      "path": "canonical/24_LEGACY_DOC_DISPOSITION.md",
+      "bytes": 1334,
+      "sha256": "82659b2f677fab252d1109bea1b8fa695f42fb7a68057977b33c523b576a0849"
+    },
+    {
+      "path": "canonical/25_CHANGE_CONTROL_AND_DELIVERY.md",
+      "bytes": 6128,
+      "sha256": "16271047d775303d700afbfef00858e7358b415ce85fc70e2b6185b4c2bd42bb"
+    },
+    {
+      "path": "canonical/26_GLOSSARY.md",
+      "bytes": 1816,
+      "sha256": "ac686b677d9e52c05ae0ec1a5eec001eedc362be17f9d6e5a8096d171d0fb716"
+    },
+    {
+      "path": "canonical/27_COMPENDIUM_COMPLIANCE_AND_ROUTING.md",
+      "bytes": 3352,
+      "sha256": "2649be682ef413ca7a68ec391d1986c275b989e805b2c1920ac95a7d5c41435e"
+    },
+    {
+      "path": "canonical/28_DEVELOPMENT_STATE_MAP.md",
+      "bytes": 3654,
+      "sha256": "b7e6c0502b79d578531f45fdaf3e1972913985498d0ee22063bfe9eb5af5e671"
+    },
+    {
+      "path": "generated/COMPENDIUM_CONFORMANCE.json",
+      "bytes": 1270,
+      "sha256": "804f45a9990e96d39b0c87138cee47b5c7f63cd88db26f4c8ba1b6d9764194a9"
+    },
+    {
+      "path": "generated/CURRENT_DEVELOPMENT_STATE.json",
+      "bytes": 880,
+      "sha256": "aa52e8bc4bcd1848bdbdbf8039c954418d855755a7848c832a3d24f52e63da63"
+    },
+    {
+      "path": "generated/GLOBAL_DECISIONS.json",
+      "bytes": 3575,
+      "sha256": "1607a63308dd070eb00827b001afbbd3684d6a29580cbeae85c0cb68cf1055ab"
+    },
+    {
+      "path": "generated/LEGACY_DISPOSITION.json",
+      "bytes": 11533,
+      "sha256": "3ec7a783114ac69e839544d2719f3edac3c4cfc92b6764620b8130eb5f63fe68"
+    },
+    {
+      "path": "generated/SOURCE_REGISTRY.json",
+      "bytes": 1626,
+      "sha256": "644ccc19531552a380e61ecf03fe7e74487c3cdc8ae22dac79edfd4c4cdd3c16"
+    },
+    {
+      "path": "generated/WORKSTREAM_INVENTORY.json",
+      "bytes": 1481,
+      "sha256": "3055a3090b3be28ddd5d9f6b75475cb826276f598709f5c876410d033f3ad1b8"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_DECISION_LOG.md",
+      "bytes": 90593,
+      "sha256": "cb3b34b9fc2648842a4db9fb99ac9ecb3c851e972ecdc82e8098a8e7f5ffd180"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_EXTENDSQI_FINAL_TARGET.md",
+      "bytes": 11683,
+      "sha256": "69cc3d0dd0d19193a896f3d4292013f453d22c468c97f2b5c0bf5b3aa1804c3a"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md",
+      "bytes": 29416,
+      "sha256": "9a72b1550a6638500f92c3068d0d05a8959612185eec85e6345610cd2639dcb3"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_FUTURE_EXTENDSQI_STRUCTURE.md",
+      "bytes": 23985,
+      "sha256": "8f61ce96f9376476582c8f4d4d3649fb7c7c71346ef5ef1d39106b293494c622"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md",
+      "bytes": 35590,
+      "sha256": "5339e5afe546182db1fa9e7ebf55d0616a0900eda9185d9815301961919f1653"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_MODEL_LANGUAGE_COMPARISON.md",
+      "bytes": 8048,
+      "sha256": "7c4f9644f391bd8b98cd6b766a4b694023306ec8c3c0cf676bb4cf40440543f8"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_NEXT_UPGRADE_20260922.md",
+      "bytes": 8755,
+      "sha256": "8b80183dbf7a99cf7bd82b22e2901ac31df9025c7b3bec3e60a38b95bef43b9a"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_OPEN_QUESTIONS.md",
+      "bytes": 21260,
+      "sha256": "fbcbf3810435d9390a95c7bccaed25ba58333f9b021ca9911b3d1c7cfb50a943"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md",
+      "bytes": 48069,
+      "sha256": "08eb90c3507446395a0be4df462c2d42eb76d8971897bf3580625970d9a4a631"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md",
+      "bytes": 14313,
+      "sha256": "b1f6cbb55bcac75cb2bf3fb5f7c79486702e25f09cf4cbe24386457a443aff46"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md",
+      "bytes": 87699,
+      "sha256": "ba598c66cfb2d3b6668af3216387c2e3839b2e90145d07dd37e67c2801e607ea"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_SYMBOL_STATUS_LEDGER.md",
+      "bytes": 41517,
+      "sha256": "7ae6451555a51ee6e55124ebd4d22e3348f677b196002e560e3c947d311f8a7c"
+    },
+    {
+      "path": "legacy_project_docs/docs/ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md",
+      "bytes": 6065,
+      "sha256": "7d59f1ffb12b3bf764c85b4a466ab8b31a907f3fb53dd6ae013cd1b34be1e2cf"
+    },
+    {
+      "path": "legacy_project_docs/docs/CURRENT_REPAIR_STATE.md",
+      "bytes": 14971,
+      "sha256": "0af2d25596be75319a1b284b3cce4a9e489afad2ebc75208a00a82699b1a8064"
+    },
+    {
+      "path": "legacy_project_docs/docs/DOCUMENTATION_SYNC_20260921.md",
+      "bytes": 6431,
+      "sha256": "fdc24d4c0608f483f671001a1749d2f5c7beb02965a68cb1d392887d770f0bc0"
+    },
+    {
+      "path": "legacy_project_docs/docs/DOCUMENTATION_SYNC_20260922.md",
+      "bytes": 5478,
+      "sha256": "024c99b480e29d396925479be30a126cab2520edf684deec966d7b0d9d2393cd"
+    },
+    {
+      "path": "legacy_project_docs/docs/DOCUMENTATION_SYNC_20260924.md",
+      "bytes": 1692,
+      "sha256": "2c18de276584a242ed6763812d2e47311c35db2ed5c776cac76a8711651f2a6f"
+    },
+    {
+      "path": "legacy_project_docs/docs/README.md",
+      "bytes": 6577,
+      "sha256": "31179944c6178b4b42245b47d19ab0f29ed282b67667e5796655c8c798a608ec"
+    },
+    {
+      "path": "legacy_project_docs/docs/albanian_extend_specifics_lockfield_and_boundary.md",
+      "bytes": 23556,
+      "sha256": "c2fbdda9cc04586405adaf6c68219f285483106564b7df6a48e4427f453f0e6c"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/ACTIVE_CHANGES.patch",
+      "bytes": 1671,
+      "sha256": "4a5f7d7f4de456f358a196d517e8a87eb627a6bcaf1c3727cace54ef4e201933"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/BASELINE_SHA256SUMS.txt",
+      "bytes": 25390,
+      "sha256": "b30a8ddf0561864af7bf81d5f4e70967860cd15d334eaf06faa63235beaaaefe"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/BUGREPORT_20260924_181733_SUMMARY.md",
+      "bytes": 36012,
+      "sha256": "5046354495c4a844489f26a4eb9844502c0d5e6c903ebe8bb642b2d72216998a"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/CHECKPOINT1_REPORT.md",
+      "bytes": 3397,
+      "sha256": "cee4b485ae3c9c24d1148079487d9d2a8c498ccb7a6c759307e2eb782b18958b"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/CONSOLIDATED_SHA256SUMS.txt",
+      "bytes": 31436,
+      "sha256": "f92b3d3f777c8d4b85e8db6342a90daf309cc782f5c7466bbb96cf91ae4fa4f6"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/CONSOLIDATION_REPORT.md",
+      "bytes": 3067,
+      "sha256": "f374e8ea31ca85d42fb31f49da61bd610a7c20275e3a3e15b497c21e43c026cd"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/CORRECTION_20260925_024243.md",
+      "bytes": 494,
+      "sha256": "73ee1f1d6394a4dd23bd836eb4db61accbe1811485e264356957e0a6f0b30253"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/DICT_MORPH_WORDBENCH_UPDATE_20260924.md",
+      "bytes": 2051,
+      "sha256": "6a5d3438e834784518a0d764a13199b49b58127693e1cc9f5c1732fdd69df11f"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/DICT_MORPH_WORDBENCH_UPDATE_AUDIT.json",
+      "bytes": 693,
+      "sha256": "f9ff4691a2f1dc01cb4c29cc7b3ee72a43697c36bf717f344616d18991a66f02"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/LINGUISTIC_REVIEW_REQUEST_20260924_181733.json",
+      "bytes": 1462,
+      "sha256": "6286eb49c3b8ae563a95bffd09ebaf1e8a0dff8b0eebd2bfabb3c725131a9245"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/MORPHOSQI_LINT.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/PRESERVATION_AUDIT.json",
+      "bytes": 370,
+      "sha256": "94117e528ce6ca42fec0bccfcac9fb2f234acad148740191a5467b9207556226"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/REGRESSION_AUDIT_checkpoint2_vs_snapshot.md",
+      "bytes": 4274,
+      "sha256": "26a47885282b012408390f3fa8507bca19d6ac2d071fa12b16befe10004435cb"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/STATIC_SANITY.txt",
+      "bytes": 260,
+      "sha256": "50c26a49bdf55b224333254b3b6c2cf39de4c00dd0121527daa24471ba3a920a"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/WORDBENCH_RUN_20260925_030234_FIX.md",
+      "bytes": 1621,
+      "sha256": "109e1da215045e1605d730daff5adfea92aa6960dec13ebf1004e73ae8ed1874"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/WORDBENCH_RUN_20260925_031945_FIX.md",
+      "bytes": 1377,
+      "sha256": "95993edd1bf96506807affa1ce7df2f56da6d14da35d4f03e85b3e864580ab31"
+    },
+    {
+      "path": "legacy_project_docs/docs/consolidation/WORDBENCH_RUN_20260925_032810_FIX.md",
+      "bytes": 1504,
+      "sha256": "11de9314e58925be5d85992e98a44c14234900d4078e183d218bf8bd08832b4b"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/DICT_SQI_REPORT.md",
+      "bytes": 2783,
+      "sha256": "f517e6209f89007c8c9d19bc7bd66529c7803de09a51cab20db3562629e365cc"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/DICT_SQI_VALIDATION.json",
+      "bytes": 2741,
+      "sha256": "df0b75f8d0daceaec10221886bf0d9590ac8acb1e0eb96a4c8436b4f6c68ff6f"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/DictSqi_provenance.tsv",
+      "bytes": 735435,
+      "sha256": "08b4569e36b314b0bac2a2edee78a9b77e699ec76fa98748f1838f7a58df282d"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/README.md",
+      "bytes": 681,
+      "sha256": "99e223972fb6ae023000ab1c8f697680858f0f1169f10b47d152b448f95b7431"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/SHA256SUMS.txt",
+      "bytes": 783,
+      "sha256": "1367b3bba502a29423c80d4041eb2079c97745c4cd65985c73c6afc220fb80cf"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/THIRD_PARTY_NOTICES.md",
+      "bytes": 606,
+      "sha256": "92e7282d2cf497e7fc8248b2a378172f707c27169437f8788edc5856e08f309e"
+    },
+    {
+      "path": "legacy_project_docs/docs/dictionary/WORDBENCH_FIX_20260925.md",
+      "bytes": 961,
+      "sha256": "38789bfa6cff1e63428cd51c6ba14e2a0956235ef6d2911fcdfd19986d1bdceb"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/BUILD_REPORT.md",
+      "bytes": 2343,
+      "sha256": "9ccaa6975bd7ea0bbc31e03e8a7ebcc7147b146d05114f940bf20f73079e6442"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/COVERAGE.csv",
+      "bytes": 62507,
+      "sha256": "eaf210c904e66f2e15f7287c719c375a9a4a11f5fff4a996f00af13648034d03"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/COVERAGE.json",
+      "bytes": 177549,
+      "sha256": "ef453ef101a5941a27cac4445e2f9acdd578a225967f201e0a53375efad1f809"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/EXCLUDED.csv",
+      "bytes": 2606,
+      "sha256": "9d16a2d936724dae21c319e79fc16be3d99e3232b340f2b9c617e97faae48dd6"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/INPUT_SHA256SUMS.txt",
+      "bytes": 919,
+      "sha256": "30b64e5549a2e8b2bb1a6cc11d364da39f46b00d16e43bd39e5be8316368e3c1"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/MANIFEST.json",
+      "bytes": 1344,
+      "sha256": "5b0f82ecacb93822882b71e23d5f7b039bc088d6bd6eb3ab574e2996aff4e260"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/README.md",
+      "bytes": 3658,
+      "sha256": "1327a8bf92dbeda3d3165b3fb607158dfbf86f8ba6c0ebd7ff47c0fbb6f51e9a"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/RGL_LEXICON_MAPPING.csv",
+      "bytes": 10161,
+      "sha256": "f74653dbbbe16994f8949aba7a080dcad08fd179540ba98678a98dcfe5f8393a"
+    },
+    {
+      "path": "legacy_project_docs/docs/morphodict/SOURCE_PACKAGE_SHA256SUMS.txt",
+      "bytes": 1502,
+      "sha256": "7ea78cb8412b72ff4403de6891cc4d862c3a54dddaaa9302821cf6771a2a7d79"
+    },
+    {
+      "path": "legacy_project_docs/docs/status/ALBANIAN_CORE_V0.1.0.md",
+      "bytes": 5738,
+      "sha256": "701c88648e43b523ae294ebc9b78eb17021132ef8d8a83be08b0ab1c58806f4b"
+    },
+    {
+      "path": "legacy_project_docs/docs/status/ALBANIAN_ENGLISH_PARITY_ROADMAP_20260925.md",
+      "bytes": 15166,
+      "sha256": "4582b0f6152e11876e3cacce48856e77b4b3ea6b7117959f120638dc6418a29a"
+    },
+    {
+      "path": "legacy_project_docs/docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md",
+      "bytes": 25580,
+      "sha256": "65614c7248da53fbdd45b0c5a58e0c82976150412d5eecbbe7a295d9220d225c"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/00_README.md",
+      "bytes": 6645,
+      "sha256": "f8aa7ae6b620a607fd70b7c4ce0d5bab7dc72dce9ad595d9ca05c93d4b265315"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/01_FINAL_TARGET.md",
+      "bytes": 6476,
+      "sha256": "d6956479ed0caa27bb0dc9fa0af60e7ea48902259dc8be708e1653d620ca9163"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/02_SOURCE_AUTHORITY_AND_LOCK.md",
+      "bytes": 6402,
+      "sha256": "887ec1554d2c65d9ef66334c502114d86d11357989d1766e801e83e4dbbf0be5"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/03_LEXICON_SQI_CANONICAL_POLICY.md",
+      "bytes": 3186,
+      "sha256": "38b848ed5c98a643fd3e8f71ebae553a01a0af6365803759c4900a5e8e6d75a0"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/04_DICT_SQI_TARGET_MODEL.md",
+      "bytes": 4830,
+      "sha256": "3bf2a2fe76b6b5658b533ae2676325815b81f32c8ff77329d7b15dca4898375f"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/05_PROVENANCE_AND_REVIEW_STATES.md",
+      "bytes": 5323,
+      "sha256": "3ef63171088e96bd74f52f7f9fa43dbb05dfc7ef37fb19f90992c4604dfe44c4"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/06_CATEGORY_VALENCY_GOVERNMENT_POLICY.md",
+      "bytes": 4709,
+      "sha256": "d641613a298d8435efb37d67b80eb52885be4810c119b9f371c72cf6683e7e11"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/07_GENERATOR_AND_REPRODUCIBILITY.md",
+      "bytes": 5306,
+      "sha256": "178ac94f18b24fd7f1480fbff05c78c26c47313eb50fd5d66cd0c0926d7c74be"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/08_LINGUISTIC_REFERENCE_POLICY.md",
+      "bytes": 3576,
+      "sha256": "d67e15133ee26e315adae459dc62504fa97f39aee7bbbeac1d145a2befa7633a"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/09_TEST_VALIDATION_CERTIFICATION.md",
+      "bytes": 3983,
+      "sha256": "dcfd0f580d21c0f24562e7551facaa7b49adedca887ab619cedbbfceee5ad54a"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/10_METRICS_AND_PARITY_DASHBOARD.md",
+      "bytes": 4775,
+      "sha256": "e3b927ae88f33ba4cfbf8e58863a020036e2724bafd90224adc4be1578df2a03"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/11_WORK_PACKAGES_AND_HANDOFFS.md",
+      "bytes": 4042,
+      "sha256": "929c40fd00ae0655057200f326d264f975df71a7da05d4bdb2f4f6c0fb8ef2c3"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/12_DRIFT_CONTROL_AND_DECISIONS.md",
+      "bytes": 5182,
+      "sha256": "f84ebaf4c50fa1ec52c3b740226cc742c15f85ba5d8b83bc551a6d9cab89829c"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/13_FINAL_RELEASE_CHECKLIST.md",
+      "bytes": 4618,
+      "sha256": "e9de7125448b642f7b27c5af5b8c1369287b26cb268cf104ce18e1d0b4418cd2"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/14_IDENTITY_SENSE_HOMONYMY_POLICY.md",
+      "bytes": 5137,
+      "sha256": "ea8724d784166fd2b777c9a18ce862d0d7dd4c511d299a9802713d0e42da6dd2"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/15_INGESTION_DEDUPLICATION_MERGE_POLICY.md",
+      "bytes": 4181,
+      "sha256": "5f5db366d034772a83ffe8aa4431e2afb9f556473b8814c2305a7e2415b7486b"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/16_ORTHOGRAPHY_NORMALIZATION_ID_POLICY.md",
+      "bytes": 3282,
+      "sha256": "13f8c8b29aebb2612666cde67bad482e75f836b2d35af974b2b923a14cabd5f6"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/17_FULL_CATEGORY_COVERAGE_POLICY.md",
+      "bytes": 3474,
+      "sha256": "dff60516683422da6ec42643d9eeb3896c7c280605ba4b45f20f9feb53a75244"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/18_COVERAGE_PRIORITIZATION_AND_EXPANSION.md",
+      "bytes": 3157,
+      "sha256": "5ae04313046014ff10ded3237e7aad4a3f7babab3d325715b9f97b9de011d4e2"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/19_REVIEW_QA_SAMPLING_AND_ADJUDICATION.md",
+      "bytes": 3204,
+      "sha256": "504d17ec8e84f3c5a570ecc506ce0650c9059624d7c291458c230d9d06078199"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/20_COMPATIBILITY_SCHEMA_VERSIONING_AND_SCALE.md",
+      "bytes": 3583,
+      "sha256": "29def72a5aed59846936f42e1bf820bb6a01a70dfc569814d97c0c044971ceec"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/21_CURRENT_GAP_REGISTER.md",
+      "bytes": 4015,
+      "sha256": "5126287eb06e5111a48e0743aed710b4ad75c5a18fabd5d16eac6a76c2077d8e"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/CHANGELOG.md",
+      "bytes": 1214,
+      "sha256": "201d23de86236be60e749cd02eff5455b8c43846cd8e90e56cc5af7690358850"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/MANIFEST.md",
+      "bytes": 3541,
+      "sha256": "9f31af43f1bb42f96d4c98412965c07c018b36ce5aa9d4d43cb76ba7b196b892"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/templates/BATCH_DELIVERY_TEMPLATE.md",
+      "bytes": 921,
+      "sha256": "ada2220142cc00113804f59036ee39448ab2d065345a50f0717a33e28d60c1b4"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/templates/CATEGORY_DECISION_TEMPLATE.md",
+      "bytes": 602,
+      "sha256": "ac420e9d1340aea4deeeb2399b301db8e2f12be9ed32c37ef7c82ede2e66fac1"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/templates/DECISION_RECORD_TEMPLATE.md",
+      "bytes": 733,
+      "sha256": "c449d15ebe8a4850c4f1dc02a820a7c5d120d29919adfc92b2e9ea0517370dd7"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/templates/ENTRY_REVIEW_TEMPLATE.md",
+      "bytes": 1056,
+      "sha256": "95b0f23ccb8e5f62682d01bbe48346cf249808857cbe0c846b898f1168823c9c"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/templates/MIGRATION_DEPRECATION_TEMPLATE.md",
+      "bytes": 622,
+      "sha256": "c12f1c87d96890b3703dc5613c32b6838ae200ca01c93eddee8061ca8ccb99c5"
+    },
+    {
+      "path": "workstreams/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/Albanian_Dict_Lexicon_MAX_Docs_20260925_v2/templates/SOURCE_INGESTION_TEMPLATE.md",
+      "bytes": 741,
+      "sha256": "339ae7d6e1357f4ff9520cff968ea40f85f3a605c8c1aade29e58d3a0c44db89"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/00_START_HERE.md",
+      "bytes": 4484,
+      "sha256": "7fd3ca4de3d6e73f84be93374dc5a629adcf9fc0c327ef9ff2736c1d33f2f0cd"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/01_FINAL_STATE_AND_DEFINITION_OF_DONE.md",
+      "bytes": 4435,
+      "sha256": "43469c4c08ef5e4d8086f133ac971587789eaadf7504d8d2a6e0af0c92e27ac5"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/02_AUTHORITY_EVIDENCE_AND_VARIETY_POLICY.md",
+      "bytes": 3895,
+      "sha256": "a7c97c67824b2728ebc3ab6991b3cff7a92501181acf41be9e3879413539f82e"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/03_CASE_REVIEW_PROTOCOL.md",
+      "bytes": 3389,
+      "sha256": "4af2c963740924584ff7daf3a29477ff45a8043bc3e9f927309a931a8a8867cb"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/04_GOLD_PROMOTION_POLICY.md",
+      "bytes": 2967,
+      "sha256": "3c4d5dc13bf100345cdfd1c246bfd9b33ce959d9f4e9601c043e7093ca132fd7"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/05_CAMPAIGN_SCALING_569_5000_20000.md",
+      "bytes": 3381,
+      "sha256": "1deaef2d0642953dcdd07aada748eba88441023e0e6621bd3e73a280d7f80ffb"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/06_COVERAGE_MATRIX_SPEC.md",
+      "bytes": 3013,
+      "sha256": "cdc1a74bff02e696cf97848d27a5dfa8bc201c24a57fa38a6a5b94af8cb97581"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/07_ENGLISH_PARITY_MATRIX_SPEC.md",
+      "bytes": 3240,
+      "sha256": "535e5f5805332ff85b9a94bf74e0340beb1fd4746dddc68dbda61af44a975747"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/08_BUG_TRIAGE_AND_HANDOFF.md",
+      "bytes": 2493,
+      "sha256": "c3581e94c7ed1fa2a0a819269839fe8076c0b9574c1861a86995e5bc855ca151"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/09_RELEASE_CERTIFICATION_GATES.md",
+      "bytes": 3136,
+      "sha256": "7351c5fdcbbe6aaec43e2b3f5f527afe24b6e0f730731a120f127e9c91858633"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/10_DASHBOARD_AND_METRICS.md",
+      "bytes": 2517,
+      "sha256": "4865fc33472ec5bcb282b8bfcc3dc82851220a9fdf930e96986b606e2095c31c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/11_ARTIFACT_LAYOUT_AND_SCHEMAS.md",
+      "bytes": 2791,
+      "sha256": "3c8c033b1bbc883823729daa1b2c6ea7eafce8e3b64c6069698151f453ff2e90"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/12_ALBANIAN_LINGUISTIC_SCOPE.md",
+      "bytes": 3405,
+      "sha256": "7625f78d0af6b77ca9838989a13b3e4f0c1b3c41f4c27ea2498110810562e6fb"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/13_SOURCE_REGISTER.md",
+      "bytes": 3665,
+      "sha256": "c11a98dfbe1d9bd7b7f6594af9871d48091be13525f564b311e63eb7be409bed"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/14_ANTI_DRIFT_CONSTITUTION.md",
+      "bytes": 3982,
+      "sha256": "854e60cd96d111e624fd239045b1005ae8bee7ad1a231fc244ae35f2f4e2f638"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/15_SOURCE_CHECKSUMS.md",
+      "bytes": 1431,
+      "sha256": "9098073ffc0312bd4d30712eb8dd05d129ca30f51809cf207052087f416f55d7"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/16_NORMATIVE_VOCABULARY.md",
+      "bytes": 3622,
+      "sha256": "3e8345299e9c81b961745285fe45ac216b93ed6adfe4b0be3658919526744da2"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/17_ALBANIAN_GRAMMATICAL_FEATURE_MODEL.md",
+      "bytes": 7218,
+      "sha256": "678fd559b2f3ba56c1aa5f639282f7293b639763d45d421cf2d2f147f6f6aec1"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/18_PARADIGM_AND_MORPHOLOGICAL_CELL_REGISTRY.md",
+      "bytes": 4312,
+      "sha256": "b152c959a5ebab77ddaf0ca70281115b3743324c4fadb4a5d3e24a327ebc8479"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/19_ENGLISH_REFERENCE_BASELINE.md",
+      "bytes": 2765,
+      "sha256": "2d8912420fa58f8efce25a435b5319a8e12035f5b18254e7a70b4b9a32f3be5d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/20_CERTIFICATION_THRESHOLDS_AND_LEVELS.md",
+      "bytes": 3697,
+      "sha256": "7a75972ec75298ffc0a6847a34d14e16782909ec0eebbed794ab32e1012fc041"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/21_TRACEABILITY_AND_STALENESS_MODEL.md",
+      "bytes": 2279,
+      "sha256": "4a0d54216894924a89cf9b2ef84396ca5701f6238003ba505435bbd1c2f83d05"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/22_STANDARD_ALBANIAN_VARIETY_POLICY.md",
+      "bytes": 2667,
+      "sha256": "e5278c97752066f52ab75688e5dff90d4775e7212b4150e4b8b061ba0adeb00b"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/23_CHANGE_CONTROL_AND_DECISION_LOG.md",
+      "bytes": 2088,
+      "sha256": "9ab7af37bbe78963449aad3a0287995025ad7b418cf9fd353d5cd82b2934a660"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/24_AUTOMATED_CONSISTENCY_CHECKS.md",
+      "bytes": 2424,
+      "sha256": "b1baa823f7603360ddb5414d2a1f9278ea9233a06f3dc50f910824435da61608"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/25_OWNER_ROUTING_REGISTRY.md",
+      "bytes": 1711,
+      "sha256": "c95454980ade45b6a9cc2c17587c2e1fe83f2b8c4c365e1fdc274bea27695b9c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/26_RELEASE_EVIDENCE_PACKET_TEMPLATE.md",
+      "bytes": 2075,
+      "sha256": "be86e1daccaee095539472856319863e2e5145fc0f83661e263d832423586afa"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/27_INITIAL_DEBT_AND_RISK_BASELINE.md",
+      "bytes": 3333,
+      "sha256": "d035574478a736ec535a790e2446a556a35c76f1455877112e1e3f21c6804e9a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/28_OPEN_QUESTIONS_REGISTER.md",
+      "bytes": 2194,
+      "sha256": "ca2fcc6b77016ad6bda30f7220b228b7265a4137bf235ef42db9628f43c562b6"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/29_REVIEWER_AND_HUMAN_CERTIFICATION_POLICY.md",
+      "bytes": 2294,
+      "sha256": "75c949b71735d96da648960aa556af8b2efaa310b315a75229e0bf628ae37ab6"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/30_DOC_VALIDATION_REPORT.md",
+      "bytes": 1138,
+      "sha256": "9c03d5e6f05a85a9f1b7d874bbb9cacf92e9a076a2004535239ce6053440bcef"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/31_OPTIMIZATION_CHANGELOG.md",
+      "bytes": 2626,
+      "sha256": "e33a6ba943b834ef5fbd8461ffe40d8edd74b9cef515dca9add3b1df5c7c8662"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/MANIFEST.json",
+      "bytes": 5916,
+      "sha256": "6700d488f91225c08c1b0e3adb09d2c50d707762cb266d77e9a4a6a86c03ab40"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C10_Certification_Governance_v2_20260925/Albanian_RGL_C10_Certification_Governance_v2_20260925/README.md",
+      "bytes": 1001,
+      "sha256": "aa8794da0b3827b0bb993f27eff390f179efb6a1c36b1dedf98b541647c0d6e0"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/00_FINAL_TARGET.md",
+      "bytes": 3175,
+      "sha256": "8512190330f89a341e1a911bc0509f65643ef46ca686ff0edc27711ab7c7e35c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/01_CURRENT_BASELINE_AND_GAPS.md",
+      "bytes": 3665,
+      "sha256": "29813fe49dc50cb4b706244acfc16890639dd97f8a253f2f6ed91e96df6c4467"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/02_TYPED_ARCHITECTURE.md",
+      "bytes": 3948,
+      "sha256": "dd6e0c3fd0922cd22cfd2ab0c66de000b9c9466bcb07247eca286b672f410c18"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/03_CLITIC_SYSTEM_SPEC.md",
+      "bytes": 2760,
+      "sha256": "01b0425434887b5711cfcc594e5e9a34bd841929b80b2cd015eb6f46e473eb21"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/04_PRONOUN_CASE_PREPOSITION_SPEC.md",
+      "bytes": 2899,
+      "sha256": "4fd307f767f08540de9c4e8abc5560408b39384df57baf629664e4addc1468ad"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/05_REALIZATION_CONTEXT_MATRIX.md",
+      "bytes": 3059,
+      "sha256": "4aec4250545dbc820cdb276bc3546b1e2584a7502839c1f0dd39bb347f49f529"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/06_MODEL_LANGUAGE_POLICY.md",
+      "bytes": 1905,
+      "sha256": "403fbd27c25c03bf57b5870366f95c8c3e9281ca9adc3a591708690a4585b2b2"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/07_MIGRATION_PLAN.md",
+      "bytes": 2744,
+      "sha256": "c60f5615412617e43002f86c3b0f98a57650de8efff9644ebc5db5da70812aed"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/08_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 2477,
+      "sha256": "b03a735205ec299dba04679c647ef50c6aa16a9f7811e316f25191d0f56def7f"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/09_DECISION_LEDGER.md",
+      "bytes": 2552,
+      "sha256": "a2fb4ff91af77817b27de5246ab4d3f487b078e042ad982cd3439846e0b65aea"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/10_OPEN_QUESTIONS.md",
+      "bytes": 2105,
+      "sha256": "ac3be5b9524715fea40fbfee0278bc4f64d9e999c5949f9fbe20df200a52688a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/11_PATCH_CHECKLIST.md",
+      "bytes": 2169,
+      "sha256": "2be60a707933bbcf510b68a00877c41280e69db07fa87a63cef8713f0f503013"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/12_SOURCE_EVIDENCE_MATRIX.md",
+      "bytes": 4087,
+      "sha256": "407d28a489a7569b1f7ef07a2cbf2343886c87d7d05d0f045621c4b9c8c4afd4"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/13_CROSS_WORKSTREAM_BOUNDARIES.md",
+      "bytes": 2171,
+      "sha256": "297cb898b2afe643f7e9121452632d7cf8bf28a8a1cdaf099ec999e4e8673552"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/14_RGL_API_PARITY_MATRIX.md",
+      "bytes": 2613,
+      "sha256": "f6fb9ffcfe4aee8198a25feb4a903adf10f9a625fed19aca6973906ce4146e7e"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/15_PRODUCER_CONSUMER_OWNERSHIP.md",
+      "bytes": 2202,
+      "sha256": "84ac3f2378ef7e946a2d9aac24722efb684c2a56732c22f5984e4c3387076c2c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/16_EXHAUSTIVE_LINGUISTIC_INVENTORY.md",
+      "bytes": 2486,
+      "sha256": "3eac042a884deb7fd70d7ec73a48a51467374fa65273fe0048f2ba6fbe4d76e3"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/17_MACHINE_CHECKABLE_DEFINITION_OF_DONE.md",
+      "bytes": 2505,
+      "sha256": "2f3bfdc737ae94f887a8b59b1dc3c64f31c6307e4b00287f914d283f95a153d9"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/18_VERSIONING_AND_CHANGE_CONTROL.md",
+      "bytes": 1453,
+      "sha256": "157d28b224af5d4c5c62d0822ce89d3aa5d1fa9a42f8134a65ff7328d09caddc"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/19_REQUIREMENT_TRACEABILITY_MATRIX.md",
+      "bytes": 1785,
+      "sha256": "679c3da95f2cd79e4b7a3c9cdbd5ab9cc633a73457e8deaeef2df43a19c320a0"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/CHANGELOG.md",
+      "bytes": 1026,
+      "sha256": "39e8a69176b1ef2305031626f6c972c4dbf0878f45942ffa8b45baacc95de483"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/INDEX.json",
+      "bytes": 4089,
+      "sha256": "fda615a55a6ce6d7e0f813a8c79e1c87ffc935d90a8f7edeac8e2f01078f1c8b"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/MANIFEST.md",
+      "bytes": 1150,
+      "sha256": "7a3f04f38e224598742cafc6f70d2e5db1599f1e838a4ecee2a8a0ceb328ebc8"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/README.md",
+      "bytes": 5592,
+      "sha256": "f84c98d02d59bab4a6d31af73cd642ce941af1e16eaac9c5b842ca7a8696e75e"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925/VALIDATION_REPORT.md",
+      "bytes": 608,
+      "sha256": "20e0e0a87e39eadfecfae95f4443994a7855662f6efde03e0d325dab1f811219"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/00_README.md",
+      "bytes": 3438,
+      "sha256": "96e6d9f4fcabdf574986771d5d88526b61502add449a0785f8a356e00f493490"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/01_DEFINITION_OF_DONE.md",
+      "bytes": 3192,
+      "sha256": "d80f19787f37c0303e97caef9baa69f18751969ad0b0a88df348f6ffcfde2376"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/02_AUTHORITY_EVIDENCE_AND_MODEL_POLICY.md",
+      "bytes": 1729,
+      "sha256": "289b32c361657ab38af24d8d83e5bff84771ad4a86bbe6fe7b7e445a2ca20e27"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/03_BASELINE_LOCK.md",
+      "bytes": 15499,
+      "sha256": "d3be53e02f3a1dbb92f428542f161f0d4ef571e0b62161c6e100c9f6e454db70"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/04_PARALLEL_CONVERSATION_OWNERSHIP_LOCK.md",
+      "bytes": 2561,
+      "sha256": "c0a7f7c496b789e08ec7f941294ed5c8f5883311dc092573b483c02c68298ac0"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/05_API_PARITY_MATRIX.md",
+      "bytes": 12363,
+      "sha256": "528e35c2bff3511c92f60b5aa3492655a4dafa483e23c64d651457a707f4e179"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/06_VALENCY_DATAFLOW_CONTRACT.md",
+      "bytes": 2563,
+      "sha256": "770dfa7a203c176f91767df3f11a1bfd088a82ace56bf28627ef0904369b4f24"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/07_VALENCY_AND_COMPLEMENTATION_CONTRACT.md",
+      "bytes": 2848,
+      "sha256": "5ec94f5455132024967108b572117f9f546016b870279fbed340aa4d671caaf9"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/08_COPULA_SECONDARY_PREDICATION_CONTRACT.md",
+      "bytes": 1755,
+      "sha256": "991121c23c0c1e00483380d2a2c963ad94ece059575708dd052df97aeb6f59d9"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/09_COORDINATION_AND_AGREEMENT_CONTRACT.md",
+      "bytes": 1658,
+      "sha256": "899a83781e32359dd4ce1b264cd183194943b36b5e3654f47cf18e5d4140ddc7"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/10_CONSTRUCTION_AND_IDIOM_CONTRACT.md",
+      "bytes": 1947,
+      "sha256": "4463c39b7b68eb534357c767b6ce93d978b9b76a47f268ce94e8d84b198d335a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/11_LINGUISTIC_EVIDENCE_LEDGER.md",
+      "bytes": 4597,
+      "sha256": "78f144ab8ca617327b062327ac5057835d380fe5ba16b73cabe1d7ba9f0d25a4"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/12_MODEL_LANGUAGE_SELECTION_MATRIX.md",
+      "bytes": 1864,
+      "sha256": "8c993d6c1ebf8c68cbaa5aab1fea2f6810f887706c8863da7e3a9512415ca8f5"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/13_DICTSQI_VALENCY_AUDIT.md",
+      "bytes": 1976,
+      "sha256": "603f4d58b01a5668d2aedda070abe53cf4cb02003816963dd0fcb790ec5f8348"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/14_TEST_CASE_CATALOG.md",
+      "bytes": 4504,
+      "sha256": "5ca544d64934673bb09fc0061bdaf9546d70e17072c47209e8417950954e672c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/15_TEST_CERTIFICATION_RELEASE_GATE.md",
+      "bytes": 1999,
+      "sha256": "1b487f3b1c1d95f23649703f9c96ccb39ace232592d9bffc81cf9ee50834c0a3"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/16_IMPLEMENTATION_SEQUENCE.md",
+      "bytes": 1645,
+      "sha256": "1c87cf23ef01b7f926d1336fab783dc38dd2c5f96876c8b572cf507c7f10a84d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/17_DECISIONS_AND_OPEN_QUESTIONS.md",
+      "bytes": 2094,
+      "sha256": "cfb220f605c8ff2587e2b03327b443e024a2a4bd3111771ccd040a0f7b164e98"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/18_TRACEABILITY_MATRIX.md",
+      "bytes": 2005,
+      "sha256": "27a60b18655fbb32b2f97c2a202a01b4b51d6b77757e3f3b463ee747e67ea085"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/19_DELIVERY_CHANGE_PROTOCOL.md",
+      "bytes": 1115,
+      "sha256": "d0f69a4e13bcd905e82d147d2a6c59a9aeb2f97cf2ccd206ec6d780094d8b4fd"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/20_ANTI_DRIFT_RULES.md",
+      "bytes": 1097,
+      "sha256": "dfd2f2e9c32c8cf039185736fbd36f014746a8faf2428d37232b5698d88a5477"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/21_RISK_REGISTER.md",
+      "bytes": 1382,
+      "sha256": "ea82e226cabaf714b262ef959e3cc33e3eb01981217b6e60d86110291d575b0a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/22_GLOSSARY.md",
+      "bytes": 1401,
+      "sha256": "00ee300615a0e31c252baf756429176b8cc5ee65e0e2b8dff4733601790902cb"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/99_COMBINED_CONTEXT.md",
+      "bytes": 77559,
+      "sha256": "3d7d47d34aec4e3f805c126463a546f5308ffe98751d2f6fc0fb19c58f93536d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/DOCUMENT_INDEX.md",
+      "bytes": 817,
+      "sha256": "50acba1ab727faa1af98a7b23c3bcab4ec9af683ead62bc6b5a4bb0dfcd5bce3"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/DOC_SHA256SUMS.txt",
+      "bytes": 2483,
+      "sha256": "cb05a1c35d8c20a13be00448c3571ab072e79c0382a1710dded20dc960bd2410"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/Albanian_RGL_Conv8_Finalization_Docs_v2_20260925/SOURCE_MANIFEST.md",
+      "bytes": 1386,
+      "sha256": "f4800d8936e9e05e3e07f17b6b874dca2988bf922dadf2898e631b8bcfc2ecde"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/00_MASTER_CONTRACT.md",
+      "bytes": 4150,
+      "sha256": "e448d668efd290247952edcbef06db0f8a390a8eb325a1d9b89375bb83ea75f7"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/01_CURRENT_BASELINE_AND_DEBT.md",
+      "bytes": 3548,
+      "sha256": "5806572c0583c2a75a0cfa49d9490f936bc5df29620ac630f2d17df02c335d47"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/02_ARCHITECTURE_AND_OWNERSHIP.md",
+      "bytes": 4976,
+      "sha256": "97befd4672241d5b14e15c31e414103005adf1478146824c3a9e78943a9590bb"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/03_LINGUISTIC_EVIDENCE.md",
+      "bytes": 4720,
+      "sha256": "6e97152b7cbea2c047db84d88b58fc6b486d19aedf231adde1ddd0cfb19398ac"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/04_REALIZATION_STRATEGIES_AND_CONSTRAINTS.md",
+      "bytes": 5557,
+      "sha256": "faa96c516f5d498d43520f31c655a6e80aafa1379c231214e1b28a569570c22d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/05_PUBLIC_RGL_COVERAGE.md",
+      "bytes": 3680,
+      "sha256": "31919799b110853600866fbe8ed41bb7ac994d2085c7ab53af93e861c3192782"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/06_DECISIONS_AND_OPEN_QUESTIONS.md",
+      "bytes": 3139,
+      "sha256": "234601a641acf2f595001ce671db2555f4d046fd56bc040a656f8bd248c8eadc"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/07_IMPLEMENTATION_CHANGE_CONTROL.md",
+      "bytes": 3850,
+      "sha256": "f89255332550a1087c8a07359ae2233dbe990264d41c4c147cd6b9853fde7c3a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/08_TEST_TRACEABILITY_CERTIFICATION.md",
+      "bytes": 3600,
+      "sha256": "e55279e931fe80aa24bd87474587afebd411d066498e2c7bee677714ad157eed"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/09_COMPARISON_POLICY.md",
+      "bytes": 2204,
+      "sha256": "1eab5e2a60755f06ae419209a898b672df5d1a1b0cc47e3a40ba09a7128abe8d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/10_RELEASE_GATE.md",
+      "bytes": 2964,
+      "sha256": "02c45916cbfda52b4a6f7019a847a14f585830d61ce4ec5b978c43848f92d022"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/11_ID_REGISTRY_AND_GLOSSARY.md",
+      "bytes": 2249,
+      "sha256": "dc3e446f5896b05b7c648a66b31960bb2a75d4533ddb634ba9741bd674d4817f"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/12_OPTIMIZATION_AND_COMPLETENESS_AUDIT.md",
+      "bytes": 3448,
+      "sha256": "7ac761ccfa2c03c92e2e66cb2a04a60f66c7e64c309d05d0ff921bdb9c3573ea"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/DOC_MANIFEST.md",
+      "bytes": 1222,
+      "sha256": "a4c0c45b3fcc1cbf8672a1c62eb70c8cd6b1541f24447e1e67bc845361b9a9cd"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/README.md",
+      "bytes": 3825,
+      "sha256": "15ba26f1bca9133f19a68877809ec4423024084eea06f790a2e135dd6d0232a4"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3/SHA256SUMS.md",
+      "bytes": 1506,
+      "sha256": "9b859a74334e1ab58b11a19c1980dc297f798246dd8291d1c6a69cc8efd4f980"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/00_START_HERE.md",
+      "bytes": 4872,
+      "sha256": "486fa52c2aca4bc7e30324d69a308343db3d8de65c1ace6846d6e0d9e2092125"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/01_SOURCE_LOCK_AND_EVIDENCE.md",
+      "bytes": 6057,
+      "sha256": "2f34411803d2747fb6b55eac0b729bfc1b012a6bfb0e8c9126656c94cda97ac5"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/02_FINAL_MORPHOLOGY_ARCHITECTURE.md",
+      "bytes": 4952,
+      "sha256": "a7710fbbf2770b11c8f60d1091113bc69326a58e1161f70b4379b57b859346b7"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/03_NOMINAL_MORPHOLOGY_PLAN.md",
+      "bytes": 5122,
+      "sha256": "03fadf61f7c8ed64a62e75193c4c1e1b492077b4e0c734b5eb00664892882635"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/04_ADJECTIVAL_MORPHOLOGY_PLAN.md",
+      "bytes": 2856,
+      "sha256": "dfc04b7a421c71f195dfefafb7c0bd9c926ec9d5940bb7a529f604667ef180de"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/05_VERBAL_MORPHOLOGY_PLAN.md",
+      "bytes": 5443,
+      "sha256": "e6980525b6f52c9369a78ff5fc148f183e4db67a6a5d0c8a48141033fa488fa6"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/06_PARADIGMS_API_SPEC.md",
+      "bytes": 3770,
+      "sha256": "433a2e1871bb4339bad42fc81586a8d50fa87f13780b8da8aad46a9f61226949"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/07_IRREGULARS_POLICY.md",
+      "bytes": 2128,
+      "sha256": "b46e2d68613c2e4e88b4fc75bdaf597145db9042da1d676c3c63556df8d54ea1"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/08_DRAFTMAX_REINTEGRATION.md",
+      "bytes": 2979,
+      "sha256": "5bc14c4b04889eab8c5dfa8a79350f4a7baf413f89a8a3d0bdcf01c986f2ac05"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/09_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 3488,
+      "sha256": "f778f924dded0e0ba4ad19d75d480e8a288db69cbade000cb9967548bc81cb7e"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/10_DRIFT_CONTROL.md",
+      "bytes": 4044,
+      "sha256": "248956e4864ba0e76809353253b982030342604826497c131b1c4cc19d5a6a21"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/11_OPEN_QUESTIONS_AND_DECISIONS.md",
+      "bytes": 3742,
+      "sha256": "23eeea00cddc19c1b1445b2a2340c30856be8a41cdf80f1d622e473aceeea9ae"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/12_ROADMAP_AND_DEFINITION_OF_DONE.md",
+      "bytes": 4256,
+      "sha256": "6ee3c935cd43953af59d288875935c99d370812ae03fb795e329724c39742ced"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/13_FINAL_CONTENT_MANIFEST.md",
+      "bytes": 5227,
+      "sha256": "48dbb55986f4c66597b97f0fd8780f48e9226e4890e33f4a07ee4942523f9897"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/14_CURRENT_MORPHOLOGY_INVENTORY.md",
+      "bytes": 2165,
+      "sha256": "e89a8b6b5344e7b56fe8c9437d0077753b338bb4c5f4b3ff2e304d73cc0eb4c1"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/15_RES_PRODUCER_CONSUMER_MAP.md",
+      "bytes": 3317,
+      "sha256": "3d772c4006ca4585665a64468bd6e2d19ac4a73340f4752ef68a8eecc134e65a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/16_ENGLISH_PARITY_MATRIX.md",
+      "bytes": 3845,
+      "sha256": "572c225a6084f6c26240663f638dbf2a17f9817ff64692129646ed287a56c308"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/17_ALBANIAN_EVIDENCE_LEDGER.md",
+      "bytes": 3782,
+      "sha256": "2d8364903a13f7eed27797b4f95c9f7398203db0fb85cb4740a2238b7f0cb292"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/18_MORPHOPHONOLOGY_SPEC.md",
+      "bytes": 1954,
+      "sha256": "87b96f9c30e69c30ce3303964f7252170c92733fa0e8921aa6cd8822db4d6af6"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/19_QUANTITATIVE_RELEASE_GATES.md",
+      "bytes": 3333,
+      "sha256": "78ea1dbda96151863c844c1bf8f62b313e126a211a57aa780c79dbb03a7af19a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/20_CROSS_WORKSTREAM_CONTRACTS.md",
+      "bytes": 2015,
+      "sha256": "07359fdd505415328017f6556a8c8dfc2fc0aac3696c8fdd07de370b9aacd0a7"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/21_API_COMPATIBILITY_AND_DEPRECATION.md",
+      "bytes": 1567,
+      "sha256": "68a9245354c39d2ed2acac98fa406f6850c993e76ed119301e323d1d504f8184"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/22_GENERATION_AND_REPRODUCIBILITY.md",
+      "bytes": 1534,
+      "sha256": "147d8d06de230053e2457fc67e967bc1576aa8a3b17749166e096b50d764c0f0"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/23_DECISION_LEDGER.md",
+      "bytes": 1643,
+      "sha256": "8da10d8acd6e9516131deba934d043cf55368d2494dab63b04c6ebeb18acb0c8"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/24_IMPLEMENTATION_PLAYBOOK.md",
+      "bytes": 1584,
+      "sha256": "b59dd4f49d4b9d26f272218ea69daef7dd216f253df4d0a88c2a54dac58d093c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/25_CHANGE_CHECKLIST.md",
+      "bytes": 917,
+      "sha256": "3d06dde248d5967057328252909b5d6a4138039ffe438adeff1a8a2a4873e89b"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/99_DOC_PACK_HASHES.md",
+      "bytes": 3776,
+      "sha256": "b27f1b83b4b21466afc237130193630352d4ea666e34274b33b113d5c3368018"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/PACK_MANIFEST.json",
+      "bytes": 2022,
+      "sha256": "8a5339a72ec9d323b4c8486b3e9fec164c7157d98bf3169526b48dac46d0798d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/README.md",
+      "bytes": 1105,
+      "sha256": "fbe90e55b7341fec3684bba8ba1cd9f118389a7b7f56d71fd4ba94fe1d18eafa"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/ALBANIAN_EVIDENCE_SNIPPETS.json",
+      "bytes": 12258,
+      "sha256": "01c201e7e83f412be3188bebc35ec941e9a1ebfbdbd710327f9184fea8b52989"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/ENGLISH_API_COMPARISON.tsv",
+      "bytes": 17560,
+      "sha256": "7f725653ad494c1a44f31fcea61880b0b9cdd221936d552fe4715781335a1a22"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/MORPHOLOGY_CLASSES.json",
+      "bytes": 226795,
+      "sha256": "24746677ae69abe7b0a9866e09abdae62983f428678de88dc558fc107f3caeee"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/MORPHOLOGY_CLASSES.tsv",
+      "bytes": 89624,
+      "sha256": "189f5d7051840aed0fad0d4a3c4df1a733adbe1a50434944cc33f614263d4b75"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/NUMBERED_CLASS_REFERENCES.tsv",
+      "bytes": 14295,
+      "sha256": "ddee8548ab1896dc83e9777fcf0187c909fc1bce9ef62419aa4d61a567ce6dd4"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/PLACEHOLDER_BASELINE.tsv",
+      "bytes": 467,
+      "sha256": "8e240a2bd4be8dd2dd619f26b3887055c11e890540d5004f78d1ea4671d50bf5"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/README.md",
+      "bytes": 554,
+      "sha256": "4d165f90c6f8376f87bc018e68274fabf95ef99ab94058328e1469790ce2ccfb"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/Albanian_RGL_Morphology_MAX_Docs_v2_20260925/generated/RES_SYMBOL_MENTIONS.tsv",
+      "bytes": 21164,
+      "sha256": "563ece41085b05f24a69297d0b8ee04e0c38c66f1a4534a9c78a244159f49174"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/00_README.md",
+      "bytes": 4415,
+      "sha256": "9442f2abbc6cbc1b4b0750ecd089993893067fc9dc86b82830256b7f434ffada"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/01_FINAL_TARGET.md",
+      "bytes": 5157,
+      "sha256": "1ffb1446556d16678a9a3d1fbe3ca3f970b5d8da260beeb0be69d699ee96b506"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/02_SOURCE_LOCK_AND_AUTHORITY.md",
+      "bytes": 5636,
+      "sha256": "9b2685e37c42e380c0b749fb03577ba614bceaf83fb164a20dc9204ae64ac2ce"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/03_TARGET_ARCHITECTURE.md",
+      "bytes": 7606,
+      "sha256": "67a94cf1b29942b64066e7d20557e97e15a2e4cc0719ca0a14e8afd280c8e871"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/04_ALBANIAN_LINGUISTIC_CONTRACTS.md",
+      "bytes": 8329,
+      "sha256": "d735ccbbcb0601fc09d2ff77c3feb0ccb8ae8331b243a14d3c79a45636908844"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/05_API_AND_ENGLISH_PARITY.md",
+      "bytes": 5137,
+      "sha256": "1134c33cc9cce6bfa3a4daab1dc69c717de2f32dcce99125546e37e6770d6e5a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/06_IMPLEMENTATION_SEQUENCE.md",
+      "bytes": 6007,
+      "sha256": "cdc237dfe5a66ed7f352759e4be3cdf0d6ec7a3bdc60860dca8b6348d943dcc6"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/07_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 4881,
+      "sha256": "f7bf9d1e735bea1fa24e6e7a50d109e6492cb5e9d0892a6ffb8d129a193409df"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/08_DECISIONS_AND_OPEN_QUESTIONS.md",
+      "bytes": 5504,
+      "sha256": "45454e289ba1612d49bfb68bdc4dad161ad175bdc4d41aeaf0c99576ef0b553d"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/09_DRIFT_PREVENTION_PROTOCOL.md",
+      "bytes": 4016,
+      "sha256": "d2e49b9e8f7ef6fe8ae9553f41beda6ee833fbead04aacb36e2f12392f1c9c59"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/10_TRACEABILITY_MATRIX.md",
+      "bytes": 3846,
+      "sha256": "43520e5eb657fb3203a228d3c56aea0abc05e85781f6bf11956a8094a08a492c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/11_DELIVERY_TEMPLATE.md",
+      "bytes": 2419,
+      "sha256": "2821dfa6bbe7b2e521abf0ee908f706b222664a04de6850aa1baddd45738d9bd"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/12_EXACT_RGL_CONTRACT_LOCK.md",
+      "bytes": 6020,
+      "sha256": "adfe5509352a3b174c0723fca1a389101081da9835b6469996a4bc0afcffbc05"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/13_ENGLISH_PARITY_LEDGER.md",
+      "bytes": 17955,
+      "sha256": "565d93e96c3584de850265ef48de224fe6a06a27fb3491d1e62266ff29d7cfdd"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/14_PRODUCER_CONSUMER_IMPACT_MATRIX.md",
+      "bytes": 8660,
+      "sha256": "39a53102bcb0599dba8dab796b8ae4ec394725d4788a316b43a7709a876b5b42"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/15_LINGUISTIC_EVIDENCE_LEDGER.md",
+      "bytes": 6596,
+      "sha256": "fea60c2178afa0b22ea206dfded5fa9fd03a7d1f630221214fe798e92ed56128"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/16_CANONICAL_NOMINAL_TEST_VECTORS.md",
+      "bytes": 4001,
+      "sha256": "b6adab7dc6a3107c68376cc72bbbf8b48b7b1230a31e1768973eda757196e708"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/17_MIGRATION_CONTRACTS.md",
+      "bytes": 3599,
+      "sha256": "d268b4caf2326f05bb4beae7359e04b78e8d6f67b2581c638b866fa92565cc46"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/18_LEXICAL_DEBT_AND_PROMOTION.md",
+      "bytes": 3183,
+      "sha256": "14d1497a7de9e4537fc4b4a7084c5fab7555780ac5faef2e1c8ac6061030209c"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/19_BASELINE_EVIDENCE_LOCK.md",
+      "bytes": 16935,
+      "sha256": "1d1ac9b3a000a004328c372f16b85babbd8476e61cf2a399a622903a1c01cc9b"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/20_V2_AUDIT.md",
+      "bytes": 2576,
+      "sha256": "3da8b0605ef0444a241ea76275c68f0e7e2603d100d531909f4e977e29e6b33a"
+    },
+    {
+      "path": "workstreams/Albanian_RGL_Nominal_Finalization_Docs_v2_20260925/MANIFEST.md",
+      "bytes": 3394,
+      "sha256": "5d4b2acc3571d5ace644614dfeebc60b3c605a47a15c1ed81c3df8f5084a07bf"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/00_README.md",
+      "bytes": 6223,
+      "sha256": "3a56e95d6ea305f1391fceb235106b6ef9e8f6cd2d047bf80e903af5a401cce9"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/01_SOURCE_LOCK_AND_AUTHORITY.md",
+      "bytes": 13889,
+      "sha256": "595dcd0a4113d98ae66b480aa686ff284b88cb0b0d40ef74e5592f2b13385e67"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/02_FINAL_TARGET_AND_SCOPE.md",
+      "bytes": 6072,
+      "sha256": "b7d299c821fa8dc98759fab25aa1a1a1027e1e52368238da1dffdeeb06529c77"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/03_CLAUSE_ARCHITECTURE_CONTRACT.md",
+      "bytes": 8142,
+      "sha256": "b7363320f847f6c52660eb87cc209dfc986feb2ab006bd3b650e274341194ba5"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/04_FUNCTIONAL_COVERAGE_MATRIX.md",
+      "bytes": 7235,
+      "sha256": "84fe8e68870f61b0b2ce4f9fc42b769f52cf06f9288028271d1e46f5c4c54bdf"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/05_ALBANIAN_LINGUISTIC_RULES.md",
+      "bytes": 7840,
+      "sha256": "93bc6248b4541059dbe929535aed3b9993397012205c478a4f98dd3d13ce2856"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/06_IMPLEMENTATION_SEQUENCE.md",
+      "bytes": 5701,
+      "sha256": "a39cc3b263aadaeb07ea4cf68222d577775e54325876683b6ad26b81b27c4639"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/07_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 7871,
+      "sha256": "1ac68f908339a12d2d434db5e530b47b300f95a9940bb7aa5a29b281a84eb32c"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/08_CROSS_WORKSTREAM_INTERFACES.md",
+      "bytes": 3647,
+      "sha256": "b5692a3735bce139b1a0f3502471da4180d46687bca904f4e3aa40a8a378c079"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/09_ANTI_DRIFT_RULES.md",
+      "bytes": 4321,
+      "sha256": "bf0a2ea9e07a0bd0efbdb8c09e407738dff4d98e438c5d08264900c652efca4a"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/10_OPEN_DECISIONS.md",
+      "bytes": 4228,
+      "sha256": "75dbc1ec56179a2519d3aa700e8c2f6ffa7d53691d22aba053eb68681153bb50"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/11_CHANGE_RECORD_TEMPLATE.md",
+      "bytes": 3277,
+      "sha256": "f68d91b4f901a9a37e0e7faab0c31d93afb244b8c4e306d7016292c2eccfc05c"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/12_MODEL_LANGUAGE_COMPARISON_POLICY.md",
+      "bytes": 3115,
+      "sha256": "91173facb6c1615f4bc7e40a68edb2cf1be1fa76f89736e5c8af9388e82b7757"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/13_CURRENT_IMPLEMENTATION_AUDIT.md",
+      "bytes": 7902,
+      "sha256": "daec2ea19fd508686815ffc418184c8538890859dccfb1fa3796befdeca3db11"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/14_EVIDENCE_TRACEABILITY_MATRIX.md",
+      "bytes": 7137,
+      "sha256": "358bba6ae0a189d0dfb9e48d74e5d9c1b091b1d55190e222af876f576b398585"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/15_EXTEND_CONSTRUCTION_IDIOM_COVERAGE.md",
+      "bytes": 4627,
+      "sha256": "63514b1d177da7baee9fddb8ca011a1778e70325e063e7b97e64d130fc39c898"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/16_PARSE_GENERATION_VARIANT_POLICY.md",
+      "bytes": 3585,
+      "sha256": "49181ae48dfbe819f0f549038f8fd11785a00f3a3c0aedf3f4e4a6bce93ea41c"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/17_BASELINE_EVIDENCE_LOCK.md",
+      "bytes": 2655,
+      "sha256": "2a569c6bc36e5749f0b950062ee333825488f079d6e085d29e513c781c1e2453"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/18_CERTIFICATION_DASHBOARD.md",
+      "bytes": 4067,
+      "sha256": "37b98c196b114c220d560219e057928bd6114f0a3b5b63248ec28962287da58c"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/19_V2_CHANGELOG.md",
+      "bytes": 2473,
+      "sha256": "19ec4bcb656e273ce53a357778189a864cae38cdeab729567d7e2a24647024ce"
+    },
+    {
+      "path": "workstreams/Conversation07_Clause_Finalization_Docs_20260925_v2/Conversation07_Clause_Finalization_Docs_20260925_v2/MANIFEST.md",
+      "bytes": 2988,
+      "sha256": "126f21e96e486a45f06d080fce6bb070980c9abee7f31154947291510d0b265b"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/00_FINAL_TARGET.md",
+      "bytes": 4983,
+      "sha256": "1294cd1878eec09cc9f35bdaf7b358bdecaeb95057ecf474cab28db78f19fff7"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/01_AUTHORITY_AND_SOURCE_LOCK.md",
+      "bytes": 3793,
+      "sha256": "17a3d0dcc2f7b277911ffd05478c8a1777deddcc654fe391380d0f6ea0f11980"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/02_PARITY_STATUS_MODEL.md",
+      "bytes": 4015,
+      "sha256": "4251cc37b15240d70c821e867a771968d11f7182cf1c242e561f383a09514584"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/03_ENGLISH_ALBANIAN_PARITY_MATRIX.md",
+      "bytes": 61709,
+      "sha256": "bff76f59090820d559d13fdbb485bd30e7da6a7cdd36580979cbe93c8c263b2f"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/04_STRUCTURAL_COMPLETION_PLAN.md",
+      "bytes": 2987,
+      "sha256": "5140342d6f865d068a3c9aab5a678e1c236caf6222be7a733226d7d07d8b3a8a"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/05_EXTEND_EXTRA_COMPLETION_PLAN.md",
+      "bytes": 3808,
+      "sha256": "2e19d6773ef35cdbfbaa202dbb68493f59e61398535d7c31f55572ea2ed62262"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/06_PUBLIC_API_PLAN.md",
+      "bytes": 2877,
+      "sha256": "dca40e2aa24f9f674f13310d5544637837df78242540be74391683b284b9ae19"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/07_DOCUMENTATION_SYMBOL_MARKUP_PLAN.md",
+      "bytes": 2334,
+      "sha256": "a217eab092a98e0d71f79d644ee54d711be5d17add3b18126dd4b5d371611467"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/08_LINGUISTIC_EVIDENCE_MAP.md",
+      "bytes": 3871,
+      "sha256": "24c352ce5cae6b4e4ae2cb0c5966a91cb8bb4451a0ef2bc547caf5b9d01f9534"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/09_TEST_AND_RELEASE_GATES.md",
+      "bytes": 2818,
+      "sha256": "7bba629630bc5af7a33ee7a832b452e8056fb763e22293dc8b0e0c4827dcf9c5"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/10_DRIFT_GUARD.md",
+      "bytes": 2671,
+      "sha256": "6dc69a15126ab3097e523814eb78db231fb2cf992ebc45238da3b436d3651b55"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/11_OPEN_DECISIONS.md",
+      "bytes": 1794,
+      "sha256": "553ff1040768614423118ab8825b76e011650f03b78af8a093f3d35d228e8f2c"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/12_BUILD_SEQUENCE_AND_HANDOFF.md",
+      "bytes": 2115,
+      "sha256": "eeaecff5df9542166e58d9a4a5caf657fb5503ea74575ca52b56b3d5b6135e6d"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/13_CURRENT_SOURCE_INVENTORY.md",
+      "bytes": 4569,
+      "sha256": "ec0ce0c45d55da3b8a4f1cd75085a22be6bd2070937823bff8aa37e99e09168c"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/14_ENGLISH_ONLY_SURFACE_REVIEW.md",
+      "bytes": 2767,
+      "sha256": "2a822dcb7c8cd297683f9dc9ec6794828710d434d9cf818d125d14077dcc0bee"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/15_EXPECTED_FINAL_DELIVERABLES.md",
+      "bytes": 2302,
+      "sha256": "8ac319ff311f98232386f0f07e2fdebd18b4d416557f1ce412f7ccbcf3434556"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/16_TRACEABILITY_MODEL.md",
+      "bytes": 2346,
+      "sha256": "6f63b427e623f0c7acf87f7c4cd5caf087b5c6241f94ea2b77c88f82f7aa6d37"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/17_LINGUISTIC_EVIDENCE_LEDGER.md",
+      "bytes": 4616,
+      "sha256": "5762a87d9a937082e4db7972b0b1ab8de5d5ecbddb6d8ef258f61b38da55d871"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/18_TEST_COVERAGE_REGISTER.md",
+      "bytes": 5381,
+      "sha256": "9707d53942966e736792959f7f89642338fdbd93eec091c0b70f57f6eeb09e0b"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/19_PUBLIC_API_EXPORT_MATRIX.md",
+      "bytes": 3417,
+      "sha256": "27298f3fd653051bfc79bb0f90db0a71633de0a0c0211aa94ecc92b21c5f06f5"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/20_API_COMPATIBILITY_CONTRACT.md",
+      "bytes": 2304,
+      "sha256": "464caa5e958349074171a5140cf51c9d4362cdd9ff0eab2710e38e5ca5dcdb6f"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/21_INTER_CONVERSATION_DEPENDENCIES.md",
+      "bytes": 2300,
+      "sha256": "92eb4fb4b3d2a19a15163e8498809e5b03e0c6c6aa8b6a4612ec99de86d26567"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/22_DECISION_REGISTER.md",
+      "bytes": 4171,
+      "sha256": "046080e69d41dff8d1556a2b9e1683f236e6003171e670eee49b23751cbb3a3c"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/23_ENGLISH_SURFACE_INVENTORY.md",
+      "bytes": 8091,
+      "sha256": "b359cac68e8eebe988b00c0cdd666989c198eaaacc4161c946409984363c4489"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/24_CLOSURE_CHECKLIST.md",
+      "bytes": 2988,
+      "sha256": "71bbf3aa805ed2e738ac76be5d77fda1d141a9d8e0f79344e5d99d0bd5a497c8"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/25_PATCH_RECORD_TEMPLATE.md",
+      "bytes": 980,
+      "sha256": "79a1a4b7bd408cd9d2fce5fff8a24891472358d74381de82b706ba38822d174b"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/26_V2_QUALITY_AUDIT.md",
+      "bytes": 2683,
+      "sha256": "d3f0af8f635c1716125ead12b9b8d2e418126fe3436713d050177e40db61de59"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/CHANGELOG_V2.md",
+      "bytes": 965,
+      "sha256": "eaab8cd308226b55c3cab036c4456af3f786007f8435bcfb866d5559909a0f56"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/MANIFEST.json",
+      "bytes": 6346,
+      "sha256": "49f3893849e2cc02b0027f6f397e2e42bbf27701e568ab8c1667a311c682896a"
+    },
+    {
+      "path": "workstreams/Conversation_09_RGL_API_Finalization_Docs_v2_20260925/Conversation_09_RGL_API_Finalization_Docs_v2/README.md",
+      "bytes": 3610,
+      "sha256": "09fa91b7af7c62b0b3670393e1a1ede2346304db9f29d7eeb642be4fc5ed1a1f"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/00_README.md",
+      "bytes": 4998,
+      "sha256": "cfa8eabe45ae43dd29b424ee612ec33c401926cc78dcbce69d09256457559092"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/01_SOURCE_LOCK.md",
+      "bytes": 4964,
+      "sha256": "1c2b6f605d265d575000c0100239d5db9d64271ccd7aea6591aa10ddc5fe8588"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/02_FINAL_TARGET_AND_DEFINITION_OF_DONE.md",
+      "bytes": 4038,
+      "sha256": "7c537b8104f5deafff4b4218da62a6e851316cf90a84bfe996044d356ac1ccb0"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/03_LEMGRAM_CONTRACT.md",
+      "bytes": 3554,
+      "sha256": "c630748a46ca080bb80e12c3320ac5ba7a0d909204c42e85b9901f9e3a618297"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/04_SOURCE_AUTHORITY_AND_PROVENANCE.md",
+      "bytes": 2755,
+      "sha256": "6972b7289562479819b70117a14fbe5e4235ae0176923797a282ba2ede22a750"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/05_CERTIFICATION_LADDER.md",
+      "bytes": 3056,
+      "sha256": "ae27c6be3a124178a6be131d9de40785df51d8ebffa5da448241bfef18a69d9f"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/06_BUILD_AND_PROMOTION_PIPELINE.md",
+      "bytes": 3108,
+      "sha256": "2738f1f02bc9b1144ce4d54bb98c02ebca9698e64d14ba560cea2c39b09d56c7"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/07_VALIDATORS_AND_GATES.md",
+      "bytes": 3552,
+      "sha256": "0eaeb2a03a7bcc90d4799ba61e5fa4e49ca7a211c5c728810e9c193e60fadafd"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/08_METRICS_AND_REVIEW_QUEUES.md",
+      "bytes": 2378,
+      "sha256": "082a701bed67597a1d998d18a0f130b399ada15ff4b573861ee3fae61d197fd3"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/09_MODEL_MORPHODICT_BENCHMARKS.md",
+      "bytes": 2162,
+      "sha256": "632c5215a277f1a424a83e2460be3108f242823b5dca309946405d2f05b51dc2"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/10_MORPHOLOGY_ESCALATION_PROTOCOL.md",
+      "bytes": 2008,
+      "sha256": "bddf625e17e0643921132597e6102946a2ffa5f6945a39a0037fb7bd53ec1416"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/11_DRIFT_CONTROL_AND_CHANGE_PROTOCOL.md",
+      "bytes": 2469,
+      "sha256": "7ab0f5f2e1bdf213b17b41a83d8cec2c941241b960763314ea37e9b9ac1650b7"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/12_RELEASE_DELIVERY_CHECKLIST.md",
+      "bytes": 2263,
+      "sha256": "8272ae01ce3bb9e676f6b65ae40249e808fb8f0870267a9679c20c7f42fce7b0"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/13_DECISION_RECORD_TEMPLATE.md",
+      "bytes": 1826,
+      "sha256": "1339b5950bcb1460eace9d3d04203d3d0e49a776ded34d703eeea6c72ce4cc81"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/14_DOCUMENTATION_MANIFEST.md",
+      "bytes": 3566,
+      "sha256": "8e7a6cc99d5630c276c8819875f22e10dd8aab8b5d20ffb3d56c6e441f7f2f09"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/15_DATA_MODEL_AND_SCHEMAS.md",
+      "bytes": 3249,
+      "sha256": "f9264aa4c71fb1174799d8213a4e096f1533d369665c246357633103a60d5d7d"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/16_CATEGORY_TABLE_CONTRACTS.md",
+      "bytes": 3792,
+      "sha256": "9ca055ab5b346fa43d10c7bb580119c8c14f74658b5543dbbbf200602412d95d"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/17_TABLE_SIGNATURE_AND_DEDUP_SPEC.md",
+      "bytes": 2689,
+      "sha256": "4b29b3e6f42c93bb3349f51ff2f80412abec5e1aa2251405f0adaa1bb4640464"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/18_EVIDENCE_TO_GF_FEATURE_MAPPING.md",
+      "bytes": 2759,
+      "sha256": "85bed1b06572ac91eedfb003193b99d3a1ac61380994d218fc8bb9969ccc1f24"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/19_PARADIGM_CLASS_REGISTRY.md",
+      "bytes": 2362,
+      "sha256": "21b5711b0e0cdfce7fb22f9e6075ea84d3f2f5270ed1512e73c851e4692c6a6d"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/20_DEPENDENCY_AND_INVALIDATION_RULES.md",
+      "bytes": 2235,
+      "sha256": "98539e55786d78c2a6ae966bf0ebbeea3147d362aef971f135cfdad6d5a2dd8d"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/21_SCALE_AND_REPRODUCIBILITY_CONTRACT.md",
+      "bytes": 2362,
+      "sha256": "d21f9e45bb313783dd72a8b18f3203f273fa87fbdd20f540623e26c106843258"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/22_SOURCE_CONFLICT_AND_REVIEW_POLICY.md",
+      "bytes": 2423,
+      "sha256": "aa399d071480bd8993acfb1b7d842227c7f1ec96cedd499dda76643691d9dcb3"
+    },
+    {
+      "path": "workstreams/MorphoDictSqi_MAX_docs_v2_20260925/MorphoDictSqi_MAX_docs_v2_20260925/23_DOCUMENTATION_CHANGELOG.md",
+      "bytes": 1584,
+      "sha256": "1ea261d34482ec2f3b67532f0ba8fc71e4fc200766850401fbcee6d5fcc6d761"
+    }
+  ]
+}

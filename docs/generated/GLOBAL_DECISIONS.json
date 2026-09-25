@@ -1,0 +1,122 @@
+[
+  {
+    "id": "GLOB-001",
+    "decision": "Standard Albanian est la variété cible par défaut ; Tosk/Geg restent étiquetés",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-002",
+    "decision": "`DECLARED_BASELINE` et `EVIDENCE_BACKED_RUN` sont deux champs différents",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-003",
+    "decision": "vocabulaire C10 devient vocabulaire global de certification",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-004",
+    "decision": "owner map Conversations 1–10 fixé par `04_WORKSTREAM_OWNERSHIP.md`",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-005",
+    "decision": "Gen est grammaticalement distinct de Dat",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-006",
+    "decision": "implémentation cible : `Case` 5 valeurs + `MorphCase` 4 valeurs, Gen→Dat morphologique",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-007",
+    "decision": "`Noun.g` dépend du nombre ; l'accord pluriel conserve le genre",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-008",
+    "decision": "pas de `Neut` productif dans le core sans nouvelle preuve Standard",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-009",
+    "decision": "`Adj.s` cible Gender×Number, pas Case×Gender×Number",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-010",
+    "decision": "articulatedness adjectivale devient un type explicite",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-011",
+    "decision": "un seul service *nyje* remplace les duplications locales",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-012",
+    "decision": "common `TPast+ASimul` cible Imperfect ; Aorist exposé explicitement côté Albanian",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-013",
+    "decision": "common past anterior cible `kisha + participle` ; alternatives sont marked/extension",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-014",
+    "decision": "active perfect `kam`, non-active perfect `jam` par défaut Standard",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-015",
+    "decision": "morph voice et semantic voice use restent séparés",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-016",
+    "decision": "`CliticCluster` typé jusqu'au realizer central",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-017",
+    "decision": "aucun preposition stranding canonique sans preuve ; neutraliser vers stratégie Albanian",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-018",
+    "decision": "ordinary relative default `që`; `cili` = voie fléchie/explicite",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-019",
+    "decision": "impersonal/extraposed AP agreement = Fem Sg pour la famille attestée, pas default universel",
+    "status": "ACCEPTED_TARGET"
+  },
+  {
+    "id": "GLOB-020",
+    "decision": "Dict final reviewed/protected n'utilise pas de placeholder non analysé",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-021",
+    "decision": "MorphoDict final : variants=0, provenance complète, universe terminalement classé",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-022",
+    "decision": "`BrowseSqi` n'est pas un blocker core sauf exigence du common source-lock",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-023",
+    "decision": "DRAFT-MAX reste idea-source atomique uniquement",
+    "status": "ACCEPTED"
+  },
+  {
+    "id": "GLOB-024",
+    "decision": "giant `MorphoSqi` doit avoir une source-of-truth déclarée (manual/generated/hybrid) avant refactor massif",
+    "status": "ACCEPTED"
+  }
+]

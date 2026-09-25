@@ -1,0 +1,60 @@
+{
+  "delivery": "Albanian RGL Conversation 6 — nominal finalization",
+  "date": "2026-09-25",
+  "baseline_tag": "albanian-s02-green-20260925",
+  "baseline_local_commit": "963b925",
+  "final_commit": "012383aa7f50c8637f26c22a09d6603d5e672a37",
+  "changed_files": 68,
+  "expected_targets": {
+    "language": 51,
+    "api_facades": 5,
+    "morphodict": 2,
+    "total": 58
+  },
+  "expected_scenarios": 52,
+  "local_validation": {
+    "nominal_architecture": "PASS",
+    "dict_morphodict": "PASS",
+    "morphodict": "PASS",
+    "morphosqi_lint_findings": 0,
+    "git_diff_check": "PASS",
+    "gf_delimiter_heuristic": "PASS",
+    "four_case_grammar_scan": "PASS"
+  },
+  "external_validation": {
+    "gf_3_12_compile": "NOT_RUN_EXECUTABLE_UNAVAILABLE",
+    "wordbench_1_3_4": "NOT_RUN_EXECUTABLE_UNAVAILABLE",
+    "claim_level": "W04_IMPLEMENTED_STATICALLY_VALIDATED_ONLY"
+  },
+  "known_uncertified": [
+    "numeral government and full Standard ordinal morphology",
+    "complete modern proper-name inflection classes",
+    "mixed coordination agreement",
+    "headless DetNP agreement",
+    "prenominal kinship possessive restrictions",
+    "full comparative/superlative nyje interaction",
+    "productive status of residual neuter items"
+  ],
+  "sources": [
+    {
+      "file": "Code_snapshot_Grammatical_Framework-Albanian(20260925-123255).zip",
+      "bytes": 1261630,
+      "sha256": "961852fae67f7e5878c7d214197a75a705e5028d7ee8e87974358a9d85c39829"
+    },
+    {
+      "file": "Albanian_ref(8).zip",
+      "bytes": 909703,
+      "sha256": "15396c31106de2787ae844bb7013b77b4d1fe0b8a3b5e714fc7a9aeef23f1cfc"
+    },
+    {
+      "file": "Albanian_RGL_Total_Documentation_v2_CompendiumAligned_20260925(4).zip",
+      "bytes": 1105042,
+      "sha256": "9e10d077a7d18e2d2b21b874e12ed24d20314f356153ca0d36ec409026870b4c"
+    },
+    {
+      "file": "gf-rgl-master.zip",
+      "bytes": 46535093,
+      "sha256": "e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d"
+    }
+  ]
+}

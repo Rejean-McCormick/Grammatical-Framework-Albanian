@@ -1,593 +1,561 @@
-id,base,cat,quality,source,expr,note
-afër_A,afër,A,exact,RGL LexiconSqi,"mkA ""afër""",near_A
-barabartë_A,barabartë,A,compile-safe-placeholder,Tosk reference,"invariantA ""barabartë""",Tosk ref observed: barabarta; Compile-safe placeholder pending Albanian paradigm certification.
-bardhë_A,bardhë,A,exact,RGL LexiconSqi,"mkA ""bardhë""",white_A
-bosh_A,bosh,A,exact,RGL LexiconSqi,"mkA ""bosh""",empty_A
-boshnjak_A,boshnjak,A,compile-safe-placeholder,Tosk reference,"invariantA ""boshnjak""",Tosk ref observed: boshnjake; Compile-safe placeholder pending Albanian paradigm certification.
-botëror_A,botëror,A,compile-safe-placeholder,Tosk reference,"invariantA ""botëror""",Tosk ref observed: botërore; Compile-safe placeholder pending Albanian paradigm certification.
-budalla_A,budalla,A,exact,RGL LexiconSqi,"mkA ""budalla""",stupid_A
-bukur_A,bukur,A,exact,RGL LexiconSqi,"mkA ""bukur""",beautiful_A
-cilido_A,cilido,A,rgl-derived-explicit,Tosk reference,lin A from SN.which_IQuant + bound do,Tosk ref cilindo; full case/gender/number series derived from declined cili + do
-demokratik_A,demokratik,A,compile-safe-placeholder,Tosk reference,"invariantA ""demokratik""",Tosk ref observed: demokratik; Compile-safe placeholder pending Albanian paradigm certification.
-drejt_A,drejt,A,exact,RGL LexiconSqi,"mkA ""drejt""",straight_A
-ekonomik_A,ekonomik,A,compile-safe-placeholder,Tosk reference,"invariantA ""ekonomik""",Tosk ref observed: ekonomike; Compile-safe placeholder pending Albanian paradigm certification.
-flaktë_A,flaktë,A,compile-safe-placeholder,Tosk reference,"invariantA ""flaktë""",Tosk ref observed: flakta; Compile-safe placeholder pending Albanian paradigm certification.
-ftohtë_A,ftohtë,A,exact,RGL LexiconSqi,"mkA ""ftohtë""",cold_A
-fundit_A,fundit,A,compile-safe-placeholder,Tosk reference,"invariantA ""fundit""",Tosk ref observed: fundit; Compile-safe placeholder pending Albanian paradigm certification.
-gati_A,gati,A,exact,RGL LexiconSqi,"mkA ""gati""",ready_A
-gjatë_A,gjatë,A,exact,RGL LexiconSqi,"mkA ""gjatë""",long_A
-gjelbër_A,gjelbër,A,exact,RGL LexiconSqi,"mkA ""gjelbër""",green_A
-gjerë_A,gjerë,A,exact,RGL LexiconSqi,"mkA ""gjerë""",broad_A; wide_A
-gjinor_A,gjinor,A,compile-safe-placeholder,Tosk reference,"invariantA ""gjinor""",Tosk ref observed: gjinore; Compile-safe placeholder pending Albanian paradigm certification.
-hollë_A,hollë,A,exact,RGL LexiconSqi,"mkA ""hollë""",thin_A
-huaj_A,huaj,A,compile-safe-placeholder,Tosk reference,"invariantA ""huaj""",Tosk ref observed: huaj; Compile-safe placeholder pending Albanian paradigm certification.
-kafe_A,kafe,A,exact,RGL LexiconSqi,"mkA ""kafe""",brown_A
-kalbur_A,kalbur,A,exact,RGL LexiconSqi,"mkA ""kalbur""",rotten_A
-kaltër_A,kaltër,A,exact,RGL LexiconSqi,"mkA ""kaltër""",blue_A
-keq_A,keq,A,exact,RGL LexiconSqi,"mkA ""keq""",bad_A
-kombëtar_A,kombëtar,A,compile-safe-placeholder,Tosk reference,"invariantA ""kombëtar""",Tosk ref observed: kombëtare; Compile-safe placeholder pending Albanian paradigm certification.
-kulturor_A,kulturor,A,compile-safe-placeholder,Tosk reference,"invariantA ""kulturor""",Tosk ref observed: kulturore; Compile-safe placeholder pending Albanian paradigm certification.
-kuq_A,kuq,A,exact,RGL LexiconSqi,"mkA ""kuq""",red_A
-kushtetues_A,kushtetues,A,compile-safe-placeholder,Tosk reference,"invariantA ""kushtetues""",Tosk ref observed: kushtetues; Compile-safe placeholder pending Albanian paradigm certification.
-lagur_A,lagur,A,exact,RGL LexiconSqi,"mkA ""lagur""",wet_A
-lagët_A,lagët,A,compile-safe-placeholder,Tosk reference,"invariantA ""lagët""",Tosk ref observed: lagët; Compile-safe placeholder pending Albanian paradigm certification.
-lart_A,lart,A,compile-safe-placeholder,Tosk reference,"invariantA ""lart""",Tosk ref observed: lartë; Compile-safe placeholder pending Albanian paradigm certification.
-lehtë_A,lehtë,A,exact,RGL LexiconSqi,"mkA ""lehtë""",easy_A2V
-lëmuar_A,lëmuar,A,exact,RGL LexiconSqi,"mkA ""lëmuar""",smooth_A
-madh_A,madh,A,exact,RGL LexiconSqi,"mkA ""madh""",big_A
-martuar_A,martuar,A,exact,RGL LexiconSqi,"mkA ""martuar""",married_A2
-mirë_A,mirë,A,exact,RGL LexiconSqi,"mkA ""mirë""",good_A
-mprehtë_A,mprehtë,A,exact,RGL LexiconSqi,"mkA ""mprehtë""",sharp_A
-mundshëm_A,mundshëm,A,exact,RGL LexiconSqi,"mkA ""mundshëm""",probable_AS
-mërzitshëm_A,mërzitshëm,A,exact,RGL LexiconSqi,"mkA ""mërzitshëm""",dull_A
-ngrohtë_A,ngrohtë,A,exact,RGL LexiconSqi,"mkA ""ngrohtë""",warm_A
-ngushtë_A,ngushtë,A,exact,RGL LexiconSqi,"mkA ""ngushtë""",narrow_A
-nxehtë_A,nxehtë,A,exact,RGL LexiconSqi,"mkA ""nxehtë""",hot_A
-pamundur_A,pamundur,A,compile-safe-placeholder,Tosk reference,"invariantA ""pamundur""",Tosk ref observed: pamundur; Compile-safe placeholder pending Albanian paradigm certification.
-papritur_A,papritur,A,compile-safe-placeholder,Tosk reference,"invariantA ""papritur""",Tosk ref observed: papritur; Compile-safe placeholder pending Albanian paradigm certification.
-parë_A,parë,A,compile-safe-placeholder,Tosk reference,"invariantA ""parë""",Tosk ref observed: para; Compile-safe placeholder pending Albanian paradigm certification.
-pasigurt_A,pasigurt,A,exact,RGL LexiconSqi,"mkA ""pasigurt""",uncertain_A
-pastër_A,pastër,A,exact,RGL LexiconSqi,"mkA ""pastër""",clean_A
-pis_A,pis,A,exact,RGL LexiconSqi,"mkA ""pis""",dirty_A
-plot_A,plot,A,exact,RGL LexiconSqi,"mkA ""plot""",full_A
-politik_A,politik,A,compile-safe-placeholder,Tosk reference,"invariantA ""politik""",Tosk ref observed: politike; Compile-safe placeholder pending Albanian paradigm certification.
-porsaardhur_A,porsaardhur,A,compile-safe-placeholder,Tosk reference,"invariantA ""porsaardhur""",Tosk ref observed: porsaardhur; Compile-safe placeholder pending Albanian paradigm certification.
-përfundimtar_A,përfundimtar,A,compile-safe-placeholder,Tosk reference,"invariantA ""përfundimtar""",Tosk ref observed: përfundimtare; Compile-safe placeholder pending Albanian paradigm certification.
-ri_A,ri,A,exact,RGL LexiconSqi,"mkA ""ri""",new_A; young_A
-rom_A,rom,A,compile-safe-placeholder,Tosk reference,"invariantA ""rom""",Tosk ref observed: rome; Compile-safe placeholder pending Albanian paradigm certification.
-rrumbullakët_A,rrumbullakët,A,exact,RGL LexiconSqi,"mkA ""rrumbullakët""",round_A
-rëndë_A,rëndë,A,exact,RGL LexiconSqi,"mkA ""rëndë""",heavy_A
-rëndësishëm_A,rëndësishëm,A,exact,RGL LexiconSqi,"mkA ""rëndësishëm""",important_A
-saktë_A,saktë,A,exact,RGL LexiconSqi,"mkA ""saktë""",correct_A
-serb_A,serb,A,compile-safe-placeholder,Tosk reference,"invariantA ""serb""",Tosk ref observed: serbe; Compile-safe placeholder pending Albanian paradigm certification.
-shetëror_A,shetëror,A,compile-safe-placeholder,Tosk reference,"invariantA ""shetëror""",Tosk ref observed: shtetëror; Compile-safe placeholder pending Albanian paradigm certification.
-shkurtër_A,shkurtër,A,exact,RGL LexiconSqi,"mkA ""shkurtër""",short_A
-shoqëror_A,shoqëror,A,compile-safe-placeholder,Tosk reference,"invariantA ""shoqëror""",Tosk ref observed: shoqërore; Compile-safe placeholder pending Albanian paradigm certification.
-shqip_A,shqip,A,compile-safe-placeholder,Tosk reference,"invariantA ""shqip""",Tosk ref observed: shqipe; Compile-safe placeholder pending Albanian paradigm certification.
-shtetëror_A,shtetëror,A,compile-safe-placeholder,Tosk reference,"invariantA ""shtetëror""",Tosk ref observed: shtetërore; Compile-safe placeholder pending Albanian paradigm certification.
-shumetnik_A,shumetnik,A,compile-safe-placeholder,Tosk reference,"invariantA ""shumetnik""",Tosk ref observed: shumetnik; Compile-safe placeholder pending Albanian paradigm certification.
-shëmtuar_A,shëmtuar,A,exact,RGL LexiconSqi,"mkA ""shëmtuar""",ugly_A
-social_A,social,A,compile-safe-placeholder,Tosk reference,"invariantA ""social""",Tosk ref observed: sociale; Compile-safe placeholder pending Albanian paradigm certification.
-thatë_A,thatë,A,exact,RGL LexiconSqi,"mkA ""thatë""",dry_A
-themelor_A,themelor,A,compile-safe-placeholder,Tosk reference,"invariantA ""themelor""",Tosk ref observed: themelore; Compile-safe placeholder pending Albanian paradigm certification.
-tjetër_A,tjetër,A,compile-safe-placeholder,Tosk reference,"invariantA ""tjetër""","Tosk ref observed: tjera, tjetër; Compile-safe placeholder pending Albanian paradigm certification."
-trashë_A,trashë,A,exact,RGL LexiconSqi,"mkA ""trashë""",thick_A
-trishtuar_A,trishtuar,A,compile-safe-placeholder,Tosk reference,"invariantA ""trishtuar""",Tosk ref observed: trishtuar; Compile-safe placeholder pending Albanian paradigm certification.
-turk_A,turk,A,compile-safe-placeholder,Tosk reference,"invariantA ""turk""",Tosk ref observed: turke; Compile-safe placeholder pending Albanian paradigm certification.
-verdhë_A,verdhë,A,exact,RGL LexiconSqi,"mkA ""verdhë""",yellow_A
-vjetër_A,vjetër,A,exact,RGL LexiconSqi,"mkA ""vjetër""",old_A
-vogël_A,vogël,A,exact,RGL LexiconSqi,"mkA ""vogël""",small_A
-vërtetë_A,vërtetë,A,compile-safe-placeholder,Tosk reference,"invariantA ""vërtetë""",Tosk ref observed: vërtetë; Compile-safe placeholder pending Albanian paradigm certification.
-zbavitës_A,zbavitës,A,exact,RGL LexiconSqi,"mkA ""zbavitës""",fun_AV
-zgjuar_A,zgjuar,A,exact,RGL LexiconSqi,"mkA ""zgjuar""",clever_A
-zi_A,zi,A,exact,RGL LexiconSqi,"mkA ""zi""",black_A
-zjarrtë_A,zjarrtë,A,compile-safe-placeholder,Tosk reference,"invariantA ""zjarrtë""",Tosk ref observed: zjarrtë; Compile-safe placeholder pending Albanian paradigm certification.
-zyrtar_A,zyrtar,A,compile-safe-placeholder,Tosk reference,"invariantA ""zyrtar""","Tosk ref observed: zyrtar, zyrtare; Compile-safe placeholder pending Albanian paradigm certification."
-aq_Adv,aq,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""aq""",AdA/AdV/AdN normalized to Adv where applicable
-atje_Adv,atje,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""atje""",AdA/AdV/AdN normalized to Adv where applicable
-bashkë_Adv,bashkë,Adv,direct-invariant,Tosk reference,"mkAdv ""bashkë""",Tosk ref observed: bashkë
-diku_Adv,diku,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""diku""",AdA/AdV/AdN normalized to Adv where applicable
-edhe_Adv,edhe,Adv,direct-invariant,Tosk reference,"mkAdv ""edhe""",Tosk ref observed: edhe
-gjithmonë_Adv,gjithmonë,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""gjithmonë""",AdA/AdV/AdN normalized to Adv where applicable
-kudo_Adv,kudo,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""kudo""",AdA/AdV/AdN normalized to Adv where applicable
-kur_Adv,kur,Adv,direct-invariant,Tosk reference,"mkAdv ""kur""",Tosk ref observed: kur
-këtu_Adv,këtu,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""këtu""",AdA/AdV/AdN normalized to Adv where applicable
-larg_Adv,larg,Adv,exact,RGL LexiconSqi,"mkAdv ""larg""",far_Adv
-mjaft_Adv,mjaft,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""mjaft""",AdA/AdV/AdN normalized to Adv where applicable
-mos_Adv,mos,Adv,direct-invariant,Tosk reference,"mkAdv ""mos""",Tosk ref observed: mos
-më_Adv,më,Adv,direct-invariant,Tosk reference,"mkAdv ""më""",Tosk ref observed: më
-nuk_Adv,nuk,Adv,direct-invariant,Tosk reference,"mkAdv ""nuk""",Tosk ref observed: nuk
-para_Adv,para,Adv,direct-invariant,Tosk reference,"mkAdv ""para""",Tosk ref observed: para
-plot_Adv,plot,Adv,direct-invariant,Tosk reference,"mkAdv ""plot""",Tosk ref observed: plot
-pothuajse_Adv,pothuajse,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""pothuajse""",AdA/AdV/AdN normalized to Adv where applicable
-pëkundrazi_Adv,pëkundrazi,Adv,direct-invariant,Tosk reference,"mkAdv ""pëkundrazi""",Tosk ref observed: përkundrazi
-sa_Adv,sa,Adv,direct-invariant,Tosk reference,"mkAdv ""sa""",Tosk ref observed: sa
-shumë_Adv,shumë,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""shumë""",AdA/AdV/AdN normalized to Adv where applicable
-sot_Adv,sot,Adv,exact,RGL LexiconSqi,"mkAdv ""sot""",today_Adv
-taman_Adv,taman,Adv,direct-invariant,Tosk reference,"mkAdv ""taman""",Tosk ref observed: taman
-tani_Adv,tani,Adv,exact,RGL LexiconSqi,"mkAdv ""tani""",now_Adv
-tashmë_Adv,tashmë,Adv,exact,RGL LexiconSqi,"mkAdv ""tashmë""",already_Adv
-tepër_Adv,tepër,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""tepër""",AdA/AdV/AdN normalized to Adv where applicable
-vetëm_Adv,vetëm,Adv,direct-invariant,Tosk reference,"mkAdv ""vetëm""",Tosk ref observed: vetëm
-dhe_Conj,dhe,Conj,exact,RGL StructuralSqiClause,"mkConj ""dhe""",
-e_Conj,e,Conj,direct-invariant,Tosk reference,"mkConj ""e""",Tosk ref observed: e
-ose_Conj,ose,Conj,exact,RGL StructuralSqiClause,"mkConj ""ose""",
-por_Conj,por,Conj,direct-invariant,Tosk reference,"mkConj ""por""",Tosk ref observed: por
-pra_Conj,pra,Conj,direct-invariant,Tosk reference,"mkConj ""pra""",Tosk ref observed: pra
-që_Conj,që,Conj,direct-invariant,Tosk reference,"mkConj ""që""",Tosk ref observed: që
-sa_Conj,sa,Conj,direct-invariant,Tosk reference,"mkConj ""sa""",Tosk ref observed: sa
-se_Conj,se,Conj,direct-invariant,Tosk reference,"mkConj ""se""",Tosk ref observed: se
-sepse_Conj,sepse,Conj,direct-invariant,Tosk reference,"mkConj ""sepse""",Tosk ref observed: sepse
-si_Conj,si,Conj,direct-invariant,Tosk reference,"mkConj ""si""",Tosk ref observed: si
-sikur_Conj,sikur,Conj,direct-invariant,Tosk reference,"mkConj ""sikur""",Tosk ref observed: sikur
-të_Conj,të,Conj,direct-invariant,Tosk reference,"mkConj ""të""","Tosk ref observed: t'i, t'ia, t'ju, ta, të"
-disa_1_Det,disa,Det,exact,RGL StructuralSqiNominal,SN.somePl_Det,pl
-disa_2_Det,disa,Det,exact,RGL StructuralSqiNominal,SN.someSg_Det,sg
-pak_Det,pak,Det,exact,RGL StructuralSqiNominal,SN.few_Det,pl
-shumë_1_Det,shumë,Det,exact,RGL StructuralSqiNominal,SN.many_Det,pl
-shumë_2_Det,shumë,Det,exact,RGL StructuralSqiNominal,SN.much_Det,sg
-çdo_Det,çdo,Det,exact,RGL StructuralSqiNominal,SN.every_Det,sg
-ku_IAdv,ku,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""ku""",
-kur_IAdv,kur,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""kur""",
-pse_IAdv,pse,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""pse""",
-sa_IAdv,sa,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""sa""",
-si_IAdv,si,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""si""",
-sa_IDet,sa,IDet,exact,RGL StructuralSqiNominal,SN.how8many_IDet,
-kush_1_IP,kush,IP,exact,RGL StructuralSqiNominal,SN.whoPl_IP,pl
-kush_2_IP,kush,IP,exact,RGL StructuralSqiNominal,SN.whoSg_IP,sg
-çfarë_1_IP,çfarë,IP,exact,RGL StructuralSqiNominal,SN.whatPl_IP,pl
-çfarë_2_IP,çfarë,IP,exact,RGL StructuralSqiNominal,SN.whatSg_IP,sg
-cili_IQuant,cili,IQuant,exact,RGL StructuralSqiNominal,SN.which_IQuant,
-medet_Interj,medet,Interj,exact,RGL LexiconSqi,"mkInterj ""medet""",alas_Interj
-o_Interj,o,Interj,direct-invariant,Tosk reference,"mkInterj ""o""",Tosk ref observed: o
-Epir_N,Epir,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""Epir"") masculine","Tosk ref observed: Epir, Epirit; Compile-safe placeholder pending Albanian paradigm certification."
-Kosovë_N,Kosovë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""Kosovë"") feminine",Tosk ref observed: Kosovës; Compile-safe placeholder pending Albanian paradigm certification.
-Murat_N,Murat,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""Murat"") masculine",Tosk ref observed: Murati; Compile-safe placeholder pending Albanian paradigm certification.
-Shqipëri_N,Shqipëri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""Shqipëri"") feminine","Tosk ref observed: Shqipëri, Shqipërisë; Compile-safe placeholder pending Albanian paradigm certification."
-aeroplan_N,aeroplan,N,exact,RGL LexiconSqi,"mkN032 ""aeroplan""",airplane_N
-aeroport_N,aeroport,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""aeroport"") masculine",Tosk ref observed: aeroportit; Compile-safe placeholder pending Albanian paradigm certification.
-akull_N,akull,N,exact,RGL LexiconSqi,"mkN ""akull""",ice_N
-anije_N,anije,N,exact,RGL LexiconSqi,"mkN ""anije""",ship_N
-apartament_N,apartament,N,exact,RGL LexiconSqi,"mkN ""apartament""",apartment_N
-ar_N,ar,N,exact,RGL LexiconSqi,"mkN ""ar""",gold_N
-argjend_N,argjend,N,exact,RGL LexiconSqi,"mkN ""argjend""",silver_N
-armik_N,armik,N,exact,RGL LexiconSqi,"mkN ""armik""",enemy_N
-armë_N,armë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""armë"") feminine",Tosk ref observed: armët; Compile-safe placeholder pending Albanian paradigm certification.
-arsye_N,arsye,N,exact,RGL LexiconSqi,"mkN ""arsye""",reason_N
-art_N,art,N,exact,RGL LexiconSqi,"mkN ""art""",art_N
-asfalt_N,asfalt,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""asfalt"") masculine",Tosk ref observed: asfaltin; Compile-safe placeholder pending Albanian paradigm certification.
-atdhe_N,atdhe,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""atdhe"") masculine",Tosk ref observed: atdheut; Compile-safe placeholder pending Albanian paradigm certification.
-baba_N,baba,N,exact,RGL LexiconSqi,"mkN ""baba""",father_N2
-bankë_N,bankë,N,exact,RGL LexiconSqi,"mkN ""bankë""",bank_N
-bar_N,bar,N,exact,RGL LexiconSqi,"mkN ""bar""",grass_N
-barazi_N,barazi,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""barazi"") feminine","Tosk ref observed: barazinë, barazisë; Compile-safe placeholder pending Albanian paradigm certification."
-bark_N,bark,N,exact,RGL LexiconSqi,"mkN ""bark""",belly_N
-besnikëri_N,besnikëri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""besnikëri"") feminine",Tosk ref observed: besnikërinë; Compile-safe placeholder pending Albanian paradigm certification.
-beton_N,beton,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""beton"") masculine",Tosk ref observed: betonin; Compile-safe placeholder pending Albanian paradigm certification.
-birrë_N,birrë,N,exact,RGL LexiconSqi,"mkN ""birrë""",beer_N
-bisedim_N,bisedim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""bisedim"") masculine",Tosk ref observed: bisedimet; Compile-safe placeholder pending Albanian paradigm certification.
-bisht_N,bisht,N,exact,RGL LexiconSqi,"mkN ""bisht""",tail_N
-biçikletë_N,biçikletë,N,exact,RGL LexiconSqi,"mkN ""biçikletë""",bike_N
-borë_N,borë,N,exact,RGL LexiconSqi,"mkN ""borë""",snow_N
-breg_N,breg,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""breg"") masculine",Tosk ref observed: brigjet; Compile-safe placeholder pending Albanian paradigm certification.
-bri_N,bri,N,exact,RGL LexiconSqi,"mkN ""bri""",horn_N
-bukë_N,bukë,N,exact,RGL LexiconSqi,"mkN ""bukë""",bread_N
-burrë_N,burrë,N,exact,RGL LexiconSqi,mkNFull manNForms masculine,man_N
-dashuri_N,dashuri,N,exact,RGL LexiconSqi,"mkN ""dashuri""",love_N
-dele_N,dele,N,exact,RGL LexiconSqi,"mkN ""dele""",sheep_N
-demokraci_N,demokraci,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""demokraci"") feminine",Tosk ref observed: demokracisë; Compile-safe placeholder pending Albanian paradigm certification.
-derë_N,derë,N,exact,RGL LexiconSqi,"mkN ""derë""",door_N
-det_N,det,N,exact,RGL LexiconSqi,"mkN ""det""",sea_N
-dhjamë_N,dhjamë,N,exact,RGL LexiconSqi,"mkN ""dhjamë""",fat_N
-dhëmb_N,dhëmb,N,exact,RGL LexiconSqi,"mkN ""dhëmb""",tooth_N
-diell_N,diell,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""diell"") masculine",sun_N; Tosk characteristic form/gender applied
-distancë_N,distancë,N,exact,RGL LexiconSqi,"mkN ""distancë""",distance_N3
-ditë_N,ditë,N,exact,RGL LexiconSqi,"mkN ""ditë""",day_N
-djalë_N,djalë,N,exact,RGL LexiconSqi,mkNFull boyNForms masculine,boy_N
-djathë_N,djathë,N,exact,RGL LexiconSqi,"mkN ""djathë""",cheese_N
-dorezë_N,dorezë,N,exact,RGL LexiconSqi,"mkN ""dorezë""",glove_N
-dorë_N,dorë,N,exact,RGL LexiconSqi,"mkN ""dorë""",hand_N
-drejtë_N,drejtë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""drejtë"") feminine","Tosk ref observed: drejtave, drejtë, drejtës; Compile-safe placeholder pending Albanian paradigm certification."
-drejtësi_N,drejtësi,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""drejtësi"") feminine",Tosk ref observed: drejtësisë; Compile-safe placeholder pending Albanian paradigm certification.
-dritare_N,dritare,N,exact,RGL LexiconSqi,"mkN ""dritare""",window_N
-dru_N,dru,N,exact,RGL LexiconSqi,"mkN ""dru""",wood_N
-dyqan_N,dyqan,N,exact,RGL LexiconSqi,"mkN ""dyqan""",shop_N
-dysheme_N,dysheme,N,exact,RGL LexiconSqi,"mkN ""dysheme""",floor_N
-dëborë_N,dëborë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""dëborë"") feminine",Tosk ref observed: dëborë; Compile-safe placeholder pending Albanian paradigm certification.
-ekonomi_N,ekonomi,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""ekonomi"") feminine",Tosk ref observed: ekonomisë; Compile-safe placeholder pending Albanian paradigm certification.
-emër_N,emër,N,exact,RGL LexiconSqi,"mkN ""emër""",name_N
-erë_N,erë,N,exact,RGL LexiconSqi,"mkN ""erë""",wind_N
-eshtër_N,eshtër,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""eshtër"") feminine",Tosk ref observed: eshtrave; Compile-safe placeholder pending Albanian paradigm certification.
-fabrikë_N,fabrikë,N,exact,RGL LexiconSqi,"mkN ""fabrikë""",factory_N
-farë_N,farë,N,exact,RGL LexiconSqi,"mkN ""farë""",seed_N
-fat_N,fat,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""fat"") masculine",Tosk ref observed: fati; Compile-safe placeholder pending Albanian paradigm certification.
-fe_N,fe,N,exact,RGL LexiconSqi,"mkN ""fe""",religion_N
-femër_N,femër,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""femër"") feminine",Tosk ref observed: femrave; Compile-safe placeholder pending Albanian paradigm certification.
-fillim_N,fillim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""fillim"") masculine",Tosk ref observed: fillimi; Compile-safe placeholder pending Albanian paradigm certification.
-fitore_N,fitore,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""fitore"") feminine",Tosk ref observed: fitoren; Compile-safe placeholder pending Albanian paradigm certification.
-flamur_N,flamur,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""flamur"") masculine","Tosk ref observed: flamuri, flamurit; Compile-safe placeholder pending Albanian paradigm certification."
-flok_N,flok,N,exact,RGL LexiconSqi,"mkN ""flok""",hair_N
-foshnjë_N,foshnjë,N,exact,RGL LexiconSqi,"mkN ""foshnjë""",baby_N
-frigorifer_N,frigorifer,N,exact,RGL LexiconSqi,"mkN ""frigorifer""",fridge_N
-frut_N,frut,N,exact,RGL LexiconSqi,"mkN ""frut""",fruit_N
-fshat_N,fshat,N,exact,RGL LexiconSqi,"mkN ""fshat""",village_N
-fund_N,fund,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""fund"") masculine",Tosk ref observed: fund; Compile-safe placeholder pending Albanian paradigm certification.
-fushë_N,fushë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""fushë"") feminine","Tosk ref observed: fushat, fushën; Compile-safe placeholder pending Albanian paradigm certification."
-fëmijë_N,fëmijë,N,exact,RGL LexiconSqi,"mkN ""fëmijë""",child_N
-gazetë_N,gazetë,N,exact,RGL LexiconSqi,"mkN ""gazetë""",newspaper_N
-gjak_N,gjak,N,exact,RGL LexiconSqi,"mkN ""gjak""",blood_N
-gjalpë_N,gjalpë,N,exact,RGL LexiconSqi,"mkN ""gjalpë""",butter_N
-gjarpër_N,gjarpër,N,exact,RGL LexiconSqi,"mkN ""gjarpër""",snake_N
-gjeneral_N,gjeneral,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""gjeneral"") masculine","Tosk ref observed: gjenerali, gjeneralit; Compile-safe placeholder pending Albanian paradigm certification."
-gjethe_N,gjethe,N,exact,RGL LexiconSqi,"mkN ""gjethe""",leaf_N
-gji_N,gji,N,exact,RGL LexiconSqi,"mkN ""gji""",breast_N
-gju_N,gju,N,exact,RGL LexiconSqi,"mkN ""gju""",knee_N
-gjuhë_N,gjuhë,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""gjuhë"") feminine",language_N; Tosk characteristic form/gender applied; tongue_N; Tosk characteristic form/gender applied
-gojë_N,gojë,N,exact,RGL LexiconSqi,"mkN ""gojë""",mouth_N
-gomë_N,gomë,N,exact,RGL LexiconSqi,"mkN ""gomë""",rubber_N
-gramatikë_N,gramatikë,N,exact,RGL LexiconSqi,"mkN ""gramatikë""",grammar_N
-grua_N,grua,N,exact,RGL LexiconSqi,"mkN ""grua""",wife_N; woman_N
-gur_N,gur,N,exact,RGL LexiconSqi,"mkN ""gur""",stone_N
-gusht_N,gusht,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""gusht"") masculine",Tosk ref observed: gushtit; Compile-safe placeholder pending Albanian paradigm certification.
-hekur_N,hekur,N,exact,RGL LexiconSqi,"mkN ""hekur""",iron_N
-hi_N,hi,N,exact,RGL LexiconSqi,"mkN ""hi""",ashes_N
-himn_N,himn,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""himn"") masculine",Tosk ref observed: himni; Compile-safe placeholder pending Albanian paradigm certification.
-hundë_N,hundë,N,exact,RGL LexiconSqi,"mkN ""hundë""",nose_N
-hyrje_N,hyrje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""hyrje"") feminine",Tosk ref observed: hyrjes; Compile-safe placeholder pending Albanian paradigm certification.
-hënë_N,hënë,N,exact,RGL LexiconSqi,"mkN ""hënë""",moon_N
-industri_N,industri,N,exact,RGL LexiconSqi,"mkN ""industri""",industry_N
-jetë_N,jetë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""jetë"") feminine","Tosk ref observed: jetën, jetës; Compile-safe placeholder pending Albanian paradigm certification."
-kafshë_N,kafshë,N,exact,RGL LexiconSqi,"mkN ""kafshë""",animal_N
-kalë_N,kalë,N,exact,RGL LexiconSqi,"mkN ""kalë""",horse_N
-kamerë_N,kamerë,N,exact,RGL LexiconSqi,"mkN ""kamerë""",camera_N
-kapelë_N,kapelë,N,exact,RGL LexiconSqi,"mkN ""kapelë""",cap_N; hat_N
-karakter_N,karakter,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""karakter"") masculine",Tosk ref observed: karakterin; Compile-safe placeholder pending Albanian paradigm certification.
-karrige_N,karrige,N,exact,RGL LexiconSqi,"mkN ""karrige""",chair_N
-kishë_N,kishë,N,exact,RGL LexiconSqi,"mkN ""kishë""",church_N
-klimë_N,klimë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""klimë"") feminine",Tosk ref observed: klimën; Compile-safe placeholder pending Albanian paradigm certification.
-kockë_N,kockë,N,exact,RGL LexiconSqi,"mkN ""kockë""",bone_N
-kodër_N,kodër,N,exact,RGL LexiconSqi,"mkN ""kodër""",hill_N
-kohë_N,kohë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""kohë"") feminine",Tosk ref observed: kohën; Compile-safe placeholder pending Albanian paradigm certification.
-koicidencë_N,koicidencë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""koicidencë"") feminine",Tosk ref observed: koicidencë; Compile-safe placeholder pending Albanian paradigm certification.
-kokë_N,kokë,N,exact,RGL LexiconSqi,"mkN ""kokë""",head_N
-kompjuter_N,kompjuter,N,exact,RGL LexiconSqi,"mkN ""kompjuter""",computer_N
-komunë_N,komunë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""komunë"") feminine",Tosk ref observed: komune; Compile-safe placeholder pending Albanian paradigm certification.
-kontratë_N,kontratë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""kontratë"") feminine",Tosk ref observed: kontratat; Compile-safe placeholder pending Albanian paradigm certification.
-kopsht_N,kopsht,N,exact,RGL LexiconSqi,"mkN ""kopsht""",garden_N
-krah_N,krah,N,exact,RGL LexiconSqi,"mkN ""krah""",wing_N
-krimb_N,krimb,N,exact,RGL LexiconSqi,"mkN ""krimb""",worm_N
-kripë_N,kripë,N,exact,RGL LexiconSqi,"mkN ""kripë""",salt_N
-kushëri_N,kushëri,N,exact,RGL LexiconSqi,"mkN ""kushëri""",cousin_N
-këmbë_N,këmbë,N,exact,RGL LexiconSqi,"mkN ""këmbë""",foot_N; leg_N
-këmishë_N,këmishë,N,exact,RGL LexiconSqi,"mkN ""këmishë""",shirt_N
-këngë_N,këngë,N,exact,RGL LexiconSqi,"mkN ""këngë""",song_N
-këpucë_N,këpucë,N,exact,RGL LexiconSqi,"mkN ""këpucë""",shoe_N
-lavde_N,lavde,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""lavde"") feminine",Tosk ref observed: lavdet; Compile-safe placeholder pending Albanian paradigm certification.
-letër_N,letër,N,exact,RGL LexiconSqi,"mkN ""letër""",paper_N
-libër_N,libër,N,exact,RGL LexiconSqi,mkNFull bookNForms masculine,book_N
-ligj_N,ligj,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""ligj"") masculine","Tosk ref observed: ligj, ligjit; Compile-safe placeholder pending Albanian paradigm certification."
-liqen_N,liqen,N,exact,RGL LexiconSqi,"mkN ""liqen""",lake_N
-liri_N,liri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""liri"") feminine","Tosk ref observed: lirinë, lirisë, lirive; Compile-safe placeholder pending Albanian paradigm certification."
-litar_N,litar,N,exact,RGL LexiconSqi,"mkN ""litar""",rope_N
-llambë_N,llambë,N,exact,RGL LexiconSqi,"mkN ""llambë""",lamp_N
-lopë_N,lopë,N,exact,RGL LexiconSqi,"mkN ""lopë""",cow_N
-luftë_N,luftë,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""luftë"" ""luftra"") feminine",war_N; Tosk characteristic form/gender applied
-lule_N,lule,N,exact,RGL LexiconSqi,"mkN ""lule""",flower_N
-lumë_N,lumë,N,exact,RGL LexiconSqi,"mkN ""lumë""",river_N
-lëkurë_N,lëkurë,N,exact,RGL LexiconSqi,"mkN ""lëkurë""",leather_N; skin_N
-lëvore_N,lëvore,N,exact,RGL LexiconSqi,"mkN ""lëvore""",bark_N
-mace_N,mace,N,exact,RGL LexiconSqi,"mkN ""mace""",cat_N
-makinë_N,makinë,N,exact,RGL LexiconSqi,"mkN ""makinë""",car_N
-mal_N,mal,N,exact,RGL LexiconSqi,"mkN ""mal""",mountain_N
-mashkull_N,mashkull,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mashkull"") masculine",Tosk ref observed: meshkujve; Compile-safe placeholder pending Albanian paradigm certification.
-mbret_N,mbret,N,exact,RGL LexiconSqi,"mkN ""mbret""",king_N
-mbretëreshë_N,mbretëreshë,N,exact,RGL LexiconSqi,"mkN ""mbretëreshë""",queen_N
-mbretëri_N,mbretëri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mbretëri"") feminine",Tosk ref observed: mbretërisë; Compile-safe placeholder pending Albanian paradigm certification.
-mbrojtje_N,mbrojtje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mbrojtje"") feminine","Tosk ref observed: mbrojtja, mbrojtjes; Compile-safe placeholder pending Albanian paradigm certification."
-mik_N,mik,N,exact,RGL LexiconSqi,"mkN ""mik""",friend_N
-mish_N,mish,N,exact,RGL LexiconSqi,"mkN ""mish""",meat_N
-mision_N,mision,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mision"") masculine",Tosk ref observed: misioni; Compile-safe placeholder pending Albanian paradigm certification.
-mjedis_N,mjedis,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mjedis"") masculine",Tosk ref observed: mjedisit; Compile-safe placeholder pending Albanian paradigm certification.
-mjegull_N,mjegull,N,exact,RGL LexiconSqi,"mkN ""mjegull""",fog_N
-mjek_N,mjek,N,exact,RGL LexiconSqi,"mkN ""mjek""",doctor_N
-mollë_N,mollë,N,exact,RGL LexiconSqi,mkNFull appleNForms feminine,apple_N
-morr_N,morr,N,exact,RGL LexiconSqi,"mkN ""morr""",louse_N
-mosdiskriminim_N,mosdiskriminim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mosdiskriminim"") masculine",Tosk ref observed: mosdiskriminimit; Compile-safe placeholder pending Albanian paradigm certification.
-motër_N,motër,N,exact,RGL LexiconSqi,"mkN ""motër""",sister_N
-mundësi_N,mundësi,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mundësi"") feminine",Tosk ref observed: mundësi; Compile-safe placeholder pending Albanian paradigm certification.
-mur_N,mur,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mur"") masculine",Tosk ref observed: muret; Compile-safe placeholder pending Albanian paradigm certification.
-muzikë_N,muzikë,N,exact,RGL LexiconSqi,"mkN ""muzikë""",music_N
-mëlçi_N,mëlçi,N,exact,RGL LexiconSqi,"mkN ""mëlçi""",liver_N
-mënyrë_N,mënyrë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""mënyrë"") feminine",Tosk ref observed: mënyra; Compile-safe placeholder pending Albanian paradigm certification.
-mësues_N,mësues,N,exact,RGL LexiconSqi,"mkN ""mësues""",teacher_N
-natë_N,natë,N,exact,RGL LexiconSqi,"mkN ""natë""",night_N
-ndarje_N,ndarje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""ndarje"") masculine",Tosk ref observed: ndarjes; Compile-safe placeholder pending Albanian paradigm certification.
-nder_N,nder,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""nder"") masculine",Tosk ref observed: nderin; Compile-safe placeholder pending Albanian paradigm certification.
-ndërsë_N,ndërsë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""ndërsë"") feminine",Tosk ref observed: ndërtesat; Compile-safe placeholder pending Albanian paradigm certification.
-nivel_N,nivel,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""nivel"") masculine",Tosk ref observed: nivel; Compile-safe placeholder pending Albanian paradigm certification.
-njeri_N,njeri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""njeri"") masculine","Tosk ref observed: njeriu, njeriut; Compile-safe placeholder pending Albanian paradigm certification."
-numër_N,numër,N,exact,RGL LexiconSqi,"mkN ""numër""",number_N
-nënë_N,nënë,N,exact,RGL LexiconSqi,"mkN ""nënë""",mother_N2
-pajtim_N,pajtim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pajtim"") masculine",Tosk ref observed: pajtim; Compile-safe placeholder pending Albanian paradigm certification.
-pallto_N,pallto,N,exact,RGL LexiconSqi,"mkN ""pallto""",coat_N
-pamje_N,pamje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pamje"") feminine",Tosk ref observed: pamja; Compile-safe placeholder pending Albanian paradigm certification.
-paqe_N,paqe,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""paqe"") feminine",peace_N; Tosk characteristic form/gender applied
-parim_N,parim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""parim"") masculine",Tosk ref observed: parimet; Compile-safe placeholder pending Albanian paradigm certification.
-pemë_N,pemë,N,exact,RGL LexiconSqi,"mkN ""pemë""",tree_N
-pendë_N,pendë,N,exact,RGL LexiconSqi,"mkN ""pendë""",feather_N
-person_N,person,N,exact,RGL LexiconSqi,"mkN ""person""",person_N
-peshk_N,peshk,N,exact,RGL LexiconSqi,"mkN ""peshk""",fish_N
-pistë_N,pistë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pistë"") feminine",Tosk ref observed: pistës; Compile-safe placeholder pending Albanian paradigm certification.
-pjesë_N,pjesë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pjesë"") feminine",Tosk ref observed: pjesën; Compile-safe placeholder pending Albanian paradigm certification.
-pjesëmarrje_N,pjesëmarrje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pjesëmarrje"") feminine",Tosk ref observed: pjesëmarrje; Compile-safe placeholder pending Albanian paradigm certification.
-planet_N,planet,N,exact,RGL LexiconSqi,"mkN ""planet""",planet_N
-plastikë_N,plastikë,N,exact,RGL LexiconSqi,"mkN ""plastikë""",plastic_N
-plogështi_N,plogështi,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""plogështi"") feminine",Tosk ref observed: plogështia; Compile-safe placeholder pending Albanian paradigm certification.
-pluhur_N,pluhur,N,exact,RGL LexiconSqi,"mkN ""pluhur""",dust_N
-pluralizm_N,pluralizm,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pluralizm"") masculine",Tosk ref observed: pluralizmit; Compile-safe placeholder pending Albanian paradigm certification.
-polic_N,polic,N,exact,RGL LexiconSqi,"mkN ""polic""",policeman_N
-port_N,port,N,exact,RGL LexiconSqi,"mkN ""port""",harbour_N
-pranvëre_N,pranvëre,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pranvëre"") feminine",Tosk ref observed: pranverë; Compile-safe placeholder pending Albanian paradigm certification.
-prift_N,prift,N,exact,RGL LexiconSqi,"mkN ""prift""",priest_N
-pronë_N,pronë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pronë"") feminine",Tosk ref observed: pronës; Compile-safe placeholder pending Albanian paradigm certification.
-pushtet_N,pushtet,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""pushtet"") masculine",Tosk ref observed: pushtetit; Compile-safe placeholder pending Albanian paradigm certification.
-pyetje_N,pyetje,N,exact,RGL LexiconSqi,"mkN ""pyetje""",question_N
-pyll_N,pyll,N,exact,RGL LexiconSqi,"mkN ""pyll""",forest_N
-përdorim_N,përdorim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""përdorim"") masculine","Tosk ref observed: përdorim, përdorimit; Compile-safe placeholder pending Albanian paradigm certification."
-qafë_N,qafë,N,exact,RGL LexiconSqi,"mkN ""qafë""",neck_N
-qen_N,qen,N,exact,RGL LexiconSqi,"mkN ""qen""",dog_N
-qeveri_N,qeveri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""qeveri"") feminine",Tosk ref observed: qeverive; Compile-safe placeholder pending Albanian paradigm certification.
-qiell_N,qiell,N,exact,RGL LexiconSqi,"mkN ""qiell""",sky_N
-qilim_N,qilim,N,exact,RGL LexiconSqi,"mkN ""qilim""",carpet_N
-qumësht_N,qumësht,N,exact,RGL LexiconSqi,"mkN ""qumësht""",milk_N
-qytet_N,qytet,N,exact,RGL LexiconSqi,"mkN ""qytet""",city_N
-radio_N,radio,N,exact,RGL LexiconSqi,"mkN ""radio""",radio_N
-rast_N,rast,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""rast"") masculine",Tosk ref observed: rast; Compile-safe placeholder pending Albanian paradigm certification.
-re_N,re,N,exact,RGL LexiconSqi,"mkN ""re""",cloud_N
-rend_N,rend,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""rend"") masculine",Tosk ref observed: rendi; Compile-safe placeholder pending Albanian paradigm certification.
-republikë_N,republikë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""republikë"") feminine","Tosk ref observed: Republikës, republika, republikën, republikës; Compile-safe placeholder pending Albanian paradigm certification."
-respektim_N,respektim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""respektim"") masculine",Tosk ref observed: respektimit; Compile-safe placeholder pending Albanian paradigm certification.
-restorant_N,restorant,N,exact,RGL LexiconSqi,"mkN ""restorant""",restaurant_N
-rojë_N,rojë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""rojë"") feminine",Tosk ref observed: rojat; Compile-safe placeholder pending Albanian paradigm certification.
-rregull_N,rregull,N,exact,RGL LexiconSqi,"mkN ""rregull""",rule_N
-rrugë_N,rrugë,N,exact,RGL LexiconSqi,"mkN ""rrugë""",road_N
-rrënjë_N,rrënjë,N,exact,RGL LexiconSqi,"mkN ""rrënjë""",root_N
-rërë_N,rërë,N,exact,RGL LexiconSqi,"mkN ""rërë""",sand_N
-shef_N,shef,N,exact,RGL LexiconSqi,"mkN ""shef""",boss_N
-shi_N,shi,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""shi"") masculine",rain_N; Tosk characteristic form/gender applied
-shkak_N,shkak,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""shkak"") masculine",Tosk ref observed: shkaku; Compile-safe placeholder pending Albanian paradigm certification.
-shkencë_N,shkencë,N,exact,RGL LexiconSqi,"mkN ""shkencë""",science_N
-shkollë_N,shkollë,N,exact,RGL LexiconSqi,"mkN ""shkollë""",school_N
-shkop_N,shkop,N,exact,RGL LexiconSqi,"mkN ""shkop""",stick_N
-shkëmb_N,shkëmb,N,exact,RGL LexiconSqi,"mkN ""shkëmb""",rock_N
-shoqëri_N,shoqëri,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""shoqëri"") feminine",Tosk ref observed: shoqërisë; Compile-safe placeholder pending Albanian paradigm certification.
-shpinë_N,shpinë,N,exact,RGL LexiconSqi,"mkN ""shpinë""",back_N
-shpëtim_N,shpëtim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""shpëtim"") masculine",Tosk ref observed: shpëtimin; Compile-safe placeholder pending Albanian paradigm certification.
-shtet_N,shtet,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""shtet"") masculine",Tosk ref observed: shtet; Compile-safe placeholder pending Albanian paradigm certification.
-shtëpi_N,shtëpi,N,exact,RGL LexiconSqi,"mkN ""shtëpi""",house_N
-shëmbëllë_N,shëmbëllë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""shëmbëllë"") feminine",Tosk ref observed: shëmbëllën; Compile-safe placeholder pending Albanian paradigm certification.
-simbol_N,simbol,N,compile-safe-placeholder,Tosk reference,"invariantN ""simbol""","Tosk ref observed: simbolet, simboleve; Compile-safe placeholder pending Albanian paradigm certification."
-sobë_N,sobë,N,exact,RGL LexiconSqi,"mkN ""sobë""",stove_N
-sqotë_N,sqotë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""sqotë"") feminine",Tosk ref observed: sqota; Compile-safe placeholder pending Albanian paradigm certification.
-status_N,status,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""status"") masculine",Tosk ref observed: statusin; Compile-safe placeholder pending Albanian paradigm certification.
-stemë_N,stemë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""stemë"") feminine",Tosk ref observed: stema; Compile-safe placeholder pending Albanian paradigm certification.
-stilolaps_N,stilolaps,N,exact,RGL LexiconSqi,"mkN ""stilolaps""",pen_N
-student_N,student,N,exact,RGL LexiconSqi,"mkN ""student""",student_N
-sukses_N,sukses,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""sukses"") masculine",Tosk ref observed: sukses; Compile-safe placeholder pending Albanian paradigm certification.
-sundim_N,sundim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""sundim"") masculine",Tosk ref observed: sundimit; Compile-safe placeholder pending Albanian paradigm certification.
-svetigradas_N,svetigradas,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""svetigradas"") masculine",Tosk ref observed: sfetigradas; Compile-safe placeholder pending Albanian paradigm certification.
-sy_N,sy,N,exact,RGL LexiconSqi,"mkN ""sy""",eye_N
-tavan_N,tavan,N,exact,RGL LexiconSqi,"mkN ""tavan""",ceiling_N
-televizor_N,televizor,N,exact,RGL LexiconSqi,"mkN ""televizor""",television_N
-thua_N,thua,N,exact,RGL LexiconSqi,"mkN ""thua""",fingernail_N
-tjetër_N,tjetër,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""tjetër"") masculine",Tosk ref observed: tjerave; Compile-safe placeholder pending Albanian paradigm certification.
-tokë_N,tokë,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""tokë"") feminine",earth_N; Tosk characteristic form/gender applied
-treg_N,treg,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""treg"") masculine",Tosk ref observed: tregut; Compile-safe placeholder pending Albanian paradigm certification.
-tren_N,tren,N,exact,RGL LexiconSqi,"mkN ""tren""",train_N
-tryezë_N,tryezë,N,exact,RGL LexiconSqi,"mkN ""tryezë""",table_N
-turp_N,turp,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""turp"") masculine",Tosk ref observed: turp; Compile-safe placeholder pending Albanian paradigm certification.
-tym_N,tym,N,exact,RGL LexiconSqi,"mkN ""tym""",smoke_N
-tërheqje_N,tërheqje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""tërheqje"") feminine",Tosk ref observed: tërheqjen; Compile-safe placeholder pending Albanian paradigm certification.
-udhëheqje_N,udhëheqje,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""udhëheqje"") feminine",Tosk ref observed: udhëheqjen; Compile-safe placeholder pending Albanian paradigm certification.
-ujë_N,ujë,N,exact,RGL LexiconSqi,"mkN ""ujë""",water_N
-universitet_N,universitet,N,exact,RGL LexiconSqi,"mkN ""universitet""",university_N
-ushtar_N,ushtar,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""ushtar"") masculine","Tosk ref observed: ushtarët, ushtarëve; Compile-safe placeholder pending Albanian paradigm certification."
-vaj_N,vaj,N,exact,RGL LexiconSqi,"mkN ""vaj""",oil_N
-vajzë_N,vajzë,N,exact,RGL LexiconSqi,"mkN ""vajzë""",girl_N
-varkë_N,varkë,N,exact,RGL LexiconSqi,"mkN ""varkë""",boat_N
-vend_N,vend,N,exact,RGL LexiconSqi,"mkN ""vend""",country_N
-verë_N,verë,N,exact,RGL LexiconSqi,"mkN ""verë""",wine_N
-vesh_N,vesh,N,exact,RGL LexiconSqi,"mkN ""vesh""",ear_N
-vezë_N,vezë,N,exact,RGL LexiconSqi,"mkN ""vezë""",egg_N
-vit_N,vit,N,exact,RGL LexiconSqi,"mkN ""vit""",year_N
-vjeshtë_N,vjeshtë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""vjeshtë"") feminine","Tosk ref observed: vjeshta, vjeshtë, vjeshtës; Compile-safe placeholder pending Albanian paradigm certification."
-vlerë_N,vlerë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""vlerë"") feminine",Tosk ref observed: vlerë; Compile-safe placeholder pending Albanian paradigm certification.
-vranësirë_N,vranësirë,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""vranësirë"") feminine",Tosk ref observed: vranësirat; Compile-safe placeholder pending Albanian paradigm certification.
-vëlla_N,vëlla,N,exact,RGL LexiconSqi,"mkN ""vëlla""",brother_N2
-xhade_N,xhade,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""xhade"") feminine",Tosk ref observed: xhadesë; Compile-safe placeholder pending Albanian paradigm certification.
-yll_N,yll,N,exact,RGL LexiconSqi,"mkN ""yll""",star_N
-zemër_N,zemër,N,exact,RGL LexiconSqi,"mkN ""zemër""",heart_N
-zhvillim_N,zhvillim,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""zhvillim"") masculine",Tosk ref observed: zhvillimin; Compile-safe placeholder pending Albanian paradigm certification.
-zjarr_N,zjarr,N,exact,RGL LexiconSqi,"mkN ""zjarr""",fire_N
-zog_N,zog,N,exact,RGL LexiconSqi,"mkN ""zog""",bird_N
-zorrë_N,zorrë,N,exact,RGL LexiconSqi,"mkN ""zorrë""",guts_N
-zot_N,zot,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""zot"") masculine",Tosk ref observed: Zoti; Compile-safe placeholder pending Albanian paradigm certification.
-zëmër_N,zëmër,N,compile-safe-placeholder,Tosk reference,"forceGender (invariantN ""zëmër"") feminine",Tosk ref observed: zëmrat; Compile-safe placeholder pending Albanian paradigm certification.
-çati_N,çati,N,exact,RGL LexiconSqi,"mkN ""çati""",roof_N
-çelik_N,çelik,N,exact,RGL LexiconSqi,"mkN ""çelik""",steel_N
-çizme_N,çizme,N,exact,RGL LexiconSqi,"mkN ""çizme""",boot_N
-çorap_N,çorap,N,exact,RGL LexiconSqi,"mkN ""çorap""",sock_N
-asgjë_NP,asgjë,NP,exact,RGL StructuralSqiNominal,SN.nothing_NP,
-askush_NP,askush,NP,exact,RGL StructuralSqiNominal,SN.nobody_NP,
-dikush_NP,dikush,NP,exact,RGL StructuralSqiNominal,SN.somebody_NP,
-diçka_NP,diçka,NP,exact,RGL StructuralSqiNominal,SN.something_NP,
-gjithçka_NP,gjithçka,NP,exact,RGL StructuralSqiNominal,SN.everything_NP,
-Gjon_PN,Gjon,PN,exact,RGL LexiconSqi,"mkPN ""Gjon""",john_PN
-Paris_PN,Paris,PN,exact,RGL LexiconSqi,"mkPN ""Paris""",paris_PN
-jo_Predet,jo,Predet,exact,RGL StructuralSqiNominal,SN.not_Predet,
-shumica_Predet,shumica,Predet,exact,RGL StructuralSqiNominal,SN.most_Predet,
-vetëm_Predet,vetëm,Predet,exact,RGL StructuralSqiNominal,SN.only_Predet,
-gjatë_Prep,gjatë,Prep,exact,RGL StructuralSqiClause,"mkPrep ""gjatë"" ablative",governs ablative
-gjer_Prep,gjer,Prep,direct-with-government,Tosk reference,"mkPrep ""gjer"" accusative",Tosk ref observed: gjer
-i_Prep,i,Prep,exact,RGL StructuralSqiClause,"mkPrep ""i"" dative",governs dative
-kundrejt_Prep,kundrejt,Prep,direct-with-government,Tosk reference,"mkPrep ""kundrejt"" ablative",Tosk ref observed: kundrejt
-mbi_Prep,mbi,Prep,exact,RGL StructuralSqiClause,"mkPrep ""mbi"" accusative",governs accusative
-me_Prep,me,Prep,exact,RGL StructuralSqiClause,"mkPrep ""me"" accusative",governs accusative
-midis_Prep,midis,Prep,exact,RGL StructuralSqiClause,"mkPrep ""midis"" ablative",governs ablative
-nga_Prep,nga,Prep,exact,RGL StructuralSqiClause,"mkPrep ""nga"" ablative",governs ablative
-në_Prep,në,Prep,exact,RGL StructuralSqiClause,"mkPrep ""në"" accusative",governs accusative
-nën_Prep,nën,Prep,exact,RGL StructuralSqiClause,"mkPrep ""nën"" accusative",governs accusative
-pa_Prep,pa,Prep,exact,RGL StructuralSqiClause,"mkPrep ""pa"" accusative",governs accusative
-para_Prep,para,Prep,exact,RGL StructuralSqiClause,"mkPrep ""para"" ablative",governs ablative
-pas_Prep,pas,Prep,exact,RGL StructuralSqiClause,"mkPrep ""pas"" ablative",governs ablative
-prej_Prep,prej,Prep,exact,RGL StructuralSqiClause,"mkPrep ""prej"" ablative",governs ablative
-për_Prep,për,Prep,exact,RGL StructuralSqiClause,"mkPrep ""për"" accusative",governs accusative
-përmes_Prep,përmes,Prep,exact,RGL StructuralSqiClause,"mkPrep ""përmes"" ablative",governs ablative
-përpara_Prep,përpara,Prep,exact,RGL StructuralSqiClause,"mkPrep ""përpara"" ablative",governs ablative
-përveç_Prep,përveç,Prep,exact,RGL StructuralSqiClause,"mkPrep ""përveç"" ablative",governs ablative
-që_Prep,që,Prep,direct-with-government,Tosk reference,"mkPrep ""që"" accusative",Tosk ref observed: që
-sipër_Prep,sipër,Prep,exact,RGL StructuralSqiClause,"mkPrep ""sipër"" ablative",governs ablative
-ai_Pron,ai,Pron,exact,RGL StructuralSqiNominal,SN.he_Pron,
-ajo_Pron,ajo,Pron,exact,RGL StructuralSqiNominal,SN.she_Pron,
-ata_Pron,ata,Pron,exact,RGL StructuralSqiNominal,SN.they_Pron,
-ju_Pron,ju,Pron,exact,RGL StructuralSqiNominal,SN.youPl_Pron,
-ne_Pron,ne,Pron,exact,RGL StructuralSqiNominal,SN.we_Pron,
-ti_Pron,ti,Pron,exact,RGL StructuralSqiNominal,SN.youSg_Pron,
-unë_Pron,unë,Pron,exact,RGL StructuralSqiNominal,SN.i_Pron,
-ai_Quant,ai,Quant,exact,RGL StructuralSqiNominal,SN.that_Quant,demonstrative
-asnjë_Quant,asnjë,Quant,exact,RGL StructuralSqiNominal,SN.no_Quant,
-ky_Quant,ky,Quant,exact,RGL StructuralSqiNominal,SN.this_Quant,demonstrative
-kur_Subj,kur,Subj,exact,RGL StructuralSqiClause,"mkSubj ""kur""",
-megjithëse_Subj,megjithëse,Subj,exact,RGL StructuralSqiClause,"mkSubj ""megjithëse""",
-nëse_Subj,nëse,Subj,exact,RGL StructuralSqiClause,"mkSubj ""nëse""",
-që_Subj,që,Subj,exact,RGL StructuralSqiClause,"mkSubj ""që""",
-sepse_Subj,sepse,Subj,exact,RGL StructuralSqiClause,"mkSubj ""sepse""",
-bazohem_V,bazohem,V,compile-safe-placeholder,Tosk reference,"invariantV ""bazohem""",Tosk ref observed: bazohet; Compile-safe placeholder pending Albanian paradigm certification.
-bie_V,bie,V,exact-irregular,RGL IrregSqi,lin V I.bie_V,bie_V
-blej_V,blej,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.blej_V,blej_V; buy_V2
-bëhem_V,bëhem,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.behem_V,become_VA; behem_V
-bëj_V,bëj,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.bej_V,bej_V; do_V2
-dal_V,dal,V,exact-irregular,RGL IrregSqi,lin V I.dal_V,dal_V
-dashuroj_V,dashuroj,V,exact,RGL LexiconSqi,"mkV ""dashuroj""",love_V2
-di_V,di,V,exact,RGL StructuralSqiVerbal,"irregV ""di"" ""di"" ""di"" ""dimë"" ""dini"" ""dinë"" ""di"" ""dini"" ""ditur""",
-digjem_V,digjem,V,exact,RGL LexiconSqi,"mkV ""digjem""",burn_V
-druaj_V,druaj,V,exact,RGL LexiconSqi,"mkV ""druaj""",fear_V2; fear_VS
-dua_V,dua,V,exact-irregular,RGL IrregSqi,lin V I.dua_V,dua_V
-duhem_V,duhem,V,compile-safe-placeholder,Tosk reference,"invariantV ""duhem""",Tosk ref observed: duhet; Compile-safe placeholder pending Albanian paradigm certification.
-duhet_V,duhet,V,exact,RGL StructuralSqiVerbal,"invariantV ""duhet""",
-dukem_V,dukem,V,compile-safe-placeholder,Tosk reference,"invariantV ""dukem""","Tosk ref observed: dukej, dukur; Compile-safe placeholder pending Albanian paradigm certification."
-dëgjoj_V,dëgjoj,V,exact,RGL LexiconSqi,"mkV ""dëgjoj""",hear_V2; listen_V2
-dërgoj_V,dërgoj,V,exact,RGL LexiconSqi,"mkV ""dërgoj""",send_V3
-eci_V,eci,V,exact-irregular,RGL IrregSqi,lin V I.eci_V,eci_V
-fik_V,fik,V,exact,RGL LexiconSqi,"mkV ""fik""",switch8off_V2
-filloj_V,filloj,V,compile-safe-placeholder,Tosk reference,"invariantV ""filloj""","Tosk ref observed: fillojë, filluan, filluar; Compile-safe placeholder pending Albanian paradigm certification."
-fitoj_V,fitoj,V,exact,RGL LexiconSqi,"mkV ""fitoj""",win_V2
-flas_V,flas,V,exact,RGL LexiconSqi,"mkV ""flas""",speak_V2; talk_V3
-fle_V,fle,V,exact,RGL LexiconSqi,"invariantV ""fle""",sleep_V
-fluturoj_V,fluturoj,V,exact,RGL LexiconSqi,"mkV ""fluturoj""",fly_V
-fryhem_V,fryhem,V,exact,RGL LexiconSqi,"mkV ""fryhem""",swell_V
-fryj_V,fryj,V,exact,RGL LexiconSqi,"mkV ""fryj""",blow_V
-frymoj_V,frymoj,V,exact,RGL LexiconSqi,"mkV ""frymoj""",breathe_V
-fshij_V,fshij,V,exact,RGL LexiconSqi,"mkV ""fshij""",wipe_V2
-fërkoj_V,fërkoj,V,exact,RGL LexiconSqi,"mkV ""fërkoj""",rub_V2
-gjej_V,gjej,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.gjej_V,find_V2; gjej_V
-gjuaj_V,gjuaj,V,exact,RGL LexiconSqi,"mkV ""gjuaj""",hunt_V2
-godit_V,godit,V,exact,RGL LexiconSqi,"mkV ""godit""",hit_V2
-gënjej_V,gënjej,V,exact,RGL LexiconSqi,"mkV ""gënjej""",lie_V
-gërmoj_V,gërmoj,V,exact,RGL LexiconSqi,"mkV ""gërmoj""",dig_V
-gërvisht_V,gërvisht,V,exact,RGL LexiconSqi,"mkV ""gërvisht""",scratch_V2
-ha_V,ha,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.ha_V,eat_V2; ha_V
-hap_V,hap,V,exact,RGL LexiconSqi,"mkV ""hap""",open_V2
-harroj_V,harroj,V,exact,RGL LexiconSqi,"mkV ""harroj""",forget_V2
-hedh_V,hedh,V,exact,RGL LexiconSqi,"mkV ""hedh""",throw_V2
-humb_V,humb,V,exact,RGL LexiconSqi,"mkV ""humb""",lose_V2
-hyj_V,hyj,V,exact-irregular,RGL IrregSqi,lin V I.hyj_V,hyj_V
-iki_V,iki,V,exact-irregular,RGL IrregSqi,lin V I.iki_V,iki_V
-jam_V,jam,V,exact-irregular,RGL IrregSqi,lin V I.jam_V,jam_V
-jap_V,jap,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.jap_V,give_V3; jap_V
-jetoj_V,jetoj,V,exact,RGL LexiconSqi,"mkV ""jetoj""",live_V
-kafshoj_V,kafshoj,V,exact,RGL LexiconSqi,"mkV ""kafshoj""",bite_V2
-kam_V,kam,V,exact-irregular,RGL IrregSqi,lin V I.kam_V,kam_V
-kryej_V,kryej,V,compile-safe-placeholder,Tosk reference,"invariantV ""kryej""",Tosk ref observed: kryera; Compile-safe placeholder pending Albanian paradigm certification.
-kryhem_V,kryhem,V,compile-safe-placeholder,Tosk reference,"invariantV ""kryhem""",Tosk ref observed: kryhej; Compile-safe placeholder pending Albanian paradigm certification.
-kthehem_V,kthehem,V,exact,RGL LexiconSqi,"mkV ""kthehem""",turn_V
-kthen_V,kthen,V,compile-safe-placeholder,Tosk reference,"invariantV ""kthen""",Tosk ref observed: ktheni; Compile-safe placeholder pending Albanian paradigm certification.
-kuptoj_V,kuptoj,V,exact,RGL LexiconSqi,"mkV ""kuptoj""",know_VQ; know_VS; understand_V2
-këndoj_V,këndoj,V,exact,RGL LexiconSqi,"mkV ""këndoj""",sing_V
-kërcej_V,kërcej,V,exact,RGL LexiconSqi,"mkV ""kërcej""",jump_V
-kërkoj_V,kërkoj,V,exact,RGL LexiconSqi,"mkV ""kërkoj""",seek_V2
-lag_V,lag,V,compile-safe-placeholder,Tosk reference,"invariantV ""lag""",Tosk ref observed: lagte; Compile-safe placeholder pending Albanian paradigm certification.
-laj_V,laj,V,exact,RGL LexiconSqi,"mkV ""laj""",wash_V2
-lexoj_V,lexoj,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""lexoj"" ""lexuar""",read_V2; Tosk participle applied
-lidh_V,lidh,V,exact,RGL LexiconSqi,"mkV ""lidh""",tie_V2
-luaj_V,luaj,V,exact,RGL LexiconSqi,"mkV ""luaj""",play_V; play_V2
-luftoj_V,luftoj,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""luftoj"" ""luftuar""",fight_V2; Tosk participle applied
-lutem_V,lutem,V,exact,RGL LexiconSqi,"mkV ""lutem""",beg_V2V
-lyej_V,lyej,V,exact,RGL LexiconSqi,"mkV ""lyej""",paint_V2A
-lë_V,lë,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""lë"" ""lënë""",leave_V2; Tosk participle applied
-mbaj_V,mbaj,V,exact,RGL LexiconSqi,"mkV ""mbaj""",hold_V2
-mbyll_V,mbyll,V,exact,RGL LexiconSqi,"mkV ""mbyll""",close_V2
-mendoj_V,mendoj,V,exact,RGL LexiconSqi,"mkV ""mendoj""",think_V
-meritoj_V,meritoj,V,compile-safe-placeholder,Tosk reference,"invariantV ""meritoj""",Tosk ref observed: merituar; Compile-safe placeholder pending Albanian paradigm certification.
-monoton_V,monoton,V,compile-safe-placeholder,Tosk reference,"invariantV ""monoton""",Tosk ref observed: monoton; Compile-safe placeholder pending Albanian paradigm certification.
-mund_V,mund,V,exact,RGL StructuralSqiVerbal,"invariantV ""mund""",
-mësoj_V,mësoj,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""mësoj"" ""mësuar""",learn_V2; Tosk participle applied; teach_V2; Tosk participle applied
-ndaj_V,ndaj,V,exact,RGL LexiconSqi,"mkV ""ndaj""",split_V2
-ndalem_V,ndalem,V,exact,RGL LexiconSqi,"mkV ""ndalem""",stop_V
-ndez_V,ndez,V,exact,RGL LexiconSqi,"mkV ""ndez""",switch8on_V2
-ngre_V,ngre,V,exact-irregular,RGL IrregSqi,lin V I.ngre_V,ngre_V
-ngrij_V,ngrij,V,exact,RGL LexiconSqi,"mkV ""ngrij""",freeze_V
-nisem_V,nisem,V,compile-safe-placeholder,Tosk reference,"invariantV ""nisem""",Tosk ref observed: nisej; Compile-safe placeholder pending Albanian paradigm certification.
-njoh_V,njoh,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.njoh_V,know_V2; njoh_V
-notoj_V,notoj,V,exact,RGL LexiconSqi,"mkV ""notoj""",swim_V
-nuhas_V,nuhas,V,exact,RGL LexiconSqi,"mkV ""nuhas""",smell_V
-numëroj_V,numëroj,V,exact,RGL LexiconSqi,"mkV ""numëroj""",count_V2
-nënshkruaj_V,nënshkruaj,V,compile-safe-placeholder,Tosk reference,"invariantV ""nënshkruaj""",Tosk ref observed: nënshkruan; Compile-safe placeholder pending Albanian paradigm certification.
-pasqyroj_V,pasqyroj,V,compile-safe-placeholder,Tosk reference,"invariantV ""pasqyroj""",Tosk ref observed: pasqyrojnë; Compile-safe placeholder pending Albanian paradigm certification.
-pi_V,pi,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.pi_V,drink_V2; pi_V
-pluskoj_V,pluskoj,V,exact,RGL LexiconSqi,"mkV ""pluskoj""",float_V
-pres_V,pres,V,exact,RGL LexiconSqi,"mkV ""pres""",cut_V2; wait_V2
-pyes_V,pyes,V,exact,RGL LexiconSqi,"mkV ""pyes""",ask_V2Q
-pëlqej_V,pëlqej,V,exact,RGL LexiconSqi,"mkV ""pëlqej""",like_V2
-përgjigjem_V,përgjigjem,V,exact,RGL LexiconSqi,"mkV ""përgjigjem""",answer_V2S
-përpiqem_V,përpiqem,V,compile-safe-placeholder,Tosk reference,"invariantV ""përpiqem""",Tosk ref observed: përpiqeni; Compile-safe placeholder pending Albanian paradigm certification.
-përziej_V,përziej,V,compile-safe-placeholder,Tosk reference,"invariantV ""përziej""",Tosk ref observed: përzier; Compile-safe placeholder pending Albanian paradigm certification.
-pështyj_V,pështyj,V,exact,RGL LexiconSqi,"mkV ""pështyj""",spit_V
-qep_V,qep,V,exact,RGL LexiconSqi,"mkV ""qep""",sew_V
-qesh_V,qesh,V,exact,RGL LexiconSqi,"mkV ""qesh""",laugh_V
-qull_V,qull,V,compile-safe-placeholder,Tosk reference,"invariantV ""qull""",Tosk ref observed: qullur; Compile-safe placeholder pending Albanian paradigm certification.
-qëndroj_V,qëndroj,V,exact,RGL LexiconSqi,"mkV ""qëndroj""",stand_V
-rregullohem_V,rregullohem,V,compile-safe-placeholder,Tosk reference,"invariantV ""rregullohem""","Tosk ref observed: rregullohen, rregullohet; Compile-safe placeholder pending Albanian paradigm certification."
-rrjedh_V,rrjedh,V,exact,RGL LexiconSqi,"mkV ""rrjedh""",flow_V
-rrëmbej_V,rrëmbej,V,compile-safe-placeholder,Tosk reference,"invariantV ""rrëmbej""",Tosk ref observed: rrëmbeni; Compile-safe placeholder pending Albanian paradigm certification.
-rrëzohem_V,rrëzohem,V,exact,RGL LexiconSqi,"mkV ""rrëzohem""",fall_V
-shes_V,shes,V,exact,RGL LexiconSqi,"mkV ""shes""",sell_V3
-shikoj_V,shikoj,V,exact,RGL LexiconSqi,"mkV ""shikoj""",watch_V2
-shkoj_V,shkoj,V,exact,RGL LexiconSqi,"mkV ""shkoj""",go_V
-shkruaj_V,shkruaj,V,exact,RGL LexiconSqi,"mkV ""shkruaj""",write_V2
-shkruhem_V,shkruhem,V,compile-safe-placeholder,Tosk reference,"invariantV ""shkruhem""",Tosk ref observed: shkruhej; Compile-safe placeholder pending Albanian paradigm certification.
-shkëlqej_V,shkëlqej,V,compile-safe-placeholder,Tosk reference,"invariantV ""shkëlqej""",Tosk ref observed: shkëlqente; Compile-safe placeholder pending Albanian paradigm certification.
-shoh_V,shoh,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.shoh_V,see_V2; shoh_V
-shpresoj_V,shpresoj,V,exact,RGL LexiconSqi,"mkV ""shpresoj""",hope_VS
-shtoj_V,shtoj,V,exact,RGL LexiconSqi,"mkV ""shtoj""",add_V3
-shtrydh_V,shtrydh,V,exact,RGL LexiconSqi,"mkV ""shtrydh""",squeeze_V2
-shtyj_V,shtyj,V,exact,RGL LexiconSqi,"mkV ""shtyj""",push_V2
-shëtis_V,shëtis,V,exact,RGL LexiconSqi,"mkV ""shëtis""",walk_V
-siguroj_V,siguroj,V,compile-safe-placeholder,Tosk reference,"invariantV ""siguroj""",Tosk ref observed: siguron; Compile-safe placeholder pending Albanian paradigm certification.
-them_V,them,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.them_V,say_VS; them_V
-ther_V,ther,V,exact,RGL LexiconSqi,"mkV ""ther""",stab_V2
-thith_V,thith,V,exact,RGL LexiconSqi,"mkV ""thith""",suck_V2
-thyej_V,thyej,V,exact,RGL LexiconSqi,"mkV ""thyej""",break_V2
-tërheq_V,tërheq,V,exact,RGL LexiconSqi,"mkV ""tërheq""",pull_V2
-udhëtoj_V,udhëtoj,V,exact,RGL LexiconSqi,"mkV ""udhëtoj""",travel_V
-ulem_V,ulem,V,exact,RGL LexiconSqi,"mkV ""ulem""",sit_V
-urrej_V,urrej,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.urrej_V,hate_V2; urrej_V
-varem_V,varem,V,compile-safe-placeholder,Tosk reference,"invariantV ""varem""",Tosk ref observed: varet; Compile-safe placeholder pending Albanian paradigm certification.
-vdes_V,vdes,V,exact,RGL LexiconSqi,"mkV ""vdes""",die_V
-vendos_V,vendos,V,exact,RGL LexiconSqi,"mkV ""vendos""",put_V2
-vij_V,vij,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.vij_V,come_V; vij_V
-vjell_V,vjell,V,exact,RGL LexiconSqi,"mkV ""vjell""",vomit_V
-vrapoj_V,vrapoj,V,exact,RGL LexiconSqi,"mkV ""vrapoj""",run_V
-vras_V,vras,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""vras"" ""vrarë""",kill_V2; Tosk participle applied
-vulos_V,vulos,V,compile-safe-placeholder,Tosk reference,"invariantV ""vulos""",Tosk ref observed: vulosur; Compile-safe placeholder pending Albanian paradigm certification.
-vë_V,vë,V,exact-irregular,RGL IrregSqi,lin V I.ve_V,ve_V
+id,base,cat,quality,source,expr,certification,compile_status,note
+aeroplan_N,aeroplan,N,exact,RGL LexiconSqi,"mkN032 ""aeroplan""",C2,declared-baseline-not-reproved-by-this-build,airplane_N
+aeroport_N,aeroport,N,evidence-matched-explicit-class,Tosk reference,"mkN005 ""aeroport""",C2,requires-post-campaign-gf312-run,Tosk observed forms aeroportit; mkN005 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+afër_A,afër,A,exact,RGL LexiconSqi,"mkA ""afër""",C1,declared-baseline-not-reproved-by-this-build,near_A
+ai_Pron,ai,Pron,exact,RGL StructuralSqiNominal,SN.he_Pron,C2,declared-baseline-not-reproved-by-this-build,
+ai_Quant,ai,Quant,exact,RGL StructuralSqiNominal,SN.that_Quant,C2,declared-baseline-not-reproved-by-this-build,demonstrative
+ajo_Pron,ajo,Pron,exact,RGL StructuralSqiNominal,SN.she_Pron,C2,declared-baseline-not-reproved-by-this-build,
+akull_N,akull,N,exact,RGL LexiconSqi,"mkN ""akull""",C1,declared-baseline-not-reproved-by-this-build,ice_N
+anije_N,anije,N,exact,RGL LexiconSqi,"mkN ""anije""",C1,declared-baseline-not-reproved-by-this-build,ship_N
+apartament_N,apartament,N,exact,RGL LexiconSqi,"mkN ""apartament""",C1,declared-baseline-not-reproved-by-this-build,apartment_N
+aq_Adv,aq,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""aq""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+ar_N,ar,N,exact,RGL LexiconSqi,"mkN ""ar""",C1,declared-baseline-not-reproved-by-this-build,gold_N
+argjend_N,argjend,N,exact,RGL LexiconSqi,"mkN ""argjend""",C1,declared-baseline-not-reproved-by-this-build,silver_N
+armik_N,armik,N,exact,RGL LexiconSqi,"mkN ""armik""",C1,declared-baseline-not-reproved-by-this-build,enemy_N
+arsye_N,arsye,N,exact,RGL LexiconSqi,"mkN ""arsye""",C1,declared-baseline-not-reproved-by-this-build,reason_N
+art_N,art,N,exact,RGL LexiconSqi,"mkN ""art""",C1,declared-baseline-not-reproved-by-this-build,art_N
+asgjë_NP,asgjë,NP,exact,RGL StructuralSqiNominal,SN.nothing_NP,C2,declared-baseline-not-reproved-by-this-build,
+askush_NP,askush,NP,exact,RGL StructuralSqiNominal,SN.nobody_NP,C2,declared-baseline-not-reproved-by-this-build,
+asnjë_Quant,asnjë,Quant,exact,RGL StructuralSqiNominal,SN.no_Quant,C2,declared-baseline-not-reproved-by-this-build,
+ata_Pron,ata,Pron,exact,RGL StructuralSqiNominal,SN.they_Pron,C2,declared-baseline-not-reproved-by-this-build,
+atje_Adv,atje,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""atje""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+baba_N,baba,N,exact,RGL LexiconSqi,"mkN ""baba""",C1,declared-baseline-not-reproved-by-this-build,father_N2
+bankë_N,bankë,N,exact,RGL LexiconSqi,"mkN ""bankë""",C1,declared-baseline-not-reproved-by-this-build,bank_N
+bar_N,bar,N,exact,RGL LexiconSqi,"mkN ""bar""",C1,declared-baseline-not-reproved-by-this-build,grass_N
+barabartë_A,barabartë,A,evidence-matched-explicit-class,Tosk reference,"mkA013 ""barabartë""",C2,requires-post-campaign-gf312-run,Tosk observed forms barabarta; mkA013 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+bardhë_A,bardhë,A,exact,RGL LexiconSqi,"mkA ""bardhë""",C1,declared-baseline-not-reproved-by-this-build,white_A
+bark_N,bark,N,exact,RGL LexiconSqi,"mkN ""bark""",C1,declared-baseline-not-reproved-by-this-build,belly_N
+bashkë_Adv,bashkë,Adv,direct-invariant,Tosk reference,"mkAdv ""bashkë""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: bashkë
+bazohem_V,bazohem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""bazohem""",C2,requires-post-campaign-gf312-run,Tosk observed forms bazohet; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+beton_N,beton,N,evidence-matched-explicit-class,Tosk reference,"mkN020 ""beton""",C2,requires-post-campaign-gf312-run,Tosk observed forms betonin; mkN020 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+bie_V,bie,V,exact-irregular,RGL IrregSqi,lin V I.bie_V,C2,declared-baseline-not-reproved-by-this-build,bie_V
+birrë_N,birrë,N,exact,RGL LexiconSqi,"mkN ""birrë""",C1,declared-baseline-not-reproved-by-this-build,beer_N
+bisedim_N,bisedim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""bisedim""",C2,requires-post-campaign-gf312-run,Tosk observed forms bisedimet; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+bisht_N,bisht,N,exact,RGL LexiconSqi,"mkN ""bisht""",C1,declared-baseline-not-reproved-by-this-build,tail_N
+biçikletë_N,biçikletë,N,exact,RGL LexiconSqi,"mkN ""biçikletë""",C1,declared-baseline-not-reproved-by-this-build,bike_N
+blej_V,blej,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.blej_V,C2,declared-baseline-not-reproved-by-this-build,blej_V; buy_V2
+borë_N,borë,N,exact,RGL LexiconSqi,"mkN ""borë""",C1,declared-baseline-not-reproved-by-this-build,snow_N
+bosh_A,bosh,A,exact,RGL LexiconSqi,"mkA ""bosh""",C1,declared-baseline-not-reproved-by-this-build,empty_A
+boshnjak_A,boshnjak,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""boshnjak""",C2,requires-post-campaign-gf312-run,Tosk observed forms boshnjake; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+botëror_A,botëror,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""botëror""",C2,requires-post-campaign-gf312-run,Tosk observed forms botërore; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+breg_N,breg,N,evidence-matched-explicit-class,Tosk reference,"mkN096 ""breg""",C2,requires-post-campaign-gf312-run,Tosk observed forms brigjet; mkN096 selected by unique-numbered-class-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+bri_N,bri,N,exact,RGL LexiconSqi,"mkN ""bri""",C1,declared-baseline-not-reproved-by-this-build,horn_N
+budalla_A,budalla,A,exact,RGL LexiconSqi,"mkA ""budalla""",C1,declared-baseline-not-reproved-by-this-build,stupid_A
+bukur_A,bukur,A,exact,RGL LexiconSqi,"mkA ""bukur""",C1,declared-baseline-not-reproved-by-this-build,beautiful_A
+bukë_N,bukë,N,exact,RGL LexiconSqi,"mkN ""bukë""",C1,declared-baseline-not-reproved-by-this-build,bread_N
+burrë_N,burrë,N,exact,RGL LexiconSqi,mkNFull manNForms masculine,C2,declared-baseline-not-reproved-by-this-build,man_N
+bëhem_V,bëhem,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.behem_V,C2,declared-baseline-not-reproved-by-this-build,become_VA; behem_V
+bëj_V,bëj,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.bej_V,C2,declared-baseline-not-reproved-by-this-build,bej_V; do_V2
+cili_IQuant,cili,IQuant,exact,RGL StructuralSqiNominal,SN.which_IQuant,C2,declared-baseline-not-reproved-by-this-build,
+cilido_A,cilido,A,rgl-derived-explicit,Tosk reference,"lin A {s = \\c,g,n => (SN.which_IQuant.s ! c ! g ! n) + ""do"" ; clit = True}",C2,declared-baseline-not-reproved-by-this-build,Tosk ref cilindo; full case/gender/number series derived from declined cili + do
+dal_V,dal,V,exact-irregular,RGL IrregSqi,lin V I.dal_V,C2,declared-baseline-not-reproved-by-this-build,dal_V
+dashuri_N,dashuri,N,exact,RGL LexiconSqi,"mkN ""dashuri""",C1,declared-baseline-not-reproved-by-this-build,love_N
+dashuroj_V,dashuroj,V,exact,RGL LexiconSqi,"mkV ""dashuroj""",C1,declared-baseline-not-reproved-by-this-build,love_V2
+dele_N,dele,N,exact,RGL LexiconSqi,"mkN ""dele""",C1,declared-baseline-not-reproved-by-this-build,sheep_N
+demokraci_N,demokraci,N,evidence-matched-explicit-class,Tosk reference,"mkN059 ""demokraci""",C2,requires-post-campaign-gf312-run,Tosk observed forms demokracisë; mkN059 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+demokratik_A,demokratik,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""demokratik""",C2,requires-post-campaign-gf312-run,Tosk observed forms demokratik; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+derë_N,derë,N,exact,RGL LexiconSqi,"mkN ""derë""",C1,declared-baseline-not-reproved-by-this-build,door_N
+det_N,det,N,exact,RGL LexiconSqi,"mkN ""det""",C1,declared-baseline-not-reproved-by-this-build,sea_N
+dhe_Conj,dhe,Conj,exact,RGL StructuralSqiClause,"mkConj ""dhe""",C2,declared-baseline-not-reproved-by-this-build,
+dhjamë_N,dhjamë,N,exact,RGL LexiconSqi,"mkN ""dhjamë""",C1,declared-baseline-not-reproved-by-this-build,fat_N
+dhëmb_N,dhëmb,N,exact,RGL LexiconSqi,"mkN ""dhëmb""",C1,declared-baseline-not-reproved-by-this-build,tooth_N
+di_V,di,V,exact,RGL StructuralSqiVerbal,"irregV ""di"" ""di"" ""di"" ""dimë"" ""dini"" ""dinë"" ""di"" ""dini"" ""ditur""",C2,declared-baseline-not-reproved-by-this-build,
+diell_N,diell,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""diell"") masculine",C1,declared-baseline-not-reproved-by-this-build,sun_N; Tosk characteristic form/gender applied
+digjem_V,digjem,V,exact,RGL LexiconSqi,"mkV ""digjem""",C1,declared-baseline-not-reproved-by-this-build,burn_V
+diku_Adv,diku,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""diku""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+dikush_NP,dikush,NP,exact,RGL StructuralSqiNominal,SN.somebody_NP,C2,declared-baseline-not-reproved-by-this-build,
+disa_1_Det,disa,Det,exact,RGL StructuralSqiNominal,SN.somePl_Det,C2,declared-baseline-not-reproved-by-this-build,pl
+disa_2_Det,disa,Det,exact,RGL StructuralSqiNominal,SN.someSg_Det,C2,declared-baseline-not-reproved-by-this-build,sg
+distancë_N,distancë,N,exact,RGL LexiconSqi,"mkN ""distancë""",C1,declared-baseline-not-reproved-by-this-build,distance_N3
+ditë_N,ditë,N,exact,RGL LexiconSqi,"mkN ""ditë""",C1,declared-baseline-not-reproved-by-this-build,day_N
+diçka_NP,diçka,NP,exact,RGL StructuralSqiNominal,SN.something_NP,C2,declared-baseline-not-reproved-by-this-build,
+djalë_N,djalë,N,exact,RGL LexiconSqi,mkNFull boyNForms masculine,C2,declared-baseline-not-reproved-by-this-build,boy_N
+djathë_N,djathë,N,exact,RGL LexiconSqi,"mkN ""djathë""",C1,declared-baseline-not-reproved-by-this-build,cheese_N
+dorezë_N,dorezë,N,exact,RGL LexiconSqi,"mkN ""dorezë""",C1,declared-baseline-not-reproved-by-this-build,glove_N
+dorë_N,dorë,N,exact,RGL LexiconSqi,"mkN ""dorë""",C1,declared-baseline-not-reproved-by-this-build,hand_N
+drejt_A,drejt,A,exact,RGL LexiconSqi,"mkA ""drejt""",C1,declared-baseline-not-reproved-by-this-build,straight_A
+drejtë_N,drejtë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""drejtë""",C2,requires-post-campaign-gf312-run,"Tosk observed forms drejtave, drejtë, drejtës; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+dritare_N,dritare,N,exact,RGL LexiconSqi,"mkN ""dritare""",C1,declared-baseline-not-reproved-by-this-build,window_N
+dru_N,dru,N,exact,RGL LexiconSqi,"mkN ""dru""",C1,declared-baseline-not-reproved-by-this-build,wood_N
+druaj_V,druaj,V,exact,RGL LexiconSqi,"mkV ""druaj""",C1,declared-baseline-not-reproved-by-this-build,fear_V2; fear_VS
+dua_V,dua,V,exact-irregular,RGL IrregSqi,lin V I.dua_V,C2,declared-baseline-not-reproved-by-this-build,dua_V
+duhem_V,duhem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""duhem""",C2,requires-post-campaign-gf312-run,Tosk observed forms duhet; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+duhet_V,duhet,V,exact,RGL StructuralSqiVerbal,"invariantV ""duhet""",C1,declared-baseline-not-reproved-by-this-build,
+dukem_V,dukem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""dukem""",C2,requires-post-campaign-gf312-run,"Tosk observed forms dukej, dukur; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+dyqan_N,dyqan,N,exact,RGL LexiconSqi,"mkN ""dyqan""",C1,declared-baseline-not-reproved-by-this-build,shop_N
+dysheme_N,dysheme,N,exact,RGL LexiconSqi,"mkN ""dysheme""",C1,declared-baseline-not-reproved-by-this-build,floor_N
+dëborë_N,dëborë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""dëborë""",C2,requires-post-campaign-gf312-run,Tosk observed forms dëborë; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+dëgjoj_V,dëgjoj,V,exact,RGL LexiconSqi,"mkV ""dëgjoj""",C1,declared-baseline-not-reproved-by-this-build,hear_V2; listen_V2
+dërgoj_V,dërgoj,V,exact,RGL LexiconSqi,"mkV ""dërgoj""",C1,declared-baseline-not-reproved-by-this-build,send_V3
+e_Conj,e,Conj,direct-invariant,Tosk reference,"mkConj ""e""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: e
+eci_V,eci,V,exact-irregular,RGL IrregSqi,lin V I.eci_V,C2,declared-baseline-not-reproved-by-this-build,eci_V
+edhe_Adv,edhe,Adv,direct-invariant,Tosk reference,"mkAdv ""edhe""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: edhe
+ekonomik_A,ekonomik,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""ekonomik""",C2,requires-post-campaign-gf312-run,Tosk observed forms ekonomike; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+emër_N,emër,N,exact,RGL LexiconSqi,"mkN ""emër""",C1,declared-baseline-not-reproved-by-this-build,name_N
+Epir_N,Epir,N,evidence-matched-explicit-class,Tosk reference,"mkN007 ""Epir""",C2,requires-post-campaign-gf312-run,"Tosk observed forms Epir, Epirit; mkN007 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+erë_N,erë,N,exact,RGL LexiconSqi,"mkN ""erë""",C1,declared-baseline-not-reproved-by-this-build,wind_N
+eshtër_N,eshtër,N,evidence-matched-explicit-class,Tosk reference,"mkN137 ""eshtër""",C2,requires-post-campaign-gf312-run,Tosk observed forms eshtrave; mkN137 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+fabrikë_N,fabrikë,N,exact,RGL LexiconSqi,"mkN ""fabrikë""",C1,declared-baseline-not-reproved-by-this-build,factory_N
+farë_N,farë,N,exact,RGL LexiconSqi,"mkN ""farë""",C1,declared-baseline-not-reproved-by-this-build,seed_N
+fat_N,fat,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""fat""",C2,requires-post-campaign-gf312-run,Tosk observed forms fati; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+fe_N,fe,N,exact,RGL LexiconSqi,"mkN ""fe""",C1,declared-baseline-not-reproved-by-this-build,religion_N
+fik_V,fik,V,exact,RGL LexiconSqi,"mkV ""fik""",C1,declared-baseline-not-reproved-by-this-build,switch8off_V2
+fillim_N,fillim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""fillim""",C2,requires-post-campaign-gf312-run,Tosk observed forms fillimi; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+fitoj_V,fitoj,V,exact,RGL LexiconSqi,"mkV ""fitoj""",C1,declared-baseline-not-reproved-by-this-build,win_V2
+fitore_N,fitore,N,evidence-matched-explicit-class,Tosk reference,"mkN028 ""fitore""",C2,requires-post-campaign-gf312-run,Tosk observed forms fitoren; mkN028 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+flaktë_A,flaktë,A,evidence-matched-explicit-class,Tosk reference,"mkA013 ""flaktë""",C2,requires-post-campaign-gf312-run,Tosk observed forms flakta; mkA013 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+flamur_N,flamur,N,evidence-matched-explicit-class,Tosk reference,"mkN031 ""flamur""",C2,requires-post-campaign-gf312-run,"Tosk observed forms flamuri, flamurit; mkN031 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+flas_V,flas,V,exact,RGL LexiconSqi,"mkV ""flas""",C1,declared-baseline-not-reproved-by-this-build,speak_V2; talk_V3
+fle_V,fle,V,exact,RGL LexiconSqi,"invariantV ""fle""",C1,declared-baseline-not-reproved-by-this-build,sleep_V
+flok_N,flok,N,exact,RGL LexiconSqi,"mkN ""flok""",C1,declared-baseline-not-reproved-by-this-build,hair_N
+fluturoj_V,fluturoj,V,exact,RGL LexiconSqi,"mkV ""fluturoj""",C1,declared-baseline-not-reproved-by-this-build,fly_V
+foshnjë_N,foshnjë,N,exact,RGL LexiconSqi,"mkN ""foshnjë""",C1,declared-baseline-not-reproved-by-this-build,baby_N
+frigorifer_N,frigorifer,N,exact,RGL LexiconSqi,"mkN ""frigorifer""",C1,declared-baseline-not-reproved-by-this-build,fridge_N
+frut_N,frut,N,exact,RGL LexiconSqi,"mkN ""frut""",C1,declared-baseline-not-reproved-by-this-build,fruit_N
+fryhem_V,fryhem,V,exact,RGL LexiconSqi,"mkV ""fryhem""",C1,declared-baseline-not-reproved-by-this-build,swell_V
+fryj_V,fryj,V,exact,RGL LexiconSqi,"mkV ""fryj""",C1,declared-baseline-not-reproved-by-this-build,blow_V
+frymoj_V,frymoj,V,exact,RGL LexiconSqi,"mkV ""frymoj""",C1,declared-baseline-not-reproved-by-this-build,breathe_V
+fshat_N,fshat,N,exact,RGL LexiconSqi,"mkN ""fshat""",C1,declared-baseline-not-reproved-by-this-build,village_N
+fshij_V,fshij,V,exact,RGL LexiconSqi,"mkV ""fshij""",C1,declared-baseline-not-reproved-by-this-build,wipe_V2
+ftohtë_A,ftohtë,A,exact,RGL LexiconSqi,"mkA ""ftohtë""",C1,declared-baseline-not-reproved-by-this-build,cold_A
+fund_N,fund,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""fund""",C2,requires-post-campaign-gf312-run,Tosk observed forms fund; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+fundit_A,fundit,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""fundit""",C2,requires-post-campaign-gf312-run,Tosk observed forms fundit; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+fushë_N,fushë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""fushë""",C2,requires-post-campaign-gf312-run,"Tosk observed forms fushat, fushën; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+fëmijë_N,fëmijë,N,exact,RGL LexiconSqi,"mkN ""fëmijë""",C1,declared-baseline-not-reproved-by-this-build,child_N
+fërkoj_V,fërkoj,V,exact,RGL LexiconSqi,"mkV ""fërkoj""",C1,declared-baseline-not-reproved-by-this-build,rub_V2
+gati_A,gati,A,exact,RGL LexiconSqi,"mkA ""gati""",C1,declared-baseline-not-reproved-by-this-build,ready_A
+gazetë_N,gazetë,N,exact,RGL LexiconSqi,"mkN ""gazetë""",C1,declared-baseline-not-reproved-by-this-build,newspaper_N
+gjak_N,gjak,N,exact,RGL LexiconSqi,"mkN ""gjak""",C1,declared-baseline-not-reproved-by-this-build,blood_N
+gjalpë_N,gjalpë,N,exact,RGL LexiconSqi,"mkN ""gjalpë""",C1,declared-baseline-not-reproved-by-this-build,butter_N
+gjarpër_N,gjarpër,N,exact,RGL LexiconSqi,"mkN ""gjarpër""",C1,declared-baseline-not-reproved-by-this-build,snake_N
+gjatë_A,gjatë,A,exact,RGL LexiconSqi,"mkA ""gjatë""",C1,declared-baseline-not-reproved-by-this-build,long_A
+gjatë_Prep,gjatë,Prep,exact,RGL StructuralSqiClause,"mkPrep ""gjatë"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+gjej_V,gjej,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.gjej_V,C2,declared-baseline-not-reproved-by-this-build,find_V2; gjej_V
+gjelbër_A,gjelbër,A,exact,RGL LexiconSqi,"mkA ""gjelbër""",C1,declared-baseline-not-reproved-by-this-build,green_A
+gjeneral_N,gjeneral,N,evidence-matched-explicit-class,Tosk reference,"mkN007 ""gjeneral""",C2,requires-post-campaign-gf312-run,"Tosk observed forms gjenerali, gjeneralit; mkN007 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+gjer_Prep,gjer,Prep,direct-with-government,Tosk reference,"mkPrep ""gjer"" accusative",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: gjer
+gjerë_A,gjerë,A,exact,RGL LexiconSqi,"mkA ""gjerë""",C1,declared-baseline-not-reproved-by-this-build,broad_A; wide_A
+gjethe_N,gjethe,N,exact,RGL LexiconSqi,"mkN ""gjethe""",C1,declared-baseline-not-reproved-by-this-build,leaf_N
+gji_N,gji,N,exact,RGL LexiconSqi,"mkN ""gji""",C1,declared-baseline-not-reproved-by-this-build,breast_N
+gjinor_A,gjinor,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""gjinor""",C2,requires-post-campaign-gf312-run,Tosk observed forms gjinore; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+gjithmonë_Adv,gjithmonë,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""gjithmonë""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+gjithçka_NP,gjithçka,NP,exact,RGL StructuralSqiNominal,SN.everything_NP,C2,declared-baseline-not-reproved-by-this-build,
+Gjon_PN,Gjon,PN,exact,RGL LexiconSqi,"mkPN ""Gjon""",C2,declared-baseline-not-reproved-by-this-build,john_PN
+gju_N,gju,N,exact,RGL LexiconSqi,"mkN ""gju""",C1,declared-baseline-not-reproved-by-this-build,knee_N
+gjuaj_V,gjuaj,V,exact,RGL LexiconSqi,"mkV ""gjuaj""",C1,declared-baseline-not-reproved-by-this-build,hunt_V2
+gjuhë_N,gjuhë,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""gjuhë"") feminine",C1,declared-baseline-not-reproved-by-this-build,language_N; Tosk characteristic form/gender applied; tongue_N; Tosk characteristic form/gender applied
+godit_V,godit,V,exact,RGL LexiconSqi,"mkV ""godit""",C1,declared-baseline-not-reproved-by-this-build,hit_V2
+gojë_N,gojë,N,exact,RGL LexiconSqi,"mkN ""gojë""",C1,declared-baseline-not-reproved-by-this-build,mouth_N
+gomë_N,gomë,N,exact,RGL LexiconSqi,"mkN ""gomë""",C1,declared-baseline-not-reproved-by-this-build,rubber_N
+gramatikë_N,gramatikë,N,exact,RGL LexiconSqi,"mkN ""gramatikë""",C1,declared-baseline-not-reproved-by-this-build,grammar_N
+grua_N,grua,N,exact,RGL LexiconSqi,"mkN ""grua""",C1,declared-baseline-not-reproved-by-this-build,wife_N; woman_N
+gur_N,gur,N,exact,RGL LexiconSqi,"mkN ""gur""",C1,declared-baseline-not-reproved-by-this-build,stone_N
+gusht_N,gusht,N,evidence-matched-explicit-class,Tosk reference,"mkN020 ""gusht""",C2,requires-post-campaign-gf312-run,Tosk observed forms gushtit; mkN020 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+gënjej_V,gënjej,V,exact,RGL LexiconSqi,"mkV ""gënjej""",C1,declared-baseline-not-reproved-by-this-build,lie_V
+gërmoj_V,gërmoj,V,exact,RGL LexiconSqi,"mkV ""gërmoj""",C1,declared-baseline-not-reproved-by-this-build,dig_V
+gërvisht_V,gërvisht,V,exact,RGL LexiconSqi,"mkV ""gërvisht""",C1,declared-baseline-not-reproved-by-this-build,scratch_V2
+ha_V,ha,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.ha_V,C2,declared-baseline-not-reproved-by-this-build,eat_V2; ha_V
+hap_V,hap,V,exact,RGL LexiconSqi,"mkV ""hap""",C1,declared-baseline-not-reproved-by-this-build,open_V2
+harroj_V,harroj,V,exact,RGL LexiconSqi,"mkV ""harroj""",C1,declared-baseline-not-reproved-by-this-build,forget_V2
+hedh_V,hedh,V,exact,RGL LexiconSqi,"mkV ""hedh""",C1,declared-baseline-not-reproved-by-this-build,throw_V2
+hekur_N,hekur,N,exact,RGL LexiconSqi,"mkN ""hekur""",C1,declared-baseline-not-reproved-by-this-build,iron_N
+hi_N,hi,N,exact,RGL LexiconSqi,"mkN ""hi""",C1,declared-baseline-not-reproved-by-this-build,ashes_N
+hollë_A,hollë,A,exact,RGL LexiconSqi,"mkA ""hollë""",C1,declared-baseline-not-reproved-by-this-build,thin_A
+huaj_A,huaj,A,evidence-matched-explicit-class,Tosk reference,"mkA009 ""huaj""",C2,requires-post-campaign-gf312-run,Tosk observed forms huaj; mkA009 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+humb_V,humb,V,exact,RGL LexiconSqi,"mkV ""humb""",C1,declared-baseline-not-reproved-by-this-build,lose_V2
+hundë_N,hundë,N,exact,RGL LexiconSqi,"mkN ""hundë""",C1,declared-baseline-not-reproved-by-this-build,nose_N
+hyj_V,hyj,V,exact-irregular,RGL IrregSqi,lin V I.hyj_V,C2,declared-baseline-not-reproved-by-this-build,hyj_V
+hyrje_N,hyrje,N,evidence-matched-explicit-class,Tosk reference,"mkN188 ""hyrje""",C2,requires-post-campaign-gf312-run,Tosk observed forms hyrjes; mkN188 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+hënë_N,hënë,N,exact,RGL LexiconSqi,"mkN ""hënë""",C1,declared-baseline-not-reproved-by-this-build,moon_N
+i_Prep,i,Prep,exact,RGL StructuralSqiClause,"mkPrep ""i"" dative",C2,declared-baseline-not-reproved-by-this-build,governs dative
+iki_V,iki,V,exact-irregular,RGL IrregSqi,lin V I.iki_V,C2,declared-baseline-not-reproved-by-this-build,iki_V
+industri_N,industri,N,exact,RGL LexiconSqi,"mkN ""industri""",C1,declared-baseline-not-reproved-by-this-build,industry_N
+jam_V,jam,V,exact-irregular,RGL IrregSqi,lin V I.jam_V,C2,declared-baseline-not-reproved-by-this-build,jam_V
+jap_V,jap,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.jap_V,C2,declared-baseline-not-reproved-by-this-build,give_V3; jap_V
+jetoj_V,jetoj,V,exact,RGL LexiconSqi,"mkV ""jetoj""",C1,declared-baseline-not-reproved-by-this-build,live_V
+jetë_N,jetë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""jetë""",C2,requires-post-campaign-gf312-run,"Tosk observed forms jetën, jetës; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+jo_Predet,jo,Predet,exact,RGL StructuralSqiNominal,SN.not_Predet,C2,declared-baseline-not-reproved-by-this-build,
+ju_Pron,ju,Pron,exact,RGL StructuralSqiNominal,SN.youPl_Pron,C2,declared-baseline-not-reproved-by-this-build,
+kafe_A,kafe,A,exact,RGL LexiconSqi,"mkA ""kafe""",C1,declared-baseline-not-reproved-by-this-build,brown_A
+kafshoj_V,kafshoj,V,exact,RGL LexiconSqi,"mkV ""kafshoj""",C1,declared-baseline-not-reproved-by-this-build,bite_V2
+kafshë_N,kafshë,N,exact,RGL LexiconSqi,"mkN ""kafshë""",C1,declared-baseline-not-reproved-by-this-build,animal_N
+kalbur_A,kalbur,A,exact,RGL LexiconSqi,"mkA ""kalbur""",C1,declared-baseline-not-reproved-by-this-build,rotten_A
+kaltër_A,kaltër,A,exact,RGL LexiconSqi,"mkA ""kaltër""",C1,declared-baseline-not-reproved-by-this-build,blue_A
+kalë_N,kalë,N,exact,RGL LexiconSqi,"mkN ""kalë""",C1,declared-baseline-not-reproved-by-this-build,horse_N
+kam_V,kam,V,exact-irregular,RGL IrregSqi,lin V I.kam_V,C2,declared-baseline-not-reproved-by-this-build,kam_V
+kamerë_N,kamerë,N,exact,RGL LexiconSqi,"mkN ""kamerë""",C1,declared-baseline-not-reproved-by-this-build,camera_N
+kapelë_N,kapelë,N,exact,RGL LexiconSqi,"mkN ""kapelë""",C1,declared-baseline-not-reproved-by-this-build,cap_N; hat_N
+karakter_N,karakter,N,evidence-matched-explicit-class,Tosk reference,"mkN031 ""karakter""",C2,requires-post-campaign-gf312-run,Tosk observed forms karakterin; mkN031 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+karrige_N,karrige,N,exact,RGL LexiconSqi,"mkN ""karrige""",C1,declared-baseline-not-reproved-by-this-build,chair_N
+keq_A,keq,A,exact,RGL LexiconSqi,"mkA ""keq""",C1,declared-baseline-not-reproved-by-this-build,bad_A
+kishë_N,kishë,N,exact,RGL LexiconSqi,"mkN ""kishë""",C1,declared-baseline-not-reproved-by-this-build,church_N
+klimë_N,klimë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""klimë""",C2,requires-post-campaign-gf312-run,Tosk observed forms klimën; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kockë_N,kockë,N,exact,RGL LexiconSqi,"mkN ""kockë""",C1,declared-baseline-not-reproved-by-this-build,bone_N
+kodër_N,kodër,N,exact,RGL LexiconSqi,"mkN ""kodër""",C1,declared-baseline-not-reproved-by-this-build,hill_N
+kohë_N,kohë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""kohë""",C2,requires-post-campaign-gf312-run,Tosk observed forms kohën; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+koicidencë_N,koicidencë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""koicidencë""",C2,requires-post-campaign-gf312-run,Tosk observed forms koicidencë; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kokë_N,kokë,N,exact,RGL LexiconSqi,"mkN ""kokë""",C1,declared-baseline-not-reproved-by-this-build,head_N
+kombëtar_A,kombëtar,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""kombëtar""",C2,requires-post-campaign-gf312-run,Tosk observed forms kombëtare; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kompjuter_N,kompjuter,N,exact,RGL LexiconSqi,"mkN ""kompjuter""",C1,declared-baseline-not-reproved-by-this-build,computer_N
+komunë_N,komunë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""komunë""",C2,requires-post-campaign-gf312-run,Tosk observed forms komune; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kontratë_N,kontratë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""kontratë""",C2,requires-post-campaign-gf312-run,Tosk observed forms kontratat; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kopsht_N,kopsht,N,exact,RGL LexiconSqi,"mkN ""kopsht""",C1,declared-baseline-not-reproved-by-this-build,garden_N
+Kosovë_N,Kosovë,N,evidence-matched-explicit-class,Tosk reference,"mkN175 ""Kosovë""",C2,requires-post-campaign-gf312-run,Tosk observed forms Kosovës; mkN175 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+krah_N,krah,N,exact,RGL LexiconSqi,"mkN ""krah""",C1,declared-baseline-not-reproved-by-this-build,wing_N
+krimb_N,krimb,N,exact,RGL LexiconSqi,"mkN ""krimb""",C1,declared-baseline-not-reproved-by-this-build,worm_N
+kripë_N,kripë,N,exact,RGL LexiconSqi,"mkN ""kripë""",C1,declared-baseline-not-reproved-by-this-build,salt_N
+kryej_V,kryej,V,evidence-matched-explicit-class,Tosk reference,"mkV042 ""kryej""",C2,requires-post-campaign-gf312-run,Tosk observed forms kryera; mkV042 selected by unique-numbered-class-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kryhem_V,kryhem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""kryhem""",C2,requires-post-campaign-gf312-run,Tosk observed forms kryhej; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kthehem_V,kthehem,V,exact,RGL LexiconSqi,"mkV ""kthehem""",C1,declared-baseline-not-reproved-by-this-build,turn_V
+kthen_V,kthen,V,evidence-matched-explicit-class,Tosk reference,"mkV018 ""kthen""",C2,requires-post-campaign-gf312-run,Tosk observed forms ktheni; mkV018 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+ku_IAdv,ku,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""ku""",C2,declared-baseline-not-reproved-by-this-build,
+kudo_Adv,kudo,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""kudo""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+kulturor_A,kulturor,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""kulturor""",C2,requires-post-campaign-gf312-run,Tosk observed forms kulturore; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kundrejt_Prep,kundrejt,Prep,direct-with-government,Tosk reference,"mkPrep ""kundrejt"" ablative",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: kundrejt
+kuptoj_V,kuptoj,V,exact,RGL LexiconSqi,"mkV ""kuptoj""",C1,declared-baseline-not-reproved-by-this-build,know_VQ; know_VS; understand_V2
+kuq_A,kuq,A,exact,RGL LexiconSqi,"mkA ""kuq""",C1,declared-baseline-not-reproved-by-this-build,red_A
+kur_Adv,kur,Adv,direct-invariant,Tosk reference,"mkAdv ""kur""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: kur
+kur_IAdv,kur,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""kur""",C2,declared-baseline-not-reproved-by-this-build,
+kur_Subj,kur,Subj,exact,RGL StructuralSqiClause,"mkSubj ""kur""",C2,declared-baseline-not-reproved-by-this-build,
+kush_1_IP,kush,IP,exact,RGL StructuralSqiNominal,SN.whoPl_IP,C2,declared-baseline-not-reproved-by-this-build,pl
+kush_2_IP,kush,IP,exact,RGL StructuralSqiNominal,SN.whoSg_IP,C2,declared-baseline-not-reproved-by-this-build,sg
+kushtetues_A,kushtetues,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""kushtetues""",C2,requires-post-campaign-gf312-run,Tosk observed forms kushtetues; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+kushëri_N,kushëri,N,exact,RGL LexiconSqi,"mkN ""kushëri""",C1,declared-baseline-not-reproved-by-this-build,cousin_N
+ky_Quant,ky,Quant,exact,RGL StructuralSqiNominal,SN.this_Quant,C2,declared-baseline-not-reproved-by-this-build,demonstrative
+këmbë_N,këmbë,N,exact,RGL LexiconSqi,"mkN ""këmbë""",C1,declared-baseline-not-reproved-by-this-build,foot_N; leg_N
+këmishë_N,këmishë,N,exact,RGL LexiconSqi,"mkN ""këmishë""",C1,declared-baseline-not-reproved-by-this-build,shirt_N
+këndoj_V,këndoj,V,exact,RGL LexiconSqi,"mkV ""këndoj""",C1,declared-baseline-not-reproved-by-this-build,sing_V
+këngë_N,këngë,N,exact,RGL LexiconSqi,"mkN ""këngë""",C1,declared-baseline-not-reproved-by-this-build,song_N
+këpucë_N,këpucë,N,exact,RGL LexiconSqi,"mkN ""këpucë""",C1,declared-baseline-not-reproved-by-this-build,shoe_N
+kërcej_V,kërcej,V,exact,RGL LexiconSqi,"mkV ""kërcej""",C1,declared-baseline-not-reproved-by-this-build,jump_V
+kërkoj_V,kërkoj,V,exact,RGL LexiconSqi,"mkV ""kërkoj""",C1,declared-baseline-not-reproved-by-this-build,seek_V2
+këtu_Adv,këtu,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""këtu""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+lagur_A,lagur,A,exact,RGL LexiconSqi,"mkA ""lagur""",C1,declared-baseline-not-reproved-by-this-build,wet_A
+lagët_A,lagët,A,evidence-matched-explicit-class,Tosk reference,"mkA009 ""lagët""",C2,requires-post-campaign-gf312-run,Tosk observed forms lagët; mkA009 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+laj_V,laj,V,exact,RGL LexiconSqi,"mkV ""laj""",C1,declared-baseline-not-reproved-by-this-build,wash_V2
+larg_Adv,larg,Adv,exact,RGL LexiconSqi,"mkAdv ""larg""",C2,declared-baseline-not-reproved-by-this-build,far_Adv
+lavde_N,lavde,N,evidence-matched-explicit-class,Tosk reference,"mkN028 ""lavde""",C2,requires-post-campaign-gf312-run,Tosk observed forms lavdet; mkN028 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+lehtë_A,lehtë,A,exact,RGL LexiconSqi,"mkA ""lehtë""",C1,declared-baseline-not-reproved-by-this-build,easy_A2V
+letër_N,letër,N,exact,RGL LexiconSqi,"mkN ""letër""",C1,declared-baseline-not-reproved-by-this-build,paper_N
+lexoj_V,lexoj,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""lexoj"" ""lexuar""",C1,declared-baseline-not-reproved-by-this-build,read_V2; Tosk participle applied
+libër_N,libër,N,exact,RGL LexiconSqi,mkNFull bookNForms masculine,C2,declared-baseline-not-reproved-by-this-build,book_N
+lidh_V,lidh,V,exact,RGL LexiconSqi,"mkV ""lidh""",C1,declared-baseline-not-reproved-by-this-build,tie_V2
+ligj_N,ligj,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""ligj""",C2,requires-post-campaign-gf312-run,"Tosk observed forms ligj, ligjit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+liqen_N,liqen,N,exact,RGL LexiconSqi,"mkN ""liqen""",C1,declared-baseline-not-reproved-by-this-build,lake_N
+liri_N,liri,N,evidence-matched-explicit-class,Tosk reference,"mkN059 ""liri""",C2,requires-post-campaign-gf312-run,"Tosk observed forms lirinë, lirisë, lirive; mkN059 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+litar_N,litar,N,exact,RGL LexiconSqi,"mkN ""litar""",C1,declared-baseline-not-reproved-by-this-build,rope_N
+llambë_N,llambë,N,exact,RGL LexiconSqi,"mkN ""llambë""",C1,declared-baseline-not-reproved-by-this-build,lamp_N
+lopë_N,lopë,N,exact,RGL LexiconSqi,"mkN ""lopë""",C1,declared-baseline-not-reproved-by-this-build,cow_N
+luaj_V,luaj,V,exact,RGL LexiconSqi,"mkV ""luaj""",C1,declared-baseline-not-reproved-by-this-build,play_V; play_V2
+luftoj_V,luftoj,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""luftoj"" ""luftuar""",C1,declared-baseline-not-reproved-by-this-build,fight_V2; Tosk participle applied
+luftë_N,luftë,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""luftë"" ""luftra"") feminine",C1,declared-baseline-not-reproved-by-this-build,war_N; Tosk characteristic form/gender applied
+lule_N,lule,N,exact,RGL LexiconSqi,"mkN ""lule""",C1,declared-baseline-not-reproved-by-this-build,flower_N
+lumë_N,lumë,N,exact,RGL LexiconSqi,"mkN ""lumë""",C1,declared-baseline-not-reproved-by-this-build,river_N
+lutem_V,lutem,V,exact,RGL LexiconSqi,"mkV ""lutem""",C1,declared-baseline-not-reproved-by-this-build,beg_V2V
+lyej_V,lyej,V,exact,RGL LexiconSqi,"mkV ""lyej""",C1,declared-baseline-not-reproved-by-this-build,paint_V2A
+lë_V,lë,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""lë"" ""lënë""",C1,declared-baseline-not-reproved-by-this-build,leave_V2; Tosk participle applied
+lëkurë_N,lëkurë,N,exact,RGL LexiconSqi,"mkN ""lëkurë""",C1,declared-baseline-not-reproved-by-this-build,leather_N; skin_N
+lëmuar_A,lëmuar,A,exact,RGL LexiconSqi,"mkA ""lëmuar""",C1,declared-baseline-not-reproved-by-this-build,smooth_A
+lëvore_N,lëvore,N,exact,RGL LexiconSqi,"mkN ""lëvore""",C1,declared-baseline-not-reproved-by-this-build,bark_N
+mace_N,mace,N,exact,RGL LexiconSqi,"mkN ""mace""",C1,declared-baseline-not-reproved-by-this-build,cat_N
+madh_A,madh,A,exact,RGL LexiconSqi,"mkA ""madh""",C1,declared-baseline-not-reproved-by-this-build,big_A
+makinë_N,makinë,N,exact,RGL LexiconSqi,"mkN ""makinë""",C1,declared-baseline-not-reproved-by-this-build,car_N
+mal_N,mal,N,exact,RGL LexiconSqi,"mkN ""mal""",C1,declared-baseline-not-reproved-by-this-build,mountain_N
+martuar_A,martuar,A,exact,RGL LexiconSqi,"mkA ""martuar""",C1,declared-baseline-not-reproved-by-this-build,married_A2
+mashkull_N,mashkull,N,evidence-matched-explicit-class,Tosk reference,"mkN257 ""mashkull""",C2,requires-post-campaign-gf312-run,Tosk observed forms meshkujve; mkN257 selected by unique-numbered-class-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+mbaj_V,mbaj,V,exact,RGL LexiconSqi,"mkV ""mbaj""",C1,declared-baseline-not-reproved-by-this-build,hold_V2
+mbi_Prep,mbi,Prep,exact,RGL StructuralSqiClause,"mkPrep ""mbi"" accusative",C2,declared-baseline-not-reproved-by-this-build,governs accusative
+mbret_N,mbret,N,exact,RGL LexiconSqi,"mkN ""mbret""",C1,declared-baseline-not-reproved-by-this-build,king_N
+mbretëreshë_N,mbretëreshë,N,exact,RGL LexiconSqi,"mkN ""mbretëreshë""",C1,declared-baseline-not-reproved-by-this-build,queen_N
+mbrojtje_N,mbrojtje,N,evidence-matched-explicit-class,Tosk reference,"mkN188 ""mbrojtje""",C2,requires-post-campaign-gf312-run,"Tosk observed forms mbrojtja, mbrojtjes; mkN188 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+mbyll_V,mbyll,V,exact,RGL LexiconSqi,"mkV ""mbyll""",C1,declared-baseline-not-reproved-by-this-build,close_V2
+me_Prep,me,Prep,exact,RGL StructuralSqiClause,"mkPrep ""me"" accusative",C2,declared-baseline-not-reproved-by-this-build,governs accusative
+medet_Interj,medet,Interj,exact,RGL LexiconSqi,"mkInterj ""medet""",C2,declared-baseline-not-reproved-by-this-build,alas_Interj
+megjithëse_Subj,megjithëse,Subj,exact,RGL StructuralSqiClause,"mkSubj ""megjithëse""",C2,declared-baseline-not-reproved-by-this-build,
+mendoj_V,mendoj,V,exact,RGL LexiconSqi,"mkV ""mendoj""",C1,declared-baseline-not-reproved-by-this-build,think_V
+meritoj_V,meritoj,V,evidence-matched-explicit-class,Tosk reference,"mkV028 ""meritoj""",C2,requires-post-campaign-gf312-run,Tosk observed forms merituar; mkV028 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+midis_Prep,midis,Prep,exact,RGL StructuralSqiClause,"mkPrep ""midis"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+mik_N,mik,N,exact,RGL LexiconSqi,"mkN ""mik""",C1,declared-baseline-not-reproved-by-this-build,friend_N
+mirë_A,mirë,A,exact,RGL LexiconSqi,"mkA ""mirë""",C1,declared-baseline-not-reproved-by-this-build,good_A
+mish_N,mish,N,exact,RGL LexiconSqi,"mkN ""mish""",C1,declared-baseline-not-reproved-by-this-build,meat_N
+mision_N,mision,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""mision""",C2,requires-post-campaign-gf312-run,Tosk observed forms misioni; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+mjaft_Adv,mjaft,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""mjaft""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+mjedis_N,mjedis,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""mjedis""",C2,requires-post-campaign-gf312-run,Tosk observed forms mjedisit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+mjegull_N,mjegull,N,exact,RGL LexiconSqi,"mkN ""mjegull""",C1,declared-baseline-not-reproved-by-this-build,fog_N
+mjek_N,mjek,N,exact,RGL LexiconSqi,"mkN ""mjek""",C1,declared-baseline-not-reproved-by-this-build,doctor_N
+mollë_N,mollë,N,exact,RGL LexiconSqi,mkNFull appleNForms feminine,C2,declared-baseline-not-reproved-by-this-build,apple_N
+monoton_V,monoton,V,evidence-matched-explicit-class,Tosk reference,"mkV070 ""monoton""",C2,requires-post-campaign-gf312-run,Tosk observed forms monoton; mkV070 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+morr_N,morr,N,exact,RGL LexiconSqi,"mkN ""morr""",C1,declared-baseline-not-reproved-by-this-build,louse_N
+mos_Adv,mos,Adv,direct-invariant,Tosk reference,"mkAdv ""mos""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: mos
+mosdiskriminim_N,mosdiskriminim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""mosdiskriminim""",C2,requires-post-campaign-gf312-run,Tosk observed forms mosdiskriminimit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+motër_N,motër,N,exact,RGL LexiconSqi,"mkN ""motër""",C1,declared-baseline-not-reproved-by-this-build,sister_N
+mprehtë_A,mprehtë,A,exact,RGL LexiconSqi,"mkA ""mprehtë""",C1,declared-baseline-not-reproved-by-this-build,sharp_A
+mund_V,mund,V,exact,RGL StructuralSqiVerbal,"invariantV ""mund""",C1,declared-baseline-not-reproved-by-this-build,
+mundshëm_A,mundshëm,A,exact,RGL LexiconSqi,"mkA ""mundshëm""",C1,declared-baseline-not-reproved-by-this-build,probable_AS
+mundësi_N,mundësi,N,evidence-matched-explicit-class,Tosk reference,"mkN152 ""mundësi""",C2,requires-post-campaign-gf312-run,Tosk observed forms mundësi; mkN152 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+Murat_N,Murat,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""Murat""",C2,requires-post-campaign-gf312-run,Tosk observed forms Murati; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+muzikë_N,muzikë,N,exact,RGL LexiconSqi,"mkN ""muzikë""",C1,declared-baseline-not-reproved-by-this-build,music_N
+më_Adv,më,Adv,direct-invariant,Tosk reference,"mkAdv ""më""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: më
+mëlçi_N,mëlçi,N,exact,RGL LexiconSqi,"mkN ""mëlçi""",C1,declared-baseline-not-reproved-by-this-build,liver_N
+mënyrë_N,mënyrë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""mënyrë""",C2,requires-post-campaign-gf312-run,Tosk observed forms mënyra; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+mërzitshëm_A,mërzitshëm,A,exact,RGL LexiconSqi,"mkA ""mërzitshëm""",C1,declared-baseline-not-reproved-by-this-build,dull_A
+mësoj_V,mësoj,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""mësoj"" ""mësuar""",C1,declared-baseline-not-reproved-by-this-build,learn_V2; Tosk participle applied; teach_V2; Tosk participle applied
+mësues_N,mësues,N,exact,RGL LexiconSqi,"mkN ""mësues""",C1,declared-baseline-not-reproved-by-this-build,teacher_N
+natë_N,natë,N,exact,RGL LexiconSqi,"mkN ""natë""",C1,declared-baseline-not-reproved-by-this-build,night_N
+ndaj_V,ndaj,V,exact,RGL LexiconSqi,"mkV ""ndaj""",C1,declared-baseline-not-reproved-by-this-build,split_V2
+ndalem_V,ndalem,V,exact,RGL LexiconSqi,"mkV ""ndalem""",C1,declared-baseline-not-reproved-by-this-build,stop_V
+nder_N,nder,N,evidence-matched-explicit-class,Tosk reference,"mkN031 ""nder""",C2,requires-post-campaign-gf312-run,Tosk observed forms nderin; mkN031 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+ndez_V,ndez,V,exact,RGL LexiconSqi,"mkV ""ndez""",C1,declared-baseline-not-reproved-by-this-build,switch8on_V2
+ne_Pron,ne,Pron,exact,RGL StructuralSqiNominal,SN.we_Pron,C2,declared-baseline-not-reproved-by-this-build,
+nga_Prep,nga,Prep,exact,RGL StructuralSqiClause,"mkPrep ""nga"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+ngre_V,ngre,V,exact-irregular,RGL IrregSqi,lin V I.ngre_V,C2,declared-baseline-not-reproved-by-this-build,ngre_V
+ngrij_V,ngrij,V,exact,RGL LexiconSqi,"mkV ""ngrij""",C1,declared-baseline-not-reproved-by-this-build,freeze_V
+ngrohtë_A,ngrohtë,A,exact,RGL LexiconSqi,"mkA ""ngrohtë""",C1,declared-baseline-not-reproved-by-this-build,warm_A
+ngushtë_A,ngushtë,A,exact,RGL LexiconSqi,"mkA ""ngushtë""",C1,declared-baseline-not-reproved-by-this-build,narrow_A
+nisem_V,nisem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""nisem""",C2,requires-post-campaign-gf312-run,Tosk observed forms nisej; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+nivel_N,nivel,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""nivel""",C2,requires-post-campaign-gf312-run,Tosk observed forms nivel; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+njoh_V,njoh,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.njoh_V,C2,declared-baseline-not-reproved-by-this-build,know_V2; njoh_V
+notoj_V,notoj,V,exact,RGL LexiconSqi,"mkV ""notoj""",C1,declared-baseline-not-reproved-by-this-build,swim_V
+nuhas_V,nuhas,V,exact,RGL LexiconSqi,"mkV ""nuhas""",C1,declared-baseline-not-reproved-by-this-build,smell_V
+nuk_Adv,nuk,Adv,direct-invariant,Tosk reference,"mkAdv ""nuk""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: nuk
+numër_N,numër,N,exact,RGL LexiconSqi,"mkN ""numër""",C1,declared-baseline-not-reproved-by-this-build,number_N
+numëroj_V,numëroj,V,exact,RGL LexiconSqi,"mkV ""numëroj""",C1,declared-baseline-not-reproved-by-this-build,count_V2
+nxehtë_A,nxehtë,A,exact,RGL LexiconSqi,"mkA ""nxehtë""",C1,declared-baseline-not-reproved-by-this-build,hot_A
+në_Prep,në,Prep,exact,RGL StructuralSqiClause,"mkPrep ""në"" accusative",C2,declared-baseline-not-reproved-by-this-build,governs accusative
+nën_Prep,nën,Prep,exact,RGL StructuralSqiClause,"mkPrep ""nën"" accusative",C2,declared-baseline-not-reproved-by-this-build,governs accusative
+nënë_N,nënë,N,exact,RGL LexiconSqi,"mkN ""nënë""",C1,declared-baseline-not-reproved-by-this-build,mother_N2
+nëse_Subj,nëse,Subj,exact,RGL StructuralSqiClause,"mkSubj ""nëse""",C2,declared-baseline-not-reproved-by-this-build,
+o_Interj,o,Interj,direct-invariant,Tosk reference,"mkInterj ""o""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: o
+ose_Conj,ose,Conj,exact,RGL StructuralSqiClause,"mkConj ""ose""",C2,declared-baseline-not-reproved-by-this-build,
+pa_Prep,pa,Prep,exact,RGL StructuralSqiClause,"mkPrep ""pa"" accusative",C2,declared-baseline-not-reproved-by-this-build,governs accusative
+pajtim_N,pajtim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""pajtim""",C2,requires-post-campaign-gf312-run,Tosk observed forms pajtim; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pak_Det,pak,Det,exact,RGL StructuralSqiNominal,SN.few_Det,C2,declared-baseline-not-reproved-by-this-build,pl
+pallto_N,pallto,N,exact,RGL LexiconSqi,"mkN ""pallto""",C1,declared-baseline-not-reproved-by-this-build,coat_N
+pamje_N,pamje,N,evidence-matched-explicit-class,Tosk reference,"mkN079 ""pamje""",C2,requires-post-campaign-gf312-run,Tosk observed forms pamja; mkN079 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pamundur_A,pamundur,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""pamundur""",C2,requires-post-campaign-gf312-run,Tosk observed forms pamundur; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+papritur_A,papritur,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""papritur""",C2,requires-post-campaign-gf312-run,Tosk observed forms papritur; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+paqe_N,paqe,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""paqe"") feminine",C1,declared-baseline-not-reproved-by-this-build,peace_N; Tosk characteristic form/gender applied
+para_Adv,para,Adv,direct-invariant,Tosk reference,"mkAdv ""para""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: para
+para_Prep,para,Prep,exact,RGL StructuralSqiClause,"mkPrep ""para"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+parim_N,parim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""parim""",C2,requires-post-campaign-gf312-run,Tosk observed forms parimet; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+Paris_PN,Paris,PN,exact,RGL LexiconSqi,"mkPN ""Paris""",C2,declared-baseline-not-reproved-by-this-build,paris_PN
+parë_A,parë,A,evidence-matched-explicit-class,Tosk reference,"mkA013 ""parë""",C2,requires-post-campaign-gf312-run,Tosk observed forms para; mkA013 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pas_Prep,pas,Prep,exact,RGL StructuralSqiClause,"mkPrep ""pas"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+pasigurt_A,pasigurt,A,exact,RGL LexiconSqi,"mkA ""pasigurt""",C1,declared-baseline-not-reproved-by-this-build,uncertain_A
+pasqyroj_V,pasqyroj,V,evidence-matched-explicit-class,Tosk reference,"mkV028 ""pasqyroj""",C2,requires-post-campaign-gf312-run,Tosk observed forms pasqyrojnë; mkV028 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pastër_A,pastër,A,exact,RGL LexiconSqi,"mkA ""pastër""",C1,declared-baseline-not-reproved-by-this-build,clean_A
+pemë_N,pemë,N,exact,RGL LexiconSqi,"mkN ""pemë""",C1,declared-baseline-not-reproved-by-this-build,tree_N
+pendë_N,pendë,N,exact,RGL LexiconSqi,"mkN ""pendë""",C1,declared-baseline-not-reproved-by-this-build,feather_N
+person_N,person,N,exact,RGL LexiconSqi,"mkN ""person""",C1,declared-baseline-not-reproved-by-this-build,person_N
+peshk_N,peshk,N,exact,RGL LexiconSqi,"mkN ""peshk""",C1,declared-baseline-not-reproved-by-this-build,fish_N
+pi_V,pi,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.pi_V,C2,declared-baseline-not-reproved-by-this-build,drink_V2; pi_V
+pis_A,pis,A,exact,RGL LexiconSqi,"mkA ""pis""",C1,declared-baseline-not-reproved-by-this-build,dirty_A
+pistë_N,pistë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""pistë""",C2,requires-post-campaign-gf312-run,Tosk observed forms pistës; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pjesë_N,pjesë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""pjesë""",C2,requires-post-campaign-gf312-run,Tosk observed forms pjesën; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pjesëmarrje_N,pjesëmarrje,N,evidence-matched-explicit-class,Tosk reference,"mkN188 ""pjesëmarrje""",C2,requires-post-campaign-gf312-run,Tosk observed forms pjesëmarrje; mkN188 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+planet_N,planet,N,exact,RGL LexiconSqi,"mkN ""planet""",C1,declared-baseline-not-reproved-by-this-build,planet_N
+plastikë_N,plastikë,N,exact,RGL LexiconSqi,"mkN ""plastikë""",C1,declared-baseline-not-reproved-by-this-build,plastic_N
+plogështi_N,plogështi,N,evidence-matched-explicit-class,Tosk reference,"mkN059 ""plogështi""",C2,requires-post-campaign-gf312-run,Tosk observed forms plogështia; mkN059 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+plot_A,plot,A,exact,RGL LexiconSqi,"mkA ""plot""",C1,declared-baseline-not-reproved-by-this-build,full_A
+plot_Adv,plot,Adv,direct-invariant,Tosk reference,"mkAdv ""plot""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: plot
+pluhur_N,pluhur,N,exact,RGL LexiconSqi,"mkN ""pluhur""",C1,declared-baseline-not-reproved-by-this-build,dust_N
+pluralizm_N,pluralizm,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""pluralizm""",C2,requires-post-campaign-gf312-run,Tosk observed forms pluralizmit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pluskoj_V,pluskoj,V,exact,RGL LexiconSqi,"mkV ""pluskoj""",C1,declared-baseline-not-reproved-by-this-build,float_V
+polic_N,polic,N,exact,RGL LexiconSqi,"mkN ""polic""",C1,declared-baseline-not-reproved-by-this-build,policeman_N
+politik_A,politik,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""politik""",C2,requires-post-campaign-gf312-run,Tosk observed forms politike; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+por_Conj,por,Conj,direct-invariant,Tosk reference,"mkConj ""por""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: por
+porsaardhur_A,porsaardhur,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""porsaardhur""",C2,requires-post-campaign-gf312-run,Tosk observed forms porsaardhur; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+port_N,port,N,exact,RGL LexiconSqi,"mkN ""port""",C1,declared-baseline-not-reproved-by-this-build,harbour_N
+pothuajse_Adv,pothuajse,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""pothuajse""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+pra_Conj,pra,Conj,direct-invariant,Tosk reference,"mkConj ""pra""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: pra
+prej_Prep,prej,Prep,exact,RGL StructuralSqiClause,"mkPrep ""prej"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+pres_V,pres,V,exact,RGL LexiconSqi,"mkV ""pres""",C1,declared-baseline-not-reproved-by-this-build,cut_V2; wait_V2
+prift_N,prift,N,exact,RGL LexiconSqi,"mkN ""prift""",C1,declared-baseline-not-reproved-by-this-build,priest_N
+pronë_N,pronë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""pronë""",C2,requires-post-campaign-gf312-run,Tosk observed forms pronës; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pse_IAdv,pse,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""pse""",C2,declared-baseline-not-reproved-by-this-build,
+pushtet_N,pushtet,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""pushtet""",C2,requires-post-campaign-gf312-run,Tosk observed forms pushtetit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+pyes_V,pyes,V,exact,RGL LexiconSqi,"mkV ""pyes""",C1,declared-baseline-not-reproved-by-this-build,ask_V2Q
+pyetje_N,pyetje,N,exact,RGL LexiconSqi,"mkN ""pyetje""",C1,declared-baseline-not-reproved-by-this-build,question_N
+pyll_N,pyll,N,exact,RGL LexiconSqi,"mkN ""pyll""",C1,declared-baseline-not-reproved-by-this-build,forest_N
+pëkundrazi_Adv,pëkundrazi,Adv,direct-invariant,Tosk reference,"mkAdv ""pëkundrazi""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: përkundrazi
+pëlqej_V,pëlqej,V,exact,RGL LexiconSqi,"mkV ""pëlqej""",C1,declared-baseline-not-reproved-by-this-build,like_V2
+për_Prep,për,Prep,exact,RGL StructuralSqiClause,"mkPrep ""për"" accusative",C2,declared-baseline-not-reproved-by-this-build,governs accusative
+përdorim_N,përdorim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""përdorim""",C2,requires-post-campaign-gf312-run,"Tosk observed forms përdorim, përdorimit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+përfundimtar_A,përfundimtar,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""përfundimtar""",C2,requires-post-campaign-gf312-run,Tosk observed forms përfundimtare; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+përgjigjem_V,përgjigjem,V,exact,RGL LexiconSqi,"mkV ""përgjigjem""",C1,declared-baseline-not-reproved-by-this-build,answer_V2S
+përmes_Prep,përmes,Prep,exact,RGL StructuralSqiClause,"mkPrep ""përmes"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+përpara_Prep,përpara,Prep,exact,RGL StructuralSqiClause,"mkPrep ""përpara"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+përpiqem_V,përpiqem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""përpiqem""",C2,requires-post-campaign-gf312-run,Tosk observed forms përpiqeni; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+përveç_Prep,përveç,Prep,exact,RGL StructuralSqiClause,"mkPrep ""përveç"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+pështyj_V,pështyj,V,exact,RGL LexiconSqi,"mkV ""pështyj""",C1,declared-baseline-not-reproved-by-this-build,spit_V
+qafë_N,qafë,N,exact,RGL LexiconSqi,"mkN ""qafë""",C1,declared-baseline-not-reproved-by-this-build,neck_N
+qen_N,qen,N,exact,RGL LexiconSqi,"mkN ""qen""",C1,declared-baseline-not-reproved-by-this-build,dog_N
+qep_V,qep,V,exact,RGL LexiconSqi,"mkV ""qep""",C1,declared-baseline-not-reproved-by-this-build,sew_V
+qesh_V,qesh,V,exact,RGL LexiconSqi,"mkV ""qesh""",C1,declared-baseline-not-reproved-by-this-build,laugh_V
+qeveri_N,qeveri,N,evidence-matched-explicit-class,Tosk reference,"mkN059 ""qeveri""",C2,requires-post-campaign-gf312-run,Tosk observed forms qeverive; mkN059 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+qiell_N,qiell,N,exact,RGL LexiconSqi,"mkN ""qiell""",C1,declared-baseline-not-reproved-by-this-build,sky_N
+qilim_N,qilim,N,exact,RGL LexiconSqi,"mkN ""qilim""",C1,declared-baseline-not-reproved-by-this-build,carpet_N
+qumësht_N,qumësht,N,exact,RGL LexiconSqi,"mkN ""qumësht""",C1,declared-baseline-not-reproved-by-this-build,milk_N
+qytet_N,qytet,N,exact,RGL LexiconSqi,"mkN ""qytet""",C1,declared-baseline-not-reproved-by-this-build,city_N
+që_Conj,që,Conj,direct-invariant,Tosk reference,"mkConj ""që""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: që
+që_Prep,që,Prep,direct-with-government,Tosk reference,"mkPrep ""që"" accusative",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: që
+që_Subj,që,Subj,exact,RGL StructuralSqiClause,"mkSubj ""që""",C2,declared-baseline-not-reproved-by-this-build,
+qëndroj_V,qëndroj,V,exact,RGL LexiconSqi,"mkV ""qëndroj""",C1,declared-baseline-not-reproved-by-this-build,stand_V
+radio_N,radio,N,exact,RGL LexiconSqi,"mkN ""radio""",C1,declared-baseline-not-reproved-by-this-build,radio_N
+rast_N,rast,N,evidence-matched-explicit-class,Tosk reference,"mkN031 ""rast""",C2,requires-post-campaign-gf312-run,Tosk observed forms rast; mkN031 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+re_N,re,N,exact,RGL LexiconSqi,"mkN ""re""",C1,declared-baseline-not-reproved-by-this-build,cloud_N
+rend_N,rend,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""rend""",C2,requires-post-campaign-gf312-run,Tosk observed forms rendi; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+republikë_N,republikë,N,evidence-matched-explicit-class,Tosk reference,"mkN071 ""republikë""",C2,requires-post-campaign-gf312-run,"Tosk observed forms Republikës, republika, republikën, republikës; mkN071 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+respektim_N,respektim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""respektim""",C2,requires-post-campaign-gf312-run,Tosk observed forms respektimit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+restorant_N,restorant,N,exact,RGL LexiconSqi,"mkN ""restorant""",C1,declared-baseline-not-reproved-by-this-build,restaurant_N
+ri_A,ri,A,exact,RGL LexiconSqi,"mkA ""ri""",C1,declared-baseline-not-reproved-by-this-build,new_A; young_A
+rojë_N,rojë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""rojë""",C2,requires-post-campaign-gf312-run,Tosk observed forms rojat; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+rregull_N,rregull,N,exact,RGL LexiconSqi,"mkN ""rregull""",C1,declared-baseline-not-reproved-by-this-build,rule_N
+rregullohem_V,rregullohem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""rregullohem""",C2,requires-post-campaign-gf312-run,"Tosk observed forms rregullohen, rregullohet; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+rrjedh_V,rrjedh,V,exact,RGL LexiconSqi,"mkV ""rrjedh""",C1,declared-baseline-not-reproved-by-this-build,flow_V
+rrugë_N,rrugë,N,exact,RGL LexiconSqi,"mkN ""rrugë""",C1,declared-baseline-not-reproved-by-this-build,road_N
+rrumbullakët_A,rrumbullakët,A,exact,RGL LexiconSqi,"mkA ""rrumbullakët""",C1,declared-baseline-not-reproved-by-this-build,round_A
+rrëmbej_V,rrëmbej,V,evidence-matched-explicit-class,Tosk reference,"mkV047 ""rrëmbej""",C2,requires-post-campaign-gf312-run,Tosk observed forms rrëmbeni; mkV047 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+rrënjë_N,rrënjë,N,exact,RGL LexiconSqi,"mkN ""rrënjë""",C1,declared-baseline-not-reproved-by-this-build,root_N
+rrëzohem_V,rrëzohem,V,exact,RGL LexiconSqi,"mkV ""rrëzohem""",C1,declared-baseline-not-reproved-by-this-build,fall_V
+rëndë_A,rëndë,A,exact,RGL LexiconSqi,"mkA ""rëndë""",C1,declared-baseline-not-reproved-by-this-build,heavy_A
+rëndësishëm_A,rëndësishëm,A,exact,RGL LexiconSqi,"mkA ""rëndësishëm""",C1,declared-baseline-not-reproved-by-this-build,important_A
+rërë_N,rërë,N,exact,RGL LexiconSqi,"mkN ""rërë""",C1,declared-baseline-not-reproved-by-this-build,sand_N
+sa_Adv,sa,Adv,direct-invariant,Tosk reference,"mkAdv ""sa""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: sa
+sa_Conj,sa,Conj,direct-invariant,Tosk reference,"mkConj ""sa""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: sa
+sa_IAdv,sa,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""sa""",C2,declared-baseline-not-reproved-by-this-build,
+sa_IDet,sa,IDet,exact,RGL StructuralSqiNominal,SN.how8many_IDet,C2,declared-baseline-not-reproved-by-this-build,
+saktë_A,saktë,A,exact,RGL LexiconSqi,"mkA ""saktë""",C1,declared-baseline-not-reproved-by-this-build,correct_A
+se_Conj,se,Conj,direct-invariant,Tosk reference,"mkConj ""se""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: se
+sepse_Conj,sepse,Conj,direct-invariant,Tosk reference,"mkConj ""sepse""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: sepse
+sepse_Subj,sepse,Subj,exact,RGL StructuralSqiClause,"mkSubj ""sepse""",C2,declared-baseline-not-reproved-by-this-build,
+serb_A,serb,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""serb""",C2,requires-post-campaign-gf312-run,Tosk observed forms serbe; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shef_N,shef,N,exact,RGL LexiconSqi,"mkN ""shef""",C1,declared-baseline-not-reproved-by-this-build,boss_N
+shes_V,shes,V,exact,RGL LexiconSqi,"mkV ""shes""",C1,declared-baseline-not-reproved-by-this-build,sell_V3
+shi_N,shi,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""shi"") masculine",C1,declared-baseline-not-reproved-by-this-build,rain_N; Tosk characteristic form/gender applied
+shikoj_V,shikoj,V,exact,RGL LexiconSqi,"mkV ""shikoj""",C1,declared-baseline-not-reproved-by-this-build,watch_V2
+shkak_N,shkak,N,evidence-matched-explicit-class,Tosk reference,"mkN053 ""shkak""",C2,requires-post-campaign-gf312-run,Tosk observed forms shkaku; mkN053 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shkencë_N,shkencë,N,exact,RGL LexiconSqi,"mkN ""shkencë""",C1,declared-baseline-not-reproved-by-this-build,science_N
+shkoj_V,shkoj,V,exact,RGL LexiconSqi,"mkV ""shkoj""",C1,declared-baseline-not-reproved-by-this-build,go_V
+shkollë_N,shkollë,N,exact,RGL LexiconSqi,"mkN ""shkollë""",C1,declared-baseline-not-reproved-by-this-build,school_N
+shkop_N,shkop,N,exact,RGL LexiconSqi,"mkN ""shkop""",C1,declared-baseline-not-reproved-by-this-build,stick_N
+shkruaj_V,shkruaj,V,exact,RGL LexiconSqi,"mkV ""shkruaj""",C1,declared-baseline-not-reproved-by-this-build,write_V2
+shkruhem_V,shkruhem,V,evidence-matched-explicit-class,Tosk reference,"mkV041 ""shkruhem""",C2,requires-post-campaign-gf312-run,Tosk observed forms shkruhej; mkV041 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shkurtër_A,shkurtër,A,exact,RGL LexiconSqi,"mkA ""shkurtër""",C1,declared-baseline-not-reproved-by-this-build,short_A
+shkëlqej_V,shkëlqej,V,evidence-matched-explicit-class,Tosk reference,"mkV047 ""shkëlqej""",C2,requires-post-campaign-gf312-run,Tosk observed forms shkëlqente; mkV047 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shkëmb_N,shkëmb,N,exact,RGL LexiconSqi,"mkN ""shkëmb""",C1,declared-baseline-not-reproved-by-this-build,rock_N
+shoh_V,shoh,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.shoh_V,C2,declared-baseline-not-reproved-by-this-build,see_V2; shoh_V
+shoqëror_A,shoqëror,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""shoqëror""",C2,requires-post-campaign-gf312-run,Tosk observed forms shoqërore; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shpinë_N,shpinë,N,exact,RGL LexiconSqi,"mkN ""shpinë""",C1,declared-baseline-not-reproved-by-this-build,back_N
+shpresoj_V,shpresoj,V,exact,RGL LexiconSqi,"mkV ""shpresoj""",C1,declared-baseline-not-reproved-by-this-build,hope_VS
+shpëtim_N,shpëtim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""shpëtim""",C2,requires-post-campaign-gf312-run,Tosk observed forms shpëtimin; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shqip_A,shqip,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""shqip""",C2,requires-post-campaign-gf312-run,Tosk observed forms shqipe; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shtet_N,shtet,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""shtet""",C2,requires-post-campaign-gf312-run,Tosk observed forms shtet; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shtetëror_A,shtetëror,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""shtetëror""",C2,requires-post-campaign-gf312-run,Tosk observed forms shtetërore; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shtoj_V,shtoj,V,exact,RGL LexiconSqi,"mkV ""shtoj""",C1,declared-baseline-not-reproved-by-this-build,add_V3
+shtrydh_V,shtrydh,V,exact,RGL LexiconSqi,"mkV ""shtrydh""",C1,declared-baseline-not-reproved-by-this-build,squeeze_V2
+shtyj_V,shtyj,V,exact,RGL LexiconSqi,"mkV ""shtyj""",C1,declared-baseline-not-reproved-by-this-build,push_V2
+shtëpi_N,shtëpi,N,exact,RGL LexiconSqi,"mkN ""shtëpi""",C1,declared-baseline-not-reproved-by-this-build,house_N
+shumetnik_A,shumetnik,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""shumetnik""",C2,requires-post-campaign-gf312-run,Tosk observed forms shumetnik; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shumica_Predet,shumica,Predet,exact,RGL StructuralSqiNominal,SN.most_Predet,C2,declared-baseline-not-reproved-by-this-build,
+shumë_Adv,shumë,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""shumë""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+shumë_1_Det,shumë,Det,exact,RGL StructuralSqiNominal,SN.many_Det,C2,declared-baseline-not-reproved-by-this-build,pl
+shumë_2_Det,shumë,Det,exact,RGL StructuralSqiNominal,SN.much_Det,C2,declared-baseline-not-reproved-by-this-build,sg
+shëmbëllë_N,shëmbëllë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""shëmbëllë""",C2,requires-post-campaign-gf312-run,Tosk observed forms shëmbëllën; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+shëmtuar_A,shëmtuar,A,exact,RGL LexiconSqi,"mkA ""shëmtuar""",C1,declared-baseline-not-reproved-by-this-build,ugly_A
+shëtis_V,shëtis,V,exact,RGL LexiconSqi,"mkV ""shëtis""",C1,declared-baseline-not-reproved-by-this-build,walk_V
+si_Conj,si,Conj,direct-invariant,Tosk reference,"mkConj ""si""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: si
+si_IAdv,si,IAdv,exact,RGL StructuralSqiClause,"mkIAdv ""si""",C2,declared-baseline-not-reproved-by-this-build,
+siguroj_V,siguroj,V,evidence-matched-explicit-class,Tosk reference,"mkV028 ""siguroj""",C2,requires-post-campaign-gf312-run,Tosk observed forms siguron; mkV028 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+sikur_Conj,sikur,Conj,direct-invariant,Tosk reference,"mkConj ""sikur""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: sikur
+sipër_Prep,sipër,Prep,exact,RGL StructuralSqiClause,"mkPrep ""sipër"" ablative",C2,declared-baseline-not-reproved-by-this-build,governs ablative
+sobë_N,sobë,N,exact,RGL LexiconSqi,"mkN ""sobë""",C1,declared-baseline-not-reproved-by-this-build,stove_N
+social_A,social,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""social""",C2,requires-post-campaign-gf312-run,Tosk observed forms sociale; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+sot_Adv,sot,Adv,exact,RGL LexiconSqi,"mkAdv ""sot""",C2,declared-baseline-not-reproved-by-this-build,today_Adv
+sqotë_N,sqotë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""sqotë""",C2,requires-post-campaign-gf312-run,Tosk observed forms sqota; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+status_N,status,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""status""",C2,requires-post-campaign-gf312-run,Tosk observed forms statusin; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+stemë_N,stemë,N,evidence-matched-explicit-class,Tosk reference,"mkN146 ""stemë""",C2,requires-post-campaign-gf312-run,Tosk observed forms stema; mkN146 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+stilolaps_N,stilolaps,N,exact,RGL LexiconSqi,"mkN ""stilolaps""",C1,declared-baseline-not-reproved-by-this-build,pen_N
+student_N,student,N,exact,RGL LexiconSqi,"mkN ""student""",C1,declared-baseline-not-reproved-by-this-build,student_N
+sukses_N,sukses,N,evidence-matched-explicit-class,Tosk reference,"mkN070 ""sukses""",C2,requires-post-campaign-gf312-run,Tosk observed forms sukses; mkN070 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+sundim_N,sundim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""sundim""",C2,requires-post-campaign-gf312-run,Tosk observed forms sundimit; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+sy_N,sy,N,exact,RGL LexiconSqi,"mkN ""sy""",C1,declared-baseline-not-reproved-by-this-build,eye_N
+taman_Adv,taman,Adv,direct-invariant,Tosk reference,"mkAdv ""taman""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: taman
+tani_Adv,tani,Adv,exact,RGL LexiconSqi,"mkAdv ""tani""",C2,declared-baseline-not-reproved-by-this-build,now_Adv
+tashmë_Adv,tashmë,Adv,exact,RGL LexiconSqi,"mkAdv ""tashmë""",C2,declared-baseline-not-reproved-by-this-build,already_Adv
+tavan_N,tavan,N,exact,RGL LexiconSqi,"mkN ""tavan""",C1,declared-baseline-not-reproved-by-this-build,ceiling_N
+televizor_N,televizor,N,exact,RGL LexiconSqi,"mkN ""televizor""",C1,declared-baseline-not-reproved-by-this-build,television_N
+tepër_Adv,tepër,Adv,exact-normalized,RGL StructuralSqiClause,"mkAdv ""tepër""",C2,declared-baseline-not-reproved-by-this-build,AdA/AdV/AdN normalized to Adv where applicable
+thatë_A,thatë,A,exact,RGL LexiconSqi,"mkA ""thatë""",C1,declared-baseline-not-reproved-by-this-build,dry_A
+them_V,them,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.them_V,C2,declared-baseline-not-reproved-by-this-build,say_VS; them_V
+themelor_A,themelor,A,evidence-matched-explicit-class,Tosk reference,"mkA004 ""themelor""",C2,requires-post-campaign-gf312-run,Tosk observed forms themelore; mkA004 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+ther_V,ther,V,exact,RGL LexiconSqi,"mkV ""ther""",C1,declared-baseline-not-reproved-by-this-build,stab_V2
+thith_V,thith,V,exact,RGL LexiconSqi,"mkV ""thith""",C1,declared-baseline-not-reproved-by-this-build,suck_V2
+thua_N,thua,N,exact,RGL LexiconSqi,"mkN ""thua""",C1,declared-baseline-not-reproved-by-this-build,fingernail_N
+thyej_V,thyej,V,exact,RGL LexiconSqi,"mkV ""thyej""",C1,declared-baseline-not-reproved-by-this-build,break_V2
+ti_Pron,ti,Pron,exact,RGL StructuralSqiNominal,SN.youSg_Pron,C2,declared-baseline-not-reproved-by-this-build,
+tjetër_A,tjetër,A,evidence-matched-explicit-class,Tosk reference,"mkA025 ""tjetër""",C2,requires-post-campaign-gf312-run,"Tosk observed forms tjera, tjetër; mkA025 selected by unique-numbered-class-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+tokë_N,tokë,N,rgl+reference-characteristic,RGL LexiconSqi,"forceGender (mkN ""tokë"") feminine",C1,declared-baseline-not-reproved-by-this-build,earth_N; Tosk characteristic form/gender applied
+trashë_A,trashë,A,exact,RGL LexiconSqi,"mkA ""trashë""",C1,declared-baseline-not-reproved-by-this-build,thick_A
+treg_N,treg,N,evidence-matched-explicit-class,Tosk reference,"mkN047 ""treg""",C2,requires-post-campaign-gf312-run,Tosk observed forms tregut; mkN047 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+tren_N,tren,N,exact,RGL LexiconSqi,"mkN ""tren""",C1,declared-baseline-not-reproved-by-this-build,train_N
+trishtuar_A,trishtuar,A,evidence-matched-explicit-class,Tosk reference,"mkA009 ""trishtuar""",C2,requires-post-campaign-gf312-run,Tosk observed forms trishtuar; mkA009 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+tryezë_N,tryezë,N,exact,RGL LexiconSqi,"mkN ""tryezë""",C1,declared-baseline-not-reproved-by-this-build,table_N
+turk_A,turk,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""turk""",C2,requires-post-campaign-gf312-run,Tosk observed forms turke; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+turp_N,turp,N,evidence-matched-explicit-class,Tosk reference,"mkN017 ""turp""",C2,requires-post-campaign-gf312-run,Tosk observed forms turp; mkN017 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+tym_N,tym,N,exact,RGL LexiconSqi,"mkN ""tym""",C1,declared-baseline-not-reproved-by-this-build,smoke_N
+të_Conj,të,Conj,direct-invariant,Tosk reference,"mkConj ""të""",C2,declared-baseline-not-reproved-by-this-build,"Tosk ref observed: t'i, t'ia, t'ju, ta, të"
+tërheq_V,tërheq,V,exact,RGL LexiconSqi,"mkV ""tërheq""",C1,declared-baseline-not-reproved-by-this-build,pull_V2
+tërheqje_N,tërheqje,N,evidence-matched-explicit-class,Tosk reference,"mkN188 ""tërheqje""",C2,requires-post-campaign-gf312-run,Tosk observed forms tërheqjen; mkN188 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+udhëheqje_N,udhëheqje,N,evidence-matched-explicit-class,Tosk reference,"mkN188 ""udhëheqje""",C2,requires-post-campaign-gf312-run,Tosk observed forms udhëheqjen; mkN188 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+udhëtoj_V,udhëtoj,V,exact,RGL LexiconSqi,"mkV ""udhëtoj""",C1,declared-baseline-not-reproved-by-this-build,travel_V
+ujë_N,ujë,N,exact,RGL LexiconSqi,"mkN ""ujë""",C1,declared-baseline-not-reproved-by-this-build,water_N
+ulem_V,ulem,V,exact,RGL LexiconSqi,"mkV ""ulem""",C1,declared-baseline-not-reproved-by-this-build,sit_V
+universitet_N,universitet,N,exact,RGL LexiconSqi,"mkN ""universitet""",C1,declared-baseline-not-reproved-by-this-build,university_N
+unë_Pron,unë,Pron,exact,RGL StructuralSqiNominal,SN.i_Pron,C2,declared-baseline-not-reproved-by-this-build,
+urrej_V,urrej,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.urrej_V,C2,declared-baseline-not-reproved-by-this-build,hate_V2; urrej_V
+ushtar_N,ushtar,N,evidence-matched-explicit-class,Tosk reference,"mkN031 ""ushtar""",C2,requires-post-campaign-gf312-run,"Tosk observed forms ushtarët, ushtarëve; mkN031 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+vaj_N,vaj,N,exact,RGL LexiconSqi,"mkN ""vaj""",C1,declared-baseline-not-reproved-by-this-build,oil_N
+vajzë_N,vajzë,N,exact,RGL LexiconSqi,"mkN ""vajzë""",C1,declared-baseline-not-reproved-by-this-build,girl_N
+varkë_N,varkë,N,exact,RGL LexiconSqi,"mkN ""varkë""",C1,declared-baseline-not-reproved-by-this-build,boat_N
+vdes_V,vdes,V,exact,RGL LexiconSqi,"mkV ""vdes""",C1,declared-baseline-not-reproved-by-this-build,die_V
+vend_N,vend,N,exact,RGL LexiconSqi,"mkN ""vend""",C1,declared-baseline-not-reproved-by-this-build,country_N
+vendos_V,vendos,V,exact,RGL LexiconSqi,"mkV ""vendos""",C1,declared-baseline-not-reproved-by-this-build,put_V2
+verdhë_A,verdhë,A,exact,RGL LexiconSqi,"mkA ""verdhë""",C1,declared-baseline-not-reproved-by-this-build,yellow_A
+verë_N,verë,N,exact,RGL LexiconSqi,"mkN ""verë""",C1,declared-baseline-not-reproved-by-this-build,wine_N
+vesh_N,vesh,N,exact,RGL LexiconSqi,"mkN ""vesh""",C1,declared-baseline-not-reproved-by-this-build,ear_N
+vetëm_Adv,vetëm,Adv,direct-invariant,Tosk reference,"mkAdv ""vetëm""",C2,declared-baseline-not-reproved-by-this-build,Tosk ref observed: vetëm
+vetëm_Predet,vetëm,Predet,exact,RGL StructuralSqiNominal,SN.only_Predet,C2,declared-baseline-not-reproved-by-this-build,
+vezë_N,vezë,N,exact,RGL LexiconSqi,"mkN ""vezë""",C1,declared-baseline-not-reproved-by-this-build,egg_N
+vij_V,vij,V,exact-irregular,RGL IrregSqi; RGL LexiconSqi,lin V I.vij_V,C2,declared-baseline-not-reproved-by-this-build,come_V; vij_V
+vit_N,vit,N,exact,RGL LexiconSqi,"mkN ""vit""",C1,declared-baseline-not-reproved-by-this-build,year_N
+vjell_V,vjell,V,exact,RGL LexiconSqi,"mkV ""vjell""",C1,declared-baseline-not-reproved-by-this-build,vomit_V
+vjeshtë_N,vjeshtë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""vjeshtë""",C2,requires-post-campaign-gf312-run,"Tosk observed forms vjeshta, vjeshtë, vjeshtës; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+vjetër_A,vjetër,A,exact,RGL LexiconSqi,"mkA ""vjetër""",C1,declared-baseline-not-reproved-by-this-build,old_A
+vlerë_N,vlerë,N,evidence-matched-explicit-class,Tosk reference,"mkN072 ""vlerë""",C2,requires-post-campaign-gf312-run,Tosk observed forms vlerë; mkN072 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+vogël_A,vogël,A,exact,RGL LexiconSqi,"mkA ""vogël""",C1,declared-baseline-not-reproved-by-this-build,small_A
+vranësirë_N,vranësirë,N,evidence-matched-explicit-class,Tosk reference,"mkN109 ""vranësirë""",C2,requires-post-campaign-gf312-run,Tosk observed forms vranësirat; mkN109 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+vrapoj_V,vrapoj,V,exact,RGL LexiconSqi,"mkV ""vrapoj""",C1,declared-baseline-not-reproved-by-this-build,run_V
+vras_V,vras,V,rgl+reference-characteristic,RGL LexiconSqi,"mkV ""vras"" ""vrarë""",C1,declared-baseline-not-reproved-by-this-build,kill_V2; Tosk participle applied
+vë_V,vë,V,exact-irregular,RGL IrregSqi,lin V I.ve_V,C2,declared-baseline-not-reproved-by-this-build,ve_V
+vëlla_N,vëlla,N,exact,RGL LexiconSqi,"mkN ""vëlla""",C1,declared-baseline-not-reproved-by-this-build,brother_N2
+vërtetë_A,vërtetë,A,evidence-matched-explicit-class,Tosk reference,"mkA013 ""vërtetë""",C2,requires-post-campaign-gf312-run,Tosk observed forms vërtetë; mkA013 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+yll_N,yll,N,exact,RGL LexiconSqi,"mkN ""yll""",C1,declared-baseline-not-reproved-by-this-build,star_N
+zbavitës_A,zbavitës,A,exact,RGL LexiconSqi,"mkA ""zbavitës""",C1,declared-baseline-not-reproved-by-this-build,fun_AV
+zemër_N,zemër,N,exact,RGL LexiconSqi,"mkN ""zemër""",C1,declared-baseline-not-reproved-by-this-build,heart_N
+zgjuar_A,zgjuar,A,exact,RGL LexiconSqi,"mkA ""zgjuar""",C1,declared-baseline-not-reproved-by-this-build,clever_A
+zhvillim_N,zhvillim,N,evidence-matched-explicit-class,Tosk reference,"mkN002 ""zhvillim""",C2,requires-post-campaign-gf312-run,Tosk observed forms zhvillimin; mkN002 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+zi_A,zi,A,exact,RGL LexiconSqi,"mkA ""zi""",C1,declared-baseline-not-reproved-by-this-build,black_A
+zjarr_N,zjarr,N,exact,RGL LexiconSqi,"mkN ""zjarr""",C1,declared-baseline-not-reproved-by-this-build,fire_N
+zjarrtë_A,zjarrtë,A,evidence-matched-explicit-class,Tosk reference,"mkA013 ""zjarrtë""",C2,requires-post-campaign-gf312-run,Tosk observed forms zjarrtë; mkA013 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+zog_N,zog,N,exact,RGL LexiconSqi,"mkN ""zog""",C1,declared-baseline-not-reproved-by-this-build,bird_N
+zorrë_N,zorrë,N,exact,RGL LexiconSqi,"mkN ""zorrë""",C1,declared-baseline-not-reproved-by-this-build,guts_N
+zot_N,zot,N,evidence-matched-explicit-class,Tosk reference,"mkN020 ""zot""",C2,requires-post-campaign-gf312-run,Tosk observed forms Zoti; mkN020 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6.
+zyrtar_A,zyrtar,A,evidence-matched-explicit-class,Tosk reference,"mkA001 ""zyrtar""",C2,requires-post-campaign-gf312-run,"Tosk observed forms zyrtar, zyrtare; mkA001 selected by smart-route-evidence-match. Static evidence match only; GF 3.12 rerun and linguistic review remain required for C6."
+çati_N,çati,N,exact,RGL LexiconSqi,"mkN ""çati""",C1,declared-baseline-not-reproved-by-this-build,roof_N
+çdo_Det,çdo,Det,exact,RGL StructuralSqiNominal,SN.every_Det,C2,declared-baseline-not-reproved-by-this-build,sg
+çelik_N,çelik,N,exact,RGL LexiconSqi,"mkN ""çelik""",C1,declared-baseline-not-reproved-by-this-build,steel_N
+çfarë_1_IP,çfarë,IP,exact,RGL StructuralSqiNominal,SN.whatPl_IP,C2,declared-baseline-not-reproved-by-this-build,pl
+çfarë_2_IP,çfarë,IP,exact,RGL StructuralSqiNominal,SN.whatSg_IP,C2,declared-baseline-not-reproved-by-this-build,sg
+çizme_N,çizme,N,exact,RGL LexiconSqi,"mkN ""çizme""",C1,declared-baseline-not-reproved-by-this-build,boot_N
+çorap_N,çorap,N,exact,RGL LexiconSqi,"mkN ""çorap""",C1,declared-baseline-not-reproved-by-this-build,sock_N

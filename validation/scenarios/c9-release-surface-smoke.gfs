@@ -1,0 +1,32 @@
+-- GF_WORDBENCH_INPUT_SHA256 fc4e09cf3911343044b617d1cd39f224727e43ead1f844f6b800efc6ab485743 validation/inputs/AlbC9ReleaseSurfaceSmoke.gf
+-- GF_WORDBENCH_INPUT_SHA256 817770c8cfd6a40f4736342907e6a2c3146bc973bff31b7afc137e3bbb9e37d9 validation/inputs/AlbC9ReleaseSurfaceSmokeSqi.gf
+i AlbC9ReleaseSurfaceSmokeSqi.gf
+ps "GF_WORDBENCH_BEGIN c9-release-surface-smoke"
+
+ps "CASE DOC_N"
+l (MkDocument (NoDefinition "noun") (InflectionN book_N) "")
+ps "CASE DOC_A"
+l (MkDocument (NoDefinition "adjective") (InflectionA big_A) "")
+ps "CASE DOC_V"
+l (MkDocument (NoDefinition "verb") (InflectionV sleep_V) "")
+ps "CASE DOC_PREP"
+l (MkDocument (NoDefinition "prep") (InflectionPrep in_Prep) "")
+ps "CASE DOC_CL"
+l (MkDocument (NoDefinition "clause") (InflectionCl (PredVP (UsePron i_Pron) (UseV sleep_V))) "")
+
+ps "CASE MARKUP_NP"
+l (UttNP (MarkupNP b_Mark (UsePron i_Pron)))
+ps "CASE MARKUP_CN"
+l (UttCN (MarkupCN i_Mark (UseN book_N)))
+ps "CASE MARKUP_AP"
+l (UttAP (MarkupAP b_Mark (PositA big_A)))
+ps "CASE MARKUP_S"
+l (UttS (MarkupS i_Mark (UseCl (TTAnt TPres ASimul) PPos (PredVP (UsePron i_Pron) (UseV sleep_V)))))
+
+ps "CASE SYMBOL_NP"
+l (UttNP (UsePN (SymbPN (MkSymb "x"))))
+ps "CASE SYMBOL_S"
+l (UttS (SymbS (MkSymb "A")))
+
+ps "GF_WORDBENCH_END c9-release-surface-smoke"
+q

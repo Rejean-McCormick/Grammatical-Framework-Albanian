@@ -1,5 +1,5 @@
--- GF_WORDBENCH_INPUT_SHA256 013223545bad905bc8f591fa7bdaf1a5a2abcb9f2b24c1015861b3365f5967d8 validation/inputs/AlbCampaign044.gf
--- GF_WORDBENCH_INPUT_SHA256 18c5ac950c250fdc1dc4ae4857e3a705285c03d7a40c7688ff8ce45226971549 validation/inputs/AlbCampaign044Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 3c6bb0847fe95bbfdf3ab7e083ebde0d7f2e37c7f472b1dd15e06f5baeaca2ce validation/inputs/AlbCampaign044.gf
+-- GF_WORDBENCH_INPUT_SHA256 6cb78bf21627ed2de6da18d59b9960fcd08e191ac93b5f1b7919954331d482b9 validation/inputs/AlbCampaign044Sqi.gf
 i AlbCampaign044Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0431 John nom"
@@ -22,5 +22,15 @@ ps "CASE C0439 under house"
 l C0439
 ps "CASE C0440 without him"
 l C0440
+ps "CASE PN5NOM five-case PN nom"
+l PN5NOM
+ps "CASE PN5ACC five-case PN acc"
+l PN5ACC
+ps "CASE PN5GEN five-case PN gen"
+l PN5GEN
+ps "CASE PN5DAT five-case PN dat"
+l PN5DAT
+ps "CASE PN5ABL five-case PN ablat"
+l PN5ABL
 ps "GF_WORDBENCH_END cases"
 q

@@ -1,0 +1,129 @@
+{
+  "document_set": "Albanian RGL C5 Clitics Pronouns Cases Prepositions",
+  "spec_version": "2.0.0",
+  "lifecycle": "IMPLEMENTABLE",
+  "date": "2026-09-25",
+  "baseline": "albanian-s02-green-20260925",
+  "files": [
+    {
+      "name": "00_FINAL_TARGET.md",
+      "bytes": 3175,
+      "sha256": "8512190330f89a341e1a911bc0509f65643ef46ca686ff0edc27711ab7c7e35c"
+    },
+    {
+      "name": "01_CURRENT_BASELINE_AND_GAPS.md",
+      "bytes": 3665,
+      "sha256": "29813fe49dc50cb4b706244acfc16890639dd97f8a253f2f6ed91e96df6c4467"
+    },
+    {
+      "name": "02_TYPED_ARCHITECTURE.md",
+      "bytes": 3948,
+      "sha256": "dd6e0c3fd0922cd22cfd2ab0c66de000b9c9466bcb07247eca286b672f410c18"
+    },
+    {
+      "name": "03_CLITIC_SYSTEM_SPEC.md",
+      "bytes": 2760,
+      "sha256": "01b0425434887b5711cfcc594e5e9a34bd841929b80b2cd015eb6f46e473eb21"
+    },
+    {
+      "name": "04_PRONOUN_CASE_PREPOSITION_SPEC.md",
+      "bytes": 2899,
+      "sha256": "4fd307f767f08540de9c4e8abc5560408b39384df57baf629664e4addc1468ad"
+    },
+    {
+      "name": "05_REALIZATION_CONTEXT_MATRIX.md",
+      "bytes": 3059,
+      "sha256": "4aec4250545dbc820cdb276bc3546b1e2584a7502839c1f0dd39bb347f49f529"
+    },
+    {
+      "name": "06_MODEL_LANGUAGE_POLICY.md",
+      "bytes": 1905,
+      "sha256": "403fbd27c25c03bf57b5870366f95c8c3e9281ca9adc3a591708690a4585b2b2"
+    },
+    {
+      "name": "07_MIGRATION_PLAN.md",
+      "bytes": 2744,
+      "sha256": "c60f5615412617e43002f86c3b0f98a57650de8efff9644ebc5db5da70812aed"
+    },
+    {
+      "name": "08_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 2477,
+      "sha256": "b03a735205ec299dba04679c647ef50c6aa16a9f7811e316f25191d0f56def7f"
+    },
+    {
+      "name": "09_DECISION_LEDGER.md",
+      "bytes": 2552,
+      "sha256": "a2fb4ff91af77817b27de5246ab4d3f487b078e042ad982cd3439846e0b65aea"
+    },
+    {
+      "name": "10_OPEN_QUESTIONS.md",
+      "bytes": 2105,
+      "sha256": "ac3be5b9524715fea40fbfee0278bc4f64d9e999c5949f9fbe20df200a52688a"
+    },
+    {
+      "name": "11_PATCH_CHECKLIST.md",
+      "bytes": 2169,
+      "sha256": "2be60a707933bbcf510b68a00877c41280e69db07fa87a63cef8713f0f503013"
+    },
+    {
+      "name": "12_SOURCE_EVIDENCE_MATRIX.md",
+      "bytes": 4087,
+      "sha256": "407d28a489a7569b1f7ef07a2cbf2343886c87d7d05d0f045621c4b9c8c4afd4"
+    },
+    {
+      "name": "13_CROSS_WORKSTREAM_BOUNDARIES.md",
+      "bytes": 2171,
+      "sha256": "297cb898b2afe643f7e9121452632d7cf8bf28a8a1cdaf099ec999e4e8673552"
+    },
+    {
+      "name": "14_RGL_API_PARITY_MATRIX.md",
+      "bytes": 2613,
+      "sha256": "f6fb9ffcfe4aee8198a25feb4a903adf10f9a625fed19aca6973906ce4146e7e"
+    },
+    {
+      "name": "15_PRODUCER_CONSUMER_OWNERSHIP.md",
+      "bytes": 2202,
+      "sha256": "84ac3f2378ef7e946a2d9aac24722efb684c2a56732c22f5984e4c3387076c2c"
+    },
+    {
+      "name": "16_EXHAUSTIVE_LINGUISTIC_INVENTORY.md",
+      "bytes": 2486,
+      "sha256": "3eac042a884deb7fd70d7ec73a48a51467374fa65273fe0048f2ba6fbe4d76e3"
+    },
+    {
+      "name": "17_MACHINE_CHECKABLE_DEFINITION_OF_DONE.md",
+      "bytes": 2505,
+      "sha256": "2f3bfdc737ae94f887a8b59b1dc3c64f31c6307e4b00287f914d283f95a153d9"
+    },
+    {
+      "name": "18_VERSIONING_AND_CHANGE_CONTROL.md",
+      "bytes": 1453,
+      "sha256": "157d28b224af5d4c5c62d0822ce89d3aa5d1fa9a42f8134a65ff7328d09caddc"
+    },
+    {
+      "name": "19_REQUIREMENT_TRACEABILITY_MATRIX.md",
+      "bytes": 1785,
+      "sha256": "679c3da95f2cd79e4b7a3c9cdbd5ab9cc633a73457e8deaeef2df43a19c320a0"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "bytes": 1026,
+      "sha256": "39e8a69176b1ef2305031626f6c972c4dbf0878f45942ffa8b45baacc95de483"
+    },
+    {
+      "name": "MANIFEST.md",
+      "bytes": 1150,
+      "sha256": "7a3f04f38e224598742cafc6f70d2e5db1599f1e838a4ecee2a8a0ceb328ebc8"
+    },
+    {
+      "name": "README.md",
+      "bytes": 5592,
+      "sha256": "f84c98d02d59bab4a6d31af73cd642ce941af1e16eaac9c5b842ca7a8696e75e"
+    },
+    {
+      "name": "VALIDATION_REPORT.md",
+      "bytes": 608,
+      "sha256": "20e0e0a87e39eadfecfae95f4443994a7855662f6efde03e0d325dab1f811219"
+    }
+  ]
+}

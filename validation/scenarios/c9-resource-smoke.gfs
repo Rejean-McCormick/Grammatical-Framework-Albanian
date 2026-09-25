@@ -1,0 +1,42 @@
+-- GF_WORDBENCH_INPUT_SHA256 631fe934a01de2b30180b9678b4496d5c625412419d1335eac4e1d14c4fa861b validation/inputs/AlbC9ResourceSmoke.gf
+-- GF_WORDBENCH_INPUT_SHA256 b4f9913681ac4c747d119ee2e695983544003678e5bdcaf472711ea758bf0636 validation/inputs/AlbC9ResourceSmokeSqi.gf
+i AlbC9ResourceSmokeSqi.gf
+ps "GF_WORDBENCH_BEGIN c9-resource-smoke"
+ps "CASE C9_FROM_CASE expected: nga NOM"
+l C9_FROM_CASE
+ps "CASE C9_AGENT_CASE expected: nga NOM"
+l C9_AGENT_CASE
+ps "CASE C9_THIS_ACC_PL_MASC expected: këta"
+l C9_THIS_ACC_PL_MASC
+ps "CASE C9_THIS_ACC_PL_FEM expected: këto"
+l C9_THIS_ACC_PL_FEM
+ps "CASE C9_SOME_SG expected: ndonjë"
+l C9_SOME_SG
+ps "CASE C9_SOME_PL expected: disa"
+l C9_SOME_PL
+ps "CASE C9_IT_PRON_NOM expected: ajo"
+l C9_IT_PRON_NOM
+ps "CASE C9_THEY_PRON_NOM expected: ato"
+l C9_THEY_PRON_NOM
+ps "CASE C9_APP_CN Albanian PossNP route"
+l C9_APP_CN
+ps "CASE C9_TRY_ADV string overload"
+l C9_TRY_ADV
+ps "CASE C9_TRY_ADN string overload"
+l C9_TRY_ADN
+ps "CASE C9_TRY_ORD string overload"
+l C9_TRY_ORD
+ps "CASE C9_STRAND_QUESTION neutralized to preposition-first"
+l C9_STRAND_QUESTION
+ps "CASE C9_STRAND_RELATIVE neutralized to preposition-first"
+l C9_STRAND_RELATIVE
+ps "CASE C9_EMPTY_REL_MASC explicit relative"
+l C9_EMPTY_REL_MASC
+ps "CASE C9_EMPTY_REL_FEM explicit relative"
+l C9_EMPTY_REL_FEM
+ps "CASE C9_EMPTY_REL_PL explicit relative compatibility default"
+l C9_EMPTY_REL_PL
+ps "CASE C9_EMPTY_REL_NOPREP expected: që jeton"
+l C9_EMPTY_REL_NOPREP
+ps "GF_WORDBENCH_END c9-resource-smoke"
+q

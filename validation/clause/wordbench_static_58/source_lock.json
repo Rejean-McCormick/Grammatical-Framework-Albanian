@@ -1,0 +1,299 @@
+{
+  "schema": "gf-wordbench-source-lock-v1",
+  "algorithm": "sha256",
+  "aggregate_sha256": "55906c0f63c919e307730cc642d432d86392b120a414d2080937bd42dc8550c1",
+  "file_count": 58,
+  "gf_version": "UNKNOWN",
+  "files": [
+    {
+      "source": "albanian/AdjectiveSqi.gf",
+      "sha256": "f0eccd8b8ea93e0e2cc7b45843d17405636c5abad73062b235c8ed3949d83404",
+      "size_bytes": 1744
+    },
+    {
+      "source": "albanian/AdverbSqi.gf",
+      "sha256": "0758ed3b728ff4976ad28f15a28749f8ec29c2983c73dac67e233d27c6a58534",
+      "size_bytes": 834
+    },
+    {
+      "source": "albanian/AllSqi.gf",
+      "sha256": "c15b24a3ddc60f0c5ac9d162a3b421f60ac6153bdfc18bf7cedae9089b876fc7",
+      "size_bytes": 148
+    },
+    {
+      "source": "albanian/AllSqiAbs.gf",
+      "sha256": "8846ea36330556c347c9fb00cc6ba16bae7e5c5d3a7dc11430aa9d17c6a6baf7",
+      "size_bytes": 61
+    },
+    {
+      "source": "albanian/CatSqi.gf",
+      "sha256": "8fb7b05b7ad8af60f19894cafdfdc878a885467d969e9e308fb4efae86199210",
+      "size_bytes": 2744
+    },
+    {
+      "source": "albanian/ClauseSqiRes.gf",
+      "sha256": "ae45c84bf4d10d8d720f6d10abe63cbd8065ce45f14e6667ee7f8361fbfa6a21",
+      "size_bytes": 5726
+    },
+    {
+      "source": "albanian/ConjunctionSqi.gf",
+      "sha256": "bb9cd704c812e1e98741b86c05fa0a1cf50901de90f6114eacb474be3d7620ac",
+      "size_bytes": 2449
+    },
+    {
+      "source": "albanian/ConstructionSqi.gf",
+      "sha256": "c1ff5a423ba0560d577312b49d1457ad5f15eb96e8a514e668bfa16bf026d530",
+      "size_bytes": 7611
+    },
+    {
+      "source": "albanian/DictSqi.gf",
+      "sha256": "b3c3986e8105aa878d1d6a3e0a7dfffab181b27ebc9001c81f8a3c824e7d84ca",
+      "size_bytes": 278709
+    },
+    {
+      "source": "albanian/DictSqiAbs.gf",
+      "sha256": "6f435488586784c2f82adaae001a3c58729aa99467305bb49b6038cd3ddad97d",
+      "size_bytes": 134858
+    },
+    {
+      "source": "albanian/DocumentationSqi.gf",
+      "sha256": "32015778d2d69f0a8c9900a4fb2db307990be4745391bfdf8c839b68b53d0b4d",
+      "size_bytes": 9602
+    },
+    {
+      "source": "albanian/ExtendSqi.gf",
+      "sha256": "8b37ec20a88403b82da6bf0fb46f2412bf92a96d757e8a4f9c852aa62461545e",
+      "size_bytes": 15614
+    },
+    {
+      "source": "albanian/ExtendSqiAPCN.gf",
+      "sha256": "19ca0891e1bb1ee1e57c5c4b39cfd737919736c19b9bfa49553544e9a3f72f3c",
+      "size_bytes": 808
+    },
+    {
+      "source": "albanian/ExtendSqiExistential.gf",
+      "sha256": "5c3efa9dec862f0cff196931d7462c699d5d2584182c7970fc2fb1031c93ebcf",
+      "size_bytes": 1193
+    },
+    {
+      "source": "albanian/ExtendSqiFocusPrep.gf",
+      "sha256": "0979070dc17af8b72cb2abfb27366fa1d45278bee4d26a2c5c272d30a8e1658a",
+      "size_bytes": 1388
+    },
+    {
+      "source": "albanian/ExtendSqiHelpers.gf",
+      "sha256": "2fc5ad9880d997ae21921d132a5cfb8331967ee5e2d7cff5201ffb07ca4ec3a5",
+      "size_bytes": 2073
+    },
+    {
+      "source": "albanian/ExtendSqiLexicon.gf",
+      "sha256": "30e5ff71557e42629351184cf4586eda07d859d782f8efe76a9d62b41de5cf85",
+      "size_bytes": 1327
+    },
+    {
+      "source": "albanian/ExtendSqiRNP.gf",
+      "sha256": "738701c97a5feb36cf8ab7f047b6330bcd6b372e1b1b79d019473ed790614af6",
+      "size_bytes": 2655
+    },
+    {
+      "source": "albanian/ExtendSqiScaffolding.gf",
+      "sha256": "3c39266718d167c7e622254486a265bccff84d20d8e2d8ab9b9764ca82deb8eb",
+      "size_bytes": 6626
+    },
+    {
+      "source": "albanian/ExtendSqiVPBridge.gf",
+      "sha256": "afef170ca46b7120249372a73b08c79c87c5ecb666ddeef3b6e97b5b847b820f",
+      "size_bytes": 2619
+    },
+    {
+      "source": "albanian/ExtendSqiVPS.gf",
+      "sha256": "ecd87bf0ec0f96f6098e0aa27d76074543cfcba86ad9cac008cc7088fb117d4c",
+      "size_bytes": 4564
+    },
+    {
+      "source": "albanian/ExtraSqi.gf",
+      "sha256": "8b4d54d573f64fe1554d67ff37a9acbee6db0348d156710a6b871d4a1d6e8583",
+      "size_bytes": 4175
+    },
+    {
+      "source": "albanian/ExtraSqiAbs.gf",
+      "sha256": "ec8fd7bbeff3d6692fa8814d5695dab8255f247f9b427293ed63dbc7b0138595",
+      "size_bytes": 249
+    },
+    {
+      "source": "albanian/GrammarSqi.gf",
+      "sha256": "25a1415d6be38a4ebb34aba7b2a95ed25e731ec3b2f39fa6eaf8f499f439a8e2",
+      "size_bytes": 293
+    },
+    {
+      "source": "albanian/IdiomSqi.gf",
+      "sha256": "20dca0f218eb7004e6dab4d4b29b40f882425955dcb10164fe6162dc0ec2039d",
+      "size_bytes": 1674
+    },
+    {
+      "source": "albanian/IrregSqi.gf",
+      "sha256": "f96cfc6aa0a8c7719f44c4ab2e5ef62969c14154b199e0c79403b8ba1dd4aa05",
+      "size_bytes": 10602
+    },
+    {
+      "source": "albanian/IrregSqiAbs.gf",
+      "sha256": "9d883b2c0346cfae7303e63b35ea03dfcb188c56c9c1132c4c1542f1d4ae7fe0",
+      "size_bytes": 371
+    },
+    {
+      "source": "albanian/LangSqi.gf",
+      "sha256": "6fc7e4864c1c0774e857c1a5ada785d6c949aedecd8196d8572ea8586d0ad4d7",
+      "size_bytes": 342
+    },
+    {
+      "source": "albanian/LexiconSqi.gf",
+      "sha256": "b724d800c49efda27b75333c4d72c990e4f824d679a19cc6922fcc02e377dec6",
+      "size_bytes": 19015
+    },
+    {
+      "source": "albanian/MarkupSqi.gf",
+      "sha256": "75f4cd82aecff30cfb2fd0b869891324ed835ba90510203ef10afd0899c20649",
+      "size_bytes": 594
+    },
+    {
+      "source": "albanian/MorphoSqi.gf",
+      "sha256": "729706f857ae4b3e31934b218ffb775d2b2386618b5e5ddf3b822edda8702a42",
+      "size_bytes": 1074832
+    },
+    {
+      "source": "albanian/NamesSqi.gf",
+      "sha256": "6238d02d77f0ed38331c8d2f7df0c5c83b2d169c219a4e72b6010a383a3e5319",
+      "size_bytes": 796
+    },
+    {
+      "source": "albanian/NounSqi.gf",
+      "sha256": "36bd0c213d2c538abdb66ebf1c7517cb952331f97a45bb6d994b1b2d66f19c70",
+      "size_bytes": 6727
+    },
+    {
+      "source": "albanian/NumeralSqi.gf",
+      "sha256": "6e42bed324fc8a6d3419c6b5cd9f036fdfc5f006170273bd1cb049784a0b1f9f",
+      "size_bytes": 3607
+    },
+    {
+      "source": "albanian/ParadigmsSqi.gf",
+      "sha256": "b65f668abd6dc093d5a3eb58ed4eeb44917aa0f4ee97560775f3e4090811cc51",
+      "size_bytes": 54260
+    },
+    {
+      "source": "albanian/PhraseSqi.gf",
+      "sha256": "0aa65b0fc48aa6a806a3418c3f753cf9413b816c05ad7691c11a37dad4483b88",
+      "size_bytes": 699
+    },
+    {
+      "source": "albanian/QuestionSqi.gf",
+      "sha256": "f0b4191c1b609d5d3e670e2d9a68489bd0b7354dad56bd44fa378ae80658a46f",
+      "size_bytes": 1509
+    },
+    {
+      "source": "albanian/RelativeSqi.gf",
+      "sha256": "73e03fd68e8c393e7ef9274198ba19b07863b507072cb91329ebd2ab97d09610",
+      "size_bytes": 538
+    },
+    {
+      "source": "albanian/ResSqi.gf",
+      "sha256": "0ce1f35dcedb68d6084d30e781d013b5aa1376526095d7659f5b640ce8e23727",
+      "size_bytes": 14477
+    },
+    {
+      "source": "albanian/SentenceSqi.gf",
+      "sha256": "ea8bed5cac8575ba6560f162523dab8db7494786bf8b5f8f165f4927305580e5",
+      "size_bytes": 1659
+    },
+    {
+      "source": "albanian/StructuralSqi.gf",
+      "sha256": "f41c5f14229add8891ef594452d185092d118cbfa556d8d8203dcf41c73dcb86",
+      "size_bytes": 3954
+    },
+    {
+      "source": "albanian/StructuralSqiClause.gf",
+      "sha256": "4d7b2df5a215cf4b3e7c421ec6fddac690a653348d4b442e162509fe1bb9b748",
+      "size_bytes": 3499
+    },
+    {
+      "source": "albanian/StructuralSqiNominal.gf",
+      "sha256": "f1291088e6e36c05bf282e6ab628328b89640bac098a0d2cd73bbfb557fb0946",
+      "size_bytes": 3519
+    },
+    {
+      "source": "albanian/StructuralSqiRes.gf",
+      "sha256": "d10734d0fb341211a002c0dfa38ca343bfc14996aca82e85417df4712b51838b",
+      "size_bytes": 1491
+    },
+    {
+      "source": "albanian/StructuralSqiVerbal.gf",
+      "sha256": "1c6d5c304c057702d327b1677b4c11d51e973512b0a5fb291cc99cc67c7b82c6",
+      "size_bytes": 842
+    },
+    {
+      "source": "albanian/SymbolSqi.gf",
+      "sha256": "198b6debe7481749c316095aa0951358eca31490a0cca6a38c4659557236ba40",
+      "size_bytes": 2591
+    },
+    {
+      "source": "albanian/TenseSqi.gf",
+      "sha256": "6151ea201b403c6f7376af9130c1af1c5bd343e69bad645a0f13e1f5760ed2fe",
+      "size_bytes": 301
+    },
+    {
+      "source": "albanian/TestAbs.gf",
+      "sha256": "246586665bee347c3fbf00982d214d72e962d9e154b0d8101989d607141264f0",
+      "size_bytes": 42
+    },
+    {
+      "source": "albanian/TestSqi.gf",
+      "sha256": "2b8fd5cb64ead40c56d6571fbee4da77a8c5049d2ef6b524c7bb749a4ef25978",
+      "size_bytes": 114
+    },
+    {
+      "source": "albanian/TextSqi.gf",
+      "sha256": "040ad087a26fe7d5df7d3be48bca8463abe5ad763fe4193e552b4994717f4c22",
+      "size_bytes": 230
+    },
+    {
+      "source": "albanian/VerbSqi.gf",
+      "sha256": "9c8e1149b66c3df8e5e0f04de4c2a595e09c9df4f9d44ca8b79c8d1e551094af",
+      "size_bytes": 6228
+    },
+    {
+      "source": "CombinatorsSqi.gf",
+      "sha256": "f7421fbe296ee520f18eb991e4ddbbc01e770d0936187d12ed1a7d9b955b868a",
+      "size_bytes": 180
+    },
+    {
+      "source": "ConstructorsSqi.gf",
+      "sha256": "f53cc1fb3c6a14c962793c12c1482b7a6da08c2a50dd2695d1c1cd5b85a526bf",
+      "size_bytes": 120
+    },
+    {
+      "source": "morphodict/MorphoDictSqi.gf",
+      "sha256": "3bbdbcc386cb928639ddd51cd04f562f8d4816a3ac2465da2b7055f14f85b6a5",
+      "size_bytes": 23878
+    },
+    {
+      "source": "morphodict/MorphoDictSqiAbs.gf",
+      "sha256": "e2ac38e5fc9b192782f9efa59a6b20025e4d37e4a41c929ae7c83caa9a72d353",
+      "size_bytes": 10759
+    },
+    {
+      "source": "SymbolicSqi.gf",
+      "sha256": "5ca94698737674e446ebea7c68e83784e1e34ae04d65b13a371a2479ad7920ce",
+      "size_bytes": 125
+    },
+    {
+      "source": "SyntaxSqi.gf",
+      "sha256": "b1d9a967ab05380039cc0885808f94e59566bdc401d53e861b87306b749273d2",
+      "size_bytes": 140
+    },
+    {
+      "source": "TrySqi.gf",
+      "sha256": "6b64275078d77f7675c9073495559d35bb3f193d9359a303ecb2b6c75fe37f8c",
+      "size_bytes": 246
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+-- GF_WORDBENCH_INPUT_SHA256 fd01c974116c893ecdc763fea16a3b1f325ff5ebb1bc206fbd3f5727400fd016 validation/inputs/AlbClauseFinal.gf
+-- GF_WORDBENCH_INPUT_SHA256 d363549c1e089a0b808647acf8480bb911aefdbdf8d85f4d40b3887281673e70 validation/inputs/AlbClauseFinalSqi.gf
+i AlbClauseFinalSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C7F001 declarative SVO"
+l C7F001
+ps "CASE C7F002 negative declarative"
+l C7F002
+ps "CASE C7F003 negative future"
+l C7F003
+ps "CASE C7F004 direct polar question"
+l C7F004
+ps "CASE C7F005 wh subject"
+l C7F005
+ps "CASE C7F006 wh object"
+l C7F006
+ps "CASE C7F007 wh oblique pied-piping"
+l C7F007
+ps "CASE C7F008 relative subject"
+l C7F008
+ps "CASE C7F009 relative object"
+l C7F009
+ps "CASE C7F010 subordination"
+l C7F010
+ps "CASE C7F011 indicative sentential complement"
+l C7F011
+ps "CASE C7F012 AP + sentential SC exactly one embedding marker"
+l C7F012
+ps "CASE C7F013 AP + subjunctive VP SC no indicative marker"
+l C7F013
+ps "CASE C7F014 clausal subject agreement"
+l C7F014
+ps "CASE C7F015 prepositional relative review-only representation debt"
+l C7F015
+ps "CASE C7F016 embedded polar question review-only"
+l C7F016
+ps "CASE C7F017 embedded wh question review-only"
+l C7F017
+ps "CASE C7F018 neutral adverb placement review-only"
+l C7F018
+ps "GF_WORDBENCH_END cases"
+q

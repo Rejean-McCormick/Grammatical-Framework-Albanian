@@ -1,0 +1,4 @@
+== MorphoSqi lint ==
+Findings: 0
+
+No issues found by this heuristic lint.

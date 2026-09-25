@@ -1,0 +1,45 @@
+FAIL
+- common TPast must map to Imperfect
+- common TPast must never map to Aorist
+- exact bëhem must be NonActiveMorph
+- ProgrVP must set typed progressivity only
+- ProgrVPSlash must set typed progressivity
+- ReflVP must mark ReflexiveUse
+- PassV2 must mark PassiveUse
+- Extend PassVPSlash must mark PassiveUse
+- legacy internal Past token remains in AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf
+- legacy internal Past token remains in AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3017Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3032Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3058Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3024Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3026Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3027Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3052Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3021Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3020Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3030Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3060Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3059Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3016Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3029Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3022Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3054Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3057Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3053Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3028Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3025Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3015Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3036Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3018Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3035Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3031Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3038Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3023Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3055Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3037Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3033Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3034Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3019Sqi.gf
+- legacy internal Past token remains in validation/inputs/AlbC10G3056Sqi.gf
+- advanced verbal scenario must be registered as optional, not required

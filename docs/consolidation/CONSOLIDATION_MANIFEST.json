@@ -1,0 +1,17 @@
+{
+  "base": "Code_snapshot_Grammatical_Framework-Albanian(20260925-153041).zip",
+  "active_ownership": {
+    "C1": "Irreg + strict smart paradigm validators + V morphology section",
+    "C2": "MorphoDict payload/resources/tools",
+    "C4": "voice/TAM metadata and Extra/Idiom",
+    "C5": "typed clitic cluster, case/government, clause realizer base",
+    "C6": "nominal morphology/representation and nominal modules",
+    "C7": "preserved variants/tests; clause work largely superseded in active merge by C8+C5",
+    "C8": "valency/gap category surfaces + sentence/question/relative/construction",
+    "C9": "public API/Extend/Documentation",
+    "C10": "canonical governance/certification tooling"
+  },
+  "policy": "preserve useful conflicting implementations under development/consolidation_variants; do not drop silently",
+  "required_scenarios": 52,
+  "optional_scenarios": 91
+}

@@ -1,0 +1,39 @@
+{
+  "compendium_archive": "DocGF-Compendium(4).zip",
+  "sha256": "c635c426af5f16efbf798cc7ee87c2976247f08944385191a22c826e22b38ef7",
+  "aligned_components": [
+    "mandatory_task_header",
+    "route_R01_R14",
+    "domain_specific_authority",
+    "state_machine_S00_S11",
+    "blocking_overlays",
+    "workstream_microcycle_W00_W08",
+    "AI_patch_protocol_superset",
+    "increasing_scope_compile",
+    "test_and_output_change_records",
+    "release_gate_RG_requirements",
+    "S10_S11_promotion_semantics"
+  ],
+  "canonical_files_updated": [
+    "00_START_HERE.md",
+    "01_GLOBAL_CONSTITUTION.md",
+    "02_SOURCE_LOCK_AND_BASELINE.md",
+    "17_TESTING_CERTIFICATION_AND_RELEASE_LEVELS.md",
+    "21_MIGRATION_ROADMAP.md",
+    "22_RELEASE_GATES.md",
+    "23_ALIGNMENT_REPORT.md",
+    "25_CHANGE_CONTROL_AND_DELIVERY.md",
+    "26_GLOSSARY.md"
+  ],
+  "canonical_files_added": [
+    "27_COMPENDIUM_COMPLIANCE_AND_ROUTING.md",
+    "28_DEVELOPMENT_STATE_MAP.md"
+  ],
+  "intentional_extensions": [
+    "Albanian R0-R4 maturity ladder",
+    "review CASE scale G1/G2/G3",
+    "declared-baseline vs evidence-backed-run distinction",
+    "Dict/MorphoDict hard gates"
+  ],
+  "principle": "Albanian rules may be stricter/more specific but may not weaken Compendium requirements."
+}

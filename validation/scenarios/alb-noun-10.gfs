@@ -1,5 +1,5 @@
 -- GF_WORDBENCH_INPUT_SHA256 379e7403263ddd6a12b881b4b42e0ee60dfefe5e087278eed74e873d78a9b223 validation/inputs/AlbCampaign010.gf
--- GF_WORDBENCH_INPUT_SHA256 81940b7102dc2f84c4a30d67daf941ec543936b240f0e3514b18c5c5c37797a8 validation/inputs/AlbCampaign010Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 b30fedbd7b53fbbed5cc9e11cf763adecd14d96041b8721dcb0b509320ff2b26 validation/inputs/AlbCampaign010Sqi.gf
 i AlbCampaign010Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0091 language_N indef nom sg"

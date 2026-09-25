@@ -1,0 +1,11 @@
+82dc83a91ac5cbe865f0680eefe1a1956d735ac8	N1a: separate grammatical and morphological noun case spaces
+40946bf4817f4dcaabb9ef21d599a10410cd2bb5	N1b: add explicit grammatical genitive case
+706e78927c4c76a3ec5696f30d8c8fbf7ce5e3eb	N1b fix: complete genitive branches in adjective tables
+e50af88815e7d26b9109280c5c4f8318c478ffcc	N2: preserve number-sensitive noun gender and explicit agreement
+62430814f77641647b6ef489cf945e0a59766815	N3: separate lexical adjective morphology from case realization
+0c37e6f47eb4edf2f569fe6deae4474257b734be	N4: centralize nyje and separate grammatical CN realization
+4e72cdb83c21d9eacf68e40e6871470c06f38099	N5: complete nominal public API and sourced structural forms
+d535987eff1fd2a3da2c8792e6dcbde024e67f0e	N6: enforce nominal architecture guardrails and morphology boundary
+3c6a97ccadb296074d9c05a6d5b5deb7eaca18a0	N7: deepen nominal regression scenarios without changing census
+9d11504a066792546fee0a5a48d52f5cc67087e1	N8: reconcile nominal documentation and external validation contract
+012383aa7f50c8637f26c22a09d6603d5e672a37	N9: close nominal workstream with reproducible static audit

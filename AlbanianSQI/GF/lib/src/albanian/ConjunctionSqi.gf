@@ -12,6 +12,23 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
     [CN] = {first,last : Species => Case => Number => Str ; g : Gender} ;
     [DAP] = {first,last : Case => Gender => Str ; n : Number} ;
 
+  oper
+    coordPerson : Person -> Person -> Person = \p,q -> case <p,q> of {
+      <P1,_> => P1 ; <_,P1> => P1 ;
+      <P2,_> => P2 ; <_,P2> => P2 ;
+      _ => P3
+    } ;
+
+    coordGender : Gender -> Gender -> Gender = \g,h -> case <g,h> of {
+      <Fem,Fem> => Fem ;
+      _ => Masc
+    } ;
+
+    coordAgr : Agr -> Agr -> Agr = \a,b -> {
+      gn = GPl (coordGender (agrGender a) (agrGender b)) ;
+      p = coordPerson a.p b.p
+    } ;
+
   lin
     BaseS x y = {first=x.s; last=y.s} ;
     ConsS x xs = {first=x.s ++ "," ++ xs.first; last=xs.last} ;
@@ -29,14 +46,13 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
     ConsIAdv x xs = {first=x.s ++ "," ++ xs.first; last=xs.last} ;
     ConjIAdv c xs = {s=xs.first ++ c.s ++ xs.last} ;
 
-    BaseNP x y = {first=x.s; last=y.s; a={gn=GPl;p=P3}} ;
+    BaseNP x y = {first=x.s; last=y.s; a=coordAgr x.a y.a} ;
     ConsNP x xs = {
       first=\\c=>x.s!c ++ "," ++ xs.first!c;
-      last=xs.last; a={gn=GPl;p=P3}
+      last=xs.last; a=coordAgr x.a xs.a
     } ;
     ConjNP c xs = {
-      s=\\k=>xs.first!k ++ c.s ++ xs.last!k;
-      acc_clit=[]; dat_clit=[]; a=xs.a; isPron=False
+      s=\\k=>xs.first!k ++ c.s ++ xs.last!k; a=xs.a; isPron=False
     } ;
 
     BaseAP x y = {first=x.s; last=y.s} ;
@@ -54,10 +70,16 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
     } ;
     ConjRS c xs = {s=\\a=>xs.first!a ++ c.s ++ xs.last!a} ;
 
-    BaseCN x y = {first=x.s; last=y.s; g=x.g} ;
+    BaseCN x y = {first=x.s; last=y.s; g=table {
+      Sg => coordGender (x.g!Sg) (y.g!Sg) ;
+      Pl => coordGender (x.g!Pl) (y.g!Pl)
+    }} ;
     ConsCN x xs = {
       first=\\sp,k,n=>x.s!sp!k!n ++ "," ++ xs.first!sp!k!n;
-      last=xs.last; g=xs.g
+      last=xs.last; g=table {
+        Sg => coordGender (x.g!Sg) (xs.g!Sg) ;
+        Pl => coordGender (x.g!Pl) (xs.g!Pl)
+      }
     } ;
     ConjCN c xs = {
       s=\\sp,k,n=>xs.first!sp!k!n ++ c.s ++ xs.last!sp!k!n;

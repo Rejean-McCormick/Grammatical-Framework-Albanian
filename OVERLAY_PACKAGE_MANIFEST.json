@@ -1,0 +1,4746 @@
+{
+  "version": "v2",
+  "date": "2026-09-25",
+  "files": [
+    {
+      "path": "AlbanianSQI/GF/lib/src/CombinatorsSqi.gf",
+      "bytes": 652,
+      "sha256": "4e0f86c905f7806e865263233db3482442d97b4fa5be40cb52a5ce730ea11ea4"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/TrySqi.gf",
+      "bytes": 777,
+      "sha256": "41ebb73b967e80dac2d10446d5869d5b2a61a0064b9f18c26f7c94a327087cb4"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf",
+      "bytes": 1388,
+      "sha256": "b4c20a049153a05c0e98f900ade285acae04d871fef588c3b481a7a5dc315573"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf",
+      "bytes": 713,
+      "sha256": "c9e28089ec70fcb302bf8bea60af488d30085a5304039099719e764357e64285"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "bytes": 2773,
+      "sha256": "4418d8721441064d24a30c9095d78e6fdfce2bbdd8f2e6431691e2a654d52d09"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 9965,
+      "sha256": "afec08e34a738c238e42197d58b2ebb6f92a9dc67b21bdde37f199358bdbe720"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "bytes": 3060,
+      "sha256": "9c6b773c4321662f332ed4a46880e154a01328a806ebf33373bde52dc2bc3faa"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 7717,
+      "sha256": "16c9acdd0f9a65055e01ac311ee21beb87ebf7a623578ca9f023cc323f6c7922"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+      "bytes": 278453,
+      "sha256": "33484aefcacc194a561e003f8dcf2b1655c3094cdaaf7b09779c746c6d4b37eb"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 10883,
+      "sha256": "a6e9e2ec8d72a0da362ef6bb04c3646c99bf2670d80b15949a295279be6b9094"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqi.gf",
+      "bytes": 15709,
+      "sha256": "83df3589951d46aa288d792bd42f6648cfd0ecf920040f02ff7296035875ea15"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf",
+      "bytes": 843,
+      "sha256": "1e37ffb6fa37b86c9c695c188aa84a6bc8ef382468ffd5ba8da1c4ade56660b3"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf",
+      "bytes": 1411,
+      "sha256": "ce577a3a7dae42b06a579b08729be1008879885e35ef0e0c56225dd9dda2ffed"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf",
+      "bytes": 1886,
+      "sha256": "9a7cdd0fbfb2f43bee8f0579de1e6648953ae3baf24c69173ebc29c6d73d38d2"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiLexicon.gf",
+      "bytes": 1205,
+      "sha256": "7e7370a4a0937152197dc6ff3ab15ebd24b8745f2a62ea6996ba8b377f8b99ce"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf",
+      "bytes": 2671,
+      "sha256": "8ffee77baa57dfe341f90057d227b00c84eb3b11deb57e0d888fbf003fd88e84"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 7176,
+      "sha256": "0ce8266248180ee7aa08268470e0665ed002361796c33e97851a7d762f154ae2"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf",
+      "bytes": 2559,
+      "sha256": "fbed65b4962bfc5f87cae3075d1c6a16890af0320f4950a14b6fe7051e0ebdbd"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf",
+      "bytes": 4337,
+      "sha256": "d7af217dfabf20e914b472affdacec60426ab2ab54415188cd010f1720801589"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtraSqi.gf",
+      "bytes": 4913,
+      "sha256": "ca0d9aaf59c5c61880b46845ab9028a00a125ea053a11b33441d7a3bd4212621"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtraSqiAbs.gf",
+      "bytes": 561,
+      "sha256": "d1212cbe7ab47295a5b18170fcc15983bb2990d92777d29d5ab9e23cf686b237"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1646,
+      "sha256": "205c8318c60b170f0e196b7b5a7f4a541fd2ecd4ee78eb32a6d3e965610fd812"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf",
+      "bytes": 10578,
+      "sha256": "f29c9cc1499cadd4c903c14b3cfc3006bf4194e2fb25109d213526340b1335dd"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf",
+      "bytes": 19173,
+      "sha256": "748edafb1f1d7264734e1eee68ab796495d1eb09567b7466c0286b9a73d7a83e"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/MarkupSqi.gf",
+      "bytes": 593,
+      "sha256": "fc5f2845ee353b6a895a5c31c624de4f9b02eb4aee8d308cfee8606d9a3cf744"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf",
+      "bytes": 1091142,
+      "sha256": "20768e129bb470b317e86e247774fd33cee515d210c6c49ee0d745f4bbadd87b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf",
+      "bytes": 775,
+      "sha256": "79a556916c3a2f92f33231b169ade1237f254d91e08cfd19621d81b0a44d173e"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "bytes": 6261,
+      "sha256": "9dc619563944bee14e01c35c5d6493f8daef8c2021a8a92f8473595816e75913"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 61210,
+      "sha256": "a1e6294f59eacdfc56c966ad1a990a3cadf9a1d3614f980bb5bb490d0e10beef"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/PhraseSqi.gf",
+      "bytes": 704,
+      "sha256": "93d4feb331d673b126669176fba9b1c7f37d79ab55c642d7cf2cfd2f12a32415"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1560,
+      "sha256": "281635eded8955aea4599883a319861e270b87c35d2b4ec0fd3cf0d8e2fec358"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "bytes": 1539,
+      "sha256": "c9ffaf08610feb053f1e54210e5f2464ddd9d0d9f7f758a06ef6b616c4b5e500"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 21324,
+      "sha256": "dcb4e8cb8b3c1e236657741af2009b8bc3d2a1071ed12c560df2032c525c3478"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf",
+      "bytes": 1679,
+      "sha256": "6f8ef0b9cd4c4754d084801fcde73a2d820baeb22ffc2adb8754ffdf94860919"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiClause.gf",
+      "bytes": 3495,
+      "sha256": "e3d249d7be101fb146afaa81516582007b37bfe1e3c21a11e2c96e70dd27997b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 4056,
+      "sha256": "dc6150e34f7d6772c339a93c4eb7145206edc74850bcfb60d0446dc5a8330482"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf",
+      "bytes": 1641,
+      "sha256": "dcc41f84d5602ab8e7ca90a65d7873b4dfc09b339ff3f4bdcd9b4a21a2c1190b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "bytes": 2831,
+      "sha256": "8e04a7012d6d574310dd18143c4e64ffe5bf96fbe6f4e16de3b055909cfc94a2"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 7912,
+      "sha256": "64a23e06d78cdc5d848475075c0c50c589e98bee1f594458c79e59022b489096"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.config",
+      "bytes": 379,
+      "sha256": "494a8b848cace340909c8a6dc50d7180c3dfd9c9ab468abecd110a983aa2dec2"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+      "bytes": 18971,
+      "sha256": "4f2396ec073c633899d392fda0155c26e18b78d0d4e19f05d90e3603342c0114"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.gf",
+      "bytes": 10154,
+      "sha256": "898707c1930749b5bec8f2f18e12e42b36333c223b711813f6bd6b8c1edd84f6"
+    },
+    {
+      "path": "CONSOLIDATED_OVERLAY_APPLY.md",
+      "bytes": 638,
+      "sha256": "fb76af20c837a10d468fcf91436e835d2da11ed8f37ebbf76d141a6d0d47b617"
+    },
+    {
+      "path": "CONSOLIDATED_OVERLAY_MANIFEST.json",
+      "bytes": 199373,
+      "sha256": "9fa2282ebcd045494bed34983fdf1e2e2ecb4588d54808f39c1f2dee55e93754"
+    },
+    {
+      "path": "CONSOLIDATED_OVERLAY_README.md",
+      "bytes": 1053,
+      "sha256": "6bdd69c377351113558339e2a4ec0e2f9a0729997085323a4ca60c4b9bd096ab"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf",
+      "bytes": 1649,
+      "sha256": "113ed9482018d2927cb5cf9ffbc843d3c11d730b4085ca5972505e064762c9c3"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf",
+      "bytes": 835,
+      "sha256": "3b6fb164ca61b1c6f6f2d7769b7aaf70b5df81076d3c2b516462db0eeb8cb910"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "bytes": 2753,
+      "sha256": "4ddaabbfdde6adbee1cbed233fe96a797ac8561ee21e07cc02524781bd9e91dc"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 4719,
+      "sha256": "61870b09af475cd98fcd8bc7134f039dbee6be004c4bff564587c9d52ff49f84"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "bytes": 2469,
+      "sha256": "c89d6b7c9aa295b5c040530847b16d7058c73ea676e259fe19d277fe76713e99"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 7709,
+      "sha256": "dec1377ad7e9a0868905a4166ea65739f1a321940acf0bf6bbe5cc294f5ca8db"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+      "bytes": 278904,
+      "sha256": "e3d9bd7c64e542dd2d580cbdc8bb569e0880601e6976cb9cc64ff79cb50a550b"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 10502,
+      "sha256": "b436f3cec289d87b12018276bd130142aff54f2f4066227a18bbf03e9e2f1cc5"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf",
+      "bytes": 2131,
+      "sha256": "5f7f0f3d24c006859ff7f6ccc0872d4465ec79410d10c9f776a107d6cc535e1d"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf",
+      "bytes": 2693,
+      "sha256": "8ccee0e48c5ae40f7d3a23e5377c9a09ba0d55f0110b9586b34bf38f82baa1f3"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 6167,
+      "sha256": "8035f559fbb7e877baaebcb7bb3539847ed184481d36b6f1cd85b68886294896"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1717,
+      "sha256": "b6f4935a3d286f56336048143211ccc98ab0c49a1f09d9ca0113376114b8ca59"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf",
+      "bytes": 10578,
+      "sha256": "f29c9cc1499cadd4c903c14b3cfc3006bf4194e2fb25109d213526340b1335dd"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf",
+      "bytes": 1203989,
+      "sha256": "b8f85470c98c2256e2a23c92fba8f2c5c3f319d82660a9ce31fe6ec0f666d57e"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "bytes": 6679,
+      "sha256": "669d54cb1927a845e1ec5132680fc11b8a304f57ddcc47e69a3e11ed37358bdf"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 61418,
+      "sha256": "35eda814564567424def96bad22f5a51a9046206b7a27b692050166c13894cfd"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1508,
+      "sha256": "5236fb561ad935590df4afdd5e496482bfb06703c03ef43a84b616b6fb07d2dc"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 18478,
+      "sha256": "03ede679700f88f7fd29e8e8ec3d5c0e70dbf48ed1f9b0a7198a8ce617002b92"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 3810,
+      "sha256": "277f1646a9a0ed2707cc52b50e0d1b192523eea490b8e26c9db3a77d6b8d6a17"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf",
+      "bytes": 1681,
+      "sha256": "3f741b38a22daa78339cb06f1f182884c8cfe312b90d450e781336f5eab6b2ee"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "bytes": 2963,
+      "sha256": "3b7eaa33d3b962bec45d0f6380ea04378e16e4ddc8e5817b2f04db658b689161"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 6803,
+      "sha256": "8f0724c825b8d5bc3acd96abcb6113a550b2d6340f46d70289757169a3b578b8"
+    },
+    {
+      "path": "development/consolidation_variants/C1/AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+      "bytes": 24088,
+      "sha256": "5ccb7c7a4a018c7b179d85f490e72200baeadd37b9e930857acd3c3df8abbe22"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign011Sqi.gf",
+      "bytes": 785,
+      "sha256": "fb757793d17b6ee6575d4f72ee165b1058a87350eb1c94fc6cce0b19d4fa4ef6"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign012Sqi.gf",
+      "bytes": 765,
+      "sha256": "ec7ad5eddc5279ab9e66d8f63e49a8da9bc0520fd50ffc587a7ef3c9157a971e"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign013Sqi.gf",
+      "bytes": 785,
+      "sha256": "8f509dd61853bed67adf54fe67fdf5627d73a32e5c1299a3a5f1bb33fef27c37"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign014Sqi.gf",
+      "bytes": 785,
+      "sha256": "1e82a31cecb949d9f02e60dedaf195e53e9922b74f43aa7d906a839cf9303963"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign015Sqi.gf",
+      "bytes": 805,
+      "sha256": "a585625602ece77872e2e4a37be38379c6f4f5d5bf47d6fb391c65cf44550276"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign016Sqi.gf",
+      "bytes": 785,
+      "sha256": "8317242acda7959e4386322b8b2c0ee263a01906d3210cc832fbd835a560eeb9"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign017Sqi.gf",
+      "bytes": 795,
+      "sha256": "829350615d6c4da3c6aa33a37dc5ee150b7b8f32b0cbd1048bfb89d52501b011"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign018Sqi.gf",
+      "bytes": 795,
+      "sha256": "455c3daef72d41dd239c5e79462678bcfd558593cc94ecbe2f7c03b1f22e37d0"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign019Sqi.gf",
+      "bytes": 785,
+      "sha256": "6742be299202a76882f5b88475c46a227282679a727b1251ef681cdc0796ea94"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/inputs/AlbCampaign020Sqi.gf",
+      "bytes": 815,
+      "sha256": "b1c1dd62383e4a5d152d1f1a25f3be32ac7509c3cce90e9354154aefc80681be"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/morphology_max/AlbMorphologyMax.gf",
+      "bytes": 213,
+      "sha256": "1ddae113285260980bd84dfb71606b848f03e731755eca4de69404811e4477e4"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/morphology_max/AlbMorphologyMaxNegative.gf",
+      "bytes": 117,
+      "sha256": "7d6a8b1bcd480b2324f313e50f4735d912ebbfefce1e0b63820208a4713aeb37"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/morphology_max/AlbMorphologyMaxNegativeSqi.gf",
+      "bytes": 757,
+      "sha256": "0fd742a690f691cb807e84a467a65c06b87dedbef5224d686ebba748a3074368"
+    },
+    {
+      "path": "development/consolidation_variants/C1/validation/morphology_max/AlbMorphologyMaxSqi.gf",
+      "bytes": 2956,
+      "sha256": "63a48f330a78b447b69cdab9561f2a8ee23aef8c834689404e3d88540c096fa1"
+    },
+    {
+      "path": "development/consolidation_variants/C2/AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+      "bytes": 18971,
+      "sha256": "4f2396ec073c633899d392fda0155c26e18b78d0d4e19f05d90e3603342c0114"
+    },
+    {
+      "path": "development/consolidation_variants/C2/AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.gf",
+      "bytes": 10154,
+      "sha256": "898707c1930749b5bec8f2f18e12e42b36333c223b711813f6bd6b8c1edd84f6"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 9578,
+      "sha256": "615244b6121d5c971cb17b0dbe72e05bf457dd2cb6cdf7bf32f16d348600ca46"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 9623,
+      "sha256": "f840d88ead6acc034032ecc1d6a7fc3edb4d4dc5e84dd9535d3102bf68af925c"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf",
+      "bytes": 2615,
+      "sha256": "dc54dd32a6f243a59c8116f91cf2a921950d268e48b3630f9605d534c732d70f"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/ExtraSqi.gf",
+      "bytes": 4913,
+      "sha256": "ca0d9aaf59c5c61880b46845ab9028a00a125ea053a11b33441d7a3bd4212621"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/ExtraSqiAbs.gf",
+      "bytes": 561,
+      "sha256": "d1212cbe7ab47295a5b18170fcc15983bb2990d92777d29d5ab9e23cf686b237"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1337,
+      "sha256": "fb5ac842efd6a771f445cb656d2b82330cc1b3f29e7f1cd0605f280a79bc2a6d"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf",
+      "bytes": 10604,
+      "sha256": "adc3a983027f69d7ca34df814a6449c3fadf680da81d84f15c6873c95ee14c8b"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf",
+      "bytes": 1080007,
+      "sha256": "692edb116ee37a04ee1aca5096099b0cbbc290b732c2ff885f0a2afe051fe7b9"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 55144,
+      "sha256": "1cb1390a048d66b203d24e7b783357e16038f9e4076934fae0e3eb5817f71bc3"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 17830,
+      "sha256": "587f8e2363a869c1e8405e9c2e2852ff820a5dfa3512579a6e3f01825adf29da"
+    },
+    {
+      "path": "development/consolidation_variants/C4/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 8014,
+      "sha256": "0e2d4e7629007dd4f6ab3be279033551429ddcd162c1a14297b9ef23c16cc0be"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign011Sqi.gf",
+      "bytes": 785,
+      "sha256": "fb757793d17b6ee6575d4f72ee165b1058a87350eb1c94fc6cce0b19d4fa4ef6"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign012Sqi.gf",
+      "bytes": 765,
+      "sha256": "ec7ad5eddc5279ab9e66d8f63e49a8da9bc0520fd50ffc587a7ef3c9157a971e"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign013Sqi.gf",
+      "bytes": 785,
+      "sha256": "8f509dd61853bed67adf54fe67fdf5627d73a32e5c1299a3a5f1bb33fef27c37"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign014Sqi.gf",
+      "bytes": 785,
+      "sha256": "1e82a31cecb949d9f02e60dedaf195e53e9922b74f43aa7d906a839cf9303963"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign015Sqi.gf",
+      "bytes": 805,
+      "sha256": "a585625602ece77872e2e4a37be38379c6f4f5d5bf47d6fb391c65cf44550276"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign016Sqi.gf",
+      "bytes": 785,
+      "sha256": "8317242acda7959e4386322b8b2c0ee263a01906d3210cc832fbd835a560eeb9"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign017Sqi.gf",
+      "bytes": 795,
+      "sha256": "829350615d6c4da3c6aa33a37dc5ee150b7b8f32b0cbd1048bfb89d52501b011"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign018Sqi.gf",
+      "bytes": 795,
+      "sha256": "455c3daef72d41dd239c5e79462678bcfd558593cc94ecbe2f7c03b1f22e37d0"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign019Sqi.gf",
+      "bytes": 785,
+      "sha256": "6742be299202a76882f5b88475c46a227282679a727b1251ef681cdc0796ea94"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbCampaign020Sqi.gf",
+      "bytes": 815,
+      "sha256": "b1c1dd62383e4a5d152d1f1a25f3be32ac7509c3cce90e9354154aefc80681be"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbVerbAdvanced.gf",
+      "bytes": 1924,
+      "sha256": "33d5b56495866f3ff404af942c7c7afc5f9083109c9186a48704d046f9bd0153"
+    },
+    {
+      "path": "development/consolidation_variants/C4/validation/inputs/AlbVerbAdvancedSqi.gf",
+      "bytes": 9375,
+      "sha256": "c442780861ca9b1328c49e2e5b2d3cf00b8df51fe0b8406c98e3d8e3e32371f7"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf",
+      "bytes": 1647,
+      "sha256": "1c6d2c611c7fc2c4969c9d0a52864e319899008e6343d4a936e6740603f7682f"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf",
+      "bytes": 834,
+      "sha256": "8d1b0cc585d6d57f608739bd2ac809a50f909a10207262ff8a0e896d4672566b"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "bytes": 2679,
+      "sha256": "db9150d97fcaf0bc6573754071ceab233e887d2b156076af42352f719dc6573b"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 5838,
+      "sha256": "14746f70260ca0b32aa2c73ef7edbff2c7ad72ea56a019d825da44300630b8cd"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "bytes": 2427,
+      "sha256": "734d685655de8afdac53e5330521ceb8814e1c4a0c0b28308c076bcffbb7aaae"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 7653,
+      "sha256": "a1d3ac2a949c1957e2b9d5c7d6dc9c07550eeabfb30410026bbc3050fe2effd5"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+      "bytes": 278721,
+      "sha256": "9edd8988382d1b8bb09c3feddafe775d13beab78df277cca71bb322bee3f33a3"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 10048,
+      "sha256": "a266de03bc0c2f277ff149c4daa38179d3bbeb208232b7cc2a3dc098e5ff3899"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf",
+      "bytes": 817,
+      "sha256": "d9754ca896999d61149071eccfd3807eb4bd6d0542309e067a1d2590fa356c1a"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf",
+      "bytes": 1958,
+      "sha256": "6a90bd310dee919177a2e633dd70fd03224a5c4f761de8f38829a1d07b1f8773"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiLexicon.gf",
+      "bytes": 1205,
+      "sha256": "7e7370a4a0937152197dc6ff3ab15ebd24b8745f2a62ea6996ba8b377f8b99ce"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf",
+      "bytes": 2651,
+      "sha256": "87da4cdcc61aca02157173a02e8726e029042062e0f1c70b9dd51375401935de"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 6653,
+      "sha256": "49fc65a78d4909c28ad2cb35c7817f61942fe7a22e1f96714f174f910157ea0c"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf",
+      "bytes": 2500,
+      "sha256": "e93308cd9df9506b1dd9df8747707706af73c9e13d8d6c43ffa47a38e6ece82e"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf",
+      "bytes": 4337,
+      "sha256": "d7af217dfabf20e914b472affdacec60426ab2ab54415188cd010f1720801589"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1646,
+      "sha256": "205c8318c60b170f0e196b7b5a7f4a541fd2ecd4ee78eb32a6d3e965610fd812"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf",
+      "bytes": 19096,
+      "sha256": "a061411024760a85724ecb8191c8fd4a6a16cbd5eb60699cee67b80417c72311"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/MarkupSqi.gf",
+      "bytes": 595,
+      "sha256": "ed4bb54fb4222eb02a2dc9e3a05628d491885b02fcf689a805b160208416a4ca"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf",
+      "bytes": 1079508,
+      "sha256": "17e50da942b729d49696f541adc1143065b696e49bc94f87a2bba878acd03b80"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf",
+      "bytes": 756,
+      "sha256": "c28cbb11863ca7cc1c761d123f2462ee4ca46e93f1b5fda1aa23702342f30465"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "bytes": 6713,
+      "sha256": "c2944d0f6b9703225d9161e9f95c82dc8ef71197b88373adba200557b3910669"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 54908,
+      "sha256": "834b031e9e79f144dc649773d749fe49f047b50de142bdc3bacafc58a1810f73"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/PhraseSqi.gf",
+      "bytes": 706,
+      "sha256": "34ea6dd3854240468dc4eda4742d57180d5ea0b90f3c972e03e0dea7cb0125aa"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1487,
+      "sha256": "c32998e9c7e663b33daf8d342da0d4d16e207acdaa99e99baed96f15275715ab"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "bytes": 1521,
+      "sha256": "a564cd6d0dd0f1a939f35071e53547123d68eb0c6e090d662a905754d6d8420c"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 18968,
+      "sha256": "f04e86837bf6dfbb06e2957eb51dc3a2f516cd3485cfd0c20f3dfab61c750e36"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/StructuralSqiClause.gf",
+      "bytes": 3495,
+      "sha256": "e3d249d7be101fb146afaa81516582007b37bfe1e3c21a11e2c96e70dd27997b"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 4056,
+      "sha256": "dc6150e34f7d6772c339a93c4eb7145206edc74850bcfb60d0446dc5a8330482"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf",
+      "bytes": 1641,
+      "sha256": "dcc41f84d5602ab8e7ca90a65d7873b4dfc09b339ff3f4bdcd9b4a21a2c1190b"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "bytes": 2768,
+      "sha256": "5ee036d9659a80c12ba1338cb60f9e89805dbd246ef6b2042e73f062c2799df1"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 6896,
+      "sha256": "694361a7c51c461103d0459ded03bc1ccd14bf04c9a42b4e3dd0f2a960503c71"
+    },
+    {
+      "path": "development/consolidation_variants/C5/AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+      "bytes": 23890,
+      "sha256": "a816379b7067c34321bfd13cd5bfbbd6dd8c6e07a9153001b116d82d89c43a2a"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5CliticMatrix.gf",
+      "bytes": 753,
+      "sha256": "786c7c0bbc948bf58a8bf6528d9082efea84fe25c6fe184869ab666200889d81"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5CliticMatrixSqi.gf",
+      "bytes": 2413,
+      "sha256": "e1a779e06f07973dbd89afb0d82e45f4d59dde7aef2a572309bb13fa9172a26c"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5PrepGovernment.gf",
+      "bytes": 755,
+      "sha256": "7895ddd4a972db53ec7f8112d8547bbf22e3a8848002ccca17f9acbe37816a6b"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5PrepGovernmentSqi.gf",
+      "bytes": 2941,
+      "sha256": "ee248e331dc6e7cc2ebb4fd4f07a26635f586d222d2f201a719d3b61932232eb"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5PronounCases.gf",
+      "bytes": 1153,
+      "sha256": "49333c2a4b81e27443c4abbe27bbf3e686b19f48bd0241166da8d17403e200d4"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5PronounCasesSqi.gf",
+      "bytes": 2644,
+      "sha256": "bd2673469ab8d37df4099b9f0b29c5255f738d7b1b8a4e9a0c26aab628bf4740"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5RealizationContexts.gf",
+      "bytes": 340,
+      "sha256": "3023e2c4c583a28c199ceb52fbc2a9dd67967023971e19a7b53f4a1af3ff2341"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5RealizationContextsSqi.gf",
+      "bytes": 1326,
+      "sha256": "1a5a0cb00acd6ad58c688a853a87c4e25879fae77128124c3f82c6d98acdc4e9"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5RelativeGenitive.gf",
+      "bytes": 1257,
+      "sha256": "c1e50c245a1527b9bcf70672b8320fa11cb7d0998de66f4e6a742e1688a36b78"
+    },
+    {
+      "path": "development/consolidation_variants/C5/validation/inputs/AlbC5RelativeGenitiveSqi.gf",
+      "bytes": 3279,
+      "sha256": "cec663c64b4797553f36dd36221a64f8a354dce0c8d66d26ec34b6230154ff5c"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf",
+      "bytes": 1388,
+      "sha256": "b4c20a049153a05c0e98f900ade285acae04d871fef588c3b481a7a5dc315573"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf",
+      "bytes": 713,
+      "sha256": "c9e28089ec70fcb302bf8bea60af488d30085a5304039099719e764357e64285"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "bytes": 2729,
+      "sha256": "76589177bee92f4ed2539684507aac81938ca3253b4052d111a9260e74fbf1cf"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 4373,
+      "sha256": "393a71c9c82503e77ff656e0daabcd0b5eca8c8a6b87a27362a3de0164d8a0ac"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "bytes": 2479,
+      "sha256": "77df99dcbb062ef7e258c7039c1af364b9a9e363e41c5d5a948c584b52a9b29e"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 7779,
+      "sha256": "51bd61250eeb7b4d21ff07e37294893483671730b7e08b43c3a670c6f915e2a5"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+      "bytes": 278453,
+      "sha256": "33484aefcacc194a561e003f8dcf2b1655c3094cdaaf7b09779c746c6d4b37eb"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 10138,
+      "sha256": "b4b88fe2115988d68f29f69f5261d764f4d8f620f8477f0fc8bec0e974a6b2d4"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf",
+      "bytes": 843,
+      "sha256": "1e37ffb6fa37b86c9c695c188aa84a6bc8ef382468ffd5ba8da1c4ade56660b3"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf",
+      "bytes": 2024,
+      "sha256": "07bf9a7a77ccdf920bc2cdb3e6a16b49ee9efe87cfc57808d7b16515e22979b3"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf",
+      "bytes": 2710,
+      "sha256": "ad1c34e2d60efa02c77d443d5d530a49e493e4f6155a2b1f422cd1cba1d630a6"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 6362,
+      "sha256": "a9b6e59da00a4861c7ea14f29dae15cb9452bbf1d6375e9c018417fda82f7b9b"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf",
+      "bytes": 4466,
+      "sha256": "2d5bf4c362622bd526c3ecb6a0379696f6c16f818f317520e543a96031084299"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1717,
+      "sha256": "92eb6c6524ce5d539a592dbe38802d54a42b6bfe0a1d4362e12708c29f68e709"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf",
+      "bytes": 1083480,
+      "sha256": "8f6d300bb07d9706bbeea5414fd334949e6c9bfa51e4825ea14a06478430e24e"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf",
+      "bytes": 815,
+      "sha256": "e6d0aaa817fafe62c9477877b4856f03614800b0f722c9a3f803ef47c39dced9"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "bytes": 6452,
+      "sha256": "08fd5d811ea19d5b803b2cabf6abff2db4956242733c09b1afd1c1c9209c98f1"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 56945,
+      "sha256": "15824e66003ddeb9135671c9a30092e10e402d6c80dde32a8fd30e7478b1176e"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/PhraseSqi.gf",
+      "bytes": 704,
+      "sha256": "93d4feb331d673b126669176fba9b1c7f37d79ab55c642d7cf2cfd2f12a32415"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1507,
+      "sha256": "3c1c8bee75564f5ef9154dd3f76b572a57f4f214f4cd381b03debd56ecec7fb7"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "bytes": 534,
+      "sha256": "f6fac8d1fea5c5214c0c6b9a0d40aba2876a3f3fd9dccba142399259fa2e2bbf"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 17073,
+      "sha256": "0a732fbf6f4d29c0dc85c09bcea0ddae1125be67d8ba84c39401250cb0dafe27"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 3782,
+      "sha256": "34873b2cfad57fd78ee640aebeda110079513ba574906b4f7e2dbc3766bd70fb"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf",
+      "bytes": 1699,
+      "sha256": "6e5196c67287a28cc3470cabfc748b432d773462b586c7c08c23268d7298b90d"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "bytes": 2913,
+      "sha256": "ff990e2481fef6499f9c307e4b98b1c1e40bc9107f063dec271ed876d0f726af"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 6201,
+      "sha256": "ef5dafe62ad4588f9ec1d3e2df780b94dac8d209fa0e58650a41df5e99669207"
+    },
+    {
+      "path": "development/consolidation_variants/C6/AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+      "bytes": 23664,
+      "sha256": "f61e10a0383299bd02086fe63a76d8d90b4f99a5f2a6eec0a629a1e887201db1"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign001.gf",
+      "bytes": 338,
+      "sha256": "ca0cdb7c5530b7b7ff8306a06f22649e12a5cb434147a0ad55421407c7b12002"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign001Sqi.gf",
+      "bytes": 1079,
+      "sha256": "f8ef3b6359626d4922467404de921d2949595919effbfa74abb3ddf4adb38df0"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign002Sqi.gf",
+      "bytes": 705,
+      "sha256": "09ea6005b4aaa42751906b6db3dbb59bca9b708eb94ee7e5fc82e33b91c18814"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign003Sqi.gf",
+      "bytes": 715,
+      "sha256": "45df1146d7c0a6b695c1863ac2a6418ab5092b4ddd994f61de6a73120622c2f7"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign004Sqi.gf",
+      "bytes": 725,
+      "sha256": "e2a78fce7913bd6124d0b485ebbf75da01c959513ceedcd468f7800fd9394f24"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign005Sqi.gf",
+      "bytes": 735,
+      "sha256": "1acfade4571cca8f4479273ebb475cf0e0243985be7f5ea520f046c50da983df"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign006Sqi.gf",
+      "bytes": 715,
+      "sha256": "54ed22822dcbcf73ca1e07a90f27666c3a72ad5066784883b17a0002e3438c4a"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign007Sqi.gf",
+      "bytes": 705,
+      "sha256": "72c95a5e201565a2db0ae4e6012b23054f723ae31eb34e883a5cc5c4426fd552"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign008Sqi.gf",
+      "bytes": 725,
+      "sha256": "f1bcd363939c949ee4056a86f122846d2c7db43dd8ef036c9c2834f8bd4ada84"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign010Sqi.gf",
+      "bytes": 755,
+      "sha256": "b30fedbd7b53fbbed5cc9e11cf763adecd14d96041b8721dcb0b509320ff2b26"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign021.gf",
+      "bytes": 338,
+      "sha256": "0af1efae002a4ca31151621820b6eead595d1d57c5204436933f9e08528384fc"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign021Sqi.gf",
+      "bytes": 891,
+      "sha256": "5c14698a59a0c788c6d92884c9537c459836dd85b7215b692b35ed12f7bac42d"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign022Sqi.gf",
+      "bytes": 646,
+      "sha256": "de58913a166911053301b2b4ad0751db320c5754d872f4727d01c7034b932465"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign023Sqi.gf",
+      "bytes": 646,
+      "sha256": "34c7f364b3fc49730a3bea0cdf912ce790b9ed7a64c9712329b502a701b3d314"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign024Sqi.gf",
+      "bytes": 706,
+      "sha256": "ff4ae4d5259d0cb777205abfb96b284b26eef9baff006941860207847b6b000f"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign025Sqi.gf",
+      "bytes": 646,
+      "sha256": "962e52abb1bff32c8c866c0f5e7e28aaa2ddaf382da3b0288de5fc90884ec84d"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign044.gf",
+      "bytes": 355,
+      "sha256": "3c6bb0847fe95bbfdf3ab7e083ebde0d7f2e37c7f472b1dd15e06f5baeaca2ce"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign044Sqi.gf",
+      "bytes": 1026,
+      "sha256": "6cb78bf21627ed2de6da18d59b9960fcd08e191ac93b5f1b7919954331d482b9"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign047.gf",
+      "bytes": 294,
+      "sha256": "1a2f6a5708004a7ed84aff96622fbd1f999c39bcf193ec62c0e7e918cc901d27"
+    },
+    {
+      "path": "development/consolidation_variants/C6/validation/inputs/AlbCampaign047Sqi.gf",
+      "bytes": 1023,
+      "sha256": "5d8780cbba65635e1f81c6dc31a0008463a8e953211232c84a70c2980ad58cca"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf",
+      "bytes": 1744,
+      "sha256": "f0eccd8b8ea93e0e2cc7b45843d17405636c5abad73062b235c8ed3949d83404"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 5726,
+      "sha256": "ae45c84bf4d10d8d720f6d10abe63cbd8065ce45f14e6667ee7f8361fbfa6a21"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 7611,
+      "sha256": "c1ff5a423ba0560d577312b49d1457ad5f15eb96e8a514e668bfa16bf026d530"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 6626,
+      "sha256": "3c39266718d167c7e622254486a265bccff84d20d8e2d8ab9b9764ca82deb8eb"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf",
+      "bytes": 4564,
+      "sha256": "ecd87bf0ec0f96f6098e0aa27d76074543cfcba86ad9cac008cc7088fb117d4c"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1674,
+      "sha256": "20dca0f218eb7004e6dab4d4b29b40f882425955dcb10164fe6162dc0ec2039d"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1509,
+      "sha256": "f0b4191c1b609d5d3e670e2d9a68489bd0b7354dad56bd44fa378ae80658a46f"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "bytes": 538,
+      "sha256": "73e03fd68e8c393e7ef9274198ba19b07863b507072cb91329ebd2ab97d09610"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf",
+      "bytes": 1659,
+      "sha256": "ea8bed5cac8575ba6560f162523dab8db7494786bf8b5f8f165f4927305580e5"
+    },
+    {
+      "path": "development/consolidation_variants/C7/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 6228,
+      "sha256": "9c8e1149b66c3df8e5e0f04de4c2a595e09c9df4f9d44ca8b79c8d1e551094af"
+    },
+    {
+      "path": "development/consolidation_variants/C7/validation/inputs/AlbClauseFinal.gf",
+      "bytes": 428,
+      "sha256": "fd01c974116c893ecdc763fea16a3b1f325ff5ebb1bc206fbd3f5727400fd016"
+    },
+    {
+      "path": "development/consolidation_variants/C7/validation/inputs/AlbClauseFinalSqi.gf",
+      "bytes": 1823,
+      "sha256": "d363549c1e089a0b808647acf8480bb911aefdbdf8d85f4d40b3887281673e70"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "bytes": 3026,
+      "sha256": "bb7b0fa40cfb765aa5d791f8a291f0160dbe9045998ca2404ebbb43fc24627a0"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 5267,
+      "sha256": "905a00b3aae623804338eeb9ec9b98d84bc8ef832600d2cb0604818dfbe6cca2"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "bytes": 2925,
+      "sha256": "5f25e6aeafa6758c14b88cdef36a3c908ba8f5355462e42a6f6fa31065ae3e12"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 8898,
+      "sha256": "2723ac96c46afc9532177d63d6af27336ba5d9645d3ac4dbac584d56cf88045c"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf",
+      "bytes": 1411,
+      "sha256": "ce577a3a7dae42b06a579b08729be1008879885e35ef0e0c56225dd9dda2ffed"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf",
+      "bytes": 2719,
+      "sha256": "90b904e58884537e9fa2378e154e692663fabd28f69eb6c1ca879180a3f59c7f"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 6274,
+      "sha256": "a27e32d9248a04ffac2b1affe96040a29b0bbbf41afcaedb5c39189cd276147b"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf",
+      "bytes": 2944,
+      "sha256": "b9a9320ed1a2a041d79cb1d68f3261f315e05f340f89d829d89c032317374b00"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf",
+      "bytes": 4611,
+      "sha256": "c27c3ca7594186d38254552bef134ada82aefd9ac818678169e0443cae43dc60"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1840,
+      "sha256": "b863f499e47d21d892ab6efc610b741d3b8c19d4a324696452a234e4487ef63e"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf",
+      "bytes": 19092,
+      "sha256": "b608415046f57195571627d6d07b873665b2208ed8b99353ccd50b7a3ab39601"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "bytes": 6733,
+      "sha256": "af1165526312e2889608e43ebb578fbe5cdf6af308528df0fc8a2aa2a01d8e59"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 54602,
+      "sha256": "3ff566ef54867a5bd59d753ffbeefee4954c1e58ef789714ef6858b961d4b64f"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1538,
+      "sha256": "e5221bb2a50fae3c02d683bb8224baa613ecb8ed3d6e3e94e2893b8bf1ab1c35"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "bytes": 532,
+      "sha256": "a223cc1466fadc6ce5b6dd9c6fedcb90e47f98d824aaf635db0d61ed99887f44"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 14764,
+      "sha256": "eca7770e816260f758cebea924a32179f26ba76243d742fa99c888b5bcb9ca01"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf",
+      "bytes": 1679,
+      "sha256": "6f8ef0b9cd4c4754d084801fcde73a2d820baeb22ffc2adb8754ffdf94860919"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 3557,
+      "sha256": "26d38659dd1cedbcef8d2aa17afc87bb7d85ed017b99223d428995eafafe9788"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "bytes": 2593,
+      "sha256": "bfa0965cf97de0ceed9205d2d47760cdcf4c9c1d66872b63d7933de6ddcadb3a"
+    },
+    {
+      "path": "development/consolidation_variants/C8/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 9330,
+      "sha256": "c6346daa95b50b2e4e830c025026527d03297c1b44736ccb5c043ef93b2f6edc"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/CombinatorsSqi.gf",
+      "bytes": 652,
+      "sha256": "4e0f86c905f7806e865263233db3482442d97b4fa5be40cb52a5ce730ea11ea4"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/TrySqi.gf",
+      "bytes": 777,
+      "sha256": "41ebb73b967e80dac2d10446d5869d5b2a61a0064b9f18c26f7c94a327087cb4"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 10326,
+      "sha256": "ea8a2a36904b62140e57bebdcd58d0372377f2809d1d12a6451e52f36ae1b1fa"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/albanian/ExtendSqi.gf",
+      "bytes": 15709,
+      "sha256": "83df3589951d46aa288d792bd42f6648cfd0ecf920040f02ff7296035875ea15"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 7385,
+      "sha256": "1a7f9d158173d1f452586a2832e01b0e653cc240e54a326794535a6325299466"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/albanian/StructuralSqiClause.gf",
+      "bytes": 3647,
+      "sha256": "b9b4aa6bd49d84a1b39955469ce9a803ce3202ffa16948095d507846639c99d7"
+    },
+    {
+      "path": "development/consolidation_variants/C9/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 4096,
+      "sha256": "e4208ecaf7baaa21d72c296dc52bc83330aa12301d8527a4be351a5c82c15899"
+    },
+    {
+      "path": "development/consolidation_variants/C9/validation/c9/api/AlbC9PublicAPISmoke.gf",
+      "bytes": 277,
+      "sha256": "1a7c02c981d63aaeb899e9ba664363208195ec4b43fa1b777898a378ea5dbeb0"
+    },
+    {
+      "path": "development/consolidation_variants/C9/validation/c9/api/AlbC9PublicAPISmokeSqi.gf",
+      "bytes": 1372,
+      "sha256": "69edaf897eacd67cf06ee366879a17c914b156d4ef72bd01c4b91f6cf4b0da5f"
+    },
+    {
+      "path": "development/consolidation_variants/C9/validation/c9/inputs/AlbC9ResourceSmoke.gf",
+      "bytes": 578,
+      "sha256": "631fe934a01de2b30180b9678b4496d5c625412419d1335eac4e1d14c4fa861b"
+    },
+    {
+      "path": "development/consolidation_variants/C9/validation/c9/inputs/AlbC9ResourceSmokeSqi.gf",
+      "bytes": 2573,
+      "sha256": "b4f9913681ac4c747d119ee2e695983544003678e5bdcaf472711ea758bf0636"
+    },
+    {
+      "path": "development/consolidation_variants/C9/validation/c9/release/AlbC9ReleaseSurfaceSmoke.gf",
+      "bytes": 128,
+      "sha256": "fc4e09cf3911343044b617d1cd39f224727e43ead1f844f6b800efc6ab485743"
+    },
+    {
+      "path": "development/consolidation_variants/C9/validation/c9/release/AlbC9ReleaseSurfaceSmokeSqi.gf",
+      "bytes": 340,
+      "sha256": "817770c8cfd6a40f4736342907e6a2c3146bc973bff31b7afc137e3bbb9e37d9"
+    },
+    {
+      "path": "docs/00_PROJECT_START_HERE__PROJECT_DOCS.md",
+      "bytes": 902,
+      "sha256": "d2b2936c4f280a3307e7693e4364a15e96c99604984b3186cf0d55fc9eb6d6dd"
+    },
+    {
+      "path": "docs/C10_EXECUTION_ENVIRONMENT.md",
+      "bytes": 1486,
+      "sha256": "c2434feedc3e4502cff73d54eea4895066bb317cc9c6cfe8226ec00e81115f0e"
+    },
+    {
+      "path": "docs/CATEGORY_AND_LINCAT_CONTRACT.md",
+      "bytes": 539,
+      "sha256": "184d4a087be6d6f5700c704a3ed37596f172228e9110edb746db104996109b7b"
+    },
+    {
+      "path": "docs/DECISION_LOG.md",
+      "bytes": 379,
+      "sha256": "edfa5eb647ef73ee30520b759f640414dc0f20b9888b1469ad4f6f381093eded"
+    },
+    {
+      "path": "docs/INTERFILE_CONTRACT_LOCK.md",
+      "bytes": 576,
+      "sha256": "27177b4de0a3699fcf0814ead741bea291be6534ef766e026f3b6f0af9ff2db8"
+    },
+    {
+      "path": "docs/KNOWN_ISSUES.md",
+      "bytes": 803,
+      "sha256": "f1449e5d3c405db70b7ef417191e71307a13c878e4a8fc19ac8d47865ec7cdf9"
+    },
+    {
+      "path": "docs/LANGUAGE_ARCHITECTURE.md",
+      "bytes": 467,
+      "sha256": "cdea8b2f199f5cfb611621627c8ab3e3ec56d6ad240a59b42e44aea5003c30b0"
+    },
+    {
+      "path": "docs/LANGUAGE_OVERVIEW.md",
+      "bytes": 461,
+      "sha256": "2d9bec988f62ac0a5373fb5f8cc6803bbf213ce61b332aa482ff987f34ee901c"
+    },
+    {
+      "path": "docs/MODULE_DEPENDENCY_MAP.md",
+      "bytes": 405,
+      "sha256": "71934717fe12efdf601239483ad547df6f96c41f8f653fa05c51b38c8cefde8f"
+    },
+    {
+      "path": "docs/MORPHOLOGY_SPEC.md",
+      "bytes": 466,
+      "sha256": "4ba581755071e18df483f1ac77792848ab4691640fa314881cadd15a2f56743b"
+    },
+    {
+      "path": "docs/RELEASE_CRITERIA__PROJECT_DOCS.md",
+      "bytes": 482,
+      "sha256": "435aafba331cf526c6a4b82bb771a76602acb001db2a7accdaa8cfff3c01e89a"
+    },
+    {
+      "path": "docs/RESEARCH_EVIDENCE.md",
+      "bytes": 423,
+      "sha256": "e026ccde2f6ed79d25a72323c7961d4752f32e2cfaef61f2269b91f057710c85"
+    },
+    {
+      "path": "docs/STATUS_LEDGER__PROJECT_DOCS.md",
+      "bytes": 426,
+      "sha256": "80471759a203f15d3ce49c9ed266793707ddff6bc6bd7b3035c85b7634e395a7"
+    },
+    {
+      "path": "docs/SYNTAX_AND_CONSTRUCTOR_RULES.md",
+      "bytes": 505,
+      "sha256": "b7cb4abbf49740e3d2633dcccd1d0dc168d9c331a52e29c87128ea2cf91f8d58"
+    },
+    {
+      "path": "docs/TEST_COVERAGE_MATRIX__PROJECT_DOCS.md",
+      "bytes": 431,
+      "sha256": "66fcbb4d97a98220256868b348cef0214674768f29e649851cdfa4e20715cbb6"
+    },
+    {
+      "path": "docs/VALIDATION_SPEC__PROJECT_DOCS.md",
+      "bytes": 521,
+      "sha256": "5d2fd37a77a2f951221639efa800a52ab5416e8b6f6f6ebb52f5a6486ca9b8d4"
+    },
+    {
+      "path": "docs/WORD_BENCH_PROJECT_DOCS_ALIGNMENT.md",
+      "bytes": 528,
+      "sha256": "74dc809104104db1c464a5ee6ea819c4a75346647e6a85bac3a1e5135bfae604"
+    },
+    {
+      "path": "docs/c5/C5_CANONICAL_RECONCILIATION_20260925.md",
+      "bytes": 4906,
+      "sha256": "8a2231fdf1670ea753b5c248fb947cef4c072bdcfac460d07ac9aedf3d16b51e"
+    },
+    {
+      "path": "docs/c5/C5_CHANGED_FILES.json",
+      "bytes": 5361,
+      "sha256": "a7be45f6b7a8a333a8f75da634a2f1fadce2a330d2162414304bccf1897d458d"
+    },
+    {
+      "path": "docs/c5/C5_DIFF_AGAINST_SUPPLIED_SNAPSHOT.tsv",
+      "bytes": 9764,
+      "sha256": "61bed32ac1cc9787d9971bcb9ca12a8de0c8d27759b75d5392128353b859f427"
+    },
+    {
+      "path": "docs/c5/C5_IMPLEMENTATION_STATUS_20260925.md",
+      "bytes": 3996,
+      "sha256": "6de4a8e8a9d697772f6feba6ec54fe7df66fe3da3e19fcf74734e2db2a1e5389"
+    },
+    {
+      "path": "docs/c5/C5_LOCAL_RELEASE_EVIDENCE_20260925.json",
+      "bytes": 1193,
+      "sha256": "28070a4702e201f77b0dfb12bb84c39536b9f57b822ed2abe1272d106856ebbc"
+    },
+    {
+      "path": "docs/c5/C5_LOCAL_RELEASE_EVIDENCE_20260925.md",
+      "bytes": 2571,
+      "sha256": "67fdcb1c29a39ac5c874ab02e34a7a86f32b03089d9f890eab85b45cd96a33c2"
+    },
+    {
+      "path": "docs/c5/C5_SOURCE_LOCK_SHA256.txt",
+      "bytes": 6697,
+      "sha256": "6d87808a05fcf767afca41f7983da3732e86c4ef4e9d2e59203bdb0a64674c14"
+    },
+    {
+      "path": "docs/c5/canonical_reference/03_FINAL_PRODUCT_AND_DEFINITION_OF_DONE.md",
+      "bytes": 2407,
+      "sha256": "153aa1dbebee48c68280ebedc563e004a2ea0ff03676dade474fd67a4da3061d"
+    },
+    {
+      "path": "docs/c5/canonical_reference/10_CLITICS_PRONOUNS_CASE_PREPOSITIONS.md",
+      "bytes": 1298,
+      "sha256": "6fd60ac27fa01f1999ecf33ddd08054dfe57b5467acafca319e2f3074a2a7948"
+    },
+    {
+      "path": "docs/c5/canonical_reference/17_TESTING_CERTIFICATION_AND_RELEASE_LEVELS.md",
+      "bytes": 2194,
+      "sha256": "781796ff229f67a6288749c1869a92701db4cfc5635634bdc16494b9b41d1020"
+    },
+    {
+      "path": "docs/c5/canonical_reference/19_GLOBAL_DECISION_REGISTER.md",
+      "bytes": 2492,
+      "sha256": "3a98f166b96920860a523e6dc114f56c3d781aced8e40311e600075cd6e570f0"
+    },
+    {
+      "path": "docs/c5/canonical_reference/20_GLOBAL_OPEN_QUESTIONS.md",
+      "bytes": 1677,
+      "sha256": "379c071486bb0fea531998fabb3a7ca2ac318c60add5e25e28b59bf2fe45a95e"
+    },
+    {
+      "path": "docs/c5/canonical_reference/22_RELEASE_GATES.md",
+      "bytes": 3798,
+      "sha256": "f6d2d5f28e3360db38fddddfb7334058f85fd6c82543c0a09390d18e059b64d1"
+    },
+    {
+      "path": "docs/c5/canonical_reference/25_CHANGE_CONTROL_AND_DELIVERY.md",
+      "bytes": 6128,
+      "sha256": "16271047d775303d700afbfef00858e7358b415ce85fc70e2b6185b4c2bd42bb"
+    },
+    {
+      "path": "docs/c5/spec_v2/00_FINAL_TARGET.md",
+      "bytes": 3175,
+      "sha256": "8512190330f89a341e1a911bc0509f65643ef46ca686ff0edc27711ab7c7e35c"
+    },
+    {
+      "path": "docs/c5/spec_v2/01_CURRENT_BASELINE_AND_GAPS.md",
+      "bytes": 3665,
+      "sha256": "29813fe49dc50cb4b706244acfc16890639dd97f8a253f2f6ed91e96df6c4467"
+    },
+    {
+      "path": "docs/c5/spec_v2/02_TYPED_ARCHITECTURE.md",
+      "bytes": 3948,
+      "sha256": "dd6e0c3fd0922cd22cfd2ab0c66de000b9c9466bcb07247eca286b672f410c18"
+    },
+    {
+      "path": "docs/c5/spec_v2/03_CLITIC_SYSTEM_SPEC.md",
+      "bytes": 2760,
+      "sha256": "01b0425434887b5711cfcc594e5e9a34bd841929b80b2cd015eb6f46e473eb21"
+    },
+    {
+      "path": "docs/c5/spec_v2/04_PRONOUN_CASE_PREPOSITION_SPEC.md",
+      "bytes": 2899,
+      "sha256": "4fd307f767f08540de9c4e8abc5560408b39384df57baf629664e4addc1468ad"
+    },
+    {
+      "path": "docs/c5/spec_v2/05_REALIZATION_CONTEXT_MATRIX.md",
+      "bytes": 3059,
+      "sha256": "4aec4250545dbc820cdb276bc3546b1e2584a7502839c1f0dd39bb347f49f529"
+    },
+    {
+      "path": "docs/c5/spec_v2/06_MODEL_LANGUAGE_POLICY.md",
+      "bytes": 1905,
+      "sha256": "403fbd27c25c03bf57b5870366f95c8c3e9281ca9adc3a591708690a4585b2b2"
+    },
+    {
+      "path": "docs/c5/spec_v2/07_MIGRATION_PLAN.md",
+      "bytes": 2744,
+      "sha256": "c60f5615412617e43002f86c3b0f98a57650de8efff9644ebc5db5da70812aed"
+    },
+    {
+      "path": "docs/c5/spec_v2/08_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 2477,
+      "sha256": "b03a735205ec299dba04679c647ef50c6aa16a9f7811e316f25191d0f56def7f"
+    },
+    {
+      "path": "docs/c5/spec_v2/09_DECISION_LEDGER.md",
+      "bytes": 2552,
+      "sha256": "a2fb4ff91af77817b27de5246ab4d3f487b078e042ad982cd3439846e0b65aea"
+    },
+    {
+      "path": "docs/c5/spec_v2/10_OPEN_QUESTIONS.md",
+      "bytes": 2105,
+      "sha256": "ac3be5b9524715fea40fbfee0278bc4f64d9e999c5949f9fbe20df200a52688a"
+    },
+    {
+      "path": "docs/c5/spec_v2/11_PATCH_CHECKLIST.md",
+      "bytes": 2169,
+      "sha256": "2be60a707933bbcf510b68a00877c41280e69db07fa87a63cef8713f0f503013"
+    },
+    {
+      "path": "docs/c5/spec_v2/12_SOURCE_EVIDENCE_MATRIX.md",
+      "bytes": 4087,
+      "sha256": "407d28a489a7569b1f7ef07a2cbf2343886c87d7d05d0f045621c4b9c8c4afd4"
+    },
+    {
+      "path": "docs/c5/spec_v2/13_CROSS_WORKSTREAM_BOUNDARIES.md",
+      "bytes": 2171,
+      "sha256": "297cb898b2afe643f7e9121452632d7cf8bf28a8a1cdaf099ec999e4e8673552"
+    },
+    {
+      "path": "docs/c5/spec_v2/14_RGL_API_PARITY_MATRIX.md",
+      "bytes": 2613,
+      "sha256": "f6fb9ffcfe4aee8198a25feb4a903adf10f9a625fed19aca6973906ce4146e7e"
+    },
+    {
+      "path": "docs/c5/spec_v2/15_PRODUCER_CONSUMER_OWNERSHIP.md",
+      "bytes": 2202,
+      "sha256": "84ac3f2378ef7e946a2d9aac24722efb684c2a56732c22f5984e4c3387076c2c"
+    },
+    {
+      "path": "docs/c5/spec_v2/16_EXHAUSTIVE_LINGUISTIC_INVENTORY.md",
+      "bytes": 2486,
+      "sha256": "3eac042a884deb7fd70d7ec73a48a51467374fa65273fe0048f2ba6fbe4d76e3"
+    },
+    {
+      "path": "docs/c5/spec_v2/17_MACHINE_CHECKABLE_DEFINITION_OF_DONE.md",
+      "bytes": 2505,
+      "sha256": "2f3bfdc737ae94f887a8b59b1dc3c64f31c6307e4b00287f914d283f95a153d9"
+    },
+    {
+      "path": "docs/c5/spec_v2/18_VERSIONING_AND_CHANGE_CONTROL.md",
+      "bytes": 1453,
+      "sha256": "157d28b224af5d4c5c62d0822ce89d3aa5d1fa9a42f8134a65ff7328d09caddc"
+    },
+    {
+      "path": "docs/c5/spec_v2/19_REQUIREMENT_TRACEABILITY_MATRIX.md",
+      "bytes": 1785,
+      "sha256": "679c3da95f2cd79e4b7a3c9cdbd5ab9cc633a73457e8deaeef2df43a19c320a0"
+    },
+    {
+      "path": "docs/c5/spec_v2/CHANGELOG.md",
+      "bytes": 1026,
+      "sha256": "39e8a69176b1ef2305031626f6c972c4dbf0878f45942ffa8b45baacc95de483"
+    },
+    {
+      "path": "docs/c5/spec_v2/MANIFEST.md",
+      "bytes": 1150,
+      "sha256": "7a3f04f38e224598742cafc6f70d2e5db1599f1e838a4ecee2a8a0ceb328ebc8"
+    },
+    {
+      "path": "docs/c5/spec_v2/README.md",
+      "bytes": 5592,
+      "sha256": "f84c98d02d59bab4a6d31af73cd642ce941af1e16eaac9c5b842ca7a8696e75e"
+    },
+    {
+      "path": "docs/c5/spec_v2/VALIDATION_REPORT.md",
+      "bytes": 608,
+      "sha256": "20e0e0a87e39eadfecfae95f4443994a7855662f6efde03e0d325dab1f811219"
+    },
+    {
+      "path": "docs/c9_finalization/C9_DECISION_CLOSURE.md",
+      "bytes": 1690,
+      "sha256": "18eb892c667569e7262192c160b65eb0837edda27bfabaf5c081cc1d08cfae7f"
+    },
+    {
+      "path": "docs/c9_finalization/C9_FINALIZATION_PATCH_20260925.md",
+      "bytes": 7107,
+      "sha256": "f9073dc625986bf12b9caf2f2d13d16aa4b1f28b8650c11aa958bb10e7f3c417"
+    },
+    {
+      "path": "docs/c9_finalization/C9_KNOWN_LIMITATIONS.md",
+      "bytes": 1770,
+      "sha256": "3cd64a0a63dc512a7a448b13e1a8eae927b50dbe5b96a93288ef680260869b2d"
+    },
+    {
+      "path": "docs/c9_finalization/C9_MAX_FINAL_VERIFICATION_20260925.md",
+      "bytes": 1962,
+      "sha256": "f877a1edb8da33c618639b93500746bd551e3adc349bea6d24a3d49d5a5c12a7"
+    },
+    {
+      "path": "docs/c9_finalization/C9_STRUCTURAL_AND_SURFACE_AUDIT_20260925.md",
+      "bytes": 4529,
+      "sha256": "772d31c239fc455c9c786a6c0fdd68f1839e7e58166e70a3dbbcbbdc20e0fb86"
+    },
+    {
+      "path": "docs/c9_governance/00_FINAL_TARGET.md",
+      "bytes": 4983,
+      "sha256": "1294cd1878eec09cc9f35bdaf7b358bdecaeb95057ecf474cab28db78f19fff7"
+    },
+    {
+      "path": "docs/c9_governance/01_AUTHORITY_AND_SOURCE_LOCK.md",
+      "bytes": 3793,
+      "sha256": "17a3d0dcc2f7b277911ffd05478c8a1777deddcc654fe391380d0f6ea0f11980"
+    },
+    {
+      "path": "docs/c9_governance/02_PARITY_STATUS_MODEL.md",
+      "bytes": 4015,
+      "sha256": "4251cc37b15240d70c821e867a771968d11f7182cf1c242e561f383a09514584"
+    },
+    {
+      "path": "docs/c9_governance/03_ENGLISH_ALBANIAN_PARITY_MATRIX.md",
+      "bytes": 59497,
+      "sha256": "5f29ad00690589613b8e0c2db0a243ec51d517b3091a41a3da245b49e8ba7471"
+    },
+    {
+      "path": "docs/c9_governance/04_STRUCTURAL_COMPLETION_PLAN.md",
+      "bytes": 2987,
+      "sha256": "5140342d6f865d068a3c9aab5a678e1c236caf6222be7a733226d7d07d8b3a8a"
+    },
+    {
+      "path": "docs/c9_governance/05_EXTEND_EXTRA_COMPLETION_PLAN.md",
+      "bytes": 3808,
+      "sha256": "2e19d6773ef35cdbfbaa202dbb68493f59e61398535d7c31f55572ea2ed62262"
+    },
+    {
+      "path": "docs/c9_governance/06_PUBLIC_API_PLAN.md",
+      "bytes": 2877,
+      "sha256": "dca40e2aa24f9f674f13310d5544637837df78242540be74391683b284b9ae19"
+    },
+    {
+      "path": "docs/c9_governance/07_DOCUMENTATION_SYMBOL_MARKUP_PLAN.md",
+      "bytes": 2334,
+      "sha256": "a217eab092a98e0d71f79d644ee54d711be5d17add3b18126dd4b5d371611467"
+    },
+    {
+      "path": "docs/c9_governance/08_LINGUISTIC_EVIDENCE_MAP.md",
+      "bytes": 3871,
+      "sha256": "24c352ce5cae6b4e4ae2cb0c5966a91cb8bb4451a0ef2bc547caf5b9d01f9534"
+    },
+    {
+      "path": "docs/c9_governance/09_TEST_AND_RELEASE_GATES.md",
+      "bytes": 2818,
+      "sha256": "7bba629630bc5af7a33ee7a832b452e8056fb763e22293dc8b0e0c4827dcf9c5"
+    },
+    {
+      "path": "docs/c9_governance/10_DRIFT_GUARD.md",
+      "bytes": 2671,
+      "sha256": "6dc69a15126ab3097e523814eb78db231fb2cf992ebc45238da3b436d3651b55"
+    },
+    {
+      "path": "docs/c9_governance/11_OPEN_DECISIONS.md",
+      "bytes": 1794,
+      "sha256": "553ff1040768614423118ab8825b76e011650f03b78af8a093f3d35d228e8f2c"
+    },
+    {
+      "path": "docs/c9_governance/12_BUILD_SEQUENCE_AND_HANDOFF.md",
+      "bytes": 2115,
+      "sha256": "eeaecff5df9542166e58d9a4a5caf657fb5503ea74575ca52b56b3d5b6135e6d"
+    },
+    {
+      "path": "docs/c9_governance/13_CURRENT_SOURCE_INVENTORY.md",
+      "bytes": 5907,
+      "sha256": "111c7ffc1516a79f755ae9027c5a4182b0664785d26e32fcc9720f7aff88363b"
+    },
+    {
+      "path": "docs/c9_governance/14_ENGLISH_ONLY_SURFACE_REVIEW.md",
+      "bytes": 2767,
+      "sha256": "2a822dcb7c8cd297683f9dc9ec6794828710d434d9cf818d125d14077dcc0bee"
+    },
+    {
+      "path": "docs/c9_governance/15_EXPECTED_FINAL_DELIVERABLES.md",
+      "bytes": 2302,
+      "sha256": "8ac319ff311f98232386f0f07e2fdebd18b4d416557f1ce412f7ccbcf3434556"
+    },
+    {
+      "path": "docs/c9_governance/16_TRACEABILITY_MODEL.md",
+      "bytes": 2346,
+      "sha256": "6f63b427e623f0c7acf87f7c4cd5caf087b5c6241f94ea2b77c88f82f7aa6d37"
+    },
+    {
+      "path": "docs/c9_governance/17_LINGUISTIC_EVIDENCE_LEDGER.md",
+      "bytes": 7122,
+      "sha256": "651299ed13699375c7759a62e46f1db3abeca92c2d349c5e1b26f9c479ee9407"
+    },
+    {
+      "path": "docs/c9_governance/18_TEST_COVERAGE_REGISTER.md",
+      "bytes": 6212,
+      "sha256": "e7c3cf410657a1e5977f962a62483b5d0fa24b48639016d0fdf07d4790d1b900"
+    },
+    {
+      "path": "docs/c9_governance/19_PUBLIC_API_EXPORT_MATRIX.md",
+      "bytes": 3709,
+      "sha256": "4c771456eb39314cc6bc9b90c76ae7fcc1d5f5e2bebe884a4966e0da78d0c5b5"
+    },
+    {
+      "path": "docs/c9_governance/20_API_COMPATIBILITY_CONTRACT.md",
+      "bytes": 2304,
+      "sha256": "464caa5e958349074171a5140cf51c9d4362cdd9ff0eab2710e38e5ca5dcdb6f"
+    },
+    {
+      "path": "docs/c9_governance/21_INTER_CONVERSATION_DEPENDENCIES.md",
+      "bytes": 2300,
+      "sha256": "92eb4fb4b3d2a19a15163e8498809e5b03e0c6c6aa8b6a4612ec99de86d26567"
+    },
+    {
+      "path": "docs/c9_governance/22_DECISION_REGISTER.md",
+      "bytes": 4917,
+      "sha256": "30d532d4bee4dc9d249df72681ae1de866dec73589ed187cba728ec1fd02da15"
+    },
+    {
+      "path": "docs/c9_governance/23_ENGLISH_SURFACE_INVENTORY.md",
+      "bytes": 8091,
+      "sha256": "b359cac68e8eebe988b00c0cdd666989c198eaaacc4161c946409984363c4489"
+    },
+    {
+      "path": "docs/c9_governance/24_CLOSURE_CHECKLIST.md",
+      "bytes": 2988,
+      "sha256": "71bbf3aa805ed2e738ac76be5d77fda1d141a9d8e0f79344e5d99d0bd5a497c8"
+    },
+    {
+      "path": "docs/c9_governance/25_PATCH_RECORD_TEMPLATE.md",
+      "bytes": 980,
+      "sha256": "79a1a4b7bd408cd9d2fce5fff8a24891472358d74381de82b706ba38822d174b"
+    },
+    {
+      "path": "docs/c9_governance/26_V2_QUALITY_AUDIT.md",
+      "bytes": 4410,
+      "sha256": "90ad0f3c4ecd84fae2140fd3bbe5e21c7f950f9580b9141c1f2cf1536d6e2b12"
+    },
+    {
+      "path": "docs/c9_governance/27_C9_FINALIZATION_CANDIDATE_20260925.md",
+      "bytes": 2741,
+      "sha256": "204dab62d160fd59826b156b5b4a99757465269341b9c8a544acee9f880eeda9"
+    },
+    {
+      "path": "docs/c9_governance/28_C9_IMPLEMENTATION_AUDIT_20260925.md",
+      "bytes": 4529,
+      "sha256": "772d31c239fc455c9c786a6c0fdd68f1839e7e58166e70a3dbbcbbdc20e0fb86"
+    },
+    {
+      "path": "docs/c9_governance/CHANGELOG_V2.md",
+      "bytes": 965,
+      "sha256": "eaab8cd308226b55c3cab036c4456af3f786007f8435bcfb866d5559909a0f56"
+    },
+    {
+      "path": "docs/c9_governance/README.md",
+      "bytes": 4055,
+      "sha256": "a40657edf91f02d253171569761ed5be1fbe2ff799bce31c7e58f3f3eb972511"
+    },
+    {
+      "path": "docs/canonical/CANONICAL_SOURCE_LOCK.txt",
+      "bytes": 170,
+      "sha256": "1535b01c0728ca038e8e8bce5b5d4960f1f1e9b019c8ec68665191b1d3b990ca"
+    },
+    {
+      "path": "docs/clause/C07_FINAL_EVIDENCE_20260925.md",
+      "bytes": 3923,
+      "sha256": "9cc454ec13cab62accfc427380241dfbc96104d5192d8b8b5f8bddabde643fed"
+    },
+    {
+      "path": "docs/clause/C07_FINAL_IMPLEMENTATION_20260925.md",
+      "bytes": 10367,
+      "sha256": "89a13dbe88071de8f6252fa6c7735cc61f3a9ff73b763f86ab463cafd925bc9e"
+    },
+    {
+      "path": "docs/clause/C07_PATCH_RECORD_20260925.md",
+      "bytes": 4184,
+      "sha256": "b8b79e3635f1480561cb12861f9f36fc719955fd5c1adb459999f9b42a02c36f"
+    },
+    {
+      "path": "docs/clause/C07_POST_IMPLEMENTATION_AUDIT.md",
+      "bytes": 4164,
+      "sha256": "a2b6c2693f7b9ad3d4c145b158709586c1483ebb68a3700ff783d0c1088022ae"
+    },
+    {
+      "path": "docs/clause/C07_TEST_MATRIX.md",
+      "bytes": 2546,
+      "sha256": "26a40404be5d55e81c62ffe05847ca88adbded184b7e25f9e867d11fa8cb37bb"
+    },
+    {
+      "path": "docs/clause/C07_UNCERTIFIED_BOUNDARIES.md",
+      "bytes": 3561,
+      "sha256": "e0237211a4db707498c2077ec7120b9e6ccb9ef2d77194ee3f07e16afacbcbe7"
+    },
+    {
+      "path": "docs/consolidation/C10_FINALIZATION_20260925.md",
+      "bytes": 1442,
+      "sha256": "b6b9219ee5d559068ca65cc3b0f8f8988d6c28e10216839a5f9fdebee0d1d12a"
+    },
+    {
+      "path": "docs/consolidation/C10_MAX_FINALIZATION_20260925.md",
+      "bytes": 2726,
+      "sha256": "36bdb4823c06266a868745b1c5f3d6dcfcf69df4d366b6c6b7007e748273a9e8"
+    },
+    {
+      "path": "docs/consolidation/C10_REFRESH_AFTER_CONSOLIDATION.txt",
+      "bytes": 393,
+      "sha256": "b7dd7dd10fab8e2ea753d5cfc0ed1f676a4ce2ed27779bc1b2f28ac21d96a8fd"
+    },
+    {
+      "path": "docs/consolidation/CONFLICT_RESOLUTION_LEDGER.md",
+      "bytes": 3925,
+      "sha256": "0ff2973dba059746e04b89cd1ccee200116136c103a7f43332392436dad4f794"
+    },
+    {
+      "path": "docs/consolidation/CONSOLIDATED_OVERLAY_REPORT.md",
+      "bytes": 2825,
+      "sha256": "285591180f68e41929626a9152e813f2a0a36948ce29f01450d973c4a5442f39"
+    },
+    {
+      "path": "docs/consolidation/CONSOLIDATED_PROVENANCE.json",
+      "bytes": 2373,
+      "sha256": "68e94d4ca4db8f271dd425fd1768ccd88be2debf86833000ce0718b158f1fb6b"
+    },
+    {
+      "path": "docs/consolidation/CONSOLIDATION_MANIFEST.json",
+      "bytes": 883,
+      "sha256": "7d8326801f85313727a570e3458f3ef90a3f1139760044a091aa5a9e01f9fdbf"
+    },
+    {
+      "path": "docs/consolidation/CONSOLIDATION_STATIC_VALIDATION.txt",
+      "bytes": 1730,
+      "sha256": "511efaed0e178a3a39d8aa0dfb4630e0469defd21d0dc1c483db13e8653bc646"
+    },
+    {
+      "path": "docs/consolidation/FINAL_C10_SOURCE_LOCK.txt",
+      "bytes": 65,
+      "sha256": "964ca6cd2b04edd3c86bc26a48f5b6ff4506392cfe8078788e9e8b6798cff2be"
+    },
+    {
+      "path": "docs/consolidation/MORPHOSQI_LINT_CONSOLIDATED.txt",
+      "bytes": 79,
+      "sha256": "c4e93cbbdf6b19df8227e08122211b26891d6673650308895be591bd0223719e"
+    },
+    {
+      "path": "docs/consolidation/VALIDATION_COMPATIBILITY_MATRIX.md",
+      "bytes": 2100,
+      "sha256": "988e05278e9e854d156d9a3239c26988f0e321c1f8deea62bba180f59c53e427"
+    },
+    {
+      "path": "docs/consolidation/WORDBENCH_SCENARIO_CATALOG_FIX_20260925.md",
+      "bytes": 907,
+      "sha256": "d994b8c7b7b4fd6459674b65d7c41cdb3046fcd66b61d0458856c5b2ccb9a37d"
+    },
+    {
+      "path": "docs/consolidation/WORDBENCH_SCENARIO_CATALOG_VALIDATION_20260925.json",
+      "bytes": 409,
+      "sha256": "caf12c58db405f3b9b9cf98897a0db1a3194e7efef0859bb74497acb529909b1"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/c5.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/c5.txt",
+      "bytes": 11625,
+      "sha256": "852d381d6b3d1bc9bc88f152cff186609f8eae3516f06abcf6c47ff6c9f8c624"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/c9.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/c9.txt",
+      "bytes": 827,
+      "sha256": "0023eb9ca81cc7b9982cbfb4e0b480d6845c31028677f2140511ffffec6f644c"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/clause.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/clause.txt",
+      "bytes": 85,
+      "sha256": "824da57f03fc09e485e61c928c7132cc9eec5850ef7dec1aee1277ecd67e40a8"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/dict.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/dict.txt",
+      "bytes": 1134,
+      "sha256": "239104d65e056d7b37a693b29f205865f63556dc5673a2070173b356d3bf68d6"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/lexicon.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/lexicon.txt",
+      "bytes": 1376,
+      "sha256": "00c618e3bdca284a09f2df935c3c4211bfd64d6cc1468eedd1b7448814d5fb19"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/morphodict.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/morphodict.txt",
+      "bytes": 1753,
+      "sha256": "6050384e54deb384d0f5c8fad0c356b3d708c1ce0dcf9339c53d7c20202380e8"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/morphology.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/morphology.txt",
+      "bytes": 23240,
+      "sha256": "8845437d154ec97bedadb228782be02acd00d2a33661419bee63d4372261daf8"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/nominal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/nominal.txt",
+      "bytes": 1603,
+      "sha256": "bc3ce6b7b505bc55de84e92fda8f1b75f07dd6df3b93cc2a2cfc320daad38ab1"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/verbal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925/verbal.txt",
+      "bytes": 408,
+      "sha256": "a5037819c99fbf22207decbe7ccd968fb9daa973055c6c50f59b11142a77c011"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/c5.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/c5.txt",
+      "bytes": 11624,
+      "sha256": "73f88645d9f5e4d94dac863640cfce63dd7c0b598e2b46a146d201a6b6810a19"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/c9.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/c9.txt",
+      "bytes": 366,
+      "sha256": "f3c5642c32e1bb9120566a8c0edec4fb453efa6af84b292bec29fa1e5b5c3fe0"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/morphodict.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/morphodict.txt",
+      "bytes": 1473,
+      "sha256": "1fba8a5776045a986bdc3e843084962a69bc76ededd71a058ef3a033bfb2cb7c"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/morphology.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/morphology.txt",
+      "bytes": 22618,
+      "sha256": "1ec5b4c36ae897b6a73cb1dcc518ac54c4b9963564a8b9412f005d12f17ca09e"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/nominal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/nominal.txt",
+      "bytes": 4771,
+      "sha256": "d313754abce40d02c579907542fd60a8aa6eb8179031071f95143620aed144b5"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/verbal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_final/verbal.txt",
+      "bytes": 7579,
+      "sha256": "5803d560f3295dd21b09835e35d7a39335cf15f9b65550417c12183ff19d389d"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/c5.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/c5.txt",
+      "bytes": 11624,
+      "sha256": "73f88645d9f5e4d94dac863640cfce63dd7c0b598e2b46a146d201a6b6810a19"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/c9.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/c9.txt",
+      "bytes": 366,
+      "sha256": "f3c5642c32e1bb9120566a8c0edec4fb453efa6af84b292bec29fa1e5b5c3fe0"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/clause.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/clause.txt",
+      "bytes": 85,
+      "sha256": "824da57f03fc09e485e61c928c7132cc9eec5850ef7dec1aee1277ecd67e40a8"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/dict.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/dict.txt",
+      "bytes": 1134,
+      "sha256": "239104d65e056d7b37a693b29f205865f63556dc5673a2070173b356d3bf68d6"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/lexicon.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/lexicon.txt",
+      "bytes": 1376,
+      "sha256": "00c618e3bdca284a09f2df935c3c4211bfd64d6cc1468eedd1b7448814d5fb19"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/morphodict.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/morphodict.txt",
+      "bytes": 1473,
+      "sha256": "1fba8a5776045a986bdc3e843084962a69bc76ededd71a058ef3a033bfb2cb7c"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/morphology.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/morphology.txt",
+      "bytes": 22618,
+      "sha256": "1ec5b4c36ae897b6a73cb1dcc518ac54c4b9963564a8b9412f005d12f17ca09e"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/nominal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/nominal.txt",
+      "bytes": 1603,
+      "sha256": "bc3ce6b7b505bc55de84e92fda8f1b75f07dd6df3b93cc2a2cfc320daad38ab1"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/verbal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_packaging/verbal.txt",
+      "bytes": 484,
+      "sha256": "34d3d74cb6c2ca481aebafed9d4abf08fe37b0876de82047a66a398b0c0aa15a"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/c5.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/c5.txt",
+      "bytes": 11624,
+      "sha256": "933608e73fd814ab986ea674441b726b8fc47a25a0d00cf5ee5ecb364cee733c"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/c9.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/c9.txt",
+      "bytes": 366,
+      "sha256": "f3c5642c32e1bb9120566a8c0edec4fb453efa6af84b292bec29fa1e5b5c3fe0"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/clause.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/clause.txt",
+      "bytes": 85,
+      "sha256": "824da57f03fc09e485e61c928c7132cc9eec5850ef7dec1aee1277ecd67e40a8"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/morphodict.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/morphodict.txt",
+      "bytes": 1473,
+      "sha256": "1fba8a5776045a986bdc3e843084962a69bc76ededd71a058ef3a033bfb2cb7c"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/morphology.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/morphology.txt",
+      "bytes": 22618,
+      "sha256": "1ec5b4c36ae897b6a73cb1dcc518ac54c4b9963564a8b9412f005d12f17ca09e"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/nominal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/nominal.txt",
+      "bytes": 1603,
+      "sha256": "bc3ce6b7b505bc55de84e92fda8f1b75f07dd6df3b93cc2a2cfc320daad38ab1"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/verbal.rc",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "docs/consolidation/validation_run_20260925_pass2/verbal.txt",
+      "bytes": 3069,
+      "sha256": "2bd6b16bddc8e0dce8756a4b6c9d85e65ca95ddf58e13470f763417a08ff78d8"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C10/APPLY_README.md",
+      "bytes": 457,
+      "sha256": "10ebeb85dea4bb429532a7ee0ba1ee4052965cfe25b8695d105405a8810c9630"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C10/OVERLAY_MANIFEST.json",
+      "bytes": 58796,
+      "sha256": "d488f977773e2064473b75f7690191a67630224f36ffa640e8d2cd75cb973625"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C10/README.md",
+      "bytes": 567,
+      "sha256": "40ace099b9ff31aafb1a57ec837ccba2c21ff8459fd75b5ab4d97e7f79d32bb4"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C10/project.toml",
+      "bytes": 3727,
+      "sha256": "d55f739164895a6d31ba8fb2a3950cfa0ffda9480f8b5b72e5ef745ee116afe6"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C4/DELIVERY_MANIFEST.json",
+      "bytes": 4757,
+      "sha256": "b77de1575598602490458576d2c5c44b7e89704a5a7e329c198fbbae890e6cbc"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C4/project.toml",
+      "bytes": 1692,
+      "sha256": "49b713343f1af93a3da0fd9abd568faf7201ab746186da9a3719b34206704974"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C5/C5_FINAL_DELIVERY_README.md",
+      "bytes": 1778,
+      "sha256": "d8363dceac2bff82fac35aa1f987c9974631f57c50148185c09059595414c54c"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C5/C5_FINAL_REPORT.md",
+      "bytes": 2113,
+      "sha256": "2024ba653d8e5bc9827d2e8676a5420ae49dec195acf2832e07382d0badb8db1"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C5/C5_OVERLAY_APPLY_README.md",
+      "bytes": 494,
+      "sha256": "94a3d24f4b6dcfdd45ede56e4bff99784d244458edd8a19614bc721e0f573949"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C5/C5_OVERLAY_MANIFEST.json",
+      "bytes": 18222,
+      "sha256": "fa5c18bcc39144784c02f89ebe57000f20b07c9333e34d0b0cb23c0438974ee0"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C5/project.toml",
+      "bytes": 1816,
+      "sha256": "e8968966253a071744784214214f735eeb4975e2b7eb18907a11b67b82f584f0"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/APPLY_README.md",
+      "bytes": 952,
+      "sha256": "8f0714e9ff944a7d85c858d41dd54864b32a4b7507542778048c1144c3c74d4d"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/COMMITS.tsv",
+      "bytes": 1123,
+      "sha256": "fc16477f393b0e2f6867c382222a31058ff68f9524eed7423d68be174eea7447"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/Conversation6_Nominal_Finalization.patch",
+      "bytes": 1104131,
+      "sha256": "85c3f1c1408c27d12b1b092dc59d788bf401c8b38b5a958c377bcf5f2d89b6c6"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/DELIVERY_MANIFEST.json",
+      "bytes": 1983,
+      "sha256": "bec259ed96cfc30b1157a0a90747d4a3f584460f75695aa319ee13aecb7a9e6d"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/DELIVERY_REPORT.md",
+      "bytes": 5006,
+      "sha256": "d0a71dd666455d379eb3856be7af0ae1e9cc9f3f10832bcb7c02b911e19001e9"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/DIFFSTAT.txt",
+      "bytes": 4347,
+      "sha256": "92d39980a08807d730ee0d2a4b26e13ba136a3ae1bf360d95b3bacc2cab26a0b"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/FILES_CHANGED.tsv",
+      "bytes": 3012,
+      "sha256": "f6655e6549f9619af0c911759227bb8c9305525af91b8d55c1a718740e40a40c"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C6/SHA256SUMS.txt",
+      "bytes": 13640,
+      "sha256": "58ad2499f82104dcc4232f5aef5701beb69fb042697ba1c43ad653df6a11537f"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/APPLY_README.md",
+      "bytes": 729,
+      "sha256": "e944520ee3ef7e3f61950bb39906f27c24fe7c15b3768fedfa6c0dff9c221cce"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/AUDIT.json",
+      "bytes": 4199,
+      "sha256": "c56341a163f44ec1e25598df494b9bf7c0b4fa380147b41cfdb26e2676ebb88d"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/C07_DELETED_FILES.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/C07_OVERLAY_MANIFEST.json",
+      "bytes": 2798,
+      "sha256": "a905e3dbdbf8e16769814fe83c90a792c9fd020e5abf2ce52e2ee78c19377840"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/CODE_SNAPSHOT_MANIFEST.md",
+      "bytes": 51758,
+      "sha256": "8884b234da27825ddc2d45b7186af5cf774a1c4f1a7c0e9376cb25854f66181d"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/CONSOLIDATION_README.md",
+      "bytes": 730,
+      "sha256": "08973bf0f94d0178457aa4390eb669a0a2edf51344be68dab001f5baf6365aba"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/README.md",
+      "bytes": 269,
+      "sha256": "9653a3d1c65cf2636a301c15192d8f093abdb10a5f3fa64130b8154fa8739bea"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/REPORT.json",
+      "bytes": 4199,
+      "sha256": "c56341a163f44ec1e25598df494b9bf7c0b4fa380147b41cfdb26e2676ebb88d"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/REPORT.md",
+      "bytes": 3636,
+      "sha256": "e946f2522f335d059b5fe33ea463923d90816592b03a7655a5f7d37585eb8bf3"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/SMARTDUMP_INDEX.txt",
+      "bytes": 19860,
+      "sha256": "c8abf11757e1b42e6486a8255c6aba491a174d9f3437dc8a5da88c1fdf6a34e3"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C7/project.toml",
+      "bytes": 1691,
+      "sha256": "46e1ba1cf8a90bfef7394d3c2cac289241f10837d731f121addcb29a22f2ba61"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C8/Albanian_RGL_C8_final_candidate_20260925.patch",
+      "bytes": 47217,
+      "sha256": "110f846299646b204166c4bc8f62e9e67c599601c11510413f8a2406a9d2afc8"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C8/C8_STATIC_VALIDATION_REPORT_20260925.md",
+      "bytes": 3014,
+      "sha256": "180c7861371e2d37b4fb3e2e5937f784ea3197ca3f9e17046af020607666e417"
+    },
+    {
+      "path": "docs/consolidation/workstreams/C8/SHA256SUMS.txt",
+      "bytes": 2618,
+      "sha256": "d7c4370d4663ec57f334233da764f412e2224ff1bd82578c8fac749888afca77"
+    },
+    {
+      "path": "docs/conversation8/C8_FINAL_IMPLEMENTATION_20260925.md",
+      "bytes": 1538,
+      "sha256": "9e1aab969d01f1255bd15b6f30e66fac4b1110bdcc7814496f4b8cac76870024"
+    },
+    {
+      "path": "docs/morphodict/BASELINE_COVERAGE_20260925.csv",
+      "bytes": 62507,
+      "sha256": "eaf210c904e66f2e15f7287c719c375a9a4a11f5fff4a996f00af13648034d03"
+    },
+    {
+      "path": "docs/morphodict/BLOCKED.csv",
+      "bytes": 8064,
+      "sha256": "44bc462b0b235187fe3c6cb8c969eb21487a4d8cc003d7e41e889ce8aef51755"
+    },
+    {
+      "path": "docs/morphodict/BUILD_REPORT.md",
+      "bytes": 2951,
+      "sha256": "2e8f598cb90d277738098283c861d25f970d8221a56ee9542d93062a5948e763"
+    },
+    {
+      "path": "docs/morphodict/CANONICAL_DOC_POINTER.md",
+      "bytes": 790,
+      "sha256": "086bb8d824b726edc6d8edcef2d9edba07e9e6e973c8893faa2d8fd194e7c389"
+    },
+    {
+      "path": "docs/morphodict/COVERAGE.csv",
+      "bytes": 88925,
+      "sha256": "341a882a3094b7c3e83da0069534d9d1ff6c88a6456b90537c2a7c4201b22cc8"
+    },
+    {
+      "path": "docs/morphodict/COVERAGE.json",
+      "bytes": 207314,
+      "sha256": "b1b5253d9d68bc6bade2a4088f44a56809b2b2007a5af28ce21b08eb60c698d1"
+    },
+    {
+      "path": "docs/morphodict/DELIVERY_REPORT_C2_MAX_20260925.md",
+      "bytes": 7585,
+      "sha256": "d219bb1c378dee8b15e463697c6f103e6ff254739a292ca0ccaea75698cc5295"
+    },
+    {
+      "path": "docs/morphodict/DEPENDENCIES.jsonl",
+      "bytes": 236154,
+      "sha256": "2a062458a172651f833545f9ebe2052fcd3b6b6f80e157f3c7dd777b6b3005bb"
+    },
+    {
+      "path": "docs/morphodict/FEATURE_MAPPING.tsv",
+      "bytes": 36952,
+      "sha256": "d8b8cbe0810b55a1bb9882272cc4eb96bc916a3f6e16f175fe938cf145896fea"
+    },
+    {
+      "path": "docs/morphodict/FINALIZATION_REPORT_C2_MAX_20260925.md",
+      "bytes": 3464,
+      "sha256": "df00187ebb927ad77016ee3172c089d61577c7404c5a697a7588cd40d7daebb0"
+    },
+    {
+      "path": "docs/morphodict/MANIFEST.json",
+      "bytes": 1016,
+      "sha256": "6cc43a5445aa56822c0d765ed4bba8dfd1a08bd48bae9b26dbad74256417d17a"
+    },
+    {
+      "path": "docs/morphodict/METRICS.json",
+      "bytes": 2085,
+      "sha256": "2a545d330074b50b902035a92d4a85b92809ef6140264694b1e5b1740004ed9c"
+    },
+    {
+      "path": "docs/morphodict/NATIVE_CERTIFICATION_RUNBOOK.md",
+      "bytes": 1776,
+      "sha256": "c41ed32ad17f3eb53d38856ed86eb367109d7fc2f51d2721f15e70a2e0a5102f"
+    },
+    {
+      "path": "docs/morphodict/PARADIGM_REGISTRY.yaml",
+      "bytes": 18737,
+      "sha256": "af9802da69d8af799b63b8de80d8348b7f2f885a3c58b3d5f193868e0bf93001"
+    },
+    {
+      "path": "docs/morphodict/README.md",
+      "bytes": 5642,
+      "sha256": "1dd837cba5eca2ba142d546b681c592fcbaf13c095e65f30c81288245a09660c"
+    },
+    {
+      "path": "docs/morphodict/SOURCE_PACKAGE_SHA256SUMS.txt",
+      "bytes": 5845,
+      "sha256": "e53c31d271ec1e6b11e705276a2bbf0d5f58151b40cb74c93988e42e511889a0"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/COMBINED_STATIC_VALIDATION.txt",
+      "bytes": 2014,
+      "sha256": "c0f26be5f08de3396d4061637f4c0b9e6f4311cb4fd6436908bbddaa5a556239"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/COMBINED_STATIC_VALIDATION_FINAL.txt",
+      "bytes": 2014,
+      "sha256": "c0f26be5f08de3396d4061637f4c0b9e6f4311cb4fd6436908bbddaa5a556239"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/DICT_STATIC_VALIDATION.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/DICT_STATIC_VALIDATION_FINAL.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/MORPHOSQI_LINT.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/MORPHOSQI_LINT_FINAL.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/OVERLAY_RECONSTRUCTION.txt",
+      "bytes": 439,
+      "sha256": "6eb711f06000bedced635ef503c3b0a9210ad1e3a0b6994683f527fbc79b5a43"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/PATCH_RECORD.yaml",
+      "bytes": 1821,
+      "sha256": "75a200aa3f293f4355a38774fd4a4d46e06469253344c16337532eb4558c6893"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/REPORT.json",
+      "bytes": 36159,
+      "sha256": "8194e712d0262f922a70fd0bbdb90d26e09963c458009a931b0163b2eff78080"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/REPRODUCIBILITY.txt",
+      "bytes": 105,
+      "sha256": "7a6350e7b1fcfe0828697a47869c09f5b29b956aaaad5a6e56476348c9bdf86e"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/SOURCE_LOCK.yaml",
+      "bytes": 1130,
+      "sha256": "b8c4160383874178bd1332707eceb46d368ed6eec7830e7317a405403deb5955"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/STATIC_VALIDATION.txt",
+      "bytes": 1472,
+      "sha256": "e03132cc2f481d950047be94b2177efea5b4272d5f8bd5dfa0fbd6328d63f1a2"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/STATIC_VALIDATION_FINAL.txt",
+      "bytes": 1472,
+      "sha256": "e03132cc2f481d950047be94b2177efea5b4272d5f8bd5dfa0fbd6328d63f1a2"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/WORDBENCH_LOCAL_COMPATIBILITY.txt",
+      "bytes": 215,
+      "sha256": "987d228938c7fce5bff878d1de2c94e5ce3681e2696e345eacbcc73c5113da51"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/WORD_BENCH_FOCUSED_TESTS.txt",
+      "bytes": 179,
+      "sha256": "7662ff883994b47f4b839d0d2edf314f4c2286f289c26b90230620fc414aaf11"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/WORD_BENCH_REQUEST.md",
+      "bytes": 946,
+      "sha256": "c03aabc5dbc63354ae6544410afb08f1b3a269a17cf58cfd3b5a59a6f2af2ba0"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/native_gate/native_gate_summary.json",
+      "bytes": 776,
+      "sha256": "d972dc6162cb33ed40ea67dfca242507ed9188b03d9723dc03eb74dcf6aead0d"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/native_gate/static_validation.txt",
+      "bytes": 1472,
+      "sha256": "e03132cc2f481d950047be94b2177efea5b4272d5f8bd5dfa0fbd6328d63f1a2"
+    },
+    {
+      "path": "docs/morphodict/campaigns/CMP-C2-MAX-20260925/native_gate/wordbench_version.txt",
+      "bytes": 19,
+      "sha256": "b17d6665aad50b22ea3524e580b5080493eb6387ceff8196b16e410a7448da79"
+    },
+    {
+      "path": "docs/nominal/CONVERSATION6_FINALIZATION_20260925.md",
+      "bytes": 5006,
+      "sha256": "d0a71dd666455d379eb3856be7af0ae1e9cc9f3f10832bcb7c02b911e19001e9"
+    },
+    {
+      "path": "docs/nominal/FINAL_STATIC_AUDIT_20260925.md",
+      "bytes": 4243,
+      "sha256": "ee4ab4f7023f57e85fc638403e1127dd907a469589417a31865fd8cc67e14054"
+    },
+    {
+      "path": "docs/verbal/CONVERSATION4_FINAL_RC_STATUS.md",
+      "bytes": 2274,
+      "sha256": "e7b4c36a5e53ae1ad387dee2c2a44fba96e4ffce04bdd42196ec35717ac07100"
+    },
+    {
+      "path": "docs/verbal/CONVERSATION4_VERBAL_FINALIZATION_20260925.md",
+      "bytes": 10330,
+      "sha256": "cc2392db1cbd2b10e6c59bd078467ee2a8deefc78556e8f4d32a7a93f3d6e63a"
+    },
+    {
+      "path": "project.toml",
+      "bytes": 4022,
+      "sha256": "da921443a1b4688266e8b05e82985a1864ba9fb94d8aeada8eaeb24219e7933c"
+    },
+    {
+      "path": "resources/morphodict/BASELINE_LEMGRAMS_20260925.jsonl",
+      "bytes": 112789,
+      "sha256": "dbd0b7a5ecaea69289a579a6f5a0e66e015d951175fbbcf9b2466436588877cc"
+    },
+    {
+      "path": "resources/morphodict/CANDIDATES.jsonl",
+      "bytes": 1975220,
+      "sha256": "318c96995ef1915615aae40779c736de9a92587fed48d922db3576db4ff888ef"
+    },
+    {
+      "path": "resources/morphodict/EVIDENCE.jsonl",
+      "bytes": 90693,
+      "sha256": "5dbffb9398413fd67e424f6d62ff1e63983070b48713b60c3812224e41aea112"
+    },
+    {
+      "path": "resources/morphodict/LEMGRAMS.jsonl",
+      "bytes": 270501,
+      "sha256": "377e6536da19b842c99075537b1a1ba5d7862cd30f4e1a1279c493e6d04dcc9c"
+    },
+    {
+      "path": "resources/morphodict/SOURCES.yaml",
+      "bytes": 1184,
+      "sha256": "356b4c8af3378d97f8a288124988f1573f9824447a2e343d1c1b7df002be87d1"
+    },
+    {
+      "path": "resources/morphodict/SOURCE_UNIVERSE.yaml",
+      "bytes": 895,
+      "sha256": "52dc7aba8e41f56f91ce339f5ba0a06809eaa75d3eafa72251546cb07aa44ecb"
+    },
+    {
+      "path": "tools/certification/README.md",
+      "bytes": 2845,
+      "sha256": "75c1e5bd253b398ab3fd4b38c19fbf437c6ab95c2dcc1a05f1e0f2bf3bc495c8"
+    },
+    {
+      "path": "tools/certification/c10_certification.py",
+      "bytes": 12139,
+      "sha256": "880ebc68ac47d61dcf89b1382e9782431fe40b590c53f92fb598c55fade68c17"
+    },
+    {
+      "path": "tools/certification/c10lib.py",
+      "bytes": 77013,
+      "sha256": "607174b1291f0f75cd51039c66543b96d670b24ec50142a0e30051b66562ca73"
+    },
+    {
+      "path": "tools/certification/native_wordbench_static_check.py",
+      "bytes": 2820,
+      "sha256": "55605a65354efd035fecfc2328c838a9b70574ef43bafc6b3974d9a945a92bb1"
+    },
+    {
+      "path": "tools/certification/run_c10_campaign.ps1",
+      "bytes": 479,
+      "sha256": "336efce550436cf0a78324a163326f0f9a521c806254a5e634ae716e0de1ff04"
+    },
+    {
+      "path": "tools/certification/run_c10_campaign.sh",
+      "bytes": 429,
+      "sha256": "14d1f45909a0ff8e8f3fff64db7535b5ae14d810763697c1179004f209b342fe"
+    },
+    {
+      "path": "tools/certification/run_external_wordbench.py",
+      "bytes": 4640,
+      "sha256": "d76b53054f48cfdce2fad083443ec47e7167d28c43fbff5bd33b703dd65ced68"
+    },
+    {
+      "path": "tools/certification/tests/test_c10lib.py",
+      "bytes": 8538,
+      "sha256": "13743693afc14e5169121df217b7bb825742eb3eb9de85222c5e7bbda701b55d"
+    },
+    {
+      "path": "tools/morphodict/build_morphodict_max.py",
+      "bytes": 36715,
+      "sha256": "b47e408ff056eaaf69cd4ee8daa01aab11782d6a41328c493c77d120da79e0b1"
+    },
+    {
+      "path": "tools/morphodict/compute_table_signatures.py",
+      "bytes": 2036,
+      "sha256": "80caf9ef9497733cf5f1906f7e42f3526aca8d5aca433820ab8b200d8c0b56a3"
+    },
+    {
+      "path": "tools/morphodict/generate_introspection_request.py",
+      "bytes": 757,
+      "sha256": "38614206168e7bf338e486398b35de7dba2db217fc898230e5bcb048f7bc9e1b"
+    },
+    {
+      "path": "tools/morphodict/map_tosk_features.py",
+      "bytes": 4494,
+      "sha256": "79c716ddc0bd3cb882a4cc2fe520e3017340141770c1c5875466e05dc2ceb970"
+    },
+    {
+      "path": "tools/morphodict/morpho_static.py",
+      "bytes": 16156,
+      "sha256": "2e864a87c647acce3353b9303888882b908fae309f45d486c7aa24b1205ac6ec"
+    },
+    {
+      "path": "tools/morphodict/run_native_certification.py",
+      "bytes": 6139,
+      "sha256": "16cc0925029a7e6a64819c8b38fe18190ab7375091a77c936531daa2721a3a4b"
+    },
+    {
+      "path": "validation/CAMPAIGN_MANIFEST.csv",
+      "bytes": 61349,
+      "sha256": "12aae2c6a2521a7954127ebef30cdf3f3b44cfdb1304d14b41d73ed6a2e06fab"
+    },
+    {
+      "path": "validation/c5/C5_API_PARITY_REGISTRY.tsv",
+      "bytes": 2186,
+      "sha256": "036b08f19649274132b30bfb6eb0a4e524fee9e2aa96bd6569fa6172a5c009a3"
+    },
+    {
+      "path": "validation/c5/C5_PREPOSITION_REGISTRY.tsv",
+      "bytes": 685,
+      "sha256": "5124f4f60737708bd5b004f4001760fe6af6e523ea3215d48a8e7856361fe529"
+    },
+    {
+      "path": "validation/c5/C5_REFERENCE_EXPECTATIONS.tsv",
+      "bytes": 14971,
+      "sha256": "2832dae46fecf9e48c694ee51c5353cc10716eedbc47470636b2d75748e3b57d"
+    },
+    {
+      "path": "validation/c5/C5_STATIC_VALIDATION.txt",
+      "bytes": 11627,
+      "sha256": "874b7186a1beac2022e9de9b5e63a3a63b8c62295c5265d7e26d6dbe117f29bc"
+    },
+    {
+      "path": "validation/c5/C5_STRUCTURAL_PREPOSITION_REGISTRY.tsv",
+      "bytes": 2207,
+      "sha256": "d6f58f3ba0d1beeb57a5db7f5f02906c3680f7a96def1fe44d14f28cf4d74658"
+    },
+    {
+      "path": "validation/c5/C5_VALIDATION_MANIFEST.json",
+      "bytes": 1191,
+      "sha256": "3cc4dc939ed929b20ebdb086230d6196450b53a6a0ce48a664cda0c0fb3920cf"
+    },
+    {
+      "path": "validation/c5/DICT_MORPH_COMBINED_VALIDATION.txt",
+      "bytes": 1137,
+      "sha256": "dfbd26ffe98a36586f116e457491cb6de26824d148ee5d014b5d0247e4244b60"
+    },
+    {
+      "path": "validation/c5/DICT_STATIC_VALIDATION.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "validation/c5/MORPHODICT_STATIC_VALIDATION.txt",
+      "bytes": 595,
+      "sha256": "d4d2b75b1e5aa48df6e04faf55c996b32fbff9ebba23aa8b0ac95eae30421f1b"
+    },
+    {
+      "path": "validation/c5/MORPHOSQI_LINT.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "validation/c5/static_validate_c5.py",
+      "bytes": 10013,
+      "sha256": "6d54e1cf374868eae061ac92279ea8e7d70f0b3bfd6fcf0cdb2ea9162f890bfe"
+    },
+    {
+      "path": "validation/c9/README.md",
+      "bytes": 1024,
+      "sha256": "2ef81069b36e36b12fd75c161a15e81b01a2fd76da18f01d812c7a5d1a0ed93a"
+    },
+    {
+      "path": "validation/c9/api/AlbC9PublicAPISmoke.gf",
+      "bytes": 277,
+      "sha256": "1a7c02c981d63aaeb899e9ba664363208195ec4b43fa1b777898a378ea5dbeb0"
+    },
+    {
+      "path": "validation/c9/api/AlbC9PublicAPISmokeSqi.gf",
+      "bytes": 1372,
+      "sha256": "69edaf897eacd67cf06ee366879a17c914b156d4ef72bd01c4b91f6cf4b0da5f"
+    },
+    {
+      "path": "validation/c9/api/README.md",
+      "bytes": 621,
+      "sha256": "0a6f6f14dd1c0adff80789b0d1ac41935ff006da2e3d8b4eb8a964ca175de858"
+    },
+    {
+      "path": "validation/c9/api/c9-public-api-smoke.gfs",
+      "bytes": 448,
+      "sha256": "32d4fa5f216ab3c7fb4b894289c1c993c751d7d6640b600c8ffb8370dabb9681"
+    },
+    {
+      "path": "validation/c9/inputs/AlbC9ResourceSmoke.gf",
+      "bytes": 578,
+      "sha256": "631fe934a01de2b30180b9678b4496d5c625412419d1335eac4e1d14c4fa861b"
+    },
+    {
+      "path": "validation/c9/inputs/AlbC9ResourceSmokeSqi.gf",
+      "bytes": 2573,
+      "sha256": "b4f9913681ac4c747d119ee2e695983544003678e5bdcaf472711ea758bf0636"
+    },
+    {
+      "path": "validation/c9/release/AlbC9ReleaseSurfaceSmoke.gf",
+      "bytes": 128,
+      "sha256": "fc4e09cf3911343044b617d1cd39f224727e43ead1f844f6b800efc6ab485743"
+    },
+    {
+      "path": "validation/c9/release/AlbC9ReleaseSurfaceSmokeSqi.gf",
+      "bytes": 340,
+      "sha256": "817770c8cfd6a40f4736342907e6a2c3146bc973bff31b7afc137e3bbb9e37d9"
+    },
+    {
+      "path": "validation/c9/release/README.md",
+      "bytes": 523,
+      "sha256": "8c56e027f2dbb44628b169662b1222e2e282aa10df06a0f6665e80ce0b2499eb"
+    },
+    {
+      "path": "validation/c9/release/c9-release-surface-smoke.gfs",
+      "bytes": 989,
+      "sha256": "7cb9b58d6d6f38452d777fd5782ae97d32a6dc59e4290a969bc63a54bf75bd4f"
+    },
+    {
+      "path": "validation/c9/reports/STATIC_VALIDATION.json",
+      "bytes": 366,
+      "sha256": "f3c5642c32e1bb9120566a8c0edec4fb453efa6af84b292bec29fa1e5b5c3fe0"
+    },
+    {
+      "path": "validation/c9/reports/STATIC_VALIDATION.txt",
+      "bytes": 594,
+      "sha256": "873ff1781b1daaee3f8459ed1980e2b4c1460e8a6f190e02bbc3391db03c0ad4"
+    },
+    {
+      "path": "validation/c9/scripts/c9-resource-smoke.gfs",
+      "bytes": 1232,
+      "sha256": "d127f2bea2e4c6fe6bdf80621d8135a72cbcff345ddd8116b94969b19f207d21"
+    },
+    {
+      "path": "validation/c9/static_validate_c9.py",
+      "bytes": 10542,
+      "sha256": "6d3133a77640412f8e26f8776c76979af2e886455e4d42a1a05954f266353f41"
+    },
+    {
+      "path": "validation/certification/FINAL_DELTA_MANIFEST.json",
+      "bytes": 16573,
+      "sha256": "6fe785002729c1a5cb123a530bc4df3fe6613ff4f582d0f9a0ed45e56b0a1059"
+    },
+    {
+      "path": "validation/certification/README.md",
+      "bytes": 4448,
+      "sha256": "9038a649f7d29441baa124bb6c55267bf9a5da8749cc36866520cb64fe0e52b9"
+    },
+    {
+      "path": "validation/certification/VALIDATION_REPORT.md",
+      "bytes": 2726,
+      "sha256": "36bdb4823c06266a868745b1c5f3d6dcfcf69df4d366b6c6b7007e748273a9e8"
+    },
+    {
+      "path": "validation/certification/WORKING_TREE_LOCK.txt",
+      "bytes": 65,
+      "sha256": "9cce2d33e1915d813fa10c7dd26a8219f33b2b9056a3b8e4f3b5fe85731c97b3"
+    },
+    {
+      "path": "validation/certification/bugs/BUG_HANDOFF_TEMPLATE.md",
+      "bytes": 556,
+      "sha256": "c9bf08cb292b4e9e79cdf439113f794587c437fe31563c76809c1fca6ae12d6d"
+    },
+    {
+      "path": "validation/certification/bugs/HANDOFF_INDEX.tsv",
+      "bytes": 101,
+      "sha256": "0a235cf2135eb1742e11dafbcf8cf9177ef159ecee31cc4f99f3871c34a023ba"
+    },
+    {
+      "path": "validation/certification/c10_bootstrap_final.txt",
+      "bytes": 160,
+      "sha256": "c2fd8e069886dfa63ba3f3366bbcd246f979581ff3fdac5faab8db00f61560a9"
+    },
+    {
+      "path": "validation/certification/c10_lint_final.txt",
+      "bytes": 59,
+      "sha256": "ec9edbb01bf10b5660a030b3e2e563b6a578937195e848c8c3d91ad57fd61210"
+    },
+    {
+      "path": "validation/certification/c10_unit_tests_final.txt",
+      "bytes": 1729,
+      "sha256": "d34170754c793b4ecebfd911fe0e2834e795b783ba2fcb3061e64d5587bdae0f"
+    },
+    {
+      "path": "validation/certification/campaigns/g1/case_ledger.tsv",
+      "bytes": 139494,
+      "sha256": "09448e62e9355111e57de773728f201d4dbd4690ed5b88d7440bdb4970358879"
+    },
+    {
+      "path": "validation/certification/campaigns/g1/manifest.json",
+      "bytes": 1396,
+      "sha256": "75d09ac7aa1b8bd5071ebb9e5455f7741023ef0a6424cc4485bf08b38d76dc8f"
+    },
+    {
+      "path": "validation/certification/campaigns/g2/case_ledger.tsv",
+      "bytes": 1123283,
+      "sha256": "5dc877370d09ac1b945247f0ec9d21ed787d70bb9386bffbed7c17ddb3b8ff7b"
+    },
+    {
+      "path": "validation/certification/campaigns/g2/manifest.json",
+      "bytes": 1928,
+      "sha256": "b7953723801de3d22cbde87592db2ccc48d282cf5a7f7212443a3546e449a8b9"
+    },
+    {
+      "path": "validation/certification/campaigns/g3/case_ledger.tsv",
+      "bytes": 5232145,
+      "sha256": "cb325b4202bd1d498d02bff87e3551e9780b165e1074d744d945bfad6d0be622"
+    },
+    {
+      "path": "validation/certification/campaigns/g3/manifest.json",
+      "bytes": 3609,
+      "sha256": "b2ee64e9cda19e82e44a418f430d1213b44e20716091605936265198456fdbbc"
+    },
+    {
+      "path": "validation/certification/core_source_preservation_final.json",
+      "bytes": 297,
+      "sha256": "a4af5e0b17ec2952a29a8b0cb2739834cd9ffb57a32e5c5258bdcaa713b6a62a"
+    },
+    {
+      "path": "validation/certification/coverage/coverage_by_abstract_function.csv",
+      "bytes": 19846,
+      "sha256": "754bd7a046c1a75b951cda38c80dd3346c2c396a4e6a27b369acbb11c7889357"
+    },
+    {
+      "path": "validation/certification/coverage/coverage_by_category.csv",
+      "bytes": 839,
+      "sha256": "126716b63e63f56d1ce02df284ba10053e664a53e8d10e50fa3248d80635b960"
+    },
+    {
+      "path": "validation/certification/coverage/coverage_by_phenomenon.csv",
+      "bytes": 514,
+      "sha256": "6056496cc92249add83bb65be2687579fbd9b31a31c8479aaf207b60ff1010e5"
+    },
+    {
+      "path": "validation/certification/coverage/coverage_morphology_cells.csv",
+      "bytes": 29065,
+      "sha256": "00c6b7199205f96d604d8e4c7d77d59cb1c3fbb004a18c33139e3d7b8ebd85f4"
+    },
+    {
+      "path": "validation/certification/coverage/coverage_summary.md",
+      "bytes": 45128,
+      "sha256": "cdbe7379e24866f513af5d8e90efae1056572302e8bc7e562f51d95008c1319e"
+    },
+    {
+      "path": "validation/certification/coverage/paradigm_registry.csv",
+      "bytes": 10966,
+      "sha256": "bd164662992d42945f905deb72200a314310dcd47e337e857b2a123170fe9141"
+    },
+    {
+      "path": "validation/certification/dashboard/CURRENT.json",
+      "bytes": 1778,
+      "sha256": "65945a9a952094ef3702a5608fad62b3451fd38b982da36099c1f154e6270a93"
+    },
+    {
+      "path": "validation/certification/dashboard/CURRENT.md",
+      "bytes": 1257,
+      "sha256": "2495920c72174feef564575eb1fd1c2bdbf210aada1fecb7905b86a804ba1f8b"
+    },
+    {
+      "path": "validation/certification/dashboard/LINT.json",
+      "bytes": 722,
+      "sha256": "ff2b035fc248274325f5e256e4ff571454ec297e93ac38b05a55b30ee7616f88"
+    },
+    {
+      "path": "validation/certification/decisions/C10-DEC-001_CAMPAIGN_MATERIALIZATION.md",
+      "bytes": 710,
+      "sha256": "7db7ecf8bae2796d7cd40a8cf45d576d0be52aaaf2750eaf72ab05fdb5acfd50"
+    },
+    {
+      "path": "validation/certification/decisions/C10-DEC-002_GOLD_PROMOTION.md",
+      "bytes": 431,
+      "sha256": "c2c5b06cd0c333f708e8ae72f46937deec714a68d752813d735be45a1dcda0f0"
+    },
+    {
+      "path": "validation/certification/dict_morph_static_final.txt",
+      "bytes": 1137,
+      "sha256": "dfbd26ffe98a36586f116e457491cb6de26824d148ee5d014b5d0247e4244b60"
+    },
+    {
+      "path": "validation/certification/dict_static_final.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "validation/certification/evidence/LINGUISTIC_REFERENCE_INDEX.md",
+      "bytes": 4547,
+      "sha256": "054aa8ac8d29c0bb4f8d36fccbe1bc4a5d4fa85684823a664640cafada9389d7"
+    },
+    {
+      "path": "validation/certification/evidence/accepted_claims.tsv",
+      "bytes": 1006,
+      "sha256": "d0b9fc66bc93f7288289a1ff9c0ca71ea704b240adcb806600718f08330830cc"
+    },
+    {
+      "path": "validation/certification/evidence/g1_case_evidence_candidates.tsv",
+      "bytes": 61609,
+      "sha256": "0fdebc8b3a5584c18020813836be2f8dbe3b66515a5e3a4a2720dccd1ad5d418"
+    },
+    {
+      "path": "validation/certification/evidence/lexical_provenance_anchors.tsv",
+      "bytes": 9811,
+      "sha256": "8a9e39ec03677c25e70067a13361473846c1c702d280d71ae4c68ee433a6a832"
+    },
+    {
+      "path": "validation/certification/evidence/linguistic_reference_claims.tsv",
+      "bytes": 9965,
+      "sha256": "8187e6e5b308eca2e168e0fcc08e0731859cba24bb05385f03c7b6a92e7b3f59"
+    },
+    {
+      "path": "validation/certification/evidence/linguistic_reference_manifest.json",
+      "bytes": 1695,
+      "sha256": "576158f27f172e1c80e0e2b73542110c57adce4ca303bd6add0569bff72b3706"
+    },
+    {
+      "path": "validation/certification/evidence/owner_routing.json",
+      "bytes": 1315,
+      "sha256": "0adbd9e1231a37dc45ffdf9d1caa8fac69f70d517c57e358bd0c1e091452475c"
+    },
+    {
+      "path": "validation/certification/evidence/source_registry.json",
+      "bytes": 1600,
+      "sha256": "0ddeadd8a819deb07f95f0efff549b5004d67a30438f4c64f837331f30d736de"
+    },
+    {
+      "path": "validation/certification/external_runner_g1_dryrun.txt",
+      "bytes": 1759,
+      "sha256": "56660ece27bc57d81104c901454fed48d4d7235c718ab1a2126d5481f3ba2fe0"
+    },
+    {
+      "path": "validation/certification/external_runner_g2_dryrun.txt",
+      "bytes": 2366,
+      "sha256": "ef7f027d3d8e1469cec8decc1850dc84b6b27b7830364dd444824397d56a9335"
+    },
+    {
+      "path": "validation/certification/external_runner_g3_dryrun.txt",
+      "bytes": 4287,
+      "sha256": "0c089302cc5497b4778c51120a441453402b66d264f79d41bc9ba3be927bb762"
+    },
+    {
+      "path": "validation/certification/morphodict_static_final.txt",
+      "bytes": 595,
+      "sha256": "d4d2b75b1e5aa48df6e04faf55c996b32fbff9ebba23aa8b0ac95eae30421f1b"
+    },
+    {
+      "path": "validation/certification/morphosqi_lint_final.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "validation/certification/native_wordbench_language_probe.txt",
+      "bytes": 774,
+      "sha256": "b55cc9154b13423c00883d7a2a762dfb0df69b1d93730cd3a69fac7f7344627d"
+    },
+    {
+      "path": "validation/certification/native_wordbench_project_check.txt",
+      "bytes": 199,
+      "sha256": "819734a104d60b64c5eda6302a5bfac1bd1ea92dc6213fcd46e84729dad85c82"
+    },
+    {
+      "path": "validation/certification/native_wordbench_scenarios_check.txt",
+      "bytes": 73,
+      "sha256": "a2b3742b5fc2b6e0fe109eb7efdf3a4cf5ad5c954f44707bf4d887026e2d08e2"
+    },
+    {
+      "path": "validation/certification/native_wordbench_static_check.json",
+      "bytes": 404,
+      "sha256": "f8a250103344fc66faa3227c7e77038ef40ca05b94926b47f30e5a4a18347078"
+    },
+    {
+      "path": "validation/certification/native_wordbench_static_check.txt",
+      "bytes": 404,
+      "sha256": "f8a250103344fc66faa3227c7e77038ef40ca05b94926b47f30e5a4a18347078"
+    },
+    {
+      "path": "validation/certification/parity/english_benchmark.json",
+      "bytes": 1155,
+      "sha256": "97fb588d0e1b8689ef3eefb1dbd26d6ff3bb61fea5bb51cb99883bfd4867f0df"
+    },
+    {
+      "path": "validation/certification/parity/english_parity.md",
+      "bytes": 4432,
+      "sha256": "1bc2726f4ff908f958dfe9dc66a6516c82250322db601dfc69e2cee70eed79e3"
+    },
+    {
+      "path": "validation/certification/parity/english_parity_functions.csv",
+      "bytes": 105014,
+      "sha256": "8d2cc155ed94e3e89430d8e8b116e57b0dcaee7268677b032575aae75cfff775"
+    },
+    {
+      "path": "validation/certification/parity/module_parity.csv",
+      "bytes": 4528,
+      "sha256": "b06d32ec0b3a949a192e27e702eb3c2fbb55827c7d6ae6ff1dac3dfbd7bdb2ca"
+    },
+    {
+      "path": "validation/certification/release/CURRENT_RELEASE_PACKET.json",
+      "bytes": 1850,
+      "sha256": "4e001be914ef43e41735f1f912cbf1ad7916cb290bd874a0c7a176d2be94ae3e"
+    },
+    {
+      "path": "validation/certification/release/CURRENT_RELEASE_PACKET.md",
+      "bytes": 1493,
+      "sha256": "ecc372d32f56f7defdfb79fe597cc63b6df3e1c206c985bfbd09c283d942d594"
+    },
+    {
+      "path": "validation/certification/reviews/g1_effective.tsv",
+      "bytes": 139494,
+      "sha256": "09448e62e9355111e57de773728f201d4dbd4690ed5b88d7440bdb4970358879"
+    },
+    {
+      "path": "validation/certification/reviews/g2_effective.tsv",
+      "bytes": 1123283,
+      "sha256": "5dc877370d09ac1b945247f0ec9d21ed787d70bb9386bffbed7c17ddb3b8ff7b"
+    },
+    {
+      "path": "validation/certification/reviews/g3_effective.tsv",
+      "bytes": 5232145,
+      "sha256": "cb325b4202bd1d498d02bff87e3551e9780b165e1074d744d945bfad6d0be622"
+    },
+    {
+      "path": "validation/certification/schemas/bug_handoff.schema.json",
+      "bytes": 1151,
+      "sha256": "2bc4a9f49c5ce20d7cd06d87476691028c955107f63e1b14c89798de419bd610"
+    },
+    {
+      "path": "validation/certification/schemas/campaign_manifest.schema.json",
+      "bytes": 667,
+      "sha256": "d568a6cc602177480d588675038ff653a1db7457c2a16c85bf0ab763d80f2812"
+    },
+    {
+      "path": "validation/certification/schemas/case_review.schema.json",
+      "bytes": 1313,
+      "sha256": "7d78bfe691ad0719f5791963ddcaa594743c7826a0d9c9966c7482f8005cfc3d"
+    },
+    {
+      "path": "validation/certification/schemas/gold_promotion.schema.json",
+      "bytes": 990,
+      "sha256": "67ad7079e84ee2d0930dc4e8ece5d0aad4fcfd99fe509a8f89053412904148d5"
+    },
+    {
+      "path": "validation/certification/schemas/recorded_review_manifest.schema.json",
+      "bytes": 698,
+      "sha256": "cf2420cfe6df0d2020c58baef695c5d3d5af3b81328f5ec5173055fa69751672"
+    },
+    {
+      "path": "validation/certification/schemas/release_packet.schema.json",
+      "bytes": 929,
+      "sha256": "622f51095af32690f4ec0e1e7de1069f2cffd4461611b8b1ef176a45578d33f7"
+    },
+    {
+      "path": "validation/certification/schemas/structural_evidence.schema.json",
+      "bytes": 1049,
+      "sha256": "dd6fba83c4fe06815db1b785af6fa5f357c1f730c741e6ec0d4843e6c600bdf8"
+    },
+    {
+      "path": "validation/certification/supplied_source_hashes_final.txt",
+      "bytes": 240,
+      "sha256": "39e666452de0d40189e68b2051760997e770909839eb0157b062b9ebf354481c"
+    },
+    {
+      "path": "validation/clause/C07_FINAL_GATE_STATUS.json",
+      "bytes": 2909,
+      "sha256": "9085aa6ccb7f167a09c4093ac0b862b9c1381d6f78c7f76ef5921693dc862ac1"
+    },
+    {
+      "path": "validation/clause/DICT_MORPH_STATIC_VALIDATION.txt",
+      "bytes": 1132,
+      "sha256": "de96dfc6261304ee042436cf6d7386bb9ecb4836dce972fda4dc196811df5397"
+    },
+    {
+      "path": "validation/clause/DICT_MORPH_STATIC_VALIDATION_FINALMAX.txt",
+      "bytes": 1137,
+      "sha256": "dfbd26ffe98a36586f116e457491cb6de26824d148ee5d014b5d0247e4244b60"
+    },
+    {
+      "path": "validation/clause/DICT_VALIDATION.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "validation/clause/DICT_VALIDATION_FINALMAX.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "validation/clause/DIFF_CHECK.txt",
+      "bytes": 166,
+      "sha256": "0206b4230a41f2299a06baf13491685294d14e4672d0487987d7b7c2c41fa642"
+    },
+    {
+      "path": "validation/clause/MORPHODICT_VALIDATION.txt",
+      "bytes": 590,
+      "sha256": "ded28a7b950fb2e24dd22911439fdcc8870f936b689a68facffd84de573fae22"
+    },
+    {
+      "path": "validation/clause/MORPHODICT_VALIDATION_FINALMAX.txt",
+      "bytes": 595,
+      "sha256": "d4d2b75b1e5aa48df6e04faf55c996b32fbff9ebba23aa8b0ac95eae30421f1b"
+    },
+    {
+      "path": "validation/clause/MORPHOSQI_LINT.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "validation/clause/MORPHOSQI_LINT_FINALMAX.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "validation/clause/PYTHON_COMPILEALL.txt",
+      "bytes": 24,
+      "sha256": "85b17dc2a035608933febc0191550e42fd4e7fef2c8639157459cb207579c0f7"
+    },
+    {
+      "path": "validation/clause/PYTHON_COMPILEALL_FINALMAX.txt",
+      "bytes": 41,
+      "sha256": "6233f62c99a7836c1729a69e9c38d18a8744d283d888d98b432674b832ece1ed"
+    },
+    {
+      "path": "validation/clause/STATIC_VALIDATION.txt",
+      "bytes": 350,
+      "sha256": "ec06e6fd5f128296c32fb4d4063893f8f812670d6e2eb773cbc766922f4b05fe"
+    },
+    {
+      "path": "validation/clause/STATIC_VALIDATION_FINALMAX.txt",
+      "bytes": 350,
+      "sha256": "ec06e6fd5f128296c32fb4d4063893f8f812670d6e2eb773cbc766922f4b05fe"
+    },
+    {
+      "path": "validation/clause/WORDBENCH_BASELINE_PROJECT_CHECK.txt",
+      "bytes": 2668,
+      "sha256": "bb3eaf247ff86f54134920e89e34283c6e0be8534ab945462b6c7acde301e901"
+    },
+    {
+      "path": "validation/clause/WORDBENCH_CANDIDATE_PROJECT_CHECK.txt",
+      "bytes": 2678,
+      "sha256": "ddc64b025ceeda173f8b881c03fec3f504bcdb14cd3aa4bba8ebaca283f307eb"
+    },
+    {
+      "path": "validation/clause/WORDBENCH_LANGUAGE_PROBE_FINALMAX.txt",
+      "bytes": 774,
+      "sha256": "acf431dc5c5c20c55477cf5137100af22886051158837aeea63c061fcfe31718"
+    },
+    {
+      "path": "validation/clause/WORDBENCH_PROFILE_CHECK_NOTE.md",
+      "bytes": 1384,
+      "sha256": "6be694667e65a4dfd8958cb0589200543e58f927f25a3e09da565536c70d5c31"
+    },
+    {
+      "path": "validation/clause/WORDBENCH_SCENARIO_CONTRACT_DIRECT.txt",
+      "bytes": 2338,
+      "sha256": "19762983221cb675068a30463a43799e67f0a9f3eb25deee60455d09fe15105f"
+    },
+    {
+      "path": "validation/clause/static_validate_clause.py",
+      "bytes": 7589,
+      "sha256": "de3668d70808b2b07b1be3149e8b98a377f8ae0fcc5b2cf09e364b3c72b470b2"
+    },
+    {
+      "path": "validation/clause/wordbench_static_58/compendium_matrix.json",
+      "bytes": 1573,
+      "sha256": "1e7655726a5fcf314613024d41f4cb28048150c3ce17bcd8f42e8a215595f2a5"
+    },
+    {
+      "path": "validation/clause/wordbench_static_58/global_scan.csv",
+      "bytes": 11357,
+      "sha256": "ca6a6779f9bc56741f82de77adc65505bfd41a93d1566e67f7b31c8cc5de1432"
+    },
+    {
+      "path": "validation/clause/wordbench_static_58/global_scan.json",
+      "bytes": 42459,
+      "sha256": "068c5b6e16a0f970155fa543bee0477d61a1d703fa8b5a5929ea07796c011c73"
+    },
+    {
+      "path": "validation/clause/wordbench_static_58/rgl_coverage.json",
+      "bytes": 2488,
+      "sha256": "9c9dd3a36ec0a769cd898198ada791fba31f45c4145ae9cae4892e8f56211377"
+    },
+    {
+      "path": "validation/clause/wordbench_static_58/source_lock.json",
+      "bytes": 9767,
+      "sha256": "a3fea428288892f679a2b5a316b09a7a2b3286359c4bd59b79da8763fe3a440d"
+    },
+    {
+      "path": "validation/clause/wordbench_static_58/summary.md",
+      "bytes": 8731,
+      "sha256": "202165a1d27b993c79e57ff2f7e20637803ace18c648f250365c3cc341f42239"
+    },
+    {
+      "path": "validation/consolidation/static_validate_consolidation.py",
+      "bytes": 6591,
+      "sha256": "da81d21fdf0fe8fb7856b19b61b326d52997e98d2271f79939e0df0f07eeeae4"
+    },
+    {
+      "path": "validation/gold/README.md",
+      "bytes": 370,
+      "sha256": "6eb88c387bd1cfd116aa4e1e559293410044813aecdc4328e6050c94a83de963"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3001.gf",
+      "bytes": 5797,
+      "sha256": "648194683ca092edc8d10b942545af32506870ab02e6d41f91639f478695f1e8"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3001Sqi.gf",
+      "bytes": 13984,
+      "sha256": "d3ab006222af8fc61d2b5006fcc56d8dd7fa22ba335199f96de5c36de572df89"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3002.gf",
+      "bytes": 5797,
+      "sha256": "366067cda1781bfa0b6947f73890809777f38bb6c09797e3923dfceae7470677"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3002Sqi.gf",
+      "bytes": 14118,
+      "sha256": "92b9090f94f88dbe1a3bc1abd99fd8930f3034f277cb2801a614ac1f5735cfb4"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3003.gf",
+      "bytes": 5797,
+      "sha256": "03bce5e4587ef7132a8601b058916becfd4109426bffacc79bb85d6c28d443f0"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3003Sqi.gf",
+      "bytes": 14304,
+      "sha256": "4fb21b811ca50bfb9296b1809e8ec18e8b1bcf01b059ffc9c8d60709c6f08c54"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3004.gf",
+      "bytes": 5797,
+      "sha256": "fd6f5eb6457757f40db8c06ad9fd731149c01756681c57152302e8b4393c1cc9"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3004Sqi.gf",
+      "bytes": 14094,
+      "sha256": "c1215811486c1700bd58ad8a0f3a9816079dab2984f8bfcb9de6b5ce76c63db7"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3005.gf",
+      "bytes": 5797,
+      "sha256": "92badcad12200089eb5392e7c65980a278cb51fba967f38e36ac29b32d8e6a70"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3005Sqi.gf",
+      "bytes": 14050,
+      "sha256": "f1cf7ff607db9ef9db97d6fb1ddc933d71befddb00511da3ab17f38a42a0a96e"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3006.gf",
+      "bytes": 5797,
+      "sha256": "0ec09e6af3ede8bd3492b68b7cdb6acc17806349ca846599e39ded979033ca22"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3006Sqi.gf",
+      "bytes": 14262,
+      "sha256": "2dbcae57cce91514a0af9c79d021c7eceb60e1a31d12b7ef1e2ab61f7786a78a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3007.gf",
+      "bytes": 5797,
+      "sha256": "1e9219aff2687a6854908f30c17b32ece454ac48667da44263a04c81ce371ad4"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3007Sqi.gf",
+      "bytes": 14092,
+      "sha256": "1c808137d26673242e9bee706d5e7b6fdde0c5866e7c067d2dac560f8a925490"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3008.gf",
+      "bytes": 5797,
+      "sha256": "24bff961164e66ad509d69bc8ae9073cd359a147b5f42b6ba136d726a6444955"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3008Sqi.gf",
+      "bytes": 14168,
+      "sha256": "b4228ed18dc4319e1d6f0f4fc3258dea02e6e28784d00a581dbafb0b146d6b2a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3009.gf",
+      "bytes": 5797,
+      "sha256": "c0145363594e27d5c1a06464689dea9e6fad258ebcbb8144de974809d93c8bb1"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3009Sqi.gf",
+      "bytes": 14234,
+      "sha256": "33a20a7c815b7b842a8c8cd1f404f63635e71a797d21c14bcfa1c4851602fc50"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3010.gf",
+      "bytes": 5797,
+      "sha256": "4d4d834a1bf284d71c3e5664583e5da240e368736f51fd78344a50f9135f61f6"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3010Sqi.gf",
+      "bytes": 14114,
+      "sha256": "b992fa555989cb07aa5dcf329e2e6be9edb2d00212d535af22c4a668921b751a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3011.gf",
+      "bytes": 5797,
+      "sha256": "79cb91fa0e5289b56fb089ee980d25e6febf9ba3413991525058dec4ac73445b"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3011Sqi.gf",
+      "bytes": 14130,
+      "sha256": "3f8b7c846f8b9d1fc577bc1d5dab0a3f495ba94fc3630079b8865e4fd41b6feb"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3012.gf",
+      "bytes": 5797,
+      "sha256": "16bdb7ee660630c454861305b985788fb7a7acd4c42fc848e7f137b0f679ecc3"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3012Sqi.gf",
+      "bytes": 14150,
+      "sha256": "8fd46b0b13c5c8608ab605416fd992216508758eb088f7002d63514cdf2f5c5a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3013.gf",
+      "bytes": 5797,
+      "sha256": "55ea82894d273e3c47e193fe15543f88d2e87e6da54a9009bdf601ad209725e8"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3013Sqi.gf",
+      "bytes": 14340,
+      "sha256": "c6b42dc7fa280903498a9c931c90573e8a7e296f6ecd26e1b157653dc65487f7"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3014.gf",
+      "bytes": 5797,
+      "sha256": "e7cc171c5a3c41a34df0d7fd6a1e4d5fdf18b7287371d4c95ebf826db64ab583"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3014Sqi.gf",
+      "bytes": 14040,
+      "sha256": "fcb68081cc6bd28d0b78854ef6efccd0df1368137b4507e694a3956f5cf1cae1"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3015.gf",
+      "bytes": 5797,
+      "sha256": "6dda568248d37d401255e31a0d10f4f7043b7b610e387cb541bd463bcbfc30a9"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3015Sqi.gf",
+      "bytes": 15612,
+      "sha256": "df09b5a260cdea12e778b93f2d9ebe84261f0cb97d652cadcd328fab4abfcd3f"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3016.gf",
+      "bytes": 5797,
+      "sha256": "bcb4191230fd667dd8e22a118d6a7982f1d00ad6037ec32595b2b462d29480a2"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3016Sqi.gf",
+      "bytes": 16445,
+      "sha256": "f627c03705639c9bb65ee6f070b3b63aa04df5fc681865d79454c68cf87f3bb5"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3017.gf",
+      "bytes": 5797,
+      "sha256": "fb00b745f29a7eda0e2344b2e664e93b2b9e0b7268fcd333af22c736fe3a13f9"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3017Sqi.gf",
+      "bytes": 16736,
+      "sha256": "1d86e13e59558ad5bdc7dba882b3cc41685cd0270eee4c9cdcfae7e4e6e95dec"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3018.gf",
+      "bytes": 5797,
+      "sha256": "7a9674da41edf2ce6b966828c235a3c93fb2f51d00757ab80e375de1c8c6599f"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3018Sqi.gf",
+      "bytes": 16317,
+      "sha256": "5e9ad70ee568169a9bb3d9c92cbd1603cd6195b0e947653611f567dd6562efab"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3019.gf",
+      "bytes": 5797,
+      "sha256": "93432bcffcee4456b5eaa1aaf7a9ab9e17b9694d7633b514b8fef5dde4a99522"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3019Sqi.gf",
+      "bytes": 16626,
+      "sha256": "7ebeba6a2c526678e51526be3b4e0b8512aeaa5e4690285950d3625a405e3b4e"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3020.gf",
+      "bytes": 5797,
+      "sha256": "adc8645c45f0182f3b941332ebb614a0d941e610d6f668c2d40f046427a15c1a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3020Sqi.gf",
+      "bytes": 16520,
+      "sha256": "d6f6db67de23b70d7b88eafff0c93423b900d5b80fcc3ab1ae7422f0f6aaebb2"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3021.gf",
+      "bytes": 5797,
+      "sha256": "d7c3b2b262432a0e6886e234668ebd5a6f99c7c5e5dc490748acc1f493231c26"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3021Sqi.gf",
+      "bytes": 16373,
+      "sha256": "834f6241c22173f740bd910d524017fbb206e2e88c821bcb718a89a352546c43"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3022.gf",
+      "bytes": 5797,
+      "sha256": "817c9c721346b79fcd85b57851b4e55dc35ee2d8579fc78fd6d32b8210b42a3f"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3022Sqi.gf",
+      "bytes": 16431,
+      "sha256": "9b988297c41a0c8777bb558453b262416e9dfdb53cf2cf5ded56f61ac23aea1b"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3023.gf",
+      "bytes": 5797,
+      "sha256": "aed5ccb44f68914a3104a4f323f345e3fbd0493716ed7edbd62ec9f6492d6a11"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3023Sqi.gf",
+      "bytes": 16611,
+      "sha256": "82aae0f37912adccc43a6c2b049304bc8ac7f90b196cca72e44c48733d756964"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3024.gf",
+      "bytes": 5797,
+      "sha256": "eca955442e91f5c61777a0fd0d299a7e7a6be5dc71839ae9d0c350e2342281d8"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3024Sqi.gf",
+      "bytes": 16525,
+      "sha256": "d88ff08cb665a5a40843a4f22d35c26a6959584a57cb93b30e7995729474beb9"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3025.gf",
+      "bytes": 5797,
+      "sha256": "246947063844cfae556af4401e099b9c2fd6edb50d246488d1d901f80be445fb"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3025Sqi.gf",
+      "bytes": 16783,
+      "sha256": "243135d6c8dc86a828273600531a4a606f99b13288d302d8c25a547d0035c330"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3026.gf",
+      "bytes": 5797,
+      "sha256": "f3ec70f3b988f5c3b94be538b5c12adbbbee95dbdf879f7335065b141e70b315"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3026Sqi.gf",
+      "bytes": 16212,
+      "sha256": "3ef8579c0d62af8690d1f4ce244693d00b55176f474b53d871a0c8046bc1e502"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3027.gf",
+      "bytes": 5797,
+      "sha256": "8efaf83bc8e859d229d4b63ff7f59d5a4cdcee51dd4d0b659f58532eb2467c15"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3027Sqi.gf",
+      "bytes": 16773,
+      "sha256": "754350b9658bdf9a6e6ebf603ad8724d2a160fa72345a286c6350b9685a5d223"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3028.gf",
+      "bytes": 5797,
+      "sha256": "7c4f19c78ff87bf0ef8290ebae668342604ac4269a09f13927a5e1a63361d6da"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3028Sqi.gf",
+      "bytes": 16275,
+      "sha256": "257349f1bc6d11d7941bfd84059d174538afff14d1cda5147b05bd858ebb27f7"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3029.gf",
+      "bytes": 5797,
+      "sha256": "4bcc1e8d0206a59f62748f6af63f9ac8ef85a772235535f01e9a8b3496f45763"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3029Sqi.gf",
+      "bytes": 16451,
+      "sha256": "ca75063540e9c31c13b5edf39fc3fb456e01712fbdff138df82c018bc6e286f9"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3030.gf",
+      "bytes": 5797,
+      "sha256": "e04c16160015470c231c33e4d9b73a84c5652ba53c276aae74f2a8de58e2a6c6"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3030Sqi.gf",
+      "bytes": 16649,
+      "sha256": "016c93f32bd53c880b867c34e0603c60b1df9ce1c88e18f11d0934b8687bc65b"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3031.gf",
+      "bytes": 5797,
+      "sha256": "70f862dc863951b16e159d19cc0a92f823aad0180c6daa788455ad1671aaad8b"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3031Sqi.gf",
+      "bytes": 16372,
+      "sha256": "c17c3862e4c1913f6b8775e7d373037f7f924ef20d3fcbc83c2fc5b8df70684e"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3032.gf",
+      "bytes": 5797,
+      "sha256": "9556265797d8c18ea3d7698d990c0e38fef2265ba5a0009ded02a4aa51426cd6"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3032Sqi.gf",
+      "bytes": 16833,
+      "sha256": "317912c8d112df6193d91d160509d2827160aa24288ca1dd89aab5081f5d5172"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3033.gf",
+      "bytes": 5797,
+      "sha256": "654bc411de0bb434d4a47e84d5db2a1db207bf2f4597036f555a415765a74675"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3033Sqi.gf",
+      "bytes": 16606,
+      "sha256": "c41189f378b52c1a5adeb4f8e78a4a0fce0c000e27849a66b50dab11c894140d"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3034.gf",
+      "bytes": 5797,
+      "sha256": "da35b29f40b94677c0c3cf508ece2037b1aeca465f2eb4fb741c69bd948a516a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3034Sqi.gf",
+      "bytes": 16498,
+      "sha256": "285122818b02e1567d26e3de78849cab8375894d3396bb30f7abc825dd55b750"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3035.gf",
+      "bytes": 5797,
+      "sha256": "1e89359d4529857c0d8135a08752337034eef12a304505312512d7ac6f1888f1"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3035Sqi.gf",
+      "bytes": 17109,
+      "sha256": "66bbd785ae5e2066045cfdf4903c726be61019d5da4c1b9e756f50f53b77a2ec"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3036.gf",
+      "bytes": 5797,
+      "sha256": "3bc1d615359f785a6faa1650c390f96afadc0c10097807caf995e4ea03e48e59"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3036Sqi.gf",
+      "bytes": 16392,
+      "sha256": "e7060e022cfd8b9a35ddf61e59a563aa9c46921d7c449a45e54589940c6d29d3"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3037.gf",
+      "bytes": 5797,
+      "sha256": "a502ae654537e96fa25c3f3d0e4c4262520a897514ad78e2718b207a2ed019df"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3037Sqi.gf",
+      "bytes": 17107,
+      "sha256": "1dfa2325c36523e23c6035bff03132d971912e5868e18fd432bbe40ff217cd92"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3038.gf",
+      "bytes": 5797,
+      "sha256": "abfa600e4edc72ad6204c2b969311d91576b141d208c108653c281548b4b30d8"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3038Sqi.gf",
+      "bytes": 14531,
+      "sha256": "223fdeffc38d65d59046ed5d87d83388b146091b4625c35c06a54af680299864"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3039.gf",
+      "bytes": 5797,
+      "sha256": "2529a96edffaf0864b6337d2320f4594bfc46bf78dc5f2db433eed7b0bc62f99"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3039Sqi.gf",
+      "bytes": 14312,
+      "sha256": "6b55863dff946f1f408b049dba7e835d53837808fe7baf3b435032512c729dd3"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3040.gf",
+      "bytes": 5797,
+      "sha256": "738d8bcd76e2dfd22f110c58c34c5771a04e5db8f6aebba16df8a051da071f88"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3040Sqi.gf",
+      "bytes": 14502,
+      "sha256": "666df4233e9f1ba0f924a0ef6b8f06050fc210250233dd91d949c1eb0f28fdc3"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3041.gf",
+      "bytes": 5797,
+      "sha256": "269d3d15a1d089ded83b44ca7c2b29770529a7fcadcc620f35a076de50aa3ba0"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3041Sqi.gf",
+      "bytes": 14168,
+      "sha256": "e951f5c2bbbbffa7a60c4e9ebad8e951af54d07ef7fdda2e0d9df1493ee7e555"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3042.gf",
+      "bytes": 5797,
+      "sha256": "7f1b7522b5c930030f564368fe288bb8163ff336a61deb0d6fc44b4918d48cea"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3042Sqi.gf",
+      "bytes": 14222,
+      "sha256": "fe5f16ed176a830fa057c35e03af8036ba67debda7c3d9caacdbb788fd6a4796"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3043.gf",
+      "bytes": 5797,
+      "sha256": "e18a363f314e84c570a56c7dbe4221016ab6ea847a50a6e6ad429d4e66dbc11e"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3043Sqi.gf",
+      "bytes": 14184,
+      "sha256": "b86bc0eeb64eb9d374419a5b969bc56ac454d0b5b754d3908efec37910554bc6"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3044.gf",
+      "bytes": 5797,
+      "sha256": "e882df82509f3b726af4f5306589546f89e41d3678e4adef9cca9a4fab0dd48e"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3044Sqi.gf",
+      "bytes": 14300,
+      "sha256": "7885fb7e7675975607a08700f7d4c9aafa09493a9880744c016025ea32e0664b"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3045.gf",
+      "bytes": 5797,
+      "sha256": "475fdc5627e15a41ae09154c7f05724dddf7b38e948d0a5edd7036ede7174ff8"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3045Sqi.gf",
+      "bytes": 14306,
+      "sha256": "c236b5db900c83debceaf15f8c72e330e334405efd9f17549a8aee00f79fc775"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3046.gf",
+      "bytes": 5797,
+      "sha256": "270557b0c2c53d66494b3ea752f60a3c71cf73dc072a7c1898a68c401a1fd6da"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3046Sqi.gf",
+      "bytes": 14382,
+      "sha256": "6e94286910329798a70858a321b15e1637afb5f5560a4b1f64d961f98daaa9c1"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3047.gf",
+      "bytes": 5797,
+      "sha256": "3b9a80615210ad2155d1eca3119f1da5f0c0897f5fdacf72bc6c76051501e06b"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3047Sqi.gf",
+      "bytes": 14234,
+      "sha256": "b089ab0903e4ec054bc655c7837e63678a1dfbef2d0b0eff09da635fe7209ab2"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3048.gf",
+      "bytes": 5797,
+      "sha256": "d6fd08406a9e4798b072c82f5e5c17c17770f02fdbf4035c0c3c84389485a386"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3048Sqi.gf",
+      "bytes": 14326,
+      "sha256": "b5aa7e78c5b76d8034d2498cd184b45b4640392a8253b07195305909cb15884c"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3049.gf",
+      "bytes": 5797,
+      "sha256": "ae30fbc392ac8e2435d413e4c5a9e3a965d0d91d60881da22515b1a0f6ab3f17"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3049Sqi.gf",
+      "bytes": 14200,
+      "sha256": "fae9a10753260cb8d53aaa912c311d01fe8cce102a21fa106da3d34bc428740c"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3050.gf",
+      "bytes": 5797,
+      "sha256": "a94f565c065331ee74337493534e17a8923182a776f46b05e7eefdb1d23da511"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3050Sqi.gf",
+      "bytes": 14332,
+      "sha256": "9637d09c2851eccc39ded8289bb0671d2719629b65706d817a9152d9559f54f9"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3051.gf",
+      "bytes": 5797,
+      "sha256": "249a87b2e3d68ce1cb9a6b291fb8c2475039e4c6f1bd1f5797ab673dddfc9428"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3051Sqi.gf",
+      "bytes": 14090,
+      "sha256": "fec5b4855c911885885d13b13d417a049be3c9de104469daede287e0da288545"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3052.gf",
+      "bytes": 5797,
+      "sha256": "3cefbdb970567f95b748e2ee102d46a9fe8ba7bf736dffb44ea22b3aee341eeb"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3052Sqi.gf",
+      "bytes": 15398,
+      "sha256": "70d44f52bc0e4000078e8d41d1844acf839850acfcc94a176b6d6dbc1ab6b88f"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3053.gf",
+      "bytes": 5797,
+      "sha256": "b6d13b8df064cc7de663dcad0fec96a564186cbf79b0ce375944f9e321d3d993"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3053Sqi.gf",
+      "bytes": 16107,
+      "sha256": "550412d0a04ea064b34f888a84bce60b7bd8478f3ffcf4793bd2b5713a0530c6"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3054.gf",
+      "bytes": 5797,
+      "sha256": "3118e42885ebacc0692a1a400cdc4c8d1679126818c3f85d9b843999a590d65a"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3054Sqi.gf",
+      "bytes": 16491,
+      "sha256": "d8297d9e6cc93cd57e78b86dafde8a9e97073ab14e70707d936d8d4c6c91e5a7"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3055.gf",
+      "bytes": 5797,
+      "sha256": "51bcf3e6102251191068125c5feee54d95ac5a0275dcb4df718ee7a33e2049a2"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3055Sqi.gf",
+      "bytes": 16176,
+      "sha256": "ae256fa047880606241f8f3faae3f566d8005771d5951de2f7c692f5bb427696"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3056.gf",
+      "bytes": 5797,
+      "sha256": "0cf733415d1b7645c66b2b624d371a595dc9ab4eb787b2d489ba11aa4b861137"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3056Sqi.gf",
+      "bytes": 16399,
+      "sha256": "06e25445812fdda7a46b6452d6bbbd66c2c6842fe22977f18eef408ba16d1710"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3057.gf",
+      "bytes": 5797,
+      "sha256": "b9751b1ecd6def0eaab85993d2099bef82bc6c003ad109e5e4c44069b58fe608"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3057Sqi.gf",
+      "bytes": 16530,
+      "sha256": "6952b6908031572b83fe95cedad41b11820627c2fa1a5a32c1049e99eb48c801"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3058.gf",
+      "bytes": 5797,
+      "sha256": "bd6567ebe3ad616f8009755750fdef0ca64cbf0bc69833530735c8b14c0b0578"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3058Sqi.gf",
+      "bytes": 16398,
+      "sha256": "5b2aafcfc05e744ce48cfacd4747d2dd182384d1e8d0d66d2b887b5b337bd62e"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3059.gf",
+      "bytes": 5797,
+      "sha256": "9cbb02e35b0c3a9e25648bdddfd075d2968ef4aaa81c3b58c6703316267f7aad"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3059Sqi.gf",
+      "bytes": 16463,
+      "sha256": "9fd95f22eafe94fbfc5423626af8066a4fd0a8125a64172a99b4e00ebe009d37"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3060.gf",
+      "bytes": 5797,
+      "sha256": "df690c0e22edeabb9bab3fbffae827d4df7c396c5834af2940f06f26e3e72730"
+    },
+    {
+      "path": "validation/inputs/AlbC10G3060Sqi.gf",
+      "bytes": 15870,
+      "sha256": "537f1342af44f107177961364a8dd3134dc41e54829c83503207dce5c60f1e3e"
+    },
+    {
+      "path": "validation/inputs/AlbC5CliticMatrix.gf",
+      "bytes": 753,
+      "sha256": "786c7c0bbc948bf58a8bf6528d9082efea84fe25c6fe184869ab666200889d81"
+    },
+    {
+      "path": "validation/inputs/AlbC5CliticMatrixSqi.gf",
+      "bytes": 2413,
+      "sha256": "e1a779e06f07973dbd89afb0d82e45f4d59dde7aef2a572309bb13fa9172a26c"
+    },
+    {
+      "path": "validation/inputs/AlbC5PrepGovernment.gf",
+      "bytes": 755,
+      "sha256": "7895ddd4a972db53ec7f8112d8547bbf22e3a8848002ccca17f9acbe37816a6b"
+    },
+    {
+      "path": "validation/inputs/AlbC5PrepGovernmentSqi.gf",
+      "bytes": 2941,
+      "sha256": "ee248e331dc6e7cc2ebb4fd4f07a26635f586d222d2f201a719d3b61932232eb"
+    },
+    {
+      "path": "validation/inputs/AlbC5PronounCases.gf",
+      "bytes": 1153,
+      "sha256": "49333c2a4b81e27443c4abbe27bbf3e686b19f48bd0241166da8d17403e200d4"
+    },
+    {
+      "path": "validation/inputs/AlbC5PronounCasesSqi.gf",
+      "bytes": 2644,
+      "sha256": "bd2673469ab8d37df4099b9f0b29c5255f738d7b1b8a4e9a0c26aab628bf4740"
+    },
+    {
+      "path": "validation/inputs/AlbC5RealizationContexts.gf",
+      "bytes": 340,
+      "sha256": "3023e2c4c583a28c199ceb52fbc2a9dd67967023971e19a7b53f4a1af3ff2341"
+    },
+    {
+      "path": "validation/inputs/AlbC5RealizationContextsSqi.gf",
+      "bytes": 1326,
+      "sha256": "1a5a0cb00acd6ad58c688a853a87c4e25879fae77128124c3f82c6d98acdc4e9"
+    },
+    {
+      "path": "validation/inputs/AlbC5RelativeGenitive.gf",
+      "bytes": 1257,
+      "sha256": "c1e50c245a1527b9bcf70672b8320fa11cb7d0998de66f4e6a742e1688a36b78"
+    },
+    {
+      "path": "validation/inputs/AlbC5RelativeGenitiveSqi.gf",
+      "bytes": 3279,
+      "sha256": "cec663c64b4797553f36dd36221a64f8a354dce0c8d66d26ec34b6230154ff5c"
+    },
+    {
+      "path": "validation/inputs/AlbC9PublicAPISmoke.gf",
+      "bytes": 277,
+      "sha256": "1a7c02c981d63aaeb899e9ba664363208195ec4b43fa1b777898a378ea5dbeb0"
+    },
+    {
+      "path": "validation/inputs/AlbC9PublicAPISmokeSqi.gf",
+      "bytes": 1372,
+      "sha256": "69edaf897eacd67cf06ee366879a17c914b156d4ef72bd01c4b91f6cf4b0da5f"
+    },
+    {
+      "path": "validation/inputs/AlbC9ReleaseSurfaceSmoke.gf",
+      "bytes": 128,
+      "sha256": "fc4e09cf3911343044b617d1cd39f224727e43ead1f844f6b800efc6ab485743"
+    },
+    {
+      "path": "validation/inputs/AlbC9ReleaseSurfaceSmokeSqi.gf",
+      "bytes": 340,
+      "sha256": "817770c8cfd6a40f4736342907e6a2c3146bc973bff31b7afc137e3bbb9e37d9"
+    },
+    {
+      "path": "validation/inputs/AlbC9ResourceSmoke.gf",
+      "bytes": 578,
+      "sha256": "631fe934a01de2b30180b9678b4496d5c625412419d1335eac4e1d14c4fa861b"
+    },
+    {
+      "path": "validation/inputs/AlbC9ResourceSmokeSqi.gf",
+      "bytes": 2573,
+      "sha256": "b4f9913681ac4c747d119ee2e695983544003678e5bdcaf472711ea758bf0636"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign001.gf",
+      "bytes": 338,
+      "sha256": "ca0cdb7c5530b7b7ff8306a06f22649e12a5cb434147a0ad55421407c7b12002"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign001Sqi.gf",
+      "bytes": 1079,
+      "sha256": "f8ef3b6359626d4922467404de921d2949595919effbfa74abb3ddf4adb38df0"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign002Sqi.gf",
+      "bytes": 705,
+      "sha256": "09ea6005b4aaa42751906b6db3dbb59bca9b708eb94ee7e5fc82e33b91c18814"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign003Sqi.gf",
+      "bytes": 715,
+      "sha256": "45df1146d7c0a6b695c1863ac2a6418ab5092b4ddd994f61de6a73120622c2f7"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign004Sqi.gf",
+      "bytes": 725,
+      "sha256": "e2a78fce7913bd6124d0b485ebbf75da01c959513ceedcd468f7800fd9394f24"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign005Sqi.gf",
+      "bytes": 735,
+      "sha256": "1acfade4571cca8f4479273ebb475cf0e0243985be7f5ea520f046c50da983df"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign006Sqi.gf",
+      "bytes": 715,
+      "sha256": "54ed22822dcbcf73ca1e07a90f27666c3a72ad5066784883b17a0002e3438c4a"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign007Sqi.gf",
+      "bytes": 705,
+      "sha256": "72c95a5e201565a2db0ae4e6012b23054f723ae31eb34e883a5cc5c4426fd552"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign008Sqi.gf",
+      "bytes": 725,
+      "sha256": "f1bcd363939c949ee4056a86f122846d2c7db43dd8ef036c9c2834f8bd4ada84"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign010Sqi.gf",
+      "bytes": 755,
+      "sha256": "b30fedbd7b53fbbed5cc9e11cf763adecd14d96041b8721dcb0b509320ff2b26"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign011Sqi.gf",
+      "bytes": 785,
+      "sha256": "fb757793d17b6ee6575d4f72ee165b1058a87350eb1c94fc6cce0b19d4fa4ef6"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign012Sqi.gf",
+      "bytes": 765,
+      "sha256": "ec7ad5eddc5279ab9e66d8f63e49a8da9bc0520fd50ffc587a7ef3c9157a971e"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign013Sqi.gf",
+      "bytes": 785,
+      "sha256": "8f509dd61853bed67adf54fe67fdf5627d73a32e5c1299a3a5f1bb33fef27c37"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign014Sqi.gf",
+      "bytes": 785,
+      "sha256": "1e82a31cecb949d9f02e60dedaf195e53e9922b74f43aa7d906a839cf9303963"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign015Sqi.gf",
+      "bytes": 805,
+      "sha256": "a585625602ece77872e2e4a37be38379c6f4f5d5bf47d6fb391c65cf44550276"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign016Sqi.gf",
+      "bytes": 785,
+      "sha256": "8317242acda7959e4386322b8b2c0ee263a01906d3210cc832fbd835a560eeb9"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign017Sqi.gf",
+      "bytes": 795,
+      "sha256": "829350615d6c4da3c6aa33a37dc5ee150b7b8f32b0cbd1048bfb89d52501b011"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign018Sqi.gf",
+      "bytes": 795,
+      "sha256": "455c3daef72d41dd239c5e79462678bcfd558593cc94ecbe2f7c03b1f22e37d0"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign019Sqi.gf",
+      "bytes": 785,
+      "sha256": "6742be299202a76882f5b88475c46a227282679a727b1251ef681cdc0796ea94"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign020Sqi.gf",
+      "bytes": 815,
+      "sha256": "b1c1dd62383e4a5d152d1f1a25f3be32ac7509c3cce90e9354154aefc80681be"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign021.gf",
+      "bytes": 338,
+      "sha256": "0af1efae002a4ca31151621820b6eead595d1d57c5204436933f9e08528384fc"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign021Sqi.gf",
+      "bytes": 891,
+      "sha256": "5c14698a59a0c788c6d92884c9537c459836dd85b7215b692b35ed12f7bac42d"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign022Sqi.gf",
+      "bytes": 646,
+      "sha256": "de58913a166911053301b2b4ad0751db320c5754d872f4727d01c7034b932465"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign023Sqi.gf",
+      "bytes": 646,
+      "sha256": "34c7f364b3fc49730a3bea0cdf912ce790b9ed7a64c9712329b502a701b3d314"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign024Sqi.gf",
+      "bytes": 706,
+      "sha256": "ff4ae4d5259d0cb777205abfb96b284b26eef9baff006941860207847b6b000f"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign025Sqi.gf",
+      "bytes": 646,
+      "sha256": "962e52abb1bff32c8c866c0f5e7e28aaa2ddaf382da3b0288de5fc90884ec84d"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign044.gf",
+      "bytes": 355,
+      "sha256": "3c6bb0847fe95bbfdf3ab7e083ebde0d7f2e37c7f472b1dd15e06f5baeaca2ce"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign044Sqi.gf",
+      "bytes": 1026,
+      "sha256": "6cb78bf21627ed2de6da18d59b9960fcd08e191ac93b5f1b7919954331d482b9"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign047.gf",
+      "bytes": 294,
+      "sha256": "1a2f6a5708004a7ed84aff96622fbd1f999c39bcf193ec62c0e7e918cc901d27"
+    },
+    {
+      "path": "validation/inputs/AlbCampaign047Sqi.gf",
+      "bytes": 1023,
+      "sha256": "5d8780cbba65635e1f81c6dc31a0008463a8e953211232c84a70c2980ad58cca"
+    },
+    {
+      "path": "validation/inputs/AlbClauseFinal.gf",
+      "bytes": 428,
+      "sha256": "fd01c974116c893ecdc763fea16a3b1f325ff5ebb1bc206fbd3f5727400fd016"
+    },
+    {
+      "path": "validation/inputs/AlbClauseFinalSqi.gf",
+      "bytes": 1823,
+      "sha256": "d363549c1e089a0b808647acf8480bb911aefdbdf8d85f4d40b3887281673e70"
+    },
+    {
+      "path": "validation/inputs/AlbMorphologyMax.gf",
+      "bytes": 213,
+      "sha256": "1ddae113285260980bd84dfb71606b848f03e731755eca4de69404811e4477e4"
+    },
+    {
+      "path": "validation/inputs/AlbMorphologyMaxSqi.gf",
+      "bytes": 2956,
+      "sha256": "63a48f330a78b447b69cdab9561f2a8ee23aef8c834689404e3d88540c096fa1"
+    },
+    {
+      "path": "validation/inputs/AlbVerbAdvanced.gf",
+      "bytes": 1924,
+      "sha256": "33d5b56495866f3ff404af942c7c7afc5f9083109c9186a48704d046f9bd0153"
+    },
+    {
+      "path": "validation/inputs/AlbVerbAdvancedSqi.gf",
+      "bytes": 9375,
+      "sha256": "c442780861ca9b1328c49e2e5b2d3cf00b8df51fe0b8406c98e3d8e3e32371f7"
+    },
+    {
+      "path": "validation/inputs/README.md",
+      "bytes": 268,
+      "sha256": "d3a56a5a5990fe30c99eeb316adcce8f583d360003c528eaa228a416e1f731f3"
+    },
+    {
+      "path": "validation/morphodict/GF_TABLE_INTROSPECTION_REQUEST.tsv",
+      "bytes": 20479,
+      "sha256": "e0bdcb0c67ca933353a6597c5ca1ae7cc2ccf77fea2d49f0d0a134cd45485e79"
+    },
+    {
+      "path": "validation/morphodict/GOLD_MORPHOLOGY_CANDIDATES.tsv",
+      "bytes": 26335,
+      "sha256": "1d2c00c08067be9c83b014b746bbc4af40bdda6021cad1316b73057c34c94467"
+    },
+    {
+      "path": "validation/morphodict/blocked_review_queue.tsv",
+      "bytes": 6963,
+      "sha256": "1fd5d89d4f34ec7de0b079861cc8d0df7b6d9116dfafc4c433096b6b4585f21c"
+    },
+    {
+      "path": "validation/morphodict/core_escalation_candidates.tsv",
+      "bytes": 693,
+      "sha256": "2e47e5570fd1d4c789f2339bb9f4b0ae77b0bea397cb1eee2e2c50dd658e85e6"
+    },
+    {
+      "path": "validation/morphodict/missing_paradigms.tsv",
+      "bytes": 118,
+      "sha256": "73d8b129e80632a561f5ad73f5d56464ff445e7214ed789ce283d7ba7e4c01f1"
+    },
+    {
+      "path": "validation/morphodict/review_queue.tsv",
+      "bytes": 144369,
+      "sha256": "4aaf2e11a832054e8b489730dd27a41d9f7a03cea2068dbb76fea2756beab779"
+    },
+    {
+      "path": "validation/morphodict/source_conflicts.tsv",
+      "bytes": 918,
+      "sha256": "1b0f6cd1db4619ad0573e537d03c0bb261a62eda52e7d5a49fc2bd7c54f149a5"
+    },
+    {
+      "path": "validation/morphodict/static_validate_morphodict.py",
+      "bytes": 235,
+      "sha256": "7e5311d1f7acf86e4f7bc024d6ba17474aef00d7f7b2f628659e532a86e6ad5e"
+    },
+    {
+      "path": "validation/morphodict/validate_morphodict_max.py",
+      "bytes": 7042,
+      "sha256": "5ed7c51000ecb31e78b5670f7ef44a7cf116d94241ca51dac191b4bd810b325e"
+    },
+    {
+      "path": "validation/morphology_max/AlbMorphologyMax.gf",
+      "bytes": 213,
+      "sha256": "1ddae113285260980bd84dfb71606b848f03e731755eca4de69404811e4477e4"
+    },
+    {
+      "path": "validation/morphology_max/AlbMorphologyMaxNegative.gf",
+      "bytes": 117,
+      "sha256": "7d6a8b1bcd480b2324f313e50f4735d912ebbfefce1e0b63820208a4713aeb37"
+    },
+    {
+      "path": "validation/morphology_max/AlbMorphologyMaxNegativeSqi.gf",
+      "bytes": 757,
+      "sha256": "0fd742a690f691cb807e84a467a65c06b87dedbef5224d686ebba748a3074368"
+    },
+    {
+      "path": "validation/morphology_max/AlbMorphologyMaxSqi.gf",
+      "bytes": 2956,
+      "sha256": "63a48f330a78b447b69cdab9561f2a8ee23aef8c834689404e3d88540c096fa1"
+    },
+    {
+      "path": "validation/morphology_max/EXPECTED.tsv",
+      "bytes": 1762,
+      "sha256": "cff92c1edbfa4473808999f7a688ee2443d209403d19b7a0534e6c85517cf3c5"
+    },
+    {
+      "path": "validation/morphology_max/README.md",
+      "bytes": 576,
+      "sha256": "691e8d6b4c620ec15572acf4d2d94a4d9bc1bbe29656d2f5814f60ec0b52fbd0"
+    },
+    {
+      "path": "validation/morphology_max/morphology-max-negative.gfs",
+      "bytes": 400,
+      "sha256": "1425d5fb798a27fc42d0a34dbec31dbe0ceb72a10196df9f66e5d5ddb118919e"
+    },
+    {
+      "path": "validation/morphology_max/morphology-max-positive.gfs",
+      "bytes": 1029,
+      "sha256": "a9ced50b18512f3c53b18a3f4dbd98b5b55b7c5183702105ca9147efa5f51260"
+    },
+    {
+      "path": "validation/morphology_max/static_validate_morphology_max.py",
+      "bytes": 11249,
+      "sha256": "50ca5c52a851d6043f24a747959f284849ac2db6ca56aecc825d350f2fda7bb7"
+    },
+    {
+      "path": "validation/nominal/README.md",
+      "bytes": 577,
+      "sha256": "e0afb320525e7d3141b87554f024f039559747a982b09cf820a95e452690826b"
+    },
+    {
+      "path": "validation/nominal/WORD_BENCH_REQUEST.md",
+      "bytes": 1368,
+      "sha256": "b32b3dbe10f0ef94cd20d1ce381a072cdefa3a0405ff58258b29e1b0a7a517a2"
+    },
+    {
+      "path": "validation/nominal/static_validate_nominal_architecture.py",
+      "bytes": 7452,
+      "sha256": "befaa8a1e0321d3bf474eedf230a97d46c915bcb5b9d923b97c789aaa43e9881"
+    },
+    {
+      "path": "validation/scenarios/README.md",
+      "bytes": 309,
+      "sha256": "b7b7e33cb6521d27793a81a8dc790741a024dc110edce994f1965dfd9d2547e2"
+    },
+    {
+      "path": "validation/scenarios/alb-adj-01.gfs",
+      "bytes": 999,
+      "sha256": "56a85706cacf9cced445922e45cd28f874a358ed5972440d9b246ae6a4881099"
+    },
+    {
+      "path": "validation/scenarios/alb-adj-02.gfs",
+      "bytes": 765,
+      "sha256": "47c02f1c370b2d16e05181086c31800950f177dabe45d19207cc60530886c3b7"
+    },
+    {
+      "path": "validation/scenarios/alb-adj-03.gfs",
+      "bytes": 765,
+      "sha256": "1fbcef4d55c265a82beeac5697c86e9fb87ab5a928fac186b2652b090d9e7725"
+    },
+    {
+      "path": "validation/scenarios/alb-adj-04.gfs",
+      "bytes": 825,
+      "sha256": "f0c13ae0e0b96b270302fd23afb6358c5046787cb5c7c19c8fff7d4c86f30312"
+    },
+    {
+      "path": "validation/scenarios/alb-adj-05.gfs",
+      "bytes": 765,
+      "sha256": "605d17a848f844db8deca8e1b70203c54d0fe147e3a66d30bebc6fb994e69a88"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-001.gfs",
+      "bytes": 14517,
+      "sha256": "6f213d893ead98c1a628950a5302cb331a462b053c5f26a0921bdac7d22c69a7"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-002.gfs",
+      "bytes": 14877,
+      "sha256": "c4e3d3ff9f8f57a951ef6952c2111990dbe2105daa9238c230668ac44e63148e"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-003.gfs",
+      "bytes": 15129,
+      "sha256": "a95825ce4fb924fa1fb2babaefa3e42d53103a9dd10ef8a2cc73c9472b408262"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-004.gfs",
+      "bytes": 15329,
+      "sha256": "e10987712e0b68c10c6a9b803dbc7ea1e8de592f41f71b5c4ddc0bed71a75991"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-005.gfs",
+      "bytes": 15337,
+      "sha256": "72fb3cdc29bb9ab96a91a80949141261305f60e573ff5772fce0d306cb1621f7"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-006.gfs",
+      "bytes": 15619,
+      "sha256": "ea7d3622fae6302dec9f42534322be9b6a054159267e8d57158397247ee14f0a"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-007.gfs",
+      "bytes": 15649,
+      "sha256": "2420d14baa0583823024b9e92423c124a5cb5f3ffe28aeb2ee804ab95a96fa02"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-008.gfs",
+      "bytes": 15605,
+      "sha256": "6d142c54e9fb9ff7493a1bc4ec1b684bcc432316af91783502a5af05d142070e"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-009.gfs",
+      "bytes": 15951,
+      "sha256": "5cb920163b22e5e78a8a2d44ccd1fa10b73a51ae5331aa16b9bdab75ba1cc0a4"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-010.gfs",
+      "bytes": 15859,
+      "sha256": "942ee6d5a8973b23120c8a5e947c7dc516d4cbe376c2fca57162d8a4d48c29c3"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-011.gfs",
+      "bytes": 15483,
+      "sha256": "3ce0a494cc5c6437bd6b964ebc34dd45088d4267c415fa01d390af241eee7bef"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-012.gfs",
+      "bytes": 15451,
+      "sha256": "9abecf5d67cfc628bbddd4245c63914abf0eb495e74495599083fda43a233cb7"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-013.gfs",
+      "bytes": 15481,
+      "sha256": "b29dc4b5a8a17b8f36d02ff335600732c8d405283d1fc007d271c27861fffb65"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-014.gfs",
+      "bytes": 15757,
+      "sha256": "2bd87512d4ac8209cf4b48ae8061fa0ec5b720b21e134ea94bc5ecebb57ebd83"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-015.gfs",
+      "bytes": 15761,
+      "sha256": "d6c3fb20f7217bcc1b1eae2ec1aecbbd19635fffa929578cc46ee44faeb32268"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-dict-016.gfs",
+      "bytes": 7648,
+      "sha256": "9fa81754da8cb0344b55921acdd191b2a117fd57ced6bbc2d28d7e3a8f72ef82"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-morphodict-001.gfs",
+      "bytes": 13889,
+      "sha256": "9fa79899e7567de72001b999ad6e941f6c89cbbbef9d3fb6df76232585c06787"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-morphodict-002.gfs",
+      "bytes": 13643,
+      "sha256": "9191ba97b7045183b73028950274ff6917e36a44dff685c52c1a21ba267b9570"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g2-morphodict-003.gfs",
+      "bytes": 3599,
+      "sha256": "b48712cf1ac77c48e9103c7c4873641875b7b7f76ca6b8f23de03d7b35bb8fd9"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-001.gfs",
+      "bytes": 12877,
+      "sha256": "bc4528a3c780cf148fcdd1d71b2b45e0a8101605fe1022e4432f97805427c4d4"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-002.gfs",
+      "bytes": 13011,
+      "sha256": "78de0c1175541c20c972f4cdb95973225111a545c83acbce11b3d6cf9b2bf07b"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-003.gfs",
+      "bytes": 13197,
+      "sha256": "aa5d6ca32183f95bcf37651307f15394bf4e1dffed2446993e27a00cd7905afe"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-004.gfs",
+      "bytes": 12987,
+      "sha256": "0b26dde3267790e0d869f631ea09a9acd0af85c052cab0a3268f5edbd26b2bcf"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-005.gfs",
+      "bytes": 12943,
+      "sha256": "167a4af03c10d7576498037eb991f3ecac3984d863057707e6e39ac8a1d9512c"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-006.gfs",
+      "bytes": 13155,
+      "sha256": "a4eaa39dcfe67a68b0e366993f32ca6cb803920139f562eb8c5621859f40af2d"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-007.gfs",
+      "bytes": 12985,
+      "sha256": "df2f83221d76434ae461b77c2bb45f2ffaa7bb3783cde206b640d9b66256bce7"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-008.gfs",
+      "bytes": 13061,
+      "sha256": "95aad71490d1a70e68d6b9a6ad9a9d8fb2ce766e26a11f026b110885545b5696"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-009.gfs",
+      "bytes": 13127,
+      "sha256": "61b1b9b2e0a655cf2a66c426884efa8a1ec78df229f6d28eddc295205b8df16a"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-010.gfs",
+      "bytes": 13007,
+      "sha256": "e27d83f333ab8e4bc420638a81ec6382be740256ded7a0e1ec824dd1d3272d7e"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-011.gfs",
+      "bytes": 13023,
+      "sha256": "03204db3e3e8abf4f8bc425fadcbbee6c1275da2921d8630f97b4b9ae244dead"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-012.gfs",
+      "bytes": 13043,
+      "sha256": "c3d2f93eee09d1c0936e21d7e76bdbf82e28b6179b1addce6367ff881a157b0f"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-013.gfs",
+      "bytes": 13233,
+      "sha256": "f772d892b6af69bbcaf12ca24c52a001e4e1b9fc53cf63a2d703c3b932bfc350"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-014.gfs",
+      "bytes": 12933,
+      "sha256": "d25a6cd8e54a0faf6fc3a6e26c006f97afb3a482a016183755e29329392d2a56"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-015.gfs",
+      "bytes": 14427,
+      "sha256": "5f796387ebf6e87c300c4c11199f208966386dc710dce357d3fc562cc6dd5a23"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-016.gfs",
+      "bytes": 15425,
+      "sha256": "cb8740f4fbc9df0451cc146c693d69cc873be6319b4178d574a1dfbe5a0c16d5"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-017.gfs",
+      "bytes": 15509,
+      "sha256": "6813699ff81405f5ca8c961bda85040f744a727a122f960abf4c2ef463afe887"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-018.gfs",
+      "bytes": 15305,
+      "sha256": "4301886f4c7cef4262e4d2ae38c93b416db988c0f24e9143a46f62517581b820"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-019.gfs",
+      "bytes": 15513,
+      "sha256": "4869aa01cca25a00a0c38e0d5342e24a9e2b3268a6ecb6589aacdac362e94280"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-020.gfs",
+      "bytes": 15381,
+      "sha256": "8e901cdfcfd31fdeb4e77b9cb2a95fac8f33a43102a5fcc2b35ee6829ec6bfe0"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-021.gfs",
+      "bytes": 15366,
+      "sha256": "ee2f3ecbc87898f5037adabf23487d1e465324bd1e5d3612bcd900b47572c7bc"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-022.gfs",
+      "bytes": 15231,
+      "sha256": "fc21f79fc05920b4195866b6acc4b11faef56a9c939f669fb692f7a256b71506"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-023.gfs",
+      "bytes": 15563,
+      "sha256": "885dbc9de007a9837c5df39f9c24dc4b2e9aed7598d1de05dd6233a79b682d3e"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-024.gfs",
+      "bytes": 15460,
+      "sha256": "977bdbe64322e616304eaa0eadac689cae1572dfd2acec518979043968ee938d"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-025.gfs",
+      "bytes": 15592,
+      "sha256": "5f688691ba202903e3dda56c69fdab2275f8de553e0fcf0de27a5fc3a090a5bc"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-026.gfs",
+      "bytes": 15209,
+      "sha256": "8fae2a932545fd5d6ba3429250bfe7dd269f191150c39335acc5e7e5e505b33c"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-027.gfs",
+      "bytes": 15609,
+      "sha256": "893c4b06a2e45435949d272fa1161a58b044e4119e6bff2497625bd4e1b13a82"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-028.gfs",
+      "bytes": 15191,
+      "sha256": "fae074d446e5295668fe026f50e0d5d0ce6613705b8479f63ef2382460ce239e"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-029.gfs",
+      "bytes": 15422,
+      "sha256": "ed21f27e33d58cef50b578430fb61288782e2b8b558c02b640467f041ee7585d"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-030.gfs",
+      "bytes": 15422,
+      "sha256": "c0cd738eb5a6a216ddff4c95333fc92ee9ce56d96731835ef32f50b09f30eb3a"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-031.gfs",
+      "bytes": 15369,
+      "sha256": "6e4261cba52c905a9a4e1a74f6210b26530ca89a301cc9ba9f2fbed186c9b4c5"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-032.gfs",
+      "bytes": 15708,
+      "sha256": "c84eef6213ea14d103f6258db5129186faffcfbb7adfd9e9b446132a95a53030"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-033.gfs",
+      "bytes": 15483,
+      "sha256": "41f81e396b602bc498309670f7976f0daae655f3afe48e9a9e83ad5ab8e970fb"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-034.gfs",
+      "bytes": 15487,
+      "sha256": "5bce884eb258a95b469afba2312c5b95509b0aecd2492ccae6af5472ed95e66f"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-035.gfs",
+      "bytes": 15900,
+      "sha256": "3dd81217ec32e299339e2fb1d6fa22394538a246eb9b73acd1aad1eb8038182b"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-036.gfs",
+      "bytes": 15353,
+      "sha256": "022eef5465d5a928b7fb264b6762203d4c5955319c293bf308bee9b44ca4f043"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-037.gfs",
+      "bytes": 16030,
+      "sha256": "9a1a4984f81a31f3b956c938e619c6724b01c9078838b90c7c629a9b11329987"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-038.gfs",
+      "bytes": 13464,
+      "sha256": "140bf11d8cb626fcfe900dd0e066a8007b1a7e83ac47c739a46a581bcc28f28a"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-039.gfs",
+      "bytes": 13205,
+      "sha256": "ed831153b7f633038d7757dd91efaa01d2f3e96dcaf17902579f5c880814db3d"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-040.gfs",
+      "bytes": 13395,
+      "sha256": "e27cbbac72e1b8b0ccf68d8762635d6e2364bab2c5cabe7655938ef29b2ffd9c"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-041.gfs",
+      "bytes": 13061,
+      "sha256": "cd656fa9e5b82c5e0aba9c2e76d9f69b5f5860b090487c9ebd18dfed0ef19b10"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-042.gfs",
+      "bytes": 13115,
+      "sha256": "6ecbd8d8ebc998cab899dec1376c07e197d24ef2e1e2b54f1a55ebe56405f3f9"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-043.gfs",
+      "bytes": 13077,
+      "sha256": "e54eab16f567cf85099ea9a5a7668260f37a006e3f1c1e16821ee5e81cfacf23"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-044.gfs",
+      "bytes": 13193,
+      "sha256": "dcd447721719718d91239c157be9a68355a31b835c6e71358994d288d62970cd"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-045.gfs",
+      "bytes": 13199,
+      "sha256": "2d95789e7ac3d65504118c6a25ed2402c1c25130cbae291449ac23cdf8bd37c3"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-046.gfs",
+      "bytes": 13275,
+      "sha256": "9a01303a8435e468580777a2d222c022d1e72278f845dd4353e0040058a96eb9"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-047.gfs",
+      "bytes": 13127,
+      "sha256": "b0037976ad11ce85dcc20ed13c75ce454136c8a0b8df9b54e466d78158267be6"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-048.gfs",
+      "bytes": 13219,
+      "sha256": "fadea029714f61b75dd86f36747927e4741a059c0a42c1541d31c8d1f7c6b88e"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-049.gfs",
+      "bytes": 13093,
+      "sha256": "e37d662d7e03a4fb111c16c59998f057c3584cb19a4f029814d1809adfa89656"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-050.gfs",
+      "bytes": 13225,
+      "sha256": "b7cb768d4512f567084093f3eefbf450b2a86cb345d40588f6f6df3800ada5d4"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-051.gfs",
+      "bytes": 12983,
+      "sha256": "f55e48710fb34dfdd727f4e5c1defe8b19bb0b112c8e77d102e540d9ced61e55"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-052.gfs",
+      "bytes": 14205,
+      "sha256": "4708e1d158c38dbc194f4cc46b81b429736b23090853a9c45fef42be51f896b1"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-053.gfs",
+      "bytes": 15096,
+      "sha256": "dbf28cbc003c28b999d59b55c12e7c79f2196e072858ef63f1ec3376488d0402"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-054.gfs",
+      "bytes": 15273,
+      "sha256": "9a27a40cc64cbb71b6e85513f0e8bb33aeef95f083ac9ffdb39470e38070cf16"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-055.gfs",
+      "bytes": 15146,
+      "sha256": "8a8c9e30ba88ca63aeb089f7965d58c704ab3348568be86f3d62a53d02707702"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-056.gfs",
+      "bytes": 15310,
+      "sha256": "3f318a71cf20a3f270163e61cb198d8a69e3c5a0d3abac1e997142016fd16073"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-057.gfs",
+      "bytes": 15363,
+      "sha256": "9e38c2b0e09810e1257eac8a45c93b421809abf1f3fe4326f84e4ab652d09f68"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-058.gfs",
+      "bytes": 15395,
+      "sha256": "28f77cf4f147f209a4d4f0b189332814d0ac90bd239bff7fb17ecb6f7d1f583a"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-059.gfs",
+      "bytes": 15281,
+      "sha256": "6aed48ae2d34d8d625e10217e3060c7147e7946896fda61a1161a56b72dd4b2c"
+    },
+    {
+      "path": "validation/scenarios/alb-c10-g3-morph-060.gfs",
+      "bytes": 14804,
+      "sha256": "da6bc3a7731b74e54c887f47516a6604b8c07f67a92c035e67f857b96ef02c6a"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-clitic-matrix.gfs",
+      "bytes": 1680,
+      "sha256": "ee2e3323c8b7beb85d0e5fc52225978d66a3aa3d9ac09ea8a74fdb69107db956"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-prep-government.gfs",
+      "bytes": 1484,
+      "sha256": "5c0df06ffb810c6a51785135a2c7f80336c46c601195d721dcc538a4b6f02e53"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-pronoun-cases.gfs",
+      "bytes": 2242,
+      "sha256": "c8ded44c835e35243b7d6e6e3ea7c1396c777f4f761b179c7d8f5006bb1c82a3"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-realization-contexts.gfs",
+      "bytes": 1096,
+      "sha256": "a7bdb010e672dc6b9e91e69b1a95d74db57c51d2b34f784966d5d82181a7cc53"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-relative-genitive.gfs",
+      "bytes": 3021,
+      "sha256": "3f33b408172202806346e04e257cbcac552e85cf35e706624098e0ef10725b05"
+    },
+    {
+      "path": "validation/scenarios/alb-clause-final.gfs",
+      "bytes": 1292,
+      "sha256": "cbb63d9659ee473e1509a3a41f817e20e6e5c4b8c4489268922610574d63ebcc"
+    },
+    {
+      "path": "validation/scenarios/alb-construction-02.gfs",
+      "bytes": 857,
+      "sha256": "8f77e1b0a831ba934173e3d41da132d268cbc1081bf48c8afaf84021d0f07aee"
+    },
+    {
+      "path": "validation/scenarios/alb-morphodict-smoke.gfs",
+      "bytes": 1606,
+      "sha256": "52f64bd7986ef2cc11f6c83723399126a7b7a39813a2826c5d7dfdc2a8f571c3"
+    },
+    {
+      "path": "validation/scenarios/alb-names-preps.gfs",
+      "bytes": 903,
+      "sha256": "7b824891c631cb4ef12db6e8425295ae5e51b21c34350af5bebc6c2b63232fe1"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-01.gfs",
+      "bytes": 988,
+      "sha256": "6c3a5451df2b824b51bd0ee12225fa7da980534acdbf1f41c27fba0ab29e7953"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-02.gfs",
+      "bytes": 770,
+      "sha256": "fa8c7bd00f7bbc55b0c3d9dc243870fe54272fafb5a25d2f55e3827f9a5abd32"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-03.gfs",
+      "bytes": 780,
+      "sha256": "7e9e5eb6a30f128896dac8ad2723b3979d5c80839baeb245ad811c1b4ef1215c"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-04.gfs",
+      "bytes": 790,
+      "sha256": "bb96560054e5ede87c108cec62ccaeee16a413d7cac2e437d852568f2922ad85"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-05.gfs",
+      "bytes": 800,
+      "sha256": "b6dfc4f3d768bc8b98620864bb820549399d325bed3302475fa4113e4a073c5d"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-06.gfs",
+      "bytes": 780,
+      "sha256": "94e9d56a8e9aecdc7cca4aac5856394d924b3e3850aca595767e2c462ff9aae2"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-07.gfs",
+      "bytes": 770,
+      "sha256": "f8c6e77a8d27b5c9a565e6f888a2d24fcaa007c7ea2960113dbe795e70bc2fe2"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-08.gfs",
+      "bytes": 790,
+      "sha256": "8dec752aba487265862e6f73480f06ba762a2ad298b45fc6e3aaf453eee99c05"
+    },
+    {
+      "path": "validation/scenarios/alb-noun-10.gfs",
+      "bytes": 820,
+      "sha256": "bd35d18ad15755a0e22302e30d4be728d67ab7e232499d93cb726f473333ac9e"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-01.gfs",
+      "bytes": 776,
+      "sha256": "6946954ec2d8a40c0b03a3bc0ccb717dd6d553cf5580897406bc3a56ae718b25"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-02.gfs",
+      "bytes": 756,
+      "sha256": "540710c4ccb73b3460348ff05b5022b090b2e16de978e4377c432da0907be829"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-03.gfs",
+      "bytes": 776,
+      "sha256": "aff16edd0e57dd7e65385f00d59be40dfda495c3e2854b8c7c8bc591f571deec"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-04.gfs",
+      "bytes": 776,
+      "sha256": "b7290f79a2be0ec0c0f90cd77b18b1c305ce41c2e017da2fb025023659f28a6c"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-05.gfs",
+      "bytes": 796,
+      "sha256": "c5c5fd1231105f8744bb529191330b99401b9f010456dc855f1e9236a0fb53bc"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-06.gfs",
+      "bytes": 776,
+      "sha256": "1a29e8c038b123a60479ae73be04c16fef8774cd032782cab0072549be83cea3"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-07.gfs",
+      "bytes": 786,
+      "sha256": "6f40a257f5bce7fc3d98517dff325eed2428612930d5215a57aa1233ff6850c3"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-08.gfs",
+      "bytes": 786,
+      "sha256": "e7658b95b7863eccd0d5b39eded68c27c5d77a20256ffd03d592bc6fd9be177b"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-09.gfs",
+      "bytes": 776,
+      "sha256": "3d613bfe4f2e7e315ab0bf7d8e57a94c0082168eddcc7fde8ba0782a91ce2ba3"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-10.gfs",
+      "bytes": 806,
+      "sha256": "c23a5ff6e2f698f78db602d01d3b04f39568807725885c2aa0fb787ea9f6594b"
+    },
+    {
+      "path": "validation/scenarios/alb-verb-advanced.gfs",
+      "bytes": 4849,
+      "sha256": "d1c17da17f5c7636e2ffc2b677cb0d821b1447a875c205b2c63ba6d359f29eff"
+    },
+    {
+      "path": "validation/scenarios/c9-public-api-smoke.gfs",
+      "bytes": 721,
+      "sha256": "61cae28d050011ce130ad213f782ee7967ce27c28ceb21c5bb4844832fb48d22"
+    },
+    {
+      "path": "validation/scenarios/c9-release-surface-smoke.gfs",
+      "bytes": 1272,
+      "sha256": "555843ee261f069c62c09ec0f7e4d78b89cade377c8bc9a5f2e886ff4824ca29"
+    },
+    {
+      "path": "validation/scenarios/c9-resource-smoke.gfs",
+      "bytes": 1503,
+      "sha256": "22990089c2dc59781b031598d8d6e79b916d665c86454c1764e045f343e16df1"
+    },
+    {
+      "path": "validation/scenarios/morphology-max-positive.gfs",
+      "bytes": 1334,
+      "sha256": "70b585ccf5bf36b8b87676abb2e8adb0972ae0c4b9e57750185e5fc489711b12"
+    },
+    {
+      "path": "validation/verbal_advanced/NEGATIVE_CONSTRAINTS.md",
+      "bytes": 636,
+      "sha256": "d59ddb3d09bd5ca5373640c7129a33c711a4830525e2b24cc9ceda4e76570b5a"
+    },
+    {
+      "path": "validation/verbal_advanced/README.md",
+      "bytes": 625,
+      "sha256": "8c4457435e0e504c10b131eaf0d4e38c0cd7d026b72adcdbd1bc49a406656688"
+    },
+    {
+      "path": "validation/verbal_advanced/STATIC_VALIDATION.txt",
+      "bytes": 810,
+      "sha256": "76765d147ccb3e37465970172f09e1ad86a35e7a0564ff4bd86a78a3b0076673"
+    },
+    {
+      "path": "validation/verbal_advanced/VERBAL_MATRIX_EXPECTATIONS.tsv",
+      "bytes": 9740,
+      "sha256": "beffb71ef886dcd07bf79ac071b7d7808611f0e35ad6a41dde540656c2c3d831"
+    },
+    {
+      "path": "validation/verbal_advanced/WORDBENCH_PROFILE_CONTRACT_NOTE.md",
+      "bytes": 1053,
+      "sha256": "98044df6e0a22bfad08a64632bd97e7e8522420b1ba32db20cbe4c5fc325cd10"
+    },
+    {
+      "path": "validation/verbal_advanced/WORDBENCH_STATIC_CONTRACT_AUDIT.md",
+      "bytes": 1419,
+      "sha256": "c1bfebd5462045cee7e08ab0264cbfac95401030ae6933ceffe8d5a861dcb619"
+    },
+    {
+      "path": "validation/verbal_advanced/WORD_BENCH_REQUEST.md",
+      "bytes": 1272,
+      "sha256": "f3cb7cf7a202b18ca36772d21d6ee16bbc34d54fa9c29dd6edfe93241ae6144a"
+    },
+    {
+      "path": "validation/verbal_advanced/run_final_certification.ps1",
+      "bytes": 1253,
+      "sha256": "0062367e5fe07d978b743ef37fbd9e82fe49861020ff1341c32c43e84348b58c"
+    },
+    {
+      "path": "validation/verbal_advanced/static_validate_verbal.py",
+      "bytes": 9261,
+      "sha256": "6442796e4c777323673b389fe1c37474b73c4e488e6b03215c14b4c7cc5047ce"
+    }
+  ]
+}

@@ -1,0 +1,735 @@
+class_id	category	line	signature	guard	error_guard	uses_active	files	gender	body_sha256
+mkN001	N	5	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	1b0c5fcf7ee2edcd2bfeba28700cc7d8bf0eac9fdfe033e9be6f39c92f18d5e2
+mkN002	N	27	Str -> N	False	False	64	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:64	Masc	2deb5fed5ada41f239b60e296dd8b480702386d65ee46014d767afc26c1b9e96
+mkN003	N	47	Str -> N	False	False	8	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:8	Masc	bd67ed72e56e3f5ed3cae27dd7b802a3c89ee76855bd48468db87e68a0a6dda2
+mkN004	N	67	Str -> N	False	False	0		Masc	8ee74304aa8c296ceb179c2880acfeee0f511d62378e835d483cae9a3c46a252
+mkN005	N	89	Str -> N	False	False	49	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:49	Masc	18d233ea16b37db3e1cc455b2a84dabd6a7c552de683293a37ffc0adb488fb36
+mkN006	N	111	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	6a84b80d27124193909840b71ea19e478254d1cabf019ee0508e8cbd8ad03062
+mkN007	N	139	Str -> N	False	False	44	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:44	Masc	4f542e281942dc7d1a818071bb79d7ac62bdf9235944b169976b057c088ce90c
+mkN008	N	159	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	9a66387aa88fa055e90893de082b812178481c794c01ec149e508ad70c5860a9
+mkN009	N	181	Str -> N	False	False	11	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:11	Fem	39c5e563347d84a78fdf461339ab07c3f1168bb14b97369797ec673c30800ee1
+mkN010	N	201	Str -> N	False	False	4	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4	Masc	ea15c59565d5798ea062da9fe9a746b5a86c96fa94a6627549238720db846900
+mkN011	N	221	Str -> N	True	True	10	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:10	Fem	ead5f0feca9406d6344fa90fa265de136d60359a8c1375a9bc8f23b9564bb8f6
+mkN012	N	244	Str -> N	False	False	7	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:7	Masc	ce202a9d5fc024f3b4cb205e23babb933f0f80b43e182d3a177214a25b606bbd
+mkN013	N	264	Str -> N	False	False	50	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:50	Masc	e627c6ce7e6797e6493e4d3243f6953be571562348b85d4eabdafdb1745b12ce
+mkN014	N	284	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	1d43462d5080f5de36d6ba50ac9b343b2532c87417a9fa578162ff836c1d8633
+mkN015	N	304	Str -> N	False	False	0		Masc	c5b02a0ac1b6aab2f96d78ad1109e303f87b5dc4ca6d8ad09c02159592b97ec1
+mkN016	N	324	Str -> N	False	False	0		Masc	26573a56e77fe4b95d94d0705edb5c4217687ca33fa20e4e1abb6e7608877e1b
+mkN017	N	344	Str -> N	False	False	47	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:47	Masc	806faab3ed3b1cd77e4f0b1d9475909bb93ec0d9fc58d76aa848122e4516beef
+mkN018	N	364	Str -> N	False	False	0		Masc	c663306ea51385c4acebee3838c56fc4753313691130b83a8d24970b2e179a42
+mkN019	N	384	Str -> N	False	False	0		Masc	83b59ccdd04a70ac0f2568592486c6ab0eabbc13b604305024bd2828f10d314a
+mkN020	N	404	Str -> N	False	False	40	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:40	Masc	d28c663bf9d0cab21221d9cafb0edc019211d7344d9069a19f2b9171fa3aac48
+mkN021	N	424	Str -> N	False	False	0		Masc	190f80c1469d9fd29ab522d2f1092ad1c456c0dbcb91f669cde2d5bad59917d0
+mkN022	N	446	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	e3285a4546e5d82249d85c90d450be428e665cb3fceb286f8b31940eb96a4e06
+mkN023	N	474	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	0b344bc52ea5c9b2099c8c0c089af5b8264e9a730ea59c637ccbeec4efc4d662
+mkN024	N	496	Str -> N	False	False	0		Fem	53480c2955392c4c1775ab6893d7a04e3ada593ff2bd6e18999d2b1021322355
+mkN025	N	518	Str -> N	False	False	0		Masc	b64e030bab385b659cbe446d9ab9361db5c14df8643135e633ad0865f999daea
+mkN026	N	538	Str -> N	False	False	0		Masc	e48329b047f2a06644caea56a9e5238268db8a6dcb8497edcef258a46c5ae43d
+mkN027	N	560	Str -> N	False	False	6	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:6	Masc	0aec0b2c4eb9c41fa2b338b2c5275251a15ae36d055e52a3c264aa1e03daac02
+mkN028	N	582	Str -> N	True	True	7	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:7	Fem	43a9a949ae04c31081c8f3cef48710ed03d2784b12f3d69a728af2098babfc52
+mkN029	N	605	Str -> N	True	True	0		Masc	020bffc41535cd09d826e82bef20ca2ced0b159307b55ad57d2d40bb46d8fd7b
+mkN030	N	628	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	35e401f8a53276f6d8ae513bcd2a5cfbf4476b42b30d8dc051fbed4f25d18775
+mkN031	N	650	Str -> N	False	False	54	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:54	Masc	d8c2d4c822850205e5ebab85a907d383493f19a727dc4d69343ed6a831ab1f8e
+mkN032	N	670	Str -> N	False	False	6	AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf:1;AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4;AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf:1	Fem	4e9d221d374a41fcdc4a47733d20e5c6b1b049002d2b6e9e96197253e3ade710
+mkN033	N	690	Str -> N	False	False	0		Masc	23df57ed214152d543aa44f7e1f6dd8fa71da1af14ea6e9d0ccbf736684d968f
+mkN034	N	710	Str -> N	False	False	31	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:31	Masc	8014f3c78f17f72099845d983265624f3daf2446de42165018f3ac3a48c09a05
+mkN035	N	730	Str -> N	True	True	0		Fem	c9e400ffae7af1753077e79fa14b2303a9452aa717d94ecba56f4ce496881945
+mkN036	N	753	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	0e338aabfdeb3eff438bda8bba64a147d9b1f7b82874f785a21ecda072d48ee6
+mkN037	N	773	Str -> N	True	True	4	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4	Fem	6475b3453b5142762dc75664fef91a33bc383a165cab7d2b1234ce45817128b1
+mkN038	N	796	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	5f1c6f950fc96e6918aed4b510dacfef9109dc62b00fff69e8e8a060114c6262
+mkN039	N	816	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	026b0bbfb361d466e2c7627505a2c1bb5e40b7e41db7c00720486206bd9479db
+mkN040	N	836	Str -> N	False	False	9	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:9	Fem	c6c990a160b09a6dc939a5e1c64fb27ddee152e2b2c38d008c08ee60836e228f
+mkN041	N	880	Str -> N	False	False	6	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:6	Masc	e46331e3d98ca91d6f0ac2aef5bd4413ca3336bce49d274a3c387a890565bffd
+mkN042	N	900	Str -> N	False	False	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Masc	d942e4f6a89a35590a600f0bac653fc256f8d621f82ece4331347c132a837de1
+mkN043	N	920	Str -> N	True	True	0		Masc	22c5e8f3753996c3df9c586f658ceb0bbf05b303bf4d3e419067712461abe100
+mkN044	N	946	Str -> N	False	False	0		Masc	4f42e574f80d8998c1e8921d8cf4b99cf619d39d7edd1370771607da7ff4bea7
+mkN045	N	967	Str -> N	False	False	0		Masc	991771f5b0889f625f3791618407837f14e25bbaa91a912e150534331849f600
+mkN046	N	987	Str -> N	False	False	0		Masc	cf3cdacc324488203d00f94d936fbbcaccb564e0a619912e2f545e5ab0d0336a
+mkN047	N	1007	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	1d76cafe471be405eb721573e004e5884b5ca201e2935a049f65c77c6e526971
+mkN048	N	1027	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	f7910fc0dbbdbae210c78591c22453e89fc884394b8dbf3ff7af9e7f37647d12
+mkN049	N	1050	Str -> N	False	False	0		Masc	9cdf2501531b612d0a678f95a5c3c3f757f393abae680186f934817fa058a765
+mkN050	N	1070	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	c43e41fb5097f4c6fbbd0a84c71f2a80a63530cbe14ffc18584ae1d233079b5a
+mkN051	N	1096	Str -> N	True	True	0		Masc	18594e8edfda458effec1b6af6cd1ba6640bd0d2e3cda734fde65f618d8d2e54
+mkN052	N	1119	Str -> N	False	False	8	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:8	Masc	70ff45be6d45136840d935b2627f8f7348cf6e1d1e85e503730a32ab30645ca8
+mkN053	N	1139	Str -> N	True	True	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Masc	82e7bc6dbeb65546c2a284d98ced3d084372717d44cfad2d6568e3cf4f715c5f
+mkN054	N	1162	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	f2ea6dc958c3f14e8412d7785f1023c6a09b4f2a03d1c880f400f1dd38dd91e3
+mkN055	N	1182	Str -> N	False	False	0		Masc	a9e1b7462cb7fdbede8f3ca064876bd6871990ba286066399988b2f2a56938cd
+mkN056	N	1202	Str -> N	False	False	0		Masc	60082a51f8b86375b02888e8a99f168652a319ca87e66133ea619d560e114c9d
+mkN057	N	1222	Str -> N	False	False	9	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:9	Fem	d145edb52b2c7b48cc0e7699093f09dfedb51ff13ad96c0c3d212af16a76c8a9
+mkN058	N	1242	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	569f66f218f32757a62a0663712c87ebfb2719f5af5fb762fb1f6938bb0e2fba
+mkN059	N	1265	Str -> N	False	False	11	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:11	Fem	318e30bceef8d38e9ba9d3fb6c75f0d1bb226632eebc1d9a8340b07459af98e2
+mkN060	N	1285	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	30f2fbc9c67ef961ba3ac3443810b2d83e749c6b41faa81ccee213b9dd606360
+mkN061	N	1305	Str -> N	False	False	0		Masc	478ebf188b7f7dc2830858a9a352c50ee46a0ad4039bbf7e806ee9b454dfbe7e
+mkN062	N	1328	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	4676a30b57c93ceafb75c1ebfef7f29d5da179f031cb29fba987e8efa52e4eec
+mkN063	N	1351	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	6e9d235768d7acc24eb5f83a9b0c445e1cb6e02f87f2abc6ffb5b2584feaed01
+mkN064	N	1374	Str -> N	False	False	14	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:14	Masc	aeb872b3aa8fb1ba67313f7533305352b2949fba7a775853ffa2ebf25698cda9
+mkN065	N	1394	Str -> N	True	True	0		Masc	401402af4fc6a2c3b1657f6ea269e39e2eb5a4846ee6b56d32c218df4905b4d0
+mkN066	N	1423	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	bd7407890c18121187fcf39b4be54b92afecfa999faedc85e15139ca20b2dbfa
+mkN067	N	1443	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	33994fb6c2a5f15d294349ccef9c074b4c58dfe0dc1f4c29761406a4862d5c11
+mkN068	N	1464	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	061bc591af9d918ad0eff2188961f684fbc3e4b9bda47eb41d0af66ad07eec85
+mkN069	N	1493	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	4e4b8bb9add1fa5bc820ce3bbc60a0692c85e16b48c509e44e2f51dc1672baea
+mkN070	N	1513	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	cc2f51850f473979503c9670da3cb0a403de9d2f98eea5d8e478be7cbe7cdc63
+mkN071	N	1533	Str -> N	True	True	7	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:7	Fem	06548c0c70e0ce0f6c33f9a5e4ef20fe6152b8f967746662e9bcdc7a06ab5178
+mkN072	N	1556	Str -> N	True	True	22	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:22	Fem	7026409d88949eacb3f0d735a5a548e9951fd7cced54b8696e5aa2a8910e1e09
+mkN073	N	1579	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	267c5bca59f1c77db8afde342a26540d50deaca24558bf25e38fd0aba1a1ef4f
+mkN074	N	1599	Str -> N	False	False	15	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:15	Masc	583e289f604ff636b06a32c6fd6c7c00288f7f94ec73312145f0db4d91a3f49a
+mkN075	N	1619	Str -> N	True	True	0		Masc	12dbab86b906dbe057a554a0bfac7189f2e0721b9f2d1e71983ceb6d3edcbf04
+mkN076	N	1642	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	b3e2b06cfecd72069dafe5b3ecc1407d0cbceb429aa79fe4233a9e28acc117a7
+mkN077	N	1662	Str -> N	True	True	0		Masc	5eb471958448fe9031d19985d0ebf649d5e5147fae6b7ba5ca9cf4259d728aff
+mkN078	N	1685	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	3faeedaad93a6a0bd0c34b88f5ded35eed33676b8c6f7d8c16072ed641691a6e
+mkN079	N	1705	Str -> N	True	True	9	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:9	Fem	147719f6bcf805eb659c76b1f63863e7ad09102c6d3e11609ddc90d7ad71c310
+mkN080	N	1728	Str -> N	False	False	0		Fem	a9860703296382b84c46b8b4b4d5cc6ff6715826780fe478bb97b5a114b086b1
+mkN081	N	1748	Str -> N	False	False	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Masc	1fd0de758f5a6e8e0c9e4616c3e6bae54a32b7a80a7b5fbe9067c1f60974f4b5
+mkN082	N	1777	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	f2a34c6e72983ddd6653f7b69d3078945b3245c03828cb32b7bd8dd63ff6dc6b
+mkN083	N	1797	Str -> N	False	False	0		Masc	e904a71660045665078540a29da46633c4b65ee8a49e628bcc0bef961ba17217
+mkN084	N	1817	Str -> N	False	False	0		Masc	0e30eee4559724db299e5d1e099808b07d42b1cbc1ad66f7d6434b076764ca8c
+mkN085	N	1840	Str -> N	False	False	0		Masc	dfb8d2f42d41b38e8b956e98b5cbacd10ee697919046016b0549b80d222ac6e5
+mkN086	N	1860	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	63409584d90f0d568d60a8216785d46750a1eff1f3b60a89d3e3bcf9e024565f
+mkN087	N	1880	Str -> N	False	False	0		Masc	a0280a536ca8314de6fc1f3fac7ad54ff35a987c05c9135a290076478dd07d2d
+mkN088	N	1900	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	d626f3d07b1a857465463a67c841f04b5dfdf33a7a25f8422a9dc12eb8e81087
+mkN089	N	1941	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3		df2dc74d3579b3083a19a559db39ae3bc8996d525c8fe25f91998a6d753a2237
+mkN090	N	1945	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	c186e5c2161068b62b464c33494bc4ec6c2f363ac67e0c5eb576535459db2c46
+mkN091	N	1980	Str -> N	False	False	0		Fem	59bb5991faefa15ea9202908fefbbc4e1dc85f487c137ff79d6a5897e5fa4012
+mkN092	N	2001	Str -> N	True	True	0		Masc	8246dbae8af0b3bf389addbafb18a21af9d659e6e2230d816282fe2959502812
+mkN093	N	2026	Str -> N	True	True	0		Masc	e312c02b486aa300ebe7099b5c13656fc28cbce561ce668d4478e410a425ed50
+mkN094	N	2049	Str -> N	False	False	0		Fem	2e0c57068a4a18e3a9f2bdc4da943d6bdb3d7196933a75b9f43c017c8b1bc9ee
+mkN095	N	2069	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	c5d9d727525a3ebbce1aac84743772acbd292e29c28617068ae0431a3adcf5fd
+mkN096	N	2092	Str -> N	True	True	0		Masc	885162a4d16cd8a96cfe12a76d7cec6fc978a67defef2d1a7922ebae1510605f
+mkN097	N	2121	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	7de63ae002fbff580d6041d1dff8367cf14eb6a9cda994dd98ff505b6a3fe383
+mkN098	N	2142	Str -> N	False	False	0		Masc	19c535c7d4889fa0a829053480f7c31c2b9e51a776644e80e3a7b563ce022dfb
+mkN099	N	2164	Str -> N	True	True	0		Masc	8a5eef4ad7afbdd6057f6e7f5a4b7e89ac9b556235410f1498a656744351f180
+mkN100	N	2188	Str -> N	False	False	0		Fem	1efd241a5ad7fa6ee3bbe858c2a4a99d7867ec80d28a7296b312af537c1d3cfa
+mkN101	N	2208	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	abe33bfd8933daa8c0564a4efc04f4d3c4f68d1a8c62764a2c18c934c0d5eac1
+mkN102	N	2231	Str -> N	False	False	0		Masc	4c3b8ed50a78b275e44dac35f4c6f7e67c77125d5c19439d3d38df877323bbf5
+mkN103	N	2251	Str -> N	False	False	0		Masc	1a48840462a556d793500d998ad0e9322c6f76c10ad63b9004d3a8901b5c34e7
+mkN104	N	2271	Str -> N	True	True	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Masc	a17cbe490d6d959736d6966f0e0946908e93daab2771fc0a74264a23f6e5a81c
+mkN105	N	2294	Str -> N	False	False	0		Masc	5372ad29cff54e1be7a4518cda8a3db9886a1c4a37df2ecb2d998b7c031f68c0
+mkN106	N	2314	Str -> N	False	False	14	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:14	Fem	99085ac4b722aff8b29d41ac65c1c64333312a20b9d2dca28cf24c3e85647244
+mkN107	N	2334	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	f141476f3f5314fa5752fd4242b6bfdebe6f277f6ec60d234031d395a8e5bdd3
+mkN108	N	2354	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	20986068526d18032a9d577396a9f748be87cf3e4e0bf5597858f49d0078f425
+mkN109	N	2374	Str -> N	True	True	38	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:38	Fem	bfc5f0cbe56f3bc08bb7a7343e625539b3c313faf8c210e2550319b8d82d9244
+mkN110	N	2397	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	936073b7a23e5eb819e7a09342c757e17cd99f8b37c4cfc7d7ba374c79da19be
+mkN111	N	2420	Str -> N	False	False	0		Masc	5648d2186f8ff0af5a127de5d0618710dce95371450f6f2dd102f02207f9f8a4
+mkN112	N	2443	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	d1a54ac66db222e165b3f48144bd11f0ac31f352b45f1ee4396888d8c21339fd
+mkN113	N	2466	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	9d00351244ab27396de6260474d54f4e275331e0537d2676b8ad5f46ac700786
+mkN114	N	2498	Str -> N	False	False	0		Fem	e0a5fbcae32b067e3b3181e696797e9c022feb87d0e0010f2637e54fa23320d3
+mkN115	N	2518	Str -> N	False	False	4	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4	Masc	2aac9379c253fc3ec35bd3988e8b1d4e111ae873ae0a3d6a28fda60ce8ab9452
+mkN116	N	2538	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	d981f75d0e374dbbcc753cab9dd6d76da1a9bdd0a652a8d2cc693a0d23032aa7
+mkN117	N	2561	Str -> N	True	True	0		Masc	4305a23154028831e93bf85a6db0e6ee67abf0002776b5d1bdb43924989c39a4
+mkN118	N	2584	Str -> N	False	False	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Fem	d01137c6f690a870c31b77f7e7ff97d918a2efa9327a573f0da34d4101b9207b
+mkN119	N	2604	Str -> N	True	True	0		Fem	24c12dfc36d49d03262e5f6d8cd92ba287d4a5050b89da9c8513bc27ad6c1915
+mkN120	N	2627	Str -> N	False	False	6	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:6	Masc	e09ac8fbb42db92c1b06b33798e8a87d319d66d429925c54d8a6b647548a3758
+mkN121	N	2648	Str -> N	False	False	0		Masc	a2c7d1362c7aa36f46f2cd60011f54ae12803bdd7ee5e316f761d5495e6e2ac3
+mkN122	N	2668	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	7e92de5723e818931540c50a1de7a3e55562d065b09efc2b64350a3b0dfc7473
+mkN123	N	2691	Str -> N	True	True	0		Masc	617e1ad168d38275680618a9ef9c8a0e96254ba659da0e577bb6867e10b419ae
+mkN124	N	2714	Str -> N	False	False	0		Masc	692d4145c2a403e063b27cd21b3af789d3064716d5eb84aabfc3143999340ece
+mkN125	N	2734	Str -> N	False	False	0		Masc	6cacb82b192e660b8bb61ff82f960ae17a41156007ccd224a31a4730479f8326
+mkN126	N	2754	Str -> N	False	False	0		Masc	b14c3460ecfa31aa2eab94b9aa7d018ceefd529198b7f44317d88bb981aa27f9
+mkN127	N	2774	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	e76fa3ad732c22bfdb2f0792bc4de33ce8cbc277a28dd08aad54e94a33514171
+mkN128	N	2794	Str -> N	True	True	0		Masc	60bf6b5b89ab5d1e9be697470bf97b8be6f5ec619a97d207ac3b7a128e7b2e46
+mkN129	N	2817	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	536dd76c68d395a162d25a788b69ec4db6716c9d23f62a50bc5bcd1bc2849fc1
+mkN130	N	2840	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	3821ba7b286bb6b27b62182576e012abb5b6eb1c3f11f49867782339b73e6d44
+mkN131	N	2863	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	dbf1484a97101e93a739d82ac476a65af5b50ab5c22195e4577be82a972e5bc1
+mkN132	N	2883	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	00bfd83722503961a85e8839b66ef1421e5841bbe43e2a7503df6a3bdd889e07
+mkN133	N	2906	Str -> N	True	True	0		Masc	6f6347f08e46e56674d8f1534d455ae11e0875d34410ed90ff8d8cf88bc869fc
+mkN134	N	2929	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	3df061e7e8788f6a642b2fa620600bda03cf2ad55af080e2ace7fcb2fc8a9a56
+mkN135	N	2952	Str -> N	False	False	0		Masc	d1955a0dd39ac85438d35a5f1ce674eb7e6b5f9ecda3500b2541d257c93d97a7
+mkN136	N	2972	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	aee1459a53aa0f8bf64f88f250f1ed17e3e14aa5d0328310114458d4c5661e75
+mkN137	N	2992	Str -> N	True	True	4	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4	Fem	2d9a353d5140a795c6f064fe711bdcc5f9e6058b5a807c5e32a459845ab39a02
+mkN138	N	3015	Str -> N	False	False	0		Masc	90ddb311d32bd5546f52f8b9804994dc6283acc657f6683b6eba05ccf82919b3
+mkN139	N	3035	Str -> N	False	False	0		Masc	156b592afbf5995d656aa443599f9aacd58e99933343961eb8e2bd1188dea0aa
+mkN140	N	3055	Str -> N	False	False	0		Fem	186379ba194900ef2f37342fa6322961ac8f9d1c1e1f5c6ec4523fe12c581e67
+mkN141	N	3075	Str -> N	True	True	0		Fem	cd6a77314947ad4554d539ca1370e90090cf4518113ebd322c52db72a3543e62
+mkN142	N	3099	Str -> N	True	True	0		Fem	fed6164f80de9892e3a65e4267d5f66f3bca025644195aac38ba824d24dcdc82
+mkN143	N	3122	Str -> N	False	False	0		Masc	e0e9c0c8fd3201980391fb5def192136c801396765dba0ab1a6df5f748f1c919
+mkN144	N	3142	Str -> N	True	True	0		Masc	92dace6d14fd7786dacc415e6378dd2992a294c4dcfbe8ffbadd190e9fe54811
+mkN145	N	3165	Str -> N	False	False	0		Masc	a4b63f31190249516b73e7c35558b7c858f78cf858aa408a74dcbbd8dd6b1a5a
+mkN146	N	3185	Str -> N	True	True	13	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:13	Fem	71c1484d362fb53c3afefdcfecd5979aea71c3c51c7e1947b8faac770026706b
+mkN147	N	3208	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	9b675bf163823d6fcc9198223c8881af59abcc63ba6613f4f3613e923a597e67
+mkN148	N	3228	Str -> N	True	True	7	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:7	Fem	3f7f1642e6df5e0da15341ad6284fcb12e08964d8aedd093ebe9146d860892ba
+mkN149	N	3251	Str -> N	True	True	11	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:11	Fem	e6c9b3b365c9ceda5eea4c9de4c138f9cef12dbab9779da1680b83b18fdce0e5
+mkN150	N	3274	Str -> N	True	True	0		Fem	e23a5f42e064fc22d87a9b82eafab586f05e94df287e26c580e9fd4393397db7
+mkN151	N	3297	Str -> N	False	False	0		Masc	0f894ca1ee6d2c5addc356094ee4aa5799918133149839c66140ddb4b96581f6
+mkN152	N	3317	Str -> N	False	False	8	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:8	Fem	31a148895e7bf0591ac1ee508c3ecce2a6a5c96f318b303481521e208c6f1aa6
+mkN153	N	3337	Str -> N	True	True	0		Masc	22d8476570d2f070b40bb3b906b46d2fbaae356daff064e35d2a8ae188e0ca98
+mkN154	N	3360	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	c30a82f8a27438ad2ebb59c79df32bd0965ff04b94c8a2478cfed79a94887145
+mkN155	N	3380	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	0d3b56c0e689fbb827427e397d5ab1f157eab61a5f50872ba9657c34b8818cce
+mkN156	N	3403	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	211cb6a350a5116ad2f7190ca472bf4bffe88eb09a87f4447e4f625cc3c6820e
+mkN157	N	3423	Str -> N	True	True	0		Masc	234e88a5fc2b646d1dc1acebc918bad54ae1babd8594eb35c8719dbcbafed6cd
+mkN158	N	3446	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	94109352a8e88240b7be681ae7a0efc87194a14bc43fdd40d4db768b6bfe3fe4
+mkN159	N	3466	Str -> N	True	True	0		Masc	de6bf82f6096a68092a8408f70dafbcf3950483ea6ea952cb21a12343c24e371
+mkN160	N	3489	Str -> N	True	True	0		Masc	fb679ad546ae69562999ff2e084e51dc7ca2be3c904e3a940b9c011922215cd2
+mkN161	N	3512	Str -> N	True	True	0		Masc	f9a9162f464a14b00cca2e21e675de1d54e950b3eea5130f25eb612a00c8c709
+mkN162	N	3535	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	68bb50bb2b2404ba06def808316a224828773f5e14b8b514cc303b9abd40a092
+mkN163	N	3555	Str -> N	True	True	4	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4	Masc	e729a65b80bbb815118ae72b98692d565e2583026a91af59166588232c9d5f07
+mkN164	N	3578	Str -> N	True	True	0		Fem	0e6582c4e51f53d777731891816c67f0978f0ad95c219827e7f5f3eed8536cdd
+mkN165	N	3601	Str -> N	True	True	0		Fem	215ade65e91ec36cd8a39c86a11364a28932fda29260f5a1fc9f220a64cd4f7a
+mkN166	N	3627	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	8fd4223f6c6182ef6d9849806ff27f6d80d2289bd99334b62b21d9d71de48ac2
+mkN167	N	3650	Str -> N	True	True	0		Masc	d15d0ac0f676a977880deb10a196b024c54abae9473595491fa9b5ab704017fe
+mkN168	N	3673	Str -> N	True	True	0		Masc	8e63ea24be6494b10adf69ce6f489d2fcd1cb84332305dd45e3ba5b5c7f4f969
+mkN169	N	3700	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	5b9ffe5090d922a9ee4865622ae5945c4fb044e4ef8dbd8a1779d016f7ad5bbd
+mkN170	N	3727	Str -> N	True	True	0		Masc	1806bff5a85f5a12806fe71fdcf3969b3c1aac736626a4cbc7de5e5a6e19da53
+mkN171	N	3750	Str -> N	False	False	0		Fem	7b23f49d402a80aa09a2a39ed19b3366ae5055f87a114cf4875eca4eb47e46c4
+mkN172	N	3770	Str -> N	True	True	0		Fem	fdc4c46646960b66984118692bc602c35734650e7ba278c58e8fea880b132d54
+mkN173	N	3793	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	04a551a8aec18037e713067fd62bf86bf170de4d9fa0485755206d50139e38bd
+mkN174	N	3813	Str -> N	True	True	0		Masc	0a42eb45d319db5c540ddb3026eadeb034558b24983f0fd1610a5a5b86d9d975
+mkN175	N	3836	Str -> N	True	True	7	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:7	Fem	b1bbf23502de2e6a7d3175ed2b3b23acb976bf41c976a2239bcb17ce4a3d54ca
+mkN176	N	3859	Str -> N	True	True	0		Fem	bde32f2d736d867c86b772575a1456d571305456285fb0ef52c4c00fbe6ee4a1
+mkN177	N	3882	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	ecfea12fea93672d106970739469f4b897d6e8dc674b15a912ce93b55fe84d4b
+mkN178	N	3905	Str -> N	False	False	8	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:8	Masc	cddd5ccb95a748786b3e1aeb8309185ea690c1393381e519d19a8a56020cdb75
+mkN179	N	3925	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	d11cb165c9924753e49c0c8c45fcfe1472e2869a44531b6f57ec8aea609d64a6
+mkN180	N	3945	Str -> N	False	False	0		Masc	503f630d4e121abb163bc02cbefa8bb2b6cb12afe0da334aaa6292b1204e89ab
+mkN181	N	3965	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	ed28d021ea099d2bfaa90e4356a3aa850262eaeaed0084a381b8538c73dacddb
+mkN182	N	3988	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	f229025d3edd26566991b4d82f4e985977a0aa8f72a07061003fa7af9676d9af
+mkN183	N	4011	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	26721cf9f2cea048f336ba73155b778c2cdabb6b2d4ddce364f9ba64de7bf93d
+mkN184	N	4034	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	bc0ca1ff3c2f77d8c38eba093bcc4d8448e0e5d7688419d10a4cda925ec0c3dd
+mkN185	N	4057	Str -> N	True	True	0		Fem	b6cfa5c93fd5d481b74e94bcf3d724a85eb038301863cb4e9dd4ddb157a581ee
+mkN186	N	4080	Str -> N	True	True	0		Masc	6e7ac0dcec8adfe568bf4f401dcd3bf26d14c6bd59ff36fdbf36b407fd289b9a
+mkN187	N	4108	Str -> N	False	False	0		Masc	3e31aa99098ef4266ef267699afedfda2f00ae7ba774edf2588c7245e91cfcdb
+mkN188	N	4128	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	837d9768ff268779ef30b09f29d39eb7d29676487f18120708b2580859ad27c9
+mkN189	N	4151	Str -> N	True	True	0		Masc	d3b09e2fffecd0b9d1eac29239debe61ac8f94b38a08ba2c8b286e91a1428862
+mkN190	N	4174	Str -> N	False	False	0		Fem	28b3d96cd420eaaa59817ce323fddabe6cc2830b57fbd57bca0456ebc1e8d107
+mkN191	N	4194	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	27815523b9c5497ae443ccef1ef82b4e324bc8c1571a4fb83b48007ee52ac620
+mkN192	N	4217	Str -> N	False	False	0		Masc	f2863b4c5c71df5ff5abe49783737577fe86b009033f0806b675fe9a2b69d00e
+mkN193	N	4237	Str -> N	True	True	0		Fem	0a4a87f01df9d3fbd9c878e004701f8b33bf3390e38d5714eb19c42539af80f1
+mkN194	N	4260	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	64d89ffd7d7ea21c4bd8664171c001f31d325df709b28c6c22718a07f75bbe8a
+mkN195	N	4283	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	85ca5ae3f725d2ba247387b51bb4c6d4b9326309b5d0e35294df8060586c02ac
+mkN196	N	4306	Str -> N	True	True	0		Fem	a87ddad0bdb76a835fc384e70a05b8738fcbfe7e205a50cba114a7463ce60cd3
+mkN197	N	4329	Str -> N	True	True	0		Masc	d62c3340fa05103b1a44bf6cc54879c08c0e2899b4dd487e8e214b98ed9f9579
+mkN198	N	4352	Str -> N	True	True	0		Masc	8187cd38ba33431baadf9c36c52cb73454d0875fbba86f77aaf9a32959f28fbe
+mkN199	N	4375	Str -> N	True	True	0		Masc	10d16b113ada69eefc301663f1ef36ea841be0f17b47844d214103531b530ad8
+mkN200	N	4398	Str -> N	True	True	0		Masc	bf4c96379ff5fd88ca5d13de8825df0389421270a8ae092390fd729a3f679e1c
+mkN201	N	4444	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	c40c065f5b948b715f24b22db297801eb527cdff9a7cfec9e4d070d6a836041a
+mkN202	N	4467	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	5d5167275c3f87ab11e28f7f86b9178ad42e1f7226fabf1f2958dd6d6c51359d
+mkN203	N	4490	Str -> N	False	False	0		Fem	e23450c411b3354e86fc9727382fcdeeb0fd81222726cb615412111541887e2b
+mkN204	N	4510	Str -> N	True	True	0		Masc	142e7cccd8a43bf17e92b2bee58f6de607ddaf291d6181c3032caebedc39b084
+mkN205	N	4535	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	211ca2c8745d12a99499eb65e201328e7258498b6e8eda048c9fe54a260b74c4
+mkN206	N	4556	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	f0bc206918d2ec3a1bbb6f86f16cd5a6c68915357ec6e11cacab360f8902a88b
+mkN207	N	4577	Str -> N	True	True	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Masc	35aed6b00ebcdbbf63855055416fa79f88ab2e5d5bf9005b9fc8c6c147c4a49d
+mkN208	N	4603	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	c9dfad6788b46f6deeb3f8922fd50e5e9c8c78fc1c5e1147b2eefbef6b7fbcb1
+mkN209	N	4626	Str -> N	True	True	0		Masc	65cbac20efd26915dca4fde6158eb4c975c46f24bd2cb65f1ad7caf1e233d91f
+mkN210	N	4649	Str -> N	False	False	0		Fem	5f22333cd10bcb6e4787f4bb33ad143ea8c0d242db6a864a67037020737659b1
+mkN211	N	4669	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	0136fd0f1a05b063c8bca6e9053e63b22eeae5a241e28ca108ae12b29907cdef
+mkN212	N	4692	Str -> N	True	True	0		Masc	dcb1f0d1b38646a03b4a486cff50d3fa50d26b4e2aff8e1bcb026eabd94216d6
+mkN213	N	4715	Str -> N	False	False	0		Masc	1b0cb3b7034f5797e1b07f282af70c62752ab60f2cce55b03e67416e5f388045
+mkN214	N	4735	Str -> N	True	True	0		Masc	30ff9f5aebe0a8230da7b4ec20b86f3dfe9b6a790df66ea3e203befa4eaa2181
+mkN215	N	4758	Str -> N	True	True	0		Fem	100e407b7465dcf4c54b178a3a7096be2addc9a9b9d27b39cb29406cfbfc4474
+mkN216	N	4781	Str -> N	True	True	0		Fem	10b56fb9587335910588dee1e9787e93d2c13b4364d851489d15bec1ee6300ed
+mkN217	N	4804	Str -> N	True	True	0		Masc	4870b6998dd4937ef47d91c42ba39b41f7f83ec59042dd6cc0e1194852dbd51a
+mkN218	N	4832	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	c11e9a22ff3197fe6d3b933f41beb0b17e55221376dd688f7a63833204416a6c
+mkN219	N	4859	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	301ca97540132a2186257eb4069231d622f9b21e17eaeaa4c4faa2e6fd3a39f5
+mkN220	N	4882	Str -> N	True	True	0		Fem	9a39f8136618339cb5cad48d1c0c0329978460a332c20047fd38c069beecb36a
+mkN221	N	4905	Str -> N	False	False	0		Masc	1f6c9417f059ba1b3598a6d6c5ae6083048df56895eb9114b57ad44ed8bbfe40
+mkN222	N	4927	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	8b01e00f0576ffd6148e605884b373f8ef18c6ceac8f5a016c37b95de2b14fc7
+mkN223	N	4950	Str -> N	True	True	0		Masc	12840cd9106c1b28fc6aa2284d522c424e07dadbfdeffea3c2b999096bfcda4d
+mkN224	N	4973	Str -> N	True	True	0		Fem	12bf5552281d0e330960b9e976f9771edd6eb72b88f1022cd72d6e7bdebf4624
+mkN225	N	4996	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	86e0a61409f1d2468178fd2ef1bcc36548c25ef35a882fc3a74827d7fe88782d
+mkN226	N	5016	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	b20e53cdddd19b08224d06975f69e852ea129b33339896b77e56a7eb6f0d4bd7
+mkN227	N	5040	Str -> N	True	True	5	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:5	Fem	edade72908aa41465bf582db9e3b0ffb9a621ce234a7e04bc29ab32f5664bb0a
+mkN228	N	5064	Str -> N	True	True	0		Masc	c81426c60aa4b11a33efe945c075a68ea028eca518215392b9aea497739206a2
+mkN229	N	5088	Str -> N	True	True	0		Fem	5f01e051e8cfe265e230c474aa24e8f7af95935bac9534811051f2216423f2cf
+mkN230	N	5115	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	c75facf93f62bd0d8b01c17d09a895a802879df8c6fbbcd6a68dbba028079e75
+mkN231	N	5136	Str -> N	False	False	0		Masc	9e75ab5bc7fb50070f2983d879559042e0070c3d69a5e28851eec37abf857b2f
+mkN232	N	5156	Str -> N	False	False	0		Fem	c718895e1eaba176b6c1e6a3383776aa93a3ae195dc7243b7eb68db9906aa7f3
+mkN233	N	5176	Str -> N	True	True	0		Fem	ca2f5c90a0ae01a02d42f3a079a2b4eb55adc508a0fd9d597bd1f653b0110f69
+mkN234	N	5199	Str -> N	True	True	0		Fem	56b9eeb1a240cf37128c76c230bbced998425ec2905f68c60347c1d77c4ad683
+mkN235	N	5222	Str -> N	False	False	0		Fem	984b9eab25947b048734e0f07f88132de2000d9aacef0c8bf69398b8f46e908d
+mkN236	N	5242	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	a3ed59ab17489095809d963e6c2f38864e09c1abed93149a92d6c54e70f8fc94
+mkN237	N	5262	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	2941da88c406359dc89afd24c4ffa628837494d72720dbef32492f78b7b7bda0
+mkN238	N	5285	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	7a36d6d7bfb1fb0fdae4277f43d367e30e72e751ce6a86ee92feed658a124d3a
+mkN239	N	5305	Str -> N	True	True	0		Fem	059eb63c2a28a8854e4a388292da34b25d0c39a16d570bba36a76383fafbf2af
+mkN240	N	5328	Str -> N	True	True	0		Fem	265fa314a4b8e2e215b3b6128f5804673271e24d8a801989f32e9897e3f8dc0e
+mkN241	N	5351	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	22ec7552b98b347d53ee420ab29aee7cd094162c1eca4b4b07590243a32ed824
+mkN242	N	5374	Str -> N	False	False	0		Masc	28f860b7c469233e1d316e286d18d19a92b97700af82c49951f4acb4eb2aa2d0
+mkN243	N	5394	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	b86bbf0c0d026d4723f9a5f7591983deacf28d5ca58c5520354821cb7f471512
+mkN244	N	5417	Str -> N	True	True	0		Masc	16cff7dd26d979976a83bd7a800b18afe0dbedc3defbd33d1d23403ed9ae140b
+mkN245	N	5445	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	f78996b0cea28488aee175445962a35e98e1e94ad2444bfcfe0ccc3e33bba297
+mkN246	N	5466	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	46399ca3f62150295bb8e967ad7d2f6d4b317d284e63e25917dfcf8dadd55e1c
+mkN247	N	5489	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	24371da1ff16ad8881a407a3d83cb996a52ca25315d35917516e7fb9aaa3f4b0
+mkN248	N	5512	Str -> N	True	True	0		Masc	1ee01d2b690e76ea43975ec39450dba1fa57c7397603347e18883a204bf7552e
+mkN249	N	5535	Str -> N	True	True	9	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:9	Fem	785b36f3ca79bcc0409c7bd0c766375e1da5dadca71b5265a6f130d356b4a6d8
+mkN250	N	5562	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	af4bd23ce43173da8697dd769d9c34a6900aee28c3752a0aaf6cee9e614a6561
+mkN251	N	5585	Str -> N	False	False	0		Masc	9116d38ae40d3dd042692d1bbcc9e61fb23074111c77ed2984eeacea98410c40
+mkN252	N	5608	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	bb1ef00fafd280a773698180c4402369386eec78ad031f4ea1b08ba53e7e102c
+mkN253	N	5636	Str -> N	False	False	0		Masc	e52e8cd357e6749d5e38b9d69773bd5a999cf9998735ff73e6b7ccf1c2bad298
+mkN254	N	5656	Str -> N	False	False	0		Masc	4e3b421331bc69db0c193099d2754151d21b87ef9fe2c94b0592b179ba155f04
+mkN255	N	5679	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	f2a75ac40a0bbcfc1beff9fc6f7a12e63389f1e2097bdb4451bbf381b1465c7c
+mkN256	N	5706	Str -> N	False	False	0		Masc	75003ce5ae825bf9d6387644035d072e8d68ff99447016088d62a549fbe31572
+mkN257	N	5729	Str -> N	True	True	0		Masc	7efaf7eb22db2552a4b5694c943f0bb318333e33301fdf7f1e6d0300b8d697e5
+mkN258	N	5752	Str -> N	True	True	0		Masc	65bb87cef9e243e5ae574184c7a535be4bce3b67291cf6a06125d35b95c87dfa
+mkN259	N	5778	Str -> N	True	True	0		Masc	9e57d04cceee746412a8e038945f380aff241ad47c1b85edde61c3c22fbaac23
+mkN260	N	5801	Str -> N	True	True	0		Fem	4abb802cca7f9a6ac30090e3efbbb95dc9e16d11c3f0f066551e22dea1589774
+mkN261	N	5828	Str -> N	True	True	0		Masc	3af0f5e2e69e971d58775d2f0e2b96b0297e02a18913dc08f982319c38f12cb3
+mkN262	N	5856	Str -> N	False	False	0		Masc	d7cd7820e6379ff445fcdfaa600f5a8161108f639b23c2c55d6f586781cdaa57
+mkN263	N	5880	Str -> N	True	True	0		Fem	e10ca140f97f9195fe51127fb5ea4fbdb195ab236c9a92aff98330ca5287c9c5
+mkN264	N	5903	Str -> N	False	False	0		Fem	958cabde8237437bbcfb325432d258d5e4c59d523c2904f5ef71a4c7660ca388
+mkN265	N	5928	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	f7a08c4d0022f0933f114333eca362d43f496a065e4a74a3b53e920455eb8fc8
+mkN266	N	5948	Str -> N	True	True	0		Fem	983eb8319ff30c884fe79bb8e9051c7a5466be7347c434b1112f94089521fa64
+mkN267	N	5978	Str -> N	True	True	0		Fem	ecc0a0fc76737db726b9ea0f7aa890f6ff0aae6588042b83e1ca9ba2034a6fbf
+mkN268	N	6001	Str -> N	False	False	0		Masc	4f9229dd9872d1a3e52ca8f072ac2a9d6d975777891b84f49359468f7b8eaf43
+mkN269	N	6025	Str -> N	True	True	0		Masc	db5b1f45a1df1bdefbd458b3b54015a82548cd8c1030854ecc99fca85cbcea41
+mkN270	N	6048	Str -> N	True	True	0		Masc	8bbb63e8ba3e34cd9ac62960d4b8216725483791ad0223ece70da298847c7498
+mkN271	N	6071	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	96e598733a2f1f19eb4058b43acc918b94264d08bbfd1fcdf3de164f3b101bec
+mkN272	N	6099	Str -> N	False	False	4	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:4	Masc	fa0c79252cb32495dda900c2466af151b107bb1c229bd51af85138e2f22d65d4
+mkN273	N	6121	Str -> N	False	False	0		Masc	ddd7e74cb1aacdee8d91add651cc9066220f293571f75d15038443ae9c192351
+mkN274	N	6141	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Masc	db92c9b32b635bc8d99e5e7ab9838e911a59ae7bb32d7b4ee0f4bfc65bb4f870
+mkN275	N	6163	Str -> N	True	True	0		Fem	fbd695b19eaa569bc10f6edd79d8e264dc6344a858b9be6e33984da3362f7938
+mkN276	N	6190	Str -> N	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	4c4fa9048129bb3bfbc26f831feb5095aea0c677fccf2aedb1ca2a54726f9a43
+mkN277	N	6212	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	656b8740563c88dd2f822e90fc7ec43278fbfd026694ade2f781a061c594a6a2
+mkN278	N	6234	Str -> N	False	False	0		Masc	6b19c9017e1e428dbdb194709505546adf1369999663c1d1d8cf84e5f0c99686
+mkN279	N	6255	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	80578c26130816234bbd504c9a3410ce233ad9274e0d2bdc83a76a3533d26b76
+mkN280	N	6282	Str -> N	True	True	0		Masc	a0abdba3355e18303c55c36dec1ae47921437dea63c9ca87d205abe9917cfbfe
+mkN281	N	6345	Str -> N	False	False	0		Masc	f0b2f3808248bc3767d22361e59f71c7ba3998da8ef16c2aa6169f3daf57927f
+mkN282	N	6366	Str -> N	True	True	0		Masc	7bd5023be3d23cb1b86f5ca7601d0ede636fb92cf0d169fed690309b7ae43faa
+mkN283	N	6392	Str -> N	True	True	0		Fem	c9da78ddf70b2a6803b1e7e3490419d781f3098a07912ca223e3c30f194a5559
+mkN284	N	6417	Str -> N	True	True	0		Masc	1093d4377d9438558184d7799e9192daa8b393a84ed5b733cf2438f402a3987e
+mkN285	N	6442	Str -> N	True	True	0		Masc	424faa586b53a9cb2e75f714f41338bd0bff46754670a938aa02edeba6ec99e4
+mkN286	N	6470	Str -> N	False	False	0		Masc	0b48a3f7687f7b6975025fb590c84245499f415899e7e9655859c31fd3f3f901
+mkN287	N	6490	Str -> N	False	False	0		Fem	e2e8973220012a4a0a02f481c2a02b4889af613b539d40c1f16fe56dcd3bd75f
+mkN288	N	6511	Str -> N	True	True	0		Masc	cdbf984cbedf6ab7e387c9aed93cba0112265bec5cb3462bb021e51fc0e7039e
+mkN289	N	6539	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	298ddf84a5e40b6ac4d405b66be3614bed772063774bac0604db74dcad2281bf
+mkN290	N	6560	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	536ad8944f01bf8a3fe83cddb2ffd2f03b6bb04945aafaf1a3f95856405d2f65
+mkN291	N	6586	Str -> N	True	True	0		Masc	eac3bfe09a3f727dd66e421c23fcae893c935617a02a9ddfac5ec1905536fb4b
+mkN292	N	6609	Str -> N	True	True	0		Fem	df40cccc30d920bf308bc90d65002d498cff23b4f316dc9e8b541fda50ef84a6
+mkN293	N	6632	Str -> N	True	True	0		Masc	bf358328de23c94ca37f40203a9b2ddbb94ec1b741b9c16bc2d356c8fadeec6e
+mkN294	N	6655	Str -> N	True	True	0		Masc	39b14747362bf9598788387c55ba51b645c5a68fd2020ae3a9d15dbe6b75c8d2
+mkN295	N	6678	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	1cb09b6ebc906267b345f1d4410426cdb8c42f55a68cac70df55c7686fee2054
+mkN296	N	6701	Str -> N	True	True	0		Masc	a5c0cca4474b08c36349afbb0b9b83a8f6d8b603e1bb75cf647666092e86e72c
+mkN297	N	6724	Str -> N	True	True	0		Masc	3e30b4d0043f91422884c7145ce2e6b145e81465ccd272a097ffd566065107da
+mkN298	N	6747	Str -> N	False	False	0		Masc	7c2fbfb8813f7acb93dd889f9ba30e0037ac983cc2dca047f94aefb8b9e7d684
+mkN299	N	6767	Str -> N	False	False	0		Masc	53a920bd7eb0ab7a880345e0b8fc8aa53dd8154a7a11a31c9c06e9b8fe98e872
+mkN300	N	6787	Str -> N	False	False	0		Fem	0c053a3843e0b95599907586a6f08b0865a6188f26a5b24393382841a71d2b38
+mkN301	N	6807	Str -> N	True	True	0		Masc	2e8730a0cf5b782d339b4223d017a1ed4c1acc291bb7d88235e46563e9b62531
+mkN302	N	6830	Str -> N	True	True	0		Fem	10b55c1dea468a842482a28813adb24a84dca77d65e3ce1f55fcdf9a62a041b2
+mkN303	N	6853	Str -> N	True	True	0		Fem	a2d6c225cbdf0f5ab806f10a7c88b2d1d59266a972b7f9c1f352607d51666d7a
+mkN304	N	6876	Str -> N	True	True	0		Fem	f4224658d7f4828427bc174e87059fff3c4b45f17c87e7c2203e673529d45f6e
+mkN305	N	6899	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	f889af55c7307acb77b1e492ea063b5bbf18ec9d05f13c04d5bec27a2f64448c
+mkN306	N	6922	Str -> N	True	True	0		Masc	d2eb4bfd7fff6eb37d2c1581b538e9284524a21acac95a96688794366803a097
+mkN307	N	6945	Str -> N	False	False	0		Masc	cd4d24380ec09c563d556336ac7c0318e96e671a99bb3b1b1603f02f6fcf28a2
+mkN308	N	6965	Str -> N	True	True	0		Fem	49e8944b1f26b96b13e9bdfb364fa4b79e46f159d80f43dec4b4629c6d73e250
+mkN309	N	6988	Str -> N	True	True	0		Masc	c3ed0d7ea96f3ca3deae1cea3745fcd6a8f205980d195b5dc93288977f1c8031
+mkN310	N	7011	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	d2dee926c99aa8ac993394c507a9103953b2e6ef2fd1b275a91aa4612105f37b
+mkN311	N	7036	Str -> N	True	True	0		Fem	12348d7c53b69a5c7e2f4104015997362c26051aff00d83fd04c199ecdf2feb1
+mkN312	N	7083	Str -> N	True	True	0		Masc	2ed699e1f260d127206d4f76e55ded62880d49970a08af3901081c9bd1e36ee8
+mkN313	N	7130	Str -> N	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3	Fem	3529778d9aa5ea33780800f8d3e6c0d612028af6b044c8b8d205700961d064b3
+mkN314	N	7177	Str -> N	True	True	0		Masc	8e7dd8c4bf45a31494a7c03b054e3284f4a3b6706abef298ecede1155e8ebabc
+mkN315	N	7224	Str -> N	True	True	0		Fem	1c4add78d83a72dabefe5e3bba83dd1236861f71dea6fc0210f347c94b2602f9
+mkN316	N	7271	Str -> N	True	True	0		Masc	2ba2f08698dfc6f9d95975bd4e3ba1c670c653075ec92ca1e67ad25a0ab3672d
+mkN317	N	7318	Str -> N	False	False	0		Fem	47373e04336a828c57276ad07b1d09c07f7b9e207e3ade74b24f35fb1588658a
+mkN318	N	7362	Str -> N	False	False	0		Masc	31881782f69528d1cc6fe937494e82beb1c0955d29d8842f2f4c3568071aff59
+mkN319	N	7406	Str -> N	True	True	0		Fem	6eaa955bfd73787b879651a3e91703b31e2a1a4ca8fa380ab782ff6d92db22e9
+mkN320	N	7453	Str -> N	False	False	0		Fem	dc4c41025d84636089265c1711982e891427ecd450a35d8f5cad3ccd8cc549e3
+mkN321	N	7498	Str -> N	True	True	0		Masc	0733f2ef9518fa31c57c74304157fd0d8b8d34c1de4c848a6fc563976b3e580a
+mkN322	N	7527	Str -> N	True	True	0		Fem	af6f6d5a937f19ff326bbab48d585d5738582360527041bc27a6b50d604a069b
+mkN323	N	7555	Str -> N	True	True	0		Fem	1dc70e886ee17217cfb8cd698a82c4fb9ff96e77601ac4f84896c75dc2c0abf0
+mkN324	N	7583	Str -> N	True	True	0		Fem	337db7437ae4400d1386ff1e79353b1785b41f090900e1932c4cb47c473b0857
+mkN325	N	7611	Str -> N	True	True	0		Fem	d06c144bbcc96c2b9ca68a18ded943fbbed92c7142aadb6ba6189207e5b19d6a
+mkN326	N	7639	Str -> N	False	False	0		Masc	068947dc46a5cbc1b17462de4665f2891651fa86f222d4e2421628957838d552
+mkN327	N	7662	Str -> N	True	True	0		Masc	4f95bba06d6690dca8f2cfa72fa68762b8a8b1ad1c2ce155ae4206d3acb37920
+mkN328	N	7691	Str -> N	False	False	0		Masc	0ffc6c33ae3af63f68488e902c6ccf5329f99ec99155a2952cc8138e94517ee2
+mkN329	N	7711	Str -> N	False	False	0		Masc	ee21b66dd5cd8dca4f6376ba679c0b225d10916b2f95bbe83a0c476f4eefb6e3
+mkN330	N	7734	Str -> N	True	True	0		Fem	d10133835407047a8ff31418909115e758b647e48c0f9ba1ada82a3095e8743a
+mkN331	N	7757	Str -> N	False	False	0		Fem	9c0a24ff9ec94e42d50de3697476925388c0ac8ebd22c5711dc5662f67e40910
+mkN332	N	7781	Str -> N	True	True	0		Fem	bb274dcc4ea5d920a43dbbe98d1d60ade132b56e174f55b62edbda5eb6a70a03
+mkN333	N	7811	Str -> N	False	False	0		Masc	1d889c4b809b766301441205892effe61f30fc699bffe1c6f4b12975923c3b6e
+mkN334	N	7833	Str -> N	True	True	0		Fem	a2d0bebe1a78a0ca61ab6a761c6649a19ea0b2da6cbe3cdf05681cdafae8680f
+mkN335	N	7862	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	a9e5954280ac242f7005fb47c7596fdd8792ad934f0dad2ca6aba681a44de9a6
+mkN336	N	7885	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	d5f469428a742e698f9282c47003bf861e024ca30609c01293b9b4c8e7ca0f73
+mkN337	N	7907	Str -> N	True	True	0		Masc	1f361778f26b56d1b607c381913395dcaec6676988d52d022bdeb97b6fd94c49
+mkN338	N	7936	Str -> N	False	False	0		Fem	b2e7b0c45aaccc7c7f2a6ca1693ee8fa46409e3d69668c2f742307c1e706631a
+mkN339	N	7959	Str -> N	True	True	0		Fem	fcf158a075c10c7299aec63e9c0bdfdae693599ad9b1100af528355534c8be34
+mkN340	N	7988	Str -> N	True	True	0		Fem	1f40f830eeae6788ef164df5fd8ffcb8698d3274b77e1a03defdb19bb8fc831a
+mkN341	N	8015	Str -> N	True	True	0		Fem	6c99307cff9fa7b9aa22a29d0e3d69e530824fe4e80bf48f4cb221d260f2de33
+mkN342	N	8062	Str -> N	True	True	0		Masc	b93b98d63fd0e4fc7db979e8d81589a3c275ec7c545e1ba98faeb60420111f10
+mkN343	N	8109	Str -> N	False	False	0		Masc	2d69158e1f5a611bd02b00a060793bf1a9dfa02893b20d065265445a25aa5721
+mkN344	N	8153	Str -> N	True	True	0		Fem	e9fc2b2ec5c9880b2ea8259d358df52351eb2285dd043aabdba3bb5fcc4b053e
+mkN345	N	8200	Str -> N	True	True	0		Fem	a3a721dc979a90fb49424d090286983c43dc60dc5267aec365135d7a04b25024
+mkN346	N	8247	Str -> N	True	True	0		Masc	bf805d463b14f663a945cb56321b68bfc283496fa07ad8db36c1997f579357c4
+mkN347	N	8294	Str -> N	True	True	0		Masc	4693a58696cedf92439bb1eca019dfc6a3c2350ac997a22358be854d30d6d0bf
+mkN348	N	8341	Str -> N	True	True	0		Masc	6e9e002089aacee82902ff885fd9aa38969a9eb06fc016e8a9ec3229046aa8ed
+mkN349	N	8388	Str -> N	True	True	0		Fem	cff71615525159b8786d9e26bfb29996e44a28bc8b2133ebd990e3d526fdc6f8
+mkN350	N	8435	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	894334139cfaaefe186f51d6bc8b586688acbceff23a6b2e2ae923e47fc44aca
+mkN351	N	8482	Str -> N	True	True	0		Fem	7063d140c2166972f70c1220d9a78ce443d53b5c581b47608a93b9b50b0aaaa9
+mkN352	N	8505	Str -> N	True	True	0		Masc	23d9ddc91769818fab6c786a872346084bd9ee7babc095dea588c69766198931
+mkN353	N	8528	Str -> N	True	True	0		Fem	fbb2a4521e08838adf20290c5a41211d17846dcf625a76b8d2ed604b55066f1f
+mkN354	N	8551	Str -> N	True	True	0		Masc	42f9feacb5026fbab7059ca57f6f2c3d531b86a196f6a2fa518fa40472dc299a
+mkN355	N	8574	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	815cf59940a2f4325ce10fc3bd8cce2aa0bdb6e04535316d0b8545d4fe5f83c1
+mkN356	N	8597	Str -> N	False	False	0		Masc	a7d337e4a21486c26c4d3f3c0da6d0ce01aece51bc87a6dc3cc2e67578b0ea43
+mkN357	N	8617	Str -> N	False	False	0		Masc	1fdf035c536626b2a82c48cb624fd56d9686948235f7c102d6dbe313fb50f7e4
+mkN358	N	8637	Str -> N	True	True	0		Masc	b515662bc4ba3235c9fa6e93e66ca675a04d8374e987b5677e53753411f3315a
+mkN359	N	8660	Str -> N	False	False	0		Masc	123ab7762d08c84b84155d3696e302d89ee48388482cd1290a5b51c77caafcf5
+mkN360	N	8680	Str -> N	True	True	0		Fem	6185b652e99c1751de584b9f009d43aeabc756e83ae4cade7cd760a80db00385
+mkN361	N	8729	Str -> N	True	True	0		Fem	047bf39f42ee0a92610d37b993c7523dabc7edb2f9a5b41d386ee1ff42659e79
+mkN362	N	8752	Str -> N	True	True	0		Fem	73214fd2640ad15d63e0077b68ae696d183b98a6317f2a88faa38f7d1c6f1101
+mkN363	N	8775	Str -> N	True	True	0		Masc	d2ba55999ae5316aae816769be6c5863649c2ec5c4d22a48a2d611be1826cee9
+mkN364	N	8800	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	924a9ec29c113cff54929ad2d48e3ad25a54780708fad00c39be1672759e3a43
+mkN365	N	8825	Str -> N	True	True	0		Masc	cb8e5c7a161e9b82abb414e94b7de9a5a825b19b1a4f8b11ed2c901129cfe5bf
+mkN366	N	8850	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Fem	0cbe9d58e87c337b5f054dda17654cf28f7e106caff09e5f435ba80609187b06
+mkN367	N	8873	Str -> N	True	True	0		Fem	603d38b33d486efcb6673ee4f2e16dee650d39718235adc4f0fb191fd086db48
+mkN368	N	8896	Str -> N	True	True	0		Masc	41a62e5bb1446bbb8ee5439c7191e8c4f082432690245b45bb497da27e5f9af8
+mkN369	N	8921	Str -> N	True	True	0		Masc	2068217d42bad4919af8f66052e1fb63fa769d2920d5986e88c42c95eade261f
+mkN370	N	8948	Str -> N	True	True	0		Masc	ed21bae611043affb1ba2d4fe723ace02e8a1e79d2a92b0dd61046a1231f65ea
+mkN371	N	8973	Str -> N	True	True	0		Fem	b54d0856478d68891fd6f708898a35a37f6767408443d958c4a30d0f0fe4310e
+mkN372	N	9020	Str -> N	True	True	0		Fem	75556113a60c8fd7d749dedb585dc6edccfa4bdc195c4a1c23ddcb854e7b4106
+mkN373	N	9067	Str -> N	False	False	0		Masc	78349ac2780adc11706233e7ee85f822a3feb5cbe134d0b8a63ff9b3d8034fd3
+mkN374	N	9111	Str -> N	True	True	0		Masc	ba0d1a173cd2382b45c0f6f86d8782a6f3c13069cc9289e68e483b5b25fcc1b4
+mkN375	N	9158	Str -> N	False	False	0		Fem	f95c8be48bca8fdeba974670ab38b968d58e960ea0110d54154f523a6d66a7b5
+mkN376	N	9202	Str -> N	True	True	0		Masc	78c5ff191b03455fc78056916acae0446146a3312d098f57363bef7f7d9ef940
+mkN377	N	9249	Str -> N	True	True	0		Masc	4d025c6b21a5294442e3bdb34dcb049a77b996f3f9835ec7a461bb0c28511a5b
+mkN378	N	9296	Str -> N	True	True	0		Masc	2ef7fbbfd30ee3f7f6cde80514e2f2669d620db8df6d45ea5483bf9384e2a0bf
+mkN379	N	9343	Str -> N	True	True	0		Masc	fd3ff239440bff7693bc962ed5c70ec6ee7dfdc1c06d282ef1ac4242c6304650
+mkN380	N	9390	Str -> N	True	True	0		Fem	4f1f3523ef153c55f3e0208c3b46505cdfd51478bc40155a420cdbc424f21c52
+mkN381	N	9437	Str -> N	True	True	0		Fem	599088d06d68ae7e1ed321081b3c2d9014497ed2b37c4dfd4f8d9c74414ed908
+mkN382	N	9466	Str -> N	True	True	0		Masc	e1135f6f8752619b0726a1d919ae035972aec98c9fa11e2a80ada0d99f89b2f1
+mkN383	N	9489	Str -> N	True	True	0		Masc	0e14ee1de3553a8a6b0528c873758716cab339a189ac6e7fb1e00b4c27ea5b9c
+mkN384	N	9517	Str -> N	True	True	0		Fem	8c1f894fbca373f03022a40394a419ede156e58916ad8b6f555216aa51200cee
+mkN385	N	9540	Str -> N	True	True	0		Fem	ea04cee9a5867cd89c7083e238fd2260c00cc1383626c0c5507ecba693a2e979
+mkN386	N	9568	Str -> N	True	True	0		Masc	5b4b825c690a359efbc3bbef35d6bbaa3a253c8a55c3246578a96ad171da0012
+mkN387	N	9595	Str -> N	True	True	0		Fem	07a89d85c9d000339bb00d434b83bb66a49985c9c2172c5b5ac6d644d43145f4
+mkN388	N	9619	Str -> N	True	True	0		Fem	ba2a66db2122b26814612f18fd393857cc7fbbe85127cdebbe117d03b540611a
+mkN389	N	9646	Str -> N	True	True	0		Masc	f491b5f2161428f5ce0a5612b926cc26760302fb7ce028cb60c11edab1a3cc46
+mkN390	N	9673	Str -> N	True	True	0		Fem	64a1f497591fa118c88af4faeb3971350d5c5614f3511cc48884ad61e0f93322
+mkN391	N	9700	Str -> N	True	True	0		Masc	d1ba872361969332b74595c6c5b35ce3f2d091e345926a47d34a62978cfdcba3
+mkN392	N	9723	Str -> N	True	True	0		Fem	80b313d666ba363610aef5ae324163248102da28b14064aee1b0ac6371e990c8
+mkN393	N	9746	Str -> N	False	False	0		Masc	0c463dffb5f10740c7d0e4053c4f2be32a4675a4ea5bc69020296bc67f058042
+mkN394	N	9766	Str -> N	True	True	0		Fem	4c313a4c63de8c271683a8094af6f8f044abce6b05f8108ffc1b558cd491530a
+mkN395	N	9789	Str -> N	True	True	0		Fem	7ec6b55b88a94385a1501c03b50e3a91df8d21b7f7e861385a0dd84af13d9f2c
+mkN396	N	9812	Str -> N	False	False	0		Masc	975d5cd0771e646a4aa7b178cf40bbfec723836eeec0bd93976978bcf033ed10
+mkN397	N	9832	Str -> N	True	True	0		Fem	e49f1c5279c05d50c6778bd9e7c65093b2c26db9636b2ca290a494e29410691a
+mkN398	N	9855	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	132a8fbe88f214d08eb62584f3efaa29e30d2acd4cde31ee109fdd43d8d28454
+mkN399	N	9878	Str -> N	False	False	0		Masc	7bc9e96aeb807eac7dd992b33b347d5c4588bdf20f2f8cc93009ec6668cbcbff
+mkN400	N	9898	Str -> N	False	False	0		Masc	a810468ff1cc47bbd8dd7aba9ac95958169d57b1e10ced5f044f23365d8e16d1
+mkN401	N	9918	Str -> N	True	True	0		Fem	bad3e40b9eb2ea526bd5c59005c06e6cec5cb084b883e69be4b5fcc3a84d9d3b
+mkN402	N	9946	Str -> N	True	True	0		Fem	e0d2897362af13a9b5cb21fa56b879a22ab50f9a6ae7327be0db91ba7b559f67
+mkN403	N	9974	Str -> N	False	False	0		Masc	d9ea7617a12bf837eab2e97ef11386215a34777f7bd4c754566c6ebeb1d4f6ac
+mkN404	N	9994	Str -> N	True	True	0		Masc	2ba3a3d73b16b77f80266370a415eb29a1de17d3b711623fc8e1434efe3decfa
+mkN405	N	10017	Str -> N	False	False	0		Masc	c290ee6e69df96fb7adfc556419406893b887d46d2dd2c7d4e8fd724a2cd7f2c
+mkN406	N	10047	Str -> N	True	True	0		Masc	aa176dc75d5722b0b6896090fe68f40f228accfd87338a44bc03c0c8f8eeab03
+mkN407	N	10071	Str -> N	True	True	0		Fem	16e7f6e02c86cfa51203f97406ed007162de09e9e5118aa4dda76d92c193c54f
+mkN408	N	10095	Str -> N	True	True	0		Fem	47af6ece69a16157be437feea496e33a82b1510efbcc11c39eda96adc658bcfc
+mkN409	N	10119	Str -> N	True	True	0		Fem	b97ca34e4223401f0a218ff79fe008ec9e3c62f1b7c942e8b4eb9fecc6db2811
+mkN410	N	10147	Str -> N	False	False	0		Masc	a56f43fa143b25af0879c4b60f6d36bf82ac3cfe8c532b612ec1126b97803567
+mkN411	N	10177	Str -> N	True	True	0		Fem	98ed67489121501cc597b0707b5d173aab6d121f79025e9c84b7e4f3a1bb1f66
+mkN412	N	10224	Str -> N	True	True	0		Masc	17b777801147cdb69d90cc705caf7b10d95f1d3b36c2a69455b0eccb72a03bdd
+mkN413	N	10251	Str -> N	True	True	0		Masc	cafcad0437286cd5a7fab7713671b391fda8d167440ad87ba91f2533debf9a96
+mkN414	N	10277	Str -> N	True	True	0		Fem	88e17908f4bb30f038839197ee3f791db349e04a1db0673b4de0ef869acaf04f
+mkN415	N	10324	Str -> N	False	False	0		Masc	5a942c6fab0e385caa1d1be0902d911f4bd04267f037e1377583009107681403
+mkN416	N	10344	Str -> N	True	True	0		Fem	7d95b87d75f5f87ac941c10ab8148c7d3e6d7f6f6eb0a20e10c50f30fd90443d
+mkN417	N	10367	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	0dc4ccf9cf418b20625a01fc4a619c4288429239433a18aef9821cf76225640f
+mkN418	N	10387	Str -> N	True	True	0		Masc	5f9e22eabd7aacd69c9a6602301179c09de04a7129aec0f75c5f05b3b1615e13
+mkN419	N	10410	Str -> N	True	True	0		Masc	b917fb7199f7134deb84ca6ec89052eac003672b8bea90c63582dabe54a9089a
+mkN420	N	10433	Str -> N	False	False	0		Fem	6f03f691fb633ab5d5bf7bf63818a755b773c905a4570f5efc039173c57fcabf
+mkN421	N	10453	Str -> N	False	False	0		Masc	9326014fcda552f3632de6cb9dcb150b4ce85507eb099fdfb7f221a1eb99f35f
+mkN422	N	10526	Str -> N	True	True	0		Fem	ff98189d71a35dc1499e05b43767625b2c11875d9b9deb9ecf68a03025793d10
+mkN423	N	10549	Str -> N	True	True	0		Masc	27811f46eef4e4e45abe7ca06b6aae683d53e58e4ef24a42abc3c1df6460cbb4
+mkN424	N	10573	Str -> N	True	True	0		Masc	ab3ac3986eff248f24dcc7201149452085aece1e62e8f12ff91109b6a92378db
+mkN425	N	10617	Str -> N	False	False	0		Masc	1e5f580f76f880be7d7c9fba78ace9961edc815fd9fd1453b9d7fbbf0ea0a44a
+mkN426	N	10658	Str -> N	True	True	0		Masc	a2b7b0e4c50c23aefcbf707b0ed373d17cd8c793aa2a42ade3a6665b75d641ba
+mkN427	N	10703	Str -> N	False	False	0		Fem	5faf1272aa55c8e98e739318ba1c6f45603b94c69f561faa410c3161794f58a5
+mkN428	N	10728	Str -> N	True	True	0		Masc	4a1b623975a09e09f880352aa8a5c74fd0e93aa2ada40f0c19fed9a8b5d3b094
+mkN429	N	10752	Str -> N	False	False	0		Masc	d4acc401b8d3c30aca4ff0146e416d845cc68e7e11fd90e02614ac2675db43e5
+mkN430	N	10773	Str -> N	True	True	0		Fem	fbaa9ae0e7987c3232d2ce2ce902ac0033651af20700317254c30e25dd907021
+mkN431	N	10797	Str -> N	False	False	0		Masc	0ec499dfee83248ba9196686bdd58dbecd7cafb690b2bb952b354fd74742a5aa
+mkN432	N	10817	Str -> N	False	False	0		Fem	909bb389dac344d51af8f57e73ac43d396de1a4d55af807b3e9e1ed342180550
+mkN433	N	10837	Str -> N	True	True	0		Fem	f53f14b992b226c8527f8a7dafe26655af1ccc373bfababb1161d07b393e4eff
+mkN434	N	10860	Str -> N	True	True	0		Fem	289316694fb576f5aec00ae5a3f6749b823a898ecbc2a9341bbe0c1645663728
+mkN435	N	10883	Str -> N	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	5a222ee6884652b3ba2c2b31d9bb50bb01f9a428c8c86ff9de3ca8dde6d38c82
+mkN436	N	10906	Str -> N	True	True	0		Fem	9f5bceb7539e72337d540ac21ee29ed16e6fdc2fd7a1e621fdf931ac59434e82
+mkN437	N	10929	Str -> N	True	True	0		Masc	6b024a51988d9f20c8915ff37209ae09832edcd1578cff5f42797b46fe9f1f2f
+mkN438	N	10952	Str -> N	True	False	0		Masc	d175e3f83f95217e62ddddcc717b39b896296bb254221bb8ba402deb7dca8229
+mkN439	N	10991	Str -> N	True	True	0		Fem	a7d05effd65371a7adaeae96b7570fe6a9dd3f9324f79073e943605530aefc6e
+mkN440	N	11014	Str -> N	True	True	0		Masc	49e82729fd614eeb90b68f8bc0b443556023764b57533b9096047d9d8f55e7a8
+mkN441	N	11037	Str -> N	True	True	0		Fem	e3e92ce9c7409609161e22eb3fecc8785bf344049a0094bc3055969713398f08
+mkN442	N	11084	Str -> N	True	True	0		Fem	41f99c6010ccf172aec1307199156912bff06b1be1153762b0f5acef867fbb68
+mkN443	N	11131	Str -> N	True	True	0		Masc	5ed3471976e4aec4d3b50e786a2cc3da2c2354dafe0655df5ab1236af26cda36
+mkN444	N	11178	Str -> N	False	False	0		Masc	8ababefc870c100e2dfe057ef5f74102339e21c0926d23d1e511fc6bf355ae61
+mkN445	N	11222	Str -> N	True	True	0		Masc	4741d9fdc04b670b57bfa30a739ea95f2be39c8822fad8892f2eb231f238cfb0
+mkN446	N	11269	Str -> N	True	True	0		Masc	64f754abbf6d58f38cdac084f1e7813685db054144d24797e43ddcf4fce3635a
+mkN447	N	11316	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	dee9b5030cf84fd3f35634393b7c88baa381d17d76c8131a19c8e7017528d56b
+mkN448	N	11363	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	d501b95ecbde31da15346e7aa94bedce9d92291e409b6e0e0e450cec0e16679c
+mkN449	N	11407	Str -> N	True	True	0		Masc	4e65fec5e9476f941df92929c561d37cb5cb8209b98dc93c1ca440a31ee78618
+mkN450	N	11454	Str -> N	True	True	0		Masc	625f6ac8ff6b1ef1507f3406498032e865ca6ead31a1e4d33831d39273f3cff7
+mkN451	N	11505	Str -> N	True	True	0		Masc	8715e573ef01d0afe7f5223c662cda7fec8a3a2f28ead1426cc72238161e0aa3
+mkN452	N	11553	Str -> N	False	False	0		Fem	2b603be910096360cd19dd575cc493f80a42227c9b624bb55fc60a01006872c6
+mkN453	N	11574	Str -> N	True	True	0		Masc	c649db3a276109cf85079335014436df72ee4540958c4ea32009f36f1be8434e
+mkN454	N	11600	Str -> N	True	True	0		Fem	68a7e82f84aa11b072d4dd7a89f7c3220d489973628c26b240fccedcff620efe
+mkN455	N	11623	Str -> N	True	True	0		Fem	75ea94fa9f38ea86f4708bd8dae1be38ef45105bb9451c1dd99bec20d7be1280
+mkN456	N	11646	Str -> N	False	False	0		Masc	47cb94b45a54ea2c988df6e8b771c1600ac3c0b3e5cf75a2d7bf76f697ed9048
+mkN457	N	11666	Str -> N	True	True	0		Fem	6edbe91a0204ac8671f6b9698ed10df9c12a88a19e2a37bfe7ebe03def113bdf
+mkN458	N	11692	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	03e301a0d846899d40bdcb560fb630a3b8bc756948c4acb3da287f52df66b820
+mkN459	N	11713	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	125c22736f707c4ba3ab941af16a2e742f36da007b46623375f5a5883f56d5cd
+mkN460	N	11736	Str -> N	True	True	0		Masc	4c873199522f61d586e28c3dea073462de1c59b7354df97fbbb9ade8be731024
+mkN461	N	11797	Str -> N	False	False	0		Masc	98f19ca26a399de69aae73f869bf942a9c76e708fa356ce4c399f8e0298b56c8
+mkN462	N	11817	Str -> N	True	True	0		Fem	8c4d3f2d98a53688cbb2f1dd97372cda8839b88a3199ff94473cb1710ba275b1
+mkN463	N	11840	Str -> N	True	True	0		Fem	ef48f7ab96e9e1f0389b005f9f7ddf83a568bc98cf174d77fb4cd26e773bb951
+mkN464	N	11863	Str -> N	False	False	0		Masc	c5ad462a1eb4b3544e618321a4766053aba6871b850d24bc2ff4cad3142e2a6d
+mkN465	N	11883	Str -> N	False	False	0		Masc	5780153387dbfbff209aecc18ea3ac859f666888200edbf5f1fd25346a14158a
+mkN466	N	11903	Str -> N	False	False	0		Fem	ec048c8a5dd407422f6358b184d7038f60c39c85fa6037c740d215bf1ef82caa
+mkN467	N	11923	Str -> N	False	False	0		Fem	63ea17a10c33f2584c76407f0baa8e34a439fec66f164cedb0fe3a77ac3599cc
+mkN468	N	11944	Str -> N	True	True	0		Masc	90ce267696651aed165fe9672ff5d53cd6a6efbb8ec237bc9524869d8e0b6c12
+mkN469	N	11967	Str -> N	False	False	0		Masc	3c23f3e1b8577115567cc8699839320109c7e7b22f310f550d3b905043ff3f45
+mkN470	N	11987	Str -> N	False	False	0		Fem	41f327f443e36297b00fef34aaa7d174b0b9ad4df855769730375fac4f34c744
+mkN471	N	12007	Str -> N	False	False	0		Masc	2d09dde54fa291c4d33725c9bbe70c51c97a28fc552cd87445cc618df34075ad
+mkN472	N	12027	Str -> N	True	True	0		Fem	055250a5953f7f2121994a603663681431ec258aa90bc76e540fb6ac73736ce3
+mkN473	N	12050	Str -> N	True	True	0		Fem	e92d33da537d103b8bd2970ae564ac71e7182b424ef52802827caabab3bb5866
+mkN474	N	12073	Str -> N	True	True	0		Fem	5c734952ea4a8398eb131a131a9c81710714af7be560d044e6fe0e54052defcf
+mkN475	N	12096	Str -> N	True	True	0		Fem	d59fccaeef14a7a4a584bb84b22715988baf954c7bc4d0498268c6b71919ef84
+mkN476	N	12119	Str -> N	True	True	0		Fem	9f3cfe22ff7dd9c452f40fa76ca2bdefd2793edfd88cbeb197f6a63f2940d26d
+mkN477	N	12142	Str -> N	True	True	0		Fem	e76be4058b6dabc41a0f23597181162eae95af6e9c6dacd0aa4723668993b61b
+mkN478	N	12165	Str -> N	True	True	0		Fem	3d9d418372d59f8cd145d8f691fd97af61a9c1ecbb4104e37f7c02915d8c67d2
+mkN479	N	12188	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	db69a1903be139ea07999287a8f58b2563bc0b3b0d5b5dcb961755023e115c4a
+mkN480	N	12208	Str -> N	True	True	0		Fem	e1d036bf985ae176b7a770428f53b057869ed9d62708a14e232ef2395462f419
+mkN481	N	12231	Str -> N	True	True	0		Masc	4b8962875030bb77d3698b29a52ea3616aa833473c8ba09365271abdd484ac0b
+mkN482	N	12278	Str -> N	False	False	0		Masc	18802fc624bf8e17ad85611792f20f1e1fe7ef56131cc3bb9248512b348677e5
+mkN483	N	12322	Str -> N	True	True	0		Masc	8e31883f663fb56cfe42048d3fb5d80b3096f2160a22949d8f824481976ba866
+mkN484	N	12370	Str -> N	True	True	0		Masc	65d187d4495ebe81e45482fa33b642d0509f9f3a1e537ea08da548a235ff1dfb
+mkN485	N	12417	Str -> N	True	True	0		Fem	2f7aaf6b4fedb1fe33c9e75dbb35a4c622386fdd38c4feea3d72acafac0ad061
+mkN486	N	12464	Str -> N	True	True	0		Fem	57314061e42664a4e6ff0fca34717dfb93b2c8ecc666b5a2bd5c862781d4a633
+mkN487	N	12511	Str -> N	True	True	0		Fem	80047b58746dfae6c8dc8ac2124b3642cfdf2b87db35e43bc1df950018df3b2d
+mkN488	N	12558	Str -> N	True	True	0		Fem	a0f5a85c46c5032a800f801aa5b3ec649a81ff87fa9831861579b0306f61d5ab
+mkN489	N	12605	Str -> N	True	True	0		Masc	dfd9f89327adfda5c70353ac624d89bacccdbf7fb99b36dcc33827ba2fd6d929
+mkN490	N	12652	Str -> N	False	False	0		Masc	11bc0448304397ea626975f60b8e8b2fb8059fcaa85777c86a18f8d126e7b6f6
+mkN491	N	12711	Str -> N	True	True	0		Fem	de09a2051f58a6de1eb1ddc4885fd2e8b2bc9da570bcfd0f755654ee67a794c4
+mkN492	N	12738	Str -> N	True	True	0		Fem	4308e194b24d9368c191e29a0de4aa8c9df884977d6f86380c78c78f55d0942c
+mkN493	N	12765	Str -> N	False	False	0		Masc	52d9b108799b355cd99171f7444d38759c32ad71af07b37dadb4af4e2824c42b
+mkN494	N	12789	Str -> N	False	False	0		Fem	0f024398e0e3aef03b93dad6eb2ac92d9a16dfc11542d53e0b506c5a1d982bcb
+mkN495	N	12833	Str -> N	True	True	0		Masc	cd2e2b25042b9e80d204e3af038d65a5c75ca67873c4ab237f8cdd35ca904f2f
+mkN496	N	12861	Str -> N	True	True	0		Fem	4f7d58c3b23a8539f5a5e3a620db927c5f87c89d48fbb6a4cbbca5754735fe50
+mkN497	N	12888	Str -> N	False	False	0		Fem	fa8af41081a7208381adc5549c8470cbafcc85fb109afee19ba255f5df477d49
+mkN498	N	12932	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	15149430324ac27ae2aa405aa7b02ece20e481b9597efd4ba0d33c730ab46225
+mkN499	N	12952	Str -> N	True	True	0		Masc	9260a5be41e9e2db95c290458e61a35bfe34ec13d218337cd3a08b76dd5dd313
+mkN500	N	12999	Str -> N	False	False	0		Masc	d6019c6658f5c63b15acc1055641e1ad2e89272e3de388c8f92b0a2997a230d3
+mkN501	N	13025	Str -> N	False	False	0		Fem	2bcec192488828a544970fae68f8980c2448848e0d3e3e396a80a4d6b1b0961c
+mkN502	N	13050	Str -> N	True	True	0		Fem	2baab20da055ac5568dbe470f9a91befde37a1773bc11450139034b37e14d7c2
+mkN503	N	13073	Str -> N	True	True	0		Fem	961a3237ec70a2a3b0228bffc59414c3242ffc49efee08d7ecef51fedbe4f037
+mkN504	N	13096	Str -> N	True	True	0		Fem	97249a24c5e4f827ff7323b3a8719b2e2572dfe3a323a8b9ccd80fe4b27792f6
+mkN505	N	13119	Str -> N	True	True	0		Fem	fe2e654250c9a3184a4950c58aa1bb917f33e23f2374f3236ff562c3b770e222
+mkN506	N	13142	Str -> N	True	True	0		Fem	3f07d26d81e66f42bf7eb9d88986ab92839b5baf46d150b05af8ad268471fc6d
+mkN507	N	13165	Str -> N	True	True	0		Fem	868c4192a8b20700303f0e591ac70c3d1ba08ae5f22833b749256e1d1bc1cacc
+mkN508	N	13188	Str -> N	True	True	0		Masc	9393f4a6bdc2ce3e89fbce734268ff936763556c3782102171c326fb00bab249
+mkN509	N	13211	Str -> N	True	True	0		Masc	c86d9e173569a56b42bcf3dc2a7f0f1afc2b876bbaa652680f71454bd6cf2a32
+mkN510	N	13238	Str -> N	True	True	0		Fem	e7581d3d359a7e49b1fc8d52869de0bc44ab935fd29e75b19b9dd043a19037d1
+mkN511	N	13263	Str -> N	False	False	0		Masc	749e99ca78fb15799f46df40f0b4bd412515aaca1d553edf84fa9e0939ca891a
+mkN512	N	13285	Str -> N	True	True	0		Fem	01549b61bcc97552cb8be4549d1c69f269fb6a5ae4796451d16ed89ce0ab4f44
+mkN513	N	13313	Str -> N	True	True	0		Masc	58385da11284623da6a2567f64a8544e92e4bd2cca716084a6ff22596715a995
+mkN514	N	13340	Str -> N	True	True	0		Fem	78ee0ec58cc9895a75b5167263fa1e4505bae5a9c3c517481699d1b1a42a610d
+mkN515	N	13368	Str -> N	False	False	0		Fem	cc85d31f815da8c1e40b3591a99ad443a2f0058dc3cc20bc4f4719477462e462
+mkN516	N	13390	Str -> N	False	False	0		Masc	766fc8c60e09d8246a7d5f0a1199fd646863331621278c8a747a1421dbfaa4b0
+mkN517	N	13412	Str -> N	False	False	0		Masc	3e7a97d19df4fe803589a1ca81549adb208a6a445ab7e083e8ef89240738f36e
+mkN518	N	13434	Str -> N	False	False	0		Masc	405e61f738e710838efd96d74df6e9ce6d6ffbadfc44a6fbbb9b46d9793a1195
+mkN519	N	13456	Str -> N	True	True	0		Fem	ce539b232c3ec128bd5e894fc8e1b3196c265389a61053ff8238c0037a99584e
+mkN520	N	13483	Str -> N	True	True	0		Fem	917b5af13224ff959297af6205f93c72971b00475604a060bc896be068aa4dc9
+mkN521	N	13511	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	63523eed42a939037d295fb7993256b8aa8199ecb351f2e7ce717ebbb4dd8de4
+mkN522	N	13531	Str -> N	False	False	0		Masc	f59ca5c863b30ee5478efca3f26bd05a92392fb88d275b0b5a486e465432eaf3
+mkN523	N	13551	Str -> N	True	True	0		Fem	dbc8db5bb0956fe022377fb8d25907125fed864ea14c21da17f2ef5c1c026985
+mkN524	N	13574	Str -> N	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2	Masc	ca18fdc499e23f308fafcd4708d7de02af9d6270107436cc65f8287a254a67b6
+mkN525	N	13594	Str -> N	True	True	0		Masc	2c38f5612c615849e08f6c63e8a0bb94b9747524db8cae7f9f064dce2bce0e4e
+mkN526	N	13617	Str -> N	False	False	0		Masc	d7e02ed57e3977ddc5168eda562df26ec16283870131f3907ebd875a4444206b
+mkN527	N	13637	Str -> N	True	True	0		Fem	6b323a8d0e906671f82e24da2ad17eed4eaebf780d931a27eef469bf6ed7daeb
+mkN528	N	13660	Str -> N	True	True	0		Masc	3fe8c304f3ef9c6eef5bdacf80ba034876460c7b4cd6e48d3b0e087e9a1e6ebe
+mkN529	N	13683	Str -> N	True	True	0		Fem	98719a281f14a81b522252838c69df131b442ee71e00cfd037448682f8292e5e
+mkN530	N	13706	Str -> N	False	False	0		Masc	0314c5993ae3f130d4c49a7e4ae44d437078b43d1b2f4f4399934b8ae32cda62
+mkN531	N	13750	Str -> N	False	False	0		Masc	b23d145f8e5b70d38ef58c3a66f436e265105bb8e6cbc1913fe5d6ade8508e41
+mkN532	N	13774	Str -> N	True	True	0		Masc	a1fe2bfb240966fcedfbc9aced7d020f864afd411946f7e4439ec8a4191ebadb
+mkN533	N	13800	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	917434ac52890d5c582c70047386a5be94581b4b89d79f7ed298e731c163b78b
+mkN534	N	13820	Str -> N	True	True	0		Fem	f8ebc7bef3e307e470e408e36817b83c81c02f6ce5de11f943159ee9edb4ef00
+mkN535	N	13843	Str -> N	False	False	0		Fem	123b104fca94c13f140b16a676f4bac52ce8c87c07bf168623cfbe423e8991e4
+mkN536	N	13865	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	3222451812fb83a9790fdddfaedb50f6ebfedc1a88f3a5794d6a1395d9da2f10
+mkN537	N	13888	Str -> N	True	True	0		Fem	6c6e711a6ec9fd1c444a9c31152488ebd52e1f1b95a943c0d06b20d5105ef70e
+mkN538	N	13911	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Masc	565e96c800a9cdb2e6687773b2db6fae9468c254133874ed0cf8824e930c12eb
+mkN539	N	13932	Str -> N	True	True	0		Fem	7ec8b644f27ef2cf6efc624559342652a0bfe6ad60a5e1f14120190068b31c07
+mkN540	N	13957	Str -> N	True	False	0		Fem	19166c4ea1ad1ffc4238b209b0af8e20960c75bb21656c5b187a80080eb85ea4
+mkN541	N	14010	Str -> N	False	False	0		Masc	2ccd9a3df3ae0eaf9bf890b64fe65731d99ded57819d67add22cb20fbafc854e
+mkN542	N	14032	Str -> N	True	True	0		Masc	56303756bc5bef93434fa8b89168e951404f6d876b3a42d1ab2a8929b6e1dc46
+mkN543	N	14057	Str -> N	True	True	0		Masc	5840bfdc55a6d6086824fbdba8c3986d504c01cbd2c3c9504f9d68a70c632db6
+mkN544	N	14083	Str -> N	True	True	0		Masc	6c43860029011c1d583465e754c1ec7ec48528326ae12addb168393ff4704799
+mkN545	N	14106	Str -> N	False	False	0		Masc	952eac4af5d410870fc2667b6c9d2134c5659d7824bff372f9f791bf0c695f27
+mkN546	N	14128	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	974e6e51a5f790604e413778c4472f291baf82c094fcbc888e7cb443a867b592
+mkN547	N	14149	Str -> N	True	True	0		Fem	110c76c18ef732826b2cb22c29d674e8a182ab01f49e0b43860d05fb967e9705
+mkN548	N	14175	Str -> N	True	True	0		Fem	d137f696df5745a847d9584da475b0100b4fa66b9ab6b50295dfe95445faf485
+mkN549	N	14200	Str -> N	True	True	0		Fem	90250b99d352e6bfc0d6f499633effec7ea06dc8a9fa678d22373b27e4e50435
+mkN550	N	14227	Str -> N	True	True	0		Masc	937cac45158268e4068dcf9fe93ea26d715d6c80afd9c60bb3b4d7b0e82fa53d
+mkN551	N	14251	Str -> N	True	True	0		Fem	68fdb344f9f84ea50830daa510db7be3b3f6531e8adef9eb4bc6f644fdb2b2a8
+mkN552	N	14298	Str -> N	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	3795d1f5bfc166911697a2473b18830ad7b3e943ef5edd15f3139da84b9459f2
+mkN553	N	14342	Str -> N	True	True	0		Masc	9abf40181dde51a37ee6fe5ae97d663610352a633e925a7a853e06a9dc95cffa
+mkN554	N	14389	Str -> N	False	False	0		Fem	4d6335f99cf7eadac5334df8b8af565562b83515de35c58502efe597320db272
+mkN555	N	14433	Str -> N	True	True	0		Fem	16808d5ca5eeb947674764e4387b3639f2465121d2b539d1e8474a999eb39b93
+mkN556	N	14480	Str -> N	True	True	0		Fem	3a67e91d691a8ed7a31cba0315c3d4cea470792b332eac02a5923a1e522a937e
+mkN557	N	14527	Str -> N	True	True	0		Masc	374d7abd4ad80e2678d0d7f7ebfa27c5a3d54e00898d7e3aaa14f1084d5f5231
+mkN558	N	14574	Str -> N	True	True	0		Fem	279f8f43509ee5b351e9b3739428d76a360b853956076ce9463234a704815eae
+mkN559	N	14621	Str -> N	True	True	0		Masc	fd8ae95f9d2c136e5d358634153b8bcb5987cdc4080798ec39fdd13171a19bd2
+mkN560	N	14668	Str -> N	True	True	0		Fem	5fd6d56383839003a5c66fcef98f629ecf4c70dbeff0899b9dbdc6085b17428c
+mkN561	N	14732	Str -> N	True	True	0		Masc	88bbf160e3584a639efcf84fce95341d44c7f138cc56496a938212c9eecf3271
+mkN562	N	14779	Str -> N	False	False	0		Masc	2d1c8d6eb53610d6f04717a26e19724ee98df6d4ab90a49c8f839b97e11a768f
+mkN563	N	14800	Str -> N	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1	Fem	c46fede1100317c0fe773975b58f9c23718d5d3fa8e278c6b08431c41c4d7229
+mkA001	A	14824	Str -> A	False	False	40	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:40		6f75fedb52bcced290ee4d9b9da5c650cfa84b7c338e4865d920243ef14f5c24
+mkA002	A	14839	Str -> A	False	False	0			80e9f7b0f8bdcb53cd817bda0a5ce2d463b36edaaddb92b14071730c001a1dbc
+mkA003	A	14854	Str -> A	False	False	8	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:8		5a72ebb4f714a4eb931a4c44c5d02291c500bbd330aed11ba5b9d973f4b782ab
+mkA004	A	14869	Str -> A	False	False	16	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:16		3b4119adf7c241d8e0c2149b26bb33a0b93becc8834bd488647109f61f85a275
+mkA005	A	14884	Str -> A	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		dd67ca919af1e96a461af678eee4fea87c2f72e3313f08fa1746d54c044d514d
+mkA006	A	14903	Str -> A	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		5633f2beff20b93bc389c35abb9b80094da9f30806f11cf71e89ddcd2716bb84
+mkA007	A	14918	Str -> A	True	True	0			d8a790d0fb62683e2118addb09ebd618a228b9645a80aec0cd4f19cef3f9cb94
+mkA008	A	14937	Str -> A	True	True	0			57db5ecdf2ced195da2d1334f74abb4ab129a664c86527af7419602d79111a48
+mkA009	A	14956	Str -> A	False	False	8	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:8		e0338b7dde6a0fa9a48c1d5762b06d456cc01e11d52fec298d56a3e3ffea44ed
+mkA010	A	14971	Str -> A	False	False	0			7b550b81635f1004437d4abe7caa29871f465048cde28aa159c4d4b7ab2acae1
+mkA011	A	14986	Str -> A	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3		fde4da1850859bceb613fd8cfee59943a2bf8339529e0e454101ef18c4521f64
+mkA012	A	15007	Str -> A	True	True	0			99c91da0148c7ac0c20ba289a2091aa1bc70caaea2fc0adbe758ac1f3d06573d
+mkA013	A	15028	Str -> A	True	True	13	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:13		6cf5c25179b0c650b65c259af3d9b58ba2a864368be6e38fd183d80804235429
+mkA014	A	15049	Str -> A	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		7eee31a99a0b586bc0bba997258f74e4345b64e5a72e96f6481e6806557c6724
+mkA015	A	15070	Str -> A	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		8f5790b74a04f4b3145db172c235ff500c7897db2f509a869e13767fae4382a4
+mkA016	A	15088	Str -> A	True	True	0			6c510e1e5df2749e1cbc142cfc4b00df064438c1d855d0a2e3438c64efc9c542
+mkA017	A	15109	Str -> A	True	True	0			4fb0e1c5bd9fff8911aa070949436bf74fb178f8f1c3069a3afd9908fd4af336
+mkA018	A	15130	Str -> A	True	True	0			755d8c14f68e37f4a92cca503c1447491e0d0cd79de0062d1250016cf6b1bbd2
+mkA019	A	15151	Str -> A	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		10deeda317c13bee21174acf877b64d1ce8acb8c2b99d6ba11e0c048fc64aa41
+mkA020	A	15169	Str -> A	False	False	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		e5396c22afee7fad9e329818b6558d5700c3c068f96515e6509c89b3cfb7f589
+mkA021	A	15188	Str -> A	True	True	0			485bc25d44a97203cada01c1cc857d114281c33c4c5dbb234471f81b79c6fefc
+mkA022	A	15207	Str -> A	True	True	0			3132644e2606f83a7e3b7a99f2b29ebda8117f212b32693c8604a3ee13c8135b
+mkA023	A	15234	Str -> A	True	True	0			cc5f6db54261465c96b3a82c1a2537f9ce918a6d8dbb868730aaec4c1b455a23
+mkA024	A	15261	Str -> A	True	True	0			485b0f00573ed811315fdfff74e199b62bef451a3f77cbace37bf24d6c39e1a8
+mkA025	A	15280	Str -> A	True	True	0			e729a8b87f34077e6386910ce68519ce58ac09ce16ce9c286f0cf6ea394e6c74
+mkA026	A	15299	Str -> A	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		e5808261578c2ff93d2dcfff90635e64929fabb6d1120e9d209f6100e968df6b
+mkA027	A	15318	Str -> A	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		8ae2a755abb2672609633ff706b5efc79df31556bbdf98924e336b349b618dab
+mkA028	A	15337	Str -> A	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		926541836330bb0bcd12b70250cb960b228cc4e5e14f893d745bd042a2da8ea7
+mkA029	A	15356	Str -> A	True	True	0			35cac16fc4b875bb9e4df1cc53d68e09685c80b4651e494d17def81fe69a4d8a
+mkA030	A	15375	Str -> A	False	False	0			b2a35ae86e58f639e6c35388db3856ac187d46ee4f007179177daf08ec5dee63
+mkA031	A	15390	Str -> A	False	False	0			88eb9dec99ed72cabc8176c8f3a936d2e4e43cc5d9fd23ad9f4d2a0e29f416cd
+mkA032	A	15414	Str -> A	False	False	0			c20a464219cb3551f2b5e10f08b5d878233a30344b0279c9c54b54cee51f198f
+mkA033	A	15438	Str -> A	True	True	0			c479bbe419def659fae766a694e03e6227905a534392fb454e33dccae8374f26
+mkA034	A	15489	Str -> A	True	True	0			fbc60e580562a59955957d7341d5592368d802fe66afc17a71189b54ea48b884
+mkA035	A	15516	Str -> A	True	True	0			f67cd6dfaf99dc6c4f0716348cea17bc0a3855956074b23341dea92d391a1946
+mkA036	A	15543	Str -> A	True	True	0			e60ecc0fa678573ce4b2aeebb65f55c5da8a45313dcc676de77e6503eac8d5ec
+mkV001	V	15691	Str -> V	False	False	32	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:32		8d9f4b81693bc1355016dcd952debd0e0b91192c19b20f99959aea406dad835a
+mkV002	V	15711	Str -> V	True	True	0			ff8efdc6f987f275db96d97e5eb572264d77bc263523ccf0d2b9bf946d998c22
+mkV003	V	15738	Str -> V	True	True	6	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:6		6e35d45290186f998e734c0c11ab966ee311078927af2240e6e8932f0861c805
+mkV004	V	15764	Str -> V	True	True	6	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:6		a61f0a0fbd594e6c01b3137b063603ef9ef5fc3cd372f2250ff6175cb827cfdf
+mkV005	V	15791	Str -> V	True	True	0			9fa18ab12ce7287110551573595ae2974cf743b5e6c39fce5eb86fc6cd68195e
+mkV006	V	15819	Str -> V	False	False	0			aeec8476a84eebc5bf7d1dd512c90a3a2cc9ddca55142dc8db2a2f8e51c54473
+mkV007	V	15838	Str -> V	False	False	9	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:9		d0d9a0aed9ae3b95012d50e2c46c67f120bce0acabd5f7d00495f10a2bd6f61a
+mkV008	V	15859	Str -> V	False	False	1	AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf:1		efe1229c97f1f9a3ef7caa165f60ac96ed936455e2d6cf02b92133637ea5c0ad
+mkV009	V	15879	Str -> V	True	True	0			003fa05d5f1c3de41844073b4f2853cc20bd32f06e00116f9e7fa2a3af2e1460
+mkV010	V	15906	Str -> V	True	True	0			6cef80d3af3330dc11c91969510c6fd2cc62f5c7bde65cacaeef0c671ea77a31
+mkV011	V	15931	Str -> V	True	True	0			6ca66b159f315c47d57bb29d5986b8ea54285c523c93d9dc4285e40c039d07df
+mkV012	V	16140	Str -> V	True	True	0			5c0d8397cfb6fa3b6d7f08c73f1719e55d08f1985448234b1f5f2b244ae6377a
+mkV013	V	16263	Str -> V	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		b56a9f3774912449739b1d2e754aae5b69811cc3c59dc606a7f377ba5153b751
+mkV014	V	16308	Str -> V	False	False	17	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:17		695f7911f560dbc3ecc6b660e03cdba891d42020cd30bc8f3708b5a0fccdb8e8
+mkV015	V	16311	Str -> V	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3		d02544db70d94bde77abbb97ce1fc72193a876456f1ec19cc3a738027ee5e1dd
+mkV016	V	16434	Str -> V	True	True	0			3169534350dfda1a23c18e5fa95434e184ab7f69ca291655bb1001234e8fbfd8
+mkV017	V	16557	Str -> V	False	False	0			5ea302383115fc8e61f670cd4793e0d238434e75942bcb090efb91ed5b748ad0
+mkV018	V	16602	Str -> V	False	False	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		843c4a6e31438e25de958e956a31c08c849d1e2c2c152ec9ce1261f49529a7f9
+mkV019	V	16647	Str -> V	True	True	0			960061280d8b1bce708ec525ea96350303cea0aa57e833e741add600ff6ba132
+mkV020	V	16770	Str -> V	True	True	0			eb69c9c6be4c314b98e2db282fb4587d52e095aba63218b6eed8fcccbcc6d8ee
+mkV021	V	16893	Str -> V	True	True	0			4c74c2ad2d0bebe2ce2b65529906580db5a551d862f564f39e3d0dcf84d0465e
+mkV022	V	16954	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		5b2c0086ccfaf08cdc24bcc22d0ba2e0929b508ae3f43bffc0c817bb89c36041
+mkV023	V	17015	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		5aad0f7370ed00da9fe656837433c758bfdf3dc584af0671723dda1e5aa9592e
+mkV024	V	17076	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		71adabd739bb3ac0c5ca6c656bfd8ba73f474b90a27666838a7b41e5100c1c4a
+mkV025	V	17143	Str -> V	True	True	0			153bd41b81f72b194d6104381a8954e3bea058c569f3deb75b3e6a333868562a
+mkV026	V	17212	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		374cf0fe3fbf9de343157b726d841f055d6b3a4427919201089b9f07d23503f7
+mkV027	V	17273	Str -> V	True	True	0			5b0f01afa1b042ae0c69fa7b39c914c088b6c3b8deb8389b2dbfa8452e191f45
+mkV028	V	17356	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		cbcfd3f0c76954c2a2870a6bff7da4433b5508517ff3c4f862efe7ccedb03bc1
+mkV029	V	17439	Str -> V	False	False	0			7ec5dd9f99b526105a68fdea5df6d6e72a2bffb550cda0440e4fdea7be9d610a
+mkV030	V	17496	Str -> V	True	True	0			b1927e93cf67e0b1fc18b3307b5a467e8f87e4bac929cc01bfee421ae80d9fbf
+mkV031	V	17557	Str -> V	True	True	0			3ba49cb2eaabf68928a45bd17663385c89c844222bf08259fee0b684a926094f
+mkV032	V	17693	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		491533983d92e03225981669e69435e9d65118e3f79f29b76adafb41b8c9e16c
+mkV033	V	17829	Str -> V	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3		837c40be339d606f8fa2c02cfd6ec9e986aa04f47ef991dc9147edce106744ed
+mkV034	V	17961	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		9accdb80011eadccdfa15e37035b4409b3b57f46bacb8dedaaacfe102658d6a7
+mkV035	V	18097	Str -> V	True	True	0			968dc6d0a5aa2f26d506912d2b7383b7d68d03b245a718ab4c1fb081b4c62064
+mkV036	V	18233	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		2bccbd8efe44b3da597ed0c5fc47482b4b8308f10a925dcf86edb8d39dfe0703
+mkV037	V	18369	Str -> V	True	True	0			63915b9e77719a0f3fea782da5dd0af0f83b5d7b68c2962727e40670c0561793
+mkV038	V	18505	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		e11bda8d6ac75dd5a8e256c0e2a1cc6e1b1e5f28944fc1dcf2983984660e5389
+mkV039	V	18641	Str -> V	True	True	0			41c4a38a5c2bea0ba55996068c28ed55e19b1da40f3b46bc33030c0472674df5
+mkV040	V	18777	Str -> V	True	True	0			d391ff6e8abf8dd884be2561828c97537ef5af343bf327544056c76131d4b4f5
+mkV041	V	18913	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		a2f5a7fbe8c7e6b87aab84d369fd7802a1d4e10c23b20cd6a432f6115d154302
+mkV042	V	19021	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		16d5f7bb52f0cb166bc27c52dcf360b70a657f3572d13f4a4bad78cbac3f15f3
+mkV043	V	19121	Str -> V	True	True	0			3e4d9a6482bb2aa0360cc25bad89b135f1c4c00587b48622e2f940b0f894c27b
+mkV044	V	19221	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		83945c0e951607f88e9009a610086d70d2c914660b711fbfe0f70ca54e4c66fb
+mkV045	V	19321	Str -> V	True	True	0			aaa1498c1b696ef1e34e6d757af81736d2d45b0496f7814c3fd4496cd07f5bec
+mkV046	V	19421	Str -> V	True	True	0			6fd6080a058628ae581c63c45a43505d7bc9e061f206b64adbf42c52dc21a771
+mkV047	V	19521	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		4ab190e82021d33c1e86aed99d5092e4cdf14156d132b188a478b4481e6cf1d8
+mkV048	V	19621	Str -> V	True	True	0			5fa8e4d09aedbb7d5fb38641ceae52a631274d5778438115e43f93a55f1716bc
+mkV049	V	19721	Str -> V	True	True	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3		8d6b1cfea19c3b99063fbc9d3339280e38a1700f6aad0f9d83ae932f0e8df65d
+mkV050	V	19821	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		955107f219d8622e17ca60111ba5fba17f8dd9ac9991d35ef2895485ed9690b5
+mkV051	V	20013	Str -> V	True	True	0			9215974732144ce005976574d430a86249dc9be89c25fe706c73c3c7cad928e7
+mkV052	V	20039	Str -> V	True	True	0			02ee954c882b074c7ca8b05e930325a85d62803394a5644f3d2131ac4c85c018
+mkV053	V	20065	Str -> V	True	True	0			ca2643b931007ee3aa51aa8990d6d0dd1ef9d57f50cf3aad894551d7ecaaf7f9
+mkV054	V	20091	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		60f54263052a0dfef45d3a17ce062ccf03a665599a85953ed10e8bfbe6a62c1e
+mkV055	V	20116	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		6de634c16597a5fdd06ba13ec83e7b01e51515e106a4f308db49f646ae430d8f
+mkV056	V	20142	Str -> V	True	True	0			fc74e2da0ece17be163e1e17593d7855529be0b6efbdbb51cd313319128a9062
+mkV057	V	20168	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		befa97b3089cc84fef8bd3c39e681d28c2551eb8408b84f0b36c34d950ab6394
+mkV058	V	20194	Str -> V	True	True	0			56f9376558d1778a3a329cf32a882947b564f48fc174094e2a786ec0f8dd65e2
+mkV059	V	20220	Str -> V	False	False	3	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:3		d39ce231109923e131d49837b439a2f6cf005ce119f1b1c09cef32467485ef30
+mkV060	V	20242	Str -> V	True	True	0			e6a89707c2e684e12aafb8b1f36488e81bc309dc7310d28fe20cb67f107b71bb
+mkV061	V	20277	Str -> V	True	True	0			24dfa3b201f8f8c94a9965764d7f38557c378acdeba9e67bf60952b3231ec941
+mkV062	V	20413	Str -> V	True	False	0			dc35d3c20af11d3832ad633710d3e34f0ba354db223bc5bd45ff229a2ee0267b
+mkV063	V	20487	Str -> V	True	True	0			1aea7a246b9903d15573da5f1067f55c40f594c4547907930763f9f7ffca79ab
+mkV064	V	20558	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		0983e9098353ccd9874a1af30d8d52e26798fdf14d29dde57390279552149d4a
+mkV065	V	20617	Str -> V	True	True	0			097b5af0fe3875f8f6da533d543ca72afd2813f80140bc55604d60a10a7c8fae
+mkV066	V	20676	Str -> V	True	True	0			f6457c9053d2e84be122bddca14ee991bc0accdba7bbcbc21b41472bf5bac673
+mkV067	V	20743	Str -> V	True	True	0			1e24cf4000e215de13eb09a35a04d844eebde46979ba4616144c7fd8f88e0dfb
+mkV068	V	20802	Str -> V	True	True	0			88e5a3fbb8128a868a9908803130bcf248fc914729407f80d07e587cdcde4a5b
+mkV069	V	20860	Str -> V	True	True	0			172031b523a4799666785881237dcffea95c123579153714a5a77301649894bc
+mkV070	V	20919	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		33dc3e7b6581d0e8cfbabe324edbccb55a75b3eebae464a34e1d54019f23520b
+mkV071	V	20979	Str -> V	True	True	0			c181fa6499e1efa065716ad9ca04c1361a5058d7491865618ada070a19cefdfb
+mkV072	V	21094	Str -> V	True	True	0			bd7aec5769a80c21a94463168dbed4e919f50ef0e2596fdc8ab51db5e9f42786
+mkV073	V	21209	Str -> V	True	True	0			304e92a29024c2682c095ba5999a9bfe02267fbca47b1a2941b7ece326fa83b5
+mkV074	V	21324	Str -> V	True	True	0			3ee9227a40d0c95087c785ca18a5beb422a744551704dc0e1b7db8b59ce58a40
+mkV075	V	21439	Str -> V	True	True	1	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:1		ddc0fe57b75c9b570d446fb6a13a479da25281069689352bf5e2f81dd1228809
+mkV076	V	21554	Str -> V	True	True	0			23ac943b60779ce75c278c8fd1971a455d886b6b83e96f8e797324b1170049e0
+mkV077	V	21669	Str -> V	True	True	0			777621e9e00e0a676426b4d597cb52297f360f92e18cb08d70777216383ef023
+mkV078	V	21784	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		8103869d28c8821346384ecb2c9de9330a659690f2a174b88097f58bbda2c0fd
+mkV079	V	21899	Str -> V	True	True	0			fd0f2f85efb8807473ffda05069201ff6e2f122ea9a5ef3bb02c96a526d4e1f9
+mkV080	V	22014	Str -> V	True	True	0			9c76abb3e92f714be60773cf4c046f311e7fd39df16e3f0ab528c34ca471c259
+mkV081	V	22168	Str -> V	True	True	0			c7bccfa4fa212d6522d6c5ad9b10da33d662c6b42bfbad05423e73f6374a0fae
+mkV082	V	22193	Str -> V	True	True	0			3224dc8728d1cd22a53f7bc158d768a9e8af324f0ccac3f42cdc052dc40ed325
+mkV083	V	22218	Str -> V	True	True	0			1abf0347fb3617516202cbb90581c11d1b2052a6915227f21cdf3491f5ca6189
+mkV084	V	22244	Str -> V	True	True	0			f5e5e01ab471b3706efa5ab97945427ab6583075d0c79069453e6ccec37d60c2
+mkV085	V	22277	Str -> V	True	True	0			d60969fba7c4e3379ae63560935343862f89243f21d22afb1b3b51986987d7d5
+mkV086	V	22302	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		54b6f8dc88c9f8c35da3c595c0042746314095be94da396cba8e55d71002674b
+mkV087	V	22327	Str -> V	True	True	0			4a5ae34d10deac2edb0480c27fd113dee8f4f0ab95ada236ff23ca3be864cb37
+mkV088	V	22361	Str -> V	True	True	0			2146c8f759a7322112afd442fd27dfb4f9377291a43a86d674a0eaeae2addf60
+mkV089	V	22409	Str -> V	True	True	0			2b9be5a355180433c115bd6d7f3a81b26fe7c694b4e4fac664e5935b4f4ffda1
+mkV090	V	22443	Str -> V	True	True	0			a060c015c41eb5c105bdd6290d7eb55d63301e20e941e39cbf7faf9019f1ca6b
+mkV091	V	22468	Str -> V	True	True	0			f5033b88c2d05b83c92a5063c30e30e3fcab46b6619d8280846aa3b643b28b01
+mkV092	V	22604	Str -> V	True	True	0			6225d74708aafd951a9c3cc8a9eb64e917b3e45a6ddd4ab049d1ea3053b4e0b4
+mkV093	V	22740	Str -> V	True	True	0			b20f02c483468a1a21ef77e87dcb6dd2a98f9844bcc213e7a5b00967ad4731e5
+mkV094	V	22876	Str -> V	True	True	0			20808b69d27776cae79be9c35de217b872436f5254345e77cc1e0666f9d3c9f1
+mkV095	V	23012	Str -> V	True	True	0			62c8f01b2cf7542eb2edf11a449f48b93dc0039e405f79f009bbc5e167c756b6
+mkV096	V	23148	Str -> V	True	True	0			31076807bc76fd7ab6ae3e737c607ed5f35456c2172f7603c6733b15f7744ca4
+mkV097	V	23284	Str -> V	True	True	0			7550326145a3bd4b9a00fd50f6fabfacccfaa1f3842331b2bbd4843e87d0fbbb
+mkV098	V	23419	Str -> V	True	True	0			1a0aa5fe9160a29691efed7290d21a5f7e71826990290e1ba4b075d8b1c12dcc
+mkV099	V	23555	Str -> V	True	True	0			a15e4cb1f53a45407dbc35f253b8a749b67b480808c9c9c7af9367e8f258c052
+mkV100	V	23691	Str -> V	True	True	0			f5f3ffcbf5b2a0be1e875a4c66d1cf7e9ee2678892350725a66722f3bf81853c
+mkV101	V	23878	Str -> V	True	True	0			9bbc97a7bddda05887a4424df59d41fcf54367000cc00e81a13ed84b8144268c
+mkV102	V	23906	Str -> V	True	True	0			9373355fa08c71f1612fa36f6a688fd9c3829c6219b81e6bb1e675b6c365dcfa
+mkV103	V	23934	Str -> V	True	True	0			861efd9af5bed09929d1edc1e06a862f6b0894806a7c6c68036ec061f6921991
+mkV104	V	23962	Str -> V	True	True	0			5138bbe30c10de67c220777af1315c0c541f83f2d34000db44784e6e274fdd96
+mkV105	V	23989	Str -> V	True	True	0			e794f050d2a39fee9f4c0f3f411438c628cdbe2e07ee13ab126094db278420a1
+mkV106	V	24017	Str -> V	True	True	0			d561d7f4217b8553b3f2df29e32a511f41a6b486e836e89d44079bee31b58e01
+mkV107	V	24043	Str -> V	True	True	0			d794b9eb0c301255a1dd470c1c364cba9214a9bb99257b9d8ac241b287042e21
+mkV108	V	24069	Str -> V	True	True	0			8f6979f95af2edf8d142d86ae32393fe370bf2f686e8080df3cb67539dd733c8
+mkV109	V	24097	Str -> V	True	True	0			c8621c74186396440cadfb7ee5c9efeb44d23c4047c8b4f6dbd561d61e157751
+mkV110	V	24125	Str -> V	True	True	0			0c7b48cbf798bf23474ca2e4f1e88dc5a49efa41227a66495f789f98ed7d2181
+mkV111	V	24153	Str -> V	False	False	0			0ccc765afde56cad2b06e8b05890b12ae0fa7df36d3b636ac42a04435895bb4e
+mkV112	V	24250	Str -> V	True	True	0			a7a75aeadba09cd2e7c52ed95930f34260acc2ba9612d60ea65716269b46b184
+mkV113	V	24350	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		188a40993d98277b4963dbb5dc45f3107ff475dbea63c5f3d119a9d884afb6aa
+mkV114	V	24450	Str -> V	False	False	0			238df04de3352f6e5d8fbe8f5c31f1024584071fa0682b49fd586e47a57011a4
+mkV115	V	24547	Str -> V	False	False	0			9521fa91378b8e294287d50c99bd55f65c57c01da10cb5f825655fb0abae1e24
+mkV116	V	24644	Str -> V	True	True	0			c3da3eb4d6ea392cf084cc5542a051ecb81fd06103523f7156ca1614733970ef
+mkV117	V	24744	Str -> V	True	True	0			6cf9bc0e4728f48b3131b4873772f49cc004fb77afd5b336b7fb8c9f28658ec1
+mkV118	V	24844	Str -> V	True	True	2	AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf:2		fd8e6bbda9c5bcdf61359130446cae2734908a056521d30d117a1062214ebad4
+mkV119	V	24944	Str -> V	True	True	0			7921fcb05f255763ba5d2df91f1da405d31ab82392ecda662189e80efc0d5b61
+mkV120	V	25044	Str -> V	True	True	0			cafef2f70390b2531a4e2638be1683d69bbf8b68fd592f9c39c57cd84e8f0846
+mkV121	V	25143	Str -> V	True	True	0			687fa2ec91b94dfbb465f544b3800c615f8daaea97236fc2cd351fac0c04b364
+mkV122	V	25270	Str -> V	True	True	0			6c7b9519445faaee5c5db8f3dd48c375ef72bf939be266681ed9cd9bd1ef2d5d
+mkV123	V	25394	Str -> V	True	True	0			7fade9d2ca59e7ac8e448fe39ba58d0f43c11d6a377c3ba185eddc45f0c747ad
+mkV124	V	25517	Str -> V	True	True	0			cf3aac95faf012e8b3473779b9158adee3a9e55c3b173787e741f298bf7e4cf1
+mkV125	V	25640	Str -> V	True	True	0			9d3f8b7167ff5240ca732960e41e47ccf274257f9f83571ec418370853f228fb
+mkV126	V	25763	Str -> V	True	True	0			3565da2589da2c1774daa8179849744d03f2085836e8c20cffdf77104ba17a87
+mkV127	V	25887	Str -> V	False	False	0			8a327d4b59cc2d4e4f5e57eea53e88f88c61b271df5358039b0245ee4a8933cf
+mkV128	V	26008	Str -> V	True	True	0			7d9bd59f74f4a30cfd325acb3ea4c96749723fd41d82aae6de242a9b66c8ad1b
+mkV129	V	26132	Str -> V	True	True	0			929db6272670d0f4b855a2be229cc05372d5acc17f1dc5a647935220b8e52c95
+mkV130	V	26255	Str -> V	True	True	0			e788f40f109a308abc8bb4f7e110a758face60b4bfeaa08d07ffd1768f06c894
+mkV131	V	26378	Str -> V	True	True	0			59f9019418468d6c5b78881f88b8f502a7bb06c32aa2292a2ef43f6881b6a58e
+mkV132	V	26458	Str -> V	True	True	0			8756676e30c3ccabcf4a266c57ff3809ad7782da4223c3186839d2a27c0792fb
+mkV133	V	26531	Str -> V	True	True	0			b32e82389de6deee04785126c2cc11198c37183de1ae7318a9bfcd47dd4b4ae9
+mkV134	V	26612	Str -> V	False	False	0			aadc2dac5750e568e9afa3b3233578674647d83ec4fb5ee7d872cb1b40281d74
+mkV135	V	26674	Str -> V	True	True	0			b2d2b27b21cfa320d169d79d5ccacde1a39e0c342141a02f75bbf871250940cc

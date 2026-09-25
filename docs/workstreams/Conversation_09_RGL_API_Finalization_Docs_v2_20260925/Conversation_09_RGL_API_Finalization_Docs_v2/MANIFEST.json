@@ -1,0 +1,200 @@
+{
+  "pack": "Conversation 09 RGL API Finalization Docs",
+  "version": "2.0",
+  "optimized": "2026-09-25",
+  "inputs": {
+    "Code_snapshot_Grammatical_Framework-Albanian(20260925-123255).zip": "961852fae67f7e5878c7d214197a75a705e5028d7ee8e87974358a9d85c39829",
+    "gf-rgl-master.zip": "e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d",
+    "Code_snapshot_GF_RGL_AI_Compendium(4).zip": "73849c9b2e74cd8fcaacb438663eee2c285f84872f46284543b165840ce79bfe",
+    "Code_snapshot_GF_Wordbench(20260925-123301).zip": "1664b592c5cfca72131ba75124f3a6d51b39e2596ae4488aa70a55746245cfdd",
+    "Albanian_ref(20260925-125550).zip": "15396c31106de2787ae844bb7013b77b4d1fe0b8a3b5e714fc7a9aeef23f1cfc"
+  },
+  "protected_baseline": {
+    "gf": "3.12",
+    "wordbench": "1.3.4",
+    "run": "20260925_112639",
+    "source_lock": "6834fc8975ce82a6c4984280bff1000dae644f134fec457996abb9f25888ef37",
+    "targets": "58/58",
+    "scenarios": "52/52"
+  },
+  "matrix_summary": {
+    "Structural": {
+      "rows": 102,
+      "implemented": 102
+    },
+    "Extend": {
+      "rows": 140,
+      "implemented": 139,
+      "partial": 1
+    },
+    "Extra": {
+      "rows": 56,
+      "implemented": 56
+    },
+    "Markup": {
+      "rows": 8,
+      "implemented": 8
+    },
+    "Symbol": {
+      "rows": 13,
+      "implemented": 13
+    },
+    "Documentation": {
+      "rows": 31,
+      "implemented": 30,
+      "version_blocked": 1
+    }
+  },
+  "files": [
+    {
+      "name": "00_FINAL_TARGET.md",
+      "bytes": 4983,
+      "sha256": "1294cd1878eec09cc9f35bdaf7b358bdecaeb95057ecf474cab28db78f19fff7"
+    },
+    {
+      "name": "01_AUTHORITY_AND_SOURCE_LOCK.md",
+      "bytes": 3793,
+      "sha256": "17a3d0dcc2f7b277911ffd05478c8a1777deddcc654fe391380d0f6ea0f11980"
+    },
+    {
+      "name": "02_PARITY_STATUS_MODEL.md",
+      "bytes": 4015,
+      "sha256": "4251cc37b15240d70c821e867a771968d11f7182cf1c242e561f383a09514584"
+    },
+    {
+      "name": "03_ENGLISH_ALBANIAN_PARITY_MATRIX.md",
+      "bytes": 61709,
+      "sha256": "bff76f59090820d559d13fdbb485bd30e7da6a7cdd36580979cbe93c8c263b2f"
+    },
+    {
+      "name": "04_STRUCTURAL_COMPLETION_PLAN.md",
+      "bytes": 2987,
+      "sha256": "5140342d6f865d068a3c9aab5a678e1c236caf6222be7a733226d7d07d8b3a8a"
+    },
+    {
+      "name": "05_EXTEND_EXTRA_COMPLETION_PLAN.md",
+      "bytes": 3808,
+      "sha256": "2e19d6773ef35cdbfbaa202dbb68493f59e61398535d7c31f55572ea2ed62262"
+    },
+    {
+      "name": "06_PUBLIC_API_PLAN.md",
+      "bytes": 2877,
+      "sha256": "dca40e2aa24f9f674f13310d5544637837df78242540be74391683b284b9ae19"
+    },
+    {
+      "name": "07_DOCUMENTATION_SYMBOL_MARKUP_PLAN.md",
+      "bytes": 2334,
+      "sha256": "a217eab092a98e0d71f79d644ee54d711be5d17add3b18126dd4b5d371611467"
+    },
+    {
+      "name": "08_LINGUISTIC_EVIDENCE_MAP.md",
+      "bytes": 3871,
+      "sha256": "24c352ce5cae6b4e4ae2cb0c5966a91cb8bb4451a0ef2bc547caf5b9d01f9534"
+    },
+    {
+      "name": "09_TEST_AND_RELEASE_GATES.md",
+      "bytes": 2818,
+      "sha256": "7bba629630bc5af7a33ee7a832b452e8056fb763e22293dc8b0e0c4827dcf9c5"
+    },
+    {
+      "name": "10_DRIFT_GUARD.md",
+      "bytes": 2671,
+      "sha256": "6dc69a15126ab3097e523814eb78db231fb2cf992ebc45238da3b436d3651b55"
+    },
+    {
+      "name": "11_OPEN_DECISIONS.md",
+      "bytes": 1794,
+      "sha256": "553ff1040768614423118ab8825b76e011650f03b78af8a093f3d35d228e8f2c"
+    },
+    {
+      "name": "12_BUILD_SEQUENCE_AND_HANDOFF.md",
+      "bytes": 2115,
+      "sha256": "eeaecff5df9542166e58d9a4a5caf657fb5503ea74575ca52b56b3d5b6135e6d"
+    },
+    {
+      "name": "13_CURRENT_SOURCE_INVENTORY.md",
+      "bytes": 4569,
+      "sha256": "ec0ce0c45d55da3b8a4f1cd75085a22be6bd2070937823bff8aa37e99e09168c"
+    },
+    {
+      "name": "14_ENGLISH_ONLY_SURFACE_REVIEW.md",
+      "bytes": 2767,
+      "sha256": "2a822dcb7c8cd297683f9dc9ec6794828710d434d9cf818d125d14077dcc0bee"
+    },
+    {
+      "name": "15_EXPECTED_FINAL_DELIVERABLES.md",
+      "bytes": 2302,
+      "sha256": "8ac319ff311f98232386f0f07e2fdebd18b4d416557f1ce412f7ccbcf3434556"
+    },
+    {
+      "name": "16_TRACEABILITY_MODEL.md",
+      "bytes": 2346,
+      "sha256": "6f63b427e623f0c7acf87f7c4cd5caf087b5c6241f94ea2b77c88f82f7aa6d37"
+    },
+    {
+      "name": "17_LINGUISTIC_EVIDENCE_LEDGER.md",
+      "bytes": 4616,
+      "sha256": "5762a87d9a937082e4db7972b0b1ab8de5d5ecbddb6d8ef258f61b38da55d871"
+    },
+    {
+      "name": "18_TEST_COVERAGE_REGISTER.md",
+      "bytes": 5381,
+      "sha256": "9707d53942966e736792959f7f89642338fdbd93eec091c0b70f57f6eeb09e0b"
+    },
+    {
+      "name": "19_PUBLIC_API_EXPORT_MATRIX.md",
+      "bytes": 3417,
+      "sha256": "27298f3fd653051bfc79bb0f90db0a71633de0a0c0211aa94ecc92b21c5f06f5"
+    },
+    {
+      "name": "20_API_COMPATIBILITY_CONTRACT.md",
+      "bytes": 2304,
+      "sha256": "464caa5e958349074171a5140cf51c9d4362cdd9ff0eab2710e38e5ca5dcdb6f"
+    },
+    {
+      "name": "21_INTER_CONVERSATION_DEPENDENCIES.md",
+      "bytes": 2300,
+      "sha256": "92eb4fb4b3d2a19a15163e8498809e5b03e0c6c6aa8b6a4612ec99de86d26567"
+    },
+    {
+      "name": "22_DECISION_REGISTER.md",
+      "bytes": 4171,
+      "sha256": "046080e69d41dff8d1556a2b9e1683f236e6003171e670eee49b23751cbb3a3c"
+    },
+    {
+      "name": "23_ENGLISH_SURFACE_INVENTORY.md",
+      "bytes": 8091,
+      "sha256": "b359cac68e8eebe988b00c0cdd666989c198eaaacc4161c946409984363c4489"
+    },
+    {
+      "name": "24_CLOSURE_CHECKLIST.md",
+      "bytes": 2988,
+      "sha256": "71bbf3aa805ed2e738ac76be5d77fda1d141a9d8e0f79344e5d99d0bd5a497c8"
+    },
+    {
+      "name": "25_PATCH_RECORD_TEMPLATE.md",
+      "bytes": 980,
+      "sha256": "79a1a4b7bd408cd9d2fce5fff8a24891472358d74381de82b706ba38822d174b"
+    },
+    {
+      "name": "26_V2_QUALITY_AUDIT.md",
+      "bytes": 2683,
+      "sha256": "d3f0af8f635c1716125ead12b9b8d2e418126fe3436713d050177e40db61de59"
+    },
+    {
+      "name": "CHANGELOG_V2.md",
+      "bytes": 965,
+      "sha256": "eaab8cd308226b55c3cab036c4456af3f786007f8435bcfb866d5559909a0f56"
+    },
+    {
+      "name": "README.md",
+      "bytes": 3610,
+      "sha256": "09fa91b7af7c62b0b3670393e1a1ede2346304db9f29d7eeb642be4fc5ed1a1f"
+    }
+  ],
+  "notes": [
+    "No GF source modified by this documentation optimization.",
+    "Exact active RGL Git identity remains unresolved/release-blocking."
+  ],
+  "quality_audit": "26_V2_QUALITY_AUDIT.md"
+}

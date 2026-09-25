@@ -1,5 +1,5 @@
 -- GF_WORDBENCH_INPUT_SHA256 10d02fc72f11af28e53b5f84f3d5da3496a2d7eca5041b7f3ed6badf97384db0 validation/inputs/AlbCampaign003.gf
--- GF_WORDBENCH_INPUT_SHA256 0f8b5fccf757b26079327480d1ae171cad8963ecff735397a479fb828447cd02 validation/inputs/AlbCampaign003Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 45df1146d7c0a6b695c1863ac2a6418ab5092b4ddd994f61de6a73120622c2f7 validation/inputs/AlbCampaign003Sqi.gf
 i AlbCampaign003Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0021 girl_N indef nom sg"

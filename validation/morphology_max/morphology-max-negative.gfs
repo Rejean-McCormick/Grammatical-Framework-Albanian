@@ -1,0 +1,12 @@
+-- EXPECTED-FAILURE suite. Run each l command independently; every linearization
+-- must fail with the corresponding ParadigmsSqi "incompatible ... principal part"
+-- error. This file is intentionally outside validation/scenarios so the stable
+-- 52/52 Wordbench campaign is not redefined by expected failures.
+i AlbMorphologyMaxNegativeSqi.gf
+l BAD_N2
+l BAD_N3
+l BAD_A2
+l BAD_V2
+l BAD_V3
+l BAD_V4
+q

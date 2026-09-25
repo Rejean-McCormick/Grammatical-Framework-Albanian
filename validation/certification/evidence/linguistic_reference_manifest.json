@@ -1,0 +1,56 @@
+{
+  "schema": "albanian-c10-linguistic-reference-manifest-v1",
+  "source_archive": "Albanian_ref(20260925-125558).zip",
+  "files": [
+    {
+      "name": "Albanian.pdf",
+      "bytes": 736185,
+      "sha256": "189526590748a3bc921d46cfbac907632376caf0cc9a27903844b191ec2812ad"
+    },
+    {
+      "name": "Albanian_Complete_Grammar.html",
+      "bytes": 88453,
+      "sha256": "39afeeb3d2fd90e70d41ba9bbcab1a27f64ea2addfec115ce8d784f0bd342a30"
+    },
+    {
+      "name": "Geg_Glossary_Master.html",
+      "bytes": 163621,
+      "sha256": "38042fd683606fe52f855f6b2c1c2300e02f68ca3f782213b9744a06da82a3cf"
+    },
+    {
+      "name": "Lesson_10.html",
+      "bytes": 238832,
+      "sha256": "3dbec8b21edb4091e329acc0e1a12ef4358955f6dfce67d3d877af10eae7f5fe"
+    },
+    {
+      "name": "Lesson_20.html",
+      "bytes": 257942,
+      "sha256": "bc4cea05b4b3af552ea79b4b04890369f85e14f42ab79ea56e2815266bcb3405"
+    },
+    {
+      "name": "Lesson_30.html",
+      "bytes": 239908,
+      "sha256": "ad971ebf9d999e984397cb308730db1dedca50c7836b722db9465b61590d10f0"
+    },
+    {
+      "name": "Lesson_40.html",
+      "bytes": 237126,
+      "sha256": "983851068e33ad74927640e366f5ae2b60e1c65b294da7a342c74c5e708e1ace"
+    },
+    {
+      "name": "Lesson_50.html",
+      "bytes": 235194,
+      "sha256": "636736e973486b2535f404434fc1f246b7f55c665cf1097dcd9efe2805445f5b"
+    },
+    {
+      "name": "Tosk_Dictionary_Master.html",
+      "bytes": 175423,
+      "sha256": "fae38b11308bb8c3779fc84457fc3881218a2cd064283ae2412ddd8f561107f8"
+    },
+    {
+      "name": "Tosk_Glossary_Master.html",
+      "bytes": 216782,
+      "sha256": "2574a6e86fa4bf1b891bbba0b85d33ba7eab13a9bbdef4660526ca8abf5b34df"
+    }
+  ]
+}

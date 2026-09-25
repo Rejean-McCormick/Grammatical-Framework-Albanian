@@ -1,0 +1,281 @@
+lemma	category	surface	raw_description	mapping_status	gf_feature_path	note
+Epir	N	Epir	noun, masculine; ablative singular definite of	exact	s.Def.Ablat.Sg;g=Masc	
+Epir	N	Epirit	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+Kosovë	N	Kosovës	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+Murat	N	Murati	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+Shqipëri	N	Shqipëri	noun, feminine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Fem	
+Shqipëri	N	Shqipërisë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+aeroport	N	aeroportit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+ai	Pron	ai|ajo|atij|e|i|saj	pronoun; accusative weak of | pronoun; dative of | pronoun; dative weak of | pronoun; feminine genitive of | pronoun; feminine nominative of | pronoun; masculine dative of | pronoun; masculine nominative of	ambiguous		source has 6 distinct forms but 7 analyses; alignment is not one-to-one
+armë	N	armët	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+asfalt	N	asfaltin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+ata	Pron	i	pronoun; accusative weak of	unmapped		category requires category-specific reviewed mapping
+atdhe	N	atdheut	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+barabartë	A	barabarta	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+barazi	N	barazinë	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+barazi	N	barazisë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+bashkë	Adv	bashkë	adverb;	exact	s	invariant/closed-category surface evidence
+bazohem	V	bazohet	verb; 3rd person singular present indicative non-active of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+besnikëri	N	besnikërinë	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+beton	N	betonin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+bie	V	binte	verb; 3rd person singular imperfect indicative active of	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+bisedim	N	bisedimet	noun, masculine; nominative plural definite of	exact	s.Def.Nom.Pl;g=Masc	
+boshnjak	A	boshnjake	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+botëror	A	botërore	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+breg	N	brigjet	noun, masculine; of nominative plural definite of	exact	s.Def.Nom.Pl;g=Masc	
+bukur	A	bukur	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+cili	Pron	cilat	pronoun; feminine plural of | pronoun; nominative feminine plural of	ambiguous		source has 1 distinct forms but 2 analyses; alignment is not one-to-one
+cilido	A	cilindo	adjective; masculine accusative singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+demokraci	N	demokracisë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+demokratik	A	demokratik	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+dhe	Conj	dhe	conjunction;	exact	s	invariant/closed-category surface evidence
+di	V	dinte	verb; 3rd person singular imperfect indicative active of	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+diell	N	diell	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+diçka	Pron	diçka	pronoun;	unmapped		category requires category-specific reviewed mapping
+do	Marker	do	marker;	unmapped		category requires category-specific reviewed mapping
+drejtë	N	drejtave	noun, feminine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Fem	
+drejtë	N	drejtë	noun, feminine; genitive plural definite of	exact	s.Def.Dat.Pl;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+drejtë	N	drejtës	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+drejtësi	N	drejtësisë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+duhem	V	duhet	verb; 3rd person singular present indicative non-active impersonal of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+dukem	V	dukej	verb; 3rd person singular imperfect subjunctive non-active of	exact	Subjunctive.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+dukem	V	dukur	verb; participle of	exact	participle	
+dy	Det	dy	determiner;	unmapped		category requires category-specific reviewed mapping
+dëborë	N	dëborë	noun, feminine; nominative singular indefinite of	exact	s.Indef.Nom.Sg;g=Fem	
+e	Conj	e	conjunction;	exact	s	invariant/closed-category surface evidence
+e	Particle	e|i|së|të	particle; feminine accusative plural definite of | particle; feminine accusative plural indefinite of | particle; feminine accusative singular definite of | particle; feminine accusative singular indefinite of | particle; feminine genitive plural definite of | particle; feminine genitive singular definite of | particle; feminine nominative plural definite of | particle; feminine nominative singular definite of | particle; feminine nominative singular indefinite of | particle; feminine nominative singular of | particle; masculine ablative plural definite of | particle; masculine ablative singular definite of | particle; masculine accusative plural definite of | particle; masculine accusative singular definite of | particle; masculine accusative singular indefinite of | particle; masculine genitive plural definite of | particle; masculine genitive singular definite of | particle; masculine nominative plural definite of | particle; masculine nominative singular definite of | particle; masculine nominative singular indefinite of	ambiguous		source has 4 distinct forms but 20 analyses; alignment is not one-to-one
+edhe	Adv	edhe	adverb;	exact	s	invariant/closed-category surface evidence
+ekonomi	N	ekonomisë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+ekonomik	A	ekonomike	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+eshtër	N	eshtrave	noun, feminine; genitive plural definite of	exact	s.Def.Dat.Pl;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+fat	N	fati	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+femër	N	femrave	noun, feminine; genitive plural definite of	exact	s.Def.Dat.Pl;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+fillim	N	fillimi	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+filloj	V	fillojë	verb participle of;	exact	participle	
+filloj	V	filluan	verb; 3rd person plural past definite indicative active of	exact	Indicative.Aorist.Pl.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+filloj	V	filluar	verb; 3rd person singular present subjunctive active of	exact	Subjunctive.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+fitore	N	fitoren	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+flaktë	A	flakta	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+flamur	N	flamuri	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+flamur	N	flamurit	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+fund	N	fund	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+fundit	A	fundit	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+fushë	N	fushat	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+fushë	N	fushën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+gjeneral	N	gjenerali	noun, masculine; ablative singular definite of	exact	s.Def.Ablat.Sg;g=Masc	
+gjeneral	N	gjeneralit	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+gjer	Prep	gjer	preposition, accusative;	exact	c=Acc;s	
+gjinor	A	gjinore	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+gjithmonë	Adv	gjithmonë|gjithëmonë	adverb;	ambiguous		source has 2 distinct forms but 1 analyses; alignment is not one-to-one
+gjuhë	N	gjuha	noun, feminine; genitive plural indefinite of	exact	s.Indef.Dat.Pl;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+gjuhë	N	gjuhë	noun, feminine; nominative plural indefinite of	exact	s.Indef.Nom.Pl;g=Fem	
+gjuhë	N	gjuhëve	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+gusht	N	gushtit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+himn	N	himni	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+huaj	A	huaj	adjective; feminine singular of | adjective; masculine singular of	ambiguous		source has 1 distinct forms but 2 analyses; alignment is not one-to-one
+hyrje	N	hyrjes	noun, feminine; dative singular definite of	exact	s.Def.Dat.Sg;g=Fem	
+im	Pron	time	pronoun; feminine accusative singular of	unmapped		category requires category-specific reviewed mapping
+jam	V	ishte|janë|jenë|është	verb; 3rd person plural present indicative active of | verb; 3rd person plural present subjunctive active of | verb; 3rd person singular imperfect indicative active of | verb; 3rd person singular imperfect indicative of | verb; 3rd person singular present indicative active of	ambiguous		source has 4 distinct forms but 5 analyses; alignment is not one-to-one
+jap	V	dhënë	verb; 3rd person singular imperfect subjunctive active of	exact	Subjunctive.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+jap	V	jepte	verb; past definite participle of	exact	participle	
+jetë	N	jetën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+jetë	N	jetës	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+ju	Pron	ju|juve	pronoun; dative of | pronoun; dative weak of | pronoun; nominative of	ambiguous		source has 2 distinct forms but 3 analyses; alignment is not one-to-one
+juaj	Pron	tuaj	pronoun; accusative singular of	unmapped		category requires category-specific reviewed mapping
+kam	V	ka	verb; 1st person plural present indicative active of	exact	Indicative.Pres.Pl.P1	voice label retained as evidence metadata; current Verb table has no voice dimension
+kam	V	kanë	verb; 2nd person plural present indicative active of	exact	Indicative.Pres.Pl.P2	voice label retained as evidence metadata; current Verb table has no voice dimension
+kam	V	kemi	verb; 3rd person plural imperfect indicative active of	exact	Indicative.Imperfect.Pl.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+kam	V	kini	verb; 3rd person plural present indicative active of	exact	Indicative.Pres.Pl.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+kam	V	kishin	verb; 3rd person singular imperfect indicative active of	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+kam	V	kishte	verb; 3rd person singular present indicative active of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+karakter	N	karakterin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+klimë	N	klimën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+kohë	N	kohën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+koicidencë	N	koicidencë	noun, feminine; nominative singular indefinite of	exact	s.Indef.Nom.Sg;g=Fem	
+kombëtar	A	kombëtare	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+komunë	N	komune	noun, feminine; ablative singular indefinite of	exact	s.Indef.Ablat.Sg;g=Fem	
+kontratë	N	kontratat	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+kryej	V	kryera	adjective; feminine plural participle of	exact	participle	
+kryhem	V	kryhej	verb; 3rd person singular imperfect subjunctive non-active of	exact	Subjunctive.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+kthen	V	ktheni	verb; 2nd person plural present subjunctive active of	exact	Subjunctive.Pl.P2	voice label retained as evidence metadata; current Verb table has no voice dimension
+kulturor	A	kulturore	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+kundrejt	Prep	kundrejt	preposition, ablative;	exact	c=Ablat;s	
+kur	Adv	kur	adverb;	exact	s	invariant/closed-category surface evidence
+kushtetues	A	kushtetues	adjective, masculine singular of;	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+ky	Det	ky	determiner; masculine nominative of	unmapped		category requires category-specific reviewed mapping
+ky	Pron	ky	pronoun; feminine accusative of	unmapped		category requires category-specific reviewed mapping
+ky	Pron	kësaj	pronoun; feminine genitive of	unmapped		category requires category-specific reviewed mapping
+ky	Pron	këtë	pronoun; masculine nominative of	unmapped		category requires category-specific reviewed mapping
+këtu	Adv	këtu	adverb;	exact	s	invariant/closed-category surface evidence
+lag	V	lagte	verb; 3rd person singular imperfect indicative active of	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+lagët	A	lagët	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+lart	A	lartë	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+lavde	N	lavdet	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+lexoj	V	lexuar	verb; participle of	exact	participle	
+libër	N	librin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+ligj	N	ligj	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+ligj	N	ligjit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+liri	N	lirinë	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+liri	N	lirisë	noun, feminine; genitive plural definite of	exact	s.Def.Dat.Pl;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+liri	N	lirive	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+luftoj	V	luftoni	verb; 2nd person plural present indicative active of	exact	Indicative.Pres.Pl.P2	voice label retained as evidence metadata; current Verb table has no voice dimension
+luftoj	V	luftuar	verb; participle of	exact	participle	
+luftë	N	luftra	noun, feminine; accusative plural indefinite of	exact	s.Indef.Acc.Pl;g=Fem	
+luftë	N	luftën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+lë	V	lënë	verb; participle of	exact	participle	
+madh	A	madh	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+madh	A	madhe	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+mashkull	N	meshkujve	noun, masculine; genitive plural definite of	exact	s.Def.Dat.Pl;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+mbarë	Det	mbarë	determiner;	unmapped		category requires category-specific reviewed mapping
+mbi	Prep	mbi	preposition, accusative;	exact	c=Acc;s	
+mbretëri	N	mbretërisë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+mbrojtje	N	mbrojtja	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+mbrojtje	N	mbrojtjes	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+me	Prep	me	preposition, accusative;	exact	c=Acc;s	
+meritoj	V	merituar	verb; participle of	exact	participle	
+midis	Prep	midis	preposition, ablative;	exact	c=Ablat;s	
+mirë	A	mirë	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+mision	N	misioni	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+mjedis	N	mjedisit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+monoton	V	monoton	verb; nominative singular of	unmapped		verb description does not map uniquely to current Verb cells
+mos	Adv	mos	adverb;	exact	s	invariant/closed-category surface evidence
+mos	Particle	mos	particle;	unmapped		category requires category-specific reviewed mapping
+mosdiskriminim	N	mosdiskriminimit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+mund	V	mund	verb; 3rd person singular present indicative active of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+mundësi	N	mundësi	noun, feminine; accusative plural indefinite of	exact	s.Indef.Acc.Pl;g=Fem	
+mur	N	muret	noun, masculine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Masc	
+më	Adv	më	adverb;	exact	s	invariant/closed-category surface evidence
+mënyrë	N	mënyra	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+mësoj	V	mësuar	verb; participle of	exact	participle	
+ndarje	N	ndarjes	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+nder	N	nderin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+ndërsë	N	ndërtesat	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+ne	Pron	ne	pronoun; nominative of	unmapped		category requires category-specific reviewed mapping
+nga	Prep	nga	preposition, nominative;	exact	c=Nom;s	
+nisem	V	nisej	verb; 3rd person singular imperfect indicative non-active of	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+nivel	N	nivel	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+njeri	N	njeriu	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+njeri	N	njeriut	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+një	Det	një	determiner;	unmapped		category requires category-specific reviewed mapping
+nuk	Adv	nuk	adverb;	exact	s	invariant/closed-category surface evidence
+në	Prep	në	preposition, accusative;	exact	c=Acc;s	
+nën	Prep	nën	preposition, accusative;	exact	c=Acc;s	
+nënshkruaj	V	nënshkruan	verb; 3rd person plural past definite indicative active of	exact	Indicative.Aorist.Pl.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+o	Interj	o	interjection;	exact	s	invariant/closed-category surface evidence
+ose	Conj	ose	conjunction;	exact	s	invariant/closed-category surface evidence
+pajtim	N	pajtim	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+pamje	N	pamja	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+pamundur	A	pamundur	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+papritur	A	papritur	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+paqe	N	paqes	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+para	Adv	para	adverb;	exact	s	invariant/closed-category surface evidence
+parim	N	parimet	noun, masculine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Masc	
+parë	A	para	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+pasqyroj	V	pasqyrojnë	verb; 3rd person plural present indicative active of	exact	Indicative.Pres.Pl.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+pistë	N	pistës	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+pjesë	N	pjesën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+pjesëmarrje	N	pjesëmarrje	noun, feminine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Fem	
+plogështi	N	plogështia	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+plot	Adv	plot	adverb;	exact	s	invariant/closed-category surface evidence
+pluralizm	N	pluralizmit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+po	Marker	po	marker;	unmapped		category requires category-specific reviewed mapping
+politik	A	politike	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+por	Conj	por	conjunction;	exact	s	invariant/closed-category surface evidence
+porsaardhur	A	porsaardhur	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+pra	Conj	pra	conjunction;	exact	s	invariant/closed-category surface evidence
+pranvëre	N	pranverë	noun, feminine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Fem	
+pronë	N	pronës	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+pushtet	N	pushtetit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+pëkundrazi	Adv	përkundrazi	adverb;	exact	s	invariant/closed-category surface evidence
+për	Prep	për	preposition, accusative;	exact	c=Acc;s	
+për në	Prep	për në	preposition, accusative;	exact	c=Acc;s	
+përdorim	N	përdorim	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+përdorim	N	përdorimit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+përfundimtar	A	përfundimtare	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+përpiqem	V	përpiqeni	verb; 2nd person plural present subjunctive non-active of	exact	Subjunctive.Pl.P2	voice label retained as evidence metadata; current Verb table has no voice dimension
+përveç	Prep	përveç	preposition, ablative;	exact	c=Ablat;s	
+përziej	V	përzier	adjective; masculine plural participle of	exact	participle	
+qeveri	N	qeverive	noun, feminine; ablative plural definite of	exact	s.Def.Ablat.Pl;g=Fem	
+qull	V	qullur	verb; participle of	exact	participle	
+që	Conj	që	conjunction;	exact	s	invariant/closed-category surface evidence
+që	Prep	që	preposition, accusative;	exact	c=Acc;s	
+rast	N	rast	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+rend	N	rendi	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+republikë	N	Republikës|republika|republikën|republikës	noun, feminine; accusative singular definite of | noun, feminine; genitive singular definite of | noun, feminine; nominative singular definite of	ambiguous		source has 4 distinct forms but 3 analyses; alignment is not one-to-one
+respektim	N	respektimit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+rojë	N	rojat	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+rom	A	rome	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+rregullohem	V	rregullohen	verb; 3rd person plural present indicative non-active of	exact	Indicative.Pres.Pl.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+rregullohem	V	rregullohet	verb; 3rd person singular present indicative non-active of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+rrëmbej	V	rrëmbeni	verb; 2nd person plural present subjunctive active of	exact	Subjunctive.Pl.P2	voice label retained as evidence metadata; current Verb table has no voice dimension
+sa	Adv	sa	adverb;	exact	s	invariant/closed-category surface evidence
+sa	Conj	sa	conjunction;	exact	s	invariant/closed-category surface evidence
+se	Conj	se	conjunction;	exact	s	invariant/closed-category surface evidence
+sepse	Conj	sepse	conjunction;	exact	s	invariant/closed-category surface evidence
+serb	A	serbe	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+shetëror	A	shtetëror	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+shi	N	shi|shiu	noun, masculine; accusative singular indefinite of | noun, masculine; nominative singular definite of | noun, masculine; nominative singular indefinite of	ambiguous		source has 2 distinct forms but 3 analyses; alignment is not one-to-one
+shkak	N	shkaku	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+shkruhem	V	shkruhej	verb; 3rd person singular imperfect subjunctive non-active of	exact	Subjunctive.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+shkëlqej	V	shkëlqente	verb, 3rd person singular imperfect indicative active of;	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+shoqëri	N	shoqërisë	noun feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+shoqëror	A	shoqërore	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+shpëtim	N	shpëtimin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+shqip	A	shqipe	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+shtet	N	shtet	noun, masculine; nominative singular indefinite of	exact	s.Indef.Nom.Sg;g=Masc	
+shtetëror	A	shtetërore	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+shumetnik	A	shumetnik	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+shëmbëllë	N	shëmbëllën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+si	Conj	si	conjunction;	exact	s	invariant/closed-category surface evidence
+siguroj	V	siguron	verb; 3rd person singular present indicative active of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+sikur	Conj	sikur	conjunction;	exact	s	invariant/closed-category surface evidence
+simbol	N	simbolet	noun, ambigeneric; genitive plural definite of	exact	s.Def.Dat.Pl;g=?	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+simbol	N	simboleve	noun, ambigeneric; nominative plural definite of	exact	s.Def.Nom.Pl;g=?	
+social	A	sociale	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+sot	Adv	sot	adverb;	exact	s	invariant/closed-category surface evidence
+sqotë	N	sqota	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+status	N	statusin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+stemë	N	stema	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+sukses	N	sukses	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+sundim	N	sundimit	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+svetigradas	N	sfetigradas	noun, masculine; nominative plural indefinite of	exact	s.Indef.Nom.Pl;g=Masc	
+taman	Adv	taman	adverb;	exact	s	invariant/closed-category surface evidence
+tani	Adv	tani	adverb;	exact	s	invariant/closed-category surface evidence
+thatë	A	thatë	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+themelor	A	themelore	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+tij	Det	tij	determiner; masculine accusative singular of | determiner; masculine nominative singular of	ambiguous		source has 1 distinct forms but 2 analyses; alignment is not one-to-one
+tjetër	A	tjera	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+tjetër	A	tjetër	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+tjetër	N	tjerave	noun, masculine; ablative plural definite of	exact	s.Def.Ablat.Pl;g=Masc	
+tokë	N	tokën	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+treg	N	tregut	noun, masculine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+trishtuar	A	trishtuar	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+turk	A	turke	adjective; feminine singular of	ambiguous	s.*.Fem.Sg	source adjective description does not determine GF Case
+turp	N	turp	noun, masculine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Masc	
+të	Conj	t'i|t'ia|t'ju|ta|të	conjunction; | conjunction; contraction of	ambiguous		source has 5 distinct forms but 2 analyses; alignment is not one-to-one
+tërheqje	N	tërheqjen	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+u	Marker	u	marker;	unmapped		category requires category-specific reviewed mapping
+udhëheqje	N	udhëheqjen	noun, feminine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Fem	
+unë	Pron	meje	pronoun; ablative of	unmapped		category requires category-specific reviewed mapping
+ushtar	N	ushtarët	noun, masculine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Masc	
+ushtar	N	ushtarëve	noun, masculine; genitive plural definite of	exact	s.Def.Dat.Pl;g=Masc	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+varem	V	varet	verb; 3rd person singular present indicative non-active of	exact	Indicative.Pres.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+vetëm	Adv	vetëm	adverb;	exact	s	invariant/closed-category surface evidence
+vij	V	vinte	verb; 3rd person singular imperfect indicative active of	exact	Indicative.Imperfect.Sg.P3	voice label retained as evidence metadata; current Verb table has no voice dimension
+vjeshtë	N	vjeshta	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+vjeshtë	N	vjeshtë	noun, feminine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Fem	
+vjeshtë	N	vjeshtës	noun, feminine; nominative singular indefinite of	exact	s.Indef.Nom.Sg;g=Fem	
+vlerë	N	vlerë	noun, feminine; accusative singular indefinite of	exact	s.Indef.Acc.Sg;g=Fem	
+vranësirë	N	vranësirat	noun, feminine; nominative plural definite of	exact	s.Def.Nom.Pl;g=Fem	
+vras	V	vrarë	adjective; masculine plural participle of	exact	participle	
+vulos	V	vulosur	adjective; masculine singular participle of	exact	participle	
+vërtetë	A	vërtetë	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+xhade	N	xhadesë	noun, feminine; genitive singular definite of	exact	s.Def.Dat.Sg;g=Fem	source genitive maps to the current morphological Dat/oblique cell; syntactic genitive linking is handled outside N morphology
+zhvillim	N	zhvillimin	noun, masculine; accusative singular definite of	exact	s.Def.Acc.Sg;g=Masc	
+zi	A	zi	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+zjarrtë	A	zjarrtë	adjective; masculine plural of	ambiguous	s.*.Masc.Pl	source adjective description does not determine GF Case
+zot	N	Zoti	noun, masculine; nominative singular definite of	exact	s.Def.Nom.Sg;g=Masc	
+zyrtar	A	zyrtar	adjective; feminine plural of	ambiguous	s.*.Fem.Pl	source adjective description does not determine GF Case
+zyrtar	A	zyrtare	adjective; masculine singular of	ambiguous	s.*.Masc.Sg	source adjective description does not determine GF Case
+zëmër	N	zëmrat	noun, feminine; accusative plural definite of	exact	s.Def.Acc.Pl;g=Fem	
+çdo	Det	çdo	determiner;	unmapped		category requires category-specific reviewed mapping

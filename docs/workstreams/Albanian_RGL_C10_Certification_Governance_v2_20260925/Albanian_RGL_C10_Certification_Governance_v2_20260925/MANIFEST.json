@@ -1,0 +1,183 @@
+{
+  "package": "Albanian_RGL_C10_Certification_Governance_v2_20260925",
+  "version": "2.0",
+  "date": "2026-09-25",
+  "purpose": "Conversation 10 Albanian RGL linguistic certification / gold / English parity anti-drift governance",
+  "architecture": [
+    "constitution",
+    "reference_model",
+    "living_evidence"
+  ],
+  "documents": [
+    {
+      "file": "00_START_HERE.md",
+      "bytes": 4484,
+      "sha256": "7fd3ca4de3d6e73f84be93374dc5a629adcf9fc0c327ef9ff2736c1d33f2f0cd"
+    },
+    {
+      "file": "01_FINAL_STATE_AND_DEFINITION_OF_DONE.md",
+      "bytes": 4435,
+      "sha256": "43469c4c08ef5e4d8086f133ac971587789eaadf7504d8d2a6e0af0c92e27ac5"
+    },
+    {
+      "file": "02_AUTHORITY_EVIDENCE_AND_VARIETY_POLICY.md",
+      "bytes": 3895,
+      "sha256": "a7c97c67824b2728ebc3ab6991b3cff7a92501181acf41be9e3879413539f82e"
+    },
+    {
+      "file": "03_CASE_REVIEW_PROTOCOL.md",
+      "bytes": 3389,
+      "sha256": "4af2c963740924584ff7daf3a29477ff45a8043bc3e9f927309a931a8a8867cb"
+    },
+    {
+      "file": "04_GOLD_PROMOTION_POLICY.md",
+      "bytes": 2967,
+      "sha256": "3c4d5dc13bf100345cdfd1c246bfd9b33ce959d9f4e9601c043e7093ca132fd7"
+    },
+    {
+      "file": "05_CAMPAIGN_SCALING_569_5000_20000.md",
+      "bytes": 3381,
+      "sha256": "1deaef2d0642953dcdd07aada748eba88441023e0e6621bd3e73a280d7f80ffb"
+    },
+    {
+      "file": "06_COVERAGE_MATRIX_SPEC.md",
+      "bytes": 3013,
+      "sha256": "cdc1a74bff02e696cf97848d27a5dfa8bc201c24a57fa38a6a5b94af8cb97581"
+    },
+    {
+      "file": "07_ENGLISH_PARITY_MATRIX_SPEC.md",
+      "bytes": 3240,
+      "sha256": "535e5f5805332ff85b9a94bf74e0340beb1fd4746dddc68dbda61af44a975747"
+    },
+    {
+      "file": "08_BUG_TRIAGE_AND_HANDOFF.md",
+      "bytes": 2493,
+      "sha256": "c3581e94c7ed1fa2a0a819269839fe8076c0b9574c1861a86995e5bc855ca151"
+    },
+    {
+      "file": "09_RELEASE_CERTIFICATION_GATES.md",
+      "bytes": 3136,
+      "sha256": "7351c5fdcbbe6aaec43e2b3f5f527afe24b6e0f730731a120f127e9c91858633"
+    },
+    {
+      "file": "10_DASHBOARD_AND_METRICS.md",
+      "bytes": 2517,
+      "sha256": "4865fc33472ec5bcb282b8bfcc3dc82851220a9fdf930e96986b606e2095c31c"
+    },
+    {
+      "file": "11_ARTIFACT_LAYOUT_AND_SCHEMAS.md",
+      "bytes": 2791,
+      "sha256": "3c8c033b1bbc883823729daa1b2c6ea7eafce8e3b64c6069698151f453ff2e90"
+    },
+    {
+      "file": "12_ALBANIAN_LINGUISTIC_SCOPE.md",
+      "bytes": 3405,
+      "sha256": "7625f78d0af6b77ca9838989a13b3e4f0c1b3c41f4c27ea2498110810562e6fb"
+    },
+    {
+      "file": "13_SOURCE_REGISTER.md",
+      "bytes": 3665,
+      "sha256": "c11a98dfbe1d9bd7b7f6594af9871d48091be13525f564b311e63eb7be409bed"
+    },
+    {
+      "file": "14_ANTI_DRIFT_CONSTITUTION.md",
+      "bytes": 3982,
+      "sha256": "854e60cd96d111e624fd239045b1005ae8bee7ad1a231fc244ae35f2f4e2f638"
+    },
+    {
+      "file": "15_SOURCE_CHECKSUMS.md",
+      "bytes": 1431,
+      "sha256": "9098073ffc0312bd4d30712eb8dd05d129ca30f51809cf207052087f416f55d7"
+    },
+    {
+      "file": "16_NORMATIVE_VOCABULARY.md",
+      "bytes": 3622,
+      "sha256": "3e8345299e9c81b961745285fe45ac216b93ed6adfe4b0be3658919526744da2"
+    },
+    {
+      "file": "17_ALBANIAN_GRAMMATICAL_FEATURE_MODEL.md",
+      "bytes": 7218,
+      "sha256": "678fd559b2f3ba56c1aa5f639282f7293b639763d45d421cf2d2f147f6f6aec1"
+    },
+    {
+      "file": "18_PARADIGM_AND_MORPHOLOGICAL_CELL_REGISTRY.md",
+      "bytes": 4312,
+      "sha256": "b152c959a5ebab77ddaf0ca70281115b3743324c4fadb4a5d3e24a327ebc8479"
+    },
+    {
+      "file": "19_ENGLISH_REFERENCE_BASELINE.md",
+      "bytes": 2765,
+      "sha256": "2d8912420fa58f8efce25a435b5319a8e12035f5b18254e7a70b4b9a32f3be5d"
+    },
+    {
+      "file": "20_CERTIFICATION_THRESHOLDS_AND_LEVELS.md",
+      "bytes": 3697,
+      "sha256": "7a75972ec75298ffc0a6847a34d14e16782909ec0eebbed794ab32e1012fc041"
+    },
+    {
+      "file": "21_TRACEABILITY_AND_STALENESS_MODEL.md",
+      "bytes": 2279,
+      "sha256": "4a0d54216894924a89cf9b2ef84396ca5701f6238003ba505435bbd1c2f83d05"
+    },
+    {
+      "file": "22_STANDARD_ALBANIAN_VARIETY_POLICY.md",
+      "bytes": 2667,
+      "sha256": "e5278c97752066f52ab75688e5dff90d4775e7212b4150e4b8b061ba0adeb00b"
+    },
+    {
+      "file": "23_CHANGE_CONTROL_AND_DECISION_LOG.md",
+      "bytes": 2088,
+      "sha256": "9ab7af37bbe78963449aad3a0287995025ad7b418cf9fd353d5cd82b2934a660"
+    },
+    {
+      "file": "24_AUTOMATED_CONSISTENCY_CHECKS.md",
+      "bytes": 2424,
+      "sha256": "b1baa823f7603360ddb5414d2a1f9278ea9233a06f3dc50f910824435da61608"
+    },
+    {
+      "file": "25_OWNER_ROUTING_REGISTRY.md",
+      "bytes": 1711,
+      "sha256": "c95454980ade45b6a9cc2c17587c2e1fe83f2b8c4c365e1fdc274bea27695b9c"
+    },
+    {
+      "file": "26_RELEASE_EVIDENCE_PACKET_TEMPLATE.md",
+      "bytes": 2075,
+      "sha256": "be86e1daccaee095539472856319863e2e5145fc0f83661e263d832423586afa"
+    },
+    {
+      "file": "27_INITIAL_DEBT_AND_RISK_BASELINE.md",
+      "bytes": 3333,
+      "sha256": "d035574478a736ec535a790e2446a556a35c76f1455877112e1e3f21c6804e9a"
+    },
+    {
+      "file": "28_OPEN_QUESTIONS_REGISTER.md",
+      "bytes": 2194,
+      "sha256": "ca2fcc6b77016ad6bda30f7220b228b7265a4137bf235ef42db9628f43c562b6"
+    },
+    {
+      "file": "29_REVIEWER_AND_HUMAN_CERTIFICATION_POLICY.md",
+      "bytes": 2294,
+      "sha256": "75c949b71735d96da648960aa556af8b2efaa310b315a75229e0bf628ae37ab6"
+    },
+    {
+      "file": "30_DOC_VALIDATION_REPORT.md",
+      "bytes": 1138,
+      "sha256": "9c03d5e6f05a85a9f1b7d874bbb9cacf92e9a076a2004535239ce6053440bcef"
+    },
+    {
+      "file": "31_OPTIMIZATION_CHANGELOG.md",
+      "bytes": 2626,
+      "sha256": "e33a6ba943b834ef5fbd8461ffe40d8edd74b9cef515dca9add3b1df5c7c8662"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1001,
+      "sha256": "aa8794da0b3827b0bb993f27eff390f179efb6a1c36b1dedf98b541647c0d6e0"
+    }
+  ],
+  "validation": {
+    "checks": 16,
+    "passed": 16,
+    "failed": 0
+  }
+}

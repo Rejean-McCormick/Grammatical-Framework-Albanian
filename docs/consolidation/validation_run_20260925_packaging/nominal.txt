@@ -1,0 +1,33 @@
+PASS five grammatical cases including Gen
+PASS four morphological noun cases
+PASS Gen maps to MDat only at morphology boundary
+PASS Noun stores MorphCase and number-sensitive gender
+PASS CN carries grammatical Case
+PASS CatSqi CN uses grammatical CNoun
+PASS Adj lexical table is Gender x Number with typed class
+PASS typed articulated/unarticulated adjective class
+PASS single typed nyje service
+FAIL legacy GenNum/GSg/GPl removed
+FAIL legacy adjective .clit flag removed
+PASS PossNP selects grammatical Gen on possessor
+PASS public ambigeneric noun constructors
+PASS PN API exposes five-case explicit constructor
+PASS LN API exposes five-case explicit constructor
+PASS GN API exposes five-case explicit constructor
+PASS proximal demonstrative accusative plurals match supplied Lesson 30
+PASS 1SG feminine possessive matches supplied table
+PASS 2SG masculine possessive matches supplied table
+PASS unresolved agreement fallbacks are centralized and named
+PASS no NumeralGov invented without Albanian minimal pairs
+FAIL compound lexical N remains in MorphCase space
+PASS documentation handles number-sensitive noun gender
+PASS noun documentation table spans all five grammatical cases
+FAIL no nounForm inside lexical lin N record (ExtendSqiScaffolding.gf)
+PASS language target census remains 51 (got 51)
+PASS API facade census remains 5 (got 5)
+PASS MorphoDict target census remains 2 (got 2)
+FAIL scenario census remains 52 (got 138)
+PASS all embedded Wordbench input hashes are current
+PASS all scenario linearization symbols exist in abstract and concrete inputs
+
+5 nominal architecture checks failed

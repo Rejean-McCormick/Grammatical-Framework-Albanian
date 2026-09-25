@@ -1,0 +1,55 @@
+PASS language census 51 51
+PASS API facades 5 5
+PASS MorphoDict targets 2 2
+PASS required scenarios remain 52 52
+PASS all required scenario artifacts exist 
+PASS all optional scenario artifacts resolve 91
+PASS no merge conflict markers 
+PASS no unexpected control chars 
+PASS balanced GF braces 
+PASS five grammatical cases 
+PASS four noun morph cases 
+PASS Gen syncretizes at morphology boundary 
+PASS number-sensitive noun gender 
+PASS grammatical CN boundary 
+PASS typed adjective morphology 
+PASS typed clitic cluster 
+PASS typed voice/progressivity 
+PASS slash gap payload 
+PASS VS scomp carrier 
+PASS V2S scomp carrier 
+PASS Paradigms builds scomp 
+PASS Verb consumes scomp 
+PASS Paradigms reg2N 
+PASS Paradigms reg3N 
+PASS Paradigms reg2A 
+PASS Paradigms reg3A 
+PASS Paradigms reg2V 
+PASS Paradigms reg3V 
+PASS Paradigms reg4V 
+PASS Paradigms mkNFullGenders 
+PASS Paradigms mkAFull 
+PASS Paradigms mkVFull 
+PASS Paradigms mkNonActiveVFull 
+PASS Paradigms legacyIrregSubjunctive 
+PASS Clause realizeProgressive 
+PASS Clause realizeAoristVP 
+PASS Clause realizeAoristAnteriorVP 
+PASS Clause realizeOptativeVP 
+PASS Clause realizePerfectOptativeVP 
+PASS Clause realizeAdmirativeVP 
+PASS Clause realizeImperfectAdmirativeVP 
+PASS Clause realizeGerundPolVP 
+PASS Clause realizePurposeVP 
+PASS common TPast -> Imperfect 
+PASS clitics flattened centrally 
+PASS Extra realizer references resolve 
+PASS declined cili retained 
+PASS empty relative uses qe and overt cili 
+PASS stranding neutralized to pied-piping 
+PASS no scalar cn.g in Question 
+PASS no CN passed to nounForm 
+PASS no legacy pronoun weak-string fields 
+PASS direct lin V metadata complete 
+PASS conflicting workstream variants preserved 196
+SUMMARY 54 / 54 passed

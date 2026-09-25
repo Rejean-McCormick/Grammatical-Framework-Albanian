@@ -1,0 +1,5 @@
+$ python -m compileall -q src
+PASS compileall
+$ PYTHONPATH=src python scripts/validate_schemas.py
+OK templates/validation-profile/project.toml [gf-wordbench.project/1.0]
+Schema check: 1 passed, 0 failed, 1 checked.

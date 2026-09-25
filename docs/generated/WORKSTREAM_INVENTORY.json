@@ -1,0 +1,62 @@
+[
+  {
+    "workstream_pack": "Albanian_Dict_Lexicon_MAX_Docs_20260925_v2",
+    "file_count": 30,
+    "md_count": 30,
+    "bytes": 108516
+  },
+  {
+    "workstream_pack": "Albanian_RGL_C10_Certification_Governance_v2_20260925",
+    "file_count": 34,
+    "md_count": 33,
+    "bytes": 105584
+  },
+  {
+    "workstream_pack": "Albanian_RGL_C5_Clitics_Pronouns_Cases_Prepositions_v2_20260925",
+    "file_count": 25,
+    "md_count": 24,
+    "bytes": 65225
+  },
+  {
+    "workstream_pack": "Albanian_RGL_Conv8_Finalization_Docs_v2_20260925",
+    "file_count": 27,
+    "md_count": 26,
+    "bytes": 157477
+  },
+  {
+    "workstream_pack": "Albanian_RGL_Conversation4_Verbal_Finalization_Docs_20260925_v3",
+    "file_count": 16,
+    "md_count": 16,
+    "bytes": 54638
+  },
+  {
+    "workstream_pack": "Albanian_RGL_Morphology_MAX_Docs_v2_20260925",
+    "file_count": 37,
+    "md_count": 29,
+    "bytes": 476212
+  },
+  {
+    "workstream_pack": "Albanian_RGL_Nominal_Finalization_Docs_v2_20260925",
+    "file_count": 22,
+    "md_count": 22,
+    "bytes": 135872
+  },
+  {
+    "workstream_pack": "Conversation07_Clause_Finalization_Docs_20260925_v2",
+    "file_count": 21,
+    "md_count": 21,
+    "bytes": 116995
+  },
+  {
+    "workstream_pack": "Conversation_09_RGL_API_Finalization_Docs_v2_20260925",
+    "file_count": 30,
+    "md_count": 29,
+    "bytes": 159611
+  },
+  {
+    "workstream_pack": "MorphoDictSqi_MAX_docs_v2_20260925",
+    "file_count": 24,
+    "md_count": 24,
+    "bytes": 70152
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "schema": "albanian-c10-owner-routing-v1",
+  "source": "canonical/04_WORKSTREAM_OWNERSHIP.md",
+  "owners": {
+    "1": {"domain": "Morphologie fondamentale", "modules": ["ResSqi", "MorphoSqi", "ParadigmsSqi", "IrregSqi"]},
+    "2": {"domain": "MorphoDict", "modules": ["MorphoDictSqi", "MorphoDictSqiAbs"]},
+    "3": {"domain": "Dict + Lexicon", "modules": ["DictSqi", "DictSqiAbs", "LexiconSqi"]},
+    "4": {"domain": "TAM + auxiliaires + voix", "modules": ["Verb/VP contract", "verbal realizer"]},
+    "5": {"domain": "Clitiques + pronoms + cas + prépositions", "modules": ["CliticCluster", "Pron", "Compl", "Prep"]},
+    "6": {"domain": "Domaine nominal", "modules": ["NounSqi", "AdjectiveSqi", "NumeralSqi", "NamesSqi", "StructuralSqiNominal"]},
+    "7": {"domain": "Clause", "modules": ["ClauseSqiRes", "SentenceSqi", "QuestionSqi", "RelativeSqi"]},
+    "8": {"domain": "Valence / compléments / coordination / constructions", "modules": ["VerbSqi", "ConjunctionSqi", "ConstructionSqi", "IdiomSqi"]},
+    "9": {"domain": "Surface avancée + API publique", "modules": ["StructuralSqi", "ExtendSqi", "ExtraSqi", "DocumentationSqi", "SymbolSqi", "MarkupSqi", "API facades"]},
+    "10": {"domain": "Certification / Gold / Parité", "modules": ["validation/certification", "gold", "dashboard", "parity"]}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "albanian-c10-structural-evidence-v1",
+  "type": "object",
+  "required": ["schema", "run_id", "gf_version", "wordbench_version", "working_tree_lock_sha256", "targets_pass", "targets_total", "required_scenarios_pass", "required_scenarios_total", "blocking_warnings", "evidence_ref"],
+  "properties": {
+    "schema": {"const": "albanian-c10-structural-evidence-v1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "gf_version": {"const": "3.12"},
+    "wordbench_version": {"const": "1.3.4"},
+    "working_tree_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "targets_pass": {"type": "integer", "minimum": 0},
+    "targets_total": {"type": "integer", "minimum": 58},
+    "required_scenarios_pass": {"type": "integer", "minimum": 0},
+    "required_scenarios_total": {"type": "integer", "minimum": 52},
+    "blocking_warnings": {"type": "integer", "minimum": 0},
+    "evidence_ref": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

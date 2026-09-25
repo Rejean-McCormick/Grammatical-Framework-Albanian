@@ -1,0 +1,25 @@
+schema_version: C2-SOURCE-LOCK-1
+campaign_id: CMP-C2-MAX-20260925
+date: 2026-09-25
+inputs:
+  albanian_snapshot:
+    filename: Code_snapshot_Grammatical_Framework-Albanian(20260925-123255).zip
+    sha256: 961852fae67f7e5878c7d214197a75a705e5028d7ee8e87974358a9d85c39829
+  canonical_documentation:
+    filename: Albanian_RGL_Total_Documentation_v2_CompendiumAligned_20260925(1).zip
+    sha256: 9e10d077a7d18e2d2b21b874e12ed24d20314f356153ca0d36ec409026870b4c
+  albanian_linguistic_reference:
+    filename: Albanian_ref(5).zip
+    sha256: 15396c31106de2787ae844bb7013b77b4d1fe0b8a3b5e714fc7a9aeef23f1cfc
+  rgl_reference:
+    filename: gf-rgl-master.zip
+    sha256: e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d
+internal_locked_inputs:
+  baseline_lemgrams: resources/morphodict/BASELINE_LEMGRAMS_20260925.jsonl
+  tosk_reference: resources/morphodict/TOSK_REFERENCE_LEMMAS.tsv
+  rgl_mapping: docs/morphodict/RGL_LEXICON_MAPPING.csv
+  albanet_inventory: resources/dictionary/albanet_unique_pos_lemma_synset.tsv
+toolchain:
+  gf_required: '3.12'
+  wordbench_required: '1.3.4'
+  gf_available_in_build_environment: false

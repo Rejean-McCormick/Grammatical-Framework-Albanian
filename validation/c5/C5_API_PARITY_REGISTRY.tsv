@@ -1,0 +1,22 @@
+module	symbol	implementation_file	static_status	runtime_status	required_runtime_evidence
+Verb	ComplSlash	VerbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	strong/weak Acc and Dat saturation, overt IO doubling
+Verb	ReflVP	VerbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	reflexive role distinct from voice-u
+Verb	Slash2V3	VerbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	V3 first saturation order and remaining gap
+Verb	Slash3V3	VerbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	V3 second saturation order and remaining gap
+Verb	SlashVV	VerbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	embedded slash preserves gap and embedded clitic realization
+Verb	VPSlashPrep	VerbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	Prep government carried in c2
+Noun	UsePron	NounSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	Pron strong forms and weak saturation path
+Noun	PossPron	NounSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	possessive cells across case/gender/number
+Noun	PossNP	NounSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	GenitiveCompl/nyje and possessor Gen
+Noun	PartNP	NounSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	prej + Ablat partitive
+Adverb	PrepNP	AdverbSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	preposition-governed NP case
+Question	QuestSlash	QuestionSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	wh gap preserves c2 and pied-piping
+Question	PrepIP	QuestionSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	governed interrogative case
+Question	ComplSlashIP	QuestionSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	IP saturation preserves gap government
+Relative	RelSlash	RelativeSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	RP declined at gap case
+Relative	IdRP	RelativeSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	cili full cells
+Relative	FunRP	RelativeSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	head NP outer case + Prep-governed RP; Albanian pied-piping
+Sentence	PredVP	SentenceSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	central clause realizer owns cluster flattening
+Sentence	ImpVP	SentenceSqi.gf	STATIC_ASSESSED	PENDING_GF_RUN	positive/negative imperative policy
+Structural	personal_pronouns	StructuralSqiNominal.gf	STATIC_ASSESSED	PENDING_GF_RUN	strong pronoun cell matrix
+Structural	prepositions	StructuralSqiClause.gf	STATIC_ASSESSED	PENDING_GF_RUN	all 21 Structural prepositions classified and exercised

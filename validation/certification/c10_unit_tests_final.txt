@@ -1,0 +1,19 @@
+test_bug_handoff_requires_c1_to_c9_and_preserves_uncertainty (test_c10lib.C10ToolkitTests.test_bug_handoff_requires_c1_to_c9_and_preserves_uncertainty) ... ok
+test_campaign_cardinality_and_supersets (test_c10lib.C10ToolkitTests.test_campaign_cardinality_and_supersets) ... ok
+test_canonical_documentation_imported_and_locked (test_c10lib.C10ToolkitTests.test_canonical_documentation_imported_and_locked) ... ok
+test_case_output_splitter (test_c10lib.C10ToolkitTests.test_case_output_splitter) ... ok
+test_english_snapshot_benchmark (test_c10lib.C10ToolkitTests.test_english_snapshot_benchmark) ... ok
+test_external_runner_materializes_exact_scenario_counts (test_c10lib.C10ToolkitTests.test_external_runner_materializes_exact_scenario_counts) ... ok
+test_g1_rebuild_matches_materialized_ids (test_c10lib.C10ToolkitTests.test_g1_rebuild_matches_materialized_ids) ... ok
+test_g3_detailed_excludes_compile_safe_placeholders (test_c10lib.C10ToolkitTests.test_g3_detailed_excludes_compile_safe_placeholders) ... ok
+test_gold_promotion_is_explicit_and_stores_diff (test_c10lib.C10ToolkitTests.test_gold_promotion_is_explicit_and_stores_diff) ... ok
+test_linter_clean (test_c10lib.C10ToolkitTests.test_linter_clean) ... ok
+test_paradigm_inventory (test_c10lib.C10ToolkitTests.test_paradigm_inventory) ... ok
+test_parity_inventory (test_c10lib.C10ToolkitTests.test_parity_inventory) ... ok
+test_review_policy_rejects_gold_invalid (test_c10lib.C10ToolkitTests.test_review_policy_rejects_gold_invalid) ... ok
+test_wordbench_required_project_assets_present (test_c10lib.C10ToolkitTests.test_wordbench_required_project_assets_present) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.808s
+
+OK

@@ -1,5 +1,5 @@
 -- GF_WORDBENCH_INPUT_SHA256 839ac0ef34c4b222227679a2d6a49ae002622b4c590d052506e206fe2480d63d validation/inputs/AlbCampaign016.gf
--- GF_WORDBENCH_INPUT_SHA256 fd95dfc343ac90ae24198253c23d3dc62d4686e3d6b1573288e5a81af4bf8075 validation/inputs/AlbCampaign016Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 8317242acda7959e4386322b8b2c0ee263a01906d3210cc832fbd835a560eeb9 validation/inputs/AlbCampaign016Sqi.gf
 i AlbCampaign016Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0151 buy_V2 pres sg p1"
@@ -14,7 +14,7 @@ ps "CASE C0155 buy_V2 pres pl p2"
 l C0155
 ps "CASE C0156 buy_V2 pres pl p3"
 l C0156
-ps "CASE C0157 buy_V2 past sg p3"
+ps "CASE C0157 buy_V2 perfect sg p3"
 l C0157
 ps "CASE C0158 buy_V2 aorist sg p3"
 l C0158

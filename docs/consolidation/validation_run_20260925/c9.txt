@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "checks": 139,
+  "failed": [
+    "protected_scenario_count: found 138",
+    "some_sg_standard_ndonje: ",
+    "it_pron_unspecified_gender_fem_default: ",
+    "they_pron_unspecified_gender_fem_default: ",
+    "pied_relative_preposition_uses_explicit_cili: ",
+    "empty_relative_explicit: ",
+    "empty_relative_no_prep_uses_qe: ",
+    "relative_form_i_cili: i cili",
+    "relative_form_të_cilin: të cilin",
+    "relative_form_të_cilit: të cilit",
+    "relative_form_e_cila: e cila",
+    "relative_form_të_cilën: të cilën",
+    "relative_form_së_cilës: së cilës",
+    "relative_form_të_cilët: të cilët",
+    "relative_form_të_cilëve: të cilëve"
+  ],
+  "parity": {},
+  "note": "Static validation only; GF 3.12 compiler and Wordbench execution were not available in this environment."
+}

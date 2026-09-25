@@ -1,0 +1,30 @@
+{
+  "schema": "albanian-c10-lint-v1",
+  "findings": [
+    {
+      "severity": "ERROR",
+      "code": "C10-CAMP-010",
+      "message": "g1 manifest source lock is stale"
+    },
+    {
+      "severity": "ERROR",
+      "code": "C10-CAMP-010",
+      "message": "g2 manifest source lock is stale"
+    },
+    {
+      "severity": "ERROR",
+      "code": "C10-CAMP-010",
+      "message": "g3 manifest source lock is stale"
+    },
+    {
+      "severity": "ERROR",
+      "code": "C10-SCEN-011",
+      "message": "expected 79 generated optional scenarios, got 91"
+    },
+    {
+      "severity": "ERROR",
+      "code": "C10-SCEN-012",
+      "message": "project optional scenario registry differs from generated C10 scripts"
+    }
+  ]
+}

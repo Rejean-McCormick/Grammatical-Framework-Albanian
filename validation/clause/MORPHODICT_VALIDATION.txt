@@ -1,0 +1,11 @@
+PASS abstract funcs unique 592
+PASS concrete lin coverage fun=592 lin=592
+PASS no variants keyword
+PASS coverage entry count 592
+PASS all 22 IrregSqi verbs included
+PASS Tosk reference represented 242
+PASS cilido explicit declined derivation
+PASS Prelude boolean scope
+PASS Tosk smart entries compile-safe {'exact': 367, 'compile-safe-placeholder': 155, 'rgl-derived-explicit': 1, 'exact-normalized': 10, 'direct-invariant': 23, 'rgl+reference-characteristic': 11, 'direct-with-government': 3, 'exact-irregular': 22}
+PASS lock-safe placeholder constructors
+PASS entry count substantial 592

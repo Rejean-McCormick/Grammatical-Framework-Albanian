@@ -1,0 +1,42 @@
+{
+  "schema": "albanian-c10-release-evidence-v1",
+  "source_lock_sha256": "2b077e63b4ddba96ba144551a0793a5bd664b760d9040ec080a5acbfb4848174",
+  "language_variety": "Standard Albanian",
+  "gf_version_required": "3.12",
+  "wordbench_version_required": "1.3.4",
+  "development_state": "S05 CONTRACTS_READY",
+  "release_candidate": false,
+  "maturity": "pre-R0 evidence-backed",
+  "gates": {
+    "R0_structure": {
+      "status": "not_executed",
+      "reason": "Requires fresh GF 3.12 / Wordbench 1.3.4 structural evidence bound to this working-tree lock, all expected targets/scenarios passing, zero blocking warnings."
+    },
+    "R1_initial_review": {
+      "status": "not_executed",
+      "reason": "Requires R0 plus 569/569 reviewed, no invalid/questionable in scope, and all G1 CASEs protected by explicit promoted golds."
+    },
+    "R2_core": {
+      "status": "not_executed",
+      "reason": "Requires R1 plus 5,000/5,000 reviewed and every public ParadigmsSqi signature carrying test evidence."
+    },
+    "R3_lexical_stress": {
+      "status": "not_executed",
+      "reason": "Requires R2 plus 20,000/20,000 reviewed with no invalid/questionable in the declared protected scope."
+    },
+    "R4_parity_candidate": {
+      "status": "not_executed",
+      "reason": "Requires R3 plus complete English/common-RGL parity closure and no core needs_review/missing in release scope."
+    }
+  },
+  "consistency_lint": {
+    "errors": 5,
+    "status": "fail"
+  },
+  "known_limitations": [
+    "The supplied baseline archive does not contain a fresh post-fix 58/58 GF 3.12 run.",
+    "The supplied snapshot does not contain normalized outputs for all 569 review CASEs.",
+    "No linguistic verdict or gold is fabricated by bootstrap or validate.",
+    "Core grammar modules are outside C10 ownership and are not modified by this implementation."
+  ]
+}

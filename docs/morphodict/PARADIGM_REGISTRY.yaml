@@ -1,0 +1,867 @@
+schema_version: PAR-SQI-MAX-1
+generated: '2026-09-25'
+policy: P3 is required for bulk C6 promotion; this static campaign cannot assign P3
+  without GF/golds/review.
+classes:
+- paradigm_id: PAR-mkA001
+  constructor: mkA001
+  category: A
+  implementation_sha256: 6f75fedb52bcced290ee4d9b9da5c650cfa84b7c338e4865d920243ef14f5c24
+  maturity: P2
+  smart_route_patterns:
+  - _ + "nor"
+  - _ + "tër"
+  - _ + "lëm"
+  - _ + "ke"
+  - _ + "ar"
+  - _ + "er"
+  - _ + "rr"
+  - _ + "ur"
+  - _ + "nk"
+  - _ + "ok"
+  - _ + "ek"
+  - _ + "ak"
+  - _ + "uk"
+  - _ + "rk"
+  - _ + "lm"
+  - _ + "am"
+  - _ + "um"
+  - _ + "im"
+  - _ + "rm"
+  - _ + "la"
+  - _ + "n"
+  - _ + "l"
+  - _ + "g"
+  - _ + "t"
+  - _ + "s"
+  - _ + "p"
+  - _ + "c"
+  - _ + "f"
+  - _ + "i"
+  - _ + "h"
+  - _ + "ç"
+  - _ + "b"
+  - _ + "z"
+  - _ + "q"
+  - _ + "d"
+  active_lemgrams: 12
+  evidence_matched_lemgrams:
+  - boshnjak_A
+  - gjinor_A
+  - kombëtar_A
+  - kushtetues_A
+  - pamundur_A
+  - papritur_A
+  - porsaardhur_A
+  - përfundimtar_A
+  - serb_A
+  - shqip_A
+  - turk_A
+  - zyrtar_A
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkA004
+  constructor: mkA004
+  category: A
+  implementation_sha256: 3b4119adf7c241d8e0c2149b26bb33a0b93becc8834bd488647109f61f85a275
+  maturity: P2
+  smart_route_patterns:
+  - _ + "kan"
+  - _ + "bel"
+  - _ + "riq"
+  - _ + "ond"
+  - _ + "al"
+  - _ + "kt"
+  - _ + "it"
+  - _ + "ib"
+  - _ + "r"
+  - _ + "k"
+  - _ + "v"
+  active_lemgrams: 11
+  evidence_matched_lemgrams:
+  - botëror_A
+  - demokratik_A
+  - ekonomik_A
+  - fundit_A
+  - kulturor_A
+  - politik_A
+  - shoqëror_A
+  - shtetëror_A
+  - shumetnik_A
+  - social_A
+  - themelor_A
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkA009
+  constructor: mkA009
+  category: A
+  implementation_sha256: e0338b7dde6a0fa9a48c1d5762b06d456cc01e11d52fec298d56a3e3ffea44ed
+  maturity: P2
+  smart_route_patterns:
+  - _ + "gët"
+  - _ + "uar"
+  - _ + "kur"
+  - _ + "çur"
+  - _ + "rur"
+  - _ + "jër"
+  - _ + "uaj"
+  - _ + "lt"
+  active_lemgrams: 3
+  evidence_matched_lemgrams:
+  - huaj_A
+  - lagët_A
+  - trishtuar_A
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkA013
+  constructor: mkA013
+  category: A
+  implementation_sha256: 6cf5c25179b0c650b65c259af3d9b58ba2a864368be6e38fd183d80804235429
+  maturity: P2
+  smart_route_patterns:
+  - _ + "arë"
+  - _ + "ërë"
+  - _ + "atë"
+  - _ + "etë"
+  - _ + "ftë"
+  - _ + "ntë"
+  - _ + "utë"
+  - _ + "ytë"
+  - _ + "ktë"
+  - _ + "anë"
+  - _ + "thë"
+  - _ + "dë"
+  - _ + "ë"
+  active_lemgrams: 5
+  evidence_matched_lemgrams:
+  - barabartë_A
+  - flaktë_A
+  - parë_A
+  - vërtetë_A
+  - zjarrtë_A
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkA025
+  constructor: mkA025
+  category: A
+  implementation_sha256: e729a8b87f34077e6386910ce68519ce58ac09ce16ce9c286f0cf6ea394e6c74
+  maturity: P2
+  smart_route_patterns: []
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - tjetër_A
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN002
+  constructor: mkN002
+  category: N
+  implementation_sha256: 2deb5fed5ada41f239b60e296dd8b480702386d65ee46014d767afc26c1b9e96
+  maturity: P2
+  smart_route_patterns:
+  - _ + "fur"
+  - _ + "lur"
+  - _ + "vur"
+  - _ + "sur"
+  - _ + "gur"
+  - _ + "sar"
+  - _ + "por"
+  - _ + "air"
+  - _ + "ill"
+  - _ + "hul"
+  - _ + "tan"
+  - _ + "han"
+  - _ + "nun"
+  - _ + "nas"
+  - _ + "omb"
+  - _ + "liq"
+  - _ + "rr"
+  - _ + "el"
+  - _ + "up"
+  - _ + "en"
+  - _ + "on"
+  - _ + "us"
+  - _ + "is"
+  - _ + "ns"
+  - _ + "ez"
+  - _ + "az"
+  - _ + "iz"
+  - _ + "aç"
+  - _ + "yç"
+  - _ + "of"
+  - _ + "lq"
+  - _ + "h"
+  - _ + "t"
+  - _ + "d"
+  - _ + "m"
+  - _ + "j"
+  - _ + "v"
+  active_lemgrams: 22
+  evidence_matched_lemgrams:
+  - bisedim_N
+  - fat_N
+  - fillim_N
+  - fund_N
+  - ligj_N
+  - mision_N
+  - mjedis_N
+  - mosdiskriminim_N
+  - Murat_N
+  - nivel_N
+  - pajtim_N
+  - parim_N
+  - pluralizm_N
+  - pushtet_N
+  - përdorim_N
+  - rend_N
+  - respektim_N
+  - shpëtim_N
+  - shtet_N
+  - status_N
+  - sundim_N
+  - zhvillim_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN005
+  constructor: mkN005
+  category: N
+  implementation_sha256: 18d233ea16b37db3e1cc455b2a84dabd6a7c552de683293a37ffc0adb488fb36
+  maturity: P2
+  smart_route_patterns:
+  - _ + "eth"
+  - _ + "gth"
+  - _ + "adh"
+  - _ + "rdh"
+  - _ + "lat"
+  - _ + "tat"
+  - _ + "kat"
+  - _ + "pat"
+  - _ + "ort"
+  - _ + "kit"
+  - _ + "car"
+  - _ + "çal"
+  - _ + "tel"
+  - _ + "cel"
+  - _ + "këm"
+  - _ + "gap"
+  - _ + "bep"
+  - _ + "rip"
+  - _ + "tip"
+  - _ + "ean"
+  - _ + "ken"
+  - _ + "urs"
+  - _ + "laz"
+  - _ + "tec"
+  - _ + "rrc"
+  - _ + "pt"
+  - _ + "ad"
+  - _ + "vd"
+  - _ + "uz"
+  - _ + "ëç"
+  - _ + "af"
+  - _ + "rf"
+  - _ + "ef"
+  - _ + "ob"
+  - _ + "lb"
+  - _ + "q"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - aeroport_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN007
+  constructor: mkN007
+  category: N
+  implementation_sha256: 4f542e281942dc7d1a818071bb79d7ac62bdf9235944b169976b057c088ce90c
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ith"
+  - _ + "qer"
+  - _ + "mer"
+  - _ + "har"
+  - _ + "lar"
+  - _ + "var"
+  - _ + "lor"
+  - _ + "ior"
+  - _ + "hor"
+  - _ + "mor"
+  - _ + "ror"
+  - _ + "ral"
+  - _ + "gal"
+  - _ + "pil"
+  - _ + "kop"
+  - _ + "tin"
+  - _ + "inj"
+  - _ + "arb"
+  - _ + "riq"
+  - _ + "kuq"
+  - _ + "nec"
+  - _ + "mec"
+  - _ + "hec"
+  - _ + "it"
+  - _ + "ir"
+  - _ + "jl"
+  - _ + "oz"
+  - _ + "yc"
+  - _ + "ç"
+  active_lemgrams: 2
+  evidence_matched_lemgrams:
+  - Epir_N
+  - gjeneral_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN017
+  constructor: mkN017
+  category: N
+  implementation_sha256: 806faab3ed3b1cd77e4f0b1d9475909bb93ec0d9fc58d76aa848122e4516beef
+  maturity: P2
+  smart_route_patterns:
+  - _ + "nth"
+  - _ + "yth"
+  - _ + "bet"
+  - _ + "pet"
+  - _ + "urr"
+  - _ + "irr"
+  - _ + "fir"
+  - _ + "bel"
+  - _ + "aul"
+  - _ + "til"
+  - _ + "jem"
+  - _ + "ham"
+  - _ + "rup"
+  - _ + "hin"
+  - _ + "hën"
+  - _ + "des"
+  - _ + "les"
+  - _ + "res"
+  - _ + "lis"
+  - _ + "ris"
+  - _ + "raç"
+  - _ + "puç"
+  - _ + "sh"
+  - _ + "ym"
+  - _ + "ap"
+  - _ + "rp"
+  - _ + "ub"
+  - _ + "c"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - turp_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN020
+  constructor: mkN020
+  category: N
+  implementation_sha256: d28c663bf9d0cab21221d9cafb0edc019211d7344d9069a19f2b9171fa3aac48
+  maturity: P2
+  smart_route_patterns:
+  - _ + "jth"
+  - _ + "gsh"
+  - _ + "bët"
+  - _ + "rer"
+  - _ + "tur"
+  - _ + "par"
+  - _ + "bar"
+  - _ + "tal"
+  - _ + "çul"
+  - _ + "lil"
+  - _ + "nem"
+  - _ + "tom"
+  - _ + "hap"
+  - _ + "ërp"
+  - _ + "fan"
+  - _ + "rin"
+  - _ + "ren"
+  - _ + "son"
+  - _ + "non"
+  - _ + "ton"
+  - _ + "toç"
+  - _ + "alb"
+  - _ + "ric"
+  - _ + "ëro"
+  - _ + "ot"
+  - _ + "ht"
+  - _ + "rt"
+  - _ + "mt"
+  - _ + "ud"
+  - _ + "ol"
+  - _ + "um"
+  - _ + "tm"
+  - _ + "lp"
+  - _ + "ks"
+  - _ + "rç"
+  - _ + "uç"
+  - _ + "eç"
+  - _ + "oq"
+  - _ + "aq"
+  - _ + "no"
+  active_lemgrams: 3
+  evidence_matched_lemgrams:
+  - beton_N
+  - gusht_N
+  - zot_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN028
+  constructor: mkN028
+  category: N
+  implementation_sha256: 43a9a949ae04c31081c8f3cef48710ed03d2784b12f3d69a728af2098babfc52
+  maturity: P2
+  smart_route_patterns:
+  - _ + "e"
+  active_lemgrams: 2
+  evidence_matched_lemgrams:
+  - fitore_N
+  - lavde_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN031
+  constructor: mkN031
+  category: N
+  implementation_sha256: d8c2d4c822850205e5ebab85a907d383493f19a727dc4d69343ed6a831ab1f8e
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ath"
+  - _ + "ëth"
+  - _ + "esh"
+  - _ + "udh"
+  - _ + "bat"
+  - _ + "dat"
+  - _ + "ant"
+  - _ + "rit"
+  - _ + "ond"
+  - _ + "vol"
+  - _ + "lap"
+  - _ + "gan"
+  - _ + "kan"
+  - _ + "jan"
+  - _ + "uan"
+  - _ + "zan"
+  - _ + "ban"
+  - _ + "run"
+  - _ + "ten"
+  - _ + "nis"
+  - _ + "tis"
+  - _ + "has"
+  - _ + "jiç"
+  - _ + "ëmb"
+  - _ + "jak"
+  - _ + "st"
+  - _ + "ut"
+  - _ + "ët"
+  - _ + "al"
+  - _ + "am"
+  - _ + "sm"
+  - _ + "jn"
+  - _ + "os"
+  - _ + "és"
+  - _ + "hj"
+  - _ + "jz"
+  - _ + "r"
+  - _ + "f"
+  active_lemgrams: 5
+  evidence_matched_lemgrams:
+  - flamur_N
+  - karakter_N
+  - nder_N
+  - rast_N
+  - ushtar_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN032
+  constructor: mkN032
+  category: N
+  implementation_sha256: 4e9d221d374a41fcdc4a47733d20e5c6b1b049002d2b6e9e96197253e3ade710
+  maturity: P1
+  smart_route_patterns:
+  - _ + "ano"
+  - _ + "ye"
+  - _ + "ba"
+  - _ + "ko"
+  active_lemgrams: 1
+  evidence_matched_lemgrams: []
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN047
+  constructor: mkN047
+  category: N
+  implementation_sha256: 1d76cafe471be405eb721573e004e5884b5ca201e2935a049f65c77c6e526971
+  maturity: P2
+  smart_route_patterns:
+  - _ + "g"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - treg_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN053
+  constructor: mkN053
+  category: N
+  implementation_sha256: 82e7bc6dbeb65546c2a284d98ced3d084372717d44cfad2d6568e3cf4f715c5f
+  maturity: P2
+  smart_route_patterns:
+  - _ + "zik"
+  - _ + "kak"
+  - _ + "rk"
+  - _ + "sk"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - shkak_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN059
+  constructor: mkN059
+  category: N
+  implementation_sha256: 318e30bceef8d38e9ba9d3fb6c75f0d1bb226632eebc1d9a8340b07459af98e2
+  maturity: P2
+  smart_route_patterns:
+  - _ + "i"
+  active_lemgrams: 4
+  evidence_matched_lemgrams:
+  - demokraci_N
+  - liri_N
+  - plogështi_N
+  - qeveri_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN070
+  constructor: mkN070
+  category: N
+  implementation_sha256: cc2f51850f473979503c9670da3cb0a403de9d2f98eea5d8e478be7cbe7cdc63
+  maturity: P2
+  smart_route_patterns:
+  - _ + "s"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - sukses_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN071
+  constructor: mkN071
+  category: N
+  implementation_sha256: 06548c0c70e0ce0f6c33f9a5e4ef20fe6152b8f967746662e9bcdc7a06ab5178
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ypë"
+  - _ + "fnë"
+  - _ + "ikë"
+  - _ + "dkë"
+  - _ + "lvë"
+  - _ + "vzë"
+  - _ + "ilë"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - republikë_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN072
+  constructor: mkN072
+  category: N
+  implementation_sha256: 7026409d88949eacb3f0d735a5a548e9951fd7cced54b8696e5aa2a8910e1e09
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ë"
+  active_lemgrams: 12
+  evidence_matched_lemgrams:
+  - drejtë_N
+  - jetë_N
+  - klimë_N
+  - komunë_N
+  - kontratë_N
+  - mënyrë_N
+  - pistë_N
+  - pjesë_N
+  - pronë_N
+  - rojë_N
+  - sqotë_N
+  - vlerë_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN079
+  constructor: mkN079
+  category: N
+  implementation_sha256: 147719f6bcf805eb659c76b1f63863e7ad09102c6d3e11609ddc90d7ad71c310
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ite"
+  - _ + "ahe"
+  - _ + "hpe"
+  - _ + "aje"
+  - _ + "oje"
+  - _ + "mje"
+  - _ + "eje"
+  - _ + "ie"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - pamje_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN096
+  constructor: mkN096
+  category: N
+  implementation_sha256: 885162a4d16cd8a96cfe12a76d7cec6fc978a67defef2d1a7922ebae1510605f
+  maturity: P2
+  smart_route_patterns: []
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - breg_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN109
+  constructor: mkN109
+  category: N
+  implementation_sha256: bfc5f0cbe56f3bc08bb7a7343e625539b3c313faf8c210e2550319b8d82d9244
+  maturity: P2
+  smart_route_patterns:
+  - _ + "htë"
+  - _ + "utë"
+  - _ + "itë"
+  - _ + "ltë"
+  - _ + "apë"
+  - _ + "spë"
+  - _ + "rnë"
+  - _ + "rsë"
+  - _ + "asë"
+  - _ + "smë"
+  - _ + "zmë"
+  - _ + "omë"
+  - _ + "kmë"
+  - _ + "umë"
+  - _ + "rrë"
+  - _ + "irë"
+  - _ + "orë"
+  - _ + "prë"
+  - _ + "jzë"
+  - _ + "rzë"
+  - _ + "ozë"
+  - _ + "ajë"
+  - _ + "ôjë"
+  - _ + "yjë"
+  - _ + "ujë"
+  - _ + "igë"
+  - _ + "hgë"
+  - _ + "sgë"
+  - _ + "ogë"
+  - _ + "zgë"
+  - _ + "rgë"
+  - _ + "hdë"
+  - _ + "oçë"
+  - _ + "kë"
+  - _ + "hë"
+  - _ + "lë"
+  - _ + "cë"
+  - _ + "bë"
+  active_lemgrams: 7
+  evidence_matched_lemgrams:
+  - dëborë_N
+  - fushë_N
+  - kohë_N
+  - koicidencë_N
+  - shëmbëllë_N
+  - vjeshtë_N
+  - vranësirë_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN137
+  constructor: mkN137
+  category: N
+  implementation_sha256: 2d9a353d5140a795c6f064fe711bdcc5f9e6058b5a807c5e32a459845ab39a02
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ërr"
+  - _ + "ër"
+  - _ + "ël"
+  - _ + "ën"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - eshtër_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN146
+  constructor: mkN146
+  category: N
+  implementation_sha256: 71c1484d362fb53c3afefdcfecd5979aea71c3c51c7e1947b8faac770026706b
+  maturity: P2
+  smart_route_patterns:
+  - _ + "emë"
+  - _ + "mbë"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - stemë_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN152
+  constructor: mkN152
+  category: N
+  implementation_sha256: 31a148895e7bf0591ac1ee508c3ecce2a6a5c96f318b303481521e208c6f1aa6
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ëri"
+  - _ + "oni"
+  - _ + "uni"
+  - _ + "omi"
+  - _ + "si"
+  - _ + "ji"
+  - _ + "fi"
+  - _ + "zi"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - mundësi_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN175
+  constructor: mkN175
+  category: N
+  implementation_sha256: b1bbf23502de2e6a7d3175ed2b3b23acb976bf41c976a2239bcb17ce4a3d54ca
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ovë"
+  - _ + "âjë"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - Kosovë_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN188
+  constructor: mkN188
+  category: N
+  implementation_sha256: 837d9768ff268779ef30b09f29d39eb7d29676487f18120708b2580859ad27c9
+  maturity: P2
+  smart_route_patterns:
+  - _ + "je"
+  active_lemgrams: 5
+  evidence_matched_lemgrams:
+  - hyrje_N
+  - mbrojtje_N
+  - pjesëmarrje_N
+  - tërheqje_N
+  - udhëheqje_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkN257
+  constructor: mkN257
+  category: N
+  implementation_sha256: 7efaf7eb22db2552a4b5694c943f0bb318333e33301fdf7f1e6d0300b8d697e5
+  maturity: P2
+  smart_route_patterns: []
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - mashkull_N
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkV018
+  constructor: mkV018
+  category: V
+  implementation_sha256: 843c4a6e31438e25de958e956a31c08c849d1e2c2c152ec9ce1261f49529a7f9
+  maturity: P2
+  smart_route_patterns:
+  - _ + "rag"
+  - _ + "en"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - kthen_V
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkV028
+  constructor: mkV028
+  category: V
+  implementation_sha256: cbcfd3f0c76954c2a2870a6bff7da4433b5508517ff3c4f862efe7ccedb03bc1
+  maturity: P2
+  smart_route_patterns:
+  - _ + "j"
+  active_lemgrams: 3
+  evidence_matched_lemgrams:
+  - meritoj_V
+  - pasqyroj_V
+  - siguroj_V
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkV041
+  constructor: mkV041
+  category: V
+  implementation_sha256: a2f5a7fbe8c7e6b87aab84d369fd7802a1d4e10c23b20cd6a432f6115d154302
+  maturity: P2
+  smart_route_patterns:
+  - _ + "em"
+  active_lemgrams: 8
+  evidence_matched_lemgrams:
+  - bazohem_V
+  - duhem_V
+  - dukem_V
+  - kryhem_V
+  - nisem_V
+  - përpiqem_V
+  - rregullohem_V
+  - shkruhem_V
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkV042
+  constructor: mkV042
+  category: V
+  implementation_sha256: 16d5f7bb52f0cb166bc27c52dcf360b70a657f3572d13f4a4bad78cbac3f15f3
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ëj"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - kryej_V
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkV047
+  constructor: mkV047
+  category: V
+  implementation_sha256: 4ab190e82021d33c1e86aed99d5092e4cdf14156d132b188a478b4481e6cf1d8
+  maturity: P2
+  smart_route_patterns:
+  - _ + "ej"
+  active_lemgrams: 2
+  evidence_matched_lemgrams:
+  - rrëmbej_V
+  - shkëlqej_V
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false
+- paradigm_id: PAR-mkV070
+  constructor: mkV070
+  category: V
+  implementation_sha256: 33dc3e7b6581d0e8cfbabe324edbccb55a75b3eebae464a34e1d54019f23520b
+  maturity: P2
+  smart_route_patterns:
+  - _ + "on"
+  active_lemgrams: 1
+  evidence_matched_lemgrams:
+  - monoton_V
+  gf312_campaign_compile: null
+  gold_status: not-established-by-C2-static-build
+  bulk_C6_allowed: false

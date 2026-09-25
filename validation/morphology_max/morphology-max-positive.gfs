@@ -1,0 +1,44 @@
+i AlbMorphologyMaxSqi.gf
+ps "GF_MORPHOLOGY_MAX_BEGIN"
+ps "MX001 book Dat def sg"
+l MX001
+ps "MX002 book Gen def sg (segmentally syncretic with Dat)"
+l MX002
+ps "MX003 ambigeneric symbol Sg gender"
+l MX003
+ps "MX004 ambigeneric symbol Pl gender"
+l MX004
+ps "MX005 reg3N mal/male/mali"
+l MX005
+ps "MX006 reg3A madh/mëdhenj/madhe"
+l MX006
+ps "MX007 reg4V shkruaj participle"
+l MX007
+ps "MX008 reg4V shkruaj aorist 1sg"
+l MX008
+ps "MX009 reg4V shkruaj imperfect 1sg"
+l MX009
+ps "MX010 productive non-active voice"
+l MX010
+ps "MX011 productive non-active perfect auxiliary"
+l MX011
+ps "MX012 productive active perfect auxiliary"
+l MX012
+ps "MX013 exact irregular bëhem non-active"
+l MX013
+ps "MX014 nyje Gen Def Masc Sg"
+l MX014
+ps "MX015 book Gen indef pl"
+l MX015
+ps "MX016 articulated adjective class"
+l MX016
+ps "MX017 unarticulated adjective wrapper"
+l MX017
+ps "MX018 public Gen case"
+l MX018
+ps "MX019 legacy irregV di subjunctive 2sg"
+l MX019
+ps "MX020 legacy irregV pi subjunctive 3sg"
+l MX020
+ps "GF_MORPHOLOGY_MAX_END"
+q

@@ -1,0 +1,30 @@
+{
+  "as_of": "2026-09-25",
+  "language": "Albanian",
+  "language_code": "Sqi",
+  "gf_version": "3.12",
+  "language_state": "S05_CONTRACTS_READY",
+  "state_basis": "lowest fully evidenced Compendium gate; S06 not yet globally demonstrated by complete morphology gold/family/guard evidence",
+  "declared_baseline": {
+    "label": "albanian-s02-green-20260925",
+    "census": "58/58",
+    "scenarios": "52/52"
+  },
+  "evidence_backed_run": {
+    "census": "56/58 strict",
+    "scenarios": "52/52",
+    "note": "lock-safe corrective patch present; external rerun required"
+  },
+  "evidence_backed_maturity": "pre-R0",
+  "target_maturity": "R4_candidate",
+  "blockers": [
+    "BLOCKED_LINGUISTIC_TEST",
+    "BLOCKED_REGRESSION"
+  ],
+  "axes": {
+    "development": "S00-S11",
+    "workstream_patch": "W00-W08",
+    "albanian_maturity": "R0-R4",
+    "release_requirements": "RG-*"
+  }
+}

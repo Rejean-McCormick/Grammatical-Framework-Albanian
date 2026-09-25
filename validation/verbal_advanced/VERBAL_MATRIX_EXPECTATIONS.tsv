@@ -1,0 +1,99 @@
+case_id	label	expression	expected	status
+V001	active pres simul pos	C.realizeVP vpCome P.Pres P.Simul P.Pos a3	vjen	gold-candidate
+V002	active pres simul neg	C.realizeVP vpCome P.Pres P.Simul P.Neg a3	nuk vjen	gold-candidate
+V003	active pres anter pos	C.realizeVP vpCome P.Pres P.Anter P.Pos a3	ka ardhur	gold-candidate
+V004	active pres anter neg	C.realizeVP vpCome P.Pres P.Anter P.Neg a3	nuk ka ardhur	gold-candidate
+V005	active past simul pos	C.realizeVP vpCome P.Past P.Simul P.Pos a3	vinte	gold-candidate
+V006	active past simul neg	C.realizeVP vpCome P.Past P.Simul P.Neg a3	nuk vinte	gold-candidate
+V007	active past anter pos	C.realizeVP vpCome P.Past P.Anter P.Pos a3	kishte ardhur	gold-candidate
+V008	active past anter neg	C.realizeVP vpCome P.Past P.Anter P.Neg a3	nuk kishte ardhur	gold-candidate
+V009	active fut simul pos	C.realizeVP vpCome P.Fut P.Simul P.Pos a3	do të vijë	gold-candidate
+V010	active fut simul neg	C.realizeVP vpCome P.Fut P.Simul P.Neg a3	nuk do të vijë	gold-candidate
+V011	active fut anter pos	C.realizeVP vpCome P.Fut P.Anter P.Pos a3	do të ketë ardhur	gold-candidate
+V012	active fut anter neg	C.realizeVP vpCome P.Fut P.Anter P.Neg a3	nuk do të ketë ardhur	gold-candidate
+V013	active cond simul pos	C.realizeVP vpCome P.Cond P.Simul P.Pos a3	do të vinte	gold-candidate
+V014	active cond simul neg	C.realizeVP vpCome P.Cond P.Simul P.Neg a3	nuk do të vinte	gold-candidate
+V015	active cond anter pos	C.realizeVP vpCome P.Cond P.Anter P.Pos a3	do të kishte ardhur	gold-candidate
+V016	active cond anter neg	C.realizeVP vpCome P.Cond P.Anter P.Neg a3	nuk do të kishte ardhur	gold-candidate
+V017	nonactive pres simul pos	C.realizeVP vpBecome P.Pres P.Simul P.Pos a3	bëhet	gold-candidate
+V018	nonactive pres simul neg	C.realizeVP vpBecome P.Pres P.Simul P.Neg a3	nuk bëhet	gold-candidate
+V019	nonactive pres anter pos	C.realizeVP vpBecome P.Pres P.Anter P.Pos a3	është bërë	gold-candidate
+V020	nonactive pres anter neg	C.realizeVP vpBecome P.Pres P.Anter P.Neg a3	nuk është bërë	gold-candidate
+V021	nonactive past simul pos	C.realizeVP vpBecome P.Past P.Simul P.Pos a3	bëhej	gold-candidate
+V022	nonactive past simul neg	C.realizeVP vpBecome P.Past P.Simul P.Neg a3	nuk bëhej	gold-candidate
+V023	nonactive past anter pos	C.realizeVP vpBecome P.Past P.Anter P.Pos a3	ishte bërë	gold-candidate
+V024	nonactive past anter neg	C.realizeVP vpBecome P.Past P.Anter P.Neg a3	nuk ishte bërë	gold-candidate
+V025	nonactive fut simul pos	C.realizeVP vpBecome P.Fut P.Simul P.Pos a3	do të bëhet	gold-candidate
+V026	nonactive fut simul neg	C.realizeVP vpBecome P.Fut P.Simul P.Neg a3	nuk do të bëhet	gold-candidate
+V027	nonactive fut anter pos	C.realizeVP vpBecome P.Fut P.Anter P.Pos a3	do të jetë bërë	gold-candidate
+V028	nonactive fut anter neg	C.realizeVP vpBecome P.Fut P.Anter P.Neg a3	nuk do të jetë bërë	gold-candidate
+V029	nonactive cond simul pos	C.realizeVP vpBecome P.Cond P.Simul P.Pos a3	do të bëhej	gold-candidate
+V030	nonactive cond simul neg	C.realizeVP vpBecome P.Cond P.Simul P.Neg a3	nuk do të bëhej	gold-candidate
+V031	nonactive cond anter pos	C.realizeVP vpBecome P.Cond P.Anter P.Pos a3	do të ishte bërë	gold-candidate
+V032	nonactive cond anter neg	C.realizeVP vpBecome P.Cond P.Anter P.Neg a3	nuk do të ishte bërë	gold-candidate
+V033	progressive active pres pos	C.realizeVP vpProgCome P.Pres P.Simul P.Pos a3	po vjen	gold-candidate
+V034	progressive active pres neg	C.realizeVP vpProgCome P.Pres P.Simul P.Neg a3	nuk po vjen	gold-candidate
+V035	progressive active past pos	C.realizeVP vpProgCome P.Past P.Simul P.Pos a3	po vinte	gold-candidate
+V036	progressive active past neg	C.realizeVP vpProgCome P.Past P.Simul P.Neg a3	nuk po vinte	gold-candidate
+V037	progressive nonactive pres pos	C.realizeVP vpProgBecome P.Pres P.Simul P.Pos a3	po bëhet	gold-candidate
+V038	progressive nonactive pres neg	C.realizeVP vpProgBecome P.Pres P.Simul P.Neg a3	nuk po bëhet	gold-candidate
+V039	progressive nonactive past pos	C.realizeVP vpProgBecome P.Past P.Simul P.Pos a3	po bëhej	gold-candidate
+V040	progressive nonactive past neg	C.realizeVP vpProgBecome P.Past P.Simul P.Neg a3	nuk po bëhej	gold-candidate
+V041	subjunctive active simul pos	C.realizeSubjAntVP vpCome P.Simul P.Pos a3	të vijë	gold-candidate
+V042	subjunctive active simul neg	C.realizeSubjAntVP vpCome P.Simul P.Neg a3	të mos vijë	gold-candidate
+V043	subjunctive active anter pos	C.realizeSubjAntVP vpCome P.Anter P.Pos a3	të ketë ardhur	gold-candidate
+V044	subjunctive active anter neg	C.realizeSubjAntVP vpCome P.Anter P.Neg a3	të mos ketë ardhur	gold-candidate
+V045	subjunctive nonactive simul pos	C.realizeSubjAntVP vpBecome P.Simul P.Pos a3	të bëhet	gold-candidate
+V046	subjunctive nonactive simul neg	C.realizeSubjAntVP vpBecome P.Simul P.Neg a3	të mos bëhet	gold-candidate
+V047	subjunctive nonactive anter pos	C.realizeSubjAntVP vpBecome P.Anter P.Pos a3	të jetë bërë	gold-candidate
+V048	subjunctive nonactive anter neg	C.realizeSubjAntVP vpBecome P.Anter P.Neg a3	të mos jetë bërë	gold-candidate
+V049	imperative active pos	C.realizeImpVP vpCome P.Pos P.Sg	eja	gold-candidate
+V050	imperative active neg	C.realizeImpVP vpCome P.Neg P.Sg	mos eja	gold-candidate
+V051	imperative nonactive pos	C.realizeImpVP vpBecome P.Pos P.Sg	bëhu	gold-candidate
+V052	imperative nonactive neg	C.realizeImpVP vpBecome P.Neg P.Sg	mos bëhu	gold-candidate
+V053	aorist active pos	C.realizeAoristVP vpCome P.Pos a3	erdhi	gold-candidate
+V054	aorist-anterior active pos	C.realizeAoristAnteriorVP vpCome P.Pos a3	pati ardhur	gold-candidate
+V055	aorist active neg	C.realizeAoristVP vpCome P.Neg a3	nuk erdhi	gold-candidate
+V056	aorist-anterior active neg	C.realizeAoristAnteriorVP vpCome P.Neg a3	nuk pati ardhur	gold-candidate
+V057	aorist nonactive pos	C.realizeAoristVP vpBecome P.Pos a3	u bë	gold-candidate
+V058	aorist-anterior nonactive pos	C.realizeAoristAnteriorVP vpBecome P.Pos a3	qe bërë	gold-candidate
+V059	aorist nonactive neg	C.realizeAoristVP vpBecome P.Neg a3	nuk u bë	gold-candidate
+V060	aorist-anterior nonactive neg	C.realizeAoristAnteriorVP vpBecome P.Neg a3	nuk qe bërë	gold-candidate
+V061	optative active	C.realizeOptativeVP vpCome a3	ardhtë	gold-candidate
+V062	perfect-optative active	C.realizePerfectOptativeVP vpCome a3	pastë ardhur	gold-candidate
+V063	admirative active	C.realizeAdmirativeVP vpCome a3	ardhka	gold-candidate
+V064	imperfect-admirative active	C.realizeImperfectAdmirativeVP vpCome a3	ardhkësh	gold-candidate
+V065	optative nonactive	C.realizeOptativeVP vpBecome a3	u bëftë	gold-candidate
+V066	perfect-optative nonactive	C.realizePerfectOptativeVP vpBecome a3	qoftë bërë	gold-candidate
+V067	admirative nonactive	C.realizeAdmirativeVP vpBecome a3	u bëka	gold-candidate
+V068	imperfect-admirative nonactive	C.realizeImperfectAdmirativeVP vpBecome a3	u bëkësh	gold-candidate
+V069	clitic present	C.realizeVP vpEatIt P.Pres P.Simul P.Pos a3	e ha	gold-candidate
+V070	clitic present perfect	C.realizeVP vpEatIt P.Pres P.Anter P.Pos a3	e ka ngrënë	gold-candidate
+V071	clitic future	C.realizeVP vpEatIt P.Fut P.Simul P.Pos a3	do ta hajë	gold-candidate
+V072	clitic future negative	C.realizeVP vpEatIt P.Fut P.Simul P.Neg a3	nuk do ta hajë	gold-candidate
+V073	clitic future anterior	C.realizeVP vpEatIt P.Fut P.Anter P.Pos a3	do ta ketë ngrënë	gold-candidate
+V074	clitic subjunctive	C.realizeSubjVP vpEatIt P.Pos a3	ta hajë	gold-candidate
+V075	clitic subjunctive negative	C.realizeSubjVP vpEatIt P.Neg a3	të mos e hajë	gold-candidate
+V076	clitic imperative	C.realizeImpVP vpEatIt P.Pos P.Sg	e ha	gold-candidate
+V077	clitic imperative negative	C.realizeImpVP vpEatIt P.Neg P.Sg	mos e ha	gold-candidate
+V078	purpose	C.realizePurposeVP vpEatIt P.Pos a3	për ta ngrënë	gold-candidate
+V079	purpose negative	C.realizePurposeVP vpEatIt P.Neg a3	për të mos e ngrënë	gold-candidate
+V080	gerund	C.realizeGerundPolVP vpEatIt P.Pos a3	duke e ngrënë	gold-candidate
+V081	gerund negative	C.realizeGerundPolVP vpEatIt P.Neg a3	duke mos e ngrënë	gold-candidate
+V082	analytic passive present	C.realizeVP vpPassWrite P.Pres P.Simul P.Pos a3		linguistic-review-required
+V083	analytic passive past	C.realizeVP vpPassWrite P.Past P.Simul P.Pos a3		linguistic-review-required
+V084	analytic passive future	C.realizeVP vpPassWrite P.Fut P.Simul P.Pos a3		linguistic-review-required
+V085	analytic passive conditional	C.realizeVP vpPassWrite P.Cond P.Simul P.Pos a3		linguistic-review-required
+V086	analytic passive anterior	C.realizeVP vpPassWrite P.Pres P.Anter P.Pos a3		linguistic-review-required
+V087	reflexive present	C.realizeVP vpReflWash P.Pres P.Simul P.Pos a3		linguistic-review-required
+V088	reflexive past	C.realizeVP vpReflWash P.Past P.Simul P.Pos a3		linguistic-review-required
+V089	reflexive future	C.realizeVP vpReflWash P.Fut P.Simul P.Pos a3		linguistic-review-required
+V090	existential present	C.realizeExist P.Pres P.Simul P.Pos	ka	gold-candidate
+V091	existential past/imperfect	C.realizeExist P.Past P.Simul P.Pos	kishte	gold-candidate
+V092	existential future	C.realizeExist P.Fut P.Simul P.Pos	do të ketë	gold-candidate
+V093	existential conditional	C.realizeExist P.Cond P.Simul P.Pos	do të kishte	gold-candidate
+V094	existential present perfect	C.realizeExist P.Pres P.Anter P.Pos	ka pasur	gold-candidate
+V095	existential pluperfect	C.realizeExist P.Past P.Anter P.Pos	kishte pasur	gold-candidate
+V096	existential future perfect	C.realizeExist P.Fut P.Anter P.Pos	do të ketë pasur	gold-candidate
+V097	existential conditional perfect negative	C.realizeExist P.Cond P.Anter P.Neg	nuk do të kishte pasur	gold-candidate
+V098	nonactive reciprocal-capable surface	C.realizeVP vpWashNA P.Pres P.Simul P.Pos a3pl	lahen	external-source-backed

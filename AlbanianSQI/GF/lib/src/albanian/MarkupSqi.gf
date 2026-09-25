@@ -4,7 +4,7 @@ concrete MarkupSqi of Markup = CatSqi, MarkHTMLX ** {
 
 lin
   MarkupCN m cn = cn ** {
-    s = \\sp,c,n => appMark m (cn.s ! sp ! c ! n)
+    s = \\sp,c,n => appMark m (cnForm cn sp c n)
   } ;
   MarkupNP m np = np ** {
     s = \\c => appMark m (np.s ! c)

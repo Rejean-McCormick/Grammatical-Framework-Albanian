@@ -1,0 +1,22 @@
+constructor	surface	case	kind	status	source_or_rationale
+above_Prep	sipër	Ablat	OrdinaryCompl	REVIEW_REQUIRED	Structural mapping; surface/case not in 14-item locked preposition core
+after_Prep	pas	Ablat	OrdinaryCompl	REVIEW_REQUIRED	Structural mapping; surface/case not in 14-item locked preposition core
+before_Prep	para	Ablat	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: para governs ablative
+behind_Prep	pas	Ablat	OrdinaryCompl	REVIEW_REQUIRED	Structural mapping; semantic distinction from after requires review
+between_Prep	midis	Ablat	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: midis governs ablative
+by8agent_Prep	nga	Nom	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: nga governs nominative; agent semantics separately RGL-owned
+by8means_Prep	me	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: me governs accusative
+during_Prep	gjatë	Ablat	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: gjatë governs ablative
+for_Prep	për	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: për governs accusative
+from_Prep	nga	Nom	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: nga governs nominative
+in8front_Prep	përpara	Ablat	OrdinaryCompl	REVIEW_REQUIRED	Structural mapping; surface/case not in 14-item locked preposition core
+in_Prep	në	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: në governs accusative
+on_Prep	mbi	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: mbi governs accusative
+part_Prep	prej	Ablat	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: prej governs ablative
+possess_Prep	<zero+nyje>	Gen	GenitiveCompl	SOURCE_LOCKED	Albanian grammar: genitive is distinguished from dative by required nyje; C5 typed GenitiveCompl
+through_Prep	përmes	Ablat	OrdinaryCompl	REVIEW_REQUIRED	Structural mapping; surface/case not in 14-item locked preposition core
+to_Prep	tek	Nom	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: tek governs nominative
+under_Prep	nën	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: nën governs accusative
+with_Prep	me	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: me governs accusative
+without_Prep	pa	Acc	OrdinaryCompl	SOURCE_LOCKED	Lesson_20 §7: pa governs accusative
+except_Prep	përveç	Ablat	OrdinaryCompl	REVIEW_REQUIRED	Structural mapping; surface/case not in 14-item locked preposition core

@@ -1,0 +1,40 @@
+concrete AlbC5PrepGovernmentSqi of AlbC5PrepGovernment =
+  open Prelude, ParamX, ResSqi, (SN = StructuralSqiNominal), (SC = StructuralSqiClause) in {
+  lincat Probe = {s : Str} ;
+  lin
+    C5G01 = {s = (mkCompl "në" Acc).s ++ SN.she_Pron.s ! (mkCompl "në" Acc).c} ;
+    C5G02 = {s = (mkCompl "me" Acc).s ++ SN.she_Pron.s ! (mkCompl "me" Acc).c} ;
+    C5G03 = {s = (mkCompl "pa" Acc).s ++ SN.she_Pron.s ! (mkCompl "pa" Acc).c} ;
+    C5G04 = {s = (mkCompl "për" Acc).s ++ SN.she_Pron.s ! (mkCompl "për" Acc).c} ;
+    C5G05 = {s = (mkCompl "mbi" Acc).s ++ SN.she_Pron.s ! (mkCompl "mbi" Acc).c} ;
+    C5G06 = {s = (mkCompl "nën" Acc).s ++ SN.she_Pron.s ! (mkCompl "nën" Acc).c} ;
+    C5G07 = {s = (mkCompl "nga" Nom).s ++ SN.she_Pron.s ! (mkCompl "nga" Nom).c} ;
+    C5G08 = {s = (mkCompl "tek" Nom).s ++ SN.she_Pron.s ! (mkCompl "tek" Nom).c} ;
+    C5G09 = {s = (mkCompl "prej" Ablat).s ++ SN.she_Pron.s ! (mkCompl "prej" Ablat).c} ;
+    C5G10 = {s = (mkCompl "brenda" Ablat).s ++ SN.she_Pron.s ! (mkCompl "brenda" Ablat).c} ;
+    C5G11 = {s = (mkCompl "gjatë" Ablat).s ++ SN.she_Pron.s ! (mkCompl "gjatë" Ablat).c} ;
+    C5G12 = {s = (mkCompl "para" Ablat).s ++ SN.she_Pron.s ! (mkCompl "para" Ablat).c} ;
+    C5G13 = {s = (mkCompl "midis" Ablat).s ++ SN.she_Pron.s ! (mkCompl "midis" Ablat).c} ;
+    C5G14 = {s = (mkCompl "sipas" Ablat).s ++ SN.she_Pron.s ! (mkCompl "sipas" Ablat).c} ;
+    C5G15 = {s = SC.above_Prep.s ++ SN.she_Pron.s ! SC.above_Prep.c} ;
+    C5G16 = {s = SC.after_Prep.s ++ SN.she_Pron.s ! SC.after_Prep.c} ;
+    C5G17 = {s = SC.before_Prep.s ++ SN.she_Pron.s ! SC.before_Prep.c} ;
+    C5G18 = {s = SC.behind_Prep.s ++ SN.she_Pron.s ! SC.behind_Prep.c} ;
+    C5G19 = {s = SC.between_Prep.s ++ SN.she_Pron.s ! SC.between_Prep.c} ;
+    C5G20 = {s = SC.by8agent_Prep.s ++ SN.she_Pron.s ! SC.by8agent_Prep.c} ;
+    C5G21 = {s = SC.by8means_Prep.s ++ SN.she_Pron.s ! SC.by8means_Prep.c} ;
+    C5G22 = {s = SC.during_Prep.s ++ SN.she_Pron.s ! SC.during_Prep.c} ;
+    C5G23 = {s = SC.for_Prep.s ++ SN.she_Pron.s ! SC.for_Prep.c} ;
+    C5G24 = {s = SC.from_Prep.s ++ SN.she_Pron.s ! SC.from_Prep.c} ;
+    C5G25 = {s = SC.in8front_Prep.s ++ SN.she_Pron.s ! SC.in8front_Prep.c} ;
+    C5G26 = {s = SC.in_Prep.s ++ SN.she_Pron.s ! SC.in_Prep.c} ;
+    C5G27 = {s = SC.on_Prep.s ++ SN.she_Pron.s ! SC.on_Prep.c} ;
+    C5G28 = {s = SC.part_Prep.s ++ SN.she_Pron.s ! SC.part_Prep.c} ;
+    C5G29 = {s = SC.through_Prep.s ++ SN.she_Pron.s ! SC.through_Prep.c} ;
+    C5G30 = {s = SC.to_Prep.s ++ SN.she_Pron.s ! SC.to_Prep.c} ;
+    C5G31 = {s = SC.under_Prep.s ++ SN.she_Pron.s ! SC.under_Prep.c} ;
+    C5G32 = {s = SC.with_Prep.s ++ SN.she_Pron.s ! SC.with_Prep.c} ;
+    C5G33 = {s = SC.without_Prep.s ++ SN.she_Pron.s ! SC.without_Prep.c} ;
+    C5G34 = {s = SC.except_Prep.s ++ SN.she_Pron.s ! SC.except_Prep.c} ;
+    C5G35 = {s = case SC.possess_Prep.kind of {GenitiveCompl => "GENITIVE_COMPL" ; OrdinaryCompl => "ERROR"}} ;
+} ;

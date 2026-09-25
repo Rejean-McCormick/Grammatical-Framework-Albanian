@@ -1,0 +1,43 @@
+Project Check Command: FAIL
+Message: Validation profile contract is invalid: 18 error(s), 0 warning(s).
+Project root: /mnt/data/c7_work
+Project file: /mnt/data/c7_work/project.toml
+Errors: 18
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+Warnings: 0
+Diagnostics: 18
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.
+- Required active-project authority or validation guide is missing.

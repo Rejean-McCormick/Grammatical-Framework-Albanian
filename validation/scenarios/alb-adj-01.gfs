@@ -1,5 +1,5 @@
--- GF_WORDBENCH_INPUT_SHA256 49482f09c0aab3446658f941e2b5ce007bfd9edfe932a5cb7c34a4513cddbf04 validation/inputs/AlbCampaign021.gf
--- GF_WORDBENCH_INPUT_SHA256 694f0bdd4defc2abdc5ca09cb3b2379609e0bc5dcb001b0563f0bebdb22e3a0d validation/inputs/AlbCampaign021Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 0af1efae002a4ca31151621820b6eead595d1d57c5204436933f9e08528384fc validation/inputs/AlbCampaign021.gf
+-- GF_WORDBENCH_INPUT_SHA256 5c14698a59a0c788c6d92884c9537c459836dd85b7215b692b35ed12f7bac42d validation/inputs/AlbCampaign021Sqi.gf
 i AlbCampaign021Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0201 good_A nom masc sg"
@@ -22,5 +22,13 @@ ps "CASE C0209 good_A ablat masc pl"
 l C0209
 ps "CASE C0210 good_A ablat fem pl"
 l C0210
+ps "CASE ADJNYJ1 nyje indef nom fem pl"
+l ADJNYJ1
+ps "CASE ADJNYJ2 nyje indef gen fem sg"
+l ADJNYJ2
+ps "CASE ADJNYJ3 articulated adjective gen fem sg"
+l ADJNYJ3
+ps "CASE ADJNYJ4 unarticulated adjective gen fem sg"
+l ADJNYJ4
 ps "GF_WORDBENCH_END cases"
 q

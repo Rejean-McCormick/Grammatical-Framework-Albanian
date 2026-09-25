@@ -1,0 +1,19 @@
+Overall status: OK
+Outcome: resolved
+Selected path: /mnt/data/alb_c10_final/AlbanianSQI/GF/lib/src/albanian
+Message: Language path resolved successfully.
+Selected path kind: directory
+Language key: albanian
+Language directory: /mnt/data/alb_c10_final/AlbanianSQI/GF/lib/src/albanian
+Rgl source root: /mnt/data/gf_rgl_full/gf-rgl-master/src
+Rgl root: /mnt/data/gf_rgl_full/gf-rgl-master
+Module suffix: Sqi
+Available entrypoints: 3
+- /mnt/data/alb_c10_final/AlbanianSQI/GF/lib/src/albanian/LangSqi.gf
+- /mnt/data/alb_c10_final/AlbanianSQI/GF/lib/src/albanian/GrammarSqi.gf
+- /mnt/data/alb_c10_final/AlbanianSQI/GF/lib/src/albanian/AllSqi.gf
+Capabilities: 2
+- source_ready
+- scan_ready
+Diagnostics: 1
+- Standard module-role evidence resolved a multi-suffix language directory.

@@ -1,5 +1,5 @@
 -- GF_WORDBENCH_INPUT_SHA256 786d6920f2150c3adf654f3f60932dd929b02b19b7f72b187ef506a972b1c7b6 validation/inputs/AlbCampaign008.gf
--- GF_WORDBENCH_INPUT_SHA256 ef138fdf5bb65ef84cffd0da8f8514cbb2c7b80a2e9c334ab798ac441e3ff9b8 validation/inputs/AlbCampaign008Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 f1bcd363939c949ee4056a86f122846d2c7db43dd8ef036c9c2834f8bd4ada84 validation/inputs/AlbCampaign008Sqi.gf
 i AlbCampaign008Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0071 apple_N indef nom sg"

@@ -1,0 +1,24 @@
+schema_version: UNIVERSE-SQI-MAX-1
+campaign_id: CMP-C2-MAX-20260925
+sources:
+- source_id: SRC-RGL-CURRENT
+  candidate_records: 348
+  sha256: f74653dbbbe16994f8949aba7a080dcad08fd179540ba98678a98dcfe5f8393a
+- source_id: SRC-TOSK-UT
+  candidate_records: 242
+  sha256: 9fd8b74c600c1e7505e4f00189c6d3f6d8244c57da8677db59ff999898c89e34
+- source_id: SRC-ALBANET-OMW
+  candidate_records: 6489
+  sha256: 952a30ca4c5b345e3d74f4cfc5804fd8173af98110d4b87386573546d96a9b67
+total_candidate_records: 7079
+terminal_state_counts:
+  BLOCKED_CERTIFICATION_PENDING: 809
+  EXCLUDED_RGL_MAPPING: 5
+  BLOCKED_INSUFFICIENT_EVIDENCE: 4424
+  EXCLUDED_CATEGORY: 5
+  BLOCKED_SOURCE_CONFLICT: 5
+  EXCLUDED_MULTIWORD: 1831
+unclassified: 0
+terminal_policy: Each source record is classified C6-equivalent, blocked, or excluded.
+  Current campaign has no newly established C6 because native GF/review gates were
+  unavailable.

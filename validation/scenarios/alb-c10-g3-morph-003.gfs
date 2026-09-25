@@ -1,0 +1,506 @@
+-- GF_WORDBENCH_INPUT_SHA256 03bce5e4587ef7132a8601b058916becfd4109426bffacc79bb85d6c28d443f0 validation/inputs/AlbC10G3003.gf
+-- GF_WORDBENCH_INPUT_SHA256 4fb21b811ca50bfb9296b1809e8ec18e8b1bcf01b059ffc9c8d60709c6f08c54 validation/inputs/AlbC10G3003Sqi.gf
+i AlbC10G3003Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE G3C00501 rendesishem_A acc_masc_sg"
+l G3C00501
+ps "CASE G3C00502 rendesishem_A acc_masc_pl"
+l G3C00502
+ps "CASE G3C00503 rendesishem_A acc_fem_sg"
+l G3C00503
+ps "CASE G3C00504 rendesishem_A acc_fem_pl"
+l G3C00504
+ps "CASE G3C00505 rendesishem_A dat_masc_sg"
+l G3C00505
+ps "CASE G3C00506 rendesishem_A dat_masc_pl"
+l G3C00506
+ps "CASE G3C00507 rendesishem_A dat_fem_sg"
+l G3C00507
+ps "CASE G3C00508 rendesishem_A dat_fem_pl"
+l G3C00508
+ps "CASE G3C00509 rendesishem_A ablat_masc_sg"
+l G3C00509
+ps "CASE G3C00510 rendesishem_A ablat_masc_pl"
+l G3C00510
+ps "CASE G3C00511 rendesishem_A ablat_fem_sg"
+l G3C00511
+ps "CASE G3C00512 rendesishem_A ablat_fem_pl"
+l G3C00512
+ps "CASE G3C00513 ri_A nom_masc_sg"
+l G3C00513
+ps "CASE G3C00514 ri_A nom_masc_pl"
+l G3C00514
+ps "CASE G3C00515 ri_A nom_fem_sg"
+l G3C00515
+ps "CASE G3C00516 ri_A nom_fem_pl"
+l G3C00516
+ps "CASE G3C00517 ri_A acc_masc_sg"
+l G3C00517
+ps "CASE G3C00518 ri_A acc_masc_pl"
+l G3C00518
+ps "CASE G3C00519 ri_A acc_fem_sg"
+l G3C00519
+ps "CASE G3C00520 ri_A acc_fem_pl"
+l G3C00520
+ps "CASE G3C00521 ri_A dat_masc_sg"
+l G3C00521
+ps "CASE G3C00522 ri_A dat_masc_pl"
+l G3C00522
+ps "CASE G3C00523 ri_A dat_fem_sg"
+l G3C00523
+ps "CASE G3C00524 ri_A dat_fem_pl"
+l G3C00524
+ps "CASE G3C00525 ri_A ablat_masc_sg"
+l G3C00525
+ps "CASE G3C00526 ri_A ablat_masc_pl"
+l G3C00526
+ps "CASE G3C00527 ri_A ablat_fem_sg"
+l G3C00527
+ps "CASE G3C00528 ri_A ablat_fem_pl"
+l G3C00528
+ps "CASE G3C00529 rrumbullaket_A nom_masc_sg"
+l G3C00529
+ps "CASE G3C00530 rrumbullaket_A nom_masc_pl"
+l G3C00530
+ps "CASE G3C00531 rrumbullaket_A nom_fem_sg"
+l G3C00531
+ps "CASE G3C00532 rrumbullaket_A nom_fem_pl"
+l G3C00532
+ps "CASE G3C00533 rrumbullaket_A acc_masc_sg"
+l G3C00533
+ps "CASE G3C00534 rrumbullaket_A acc_masc_pl"
+l G3C00534
+ps "CASE G3C00535 rrumbullaket_A acc_fem_sg"
+l G3C00535
+ps "CASE G3C00536 rrumbullaket_A acc_fem_pl"
+l G3C00536
+ps "CASE G3C00537 rrumbullaket_A dat_masc_sg"
+l G3C00537
+ps "CASE G3C00538 rrumbullaket_A dat_masc_pl"
+l G3C00538
+ps "CASE G3C00539 rrumbullaket_A dat_fem_sg"
+l G3C00539
+ps "CASE G3C00540 rrumbullaket_A dat_fem_pl"
+l G3C00540
+ps "CASE G3C00541 rrumbullaket_A ablat_masc_sg"
+l G3C00541
+ps "CASE G3C00542 rrumbullaket_A ablat_masc_pl"
+l G3C00542
+ps "CASE G3C00543 rrumbullaket_A ablat_fem_sg"
+l G3C00543
+ps "CASE G3C00544 rrumbullaket_A ablat_fem_pl"
+l G3C00544
+ps "CASE G3C00545 sakte_A nom_masc_sg"
+l G3C00545
+ps "CASE G3C00546 sakte_A nom_masc_pl"
+l G3C00546
+ps "CASE G3C00547 sakte_A nom_fem_sg"
+l G3C00547
+ps "CASE G3C00548 sakte_A nom_fem_pl"
+l G3C00548
+ps "CASE G3C00549 sakte_A acc_masc_sg"
+l G3C00549
+ps "CASE G3C00550 sakte_A acc_masc_pl"
+l G3C00550
+ps "CASE G3C00551 sakte_A acc_fem_sg"
+l G3C00551
+ps "CASE G3C00552 sakte_A acc_fem_pl"
+l G3C00552
+ps "CASE G3C00553 sakte_A dat_masc_sg"
+l G3C00553
+ps "CASE G3C00554 sakte_A dat_masc_pl"
+l G3C00554
+ps "CASE G3C00555 sakte_A dat_fem_sg"
+l G3C00555
+ps "CASE G3C00556 sakte_A dat_fem_pl"
+l G3C00556
+ps "CASE G3C00557 sakte_A ablat_masc_sg"
+l G3C00557
+ps "CASE G3C00558 sakte_A ablat_masc_pl"
+l G3C00558
+ps "CASE G3C00559 sakte_A ablat_fem_sg"
+l G3C00559
+ps "CASE G3C00560 sakte_A ablat_fem_pl"
+l G3C00560
+ps "CASE G3C00561 shemtuar_A nom_masc_sg"
+l G3C00561
+ps "CASE G3C00562 shemtuar_A nom_masc_pl"
+l G3C00562
+ps "CASE G3C00563 shemtuar_A nom_fem_sg"
+l G3C00563
+ps "CASE G3C00564 shemtuar_A nom_fem_pl"
+l G3C00564
+ps "CASE G3C00565 shemtuar_A acc_masc_sg"
+l G3C00565
+ps "CASE G3C00566 shemtuar_A acc_masc_pl"
+l G3C00566
+ps "CASE G3C00567 shemtuar_A acc_fem_sg"
+l G3C00567
+ps "CASE G3C00568 shemtuar_A acc_fem_pl"
+l G3C00568
+ps "CASE G3C00569 shemtuar_A dat_masc_sg"
+l G3C00569
+ps "CASE G3C00570 shemtuar_A dat_masc_pl"
+l G3C00570
+ps "CASE G3C00571 shemtuar_A dat_fem_sg"
+l G3C00571
+ps "CASE G3C00572 shemtuar_A dat_fem_pl"
+l G3C00572
+ps "CASE G3C00573 shemtuar_A ablat_masc_sg"
+l G3C00573
+ps "CASE G3C00574 shemtuar_A ablat_masc_pl"
+l G3C00574
+ps "CASE G3C00575 shemtuar_A ablat_fem_sg"
+l G3C00575
+ps "CASE G3C00576 shemtuar_A ablat_fem_pl"
+l G3C00576
+ps "CASE G3C00577 shkurter_A nom_masc_sg"
+l G3C00577
+ps "CASE G3C00578 shkurter_A nom_masc_pl"
+l G3C00578
+ps "CASE G3C00579 shkurter_A nom_fem_sg"
+l G3C00579
+ps "CASE G3C00580 shkurter_A nom_fem_pl"
+l G3C00580
+ps "CASE G3C00581 shkurter_A acc_masc_sg"
+l G3C00581
+ps "CASE G3C00582 shkurter_A acc_masc_pl"
+l G3C00582
+ps "CASE G3C00583 shkurter_A acc_fem_sg"
+l G3C00583
+ps "CASE G3C00584 shkurter_A acc_fem_pl"
+l G3C00584
+ps "CASE G3C00585 shkurter_A dat_masc_sg"
+l G3C00585
+ps "CASE G3C00586 shkurter_A dat_masc_pl"
+l G3C00586
+ps "CASE G3C00587 shkurter_A dat_fem_sg"
+l G3C00587
+ps "CASE G3C00588 shkurter_A dat_fem_pl"
+l G3C00588
+ps "CASE G3C00589 shkurter_A ablat_masc_sg"
+l G3C00589
+ps "CASE G3C00590 shkurter_A ablat_masc_pl"
+l G3C00590
+ps "CASE G3C00591 shkurter_A ablat_fem_sg"
+l G3C00591
+ps "CASE G3C00592 shkurter_A ablat_fem_pl"
+l G3C00592
+ps "CASE G3C00593 thate_A nom_masc_sg"
+l G3C00593
+ps "CASE G3C00594 thate_A nom_masc_pl"
+l G3C00594
+ps "CASE G3C00595 thate_A nom_fem_sg"
+l G3C00595
+ps "CASE G3C00596 thate_A nom_fem_pl"
+l G3C00596
+ps "CASE G3C00597 thate_A acc_masc_sg"
+l G3C00597
+ps "CASE G3C00598 thate_A acc_masc_pl"
+l G3C00598
+ps "CASE G3C00599 thate_A acc_fem_sg"
+l G3C00599
+ps "CASE G3C00600 thate_A acc_fem_pl"
+l G3C00600
+ps "CASE G3C00601 thate_A dat_masc_sg"
+l G3C00601
+ps "CASE G3C00602 thate_A dat_masc_pl"
+l G3C00602
+ps "CASE G3C00603 thate_A dat_fem_sg"
+l G3C00603
+ps "CASE G3C00604 thate_A dat_fem_pl"
+l G3C00604
+ps "CASE G3C00605 thate_A ablat_masc_sg"
+l G3C00605
+ps "CASE G3C00606 thate_A ablat_masc_pl"
+l G3C00606
+ps "CASE G3C00607 thate_A ablat_fem_sg"
+l G3C00607
+ps "CASE G3C00608 thate_A ablat_fem_pl"
+l G3C00608
+ps "CASE G3C00609 trashe_A nom_masc_sg"
+l G3C00609
+ps "CASE G3C00610 trashe_A nom_masc_pl"
+l G3C00610
+ps "CASE G3C00611 trashe_A nom_fem_sg"
+l G3C00611
+ps "CASE G3C00612 trashe_A nom_fem_pl"
+l G3C00612
+ps "CASE G3C00613 trashe_A acc_masc_sg"
+l G3C00613
+ps "CASE G3C00614 trashe_A acc_masc_pl"
+l G3C00614
+ps "CASE G3C00615 trashe_A acc_fem_sg"
+l G3C00615
+ps "CASE G3C00616 trashe_A acc_fem_pl"
+l G3C00616
+ps "CASE G3C00617 trashe_A dat_masc_sg"
+l G3C00617
+ps "CASE G3C00618 trashe_A dat_masc_pl"
+l G3C00618
+ps "CASE G3C00619 trashe_A dat_fem_sg"
+l G3C00619
+ps "CASE G3C00620 trashe_A dat_fem_pl"
+l G3C00620
+ps "CASE G3C00621 trashe_A ablat_masc_sg"
+l G3C00621
+ps "CASE G3C00622 trashe_A ablat_masc_pl"
+l G3C00622
+ps "CASE G3C00623 trashe_A ablat_fem_sg"
+l G3C00623
+ps "CASE G3C00624 trashe_A ablat_fem_pl"
+l G3C00624
+ps "CASE G3C00625 verdhe_A nom_masc_sg"
+l G3C00625
+ps "CASE G3C00626 verdhe_A nom_masc_pl"
+l G3C00626
+ps "CASE G3C00627 verdhe_A nom_fem_sg"
+l G3C00627
+ps "CASE G3C00628 verdhe_A nom_fem_pl"
+l G3C00628
+ps "CASE G3C00629 verdhe_A acc_masc_sg"
+l G3C00629
+ps "CASE G3C00630 verdhe_A acc_masc_pl"
+l G3C00630
+ps "CASE G3C00631 verdhe_A acc_fem_sg"
+l G3C00631
+ps "CASE G3C00632 verdhe_A acc_fem_pl"
+l G3C00632
+ps "CASE G3C00633 verdhe_A dat_masc_sg"
+l G3C00633
+ps "CASE G3C00634 verdhe_A dat_masc_pl"
+l G3C00634
+ps "CASE G3C00635 verdhe_A dat_fem_sg"
+l G3C00635
+ps "CASE G3C00636 verdhe_A dat_fem_pl"
+l G3C00636
+ps "CASE G3C00637 verdhe_A ablat_masc_sg"
+l G3C00637
+ps "CASE G3C00638 verdhe_A ablat_masc_pl"
+l G3C00638
+ps "CASE G3C00639 verdhe_A ablat_fem_sg"
+l G3C00639
+ps "CASE G3C00640 verdhe_A ablat_fem_pl"
+l G3C00640
+ps "CASE G3C00641 vjeter_A nom_masc_sg"
+l G3C00641
+ps "CASE G3C00642 vjeter_A nom_masc_pl"
+l G3C00642
+ps "CASE G3C00643 vjeter_A nom_fem_sg"
+l G3C00643
+ps "CASE G3C00644 vjeter_A nom_fem_pl"
+l G3C00644
+ps "CASE G3C00645 vjeter_A acc_masc_sg"
+l G3C00645
+ps "CASE G3C00646 vjeter_A acc_masc_pl"
+l G3C00646
+ps "CASE G3C00647 vjeter_A acc_fem_sg"
+l G3C00647
+ps "CASE G3C00648 vjeter_A acc_fem_pl"
+l G3C00648
+ps "CASE G3C00649 vjeter_A dat_masc_sg"
+l G3C00649
+ps "CASE G3C00650 vjeter_A dat_masc_pl"
+l G3C00650
+ps "CASE G3C00651 vjeter_A dat_fem_sg"
+l G3C00651
+ps "CASE G3C00652 vjeter_A dat_fem_pl"
+l G3C00652
+ps "CASE G3C00653 vjeter_A ablat_masc_sg"
+l G3C00653
+ps "CASE G3C00654 vjeter_A ablat_masc_pl"
+l G3C00654
+ps "CASE G3C00655 vjeter_A ablat_fem_sg"
+l G3C00655
+ps "CASE G3C00656 vjeter_A ablat_fem_pl"
+l G3C00656
+ps "CASE G3C00657 vogel_A nom_masc_sg"
+l G3C00657
+ps "CASE G3C00658 vogel_A nom_masc_pl"
+l G3C00658
+ps "CASE G3C00659 vogel_A nom_fem_sg"
+l G3C00659
+ps "CASE G3C00660 vogel_A nom_fem_pl"
+l G3C00660
+ps "CASE G3C00661 vogel_A acc_masc_sg"
+l G3C00661
+ps "CASE G3C00662 vogel_A acc_masc_pl"
+l G3C00662
+ps "CASE G3C00663 vogel_A acc_fem_sg"
+l G3C00663
+ps "CASE G3C00664 vogel_A acc_fem_pl"
+l G3C00664
+ps "CASE G3C00665 vogel_A dat_masc_sg"
+l G3C00665
+ps "CASE G3C00666 vogel_A dat_masc_pl"
+l G3C00666
+ps "CASE G3C00667 vogel_A dat_fem_sg"
+l G3C00667
+ps "CASE G3C00668 vogel_A dat_fem_pl"
+l G3C00668
+ps "CASE G3C00669 vogel_A ablat_masc_sg"
+l G3C00669
+ps "CASE G3C00670 vogel_A ablat_masc_pl"
+l G3C00670
+ps "CASE G3C00671 vogel_A ablat_fem_sg"
+l G3C00671
+ps "CASE G3C00672 vogel_A ablat_fem_pl"
+l G3C00672
+ps "CASE G3C00673 zgjuar_A nom_masc_sg"
+l G3C00673
+ps "CASE G3C00674 zgjuar_A nom_masc_pl"
+l G3C00674
+ps "CASE G3C00675 zgjuar_A nom_fem_sg"
+l G3C00675
+ps "CASE G3C00676 zgjuar_A nom_fem_pl"
+l G3C00676
+ps "CASE G3C00677 zgjuar_A acc_masc_sg"
+l G3C00677
+ps "CASE G3C00678 zgjuar_A acc_masc_pl"
+l G3C00678
+ps "CASE G3C00679 zgjuar_A acc_fem_sg"
+l G3C00679
+ps "CASE G3C00680 zgjuar_A acc_fem_pl"
+l G3C00680
+ps "CASE G3C00681 zgjuar_A dat_masc_sg"
+l G3C00681
+ps "CASE G3C00682 zgjuar_A dat_masc_pl"
+l G3C00682
+ps "CASE G3C00683 zgjuar_A dat_fem_sg"
+l G3C00683
+ps "CASE G3C00684 zgjuar_A dat_fem_pl"
+l G3C00684
+ps "CASE G3C00685 zgjuar_A ablat_masc_sg"
+l G3C00685
+ps "CASE G3C00686 zgjuar_A ablat_masc_pl"
+l G3C00686
+ps "CASE G3C00687 zgjuar_A ablat_fem_sg"
+l G3C00687
+ps "CASE G3C00688 zgjuar_A ablat_fem_pl"
+l G3C00688
+ps "CASE G3C00689 zi_A nom_masc_sg"
+l G3C00689
+ps "CASE G3C00690 zi_A nom_masc_pl"
+l G3C00690
+ps "CASE G3C00691 zi_A nom_fem_sg"
+l G3C00691
+ps "CASE G3C00692 zi_A nom_fem_pl"
+l G3C00692
+ps "CASE G3C00693 zi_A acc_masc_sg"
+l G3C00693
+ps "CASE G3C00694 zi_A acc_masc_pl"
+l G3C00694
+ps "CASE G3C00695 zi_A acc_fem_sg"
+l G3C00695
+ps "CASE G3C00696 zi_A acc_fem_pl"
+l G3C00696
+ps "CASE G3C00697 zi_A dat_masc_sg"
+l G3C00697
+ps "CASE G3C00698 zi_A dat_masc_pl"
+l G3C00698
+ps "CASE G3C00699 zi_A dat_fem_sg"
+l G3C00699
+ps "CASE G3C00700 zi_A dat_fem_pl"
+l G3C00700
+ps "CASE G3C00701 zi_A ablat_masc_sg"
+l G3C00701
+ps "CASE G3C00702 zi_A ablat_masc_pl"
+l G3C00702
+ps "CASE G3C00703 zi_A ablat_fem_sg"
+l G3C00703
+ps "CASE G3C00704 zi_A ablat_fem_pl"
+l G3C00704
+ps "CASE G3C00705 martuar_A2 nom_masc_sg"
+l G3C00705
+ps "CASE G3C00706 martuar_A2 nom_masc_pl"
+l G3C00706
+ps "CASE G3C00707 martuar_A2 nom_fem_sg"
+l G3C00707
+ps "CASE G3C00708 martuar_A2 nom_fem_pl"
+l G3C00708
+ps "CASE G3C00709 martuar_A2 acc_masc_sg"
+l G3C00709
+ps "CASE G3C00710 martuar_A2 acc_masc_pl"
+l G3C00710
+ps "CASE G3C00711 martuar_A2 acc_fem_sg"
+l G3C00711
+ps "CASE G3C00712 martuar_A2 acc_fem_pl"
+l G3C00712
+ps "CASE G3C00713 martuar_A2 dat_masc_sg"
+l G3C00713
+ps "CASE G3C00714 martuar_A2 dat_masc_pl"
+l G3C00714
+ps "CASE G3C00715 martuar_A2 dat_fem_sg"
+l G3C00715
+ps "CASE G3C00716 martuar_A2 dat_fem_pl"
+l G3C00716
+ps "CASE G3C00717 martuar_A2 ablat_masc_sg"
+l G3C00717
+ps "CASE G3C00718 martuar_A2 ablat_masc_pl"
+l G3C00718
+ps "CASE G3C00719 martuar_A2 ablat_fem_sg"
+l G3C00719
+ps "CASE G3C00720 martuar_A2 ablat_fem_pl"
+l G3C00720
+ps "CASE G3C00721 aeroplan_N indef_nom_sg"
+l G3C00721
+ps "CASE G3C00722 aeroplan_N indef_nom_pl"
+l G3C00722
+ps "CASE G3C00723 aeroplan_N indef_acc_sg"
+l G3C00723
+ps "CASE G3C00724 aeroplan_N indef_acc_pl"
+l G3C00724
+ps "CASE G3C00725 aeroplan_N indef_dat_sg"
+l G3C00725
+ps "CASE G3C00726 aeroplan_N indef_dat_pl"
+l G3C00726
+ps "CASE G3C00727 aeroplan_N indef_ablat_sg"
+l G3C00727
+ps "CASE G3C00728 aeroplan_N indef_ablat_pl"
+l G3C00728
+ps "CASE G3C00729 aeroplan_N def_nom_sg"
+l G3C00729
+ps "CASE G3C00730 aeroplan_N def_nom_pl"
+l G3C00730
+ps "CASE G3C00731 aeroplan_N def_acc_sg"
+l G3C00731
+ps "CASE G3C00732 aeroplan_N def_acc_pl"
+l G3C00732
+ps "CASE G3C00733 aeroplan_N def_dat_sg"
+l G3C00733
+ps "CASE G3C00734 aeroplan_N def_dat_pl"
+l G3C00734
+ps "CASE G3C00735 aeroplan_N def_ablat_sg"
+l G3C00735
+ps "CASE G3C00736 aeroplan_N def_ablat_pl"
+l G3C00736
+ps "CASE G3C00737 akull_N indef_nom_sg"
+l G3C00737
+ps "CASE G3C00738 akull_N indef_nom_pl"
+l G3C00738
+ps "CASE G3C00739 akull_N indef_acc_sg"
+l G3C00739
+ps "CASE G3C00740 akull_N indef_acc_pl"
+l G3C00740
+ps "CASE G3C00741 akull_N indef_dat_sg"
+l G3C00741
+ps "CASE G3C00742 akull_N indef_dat_pl"
+l G3C00742
+ps "CASE G3C00743 akull_N indef_ablat_sg"
+l G3C00743
+ps "CASE G3C00744 akull_N indef_ablat_pl"
+l G3C00744
+ps "CASE G3C00745 akull_N def_nom_sg"
+l G3C00745
+ps "CASE G3C00746 akull_N def_nom_pl"
+l G3C00746
+ps "CASE G3C00747 akull_N def_acc_sg"
+l G3C00747
+ps "CASE G3C00748 akull_N def_acc_pl"
+l G3C00748
+ps "CASE G3C00749 akull_N def_dat_sg"
+l G3C00749
+ps "CASE G3C00750 akull_N def_dat_pl"
+l G3C00750
+ps "GF_WORDBENCH_END cases"
+q

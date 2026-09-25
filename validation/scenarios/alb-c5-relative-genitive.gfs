@@ -1,0 +1,126 @@
+-- GF_WORDBENCH_INPUT_SHA256 c1e50c245a1527b9bcf70672b8320fa11cb7d0998de66f4e6a742e1688a36b78 validation/inputs/AlbC5RelativeGenitive.gf
+-- GF_WORDBENCH_INPUT_SHA256 cec663c64b4797553f36dd36221a64f8a354dce0c8d66d26ec34b6230154ff5c validation/inputs/AlbC5RelativeGenitiveSqi.gf
+i AlbC5RelativeGenitiveSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C5R01 cili Nom Masc Sg"
+l C5R01
+ps "CASE C5R02 cili Nom Masc Pl"
+l C5R02
+ps "CASE C5R03 cili Nom Fem Sg"
+l C5R03
+ps "CASE C5R04 cili Nom Fem Pl"
+l C5R04
+ps "CASE C5R05 cili Acc Masc Sg"
+l C5R05
+ps "CASE C5R06 cili Acc Masc Pl"
+l C5R06
+ps "CASE C5R07 cili Acc Fem Sg"
+l C5R07
+ps "CASE C5R08 cili Acc Fem Pl"
+l C5R08
+ps "CASE C5R09 cili Gen Masc Sg"
+l C5R09
+ps "CASE C5R10 cili Gen Masc Pl"
+l C5R10
+ps "CASE C5R11 cili Gen Fem Sg"
+l C5R11
+ps "CASE C5R12 cili Gen Fem Pl"
+l C5R12
+ps "CASE C5R13 cili Dat Masc Sg"
+l C5R13
+ps "CASE C5R14 cili Dat Masc Pl"
+l C5R14
+ps "CASE C5R15 cili Dat Fem Sg"
+l C5R15
+ps "CASE C5R16 cili Dat Fem Pl"
+l C5R16
+ps "CASE C5R17 cili Ablat Masc Sg"
+l C5R17
+ps "CASE C5R18 cili Ablat Masc Pl"
+l C5R18
+ps "CASE C5R19 cili Ablat Fem Sg"
+l C5R19
+ps "CASE C5R20 cili Ablat Fem Pl"
+l C5R20
+ps "CASE C5R21 nyje Indef Nom Masc Sg"
+l C5R21
+ps "CASE C5R22 nyje Indef Nom Masc Pl"
+l C5R22
+ps "CASE C5R23 nyje Indef Nom Fem Sg"
+l C5R23
+ps "CASE C5R24 nyje Indef Nom Fem Pl"
+l C5R24
+ps "CASE C5R25 nyje Indef Acc Masc Sg"
+l C5R25
+ps "CASE C5R26 nyje Indef Acc Masc Pl"
+l C5R26
+ps "CASE C5R27 nyje Indef Acc Fem Sg"
+l C5R27
+ps "CASE C5R28 nyje Indef Acc Fem Pl"
+l C5R28
+ps "CASE C5R29 nyje Indef Gen Masc Sg"
+l C5R29
+ps "CASE C5R30 nyje Indef Gen Masc Pl"
+l C5R30
+ps "CASE C5R31 nyje Indef Gen Fem Sg"
+l C5R31
+ps "CASE C5R32 nyje Indef Gen Fem Pl"
+l C5R32
+ps "CASE C5R33 nyje Indef Dat Masc Sg"
+l C5R33
+ps "CASE C5R34 nyje Indef Dat Masc Pl"
+l C5R34
+ps "CASE C5R35 nyje Indef Dat Fem Sg"
+l C5R35
+ps "CASE C5R36 nyje Indef Dat Fem Pl"
+l C5R36
+ps "CASE C5R37 nyje Indef Ablat Masc Sg"
+l C5R37
+ps "CASE C5R38 nyje Indef Ablat Masc Pl"
+l C5R38
+ps "CASE C5R39 nyje Indef Ablat Fem Sg"
+l C5R39
+ps "CASE C5R40 nyje Indef Ablat Fem Pl"
+l C5R40
+ps "CASE C5R41 nyje Def Nom Masc Sg"
+l C5R41
+ps "CASE C5R42 nyje Def Nom Masc Pl"
+l C5R42
+ps "CASE C5R43 nyje Def Nom Fem Sg"
+l C5R43
+ps "CASE C5R44 nyje Def Nom Fem Pl"
+l C5R44
+ps "CASE C5R45 nyje Def Acc Masc Sg"
+l C5R45
+ps "CASE C5R46 nyje Def Acc Masc Pl"
+l C5R46
+ps "CASE C5R47 nyje Def Acc Fem Sg"
+l C5R47
+ps "CASE C5R48 nyje Def Acc Fem Pl"
+l C5R48
+ps "CASE C5R49 nyje Def Gen Masc Sg"
+l C5R49
+ps "CASE C5R50 nyje Def Gen Masc Pl"
+l C5R50
+ps "CASE C5R51 nyje Def Gen Fem Sg"
+l C5R51
+ps "CASE C5R52 nyje Def Gen Fem Pl"
+l C5R52
+ps "CASE C5R53 nyje Def Dat Masc Sg"
+l C5R53
+ps "CASE C5R54 nyje Def Dat Masc Pl"
+l C5R54
+ps "CASE C5R55 nyje Def Dat Fem Sg"
+l C5R55
+ps "CASE C5R56 nyje Def Dat Fem Pl"
+l C5R56
+ps "CASE C5R57 nyje Def Ablat Masc Sg"
+l C5R57
+ps "CASE C5R58 nyje Def Ablat Masc Pl"
+l C5R58
+ps "CASE C5R59 nyje Def Ablat Fem Sg"
+l C5R59
+ps "CASE C5R60 nyje Def Ablat Fem Pl"
+l C5R60
+ps "GF_WORDBENCH_END cases"
+q

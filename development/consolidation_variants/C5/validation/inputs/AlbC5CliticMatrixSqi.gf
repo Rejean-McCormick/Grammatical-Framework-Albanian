@@ -1,0 +1,40 @@
+concrete AlbC5CliticMatrixSqi of AlbC5CliticMatrix =
+  open Prelude, ParamX, ResSqi in {
+  lincat Probe = {s : Str} ;
+  lin
+    C5M01 = {s = flattenClitics {dat=Weak Sg P1; acc=Weak Sg P3; refl=False}} ;
+    C5M02 = {s = flattenClitics {dat=Weak Sg P1; acc=Weak Pl P3; refl=False}} ;
+    C5M03 = {s = flattenClitics {dat=Weak Sg P1; acc=NoWeak; refl=True}} ;
+    C5M04 = {s = flattenClitics {dat=Weak Sg P2; acc=Weak Sg P3; refl=False}} ;
+    C5M05 = {s = flattenClitics {dat=Weak Sg P2; acc=Weak Pl P3; refl=False}} ;
+    C5M06 = {s = flattenClitics {dat=Weak Sg P2; acc=NoWeak; refl=True}} ;
+    C5M07 = {s = flattenClitics {dat=Weak Sg P3; acc=Weak Sg P3; refl=False}} ;
+    C5M08 = {s = flattenClitics {dat=Weak Sg P3; acc=Weak Pl P3; refl=False}} ;
+    C5M09 = {s = flattenClitics {dat=Weak Sg P3; acc=NoWeak; refl=True}} ;
+    C5M10 = {s = flattenClitics {dat=Weak Pl P1; acc=Weak Sg P3; refl=False}} ;
+    C5M11 = {s = flattenClitics {dat=Weak Pl P1; acc=Weak Pl P3; refl=False}} ;
+    C5M12 = {s = flattenClitics {dat=Weak Pl P1; acc=NoWeak; refl=True}} ;
+    C5M13 = {s = flattenClitics {dat=Weak Pl P2; acc=Weak Sg P3; refl=False}} ;
+    C5M14 = {s = flattenClitics {dat=Weak Pl P2; acc=Weak Pl P3; refl=False}} ;
+    C5M15 = {s = flattenClitics {dat=Weak Pl P2; acc=NoWeak; refl=True}} ;
+    C5M16 = {s = flattenClitics {dat=Weak Pl P3; acc=Weak Sg P3; refl=False}} ;
+    C5M17 = {s = flattenClitics {dat=Weak Pl P3; acc=Weak Pl P3; refl=False}} ;
+    C5M18 = {s = flattenClitics {dat=Weak Pl P3; acc=NoWeak; refl=True}} ;
+    C5T01 = {s = teWithClitics {dat=NoWeak; acc=Weak Sg P3; refl=False}} ;
+    C5T02 = {s = teWithClitics {dat=NoWeak; acc=Weak Pl P3; refl=False}} ;
+    C5T03 = {s = teWithClitics {dat=Weak Pl P2; acc=Weak Sg P3; refl=False}} ;
+    C5T04 = {s = teWithClitics {dat=Weak Sg P1; acc=Weak Pl P3; refl=False}} ;
+    C5T05 = {s = teWithClitics {dat=Weak Pl P1; acc=NoWeak; refl=False}} ;
+    C5W01 = {s = weakAcc (Weak Sg P1)} ;
+    C5W02 = {s = weakAcc (Weak Sg P2)} ;
+    C5W03 = {s = weakAcc (Weak Sg P3)} ;
+    C5W04 = {s = weakAcc (Weak Pl P1)} ;
+    C5W05 = {s = weakAcc (Weak Pl P2)} ;
+    C5W06 = {s = weakAcc (Weak Pl P3)} ;
+    C5W07 = {s = weakDat (Weak Sg P1)} ;
+    C5W08 = {s = weakDat (Weak Sg P2)} ;
+    C5W09 = {s = weakDat (Weak Sg P3)} ;
+    C5W10 = {s = weakDat (Weak Pl P1)} ;
+    C5W11 = {s = weakDat (Weak Pl P2)} ;
+    C5W12 = {s = weakDat (Weak Pl P3)} ;
+} ;

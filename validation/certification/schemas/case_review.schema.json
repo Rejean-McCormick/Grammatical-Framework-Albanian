@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "albanian-c10-case-review-v1",
+  "title": "Albanian C10 case-level linguistic review",
+  "type": "object",
+  "required": ["case_id", "campaign_level", "scenario_id", "source_lock_sha256", "case_output_sha256", "scenario_output_sha256", "language_variety", "verdict", "confidence", "rationale", "reviewer_kind"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "campaign_level": {"enum": ["G1", "G2", "G3"]},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "source_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "case_output_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "scenario_output_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "language_variety": {"const": "Standard Albanian"},
+    "verdict": {"enum": ["valid", "valid_variant", "questionable", "invalid"]},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "evidence_refs": {"type": "string"},
+    "reviewer_kind": {"enum": ["ai", "human", "dual"]},
+    "reviewer_name": {"type": "string"},
+    "reviewer_model": {"type": "string"},
+    "gold_eligible": {"enum": ["true", "false", true, false]}
+  },
+  "additionalProperties": true
+}

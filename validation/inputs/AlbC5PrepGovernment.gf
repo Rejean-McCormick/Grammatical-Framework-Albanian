@@ -1,0 +1,39 @@
+abstract AlbC5PrepGovernment = {
+  cat Probe ;
+  fun
+    C5G01 : Probe ;
+    C5G02 : Probe ;
+    C5G03 : Probe ;
+    C5G04 : Probe ;
+    C5G05 : Probe ;
+    C5G06 : Probe ;
+    C5G07 : Probe ;
+    C5G08 : Probe ;
+    C5G09 : Probe ;
+    C5G10 : Probe ;
+    C5G11 : Probe ;
+    C5G12 : Probe ;
+    C5G13 : Probe ;
+    C5G14 : Probe ;
+    C5G15 : Probe ;
+    C5G16 : Probe ;
+    C5G17 : Probe ;
+    C5G18 : Probe ;
+    C5G19 : Probe ;
+    C5G20 : Probe ;
+    C5G21 : Probe ;
+    C5G22 : Probe ;
+    C5G23 : Probe ;
+    C5G24 : Probe ;
+    C5G25 : Probe ;
+    C5G26 : Probe ;
+    C5G27 : Probe ;
+    C5G28 : Probe ;
+    C5G29 : Probe ;
+    C5G30 : Probe ;
+    C5G31 : Probe ;
+    C5G32 : Probe ;
+    C5G33 : Probe ;
+    C5G34 : Probe ;
+    C5G35 : Probe ;
+}

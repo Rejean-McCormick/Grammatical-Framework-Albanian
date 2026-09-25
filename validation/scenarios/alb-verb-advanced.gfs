@@ -1,0 +1,202 @@
+-- GF_WORDBENCH_INPUT_SHA256 33d5b56495866f3ff404af942c7c7afc5f9083109c9186a48704d046f9bd0153 validation/inputs/AlbVerbAdvanced.gf
+-- GF_WORDBENCH_INPUT_SHA256 c442780861ca9b1328c49e2e5b2d3cf00b8df51fe0b8406c98e3d8e3e32371f7 validation/inputs/AlbVerbAdvancedSqi.gf
+i AlbVerbAdvancedSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE V001 active pres simul pos"
+l V001
+ps "CASE V002 active pres simul neg"
+l V002
+ps "CASE V003 active pres anter pos"
+l V003
+ps "CASE V004 active pres anter neg"
+l V004
+ps "CASE V005 active past simul pos"
+l V005
+ps "CASE V006 active past simul neg"
+l V006
+ps "CASE V007 active past anter pos"
+l V007
+ps "CASE V008 active past anter neg"
+l V008
+ps "CASE V009 active fut simul pos"
+l V009
+ps "CASE V010 active fut simul neg"
+l V010
+ps "CASE V011 active fut anter pos"
+l V011
+ps "CASE V012 active fut anter neg"
+l V012
+ps "CASE V013 active cond simul pos"
+l V013
+ps "CASE V014 active cond simul neg"
+l V014
+ps "CASE V015 active cond anter pos"
+l V015
+ps "CASE V016 active cond anter neg"
+l V016
+ps "CASE V017 nonactive pres simul pos"
+l V017
+ps "CASE V018 nonactive pres simul neg"
+l V018
+ps "CASE V019 nonactive pres anter pos"
+l V019
+ps "CASE V020 nonactive pres anter neg"
+l V020
+ps "CASE V021 nonactive past simul pos"
+l V021
+ps "CASE V022 nonactive past simul neg"
+l V022
+ps "CASE V023 nonactive past anter pos"
+l V023
+ps "CASE V024 nonactive past anter neg"
+l V024
+ps "CASE V025 nonactive fut simul pos"
+l V025
+ps "CASE V026 nonactive fut simul neg"
+l V026
+ps "CASE V027 nonactive fut anter pos"
+l V027
+ps "CASE V028 nonactive fut anter neg"
+l V028
+ps "CASE V029 nonactive cond simul pos"
+l V029
+ps "CASE V030 nonactive cond simul neg"
+l V030
+ps "CASE V031 nonactive cond anter pos"
+l V031
+ps "CASE V032 nonactive cond anter neg"
+l V032
+ps "CASE V033 progressive active pres pos"
+l V033
+ps "CASE V034 progressive active pres neg"
+l V034
+ps "CASE V035 progressive active past pos"
+l V035
+ps "CASE V036 progressive active past neg"
+l V036
+ps "CASE V037 progressive nonactive pres pos"
+l V037
+ps "CASE V038 progressive nonactive pres neg"
+l V038
+ps "CASE V039 progressive nonactive past pos"
+l V039
+ps "CASE V040 progressive nonactive past neg"
+l V040
+ps "CASE V041 subjunctive active simul pos"
+l V041
+ps "CASE V042 subjunctive active simul neg"
+l V042
+ps "CASE V043 subjunctive active anter pos"
+l V043
+ps "CASE V044 subjunctive active anter neg"
+l V044
+ps "CASE V045 subjunctive nonactive simul pos"
+l V045
+ps "CASE V046 subjunctive nonactive simul neg"
+l V046
+ps "CASE V047 subjunctive nonactive anter pos"
+l V047
+ps "CASE V048 subjunctive nonactive anter neg"
+l V048
+ps "CASE V049 imperative active pos"
+l V049
+ps "CASE V050 imperative active neg"
+l V050
+ps "CASE V051 imperative nonactive pos"
+l V051
+ps "CASE V052 imperative nonactive neg"
+l V052
+ps "CASE V053 aorist active pos"
+l V053
+ps "CASE V054 aorist-anterior active pos"
+l V054
+ps "CASE V055 aorist active neg"
+l V055
+ps "CASE V056 aorist-anterior active neg"
+l V056
+ps "CASE V057 aorist nonactive pos"
+l V057
+ps "CASE V058 aorist-anterior nonactive pos"
+l V058
+ps "CASE V059 aorist nonactive neg"
+l V059
+ps "CASE V060 aorist-anterior nonactive neg"
+l V060
+ps "CASE V061 optative active"
+l V061
+ps "CASE V062 perfect-optative active"
+l V062
+ps "CASE V063 admirative active"
+l V063
+ps "CASE V064 imperfect-admirative active"
+l V064
+ps "CASE V065 optative nonactive"
+l V065
+ps "CASE V066 perfect-optative nonactive"
+l V066
+ps "CASE V067 admirative nonactive"
+l V067
+ps "CASE V068 imperfect-admirative nonactive"
+l V068
+ps "CASE V069 clitic present"
+l V069
+ps "CASE V070 clitic present perfect"
+l V070
+ps "CASE V071 clitic future"
+l V071
+ps "CASE V072 clitic future negative"
+l V072
+ps "CASE V073 clitic future anterior"
+l V073
+ps "CASE V074 clitic subjunctive"
+l V074
+ps "CASE V075 clitic subjunctive negative"
+l V075
+ps "CASE V076 clitic imperative"
+l V076
+ps "CASE V077 clitic imperative negative"
+l V077
+ps "CASE V078 purpose"
+l V078
+ps "CASE V079 purpose negative"
+l V079
+ps "CASE V080 gerund"
+l V080
+ps "CASE V081 gerund negative"
+l V081
+ps "CASE V082 analytic passive present"
+l V082
+ps "CASE V083 analytic passive past"
+l V083
+ps "CASE V084 analytic passive future"
+l V084
+ps "CASE V085 analytic passive conditional"
+l V085
+ps "CASE V086 analytic passive anterior"
+l V086
+ps "CASE V087 reflexive present"
+l V087
+ps "CASE V088 reflexive past"
+l V088
+ps "CASE V089 reflexive future"
+l V089
+ps "CASE V090 existential present"
+l V090
+ps "CASE V091 existential past"
+l V091
+ps "CASE V092 existential future"
+l V092
+ps "CASE V093 existential conditional"
+l V093
+ps "CASE V094 existential present perfect"
+l V094
+ps "CASE V095 existential pluperfect"
+l V095
+ps "CASE V096 existential future perfect"
+l V096
+ps "CASE V097 existential conditional perfect negative"
+l V097
+ps "CASE V098 nonactive reciprocal-capable surface"
+l V098
+ps "GF_WORDBENCH_END cases"
+q

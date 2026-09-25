@@ -1,0 +1,2 @@
+9e10d077a7d18e2d2b21b874e12ed24d20314f356153ca0d36ec409026870b4c  /mnt/data/Albanian_RGL_Total_Documentation_v2_CompendiumAligned_20260925(9).zip
+e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d  /mnt/data/gf-rgl-master.zip

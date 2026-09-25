@@ -1,0 +1,8 @@
+PASS entry count
+PASS unique abstract IDs
+PASS abstract/concrete inventory
+PASS balanced braces
+PASS no MorphoDict module
+PASS baseline preservation recorded
+PASS legacy suffix types normalized
+PASS unreviewed imports use lock-safe placeholders

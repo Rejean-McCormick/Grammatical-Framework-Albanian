@@ -1,0 +1,67 @@
+{
+  "version": "2.0",
+  "date": "2026-09-25",
+  "baseline_declared": "albanian-s02-green-20260925",
+  "core_hashes": {
+    "AlbanianSQI/GF/lib/src/albanian/ResSqi.gf": [
+      14477,
+      "0ce1f35dcedb68d6084d30e781d013b5aa1376526095d7659f5b640ce8e23727"
+    ],
+    "AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf": [
+      1074832,
+      "729706f857ae4b3e31934b218ffb775d2b2386618b5e5ddf3b822edda8702a42"
+    ],
+    "AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf": [
+      54260,
+      "b65f668abd6dc093d5a3eb58ed4eeb44917aa0f4ee97560775f3e4090811cc51"
+    ],
+    "AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf": [
+      10602,
+      "f96cfc6aa0a8c7719f44c4ab2e5ef62969c14154b199e0c79403b8ba1dd4aa05"
+    ]
+  },
+  "metrics": {
+    "classes_total": 734,
+    "N": 563,
+    "A": 36,
+    "V": 135,
+    "guards": 478,
+    "explicit_errors": 475,
+    "numbered_refs_outside_paradigms": 3,
+    "invariant_mentions": {
+      "invariantN": 4233,
+      "invariantA": 101,
+      "invariantV": 2173
+    }
+  },
+  "docs": [
+    "00_START_HERE.md",
+    "01_SOURCE_LOCK_AND_EVIDENCE.md",
+    "02_FINAL_MORPHOLOGY_ARCHITECTURE.md",
+    "03_NOMINAL_MORPHOLOGY_PLAN.md",
+    "04_ADJECTIVAL_MORPHOLOGY_PLAN.md",
+    "05_VERBAL_MORPHOLOGY_PLAN.md",
+    "06_PARADIGMS_API_SPEC.md",
+    "07_IRREGULARS_POLICY.md",
+    "08_DRAFTMAX_REINTEGRATION.md",
+    "09_TEST_AND_CERTIFICATION_PLAN.md",
+    "10_DRIFT_CONTROL.md",
+    "11_OPEN_QUESTIONS_AND_DECISIONS.md",
+    "12_ROADMAP_AND_DEFINITION_OF_DONE.md",
+    "13_FINAL_CONTENT_MANIFEST.md",
+    "14_CURRENT_MORPHOLOGY_INVENTORY.md",
+    "15_RES_PRODUCER_CONSUMER_MAP.md",
+    "16_ENGLISH_PARITY_MATRIX.md",
+    "17_ALBANIAN_EVIDENCE_LEDGER.md",
+    "18_MORPHOPHONOLOGY_SPEC.md",
+    "19_QUANTITATIVE_RELEASE_GATES.md",
+    "20_CROSS_WORKSTREAM_CONTRACTS.md",
+    "21_API_COMPATIBILITY_AND_DEPRECATION.md",
+    "22_GENERATION_AND_REPRODUCIBILITY.md",
+    "23_DECISION_LEDGER.md",
+    "24_IMPLEMENTATION_PLAYBOOK.md",
+    "25_CHANGE_CHECKLIST.md",
+    "99_DOC_PACK_HASHES.md",
+    "README.md"
+  ]
+}

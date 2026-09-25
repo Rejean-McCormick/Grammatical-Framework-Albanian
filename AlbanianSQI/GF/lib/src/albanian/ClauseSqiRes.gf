@@ -1,6 +1,6 @@
 -- Shared Albanian clause/VP realization kernel.
--- This resource is intentionally below Sentence/Question/Relative/Extend so
--- every consumer uses the same tense, polarity, agreement and clitic rules.
+-- C5 final architecture: clitic roles remain typed until this module flattens
+-- them exactly once.  po and non-clitic preverbal material are separate slots.
 resource ClauseSqiRes =
   open Prelude, ParamX, ResSqi in {
 
@@ -16,9 +16,10 @@ oper
     perf_optative = sl.perf_optative ;
     pres_admirative = sl.pres_admirative ;
     imperf_admirative = sl.imperf_admirative ;
-    cl = sl.cl ;
-    subjcl = sl.subjcl ;
-    post = sl.post
+    clitics = sl.clitics ;
+    progressive = sl.progressive ; progressivity = sl.progressivity ;
+    preClitic = sl.preClitic ;
+    post = sl.post ; morphVoice=sl.morphVoice ; voiceUse=sl.voiceUse
   } ;
 
   emptyVP : Verb -> VP = \v -> {
@@ -30,9 +31,10 @@ oper
     perf_optative = v.perf_optative ;
     pres_admirative = v.pres_admirative ;
     imperf_admirative = v.imperf_admirative ;
-    cl = [] ;
-    subjcl = "të" ;
-    post = \\_ => []
+    clitics = emptyClitics ;
+    progressive = False ; progressivity = NeutralProgressive ;
+    preClitic = [] ;
+    post = \\_ => [] ; morphVoice=v.morphVoice ; voiceUse=PlainUse
   } ;
 
   slashFromVP : VP -> Compl -> VPSlash = \vp,c -> {
@@ -44,10 +46,11 @@ oper
     perf_optative = vp.perf_optative ;
     pres_admirative = vp.pres_admirative ;
     imperf_admirative = vp.imperf_admirative ;
-    cl = vp.cl ;
-    subjcl = vp.subjcl ;
-    post = vp.post ;
-    c2 = c
+    clitics = vp.clitics ;
+    progressive = vp.progressive ; progressivity = vp.progressivity ;
+    preClitic = vp.preClitic ;
+    post = vp.post ; morphVoice=vp.morphVoice ; voiceUse=vp.voiceUse ;
+    c2 = c ; gapPost=\_,_ => []
   } ;
 
   appendVP : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
@@ -58,71 +61,187 @@ oper
     post = \\a => x ! a ++ vp.post ! a
   } ;
 
-  appendClitic : VP -> Str -> Str -> VP = \vp,x,sx -> vp ** {
-    cl = vp.cl ++ x ;
-    subjcl = sx
+  appendAccClitic : VP -> Agr -> VP = \vp,a -> vp ** {
+    clitics = putAccClitic vp.clitics a
   } ;
 
-  -- Main finite realization.  Public ParamX tense is mapped to Albanian
-  -- morphology only here; ResSqi.Tense never leaks into public RGL tables.
-  realizeVP : VP -> ParamX.Tense -> Anteriority -> Polarity -> Agr -> Str =
-    \vp,t,ant,pol,a -> case <ant,t> of {
-      <Simul,ParamX.Fut> => negation pol ++ "do" ++
-        vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
+  appendDatClitic : VP -> Agr -> VP = \vp,a -> vp ** {
+    clitics = putDatClitic vp.clitics a
+  } ;
 
-      <Simul,ParamX.Cond> => negation pol ++ "do" ++
-        vp.subjcl ++
-        vp.indicative ! Imperfect ! agrNumber a ! a.p ++ vp.post ! a ;
+  appendReflClitic : VP -> VP = \vp -> vp ** {
+    clitics = putReflClitic vp.clitics
+  } ;
 
-      <Simul,_> => negation pol ++ vp.cl ++
-        vp.indicative ! sqiTense t ! agrNumber a ! a.p ++ vp.post ! a ;
+  progressiveVP : VP -> VP = \vp -> vp ** {progressive=True ; progressivity=Progressive} ;
 
-      <Anter,ParamX.Fut> => negation pol ++ "do" ++
-        vp.subjcl ++
-        haveSubj ! agrNumber a ! a.p ++
-        vp.participle ++ vp.post ! a ;
+  addPreCliticMaterial : VP -> Str -> VP = \vp,x -> vp ** {
+    preClitic = vp.preClitic ++ x
+  } ;
 
-      <Anter,ParamX.Cond> => negation pol ++ "do" ++
-        vp.subjcl ++
-        haveAux ! ParamX.Past ! agrNumber a ! a.p ++
-        vp.participle ++ vp.post ! a ;
+  ordinaryPrefix : VP -> Str = \vp ->
+    vp.preClitic ++ case vp.progressive of {True => "po" ; False => []} ++
+    flattenClitics vp.clitics ;
 
-      <Anter,_> => negation pol ++ vp.cl ++
-        haveAux ! t ! agrNumber a ! a.p ++ vp.participle ++ vp.post ! a
+  -- Positive të contracts only when the clitic cluster is immediately after
+  -- të.  If another preverbal slot intervenes, të stays independent.
+  subjPrefix : VP -> Str = \vp -> case <vp.preClitic : Str> of {
+    "" => case vp.progressive of {
+      False => teWithClitics vp.clitics ;
+      True  => "të" ++ "po" ++ flattenClitics vp.clitics
+    } ;
+    _ => "të" ++ vp.preClitic ++
+         case vp.progressive of {True => "po" ; False => []} ++
+         flattenClitics vp.clitics
+  } ;
+
+  negSubjPrefix : VP -> Str = \vp ->
+    "të" ++ "mos" ++ vp.preClitic ++
+    case vp.progressive of {True => "po" ; False => []} ++
+    flattenClitics vp.clitics ;
+
+  -- Progressive po is a typed realization strategy.  The supplied C4
+  -- evidence licenses the neutral core strategy for present and imperfect;
+  -- future/conditional/anterior/marked combinations remain deliberately
+  -- ungenerated instead of producing mechanical *do të po* sequences.
+  realizeProgressive : VP -> ParamX.Tense -> Polarity -> Agr -> Str = \vp,t,pol,a ->
+    case <vp.voiceUse,t> of {
+      <PlainUse,ParamX.Pres> => negation pol ++ vp.preClitic ++ "po" ++
+        flattenClitics vp.clitics ++ vp.indicative ! Pres ! agrNumber a ! a.p ++ vp.post ! a ;
+      <PlainUse,ParamX.Past> => negation pol ++ vp.preClitic ++ "po" ++
+        flattenClitics vp.clitics ++ vp.indicative ! Imperfect ! agrNumber a ! a.p ++ vp.post ! a ;
+      _ => nonExist
     } ;
 
-  -- Standard-Albanian finite complement introduced by të.  Negative
-  -- subjunctives use të mos; positive forms contract të with e/i/u clitics.
-  realizeSubjVP : VP -> Polarity -> Agr -> Str = \vp,pol,a -> case pol of {
-    Pos => vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
-    Neg => "të" ++ "mos" ++ vp.cl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a
-  } ;
+  realizeVP : VP -> ParamX.Tense -> Anteriority -> Polarity -> Agr -> Str =
+    \vp,t,ant,pol,a -> case vp.progressivity of {
+      Progressive => case ant of {
+        Simul => realizeProgressive vp t pol a ;
+        Anter => nonExist
+      } ;
+      NeutralProgressive => case <ant,t> of {
+        <Simul,ParamX.Fut> => negation pol ++ "do" ++
+          subjPrefix vp ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
 
-  realizeSubjAntVP : VP -> Anteriority -> Polarity -> Agr -> Str =
-    \vp,ant,pol,a -> case ant of {
-      Simul => realizeSubjVP vp pol a ;
-      Anter => case pol of {
-        Pos => vp.subjcl ++
-          haveSubj ! agrNumber a ! a.p ++ vp.participle ++ vp.post ! a ;
-        Neg => "të" ++ "mos" ++ vp.cl ++
-          haveSubj ! agrNumber a ! a.p ++ vp.participle ++ vp.post ! a
+        <Simul,ParamX.Cond> => negation pol ++ "do" ++
+          subjPrefix vp ++ vp.indicative ! Imperfect ! agrNumber a ! a.p ++ vp.post ! a ;
+
+        <Simul,_> => negation pol ++ ordinaryPrefix vp ++
+          vp.indicative ! (case t of {ParamX.Past=>Imperfect; _=>sqiTense t}) ! agrNumber a ! a.p ++ vp.post ! a ;
+
+        <Anter,ParamX.Fut> => negation pol ++ "do" ++
+          subjPrefix vp ++ perfectSubj vp.morphVoice (agrNumber a) a.p ++
+          vp.participle ++ vp.post ! a ;
+
+        <Anter,ParamX.Cond> => negation pol ++ "do" ++
+          subjPrefix vp ++ perfectAux vp.morphVoice ParamX.Past (agrNumber a) a.p ++
+          vp.participle ++ vp.post ! a ;
+
+        <Anter,_> => negation pol ++ ordinaryPrefix vp ++
+          perfectAux vp.morphVoice t (agrNumber a) a.p ++ vp.participle ++ vp.post ! a
       }
     } ;
 
-  realizeImpVP : VP -> Polarity -> Number -> Str = \vp,pol,n ->
-    let a : Agr = {gn = case n of {Sg => GSg Masc ; Pl => GPl} ; p = P2}
-    in case pol of {
-      Pos => vp.cl ++ vp.imperative ! n ++ vp.post ! a ;
-      Neg => "mos" ++ vp.cl ++ vp.imperative ! n ++ vp.post ! a
+  realizeSubjVP : VP -> Polarity -> Agr -> Str = \vp,pol,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => case pol of {
+      Pos => subjPrefix vp ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
+      Neg => negSubjPrefix vp ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a
+    }
+  } ;
+
+  realizeSubjAntVP : VP -> Anteriority -> Polarity -> Agr -> Str =
+    \vp,ant,pol,a -> case vp.progressivity of {
+      Progressive => nonExist ;
+      NeutralProgressive => case ant of {
+        Simul => realizeSubjVP vp pol a ;
+        Anter => case pol of {
+          Pos => subjPrefix vp ++ perfectSubj vp.morphVoice (agrNumber a) a.p ++
+            vp.participle ++ vp.post ! a ;
+          Neg => negSubjPrefix vp ++ perfectSubj vp.morphVoice (agrNumber a) a.p ++
+            vp.participle ++ vp.post ! a
+        }
+      }
     } ;
 
-  realizePartVP : VP -> Agr -> Str = \vp,a ->
-    vp.cl ++ vp.participle ++ vp.post ! a ;
+  -- The reference licenses both pro- and enclisis in the positive imperative.
+  -- Core keeps deterministic proclisis.  Progressive imperatives are outside
+  -- the certified neutral domain and are therefore not generated.
+  realizeImpVP : VP -> Polarity -> Number -> Str = \vp,pol,n ->
+    let a : Agr = {gn = case n of {Sg => GSg Masc ; Pl => GPl Masc} ; p = P2}
+    in case vp.progressivity of {
+      Progressive => nonExist ;
+      NeutralProgressive => case pol of {
+        Pos => ordinaryPrefix vp ++ vp.imperative ! n ++ vp.post ! a ;
+        Neg => "mos" ++ vp.preClitic ++ flattenClitics vp.clitics ++
+               vp.imperative ! n ++ vp.post ! a
+      }
+    } ;
 
-  realizeGerundVP : VP -> Agr -> Str = \vp,a ->
-    "duke" ++ vp.cl ++ vp.participle ++ vp.post ! a ;
+  realizePartVP : VP -> Agr -> Str = \vp,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => ordinaryPrefix vp ++ vp.participle ++ vp.post ! a
+  } ;
+
+  realizeGerundPolVP : VP -> Polarity -> Agr -> Str = \vp,pol,a ->
+    case vp.progressivity of {
+      Progressive => nonExist ;
+      NeutralProgressive => case pol of {
+        Pos => "duke" ++ vp.preClitic ++ flattenClitics vp.clitics ++ vp.participle ++ vp.post ! a ;
+        Neg => "duke" ++ "mos" ++ vp.preClitic ++ flattenClitics vp.clitics ++ vp.participle ++ vp.post ! a
+      }
+    } ;
+
+  realizeGerundVP : VP -> Agr -> Str = \vp,a -> realizeGerundPolVP vp Pos a ;
+
+  realizePurposeVP : VP -> Polarity -> Agr -> Str = \vp,pol,a ->
+    case vp.progressivity of {
+      Progressive => nonExist ;
+      NeutralProgressive => case pol of {
+        Pos => "për" ++ subjPrefix vp ++ vp.participle ++ vp.post ! a ;
+        Neg => "për" ++ negSubjPrefix vp ++ vp.participle ++ vp.post ! a
+      }
+    } ;
+
+  realizeInfVP : VP -> Agr -> Str = \vp,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => subjPrefix vp ++ vp.participle ++ vp.post ! a
+  } ;
+
+  -- Explicit Albanian aorist and marked moods remain outside common RGL
+  -- Tense; ExtraSqi exposes them without overloading common TPast semantics.
+  realizeAoristVP : VP -> Polarity -> Agr -> Str = \vp,pol,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => negation pol ++ ordinaryPrefix vp ++
+      vp.indicative ! Aorist ! agrNumber a ! a.p ++ vp.post ! a
+  } ;
+
+  realizeAoristAnteriorVP : VP -> Polarity -> Agr -> Str = \vp,pol,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => negation pol ++ ordinaryPrefix vp ++
+      aorAnteriorAux vp.morphVoice (agrNumber a) a.p ++ vp.participle ++ vp.post ! a
+  } ;
+
+  realizeOptativeVP : VP -> Agr -> Str = \vp,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => ordinaryPrefix vp ++ vp.pres_optative ! agrNumber a ! a.p ++ vp.post ! a
+  } ;
+
+  realizePerfectOptativeVP : VP -> Agr -> Str = \vp,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => ordinaryPrefix vp ++ vp.perf_optative ! agrNumber a ! a.p ++ vp.post ! a
+  } ;
+
+  realizeAdmirativeVP : VP -> Agr -> Str = \vp,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => ordinaryPrefix vp ++ vp.pres_admirative ! agrNumber a ! a.p ++ vp.post ! a
+  } ;
+
+  realizeImperfectAdmirativeVP : VP -> Agr -> Str = \vp,a -> case vp.progressivity of {
+    Progressive => nonExist ;
+    NeutralProgressive => ordinaryPrefix vp ++ vp.imperf_admirative ! agrNumber a ! a.p ++ vp.post ! a
+  } ;
 
   mkClause : Str -> Agr -> VP -> ParamX.Tense -> Anteriority -> Polarity -> Str =
     \subj,a,vp,t,ant,pol -> subj ++ realizeVP vp t ant pol a ;
-
 }

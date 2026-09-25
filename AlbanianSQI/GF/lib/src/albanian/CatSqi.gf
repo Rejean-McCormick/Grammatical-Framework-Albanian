@@ -8,9 +8,11 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     A = Adj ;
     A2 = Adj ** {c2 : Compl} ;
 
-    V, VA, VV, VS, VQ = Verb ;
+    V, VA, VV, VQ = Verb ;
+    VS = Verb ** {scomp : Str} ;
     V2 = Verb ** {c2 : Compl} ;
-    V2S, V2Q, V3, V2A, V2V = Verb ** {c2,c3 : Compl} ;
+    V2S = Verb ** {c2,c3 : Compl ; scomp : Str} ;
+    V2Q, V3, V2A, V2V = Verb ** {c2,c3 : Compl} ;
 
     Prep = Compl ;
 
@@ -30,13 +32,13 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     S = {s : Str} ;
     QS = {s : Str} ;
     RS = {s : Agr => Str} ;
-    SSlash = {s : Str ; c2 : Compl} ;
+    SSlash = {s : Str ; c2 : Compl ; gapPost : Agr => Str} ;
 
     Cl = {s : ParamX.Tense => Anteriority => Polarity => Str} ;
     QCl = {s : ParamX.Tense => Anteriority => Polarity => Str} ;
     RCl = {s : Agr => ParamX.Tense => Anteriority => Polarity => Str} ;
     RP = {s : Case => GenNum => Str} ;
-    ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl} ;
+    ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl ; gapPost : Agr => Str} ;
 
     -- Shared category shapes live in ResSqi, matching the standard RGL
     -- Cat/Res boundary and preventing lock-field loss through helper calls.
@@ -48,7 +50,7 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     -- Name categories preserve nominal case and agreement instead of
     -- collapsing to an invariant string.  The one-string paradigms below
     -- remain backwards-compatible by filling every case with that string.
-    GN = {s : Case => Str ; g : Gender} ;
+    GN = {s : Case => Str ; g : Number => Gender} ;
     LN = {s : Case => Str ; a : Agr} ;
     PN = {s : Case => Str ; a : Agr} ;
     SN = {s : Gender => Case => Str ; p : Case => Str} ;
@@ -60,28 +62,26 @@ concrete CatSqi of Cat = CommonX ** open ParamX, Prelude, ResSqi in {
     Decimal = {s : Str ; n : Number ; hasDot : Bool} ;
 
     AP = {s : Species => Case => Gender => Number => Str} ;
-    CN = Noun ;
+    CN = CNoun ;
     Num = {s : Str ; n : Number} ;
     Quant = {s : Case => Gender => Number => Str ; spec : Species ; placement : DetPlacement} ;
     Det = {s : Case => Gender => Str ; spec : Species ; n : Number ; placement : DetPlacement} ;
 
     NP = {
       s : Case => Str ;
-      acc_clit, dat_clit : Str ;
       a : Agr ;
       isPron : Bool
     } ;
 
     Pron = {
       s : Case => Str ;
-      acc_clit, dat_clit : Str ;
       a : Agr ;
       isPron : Bool
     } ;
 
   linref
-    A = \a -> case a.clit of {True => "i" ; False => []} ++ a.s ! Nom ! Masc ! Sg ;
+    A = \a -> realizeAdj a Indef Nom Masc Sg ;
     V = \v -> v.Indicative ! ResSqi.Pres ! Sg ! P3 ;
-    N = \n -> n.s ! Indef ! Nom ! Sg ;
+    N = \n -> nounForm n Indef Nom Sg ;
     NP = \np -> np.s ! Nom ;
 }

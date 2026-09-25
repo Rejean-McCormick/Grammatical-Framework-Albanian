@@ -10,20 +10,24 @@ lincat
 lin InflectionN, InflectionN2, InflectionN3 = \x -> {
       t="em" ;
       s1=heading1 ("Emër" ++
-                   case x.g of {
-                     Masc => "(mashkullor)" ;
-                     Fem  => "(femëror)"
+                   case <x.g ! Sg,x.g ! Pl> of {
+                     <Masc,Masc> => "(mashkullor)" ;
+                     <Fem,Fem>   => "(femëror)" ;
+                     <Masc,Fem>  => "(mashkullor Sg / femëror Pl)" ;
+                     <Fem,Masc>  => "(femëror Sg / mashkullor Pl)"
                    }) ;
       s2=frameTable (
            tr (intagAttr "th" "colspan=\"2\"" "" ++ th "Sg" ++ th "Pl") ++
-           tr (intagAttr "th" "rowspan=\"4\"" "Indef" ++ th "Nom" ++ td (x.s ! Indef ! Nom ! Sg) ++ td (x.s ! Indef ! Nom ! Pl)) ++
-           tr (th "Acc" ++ td (x.s ! Indef ! Acc ! Sg) ++ td (x.s ! Indef ! Acc ! Pl)) ++
-           tr (th "Dat" ++ td (x.s ! Indef ! Dat ! Sg) ++ td (x.s ! Indef ! Dat ! Pl)) ++
-           tr (th "Ablat" ++ td (x.s ! Indef ! Ablat ! Sg) ++ td (x.s ! Indef ! Ablat ! Pl)) ++
-           tr (intagAttr "th" "rowspan=\"4\"" "Def" ++ th "Nom" ++ td (x.s ! Def ! Nom ! Sg) ++ td (x.s ! Def ! Nom ! Pl)) ++
-           tr (th "Acc" ++ td (x.s ! Def ! Acc ! Sg) ++ td (x.s ! Def ! Acc ! Pl)) ++
-           tr (th "Dat" ++ td (x.s ! Def ! Dat ! Sg) ++ td (x.s ! Def ! Dat ! Pl)) ++
-           tr (th "Ablat" ++ td (x.s ! Def ! Ablat ! Sg) ++ td (x.s ! Def ! Ablat ! Pl))) ;
+           tr (intagAttr "th" "rowspan=\"5\"" "Indef" ++ th "Nom" ++ td (nounForm x Indef Nom Sg) ++ td (nounForm x Indef Nom Pl)) ++
+           tr (th "Acc" ++ td (nounForm x Indef Acc Sg) ++ td (nounForm x Indef Acc Pl)) ++
+           tr (th "Gen" ++ td (nounForm x Indef Gen Sg) ++ td (nounForm x Indef Gen Pl)) ++
+           tr (th "Dat" ++ td (nounForm x Indef Dat Sg) ++ td (nounForm x Indef Dat Pl)) ++
+           tr (th "Ablat" ++ td (nounForm x Indef Ablat Sg) ++ td (nounForm x Indef Ablat Pl)) ++
+           tr (intagAttr "th" "rowspan=\"5\"" "Def" ++ th "Nom" ++ td (nounForm x Def Nom Sg) ++ td (nounForm x Def Nom Pl)) ++
+           tr (th "Acc" ++ td (nounForm x Def Acc Sg) ++ td (nounForm x Def Acc Pl)) ++
+           tr (th "Gen" ++ td (nounForm x Def Gen Sg) ++ td (nounForm x Def Gen Pl)) ++
+           tr (th "Dat" ++ td (nounForm x Def Dat Sg) ++ td (nounForm x Def Dat Pl)) ++
+           tr (th "Ablat" ++ td (nounForm x Def Ablat Sg) ++ td (nounForm x Def Ablat Pl))) ;
       s3=[]
     } ;
 
@@ -36,6 +40,8 @@ lin InflectionA, InflectionA2 = \x -> {
            tr (th "Fem" ++ td (y ! Nom ! Fem ! Sg) ++ td (y ! Nom ! Fem ! Pl)) ++
            tr (intagAttr "th" "rowspan=\"2\"" "Acc" ++ th "Masc" ++ td (y ! Acc ! Masc ! Sg) ++ td (y ! Acc ! Masc ! Pl)) ++
            tr (th "Fem" ++ td (y ! Acc ! Fem ! Sg) ++ td (y ! Acc ! Fem ! Pl)) ++
+           tr (intagAttr "th" "rowspan=\"2\"" "Gen" ++ th "Masc" ++ td (y ! Gen ! Masc ! Sg) ++ td (y ! Gen ! Masc ! Pl)) ++
+           tr (th "Fem" ++ td (y ! Gen ! Fem ! Sg) ++ td (y ! Gen ! Fem ! Pl)) ++
            tr (intagAttr "th" "rowspan=\"2\"" "Dat" ++ th "Masc" ++ td (y ! Dat ! Masc ! Sg) ++ td (y ! Dat ! Masc ! Pl)) ++
            tr (th "Fem" ++ td (y ! Dat ! Fem ! Sg) ++ td (y ! Dat ! Fem ! Pl)) ++
            tr (intagAttr "th" "rowspan=\"2\"" "Ablat" ++ th "Masc" ++ td (y ! Ablat ! Masc ! Sg) ++ td (y ! Ablat ! Masc ! Pl)) ++
@@ -43,10 +49,7 @@ lin InflectionA, InflectionA2 = \x -> {
       s3=[]
     } where {
         y : Case => Gender => Number => Str =
-          \\c,g,n => case x.clit of {
-                       True  => link_clitic ! Indef ! c ! g ! n ++ x.s ! c ! g ! n ;
-                       False => x.s ! c ! g ! n
-                     } ;
+          \c,g,n => realizeAdj x Indef c g n ;
     } ;
 
 lin InflectionV, InflectionV2, InflectionVV, InflectionVS, InflectionVQ, InflectionVA,
@@ -60,12 +63,12 @@ lin InflectionV, InflectionV2, InflectionVV, InflectionVS, InflectionVQ, Inflect
            tr (intagAttr "th" "rowspan=\"3\"" "Pl" ++ th "P1" ++ td (x.Indicative ! Pres ! Pl ! P1)) ++
            tr (th "P2" ++ td (x.Indicative ! Pres ! Pl ! P2)) ++
            tr (th "P3" ++ td (x.Indicative ! Pres ! Pl ! P3)) ++
-           tr (intagAttr "th" "rowspan=\"6\"" "Past" ++ intagAttr "th" "rowspan=\"3\"" "Sg" ++ th "P1" ++ td (x.Indicative ! Past ! Sg ! P1)) ++
-           tr (th "P2" ++ td (x.Indicative ! Past ! Sg ! P2)) ++
-           tr (th "P3" ++ td (x.Indicative ! Past ! Sg ! P3)) ++
-           tr (intagAttr "th" "rowspan=\"3\"" "Pl" ++ th "P1" ++ td (x.Indicative ! Past ! Pl ! P1)) ++
-           tr (th "P2" ++ td (x.Indicative ! Past ! Pl ! P2)) ++
-           tr (th "P3" ++ td (x.Indicative ! Past ! Pl ! P3)) ++
+           tr (intagAttr "th" "rowspan=\"6\"" "Perfect" ++ intagAttr "th" "rowspan=\"3\"" "Sg" ++ th "P1" ++ td (x.Indicative ! Perfect ! Sg ! P1)) ++
+           tr (th "P2" ++ td (x.Indicative ! Perfect ! Sg ! P2)) ++
+           tr (th "P3" ++ td (x.Indicative ! Perfect ! Sg ! P3)) ++
+           tr (intagAttr "th" "rowspan=\"3\"" "Pl" ++ th "P1" ++ td (x.Indicative ! Perfect ! Pl ! P1)) ++
+           tr (th "P2" ++ td (x.Indicative ! Perfect ! Pl ! P2)) ++
+           tr (th "P3" ++ td (x.Indicative ! Perfect ! Pl ! P3)) ++
            tr (intagAttr "th" "rowspan=\"6\"" "Aorist" ++ intagAttr "th" "rowspan=\"3\"" "Sg" ++ th "P1" ++ td (x.Indicative ! Aorist ! Sg ! P1)) ++
            tr (th "P2" ++ td (x.Indicative ! Aorist ! Sg ! P2)) ++
            tr (th "P3" ++ td (x.Indicative ! Aorist ! Sg ! P3)) ++
@@ -130,13 +133,29 @@ lin
     t="sn" ;
     s1=heading1 "Mbiemër familjar" ;
     s2=frameTable (
-      tr (th "" ++ th "Nom" ++ th "Acc" ++ th "Dat" ++ th "Ablat") ++
-      tr (th "Masc" ++ td (x.s!Masc!Nom) ++ td (x.s!Masc!Acc) ++ td (x.s!Masc!Dat) ++ td (x.s!Masc!Ablat)) ++
-      tr (th "Fem" ++ td (x.s!Fem!Nom) ++ td (x.s!Fem!Acc) ++ td (x.s!Fem!Dat) ++ td (x.s!Fem!Ablat)) ++
-      tr (th "Pl" ++ td (x.p!Nom) ++ td (x.p!Acc) ++ td (x.p!Dat) ++ td (x.p!Ablat))) ;
+      tr (th "" ++ th "Nom" ++ th "Acc" ++ th "Gen" ++ th "Dat" ++ th "Ablat") ++
+      tr (th "Masc" ++ td (x.s!Masc!Nom) ++ td (x.s!Masc!Acc) ++ td (x.s!Masc!Gen) ++ td (x.s!Masc!Dat) ++ td (x.s!Masc!Ablat)) ++
+      tr (th "Fem" ++ td (x.s!Fem!Nom) ++ td (x.s!Fem!Acc) ++ td (x.s!Fem!Gen) ++ td (x.s!Fem!Dat) ++ td (x.s!Fem!Ablat)) ++
+      tr (th "Pl" ++ td (x.p!Nom) ++ td (x.p!Acc) ++ td (x.p!Gen) ++ td (x.p!Dat) ++ td (x.p!Ablat))) ;
     s3=[]
   } ;
   InflectionPrep x = simpleInflection "prep" "Parafjalë" x.s ;
+
+  InflectionCl x = {
+    t="cl" ;
+    s1=heading1 "Fjali" ;
+    s2=frameTable (
+      tr (th "" ++ th "Positive" ++ th "Negative") ++
+      clDocRow "Present" ParamX.Pres Simul x ++
+      clDocRow "Present anterior" ParamX.Pres Anter x ++
+      clDocRow "Past" ParamX.Past Simul x ++
+      clDocRow "Past anterior" ParamX.Past Anter x ++
+      clDocRow "Future" ParamX.Fut Simul x ++
+      clDocRow "Future anterior" ParamX.Fut Anter x ++
+      clDocRow "Conditional" ParamX.Cond Simul x ++
+      clDocRow "Conditional anterior" ParamX.Cond Anter x) ;
+    s3=[]
+  } ;
 
   NoDefinition t = {s = t.s} ;
   MkDefinition t d = {s = "<p><b>Definition:</b>" ++ t.s ++ d.s ++ "</p>"} ;
@@ -146,12 +165,16 @@ lin
   MkTag i = {s = i.t} ;
 
 oper
+  clDocRow : Str -> ParamX.Tense -> Anteriority -> Cl -> Str = \label,t,a,cl ->
+    tr (th label ++ td (cl.s ! t ! a ! Pos) ++ td (cl.s ! t ! a ! Neg)) ;
+
   caseInflection : Str -> Str -> (Case => Str) -> {t : Str; s1,s2,s3 : Str} = \tag,label,forms -> {
     t = tag ;
     s1 = heading1 label ;
     s2 = frameTable (
       tr (th "Nom" ++ td (forms ! Nom)) ++
       tr (th "Acc" ++ td (forms ! Acc)) ++
+      tr (th "Gen" ++ td (forms ! Gen)) ++
       tr (th "Dat" ++ td (forms ! Dat)) ++
       tr (th "Ablat" ++ td (forms ! Ablat))) ;
     s3 = []

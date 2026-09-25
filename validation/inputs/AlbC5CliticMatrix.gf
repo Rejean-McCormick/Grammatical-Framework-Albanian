@@ -1,0 +1,39 @@
+abstract AlbC5CliticMatrix = {
+  cat Probe ;
+  fun
+    C5M01 : Probe ;
+    C5M02 : Probe ;
+    C5M03 : Probe ;
+    C5M04 : Probe ;
+    C5M05 : Probe ;
+    C5M06 : Probe ;
+    C5M07 : Probe ;
+    C5M08 : Probe ;
+    C5M09 : Probe ;
+    C5M10 : Probe ;
+    C5M11 : Probe ;
+    C5M12 : Probe ;
+    C5M13 : Probe ;
+    C5M14 : Probe ;
+    C5M15 : Probe ;
+    C5M16 : Probe ;
+    C5M17 : Probe ;
+    C5M18 : Probe ;
+    C5T01 : Probe ;
+    C5T02 : Probe ;
+    C5T03 : Probe ;
+    C5T04 : Probe ;
+    C5T05 : Probe ;
+    C5W01 : Probe ;
+    C5W02 : Probe ;
+    C5W03 : Probe ;
+    C5W04 : Probe ;
+    C5W05 : Probe ;
+    C5W06 : Probe ;
+    C5W07 : Probe ;
+    C5W08 : Probe ;
+    C5W09 : Probe ;
+    C5W10 : Probe ;
+    C5W11 : Probe ;
+    C5W12 : Probe ;
+}

@@ -1,0 +1,6 @@
+claim_id	claim	status	variety	source_ref	owner
+C10-CLM-001	Target variety is Standard Albanian; Tosk and Geg evidence remain explicitly labelled.	accepted	Standard Albanian	canonical/18_EVIDENCE_VARIETY_AND_GOLD_POLICY.md	10
+C10-CLM-002	Compilation or scenario execution is not linguistic certification.	accepted	Standard Albanian	canonical/17_TESTING_CERTIFICATION_AND_RELEASE_LEVELS.md	10
+C10-CLM-003	Albanian has five grammatical cases while Dative and Genitive are morphologically syncretic in the supplied reference model.	accepted	Standard Albanian	canonical/18_EVIDENCE_VARIETY_AND_GOLD_POLICY.md	1
+C10-CLM-004	A gold is hash-bound to exact output, source-lock, variety, reviewer, rationale and decision reference.	accepted	Standard Albanian	canonical/18_EVIDENCE_VARIETY_AND_GOLD_POLICY.md	10
+C10-CLM-005	R4 candidate requires a complete common/English parity matrix and no unexplained core missing/needs_review entries in release scope.	accepted	Standard Albanian	canonical/22_RELEASE_GATES.md	10

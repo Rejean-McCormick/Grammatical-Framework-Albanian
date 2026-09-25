@@ -7,41 +7,45 @@ concrete SymbolSqi of Symbol = CatSqi
 
   oper
     agr3 : Number -> Gender -> Agr = \n,g ->
-      { gn = case n of {Sg => GSg g ; Pl => GPl} ; p = P3 } ;
+      { g = g ; n = n ; p = P3 } ;
 
     mkNP_NumCN : Str -> Number -> Gender -> (Case => Str) -> CatSqi.NP =
       \numStr,n,g,cnCase ->
         lin NP {
           s = \\c => numStr ++ cnCase ! c ;
-          acc_clit = [] ; dat_clit = [] ;
           a = agr3 n g ; isPron = False
         } ;
 
     cnCaseIndef : CatSqi.CN -> Number -> (Case => Str) = \cn,n ->
       table {
-        Nom   => cn.s ! Indef ! Nom   ! n ;
-        Acc   => cn.s ! Indef ! Acc   ! n ;
-        Dat   => cn.s ! Indef ! Dat   ! n ;
-        Ablat => cn.s ! Indef ! Ablat ! n
+        Nom   => cnForm cn Indef Nom n ;
+        Acc   => cnForm cn Indef Acc n ;
+        Gen   => cnForm cn Indef Gen n ;
+        Dat   => cnForm cn Indef Dat n ;
+        Ablat => cnForm cn Indef Ablat n
       } ;
 
     cnCaseWithDet : CatSqi.Det -> CatSqi.CN -> (Case => Str) = \det,cn ->
       table {
         Nom => case det.placement of {
-          PreNominal => det.s ! Nom ! cn.g ++ cn.s ! det.spec ! Nom ! det.n ;
-          PostNominal => cn.s ! det.spec ! Nom ! det.n ++ det.s ! Nom ! cn.g
+          PreNominal => det.s ! Nom ! (cn.g ! det.n) ++ cnForm cn det.spec Nom det.n ;
+          PostNominal => cnForm cn det.spec Nom det.n ++ det.s ! Nom ! (cn.g ! det.n)
         } ;
         Acc => case det.placement of {
-          PreNominal => det.s ! Acc ! cn.g ++ cn.s ! det.spec ! Acc ! det.n ;
-          PostNominal => cn.s ! det.spec ! Acc ! det.n ++ det.s ! Acc ! cn.g
+          PreNominal => det.s ! Acc ! (cn.g ! det.n) ++ cnForm cn det.spec Acc det.n ;
+          PostNominal => cnForm cn det.spec Acc det.n ++ det.s ! Acc ! (cn.g ! det.n)
+        } ;
+        Gen => case det.placement of {
+          PreNominal => det.s ! Gen ! (cn.g ! det.n) ++ cnForm cn det.spec Gen det.n ;
+          PostNominal => cnForm cn det.spec Gen det.n ++ det.s ! Gen ! (cn.g ! det.n)
         } ;
         Dat => case det.placement of {
-          PreNominal => det.s ! Dat ! cn.g ++ cn.s ! det.spec ! Dat ! det.n ;
-          PostNominal => cn.s ! det.spec ! Dat ! det.n ++ det.s ! Dat ! cn.g
+          PreNominal => det.s ! Dat ! (cn.g ! det.n) ++ cnForm cn det.spec Dat det.n ;
+          PostNominal => cnForm cn det.spec Dat det.n ++ det.s ! Dat ! (cn.g ! det.n)
         } ;
         Ablat => case det.placement of {
-          PreNominal => det.s ! Ablat ! cn.g ++ cn.s ! det.spec ! Ablat ! det.n ;
-          PostNominal => cn.s ! det.spec ! Ablat ! det.n ++ det.s ! Ablat ! cn.g
+          PreNominal => det.s ! Ablat ! (cn.g ! det.n) ++ cnForm cn det.spec Ablat det.n ;
+          PostNominal => cnForm cn det.spec Ablat det.n ++ det.s ! Ablat ! (cn.g ! det.n)
         }
       } ;
 
@@ -68,13 +72,13 @@ concrete SymbolSqi of Symbol = CatSqi
       let
         n : CatSqi.CN = lin CN cn ;
       in
-      mkNP_NumCN i.s Pl n.g (cnCaseIndef n Pl) ;
+      mkNP_NumCN i.s Pl (n.g ! Pl) (cnCaseIndef n Pl) ;
 
     CNNumNP cn c =
       let
         n : CatSqi.CN = lin CN cn ;
       in
-      mkNP_NumCN c.s Pl n.g (cnCaseIndef n Pl) ;
+      mkNP_NumCN c.s Pl (n.g ! Pl) (cnCaseIndef n Pl) ;
 
     CNSymbNP det cn syms =
       let
@@ -83,8 +87,7 @@ concrete SymbolSqi of Symbol = CatSqi
       in
       lin NP {
         s = \\c => cnCaseWithDet d n ! c ++ syms.s ;
-        acc_clit = [] ; dat_clit = [] ;
-        a = agr3 d.n n.g ; isPron = False
+        a = agr3 d.n (n.g ! d.n) ; isPron = False
       } ;
 
 } ;

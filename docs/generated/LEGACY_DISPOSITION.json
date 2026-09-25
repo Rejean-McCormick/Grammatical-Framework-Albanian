@@ -1,0 +1,332 @@
+[
+  {
+    "path": "docs/ALBANIAN_DECISION_LOG.md",
+    "bytes": 90593,
+    "sha256": "cb3b34b9fc2648842a4db9fb99ac9ecb3c851e972ecdc82e8098a8e7f5ffd180",
+    "disposition": "historical_decision_context"
+  },
+  {
+    "path": "docs/ALBANIAN_EXTENDSQI_FINAL_TARGET.md",
+    "bytes": 11683,
+    "sha256": "69cc3d0dd0d19193a896f3d4292013f453d22c468c97f2b5c0bf5b3aa1804c3a",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_EXTENDSQI_OVERRIDE_MATRIX.md",
+    "bytes": 29416,
+    "sha256": "9a72b1550a6638500f92c3068d0d05a8959612185eec85e6345610cd2639dcb3",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_FUTURE_EXTENDSQI_STRUCTURE.md",
+    "bytes": 23985,
+    "sha256": "8f61ce96f9376476582c8f4d4d3649fb7c7c71346ef5ef1d39106b293494c622",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_MINIMAL_TEST_SUITE_SPEC.md",
+    "bytes": 35590,
+    "sha256": "5339e5afe546182db1fa9e7ebf55d0616a0900eda9185d9815301961919f1653",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_MODEL_LANGUAGE_COMPARISON.md",
+    "bytes": 8048,
+    "sha256": "7c4f9644f391bd8b98cd6b766a4b694023306ec8c3c0cf676bb4cf40440543f8",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_NEXT_UPGRADE_20260922.md",
+    "bytes": 8755,
+    "sha256": "8b80183dbf7a99cf7bd82b22e2901ac31df9025c7b3bec3e60a38b95bef43b9a",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_OPEN_QUESTIONS.md",
+    "bytes": 21260,
+    "sha256": "fbcbf3810435d9390a95c7bccaed25ba58333f9b021ca9911b3d1c7cfb50a943",
+    "disposition": "historical_decision_context"
+  },
+  {
+    "path": "docs/ALBANIAN_OVERRIDE_AND_INHERITANCE_POLICY.md",
+    "bytes": 48069,
+    "sha256": "08eb90c3507446395a0be4df462c2d42eb76d8971897bf3580625970d9a4a631",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md",
+    "bytes": 14313,
+    "sha256": "b1f6cbb55bcac75cb2bf3fb5f7c79486702e25f09cf4cbe24386457a443aff46",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md",
+    "bytes": 87699,
+    "sha256": "ba598c66cfb2d3b6668af3216387c2e3839b2e90145d07dd37e67c2801e607ea",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_SYMBOL_STATUS_LEDGER.md",
+    "bytes": 41517,
+    "sha256": "7ae6451555a51ee6e55124ebd4d22e3348f677b196002e560e3c947d311f8a7c",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md",
+    "bytes": 6065,
+    "sha256": "7d59f1ffb12b3bf764c85b4a466ab8b31a907f3fb53dd6ae013cd1b34be1e2cf",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/CURRENT_REPAIR_STATE.md",
+    "bytes": 14971,
+    "sha256": "0af2d25596be75319a1b284b3cce4a9e489afad2ebc75208a00a82699b1a8064",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/DOCUMENTATION_SYNC_20260921.md",
+    "bytes": 6431,
+    "sha256": "fdc24d4c0608f483f671001a1749d2f5c7beb02965a68cb1d392887d770f0bc0",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/DOCUMENTATION_SYNC_20260922.md",
+    "bytes": 5478,
+    "sha256": "024c99b480e29d396925479be30a126cab2520edf684deec966d7b0d9d2393cd",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/DOCUMENTATION_SYNC_20260924.md",
+    "bytes": 1692,
+    "sha256": "2c18de276584a242ed6763812d2e47311c35db2ed5c776cac76a8711651f2a6f",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/README.md",
+    "bytes": 6577,
+    "sha256": "31179944c6178b4b42245b47d19ab0f29ed282b67667e5796655c8c798a608ec",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/albanian_extend_specifics_lockfield_and_boundary.md",
+    "bytes": 23556,
+    "sha256": "c2fbdda9cc04586405adaf6c68219f285483106564b7df6a48e4427f453f0e6c",
+    "disposition": "background_reference"
+  },
+  {
+    "path": "docs/consolidation/ACTIVE_CHANGES.patch",
+    "bytes": 1671,
+    "sha256": "4a5f7d7f4de456f358a196d517e8a87eb627a6bcaf1c3727cace54ef4e201933",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/BASELINE_SHA256SUMS.txt",
+    "bytes": 25390,
+    "sha256": "b30a8ddf0561864af7bf81d5f4e70967860cd15d334eaf06faa63235beaaaefe",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/BUGREPORT_20260924_181733_SUMMARY.md",
+    "bytes": 36012,
+    "sha256": "5046354495c4a844489f26a4eb9844502c0d5e6c903ebe8bb642b2d72216998a",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/CHECKPOINT1_REPORT.md",
+    "bytes": 3397,
+    "sha256": "cee4b485ae3c9c24d1148079487d9d2a8c498ccb7a6c759307e2eb782b18958b",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/CONSOLIDATED_SHA256SUMS.txt",
+    "bytes": 31436,
+    "sha256": "f92b3d3f777c8d4b85e8db6342a90daf309cc782f5c7466bbb96cf91ae4fa4f6",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/CONSOLIDATION_REPORT.md",
+    "bytes": 3067,
+    "sha256": "f374e8ea31ca85d42fb31f49da61bd610a7c20275e3a3e15b497c21e43c026cd",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/CORRECTION_20260925_024243.md",
+    "bytes": 494,
+    "sha256": "73ee1f1d6394a4dd23bd836eb4db61accbe1811485e264356957e0a6f0b30253",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/DICT_MORPH_WORDBENCH_UPDATE_20260924.md",
+    "bytes": 2051,
+    "sha256": "6a5d3438e834784518a0d764a13199b49b58127693e1cc9f5c1732fdd69df11f",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/DICT_MORPH_WORDBENCH_UPDATE_AUDIT.json",
+    "bytes": 693,
+    "sha256": "f9ff4691a2f1dc01cb4c29cc7b3ee72a43697c36bf717f344616d18991a66f02",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/LINGUISTIC_REVIEW_REQUEST_20260924_181733.json",
+    "bytes": 1462,
+    "sha256": "6286eb49c3b8ae563a95bffd09ebaf1e8a0dff8b0eebd2bfabb3c725131a9245",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/MORPHOSQI_LINT.txt",
+    "bytes": 74,
+    "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/PRESERVATION_AUDIT.json",
+    "bytes": 370,
+    "sha256": "94117e528ce6ca42fec0bccfcac9fb2f234acad148740191a5467b9207556226",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/REGRESSION_AUDIT_checkpoint2_vs_snapshot.md",
+    "bytes": 4274,
+    "sha256": "26a47885282b012408390f3fa8507bca19d6ac2d071fa12b16befe10004435cb",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/STATIC_SANITY.txt",
+    "bytes": 260,
+    "sha256": "50c26a49bdf55b224333254b3b6c2cf39de4c00dd0121527daa24471ba3a920a",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/WORDBENCH_RUN_20260925_030234_FIX.md",
+    "bytes": 1621,
+    "sha256": "109e1da215045e1605d730daff5adfea92aa6960dec13ebf1004e73ae8ed1874",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/WORDBENCH_RUN_20260925_031945_FIX.md",
+    "bytes": 1377,
+    "sha256": "95993edd1bf96506807affa1ce7df2f56da6d14da35d4f03e85b3e864580ab31",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/consolidation/WORDBENCH_RUN_20260925_032810_FIX.md",
+    "bytes": 1504,
+    "sha256": "11de9314e58925be5d85992e98a44c14234900d4078e183d218bf8bd08832b4b",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/dictionary/DICT_SQI_REPORT.md",
+    "bytes": 2783,
+    "sha256": "f517e6209f89007c8c9d19bc7bd66529c7803de09a51cab20db3562629e365cc",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/dictionary/DICT_SQI_VALIDATION.json",
+    "bytes": 2741,
+    "sha256": "df0b75f8d0daceaec10221886bf0d9590ac8acb1e0eb96a4c8436b4f6c68ff6f",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/dictionary/DictSqi_provenance.tsv",
+    "bytes": 735435,
+    "sha256": "08b4569e36b314b0bac2a2edee78a9b77e699ec76fa98748f1838f7a58df282d",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/dictionary/README.md",
+    "bytes": 681,
+    "sha256": "99e223972fb6ae023000ab1c8f697680858f0f1169f10b47d152b448f95b7431",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/dictionary/SHA256SUMS.txt",
+    "bytes": 783,
+    "sha256": "1367b3bba502a29423c80d4041eb2079c97745c4cd65985c73c6afc220fb80cf",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/dictionary/THIRD_PARTY_NOTICES.md",
+    "bytes": 606,
+    "sha256": "92e7282d2cf497e7fc8248b2a378172f707c27169437f8788edc5856e08f309e",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/dictionary/WORDBENCH_FIX_20260925.md",
+    "bytes": 961,
+    "sha256": "38789bfa6cff1e63428cd51c6ba14e2a0956235ef6d2911fcdfd19986d1bdceb",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/BUILD_REPORT.md",
+    "bytes": 2343,
+    "sha256": "9ccaa6975bd7ea0bbc31e03e8a7ebcc7147b146d05114f940bf20f73079e6442",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/COVERAGE.csv",
+    "bytes": 62507,
+    "sha256": "eaf210c904e66f2e15f7287c719c375a9a4a11f5fff4a996f00af13648034d03",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/COVERAGE.json",
+    "bytes": 177549,
+    "sha256": "ef453ef101a5941a27cac4445e2f9acdd578a225967f201e0a53375efad1f809",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/EXCLUDED.csv",
+    "bytes": 2606,
+    "sha256": "9d16a2d936724dae21c319e79fc16be3d99e3232b340f2b9c617e97faae48dd6",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/INPUT_SHA256SUMS.txt",
+    "bytes": 919,
+    "sha256": "30b64e5549a2e8b2bb1a6cc11d364da39f46b00d16e43bd39e5be8316368e3c1",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/MANIFEST.json",
+    "bytes": 1344,
+    "sha256": "5b0f82ecacb93822882b71e23d5f7b039bc088d6bd6eb3ab574e2996aff4e260",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/README.md",
+    "bytes": 3658,
+    "sha256": "1327a8bf92dbeda3d3165b3fb607158dfbf86f8ba6c0ebd7ff47c0fbb6f51e9a",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/RGL_LEXICON_MAPPING.csv",
+    "bytes": 10161,
+    "sha256": "f74653dbbbe16994f8949aba7a080dcad08fd179540ba98678a98dcfe5f8393a",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/morphodict/SOURCE_PACKAGE_SHA256SUMS.txt",
+    "bytes": 1502,
+    "sha256": "7ea78cb8412b72ff4403de6891cc4d862c3a54dddaaa9302821cf6771a2a7d79",
+    "disposition": "snapshot_data_authority"
+  },
+  {
+    "path": "docs/status/ALBANIAN_CORE_V0.1.0.md",
+    "bytes": 5738,
+    "sha256": "701c88648e43b523ae294ebc9b78eb17021132ef8d8a83be08b0ab1c58806f4b",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/status/ALBANIAN_ENGLISH_PARITY_ROADMAP_20260925.md",
+    "bytes": 15166,
+    "sha256": "4582b0f6152e11876e3cacce48856e77b4b3ea6b7117959f120638dc6418a29a",
+    "disposition": "historical_evidence"
+  },
+  {
+    "path": "docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md",
+    "bytes": 25580,
+    "sha256": "65614c7248da53fbdd45b0c5a58e0c82976150412d5eecbbe7a295d9220d225c",
+    "disposition": "historical_evidence"
+  }
+]

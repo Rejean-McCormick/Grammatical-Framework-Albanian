@@ -1,0 +1,3 @@
+Baseline -> candidate whitespace check: PASS
+git diff --no-index --check exit status: 1 (1 is expected because trees differ)
+No whitespace-error diagnostics emitted.

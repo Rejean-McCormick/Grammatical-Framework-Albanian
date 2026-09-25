@@ -1,0 +1,6 @@
+case_id	lemgram_id	conflict_type	base	category	observed_forms	detail	resolution
+CONFLICT-ndarje_N	ndarje_N	GENDER	ndarje	N	ndarjes	recorded masculine gender conflicts with all evidence-matching classes, which are feminine	OPEN
+CONFLICT-ndërsë_N	ndërsë_N	LEMMA	ndërsë	N	ndërtesat	lemma/orthography in source row conflicts with observed form family; manual source review required	OPEN
+CONFLICT-pranvëre_N	pranvëre_N	ORTHOGRAPHY	pranvëre	N	pranverë	lemma/orthography in source row conflicts with observed form family; manual source review required	OPEN
+CONFLICT-shetëror_A	shetëror_A	ORTHOGRAPHY	shetëror	A	shtetëror	lemma/orthography in source row conflicts with observed form family; manual source review required	OPEN
+CONFLICT-svetigradas_N	svetigradas_N	ORTHOGRAPHY	svetigradas	N	sfetigradas	lemma/orthography in source row conflicts with observed form family; manual source review required	OPEN

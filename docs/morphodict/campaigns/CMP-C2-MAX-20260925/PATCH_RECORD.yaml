@@ -1,0 +1,48 @@
+patch_id: MD-SQI-C2-MAX-20260925
+campaign_id: CMP-C2-MAX-20260925
+date: 2026-09-25
+status: implemented_static_pending_native_gf
+mandatory_task_header:
+  language: Albanian
+  route: R03
+  target_module: MorphoDictSqi
+  target_symbols: [MorphoDictSqiAbs, MorphoDictSqi]
+  gf_version: '3.12'
+  rgl_revision: supplied_gf-rgl-master_archive_hash_locked_in_project_docs
+  source_lock: locked_for_local_sources
+  language_state: S05_CONTRACTS_READY_conservative
+workstream:
+  owner: C2
+  cross_workstream_handoffs:
+    C1: core_escalation_candidates.tsv_for_triage; missing_paradigms.tsv_reserved_for_proven_classes
+    C10: GOLD_MORPHOLOGY_CANDIDATES.tsv_and_smoke_scenario_migration
+problem:
+  statement: 155 active N/A/V entries used compile-safe invariant placeholders that preserved compilation but did not encode certified Albanian inflection.
+  affected_population: 155
+policy:
+  no_invented_inflection: true
+  variants: 0
+  multiword_default: excluded
+  semantic_valence_collapsed: true
+resolution:
+  explicit_existing_classes: 123
+  removed_to_blocked_queue: 32
+  source_conflicts: 5
+  insufficient_or_missing_class: 27
+result:
+  active_before: 592
+  active_after: 560
+  placeholder_before: 155
+  placeholder_after: 0
+  certification_C6_added: 0
+validation:
+  static_max: 27/27_PASS
+  dict_plus_morphodict_static: PASS
+  morphosqi_lint: 0_findings
+  deterministic_rebuild: PASS
+  gf312: NOT_EXECUTED_gf_unavailable
+  wordbench_58_58_52_52: PENDING_EXTERNAL_RERUN
+risks:
+  - 32 former public MorphoDict symbols are removed from the active abstract/concrete surface; migration is intentional because their morphology was unproved.
+  - native GF type/PMCFG acceptance of 123 explicit class calls still requires the maintainer GF 3.12 run.
+  - C6 remains zero under the strict MAX ladder until C10 review and global gates.

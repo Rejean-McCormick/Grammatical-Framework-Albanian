@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-25",
+  "status": "FINALIZED_LOCALLY_NOT_GF_CERTIFIED",
+  "source_lock_58_aggregate_sha256": "e15d7abd7c99510a438cc90b682b55c7ef7e1f17f3b49e8aae791e90c2adb49b",
+  "gf_runtime_available": false,
+  "wordbench_runtime_certification_executed": false,
+  "local_validation": {
+    "c5_static": "167/167 PASS",
+    "dict_static": "PASS",
+    "morphodict_static": "PASS",
+    "dict_morph_combined": "PASS",
+    "morphosqi_lint_findings": 0,
+    "python_compileall": "PASS_before_cache_cleanup"
+  },
+  "coverage": {
+    "gf_targets": 58,
+    "required_scenarios": 57,
+    "historical_scenarios": 52,
+    "c5_scenarios": 5,
+    "c5_cases": 199,
+    "structural_prepositions_total": 21,
+    "structural_prepositions_source_locked": 15,
+    "structural_prepositions_review_required": 6,
+    "api_parity_rows": 21,
+    "api_parity_static_assessed": 21
+  },
+  "diff_against_supplied_snapshot": {
+    "MODIFIED": 33,
+    "ADDED": 26,
+    "DELETED": 0
+  },
+  "remaining_external_gates": [
+    "GF 3.12 census 58/58",
+    "historical scenarios 52/52",
+    "C5 scenarios 5/5",
+    "review/promotion of C5 golds",
+    "linguistic closure of remaining REVIEW_REQUIRED/open-policy items"
+  ]
+}

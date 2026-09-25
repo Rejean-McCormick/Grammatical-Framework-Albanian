@@ -1,0 +1,44 @@
+{
+  "schema": "albanian-c10-source-registry-v1",
+  "date": "2026-09-25",
+  "sources": [
+    {
+      "id": "albanian-working-snapshot",
+      "sha256": "961852fae67f7e5878c7d214197a75a705e5028d7ee8e87974358a9d85c39829",
+      "role": "current target source"
+    },
+    {
+      "id": "supplied-full-rgl",
+      "sha256": "e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d",
+      "role": "common abstracts, API, English benchmark"
+    },
+    {
+      "id": "gf-rgl-ai-compendium",
+      "sha256": "73849c9b2e74cd8fcaacb438663eee2c285f84872f46284543b165840ce79bfe",
+      "role": "contracts, workflows, testing and release policy"
+    },
+    {
+      "id": "gf-wordbench",
+      "sha256": "1664b592c5cfca72131ba75124f3a6d51b39e2596ae4488aa70a55746245cfdd",
+      "role": "execution, normalized outputs, review and gold infrastructure"
+    },
+    {
+      "id": "albanian-linguistic-reference",
+      "sha256": "15396c31106de2787ae844bb7013b77b4d1fe0b8a3b5e714fc7a9aeef23f1cfc",
+      "role": "target-language evidence"
+    },
+    {
+      "id": "canonical-total-documentation",
+      "sha256": "9e10d077a7d18e2d2b21b874e12ed24d20314f356153ca0d36ec409026870b4c",
+      "role": "consolidated canonical governance imported under docs/canonical"
+    },
+    {
+      "id": "gf-core-3.12-release",
+      "tag": "release-3.12",
+      "commit_short": "3ecb75d",
+      "ubuntu_asset": "gf-3.12-ubuntu-24.04.deb",
+      "ubuntu_asset_sha256": "17aa5452b713f1e00a0755a1bad998a926acbffb96eefde2c3800ca72536b4d8",
+      "role": "compiler runtime provenance; external official release metadata"
+    }
+  ]
+}

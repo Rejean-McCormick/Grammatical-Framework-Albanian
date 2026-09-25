@@ -1,0 +1,8 @@
+symbol	file	mentions
+invariantN	AlbanianSQI/GF/lib/src/albanian/DictSqi.gf	4135
+invariantN	AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf	98
+invariantA	AlbanianSQI/GF/lib/src/albanian/DictSqi.gf	65
+invariantA	AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf	36
+invariantV	AlbanianSQI/GF/lib/src/albanian/DictSqi.gf	2142
+invariantV	AlbanianSQI/GF/lib/src/albanian/StructuralSqiVerbal.gf	4
+invariantV	AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf	27

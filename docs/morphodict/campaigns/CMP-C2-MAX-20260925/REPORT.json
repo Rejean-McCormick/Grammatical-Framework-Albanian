@@ -1,0 +1,1354 @@
+{
+  "campaign_id": "CMP-C2-MAX-20260925",
+  "resolved": {
+    "aeroport_N": {
+      "class": "mkN005",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "aeroportit"
+      ]
+    },
+    "barabartë_A": {
+      "class": "mkA013",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "barabarta"
+      ]
+    },
+    "bazohem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "bazohet"
+      ]
+    },
+    "beton_N": {
+      "class": "mkN020",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "betonin"
+      ]
+    },
+    "bisedim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "bisedimet"
+      ]
+    },
+    "boshnjak_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "boshnjake"
+      ]
+    },
+    "botëror_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "botërore"
+      ]
+    },
+    "breg_N": {
+      "class": "mkN096",
+      "method": "unique-numbered-class-evidence-match",
+      "observed_forms": [
+        "brigjet"
+      ]
+    },
+    "demokraci_N": {
+      "class": "mkN059",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "demokracisë"
+      ]
+    },
+    "demokratik_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "demokratik"
+      ]
+    },
+    "drejtë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "drejtave",
+        "drejtë",
+        "drejtës"
+      ]
+    },
+    "duhem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "duhet"
+      ]
+    },
+    "dukem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "dukej",
+        "dukur"
+      ]
+    },
+    "dëborë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "dëborë"
+      ]
+    },
+    "ekonomik_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "ekonomike"
+      ]
+    },
+    "Epir_N": {
+      "class": "mkN007",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "Epir",
+        "Epirit"
+      ]
+    },
+    "eshtër_N": {
+      "class": "mkN137",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "eshtrave"
+      ]
+    },
+    "fat_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "fati"
+      ]
+    },
+    "fillim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "fillimi"
+      ]
+    },
+    "fitore_N": {
+      "class": "mkN028",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "fitoren"
+      ]
+    },
+    "flaktë_A": {
+      "class": "mkA013",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "flakta"
+      ]
+    },
+    "flamur_N": {
+      "class": "mkN031",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "flamuri",
+        "flamurit"
+      ]
+    },
+    "fund_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "fund"
+      ]
+    },
+    "fundit_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "fundit"
+      ]
+    },
+    "fushë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "fushat",
+        "fushën"
+      ]
+    },
+    "gjeneral_N": {
+      "class": "mkN007",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "gjenerali",
+        "gjeneralit"
+      ]
+    },
+    "gjinor_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "gjinore"
+      ]
+    },
+    "gusht_N": {
+      "class": "mkN020",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "gushtit"
+      ]
+    },
+    "huaj_A": {
+      "class": "mkA009",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "huaj"
+      ]
+    },
+    "hyrje_N": {
+      "class": "mkN188",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "hyrjes"
+      ]
+    },
+    "jetë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "jetën",
+        "jetës"
+      ]
+    },
+    "karakter_N": {
+      "class": "mkN031",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "karakterin"
+      ]
+    },
+    "klimë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "klimën"
+      ]
+    },
+    "kohë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "kohën"
+      ]
+    },
+    "koicidencë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "koicidencë"
+      ]
+    },
+    "kombëtar_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "kombëtare"
+      ]
+    },
+    "komunë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "komune"
+      ]
+    },
+    "kontratë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "kontratat"
+      ]
+    },
+    "Kosovë_N": {
+      "class": "mkN175",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "Kosovës"
+      ]
+    },
+    "kryej_V": {
+      "class": "mkV042",
+      "method": "unique-numbered-class-evidence-match",
+      "observed_forms": [
+        "kryera"
+      ]
+    },
+    "kryhem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "kryhej"
+      ]
+    },
+    "kthen_V": {
+      "class": "mkV018",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "ktheni"
+      ]
+    },
+    "kulturor_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "kulturore"
+      ]
+    },
+    "kushtetues_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "kushtetues"
+      ]
+    },
+    "lagët_A": {
+      "class": "mkA009",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "lagët"
+      ]
+    },
+    "lavde_N": {
+      "class": "mkN028",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "lavdet"
+      ]
+    },
+    "ligj_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "ligj",
+        "ligjit"
+      ]
+    },
+    "liri_N": {
+      "class": "mkN059",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "lirinë",
+        "lirisë",
+        "lirive"
+      ]
+    },
+    "mashkull_N": {
+      "class": "mkN257",
+      "method": "unique-numbered-class-evidence-match",
+      "observed_forms": [
+        "meshkujve"
+      ]
+    },
+    "mbrojtje_N": {
+      "class": "mkN188",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "mbrojtja",
+        "mbrojtjes"
+      ]
+    },
+    "meritoj_V": {
+      "class": "mkV028",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "merituar"
+      ]
+    },
+    "mision_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "misioni"
+      ]
+    },
+    "mjedis_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "mjedisit"
+      ]
+    },
+    "monoton_V": {
+      "class": "mkV070",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "monoton"
+      ]
+    },
+    "mosdiskriminim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "mosdiskriminimit"
+      ]
+    },
+    "mundësi_N": {
+      "class": "mkN152",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "mundësi"
+      ]
+    },
+    "Murat_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "Murati"
+      ]
+    },
+    "mënyrë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "mënyra"
+      ]
+    },
+    "nder_N": {
+      "class": "mkN031",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "nderin"
+      ]
+    },
+    "nisem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "nisej"
+      ]
+    },
+    "nivel_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "nivel"
+      ]
+    },
+    "pajtim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pajtim"
+      ]
+    },
+    "pamje_N": {
+      "class": "mkN079",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pamja"
+      ]
+    },
+    "pamundur_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pamundur"
+      ]
+    },
+    "papritur_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "papritur"
+      ]
+    },
+    "parim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "parimet"
+      ]
+    },
+    "parë_A": {
+      "class": "mkA013",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "para"
+      ]
+    },
+    "pasqyroj_V": {
+      "class": "mkV028",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pasqyrojnë"
+      ]
+    },
+    "pistë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pistës"
+      ]
+    },
+    "pjesë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pjesën"
+      ]
+    },
+    "pjesëmarrje_N": {
+      "class": "mkN188",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pjesëmarrje"
+      ]
+    },
+    "plogështi_N": {
+      "class": "mkN059",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "plogështia"
+      ]
+    },
+    "pluralizm_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pluralizmit"
+      ]
+    },
+    "politik_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "politike"
+      ]
+    },
+    "porsaardhur_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "porsaardhur"
+      ]
+    },
+    "pronë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pronës"
+      ]
+    },
+    "pushtet_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "pushtetit"
+      ]
+    },
+    "përdorim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "përdorim",
+        "përdorimit"
+      ]
+    },
+    "përfundimtar_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "përfundimtare"
+      ]
+    },
+    "përpiqem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "përpiqeni"
+      ]
+    },
+    "qeveri_N": {
+      "class": "mkN059",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "qeverive"
+      ]
+    },
+    "rast_N": {
+      "class": "mkN031",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "rast"
+      ]
+    },
+    "rend_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "rendi"
+      ]
+    },
+    "republikë_N": {
+      "class": "mkN071",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "Republikës",
+        "republika",
+        "republikën",
+        "republikës"
+      ]
+    },
+    "respektim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "respektimit"
+      ]
+    },
+    "rojë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "rojat"
+      ]
+    },
+    "rregullohem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "rregullohen",
+        "rregullohet"
+      ]
+    },
+    "rrëmbej_V": {
+      "class": "mkV047",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "rrëmbeni"
+      ]
+    },
+    "serb_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "serbe"
+      ]
+    },
+    "shkak_N": {
+      "class": "mkN053",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shkaku"
+      ]
+    },
+    "shkruhem_V": {
+      "class": "mkV041",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shkruhej"
+      ]
+    },
+    "shkëlqej_V": {
+      "class": "mkV047",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shkëlqente"
+      ]
+    },
+    "shoqëror_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shoqërore"
+      ]
+    },
+    "shpëtim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shpëtimin"
+      ]
+    },
+    "shqip_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shqipe"
+      ]
+    },
+    "shtet_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shtet"
+      ]
+    },
+    "shtetëror_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shtetërore"
+      ]
+    },
+    "shumetnik_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shumetnik"
+      ]
+    },
+    "shëmbëllë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "shëmbëllën"
+      ]
+    },
+    "siguroj_V": {
+      "class": "mkV028",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "siguron"
+      ]
+    },
+    "social_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "sociale"
+      ]
+    },
+    "sqotë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "sqota"
+      ]
+    },
+    "status_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "statusin"
+      ]
+    },
+    "stemë_N": {
+      "class": "mkN146",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "stema"
+      ]
+    },
+    "sukses_N": {
+      "class": "mkN070",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "sukses"
+      ]
+    },
+    "sundim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "sundimit"
+      ]
+    },
+    "themelor_A": {
+      "class": "mkA004",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "themelore"
+      ]
+    },
+    "tjetër_A": {
+      "class": "mkA025",
+      "method": "unique-numbered-class-evidence-match",
+      "observed_forms": [
+        "tjera",
+        "tjetër"
+      ]
+    },
+    "treg_N": {
+      "class": "mkN047",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "tregut"
+      ]
+    },
+    "trishtuar_A": {
+      "class": "mkA009",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "trishtuar"
+      ]
+    },
+    "turk_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "turke"
+      ]
+    },
+    "turp_N": {
+      "class": "mkN017",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "turp"
+      ]
+    },
+    "tërheqje_N": {
+      "class": "mkN188",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "tërheqjen"
+      ]
+    },
+    "udhëheqje_N": {
+      "class": "mkN188",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "udhëheqjen"
+      ]
+    },
+    "ushtar_N": {
+      "class": "mkN031",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "ushtarët",
+        "ushtarëve"
+      ]
+    },
+    "vjeshtë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "vjeshta",
+        "vjeshtë",
+        "vjeshtës"
+      ]
+    },
+    "vlerë_N": {
+      "class": "mkN072",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "vlerë"
+      ]
+    },
+    "vranësirë_N": {
+      "class": "mkN109",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "vranësirat"
+      ]
+    },
+    "vërtetë_A": {
+      "class": "mkA013",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "vërtetë"
+      ]
+    },
+    "zhvillim_N": {
+      "class": "mkN002",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "zhvillimin"
+      ]
+    },
+    "zjarrtë_A": {
+      "class": "mkA013",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "zjarrtë"
+      ]
+    },
+    "zot_N": {
+      "class": "mkN020",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "Zoti"
+      ]
+    },
+    "zyrtar_A": {
+      "class": "mkA001",
+      "method": "smart-route-evidence-match",
+      "observed_forms": [
+        "zyrtar",
+        "zyrtare"
+      ]
+    }
+  },
+  "blocked": [
+    {
+      "id": "armë_N",
+      "base": "armë",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN072; matching numbered classes=24",
+      "source": "Tosk reference",
+      "observed_forms": "armët",
+      "smart_class": "mkN072",
+      "matching_classes": "mkN023,mkN032,mkN039,mkN040,mkN076,mkN094,mkN100,mkN118,mkN140,mkN146,mkN148,mkN154,mkN173,mkN175,mkN201,mkN203,mkN233,mkN235,mkN300,mkN324,mkN470,mkN476,mkN527,mkN540",
+      "gender": "feminine"
+    },
+    {
+      "id": "asfalt_N",
+      "base": "asfalt",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN074; matching numbered classes=75",
+      "source": "Tosk reference",
+      "observed_forms": "asfaltin",
+      "smart_class": "mkN074",
+      "matching_classes": "mkN001,mkN002,mkN003,mkN004,mkN005,mkN007,mkN012,mkN013,mkN016,mkN017,mkN019,mkN020,mkN026,mkN027,mkN031,mkN033,mkN044,mkN045,mkN046,mkN056,mkN061,mkN067,mkN069,mkN070,mkN108,mkN113,mkN120,mkN121,mkN125,mkN131,mkN138,mkN139,mkN143,mkN145,mkN147,mkN158,mkN162,mkN192,mkN242,mkN243,mkN256,mkN268,mkN272,mkN273,mkN274,mkN294,mkN296,mkN326,mkN329,mkN333,mkN336,mkN343,mkN357,mkN373,mkN415,mkN417,mkN421,mkN425,mkN431,mkN444,mkN448,mkN458,mkN471,mkN482,mkN493,mkN498,mkN500,mkN516,mkN517,mkN518,mkN521,mkN522,mkN524,mkN526,mkN530",
+      "gender": "masculine"
+    },
+    {
+      "id": "atdhe_N",
+      "base": "atdhe",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN149; matching numbered classes=35",
+      "source": "Tosk reference",
+      "observed_forms": "atdheut",
+      "smart_class": "mkN149",
+      "matching_classes": "mkN010,mkN014,mkN018,mkN025,mkN034,mkN038,mkN041,mkN047,mkN052,mkN055,mkN064,mkN066,mkN074,mkN082,mkN090,mkN098,mkN107,mkN111,mkN135,mkN151,mkN178,mkN179,mkN180,mkN198,mkN225,mkN230,mkN236,mkN247,mkN251,mkN277,mkN307,mkN329,mkN479,mkN541,mkN545",
+      "gender": "masculine"
+    },
+    {
+      "id": "barazi_N",
+      "base": "barazi",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=12",
+      "source": "Tosk reference",
+      "observed_forms": "barazinë,barazisë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459",
+      "gender": "feminine"
+    },
+    {
+      "id": "besnikëri_N",
+      "base": "besnikëri",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=15",
+      "source": "Tosk reference",
+      "observed_forms": "besnikërinë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN106,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459,mkN552,mkN554",
+      "gender": "feminine"
+    },
+    {
+      "id": "drejtësi_N",
+      "base": "drejtësi",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=12",
+      "source": "Tosk reference",
+      "observed_forms": "drejtësisë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459",
+      "gender": "feminine"
+    },
+    {
+      "id": "ekonomi_N",
+      "base": "ekonomi",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=12",
+      "source": "Tosk reference",
+      "observed_forms": "ekonomisë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459",
+      "gender": "feminine"
+    },
+    {
+      "id": "femër_N",
+      "base": "femër",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN166; matching numbered classes=9",
+      "source": "Tosk reference",
+      "observed_forms": "femrave",
+      "smart_class": "mkN166",
+      "matching_classes": "mkN112,mkN137,mkN234,mkN305,mkN402,mkN414,mkN441,mkN454,mkN477",
+      "gender": "feminine"
+    },
+    {
+      "id": "filloj_V",
+      "base": "filloj",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV028; matching numbered classes=0",
+      "source": "Tosk reference",
+      "observed_forms": "fillojë,filluan,filluar",
+      "smart_class": "mkV028",
+      "matching_classes": "",
+      "gender": ""
+    },
+    {
+      "id": "himn_N",
+      "base": "himn",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN034; matching numbered classes=105",
+      "source": "Tosk reference",
+      "observed_forms": "himni",
+      "smart_class": "mkN034",
+      "matching_classes": "mkN001,mkN002,mkN003,mkN004,mkN005,mkN007,mkN012,mkN013,mkN016,mkN017,mkN019,mkN020,mkN026,mkN027,mkN031,mkN033,mkN044,mkN045,mkN046,mkN054,mkN056,mkN061,mkN066,mkN067,mkN069,mkN070,mkN084,mkN089,mkN103,mkN105,mkN108,mkN113,mkN120,mkN121,mkN124,mkN125,mkN126,mkN127,mkN131,mkN138,mkN139,mkN143,mkN145,mkN147,mkN158,mkN162,mkN192,mkN198,mkN221,mkN231,mkN236,mkN242,mkN243,mkN256,mkN258,mkN262,mkN268,mkN272,mkN273,mkN274,mkN278,mkN293,mkN299,mkN307,mkN318,mkN326,mkN329,mkN333,mkN336,mkN343,mkN356,mkN357,mkN359,mkN373,mkN389,mkN393,mkN399,mkN400,mkN403,mkN415,mkN417,mkN421,mkN425,mkN429,mkN431,mkN444,mkN448,mkN456,mkN458,mkN464,mkN471,mkN482,mkN490,mkN493,mkN498,mkN500,mkN511,mkN516,mkN517,mkN518,mkN521,mkN522,mkN524,mkN526,mkN530",
+      "gender": "masculine"
+    },
+    {
+      "id": "lag_V",
+      "base": "lag",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV001; matching numbered classes=11",
+      "source": "Tosk reference",
+      "observed_forms": "lagte",
+      "smart_class": "mkV001",
+      "matching_classes": "mkV013,mkV017,mkV018,mkV029,mkV033,mkV064,mkV114,mkV115,mkV117,mkV127,mkV134",
+      "gender": ""
+    },
+    {
+      "id": "lart_A",
+      "base": "lart",
+      "cat": "A",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkA001; matching numbered classes=3",
+      "source": "Tosk reference",
+      "observed_forms": "lartë",
+      "smart_class": "mkA001",
+      "matching_classes": "mkA002,mkA004,mkA010",
+      "gender": "feminine"
+    },
+    {
+      "id": "mbretëri_N",
+      "base": "mbretëri",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=12",
+      "source": "Tosk reference",
+      "observed_forms": "mbretërisë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459",
+      "gender": "feminine"
+    },
+    {
+      "id": "mur_N",
+      "base": "mur",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN031; matching numbered classes=22",
+      "source": "Tosk reference",
+      "observed_forms": "muret",
+      "smart_class": "mkN031",
+      "matching_classes": "mkN001,mkN002,mkN005,mkN027,mkN033,mkN038,mkN056,mkN074,mkN084,mkN085,mkN086,mkN111,mkN139,mkN225,mkN403,mkN417,mkN431,mkN444,mkN448,mkN471,mkN518,mkN522",
+      "gender": "masculine"
+    },
+    {
+      "id": "ndarje_N",
+      "base": "ndarje",
+      "cat": "N",
+      "status": "BLOCKED_SOURCE_CONFLICT",
+      "detail": "recorded masculine gender conflicts with all evidence-matching classes, which are feminine",
+      "source": "Tosk reference",
+      "observed_forms": "ndarjes",
+      "smart_class": "mkN188",
+      "matching_classes": "mkN063,mkN228,mkN310,mkN328",
+      "gender": "masculine"
+    },
+    {
+      "id": "ndërsë_N",
+      "base": "ndërsë",
+      "cat": "N",
+      "status": "BLOCKED_SOURCE_CONFLICT",
+      "detail": "lemma/orthography in source row conflicts with observed form family; manual source review required",
+      "source": "Tosk reference",
+      "observed_forms": "ndërtesat",
+      "smart_class": "mkN109",
+      "matching_classes": "",
+      "gender": "feminine"
+    },
+    {
+      "id": "njeri_N",
+      "base": "njeri",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN059; matching numbered classes=36",
+      "source": "Tosk reference",
+      "observed_forms": "njeriu,njeriut",
+      "smart_class": "mkN059",
+      "matching_classes": "mkN010,mkN014,mkN018,mkN025,mkN034,mkN038,mkN041,mkN047,mkN052,mkN055,mkN064,mkN066,mkN074,mkN082,mkN090,mkN098,mkN107,mkN111,mkN135,mkN151,mkN178,mkN179,mkN180,mkN198,mkN200,mkN225,mkN230,mkN236,mkN247,mkN251,mkN277,mkN307,mkN329,mkN479,mkN541,mkN545",
+      "gender": "masculine"
+    },
+    {
+      "id": "nënshkruaj_V",
+      "base": "nënshkruaj",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV007; matching numbered classes=13",
+      "source": "Tosk reference",
+      "observed_forms": "nënshkruan",
+      "smart_class": "mkV007",
+      "matching_classes": "mkV024,mkV032,mkV038,mkV042,mkV044,mkV047,mkV068,mkV071,mkV093,mkV094,mkV095,mkV132,mkV133",
+      "gender": ""
+    },
+    {
+      "id": "pranvëre_N",
+      "base": "pranvëre",
+      "cat": "N",
+      "status": "BLOCKED_SOURCE_CONFLICT",
+      "detail": "lemma/orthography in source row conflicts with observed form family; manual source review required",
+      "source": "Tosk reference",
+      "observed_forms": "pranverë",
+      "smart_class": "mkN028",
+      "matching_classes": "",
+      "gender": "feminine"
+    },
+    {
+      "id": "përziej_V",
+      "base": "përziej",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV047; matching numbered classes=2",
+      "source": "Tosk reference",
+      "observed_forms": "përzier",
+      "smart_class": "mkV047",
+      "matching_classes": "mkV044,mkV105",
+      "gender": "masculine"
+    },
+    {
+      "id": "qull_V",
+      "base": "qull",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV001; matching numbered classes=3",
+      "source": "Tosk reference",
+      "observed_forms": "qullur",
+      "smart_class": "mkV001",
+      "matching_classes": "mkV018,mkV117,mkV134",
+      "gender": ""
+    },
+    {
+      "id": "rom_A",
+      "base": "rom",
+      "cat": "A",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=none; matching numbered classes=6",
+      "source": "Tosk reference",
+      "observed_forms": "rome",
+      "smart_class": "",
+      "matching_classes": "mkA001,mkA004,mkA015,mkA019,mkA020,mkA031",
+      "gender": "feminine"
+    },
+    {
+      "id": "shetëror_A",
+      "base": "shetëror",
+      "cat": "A",
+      "status": "BLOCKED_SOURCE_CONFLICT",
+      "detail": "lemma/orthography in source row conflicts with observed form family; manual source review required",
+      "source": "Tosk reference",
+      "observed_forms": "shtetëror",
+      "smart_class": "mkA004",
+      "matching_classes": "",
+      "gender": "masculine"
+    },
+    {
+      "id": "shoqëri_N",
+      "base": "shoqëri",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=12",
+      "source": "Tosk reference",
+      "observed_forms": "shoqërisë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459",
+      "gender": "feminine"
+    },
+    {
+      "id": "Shqipëri_N",
+      "base": "Shqipëri",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN152; matching numbered classes=12",
+      "source": "Tosk reference",
+      "observed_forms": "Shqipëri,Shqipërisë",
+      "smart_class": "mkN152",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232,mkN349,mkN388,mkN459",
+      "gender": "feminine"
+    },
+    {
+      "id": "simbol_N",
+      "base": "simbol",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN020; matching numbered classes=26",
+      "source": "Tosk reference",
+      "observed_forms": "simbolet,simboleve",
+      "smart_class": "mkN020",
+      "matching_classes": "mkN001,mkN002,mkN005,mkN027,mkN033,mkN038,mkN056,mkN060,mkN073,mkN074,mkN084,mkN085,mkN086,mkN111,mkN139,mkN205,mkN225,mkN331,mkN403,mkN417,mkN431,mkN432,mkN444,mkN448,mkN471,mkN522",
+      "gender": "ambigeneric"
+    },
+    {
+      "id": "svetigradas_N",
+      "base": "svetigradas",
+      "cat": "N",
+      "status": "BLOCKED_SOURCE_CONFLICT",
+      "detail": "lemma/orthography in source row conflicts with observed form family; manual source review required",
+      "source": "Tosk reference",
+      "observed_forms": "sfetigradas",
+      "smart_class": "mkN070",
+      "matching_classes": "",
+      "gender": "masculine"
+    },
+    {
+      "id": "tjetër_N",
+      "base": "tjetër",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN137; matching numbered classes=0",
+      "source": "Tosk reference",
+      "observed_forms": "tjerave",
+      "smart_class": "mkN137",
+      "matching_classes": "",
+      "gender": "masculine"
+    },
+    {
+      "id": "varem_V",
+      "base": "varem",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV055; matching numbered classes=2",
+      "source": "Tosk reference",
+      "observed_forms": "varet",
+      "smart_class": "mkV055",
+      "matching_classes": "mkV041,mkV061",
+      "gender": ""
+    },
+    {
+      "id": "vulos_V",
+      "base": "vulos",
+      "cat": "V",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkV001; matching numbered classes=4",
+      "source": "Tosk reference",
+      "observed_forms": "vulosur",
+      "smart_class": "mkV001",
+      "matching_classes": "mkV018,mkV100,mkV117,mkV134",
+      "gender": "masculine"
+    },
+    {
+      "id": "xhade_N",
+      "base": "xhade",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN028; matching numbered classes=9",
+      "source": "Tosk reference",
+      "observed_forms": "xhadesë",
+      "smart_class": "mkN028",
+      "matching_classes": "mkN008,mkN023,mkN024,mkN059,mkN060,mkN080,mkN118,mkN190,mkN232",
+      "gender": "feminine"
+    },
+    {
+      "id": "zëmër_N",
+      "base": "zëmër",
+      "cat": "N",
+      "status": "BLOCKED_INSUFFICIENT_EVIDENCE",
+      "detail": "smart=mkN166; matching numbered classes=9",
+      "source": "Tosk reference",
+      "observed_forms": "zëmrat",
+      "smart_class": "mkN166",
+      "matching_classes": "mkN112,mkN137,mkN234,mkN305,mkN414,mkN441,mkN454,mkN477,mkN488",
+      "gender": "feminine"
+    }
+  ],
+  "metrics": {
+    "schema_version": "METRICS-SQI-MAX-1",
+    "campaign_id": "CMP-C2-MAX-20260925",
+    "generated": "2026-09-25",
+    "baseline_declared": {
+      "gf": "3.12",
+      "wordbench": "1.3.4",
+      "targets": "58/58",
+      "scenarios": "52/52",
+      "tag": "albanian-s02-green-20260925"
+    },
+    "active_before": 592,
+    "active_after": 560,
+    "placeholder_before": 155,
+    "placeholder_after": 0,
+    "placeholders_resolved_to_explicit_existing_class": 123,
+    "placeholders_removed_to_blocked_queue": 32,
+    "blocked_breakdown": {
+      "BLOCKED_INSUFFICIENT_EVIDENCE": 27,
+      "BLOCKED_SOURCE_CONFLICT": 5
+    },
+    "certification_counts": {
+      "C2": 254,
+      "C1": 306
+    },
+    "certified_C6": 0,
+    "variants_count_static": 0,
+    "unprovenanced_active_count": 0,
+    "unwaived_multiword_active_count": 0,
+    "source_universe_candidate_records": 7079,
+    "source_universe_terminal_states": {
+      "BLOCKED_CERTIFICATION_PENDING": 809,
+      "EXCLUDED_RGL_MAPPING": 5,
+      "BLOCKED_INSUFFICIENT_EVIDENCE": 4424,
+      "EXCLUDED_CATEGORY": 5,
+      "BLOCKED_SOURCE_CONFLICT": 5,
+      "EXCLUDED_MULTIWORD": 1831
+    },
+    "source_universe_unclassified": 0,
+    "category_counts": {
+      "A": 81,
+      "Adv": 26,
+      "Conj": 12,
+      "Det": 6,
+      "IAdv": 5,
+      "IDet": 1,
+      "IP": 4,
+      "IQuant": 1,
+      "Interj": 2,
+      "N": 255,
+      "NP": 5,
+      "PN": 2,
+      "Predet": 3,
+      "Prep": 20,
+      "Pron": 7,
+      "Quant": 3,
+      "Subj": 5,
+      "V": 122
+    },
+    "quality_counts": {
+      "direct-invariant": 23,
+      "direct-with-government": 3,
+      "evidence-matched-explicit-class": 123,
+      "exact": 367,
+      "exact-irregular": 22,
+      "exact-normalized": 10,
+      "rgl+reference-characteristic": 11,
+      "rgl-derived-explicit": 1
+    },
+    "limitations": [
+      "GF executable is unavailable in this build environment; no new GF 3.12 compile is claimed.",
+      "No entry is promoted to C6 by static analysis alone.",
+      "table_signature remains null until native GF introspection produces canonical tables.",
+      "UT Austin source bundle has no explicit redistribution licence in supplied material; it is used as review evidence only."
+    ]
+  },
+  "changed_gf": [
+    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.gf"
+  ]
+}

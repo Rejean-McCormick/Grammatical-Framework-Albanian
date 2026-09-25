@@ -1,0 +1,64 @@
+{
+  "schema": "albanian-consolidated-overlay-provenance-v1",
+  "date": "2026-09-25",
+  "base": {
+    "filename": "Code_snapshot_Grammatical_Framework-Albanian(20260925-153041).zip",
+    "sha256": "34e1cdddec016f5fdaee1722509ba7cabf4745a50a07ba3ee03e03502efc678f",
+    "bytes": 1723761
+  },
+  "final_c10_source_lock": "2b077e63b4ddba96ba144551a0793a5bd664b760d9040ec080a5acbfb4848174",
+  "overlays": [
+    {
+      "workstream": "C1",
+      "filename": "Albanian_RGL_Morphology_MAX_FinalCandidate_20260925(2).zip",
+      "sha256": "7a2b5c61aeb0cec8cef9538de7b9803aa7a69b3774177286a90a0492f9edaabd"
+    },
+    {
+      "workstream": "C2",
+      "filename": "MorphoDictSqi_MAX_C2_FINAL_overlay_20260925(2).zip",
+      "sha256": "a5887bdd260c86247964bdbb92b42c8699cb6991f714e76a47d83285800bada2"
+    },
+    {
+      "workstream": "C4",
+      "filename": "Albanian_RGL_Conversation4_Verbal_Final_RC1_Overlay_20260925(2).zip",
+      "sha256": "cacb1f03c78be7d85dd3f8a8148279c06158d1aa77095c14a4aa209a19051bfa"
+    },
+    {
+      "workstream": "C5",
+      "filename": "Albanian_RGL_C5_Final_Local_Overlay_20260925(2).zip",
+      "sha256": "ff8c9a797b28d7e6a037195d61eec969e635ca2f85bfcd8154e258d7c254d9ee"
+    },
+    {
+      "workstream": "C6",
+      "filename": "Albanian_RGL_Conversation6_Nominal_Overlay_20260925(2).zip",
+      "sha256": "e6fc6f2034d093467d1fca129bd41b2f183491ed5af21d79321ed19611ef5c06"
+    },
+    {
+      "workstream": "C7",
+      "filename": "Albanian_RGL_C07_Clause_FinalMax_Overlay_20260925(2).zip",
+      "sha256": "50c0b2d8b2d7216f91b25d5ce0b0dfcef0cbe5ca097197dafe063e75655a47f5"
+    },
+    {
+      "workstream": "C8",
+      "filename": "Albanian_RGL_C8_overlay_20260925(2).zip",
+      "sha256": "5bbc6f13b3d5edb8a0f7add00d2f1eb5d4d9c87ba9dbdde81e8477a693874a72"
+    },
+    {
+      "workstream": "C9",
+      "filename": "Albanian_RGL_C9_Final_MAX_Overlay_20260925(2).zip",
+      "sha256": "3a05b8def7d81514cc31ae384c05206b5b4a0621b86394a33ec407f463fc5680"
+    },
+    {
+      "workstream": "C10",
+      "filename": "Albanian_RGL_C10_Max_Final_Overlay_20260925(2).zip",
+      "sha256": "5d717433442049f5e604a096ea48bb14c33e8376ce453e388c4abce3878f35e9"
+    }
+  ],
+  "policy": {
+    "required_scenarios": 52,
+    "optional_scenarios": 91,
+    "preserve_variants": true,
+    "gf_execution_available": false,
+    "certification_claim": "NOT_ESTABLISHED"
+  }
+}

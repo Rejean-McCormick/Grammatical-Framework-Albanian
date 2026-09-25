@@ -1,0 +1,592 @@
+{"base":"aeroplan","cat":"N","gf_expression":"mkN032 \"aeroplan\"","id":"aeroplan_N","note":"airplane_N","order":0,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"aeroport","cat":"N","gf_expression":"forceGender (invariantN \"aeroport\") masculine","id":"aeroport_N","note":"Tosk ref observed: aeroportit; Compile-safe placeholder pending Albanian paradigm certification.","order":1,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"afër","cat":"A","gf_expression":"mkA \"afër\"","id":"afër_A","note":"near_A","order":2,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ai","cat":"Pron","gf_expression":"SN.he_Pron","id":"ai_Pron","note":"","order":3,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"ai","cat":"Quant","gf_expression":"SN.that_Quant","id":"ai_Quant","note":"demonstrative","order":4,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"ajo","cat":"Pron","gf_expression":"SN.she_Pron","id":"ajo_Pron","note":"","order":5,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"akull","cat":"N","gf_expression":"mkN \"akull\"","id":"akull_N","note":"ice_N","order":6,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"anije","cat":"N","gf_expression":"mkN \"anije\"","id":"anije_N","note":"ship_N","order":7,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"apartament","cat":"N","gf_expression":"mkN \"apartament\"","id":"apartament_N","note":"apartment_N","order":8,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"aq","cat":"Adv","gf_expression":"mkAdv \"aq\"","id":"aq_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":9,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"ar","cat":"N","gf_expression":"mkN \"ar\"","id":"ar_N","note":"gold_N","order":10,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"argjend","cat":"N","gf_expression":"mkN \"argjend\"","id":"argjend_N","note":"silver_N","order":11,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"armik","cat":"N","gf_expression":"mkN \"armik\"","id":"armik_N","note":"enemy_N","order":12,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"armë","cat":"N","gf_expression":"forceGender (invariantN \"armë\") feminine","id":"armë_N","note":"Tosk ref observed: armët; Compile-safe placeholder pending Albanian paradigm certification.","order":13,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"arsye","cat":"N","gf_expression":"mkN \"arsye\"","id":"arsye_N","note":"reason_N","order":14,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"art","cat":"N","gf_expression":"mkN \"art\"","id":"art_N","note":"art_N","order":15,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"asfalt","cat":"N","gf_expression":"forceGender (invariantN \"asfalt\") masculine","id":"asfalt_N","note":"Tosk ref observed: asfaltin; Compile-safe placeholder pending Albanian paradigm certification.","order":16,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"asgjë","cat":"NP","gf_expression":"SN.nothing_NP","id":"asgjë_NP","note":"","order":17,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"askush","cat":"NP","gf_expression":"SN.nobody_NP","id":"askush_NP","note":"","order":18,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"asnjë","cat":"Quant","gf_expression":"SN.no_Quant","id":"asnjë_Quant","note":"","order":19,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"ata","cat":"Pron","gf_expression":"SN.they_Pron","id":"ata_Pron","note":"","order":20,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"atdhe","cat":"N","gf_expression":"forceGender (invariantN \"atdhe\") masculine","id":"atdhe_N","note":"Tosk ref observed: atdheut; Compile-safe placeholder pending Albanian paradigm certification.","order":21,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"atje","cat":"Adv","gf_expression":"mkAdv \"atje\"","id":"atje_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":22,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"baba","cat":"N","gf_expression":"mkN \"baba\"","id":"baba_N","note":"father_N2","order":23,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bankë","cat":"N","gf_expression":"mkN \"bankë\"","id":"bankë_N","note":"bank_N","order":24,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bar","cat":"N","gf_expression":"mkN \"bar\"","id":"bar_N","note":"grass_N","order":25,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"barabartë","cat":"A","gf_expression":"invariantA \"barabartë\"","id":"barabartë_A","note":"Tosk ref observed: barabarta; Compile-safe placeholder pending Albanian paradigm certification.","order":26,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"barazi","cat":"N","gf_expression":"forceGender (invariantN \"barazi\") feminine","id":"barazi_N","note":"Tosk ref observed: barazinë, barazisë; Compile-safe placeholder pending Albanian paradigm certification.","order":27,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"bardhë","cat":"A","gf_expression":"mkA \"bardhë\"","id":"bardhë_A","note":"white_A","order":28,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bark","cat":"N","gf_expression":"mkN \"bark\"","id":"bark_N","note":"belly_N","order":29,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bashkë","cat":"Adv","gf_expression":"mkAdv \"bashkë\"","id":"bashkë_Adv","note":"Tosk ref observed: bashkë","order":30,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"bazohem","cat":"V","gf_expression":"invariantV \"bazohem\"","id":"bazohem_V","note":"Tosk ref observed: bazohet; Compile-safe placeholder pending Albanian paradigm certification.","order":31,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"besnikëri","cat":"N","gf_expression":"forceGender (invariantN \"besnikëri\") feminine","id":"besnikëri_N","note":"Tosk ref observed: besnikërinë; Compile-safe placeholder pending Albanian paradigm certification.","order":32,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"beton","cat":"N","gf_expression":"forceGender (invariantN \"beton\") masculine","id":"beton_N","note":"Tosk ref observed: betonin; Compile-safe placeholder pending Albanian paradigm certification.","order":33,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"bie","cat":"V","gf_expression":"lin V I.bie_V","id":"bie_V","note":"bie_V","order":34,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"birrë","cat":"N","gf_expression":"mkN \"birrë\"","id":"birrë_N","note":"beer_N","order":35,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bisedim","cat":"N","gf_expression":"forceGender (invariantN \"bisedim\") masculine","id":"bisedim_N","note":"Tosk ref observed: bisedimet; Compile-safe placeholder pending Albanian paradigm certification.","order":36,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"bisht","cat":"N","gf_expression":"mkN \"bisht\"","id":"bisht_N","note":"tail_N","order":37,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"biçikletë","cat":"N","gf_expression":"mkN \"biçikletë\"","id":"biçikletë_N","note":"bike_N","order":38,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"blej","cat":"V","gf_expression":"lin V I.blej_V","id":"blej_V","note":"blej_V; buy_V2","order":39,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"borë","cat":"N","gf_expression":"mkN \"borë\"","id":"borë_N","note":"snow_N","order":40,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bosh","cat":"A","gf_expression":"mkA \"bosh\"","id":"bosh_A","note":"empty_A","order":41,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"boshnjak","cat":"A","gf_expression":"invariantA \"boshnjak\"","id":"boshnjak_A","note":"Tosk ref observed: boshnjake; Compile-safe placeholder pending Albanian paradigm certification.","order":42,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"botëror","cat":"A","gf_expression":"invariantA \"botëror\"","id":"botëror_A","note":"Tosk ref observed: botërore; Compile-safe placeholder pending Albanian paradigm certification.","order":43,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"breg","cat":"N","gf_expression":"forceGender (invariantN \"breg\") masculine","id":"breg_N","note":"Tosk ref observed: brigjet; Compile-safe placeholder pending Albanian paradigm certification.","order":44,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"bri","cat":"N","gf_expression":"mkN \"bri\"","id":"bri_N","note":"horn_N","order":45,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"budalla","cat":"A","gf_expression":"mkA \"budalla\"","id":"budalla_A","note":"stupid_A","order":46,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bukur","cat":"A","gf_expression":"mkA \"bukur\"","id":"bukur_A","note":"beautiful_A","order":47,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bukë","cat":"N","gf_expression":"mkN \"bukë\"","id":"bukë_N","note":"bread_N","order":48,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"burrë","cat":"N","gf_expression":"mkNFull manNForms masculine","id":"burrë_N","note":"man_N","order":49,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"bëhem","cat":"V","gf_expression":"lin V I.behem_V","id":"bëhem_V","note":"become_VA; behem_V","order":50,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"bëj","cat":"V","gf_expression":"lin V I.bej_V","id":"bëj_V","note":"bej_V; do_V2","order":51,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"cili","cat":"IQuant","gf_expression":"SN.which_IQuant","id":"cili_IQuant","note":"","order":52,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"cilido","cat":"A","gf_expression":"lin A {s = \\\\c,g,n => (SN.which_IQuant.s ! c ! g ! n) + \"do\" ; clit = True}","id":"cilido_A","note":"Tosk ref cilindo; full case/gender/number series derived from declined cili + do","order":53,"quality":"rgl-derived-explicit","source":"Tosk reference"}
+{"base":"dal","cat":"V","gf_expression":"lin V I.dal_V","id":"dal_V","note":"dal_V","order":54,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"dashuri","cat":"N","gf_expression":"mkN \"dashuri\"","id":"dashuri_N","note":"love_N","order":55,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dashuroj","cat":"V","gf_expression":"mkV \"dashuroj\"","id":"dashuroj_V","note":"love_V2","order":56,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dele","cat":"N","gf_expression":"mkN \"dele\"","id":"dele_N","note":"sheep_N","order":57,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"demokraci","cat":"N","gf_expression":"forceGender (invariantN \"demokraci\") feminine","id":"demokraci_N","note":"Tosk ref observed: demokracisë; Compile-safe placeholder pending Albanian paradigm certification.","order":58,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"demokratik","cat":"A","gf_expression":"invariantA \"demokratik\"","id":"demokratik_A","note":"Tosk ref observed: demokratik; Compile-safe placeholder pending Albanian paradigm certification.","order":59,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"derë","cat":"N","gf_expression":"mkN \"derë\"","id":"derë_N","note":"door_N","order":60,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"det","cat":"N","gf_expression":"mkN \"det\"","id":"det_N","note":"sea_N","order":61,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dhe","cat":"Conj","gf_expression":"mkConj \"dhe\"","id":"dhe_Conj","note":"","order":62,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"dhjamë","cat":"N","gf_expression":"mkN \"dhjamë\"","id":"dhjamë_N","note":"fat_N","order":63,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dhëmb","cat":"N","gf_expression":"mkN \"dhëmb\"","id":"dhëmb_N","note":"tooth_N","order":64,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"di","cat":"V","gf_expression":"irregV \"di\" \"di\" \"di\" \"dimë\" \"dini\" \"dinë\" \"di\" \"dini\" \"ditur\"","id":"di_V","note":"","order":65,"quality":"exact","source":"RGL StructuralSqiVerbal"}
+{"base":"diell","cat":"N","gf_expression":"forceGender (mkN \"diell\") masculine","id":"diell_N","note":"sun_N; Tosk characteristic form/gender applied","order":66,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"digjem","cat":"V","gf_expression":"mkV \"digjem\"","id":"digjem_V","note":"burn_V","order":67,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"diku","cat":"Adv","gf_expression":"mkAdv \"diku\"","id":"diku_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":68,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"dikush","cat":"NP","gf_expression":"SN.somebody_NP","id":"dikush_NP","note":"","order":69,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"disa","cat":"Det","gf_expression":"SN.somePl_Det","id":"disa_1_Det","note":"pl","order":70,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"disa","cat":"Det","gf_expression":"SN.someSg_Det","id":"disa_2_Det","note":"sg","order":71,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"distancë","cat":"N","gf_expression":"mkN \"distancë\"","id":"distancë_N","note":"distance_N3","order":72,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ditë","cat":"N","gf_expression":"mkN \"ditë\"","id":"ditë_N","note":"day_N","order":73,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"diçka","cat":"NP","gf_expression":"SN.something_NP","id":"diçka_NP","note":"","order":74,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"djalë","cat":"N","gf_expression":"mkNFull boyNForms masculine","id":"djalë_N","note":"boy_N","order":75,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"djathë","cat":"N","gf_expression":"mkN \"djathë\"","id":"djathë_N","note":"cheese_N","order":76,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dorezë","cat":"N","gf_expression":"mkN \"dorezë\"","id":"dorezë_N","note":"glove_N","order":77,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dorë","cat":"N","gf_expression":"mkN \"dorë\"","id":"dorë_N","note":"hand_N","order":78,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"drejt","cat":"A","gf_expression":"mkA \"drejt\"","id":"drejt_A","note":"straight_A","order":79,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"drejtë","cat":"N","gf_expression":"forceGender (invariantN \"drejtë\") feminine","id":"drejtë_N","note":"Tosk ref observed: drejtave, drejtë, drejtës; Compile-safe placeholder pending Albanian paradigm certification.","order":80,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"drejtësi","cat":"N","gf_expression":"forceGender (invariantN \"drejtësi\") feminine","id":"drejtësi_N","note":"Tosk ref observed: drejtësisë; Compile-safe placeholder pending Albanian paradigm certification.","order":81,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"dritare","cat":"N","gf_expression":"mkN \"dritare\"","id":"dritare_N","note":"window_N","order":82,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dru","cat":"N","gf_expression":"mkN \"dru\"","id":"dru_N","note":"wood_N","order":83,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"druaj","cat":"V","gf_expression":"mkV \"druaj\"","id":"druaj_V","note":"fear_V2; fear_VS","order":84,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dua","cat":"V","gf_expression":"lin V I.dua_V","id":"dua_V","note":"dua_V","order":85,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"duhem","cat":"V","gf_expression":"invariantV \"duhem\"","id":"duhem_V","note":"Tosk ref observed: duhet; Compile-safe placeholder pending Albanian paradigm certification.","order":86,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"duhet","cat":"V","gf_expression":"invariantV \"duhet\"","id":"duhet_V","note":"","order":87,"quality":"exact","source":"RGL StructuralSqiVerbal"}
+{"base":"dukem","cat":"V","gf_expression":"invariantV \"dukem\"","id":"dukem_V","note":"Tosk ref observed: dukej, dukur; Compile-safe placeholder pending Albanian paradigm certification.","order":88,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"dyqan","cat":"N","gf_expression":"mkN \"dyqan\"","id":"dyqan_N","note":"shop_N","order":89,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dysheme","cat":"N","gf_expression":"mkN \"dysheme\"","id":"dysheme_N","note":"floor_N","order":90,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dëborë","cat":"N","gf_expression":"forceGender (invariantN \"dëborë\") feminine","id":"dëborë_N","note":"Tosk ref observed: dëborë; Compile-safe placeholder pending Albanian paradigm certification.","order":91,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"dëgjoj","cat":"V","gf_expression":"mkV \"dëgjoj\"","id":"dëgjoj_V","note":"hear_V2; listen_V2","order":92,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"dërgoj","cat":"V","gf_expression":"mkV \"dërgoj\"","id":"dërgoj_V","note":"send_V3","order":93,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"e","cat":"Conj","gf_expression":"mkConj \"e\"","id":"e_Conj","note":"Tosk ref observed: e","order":94,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"eci","cat":"V","gf_expression":"lin V I.eci_V","id":"eci_V","note":"eci_V","order":95,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"edhe","cat":"Adv","gf_expression":"mkAdv \"edhe\"","id":"edhe_Adv","note":"Tosk ref observed: edhe","order":96,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"ekonomi","cat":"N","gf_expression":"forceGender (invariantN \"ekonomi\") feminine","id":"ekonomi_N","note":"Tosk ref observed: ekonomisë; Compile-safe placeholder pending Albanian paradigm certification.","order":97,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"ekonomik","cat":"A","gf_expression":"invariantA \"ekonomik\"","id":"ekonomik_A","note":"Tosk ref observed: ekonomike; Compile-safe placeholder pending Albanian paradigm certification.","order":98,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"emër","cat":"N","gf_expression":"mkN \"emër\"","id":"emër_N","note":"name_N","order":99,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"Epir","cat":"N","gf_expression":"forceGender (invariantN \"Epir\") masculine","id":"Epir_N","note":"Tosk ref observed: Epir, Epirit; Compile-safe placeholder pending Albanian paradigm certification.","order":100,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"erë","cat":"N","gf_expression":"mkN \"erë\"","id":"erë_N","note":"wind_N","order":101,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"eshtër","cat":"N","gf_expression":"forceGender (invariantN \"eshtër\") feminine","id":"eshtër_N","note":"Tosk ref observed: eshtrave; Compile-safe placeholder pending Albanian paradigm certification.","order":102,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fabrikë","cat":"N","gf_expression":"mkN \"fabrikë\"","id":"fabrikë_N","note":"factory_N","order":103,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"farë","cat":"N","gf_expression":"mkN \"farë\"","id":"farë_N","note":"seed_N","order":104,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fat","cat":"N","gf_expression":"forceGender (invariantN \"fat\") masculine","id":"fat_N","note":"Tosk ref observed: fati; Compile-safe placeholder pending Albanian paradigm certification.","order":105,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fe","cat":"N","gf_expression":"mkN \"fe\"","id":"fe_N","note":"religion_N","order":106,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"femër","cat":"N","gf_expression":"forceGender (invariantN \"femër\") feminine","id":"femër_N","note":"Tosk ref observed: femrave; Compile-safe placeholder pending Albanian paradigm certification.","order":107,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fik","cat":"V","gf_expression":"mkV \"fik\"","id":"fik_V","note":"switch8off_V2","order":108,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fillim","cat":"N","gf_expression":"forceGender (invariantN \"fillim\") masculine","id":"fillim_N","note":"Tosk ref observed: fillimi; Compile-safe placeholder pending Albanian paradigm certification.","order":109,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"filloj","cat":"V","gf_expression":"invariantV \"filloj\"","id":"filloj_V","note":"Tosk ref observed: fillojë, filluan, filluar; Compile-safe placeholder pending Albanian paradigm certification.","order":110,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fitoj","cat":"V","gf_expression":"mkV \"fitoj\"","id":"fitoj_V","note":"win_V2","order":111,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fitore","cat":"N","gf_expression":"forceGender (invariantN \"fitore\") feminine","id":"fitore_N","note":"Tosk ref observed: fitoren; Compile-safe placeholder pending Albanian paradigm certification.","order":112,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"flaktë","cat":"A","gf_expression":"invariantA \"flaktë\"","id":"flaktë_A","note":"Tosk ref observed: flakta; Compile-safe placeholder pending Albanian paradigm certification.","order":113,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"flamur","cat":"N","gf_expression":"forceGender (invariantN \"flamur\") masculine","id":"flamur_N","note":"Tosk ref observed: flamuri, flamurit; Compile-safe placeholder pending Albanian paradigm certification.","order":114,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"flas","cat":"V","gf_expression":"mkV \"flas\"","id":"flas_V","note":"speak_V2; talk_V3","order":115,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fle","cat":"V","gf_expression":"invariantV \"fle\"","id":"fle_V","note":"sleep_V","order":116,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"flok","cat":"N","gf_expression":"mkN \"flok\"","id":"flok_N","note":"hair_N","order":117,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fluturoj","cat":"V","gf_expression":"mkV \"fluturoj\"","id":"fluturoj_V","note":"fly_V","order":118,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"foshnjë","cat":"N","gf_expression":"mkN \"foshnjë\"","id":"foshnjë_N","note":"baby_N","order":119,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"frigorifer","cat":"N","gf_expression":"mkN \"frigorifer\"","id":"frigorifer_N","note":"fridge_N","order":120,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"frut","cat":"N","gf_expression":"mkN \"frut\"","id":"frut_N","note":"fruit_N","order":121,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fryhem","cat":"V","gf_expression":"mkV \"fryhem\"","id":"fryhem_V","note":"swell_V","order":122,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fryj","cat":"V","gf_expression":"mkV \"fryj\"","id":"fryj_V","note":"blow_V","order":123,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"frymoj","cat":"V","gf_expression":"mkV \"frymoj\"","id":"frymoj_V","note":"breathe_V","order":124,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fshat","cat":"N","gf_expression":"mkN \"fshat\"","id":"fshat_N","note":"village_N","order":125,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fshij","cat":"V","gf_expression":"mkV \"fshij\"","id":"fshij_V","note":"wipe_V2","order":126,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ftohtë","cat":"A","gf_expression":"mkA \"ftohtë\"","id":"ftohtë_A","note":"cold_A","order":127,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fund","cat":"N","gf_expression":"forceGender (invariantN \"fund\") masculine","id":"fund_N","note":"Tosk ref observed: fund; Compile-safe placeholder pending Albanian paradigm certification.","order":128,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fundit","cat":"A","gf_expression":"invariantA \"fundit\"","id":"fundit_A","note":"Tosk ref observed: fundit; Compile-safe placeholder pending Albanian paradigm certification.","order":129,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fushë","cat":"N","gf_expression":"forceGender (invariantN \"fushë\") feminine","id":"fushë_N","note":"Tosk ref observed: fushat, fushën; Compile-safe placeholder pending Albanian paradigm certification.","order":130,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"fëmijë","cat":"N","gf_expression":"mkN \"fëmijë\"","id":"fëmijë_N","note":"child_N","order":131,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"fërkoj","cat":"V","gf_expression":"mkV \"fërkoj\"","id":"fërkoj_V","note":"rub_V2","order":132,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gati","cat":"A","gf_expression":"mkA \"gati\"","id":"gati_A","note":"ready_A","order":133,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gazetë","cat":"N","gf_expression":"mkN \"gazetë\"","id":"gazetë_N","note":"newspaper_N","order":134,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjak","cat":"N","gf_expression":"mkN \"gjak\"","id":"gjak_N","note":"blood_N","order":135,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjalpë","cat":"N","gf_expression":"mkN \"gjalpë\"","id":"gjalpë_N","note":"butter_N","order":136,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjarpër","cat":"N","gf_expression":"mkN \"gjarpër\"","id":"gjarpër_N","note":"snake_N","order":137,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjatë","cat":"A","gf_expression":"mkA \"gjatë\"","id":"gjatë_A","note":"long_A","order":138,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjatë","cat":"Prep","gf_expression":"mkPrep \"gjatë\" ablative","id":"gjatë_Prep","note":"governs ablative","order":139,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"gjej","cat":"V","gf_expression":"lin V I.gjej_V","id":"gjej_V","note":"find_V2; gjej_V","order":140,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"gjelbër","cat":"A","gf_expression":"mkA \"gjelbër\"","id":"gjelbër_A","note":"green_A","order":141,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjeneral","cat":"N","gf_expression":"forceGender (invariantN \"gjeneral\") masculine","id":"gjeneral_N","note":"Tosk ref observed: gjenerali, gjeneralit; Compile-safe placeholder pending Albanian paradigm certification.","order":142,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"gjer","cat":"Prep","gf_expression":"mkPrep \"gjer\" accusative","id":"gjer_Prep","note":"Tosk ref observed: gjer","order":143,"quality":"direct-with-government","source":"Tosk reference"}
+{"base":"gjerë","cat":"A","gf_expression":"mkA \"gjerë\"","id":"gjerë_A","note":"broad_A; wide_A","order":144,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjethe","cat":"N","gf_expression":"mkN \"gjethe\"","id":"gjethe_N","note":"leaf_N","order":145,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gji","cat":"N","gf_expression":"mkN \"gji\"","id":"gji_N","note":"breast_N","order":146,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjinor","cat":"A","gf_expression":"invariantA \"gjinor\"","id":"gjinor_A","note":"Tosk ref observed: gjinore; Compile-safe placeholder pending Albanian paradigm certification.","order":147,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"gjithmonë","cat":"Adv","gf_expression":"mkAdv \"gjithmonë\"","id":"gjithmonë_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":148,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"gjithçka","cat":"NP","gf_expression":"SN.everything_NP","id":"gjithçka_NP","note":"","order":149,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"Gjon","cat":"PN","gf_expression":"mkPN \"Gjon\"","id":"Gjon_PN","note":"john_PN","order":150,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gju","cat":"N","gf_expression":"mkN \"gju\"","id":"gju_N","note":"knee_N","order":151,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjuaj","cat":"V","gf_expression":"mkV \"gjuaj\"","id":"gjuaj_V","note":"hunt_V2","order":152,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gjuhë","cat":"N","gf_expression":"forceGender (mkN \"gjuhë\") feminine","id":"gjuhë_N","note":"language_N; Tosk characteristic form/gender applied; tongue_N; Tosk characteristic form/gender applied","order":153,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"godit","cat":"V","gf_expression":"mkV \"godit\"","id":"godit_V","note":"hit_V2","order":154,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gojë","cat":"N","gf_expression":"mkN \"gojë\"","id":"gojë_N","note":"mouth_N","order":155,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gomë","cat":"N","gf_expression":"mkN \"gomë\"","id":"gomë_N","note":"rubber_N","order":156,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gramatikë","cat":"N","gf_expression":"mkN \"gramatikë\"","id":"gramatikë_N","note":"grammar_N","order":157,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"grua","cat":"N","gf_expression":"mkN \"grua\"","id":"grua_N","note":"wife_N; woman_N","order":158,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gur","cat":"N","gf_expression":"mkN \"gur\"","id":"gur_N","note":"stone_N","order":159,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gusht","cat":"N","gf_expression":"forceGender (invariantN \"gusht\") masculine","id":"gusht_N","note":"Tosk ref observed: gushtit; Compile-safe placeholder pending Albanian paradigm certification.","order":160,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"gënjej","cat":"V","gf_expression":"mkV \"gënjej\"","id":"gënjej_V","note":"lie_V","order":161,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gërmoj","cat":"V","gf_expression":"mkV \"gërmoj\"","id":"gërmoj_V","note":"dig_V","order":162,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"gërvisht","cat":"V","gf_expression":"mkV \"gërvisht\"","id":"gërvisht_V","note":"scratch_V2","order":163,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ha","cat":"V","gf_expression":"lin V I.ha_V","id":"ha_V","note":"eat_V2; ha_V","order":164,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"hap","cat":"V","gf_expression":"mkV \"hap\"","id":"hap_V","note":"open_V2","order":165,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"harroj","cat":"V","gf_expression":"mkV \"harroj\"","id":"harroj_V","note":"forget_V2","order":166,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"hedh","cat":"V","gf_expression":"mkV \"hedh\"","id":"hedh_V","note":"throw_V2","order":167,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"hekur","cat":"N","gf_expression":"mkN \"hekur\"","id":"hekur_N","note":"iron_N","order":168,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"hi","cat":"N","gf_expression":"mkN \"hi\"","id":"hi_N","note":"ashes_N","order":169,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"himn","cat":"N","gf_expression":"forceGender (invariantN \"himn\") masculine","id":"himn_N","note":"Tosk ref observed: himni; Compile-safe placeholder pending Albanian paradigm certification.","order":170,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"hollë","cat":"A","gf_expression":"mkA \"hollë\"","id":"hollë_A","note":"thin_A","order":171,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"huaj","cat":"A","gf_expression":"invariantA \"huaj\"","id":"huaj_A","note":"Tosk ref observed: huaj; Compile-safe placeholder pending Albanian paradigm certification.","order":172,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"humb","cat":"V","gf_expression":"mkV \"humb\"","id":"humb_V","note":"lose_V2","order":173,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"hundë","cat":"N","gf_expression":"mkN \"hundë\"","id":"hundë_N","note":"nose_N","order":174,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"hyj","cat":"V","gf_expression":"lin V I.hyj_V","id":"hyj_V","note":"hyj_V","order":175,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"hyrje","cat":"N","gf_expression":"forceGender (invariantN \"hyrje\") feminine","id":"hyrje_N","note":"Tosk ref observed: hyrjes; Compile-safe placeholder pending Albanian paradigm certification.","order":176,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"hënë","cat":"N","gf_expression":"mkN \"hënë\"","id":"hënë_N","note":"moon_N","order":177,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"i","cat":"Prep","gf_expression":"mkPrep \"i\" dative","id":"i_Prep","note":"governs dative","order":178,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"iki","cat":"V","gf_expression":"lin V I.iki_V","id":"iki_V","note":"iki_V","order":179,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"industri","cat":"N","gf_expression":"mkN \"industri\"","id":"industri_N","note":"industry_N","order":180,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"jam","cat":"V","gf_expression":"lin V I.jam_V","id":"jam_V","note":"jam_V","order":181,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"jap","cat":"V","gf_expression":"lin V I.jap_V","id":"jap_V","note":"give_V3; jap_V","order":182,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"jetoj","cat":"V","gf_expression":"mkV \"jetoj\"","id":"jetoj_V","note":"live_V","order":183,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"jetë","cat":"N","gf_expression":"forceGender (invariantN \"jetë\") feminine","id":"jetë_N","note":"Tosk ref observed: jetën, jetës; Compile-safe placeholder pending Albanian paradigm certification.","order":184,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"jo","cat":"Predet","gf_expression":"SN.not_Predet","id":"jo_Predet","note":"","order":185,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"ju","cat":"Pron","gf_expression":"SN.youPl_Pron","id":"ju_Pron","note":"","order":186,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"kafe","cat":"A","gf_expression":"mkA \"kafe\"","id":"kafe_A","note":"brown_A","order":187,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kafshoj","cat":"V","gf_expression":"mkV \"kafshoj\"","id":"kafshoj_V","note":"bite_V2","order":188,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kafshë","cat":"N","gf_expression":"mkN \"kafshë\"","id":"kafshë_N","note":"animal_N","order":189,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kalbur","cat":"A","gf_expression":"mkA \"kalbur\"","id":"kalbur_A","note":"rotten_A","order":190,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kaltër","cat":"A","gf_expression":"mkA \"kaltër\"","id":"kaltër_A","note":"blue_A","order":191,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kalë","cat":"N","gf_expression":"mkN \"kalë\"","id":"kalë_N","note":"horse_N","order":192,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kam","cat":"V","gf_expression":"lin V I.kam_V","id":"kam_V","note":"kam_V","order":193,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"kamerë","cat":"N","gf_expression":"mkN \"kamerë\"","id":"kamerë_N","note":"camera_N","order":194,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kapelë","cat":"N","gf_expression":"mkN \"kapelë\"","id":"kapelë_N","note":"cap_N; hat_N","order":195,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"karakter","cat":"N","gf_expression":"forceGender (invariantN \"karakter\") masculine","id":"karakter_N","note":"Tosk ref observed: karakterin; Compile-safe placeholder pending Albanian paradigm certification.","order":196,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"karrige","cat":"N","gf_expression":"mkN \"karrige\"","id":"karrige_N","note":"chair_N","order":197,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"keq","cat":"A","gf_expression":"mkA \"keq\"","id":"keq_A","note":"bad_A","order":198,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kishë","cat":"N","gf_expression":"mkN \"kishë\"","id":"kishë_N","note":"church_N","order":199,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"klimë","cat":"N","gf_expression":"forceGender (invariantN \"klimë\") feminine","id":"klimë_N","note":"Tosk ref observed: klimën; Compile-safe placeholder pending Albanian paradigm certification.","order":200,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kockë","cat":"N","gf_expression":"mkN \"kockë\"","id":"kockë_N","note":"bone_N","order":201,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kodër","cat":"N","gf_expression":"mkN \"kodër\"","id":"kodër_N","note":"hill_N","order":202,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kohë","cat":"N","gf_expression":"forceGender (invariantN \"kohë\") feminine","id":"kohë_N","note":"Tosk ref observed: kohën; Compile-safe placeholder pending Albanian paradigm certification.","order":203,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"koicidencë","cat":"N","gf_expression":"forceGender (invariantN \"koicidencë\") feminine","id":"koicidencë_N","note":"Tosk ref observed: koicidencë; Compile-safe placeholder pending Albanian paradigm certification.","order":204,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kokë","cat":"N","gf_expression":"mkN \"kokë\"","id":"kokë_N","note":"head_N","order":205,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kombëtar","cat":"A","gf_expression":"invariantA \"kombëtar\"","id":"kombëtar_A","note":"Tosk ref observed: kombëtare; Compile-safe placeholder pending Albanian paradigm certification.","order":206,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kompjuter","cat":"N","gf_expression":"mkN \"kompjuter\"","id":"kompjuter_N","note":"computer_N","order":207,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"komunë","cat":"N","gf_expression":"forceGender (invariantN \"komunë\") feminine","id":"komunë_N","note":"Tosk ref observed: komune; Compile-safe placeholder pending Albanian paradigm certification.","order":208,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kontratë","cat":"N","gf_expression":"forceGender (invariantN \"kontratë\") feminine","id":"kontratë_N","note":"Tosk ref observed: kontratat; Compile-safe placeholder pending Albanian paradigm certification.","order":209,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kopsht","cat":"N","gf_expression":"mkN \"kopsht\"","id":"kopsht_N","note":"garden_N","order":210,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"Kosovë","cat":"N","gf_expression":"forceGender (invariantN \"Kosovë\") feminine","id":"Kosovë_N","note":"Tosk ref observed: Kosovës; Compile-safe placeholder pending Albanian paradigm certification.","order":211,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"krah","cat":"N","gf_expression":"mkN \"krah\"","id":"krah_N","note":"wing_N","order":212,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"krimb","cat":"N","gf_expression":"mkN \"krimb\"","id":"krimb_N","note":"worm_N","order":213,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kripë","cat":"N","gf_expression":"mkN \"kripë\"","id":"kripë_N","note":"salt_N","order":214,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kryej","cat":"V","gf_expression":"invariantV \"kryej\"","id":"kryej_V","note":"Tosk ref observed: kryera; Compile-safe placeholder pending Albanian paradigm certification.","order":215,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kryhem","cat":"V","gf_expression":"invariantV \"kryhem\"","id":"kryhem_V","note":"Tosk ref observed: kryhej; Compile-safe placeholder pending Albanian paradigm certification.","order":216,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kthehem","cat":"V","gf_expression":"mkV \"kthehem\"","id":"kthehem_V","note":"turn_V","order":217,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kthen","cat":"V","gf_expression":"invariantV \"kthen\"","id":"kthen_V","note":"Tosk ref observed: ktheni; Compile-safe placeholder pending Albanian paradigm certification.","order":218,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"ku","cat":"IAdv","gf_expression":"mkIAdv \"ku\"","id":"ku_IAdv","note":"","order":219,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"kudo","cat":"Adv","gf_expression":"mkAdv \"kudo\"","id":"kudo_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":220,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"kulturor","cat":"A","gf_expression":"invariantA \"kulturor\"","id":"kulturor_A","note":"Tosk ref observed: kulturore; Compile-safe placeholder pending Albanian paradigm certification.","order":221,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kundrejt","cat":"Prep","gf_expression":"mkPrep \"kundrejt\" ablative","id":"kundrejt_Prep","note":"Tosk ref observed: kundrejt","order":222,"quality":"direct-with-government","source":"Tosk reference"}
+{"base":"kuptoj","cat":"V","gf_expression":"mkV \"kuptoj\"","id":"kuptoj_V","note":"know_VQ; know_VS; understand_V2","order":223,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kuq","cat":"A","gf_expression":"mkA \"kuq\"","id":"kuq_A","note":"red_A","order":224,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kur","cat":"Adv","gf_expression":"mkAdv \"kur\"","id":"kur_Adv","note":"Tosk ref observed: kur","order":225,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"kur","cat":"IAdv","gf_expression":"mkIAdv \"kur\"","id":"kur_IAdv","note":"","order":226,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"kur","cat":"Subj","gf_expression":"mkSubj \"kur\"","id":"kur_Subj","note":"","order":227,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"kush","cat":"IP","gf_expression":"SN.whoPl_IP","id":"kush_1_IP","note":"pl","order":228,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"kush","cat":"IP","gf_expression":"SN.whoSg_IP","id":"kush_2_IP","note":"sg","order":229,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"kushtetues","cat":"A","gf_expression":"invariantA \"kushtetues\"","id":"kushtetues_A","note":"Tosk ref observed: kushtetues; Compile-safe placeholder pending Albanian paradigm certification.","order":230,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"kushëri","cat":"N","gf_expression":"mkN \"kushëri\"","id":"kushëri_N","note":"cousin_N","order":231,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ky","cat":"Quant","gf_expression":"SN.this_Quant","id":"ky_Quant","note":"demonstrative","order":232,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"këmbë","cat":"N","gf_expression":"mkN \"këmbë\"","id":"këmbë_N","note":"foot_N; leg_N","order":233,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"këmishë","cat":"N","gf_expression":"mkN \"këmishë\"","id":"këmishë_N","note":"shirt_N","order":234,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"këndoj","cat":"V","gf_expression":"mkV \"këndoj\"","id":"këndoj_V","note":"sing_V","order":235,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"këngë","cat":"N","gf_expression":"mkN \"këngë\"","id":"këngë_N","note":"song_N","order":236,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"këpucë","cat":"N","gf_expression":"mkN \"këpucë\"","id":"këpucë_N","note":"shoe_N","order":237,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kërcej","cat":"V","gf_expression":"mkV \"kërcej\"","id":"kërcej_V","note":"jump_V","order":238,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"kërkoj","cat":"V","gf_expression":"mkV \"kërkoj\"","id":"kërkoj_V","note":"seek_V2","order":239,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"këtu","cat":"Adv","gf_expression":"mkAdv \"këtu\"","id":"këtu_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":240,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"lag","cat":"V","gf_expression":"invariantV \"lag\"","id":"lag_V","note":"Tosk ref observed: lagte; Compile-safe placeholder pending Albanian paradigm certification.","order":241,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"lagur","cat":"A","gf_expression":"mkA \"lagur\"","id":"lagur_A","note":"wet_A","order":242,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lagët","cat":"A","gf_expression":"invariantA \"lagët\"","id":"lagët_A","note":"Tosk ref observed: lagët; Compile-safe placeholder pending Albanian paradigm certification.","order":243,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"laj","cat":"V","gf_expression":"mkV \"laj\"","id":"laj_V","note":"wash_V2","order":244,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"larg","cat":"Adv","gf_expression":"mkAdv \"larg\"","id":"larg_Adv","note":"far_Adv","order":245,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lart","cat":"A","gf_expression":"invariantA \"lart\"","id":"lart_A","note":"Tosk ref observed: lartë; Compile-safe placeholder pending Albanian paradigm certification.","order":246,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"lavde","cat":"N","gf_expression":"forceGender (invariantN \"lavde\") feminine","id":"lavde_N","note":"Tosk ref observed: lavdet; Compile-safe placeholder pending Albanian paradigm certification.","order":247,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"lehtë","cat":"A","gf_expression":"mkA \"lehtë\"","id":"lehtë_A","note":"easy_A2V","order":248,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"letër","cat":"N","gf_expression":"mkN \"letër\"","id":"letër_N","note":"paper_N","order":249,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lexoj","cat":"V","gf_expression":"mkV \"lexoj\" \"lexuar\"","id":"lexoj_V","note":"read_V2; Tosk participle applied","order":250,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"libër","cat":"N","gf_expression":"mkNFull bookNForms masculine","id":"libër_N","note":"book_N","order":251,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lidh","cat":"V","gf_expression":"mkV \"lidh\"","id":"lidh_V","note":"tie_V2","order":252,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ligj","cat":"N","gf_expression":"forceGender (invariantN \"ligj\") masculine","id":"ligj_N","note":"Tosk ref observed: ligj, ligjit; Compile-safe placeholder pending Albanian paradigm certification.","order":253,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"liqen","cat":"N","gf_expression":"mkN \"liqen\"","id":"liqen_N","note":"lake_N","order":254,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"liri","cat":"N","gf_expression":"forceGender (invariantN \"liri\") feminine","id":"liri_N","note":"Tosk ref observed: lirinë, lirisë, lirive; Compile-safe placeholder pending Albanian paradigm certification.","order":255,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"litar","cat":"N","gf_expression":"mkN \"litar\"","id":"litar_N","note":"rope_N","order":256,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"llambë","cat":"N","gf_expression":"mkN \"llambë\"","id":"llambë_N","note":"lamp_N","order":257,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lopë","cat":"N","gf_expression":"mkN \"lopë\"","id":"lopë_N","note":"cow_N","order":258,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"luaj","cat":"V","gf_expression":"mkV \"luaj\"","id":"luaj_V","note":"play_V; play_V2","order":259,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"luftoj","cat":"V","gf_expression":"mkV \"luftoj\" \"luftuar\"","id":"luftoj_V","note":"fight_V2; Tosk participle applied","order":260,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"luftë","cat":"N","gf_expression":"forceGender (mkN \"luftë\" \"luftra\") feminine","id":"luftë_N","note":"war_N; Tosk characteristic form/gender applied","order":261,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"lule","cat":"N","gf_expression":"mkN \"lule\"","id":"lule_N","note":"flower_N","order":262,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lumë","cat":"N","gf_expression":"mkN \"lumë\"","id":"lumë_N","note":"river_N","order":263,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lutem","cat":"V","gf_expression":"mkV \"lutem\"","id":"lutem_V","note":"beg_V2V","order":264,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lyej","cat":"V","gf_expression":"mkV \"lyej\"","id":"lyej_V","note":"paint_V2A","order":265,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lë","cat":"V","gf_expression":"mkV \"lë\" \"lënë\"","id":"lë_V","note":"leave_V2; Tosk participle applied","order":266,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"lëkurë","cat":"N","gf_expression":"mkN \"lëkurë\"","id":"lëkurë_N","note":"leather_N; skin_N","order":267,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lëmuar","cat":"A","gf_expression":"mkA \"lëmuar\"","id":"lëmuar_A","note":"smooth_A","order":268,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"lëvore","cat":"N","gf_expression":"mkN \"lëvore\"","id":"lëvore_N","note":"bark_N","order":269,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mace","cat":"N","gf_expression":"mkN \"mace\"","id":"mace_N","note":"cat_N","order":270,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"madh","cat":"A","gf_expression":"mkA \"madh\"","id":"madh_A","note":"big_A","order":271,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"makinë","cat":"N","gf_expression":"mkN \"makinë\"","id":"makinë_N","note":"car_N","order":272,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mal","cat":"N","gf_expression":"mkN \"mal\"","id":"mal_N","note":"mountain_N","order":273,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"martuar","cat":"A","gf_expression":"mkA \"martuar\"","id":"martuar_A","note":"married_A2","order":274,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mashkull","cat":"N","gf_expression":"forceGender (invariantN \"mashkull\") masculine","id":"mashkull_N","note":"Tosk ref observed: meshkujve; Compile-safe placeholder pending Albanian paradigm certification.","order":275,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mbaj","cat":"V","gf_expression":"mkV \"mbaj\"","id":"mbaj_V","note":"hold_V2","order":276,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mbi","cat":"Prep","gf_expression":"mkPrep \"mbi\" accusative","id":"mbi_Prep","note":"governs accusative","order":277,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"mbret","cat":"N","gf_expression":"mkN \"mbret\"","id":"mbret_N","note":"king_N","order":278,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mbretëreshë","cat":"N","gf_expression":"mkN \"mbretëreshë\"","id":"mbretëreshë_N","note":"queen_N","order":279,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mbretëri","cat":"N","gf_expression":"forceGender (invariantN \"mbretëri\") feminine","id":"mbretëri_N","note":"Tosk ref observed: mbretërisë; Compile-safe placeholder pending Albanian paradigm certification.","order":280,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mbrojtje","cat":"N","gf_expression":"forceGender (invariantN \"mbrojtje\") feminine","id":"mbrojtje_N","note":"Tosk ref observed: mbrojtja, mbrojtjes; Compile-safe placeholder pending Albanian paradigm certification.","order":281,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mbyll","cat":"V","gf_expression":"mkV \"mbyll\"","id":"mbyll_V","note":"close_V2","order":282,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"me","cat":"Prep","gf_expression":"mkPrep \"me\" accusative","id":"me_Prep","note":"governs accusative","order":283,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"medet","cat":"Interj","gf_expression":"mkInterj \"medet\"","id":"medet_Interj","note":"alas_Interj","order":284,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"megjithëse","cat":"Subj","gf_expression":"mkSubj \"megjithëse\"","id":"megjithëse_Subj","note":"","order":285,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"mendoj","cat":"V","gf_expression":"mkV \"mendoj\"","id":"mendoj_V","note":"think_V","order":286,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"meritoj","cat":"V","gf_expression":"invariantV \"meritoj\"","id":"meritoj_V","note":"Tosk ref observed: merituar; Compile-safe placeholder pending Albanian paradigm certification.","order":287,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"midis","cat":"Prep","gf_expression":"mkPrep \"midis\" ablative","id":"midis_Prep","note":"governs ablative","order":288,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"mik","cat":"N","gf_expression":"mkN \"mik\"","id":"mik_N","note":"friend_N","order":289,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mirë","cat":"A","gf_expression":"mkA \"mirë\"","id":"mirë_A","note":"good_A","order":290,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mish","cat":"N","gf_expression":"mkN \"mish\"","id":"mish_N","note":"meat_N","order":291,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mision","cat":"N","gf_expression":"forceGender (invariantN \"mision\") masculine","id":"mision_N","note":"Tosk ref observed: misioni; Compile-safe placeholder pending Albanian paradigm certification.","order":292,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mjaft","cat":"Adv","gf_expression":"mkAdv \"mjaft\"","id":"mjaft_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":293,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"mjedis","cat":"N","gf_expression":"forceGender (invariantN \"mjedis\") masculine","id":"mjedis_N","note":"Tosk ref observed: mjedisit; Compile-safe placeholder pending Albanian paradigm certification.","order":294,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mjegull","cat":"N","gf_expression":"mkN \"mjegull\"","id":"mjegull_N","note":"fog_N","order":295,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mjek","cat":"N","gf_expression":"mkN \"mjek\"","id":"mjek_N","note":"doctor_N","order":296,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mollë","cat":"N","gf_expression":"mkNFull appleNForms feminine","id":"mollë_N","note":"apple_N","order":297,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"monoton","cat":"V","gf_expression":"invariantV \"monoton\"","id":"monoton_V","note":"Tosk ref observed: monoton; Compile-safe placeholder pending Albanian paradigm certification.","order":298,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"morr","cat":"N","gf_expression":"mkN \"morr\"","id":"morr_N","note":"louse_N","order":299,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mos","cat":"Adv","gf_expression":"mkAdv \"mos\"","id":"mos_Adv","note":"Tosk ref observed: mos","order":300,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"mosdiskriminim","cat":"N","gf_expression":"forceGender (invariantN \"mosdiskriminim\") masculine","id":"mosdiskriminim_N","note":"Tosk ref observed: mosdiskriminimit; Compile-safe placeholder pending Albanian paradigm certification.","order":301,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"motër","cat":"N","gf_expression":"mkN \"motër\"","id":"motër_N","note":"sister_N","order":302,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mprehtë","cat":"A","gf_expression":"mkA \"mprehtë\"","id":"mprehtë_A","note":"sharp_A","order":303,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mund","cat":"V","gf_expression":"invariantV \"mund\"","id":"mund_V","note":"","order":304,"quality":"exact","source":"RGL StructuralSqiVerbal"}
+{"base":"mundshëm","cat":"A","gf_expression":"mkA \"mundshëm\"","id":"mundshëm_A","note":"probable_AS","order":305,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mundësi","cat":"N","gf_expression":"forceGender (invariantN \"mundësi\") feminine","id":"mundësi_N","note":"Tosk ref observed: mundësi; Compile-safe placeholder pending Albanian paradigm certification.","order":306,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mur","cat":"N","gf_expression":"forceGender (invariantN \"mur\") masculine","id":"mur_N","note":"Tosk ref observed: muret; Compile-safe placeholder pending Albanian paradigm certification.","order":307,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"Murat","cat":"N","gf_expression":"forceGender (invariantN \"Murat\") masculine","id":"Murat_N","note":"Tosk ref observed: Murati; Compile-safe placeholder pending Albanian paradigm certification.","order":308,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"muzikë","cat":"N","gf_expression":"mkN \"muzikë\"","id":"muzikë_N","note":"music_N","order":309,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"më","cat":"Adv","gf_expression":"mkAdv \"më\"","id":"më_Adv","note":"Tosk ref observed: më","order":310,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"mëlçi","cat":"N","gf_expression":"mkN \"mëlçi\"","id":"mëlçi_N","note":"liver_N","order":311,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mënyrë","cat":"N","gf_expression":"forceGender (invariantN \"mënyrë\") feminine","id":"mënyrë_N","note":"Tosk ref observed: mënyra; Compile-safe placeholder pending Albanian paradigm certification.","order":312,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"mërzitshëm","cat":"A","gf_expression":"mkA \"mërzitshëm\"","id":"mërzitshëm_A","note":"dull_A","order":313,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"mësoj","cat":"V","gf_expression":"mkV \"mësoj\" \"mësuar\"","id":"mësoj_V","note":"learn_V2; Tosk participle applied; teach_V2; Tosk participle applied","order":314,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"mësues","cat":"N","gf_expression":"mkN \"mësues\"","id":"mësues_N","note":"teacher_N","order":315,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"natë","cat":"N","gf_expression":"mkN \"natë\"","id":"natë_N","note":"night_N","order":316,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ndaj","cat":"V","gf_expression":"mkV \"ndaj\"","id":"ndaj_V","note":"split_V2","order":317,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ndalem","cat":"V","gf_expression":"mkV \"ndalem\"","id":"ndalem_V","note":"stop_V","order":318,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ndarje","cat":"N","gf_expression":"forceGender (invariantN \"ndarje\") masculine","id":"ndarje_N","note":"Tosk ref observed: ndarjes; Compile-safe placeholder pending Albanian paradigm certification.","order":319,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"nder","cat":"N","gf_expression":"forceGender (invariantN \"nder\") masculine","id":"nder_N","note":"Tosk ref observed: nderin; Compile-safe placeholder pending Albanian paradigm certification.","order":320,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"ndez","cat":"V","gf_expression":"mkV \"ndez\"","id":"ndez_V","note":"switch8on_V2","order":321,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ndërsë","cat":"N","gf_expression":"forceGender (invariantN \"ndërsë\") feminine","id":"ndërsë_N","note":"Tosk ref observed: ndërtesat; Compile-safe placeholder pending Albanian paradigm certification.","order":322,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"ne","cat":"Pron","gf_expression":"SN.we_Pron","id":"ne_Pron","note":"","order":323,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"nga","cat":"Prep","gf_expression":"mkPrep \"nga\" ablative","id":"nga_Prep","note":"governs ablative","order":324,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"ngre","cat":"V","gf_expression":"lin V I.ngre_V","id":"ngre_V","note":"ngre_V","order":325,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"ngrij","cat":"V","gf_expression":"mkV \"ngrij\"","id":"ngrij_V","note":"freeze_V","order":326,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ngrohtë","cat":"A","gf_expression":"mkA \"ngrohtë\"","id":"ngrohtë_A","note":"warm_A","order":327,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ngushtë","cat":"A","gf_expression":"mkA \"ngushtë\"","id":"ngushtë_A","note":"narrow_A","order":328,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"nisem","cat":"V","gf_expression":"invariantV \"nisem\"","id":"nisem_V","note":"Tosk ref observed: nisej; Compile-safe placeholder pending Albanian paradigm certification.","order":329,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"nivel","cat":"N","gf_expression":"forceGender (invariantN \"nivel\") masculine","id":"nivel_N","note":"Tosk ref observed: nivel; Compile-safe placeholder pending Albanian paradigm certification.","order":330,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"njeri","cat":"N","gf_expression":"forceGender (invariantN \"njeri\") masculine","id":"njeri_N","note":"Tosk ref observed: njeriu, njeriut; Compile-safe placeholder pending Albanian paradigm certification.","order":331,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"njoh","cat":"V","gf_expression":"lin V I.njoh_V","id":"njoh_V","note":"know_V2; njoh_V","order":332,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"notoj","cat":"V","gf_expression":"mkV \"notoj\"","id":"notoj_V","note":"swim_V","order":333,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"nuhas","cat":"V","gf_expression":"mkV \"nuhas\"","id":"nuhas_V","note":"smell_V","order":334,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"nuk","cat":"Adv","gf_expression":"mkAdv \"nuk\"","id":"nuk_Adv","note":"Tosk ref observed: nuk","order":335,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"numër","cat":"N","gf_expression":"mkN \"numër\"","id":"numër_N","note":"number_N","order":336,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"numëroj","cat":"V","gf_expression":"mkV \"numëroj\"","id":"numëroj_V","note":"count_V2","order":337,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"nxehtë","cat":"A","gf_expression":"mkA \"nxehtë\"","id":"nxehtë_A","note":"hot_A","order":338,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"në","cat":"Prep","gf_expression":"mkPrep \"në\" accusative","id":"në_Prep","note":"governs accusative","order":339,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"nën","cat":"Prep","gf_expression":"mkPrep \"nën\" accusative","id":"nën_Prep","note":"governs accusative","order":340,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"nënshkruaj","cat":"V","gf_expression":"invariantV \"nënshkruaj\"","id":"nënshkruaj_V","note":"Tosk ref observed: nënshkruan; Compile-safe placeholder pending Albanian paradigm certification.","order":341,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"nënë","cat":"N","gf_expression":"mkN \"nënë\"","id":"nënë_N","note":"mother_N2","order":342,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"nëse","cat":"Subj","gf_expression":"mkSubj \"nëse\"","id":"nëse_Subj","note":"","order":343,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"o","cat":"Interj","gf_expression":"mkInterj \"o\"","id":"o_Interj","note":"Tosk ref observed: o","order":344,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"ose","cat":"Conj","gf_expression":"mkConj \"ose\"","id":"ose_Conj","note":"","order":345,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"pa","cat":"Prep","gf_expression":"mkPrep \"pa\" accusative","id":"pa_Prep","note":"governs accusative","order":346,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"pajtim","cat":"N","gf_expression":"forceGender (invariantN \"pajtim\") masculine","id":"pajtim_N","note":"Tosk ref observed: pajtim; Compile-safe placeholder pending Albanian paradigm certification.","order":347,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pak","cat":"Det","gf_expression":"SN.few_Det","id":"pak_Det","note":"pl","order":348,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"pallto","cat":"N","gf_expression":"mkN \"pallto\"","id":"pallto_N","note":"coat_N","order":349,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pamje","cat":"N","gf_expression":"forceGender (invariantN \"pamje\") feminine","id":"pamje_N","note":"Tosk ref observed: pamja; Compile-safe placeholder pending Albanian paradigm certification.","order":350,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pamundur","cat":"A","gf_expression":"invariantA \"pamundur\"","id":"pamundur_A","note":"Tosk ref observed: pamundur; Compile-safe placeholder pending Albanian paradigm certification.","order":351,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"papritur","cat":"A","gf_expression":"invariantA \"papritur\"","id":"papritur_A","note":"Tosk ref observed: papritur; Compile-safe placeholder pending Albanian paradigm certification.","order":352,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"paqe","cat":"N","gf_expression":"forceGender (mkN \"paqe\") feminine","id":"paqe_N","note":"peace_N; Tosk characteristic form/gender applied","order":353,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"para","cat":"Adv","gf_expression":"mkAdv \"para\"","id":"para_Adv","note":"Tosk ref observed: para","order":354,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"para","cat":"Prep","gf_expression":"mkPrep \"para\" ablative","id":"para_Prep","note":"governs ablative","order":355,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"parim","cat":"N","gf_expression":"forceGender (invariantN \"parim\") masculine","id":"parim_N","note":"Tosk ref observed: parimet; Compile-safe placeholder pending Albanian paradigm certification.","order":356,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"Paris","cat":"PN","gf_expression":"mkPN \"Paris\"","id":"Paris_PN","note":"paris_PN","order":357,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"parë","cat":"A","gf_expression":"invariantA \"parë\"","id":"parë_A","note":"Tosk ref observed: para; Compile-safe placeholder pending Albanian paradigm certification.","order":358,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pas","cat":"Prep","gf_expression":"mkPrep \"pas\" ablative","id":"pas_Prep","note":"governs ablative","order":359,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"pasigurt","cat":"A","gf_expression":"mkA \"pasigurt\"","id":"pasigurt_A","note":"uncertain_A","order":360,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pasqyroj","cat":"V","gf_expression":"invariantV \"pasqyroj\"","id":"pasqyroj_V","note":"Tosk ref observed: pasqyrojnë; Compile-safe placeholder pending Albanian paradigm certification.","order":361,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pastër","cat":"A","gf_expression":"mkA \"pastër\"","id":"pastër_A","note":"clean_A","order":362,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pemë","cat":"N","gf_expression":"mkN \"pemë\"","id":"pemë_N","note":"tree_N","order":363,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pendë","cat":"N","gf_expression":"mkN \"pendë\"","id":"pendë_N","note":"feather_N","order":364,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"person","cat":"N","gf_expression":"mkN \"person\"","id":"person_N","note":"person_N","order":365,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"peshk","cat":"N","gf_expression":"mkN \"peshk\"","id":"peshk_N","note":"fish_N","order":366,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pi","cat":"V","gf_expression":"lin V I.pi_V","id":"pi_V","note":"drink_V2; pi_V","order":367,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"pis","cat":"A","gf_expression":"mkA \"pis\"","id":"pis_A","note":"dirty_A","order":368,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pistë","cat":"N","gf_expression":"forceGender (invariantN \"pistë\") feminine","id":"pistë_N","note":"Tosk ref observed: pistës; Compile-safe placeholder pending Albanian paradigm certification.","order":369,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pjesë","cat":"N","gf_expression":"forceGender (invariantN \"pjesë\") feminine","id":"pjesë_N","note":"Tosk ref observed: pjesën; Compile-safe placeholder pending Albanian paradigm certification.","order":370,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pjesëmarrje","cat":"N","gf_expression":"forceGender (invariantN \"pjesëmarrje\") feminine","id":"pjesëmarrje_N","note":"Tosk ref observed: pjesëmarrje; Compile-safe placeholder pending Albanian paradigm certification.","order":371,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"planet","cat":"N","gf_expression":"mkN \"planet\"","id":"planet_N","note":"planet_N","order":372,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"plastikë","cat":"N","gf_expression":"mkN \"plastikë\"","id":"plastikë_N","note":"plastic_N","order":373,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"plogështi","cat":"N","gf_expression":"forceGender (invariantN \"plogështi\") feminine","id":"plogështi_N","note":"Tosk ref observed: plogështia; Compile-safe placeholder pending Albanian paradigm certification.","order":374,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"plot","cat":"A","gf_expression":"mkA \"plot\"","id":"plot_A","note":"full_A","order":375,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"plot","cat":"Adv","gf_expression":"mkAdv \"plot\"","id":"plot_Adv","note":"Tosk ref observed: plot","order":376,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"pluhur","cat":"N","gf_expression":"mkN \"pluhur\"","id":"pluhur_N","note":"dust_N","order":377,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pluralizm","cat":"N","gf_expression":"forceGender (invariantN \"pluralizm\") masculine","id":"pluralizm_N","note":"Tosk ref observed: pluralizmit; Compile-safe placeholder pending Albanian paradigm certification.","order":378,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pluskoj","cat":"V","gf_expression":"mkV \"pluskoj\"","id":"pluskoj_V","note":"float_V","order":379,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"polic","cat":"N","gf_expression":"mkN \"polic\"","id":"polic_N","note":"policeman_N","order":380,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"politik","cat":"A","gf_expression":"invariantA \"politik\"","id":"politik_A","note":"Tosk ref observed: politike; Compile-safe placeholder pending Albanian paradigm certification.","order":381,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"por","cat":"Conj","gf_expression":"mkConj \"por\"","id":"por_Conj","note":"Tosk ref observed: por","order":382,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"porsaardhur","cat":"A","gf_expression":"invariantA \"porsaardhur\"","id":"porsaardhur_A","note":"Tosk ref observed: porsaardhur; Compile-safe placeholder pending Albanian paradigm certification.","order":383,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"port","cat":"N","gf_expression":"mkN \"port\"","id":"port_N","note":"harbour_N","order":384,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pothuajse","cat":"Adv","gf_expression":"mkAdv \"pothuajse\"","id":"pothuajse_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":385,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"pra","cat":"Conj","gf_expression":"mkConj \"pra\"","id":"pra_Conj","note":"Tosk ref observed: pra","order":386,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"pranvëre","cat":"N","gf_expression":"forceGender (invariantN \"pranvëre\") feminine","id":"pranvëre_N","note":"Tosk ref observed: pranverë; Compile-safe placeholder pending Albanian paradigm certification.","order":387,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"prej","cat":"Prep","gf_expression":"mkPrep \"prej\" ablative","id":"prej_Prep","note":"governs ablative","order":388,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"pres","cat":"V","gf_expression":"mkV \"pres\"","id":"pres_V","note":"cut_V2; wait_V2","order":389,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"prift","cat":"N","gf_expression":"mkN \"prift\"","id":"prift_N","note":"priest_N","order":390,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pronë","cat":"N","gf_expression":"forceGender (invariantN \"pronë\") feminine","id":"pronë_N","note":"Tosk ref observed: pronës; Compile-safe placeholder pending Albanian paradigm certification.","order":391,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pse","cat":"IAdv","gf_expression":"mkIAdv \"pse\"","id":"pse_IAdv","note":"","order":392,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"pushtet","cat":"N","gf_expression":"forceGender (invariantN \"pushtet\") masculine","id":"pushtet_N","note":"Tosk ref observed: pushtetit; Compile-safe placeholder pending Albanian paradigm certification.","order":393,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pyes","cat":"V","gf_expression":"mkV \"pyes\"","id":"pyes_V","note":"ask_V2Q","order":394,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pyetje","cat":"N","gf_expression":"mkN \"pyetje\"","id":"pyetje_N","note":"question_N","order":395,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pyll","cat":"N","gf_expression":"mkN \"pyll\"","id":"pyll_N","note":"forest_N","order":396,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"pëkundrazi","cat":"Adv","gf_expression":"mkAdv \"pëkundrazi\"","id":"pëkundrazi_Adv","note":"Tosk ref observed: përkundrazi","order":397,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"pëlqej","cat":"V","gf_expression":"mkV \"pëlqej\"","id":"pëlqej_V","note":"like_V2","order":398,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"për","cat":"Prep","gf_expression":"mkPrep \"për\" accusative","id":"për_Prep","note":"governs accusative","order":399,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"përdorim","cat":"N","gf_expression":"forceGender (invariantN \"përdorim\") masculine","id":"përdorim_N","note":"Tosk ref observed: përdorim, përdorimit; Compile-safe placeholder pending Albanian paradigm certification.","order":400,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"përfundimtar","cat":"A","gf_expression":"invariantA \"përfundimtar\"","id":"përfundimtar_A","note":"Tosk ref observed: përfundimtare; Compile-safe placeholder pending Albanian paradigm certification.","order":401,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"përgjigjem","cat":"V","gf_expression":"mkV \"përgjigjem\"","id":"përgjigjem_V","note":"answer_V2S","order":402,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"përmes","cat":"Prep","gf_expression":"mkPrep \"përmes\" ablative","id":"përmes_Prep","note":"governs ablative","order":403,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"përpara","cat":"Prep","gf_expression":"mkPrep \"përpara\" ablative","id":"përpara_Prep","note":"governs ablative","order":404,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"përpiqem","cat":"V","gf_expression":"invariantV \"përpiqem\"","id":"përpiqem_V","note":"Tosk ref observed: përpiqeni; Compile-safe placeholder pending Albanian paradigm certification.","order":405,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"përveç","cat":"Prep","gf_expression":"mkPrep \"përveç\" ablative","id":"përveç_Prep","note":"governs ablative","order":406,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"përziej","cat":"V","gf_expression":"invariantV \"përziej\"","id":"përziej_V","note":"Tosk ref observed: përzier; Compile-safe placeholder pending Albanian paradigm certification.","order":407,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"pështyj","cat":"V","gf_expression":"mkV \"pështyj\"","id":"pështyj_V","note":"spit_V","order":408,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qafë","cat":"N","gf_expression":"mkN \"qafë\"","id":"qafë_N","note":"neck_N","order":409,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qen","cat":"N","gf_expression":"mkN \"qen\"","id":"qen_N","note":"dog_N","order":410,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qep","cat":"V","gf_expression":"mkV \"qep\"","id":"qep_V","note":"sew_V","order":411,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qesh","cat":"V","gf_expression":"mkV \"qesh\"","id":"qesh_V","note":"laugh_V","order":412,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qeveri","cat":"N","gf_expression":"forceGender (invariantN \"qeveri\") feminine","id":"qeveri_N","note":"Tosk ref observed: qeverive; Compile-safe placeholder pending Albanian paradigm certification.","order":413,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"qiell","cat":"N","gf_expression":"mkN \"qiell\"","id":"qiell_N","note":"sky_N","order":414,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qilim","cat":"N","gf_expression":"mkN \"qilim\"","id":"qilim_N","note":"carpet_N","order":415,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qull","cat":"V","gf_expression":"invariantV \"qull\"","id":"qull_V","note":"Tosk ref observed: qullur; Compile-safe placeholder pending Albanian paradigm certification.","order":416,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"qumësht","cat":"N","gf_expression":"mkN \"qumësht\"","id":"qumësht_N","note":"milk_N","order":417,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"qytet","cat":"N","gf_expression":"mkN \"qytet\"","id":"qytet_N","note":"city_N","order":418,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"që","cat":"Conj","gf_expression":"mkConj \"që\"","id":"që_Conj","note":"Tosk ref observed: që","order":419,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"që","cat":"Prep","gf_expression":"mkPrep \"që\" accusative","id":"që_Prep","note":"Tosk ref observed: që","order":420,"quality":"direct-with-government","source":"Tosk reference"}
+{"base":"që","cat":"Subj","gf_expression":"mkSubj \"që\"","id":"që_Subj","note":"","order":421,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"qëndroj","cat":"V","gf_expression":"mkV \"qëndroj\"","id":"qëndroj_V","note":"stand_V","order":422,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"radio","cat":"N","gf_expression":"mkN \"radio\"","id":"radio_N","note":"radio_N","order":423,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rast","cat":"N","gf_expression":"forceGender (invariantN \"rast\") masculine","id":"rast_N","note":"Tosk ref observed: rast; Compile-safe placeholder pending Albanian paradigm certification.","order":424,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"re","cat":"N","gf_expression":"mkN \"re\"","id":"re_N","note":"cloud_N","order":425,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rend","cat":"N","gf_expression":"forceGender (invariantN \"rend\") masculine","id":"rend_N","note":"Tosk ref observed: rendi; Compile-safe placeholder pending Albanian paradigm certification.","order":426,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"republikë","cat":"N","gf_expression":"forceGender (invariantN \"republikë\") feminine","id":"republikë_N","note":"Tosk ref observed: Republikës, republika, republikën, republikës; Compile-safe placeholder pending Albanian paradigm certification.","order":427,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"respektim","cat":"N","gf_expression":"forceGender (invariantN \"respektim\") masculine","id":"respektim_N","note":"Tosk ref observed: respektimit; Compile-safe placeholder pending Albanian paradigm certification.","order":428,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"restorant","cat":"N","gf_expression":"mkN \"restorant\"","id":"restorant_N","note":"restaurant_N","order":429,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ri","cat":"A","gf_expression":"mkA \"ri\"","id":"ri_A","note":"new_A; young_A","order":430,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rojë","cat":"N","gf_expression":"forceGender (invariantN \"rojë\") feminine","id":"rojë_N","note":"Tosk ref observed: rojat; Compile-safe placeholder pending Albanian paradigm certification.","order":431,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"rom","cat":"A","gf_expression":"invariantA \"rom\"","id":"rom_A","note":"Tosk ref observed: rome; Compile-safe placeholder pending Albanian paradigm certification.","order":432,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"rregull","cat":"N","gf_expression":"mkN \"rregull\"","id":"rregull_N","note":"rule_N","order":433,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rregullohem","cat":"V","gf_expression":"invariantV \"rregullohem\"","id":"rregullohem_V","note":"Tosk ref observed: rregullohen, rregullohet; Compile-safe placeholder pending Albanian paradigm certification.","order":434,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"rrjedh","cat":"V","gf_expression":"mkV \"rrjedh\"","id":"rrjedh_V","note":"flow_V","order":435,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rrugë","cat":"N","gf_expression":"mkN \"rrugë\"","id":"rrugë_N","note":"road_N","order":436,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rrumbullakët","cat":"A","gf_expression":"mkA \"rrumbullakët\"","id":"rrumbullakët_A","note":"round_A","order":437,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rrëmbej","cat":"V","gf_expression":"invariantV \"rrëmbej\"","id":"rrëmbej_V","note":"Tosk ref observed: rrëmbeni; Compile-safe placeholder pending Albanian paradigm certification.","order":438,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"rrënjë","cat":"N","gf_expression":"mkN \"rrënjë\"","id":"rrënjë_N","note":"root_N","order":439,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rrëzohem","cat":"V","gf_expression":"mkV \"rrëzohem\"","id":"rrëzohem_V","note":"fall_V","order":440,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rëndë","cat":"A","gf_expression":"mkA \"rëndë\"","id":"rëndë_A","note":"heavy_A","order":441,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rëndësishëm","cat":"A","gf_expression":"mkA \"rëndësishëm\"","id":"rëndësishëm_A","note":"important_A","order":442,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"rërë","cat":"N","gf_expression":"mkN \"rërë\"","id":"rërë_N","note":"sand_N","order":443,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"sa","cat":"Adv","gf_expression":"mkAdv \"sa\"","id":"sa_Adv","note":"Tosk ref observed: sa","order":444,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"sa","cat":"Conj","gf_expression":"mkConj \"sa\"","id":"sa_Conj","note":"Tosk ref observed: sa","order":445,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"sa","cat":"IAdv","gf_expression":"mkIAdv \"sa\"","id":"sa_IAdv","note":"","order":446,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"sa","cat":"IDet","gf_expression":"SN.how8many_IDet","id":"sa_IDet","note":"","order":447,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"saktë","cat":"A","gf_expression":"mkA \"saktë\"","id":"saktë_A","note":"correct_A","order":448,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"se","cat":"Conj","gf_expression":"mkConj \"se\"","id":"se_Conj","note":"Tosk ref observed: se","order":449,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"sepse","cat":"Conj","gf_expression":"mkConj \"sepse\"","id":"sepse_Conj","note":"Tosk ref observed: sepse","order":450,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"sepse","cat":"Subj","gf_expression":"mkSubj \"sepse\"","id":"sepse_Subj","note":"","order":451,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"serb","cat":"A","gf_expression":"invariantA \"serb\"","id":"serb_A","note":"Tosk ref observed: serbe; Compile-safe placeholder pending Albanian paradigm certification.","order":452,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shef","cat":"N","gf_expression":"mkN \"shef\"","id":"shef_N","note":"boss_N","order":453,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shes","cat":"V","gf_expression":"mkV \"shes\"","id":"shes_V","note":"sell_V3","order":454,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shetëror","cat":"A","gf_expression":"invariantA \"shetëror\"","id":"shetëror_A","note":"Tosk ref observed: shtetëror; Compile-safe placeholder pending Albanian paradigm certification.","order":455,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shi","cat":"N","gf_expression":"forceGender (mkN \"shi\") masculine","id":"shi_N","note":"rain_N; Tosk characteristic form/gender applied","order":456,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"shikoj","cat":"V","gf_expression":"mkV \"shikoj\"","id":"shikoj_V","note":"watch_V2","order":457,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkak","cat":"N","gf_expression":"forceGender (invariantN \"shkak\") masculine","id":"shkak_N","note":"Tosk ref observed: shkaku; Compile-safe placeholder pending Albanian paradigm certification.","order":458,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shkencë","cat":"N","gf_expression":"mkN \"shkencë\"","id":"shkencë_N","note":"science_N","order":459,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkoj","cat":"V","gf_expression":"mkV \"shkoj\"","id":"shkoj_V","note":"go_V","order":460,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkollë","cat":"N","gf_expression":"mkN \"shkollë\"","id":"shkollë_N","note":"school_N","order":461,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkop","cat":"N","gf_expression":"mkN \"shkop\"","id":"shkop_N","note":"stick_N","order":462,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkruaj","cat":"V","gf_expression":"mkV \"shkruaj\"","id":"shkruaj_V","note":"write_V2","order":463,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkruhem","cat":"V","gf_expression":"invariantV \"shkruhem\"","id":"shkruhem_V","note":"Tosk ref observed: shkruhej; Compile-safe placeholder pending Albanian paradigm certification.","order":464,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shkurtër","cat":"A","gf_expression":"mkA \"shkurtër\"","id":"shkurtër_A","note":"short_A","order":465,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shkëlqej","cat":"V","gf_expression":"invariantV \"shkëlqej\"","id":"shkëlqej_V","note":"Tosk ref observed: shkëlqente; Compile-safe placeholder pending Albanian paradigm certification.","order":466,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shkëmb","cat":"N","gf_expression":"mkN \"shkëmb\"","id":"shkëmb_N","note":"rock_N","order":467,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shoh","cat":"V","gf_expression":"lin V I.shoh_V","id":"shoh_V","note":"see_V2; shoh_V","order":468,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"shoqëri","cat":"N","gf_expression":"forceGender (invariantN \"shoqëri\") feminine","id":"shoqëri_N","note":"Tosk ref observed: shoqërisë; Compile-safe placeholder pending Albanian paradigm certification.","order":469,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shoqëror","cat":"A","gf_expression":"invariantA \"shoqëror\"","id":"shoqëror_A","note":"Tosk ref observed: shoqërore; Compile-safe placeholder pending Albanian paradigm certification.","order":470,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shpinë","cat":"N","gf_expression":"mkN \"shpinë\"","id":"shpinë_N","note":"back_N","order":471,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shpresoj","cat":"V","gf_expression":"mkV \"shpresoj\"","id":"shpresoj_V","note":"hope_VS","order":472,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shpëtim","cat":"N","gf_expression":"forceGender (invariantN \"shpëtim\") masculine","id":"shpëtim_N","note":"Tosk ref observed: shpëtimin; Compile-safe placeholder pending Albanian paradigm certification.","order":473,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shqip","cat":"A","gf_expression":"invariantA \"shqip\"","id":"shqip_A","note":"Tosk ref observed: shqipe; Compile-safe placeholder pending Albanian paradigm certification.","order":474,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"Shqipëri","cat":"N","gf_expression":"forceGender (invariantN \"Shqipëri\") feminine","id":"Shqipëri_N","note":"Tosk ref observed: Shqipëri, Shqipërisë; Compile-safe placeholder pending Albanian paradigm certification.","order":475,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shtet","cat":"N","gf_expression":"forceGender (invariantN \"shtet\") masculine","id":"shtet_N","note":"Tosk ref observed: shtet; Compile-safe placeholder pending Albanian paradigm certification.","order":476,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shtetëror","cat":"A","gf_expression":"invariantA \"shtetëror\"","id":"shtetëror_A","note":"Tosk ref observed: shtetërore; Compile-safe placeholder pending Albanian paradigm certification.","order":477,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shtoj","cat":"V","gf_expression":"mkV \"shtoj\"","id":"shtoj_V","note":"add_V3","order":478,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shtrydh","cat":"V","gf_expression":"mkV \"shtrydh\"","id":"shtrydh_V","note":"squeeze_V2","order":479,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shtyj","cat":"V","gf_expression":"mkV \"shtyj\"","id":"shtyj_V","note":"push_V2","order":480,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shtëpi","cat":"N","gf_expression":"mkN \"shtëpi\"","id":"shtëpi_N","note":"house_N","order":481,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shumetnik","cat":"A","gf_expression":"invariantA \"shumetnik\"","id":"shumetnik_A","note":"Tosk ref observed: shumetnik; Compile-safe placeholder pending Albanian paradigm certification.","order":482,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shumica","cat":"Predet","gf_expression":"SN.most_Predet","id":"shumica_Predet","note":"","order":483,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"shumë","cat":"Adv","gf_expression":"mkAdv \"shumë\"","id":"shumë_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":484,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"shumë","cat":"Det","gf_expression":"SN.many_Det","id":"shumë_1_Det","note":"pl","order":485,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"shumë","cat":"Det","gf_expression":"SN.much_Det","id":"shumë_2_Det","note":"sg","order":486,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"shëmbëllë","cat":"N","gf_expression":"forceGender (invariantN \"shëmbëllë\") feminine","id":"shëmbëllë_N","note":"Tosk ref observed: shëmbëllën; Compile-safe placeholder pending Albanian paradigm certification.","order":487,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"shëmtuar","cat":"A","gf_expression":"mkA \"shëmtuar\"","id":"shëmtuar_A","note":"ugly_A","order":488,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"shëtis","cat":"V","gf_expression":"mkV \"shëtis\"","id":"shëtis_V","note":"walk_V","order":489,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"si","cat":"Conj","gf_expression":"mkConj \"si\"","id":"si_Conj","note":"Tosk ref observed: si","order":490,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"si","cat":"IAdv","gf_expression":"mkIAdv \"si\"","id":"si_IAdv","note":"","order":491,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"siguroj","cat":"V","gf_expression":"invariantV \"siguroj\"","id":"siguroj_V","note":"Tosk ref observed: siguron; Compile-safe placeholder pending Albanian paradigm certification.","order":492,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"sikur","cat":"Conj","gf_expression":"mkConj \"sikur\"","id":"sikur_Conj","note":"Tosk ref observed: sikur","order":493,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"simbol","cat":"N","gf_expression":"invariantN \"simbol\"","id":"simbol_N","note":"Tosk ref observed: simbolet, simboleve; Compile-safe placeholder pending Albanian paradigm certification.","order":494,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"sipër","cat":"Prep","gf_expression":"mkPrep \"sipër\" ablative","id":"sipër_Prep","note":"governs ablative","order":495,"quality":"exact","source":"RGL StructuralSqiClause"}
+{"base":"sobë","cat":"N","gf_expression":"mkN \"sobë\"","id":"sobë_N","note":"stove_N","order":496,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"social","cat":"A","gf_expression":"invariantA \"social\"","id":"social_A","note":"Tosk ref observed: sociale; Compile-safe placeholder pending Albanian paradigm certification.","order":497,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"sot","cat":"Adv","gf_expression":"mkAdv \"sot\"","id":"sot_Adv","note":"today_Adv","order":498,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"sqotë","cat":"N","gf_expression":"forceGender (invariantN \"sqotë\") feminine","id":"sqotë_N","note":"Tosk ref observed: sqota; Compile-safe placeholder pending Albanian paradigm certification.","order":499,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"status","cat":"N","gf_expression":"forceGender (invariantN \"status\") masculine","id":"status_N","note":"Tosk ref observed: statusin; Compile-safe placeholder pending Albanian paradigm certification.","order":500,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"stemë","cat":"N","gf_expression":"forceGender (invariantN \"stemë\") feminine","id":"stemë_N","note":"Tosk ref observed: stema; Compile-safe placeholder pending Albanian paradigm certification.","order":501,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"stilolaps","cat":"N","gf_expression":"mkN \"stilolaps\"","id":"stilolaps_N","note":"pen_N","order":502,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"student","cat":"N","gf_expression":"mkN \"student\"","id":"student_N","note":"student_N","order":503,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"sukses","cat":"N","gf_expression":"forceGender (invariantN \"sukses\") masculine","id":"sukses_N","note":"Tosk ref observed: sukses; Compile-safe placeholder pending Albanian paradigm certification.","order":504,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"sundim","cat":"N","gf_expression":"forceGender (invariantN \"sundim\") masculine","id":"sundim_N","note":"Tosk ref observed: sundimit; Compile-safe placeholder pending Albanian paradigm certification.","order":505,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"svetigradas","cat":"N","gf_expression":"forceGender (invariantN \"svetigradas\") masculine","id":"svetigradas_N","note":"Tosk ref observed: sfetigradas; Compile-safe placeholder pending Albanian paradigm certification.","order":506,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"sy","cat":"N","gf_expression":"mkN \"sy\"","id":"sy_N","note":"eye_N","order":507,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"taman","cat":"Adv","gf_expression":"mkAdv \"taman\"","id":"taman_Adv","note":"Tosk ref observed: taman","order":508,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"tani","cat":"Adv","gf_expression":"mkAdv \"tani\"","id":"tani_Adv","note":"now_Adv","order":509,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"tashmë","cat":"Adv","gf_expression":"mkAdv \"tashmë\"","id":"tashmë_Adv","note":"already_Adv","order":510,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"tavan","cat":"N","gf_expression":"mkN \"tavan\"","id":"tavan_N","note":"ceiling_N","order":511,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"televizor","cat":"N","gf_expression":"mkN \"televizor\"","id":"televizor_N","note":"television_N","order":512,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"tepër","cat":"Adv","gf_expression":"mkAdv \"tepër\"","id":"tepër_Adv","note":"AdA/AdV/AdN normalized to Adv where applicable","order":513,"quality":"exact-normalized","source":"RGL StructuralSqiClause"}
+{"base":"thatë","cat":"A","gf_expression":"mkA \"thatë\"","id":"thatë_A","note":"dry_A","order":514,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"them","cat":"V","gf_expression":"lin V I.them_V","id":"them_V","note":"say_VS; them_V","order":515,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"themelor","cat":"A","gf_expression":"invariantA \"themelor\"","id":"themelor_A","note":"Tosk ref observed: themelore; Compile-safe placeholder pending Albanian paradigm certification.","order":516,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"ther","cat":"V","gf_expression":"mkV \"ther\"","id":"ther_V","note":"stab_V2","order":517,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"thith","cat":"V","gf_expression":"mkV \"thith\"","id":"thith_V","note":"suck_V2","order":518,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"thua","cat":"N","gf_expression":"mkN \"thua\"","id":"thua_N","note":"fingernail_N","order":519,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"thyej","cat":"V","gf_expression":"mkV \"thyej\"","id":"thyej_V","note":"break_V2","order":520,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ti","cat":"Pron","gf_expression":"SN.youSg_Pron","id":"ti_Pron","note":"","order":521,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"tjetër","cat":"A","gf_expression":"invariantA \"tjetër\"","id":"tjetër_A","note":"Tosk ref observed: tjera, tjetër; Compile-safe placeholder pending Albanian paradigm certification.","order":522,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"tjetër","cat":"N","gf_expression":"forceGender (invariantN \"tjetër\") masculine","id":"tjetër_N","note":"Tosk ref observed: tjerave; Compile-safe placeholder pending Albanian paradigm certification.","order":523,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"tokë","cat":"N","gf_expression":"forceGender (mkN \"tokë\") feminine","id":"tokë_N","note":"earth_N; Tosk characteristic form/gender applied","order":524,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"trashë","cat":"A","gf_expression":"mkA \"trashë\"","id":"trashë_A","note":"thick_A","order":525,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"treg","cat":"N","gf_expression":"forceGender (invariantN \"treg\") masculine","id":"treg_N","note":"Tosk ref observed: tregut; Compile-safe placeholder pending Albanian paradigm certification.","order":526,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"tren","cat":"N","gf_expression":"mkN \"tren\"","id":"tren_N","note":"train_N","order":527,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"trishtuar","cat":"A","gf_expression":"invariantA \"trishtuar\"","id":"trishtuar_A","note":"Tosk ref observed: trishtuar; Compile-safe placeholder pending Albanian paradigm certification.","order":528,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"tryezë","cat":"N","gf_expression":"mkN \"tryezë\"","id":"tryezë_N","note":"table_N","order":529,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"turk","cat":"A","gf_expression":"invariantA \"turk\"","id":"turk_A","note":"Tosk ref observed: turke; Compile-safe placeholder pending Albanian paradigm certification.","order":530,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"turp","cat":"N","gf_expression":"forceGender (invariantN \"turp\") masculine","id":"turp_N","note":"Tosk ref observed: turp; Compile-safe placeholder pending Albanian paradigm certification.","order":531,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"tym","cat":"N","gf_expression":"mkN \"tym\"","id":"tym_N","note":"smoke_N","order":532,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"të","cat":"Conj","gf_expression":"mkConj \"të\"","id":"të_Conj","note":"Tosk ref observed: t'i, t'ia, t'ju, ta, të","order":533,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"tërheq","cat":"V","gf_expression":"mkV \"tërheq\"","id":"tërheq_V","note":"pull_V2","order":534,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"tërheqje","cat":"N","gf_expression":"forceGender (invariantN \"tërheqje\") feminine","id":"tërheqje_N","note":"Tosk ref observed: tërheqjen; Compile-safe placeholder pending Albanian paradigm certification.","order":535,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"udhëheqje","cat":"N","gf_expression":"forceGender (invariantN \"udhëheqje\") feminine","id":"udhëheqje_N","note":"Tosk ref observed: udhëheqjen; Compile-safe placeholder pending Albanian paradigm certification.","order":536,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"udhëtoj","cat":"V","gf_expression":"mkV \"udhëtoj\"","id":"udhëtoj_V","note":"travel_V","order":537,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ujë","cat":"N","gf_expression":"mkN \"ujë\"","id":"ujë_N","note":"water_N","order":538,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"ulem","cat":"V","gf_expression":"mkV \"ulem\"","id":"ulem_V","note":"sit_V","order":539,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"universitet","cat":"N","gf_expression":"mkN \"universitet\"","id":"universitet_N","note":"university_N","order":540,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"unë","cat":"Pron","gf_expression":"SN.i_Pron","id":"unë_Pron","note":"","order":541,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"urrej","cat":"V","gf_expression":"lin V I.urrej_V","id":"urrej_V","note":"hate_V2; urrej_V","order":542,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"ushtar","cat":"N","gf_expression":"forceGender (invariantN \"ushtar\") masculine","id":"ushtar_N","note":"Tosk ref observed: ushtarët, ushtarëve; Compile-safe placeholder pending Albanian paradigm certification.","order":543,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"vaj","cat":"N","gf_expression":"mkN \"vaj\"","id":"vaj_N","note":"oil_N","order":544,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vajzë","cat":"N","gf_expression":"mkN \"vajzë\"","id":"vajzë_N","note":"girl_N","order":545,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"varem","cat":"V","gf_expression":"invariantV \"varem\"","id":"varem_V","note":"Tosk ref observed: varet; Compile-safe placeholder pending Albanian paradigm certification.","order":546,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"varkë","cat":"N","gf_expression":"mkN \"varkë\"","id":"varkë_N","note":"boat_N","order":547,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vdes","cat":"V","gf_expression":"mkV \"vdes\"","id":"vdes_V","note":"die_V","order":548,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vend","cat":"N","gf_expression":"mkN \"vend\"","id":"vend_N","note":"country_N","order":549,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vendos","cat":"V","gf_expression":"mkV \"vendos\"","id":"vendos_V","note":"put_V2","order":550,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"verdhë","cat":"A","gf_expression":"mkA \"verdhë\"","id":"verdhë_A","note":"yellow_A","order":551,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"verë","cat":"N","gf_expression":"mkN \"verë\"","id":"verë_N","note":"wine_N","order":552,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vesh","cat":"N","gf_expression":"mkN \"vesh\"","id":"vesh_N","note":"ear_N","order":553,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vetëm","cat":"Adv","gf_expression":"mkAdv \"vetëm\"","id":"vetëm_Adv","note":"Tosk ref observed: vetëm","order":554,"quality":"direct-invariant","source":"Tosk reference"}
+{"base":"vetëm","cat":"Predet","gf_expression":"SN.only_Predet","id":"vetëm_Predet","note":"","order":555,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"vezë","cat":"N","gf_expression":"mkN \"vezë\"","id":"vezë_N","note":"egg_N","order":556,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vij","cat":"V","gf_expression":"lin V I.vij_V","id":"vij_V","note":"come_V; vij_V","order":557,"quality":"exact-irregular","source":"RGL IrregSqi; RGL LexiconSqi"}
+{"base":"vit","cat":"N","gf_expression":"mkN \"vit\"","id":"vit_N","note":"year_N","order":558,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vjell","cat":"V","gf_expression":"mkV \"vjell\"","id":"vjell_V","note":"vomit_V","order":559,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vjeshtë","cat":"N","gf_expression":"forceGender (invariantN \"vjeshtë\") feminine","id":"vjeshtë_N","note":"Tosk ref observed: vjeshta, vjeshtë, vjeshtës; Compile-safe placeholder pending Albanian paradigm certification.","order":560,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"vjetër","cat":"A","gf_expression":"mkA \"vjetër\"","id":"vjetër_A","note":"old_A","order":561,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vlerë","cat":"N","gf_expression":"forceGender (invariantN \"vlerë\") feminine","id":"vlerë_N","note":"Tosk ref observed: vlerë; Compile-safe placeholder pending Albanian paradigm certification.","order":562,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"vogël","cat":"A","gf_expression":"mkA \"vogël\"","id":"vogël_A","note":"small_A","order":563,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vranësirë","cat":"N","gf_expression":"forceGender (invariantN \"vranësirë\") feminine","id":"vranësirë_N","note":"Tosk ref observed: vranësirat; Compile-safe placeholder pending Albanian paradigm certification.","order":564,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"vrapoj","cat":"V","gf_expression":"mkV \"vrapoj\"","id":"vrapoj_V","note":"run_V","order":565,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vras","cat":"V","gf_expression":"mkV \"vras\" \"vrarë\"","id":"vras_V","note":"kill_V2; Tosk participle applied","order":566,"quality":"rgl+reference-characteristic","source":"RGL LexiconSqi"}
+{"base":"vulos","cat":"V","gf_expression":"invariantV \"vulos\"","id":"vulos_V","note":"Tosk ref observed: vulosur; Compile-safe placeholder pending Albanian paradigm certification.","order":567,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"vë","cat":"V","gf_expression":"lin V I.ve_V","id":"vë_V","note":"ve_V","order":568,"quality":"exact-irregular","source":"RGL IrregSqi"}
+{"base":"vëlla","cat":"N","gf_expression":"mkN \"vëlla\"","id":"vëlla_N","note":"brother_N2","order":569,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"vërtetë","cat":"A","gf_expression":"invariantA \"vërtetë\"","id":"vërtetë_A","note":"Tosk ref observed: vërtetë; Compile-safe placeholder pending Albanian paradigm certification.","order":570,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"xhade","cat":"N","gf_expression":"forceGender (invariantN \"xhade\") feminine","id":"xhade_N","note":"Tosk ref observed: xhadesë; Compile-safe placeholder pending Albanian paradigm certification.","order":571,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"yll","cat":"N","gf_expression":"mkN \"yll\"","id":"yll_N","note":"star_N","order":572,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zbavitës","cat":"A","gf_expression":"mkA \"zbavitës\"","id":"zbavitës_A","note":"fun_AV","order":573,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zemër","cat":"N","gf_expression":"mkN \"zemër\"","id":"zemër_N","note":"heart_N","order":574,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zgjuar","cat":"A","gf_expression":"mkA \"zgjuar\"","id":"zgjuar_A","note":"clever_A","order":575,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zhvillim","cat":"N","gf_expression":"forceGender (invariantN \"zhvillim\") masculine","id":"zhvillim_N","note":"Tosk ref observed: zhvillimin; Compile-safe placeholder pending Albanian paradigm certification.","order":576,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"zi","cat":"A","gf_expression":"mkA \"zi\"","id":"zi_A","note":"black_A","order":577,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zjarr","cat":"N","gf_expression":"mkN \"zjarr\"","id":"zjarr_N","note":"fire_N","order":578,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zjarrtë","cat":"A","gf_expression":"invariantA \"zjarrtë\"","id":"zjarrtë_A","note":"Tosk ref observed: zjarrtë; Compile-safe placeholder pending Albanian paradigm certification.","order":579,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"zog","cat":"N","gf_expression":"mkN \"zog\"","id":"zog_N","note":"bird_N","order":580,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zorrë","cat":"N","gf_expression":"mkN \"zorrë\"","id":"zorrë_N","note":"guts_N","order":581,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"zot","cat":"N","gf_expression":"forceGender (invariantN \"zot\") masculine","id":"zot_N","note":"Tosk ref observed: Zoti; Compile-safe placeholder pending Albanian paradigm certification.","order":582,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"zyrtar","cat":"A","gf_expression":"invariantA \"zyrtar\"","id":"zyrtar_A","note":"Tosk ref observed: zyrtar, zyrtare; Compile-safe placeholder pending Albanian paradigm certification.","order":583,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"zëmër","cat":"N","gf_expression":"forceGender (invariantN \"zëmër\") feminine","id":"zëmër_N","note":"Tosk ref observed: zëmrat; Compile-safe placeholder pending Albanian paradigm certification.","order":584,"quality":"compile-safe-placeholder","source":"Tosk reference"}
+{"base":"çati","cat":"N","gf_expression":"mkN \"çati\"","id":"çati_N","note":"roof_N","order":585,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"çdo","cat":"Det","gf_expression":"SN.every_Det","id":"çdo_Det","note":"sg","order":586,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"çelik","cat":"N","gf_expression":"mkN \"çelik\"","id":"çelik_N","note":"steel_N","order":587,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"çfarë","cat":"IP","gf_expression":"SN.whatPl_IP","id":"çfarë_1_IP","note":"pl","order":588,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"çfarë","cat":"IP","gf_expression":"SN.whatSg_IP","id":"çfarë_2_IP","note":"sg","order":589,"quality":"exact","source":"RGL StructuralSqiNominal"}
+{"base":"çizme","cat":"N","gf_expression":"mkN \"çizme\"","id":"çizme_N","note":"boot_N","order":590,"quality":"exact","source":"RGL LexiconSqi"}
+{"base":"çorap","cat":"N","gf_expression":"mkN \"çorap\"","id":"çorap_N","note":"sock_N","order":591,"quality":"exact","source":"RGL LexiconSqi"}

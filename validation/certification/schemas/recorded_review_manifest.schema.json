@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "albanian-c10-recorded-review-v1",
+  "type": "object",
+  "required": ["schema", "campaign_level", "row_count", "working_tree_lock_sha256", "language_variety", "reviewed_case_ids_sha256"],
+  "properties": {
+    "schema": {"const": "albanian-c10-recorded-review-v1"},
+    "campaign_level": {"enum": ["G1", "G2", "G3"]},
+    "row_count": {"type": "integer", "minimum": 1},
+    "working_tree_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "language_variety": {"const": "Standard Albanian"},
+    "reviewed_case_ids_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

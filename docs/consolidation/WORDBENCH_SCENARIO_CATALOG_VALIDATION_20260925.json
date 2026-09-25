@@ -1,0 +1,13 @@
+{
+  "validated_with": "GF Wordbench snapshot 20260925-123301 build_profile_scenario_catalog",
+  "result": "PASS",
+  "registered_total": 142,
+  "required": 52,
+  "optional": 90,
+  "normal_catalog_expected_failure_suites": 0,
+  "notes": [
+    "four C9/C1 positive scripts published under validation/scenarios",
+    "input SHA locks verified",
+    "morphology-max-negative retained outside normal catalog"
+  ]
+}

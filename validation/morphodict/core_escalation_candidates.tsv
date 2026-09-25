@@ -1,0 +1,3 @@
+case_id	category	base	observed_forms	current_smart_class	reason	status
+C1TRIAGE-filloj_V	V	filloj	fillojë,filluan,filluar	mkV028	no numbered class matched all recorded evidence in the conservative static evaluator; determine whether this is an evaluator/mapping gap, source issue, irregular lexeme, or genuinely missing productive class before opening a C1 class request	TRIAGE_REQUIRED
+C1TRIAGE-tjetër_N	N	tjetër	tjerave	mkN137	no numbered class matched all recorded evidence in the conservative static evaluator; determine whether this is an evaluator/mapping gap, source issue, irregular lexeme, or genuinely missing productive class before opening a C1 class request	TRIAGE_REQUIRED

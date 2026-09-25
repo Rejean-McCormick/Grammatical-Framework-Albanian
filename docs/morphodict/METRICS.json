@@ -1,0 +1,76 @@
+{
+  "schema_version": "METRICS-SQI-MAX-1",
+  "campaign_id": "CMP-C2-MAX-20260925",
+  "generated": "2026-09-25",
+  "baseline_declared": {
+    "gf": "3.12",
+    "wordbench": "1.3.4",
+    "targets": "58/58",
+    "scenarios": "52/52",
+    "tag": "albanian-s02-green-20260925"
+  },
+  "active_before": 592,
+  "active_after": 560,
+  "placeholder_before": 155,
+  "placeholder_after": 0,
+  "placeholders_resolved_to_explicit_existing_class": 123,
+  "placeholders_removed_to_blocked_queue": 32,
+  "blocked_breakdown": {
+    "BLOCKED_INSUFFICIENT_EVIDENCE": 27,
+    "BLOCKED_SOURCE_CONFLICT": 5
+  },
+  "certification_counts": {
+    "C2": 254,
+    "C1": 306
+  },
+  "certified_C6": 0,
+  "variants_count_static": 0,
+  "unprovenanced_active_count": 0,
+  "unwaived_multiword_active_count": 0,
+  "source_universe_candidate_records": 7079,
+  "source_universe_terminal_states": {
+    "BLOCKED_CERTIFICATION_PENDING": 809,
+    "EXCLUDED_RGL_MAPPING": 5,
+    "BLOCKED_INSUFFICIENT_EVIDENCE": 4424,
+    "EXCLUDED_CATEGORY": 5,
+    "BLOCKED_SOURCE_CONFLICT": 5,
+    "EXCLUDED_MULTIWORD": 1831
+  },
+  "source_universe_unclassified": 0,
+  "category_counts": {
+    "A": 81,
+    "Adv": 26,
+    "Conj": 12,
+    "Det": 6,
+    "IAdv": 5,
+    "IDet": 1,
+    "IP": 4,
+    "IQuant": 1,
+    "Interj": 2,
+    "N": 255,
+    "NP": 5,
+    "PN": 2,
+    "Predet": 3,
+    "Prep": 20,
+    "Pron": 7,
+    "Quant": 3,
+    "Subj": 5,
+    "V": 122
+  },
+  "quality_counts": {
+    "direct-invariant": 23,
+    "direct-with-government": 3,
+    "evidence-matched-explicit-class": 123,
+    "exact": 367,
+    "exact-irregular": 22,
+    "exact-normalized": 10,
+    "rgl+reference-characteristic": 11,
+    "rgl-derived-explicit": 1
+  },
+  "limitations": [
+    "GF executable is unavailable in this build environment; no new GF 3.12 compile is claimed.",
+    "No entry is promoted to C6 by static analysis alone.",
+    "table_signature remains null until native GF introspection produces canonical tables.",
+    "UT Austin source bundle has no explicit redistribution licence in supplied material; it is used as review evidence only."
+  ]
+}

@@ -12,7 +12,7 @@ lin
   } ;
 
   QuestSlash ip cl = {
-    s = \\t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol
+    s = \\t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol ++ cl.gapPost ! ip.a
   } ;
 
   QuestIAdv iadv cl = {
@@ -25,8 +25,8 @@ lin
   } ;
 
   IdetCN idet cn = {
-    s = \\c => idet.s ! c ! cn.g ++ cn.s ! Indef ! c ! idet.n ;
-    a = agrgP3 cn.g idet.n
+    s = \\c => idet.s ! c ! (cn.g ! idet.n) ++ cn.s ! Indef ! c ! idet.n ;
+    a = agrgP3 (cn.g ! idet.n) idet.n
   } ;
 
   IdetIP idet = {
@@ -47,7 +47,7 @@ lin
   CompIP ip = {s = ip.s ! Nom} ;
 
   ComplSlashIP sl ip = appendVP (vpFromSlash sl)
-    (\\_ => sl.c2.s ++ ip.s ! sl.c2.c) ;
+    (\\subj => sl.c2.s ++ ip.s ! sl.c2.c ++ sl.gapPost ! subj ! ip.a) ;
 
   AdvQVP vp iadv = appendVP vp (\\_ => iadv.s) ;
   AddAdvQVP qvp iadv = appendVP qvp (\\_ => iadv.s) ;

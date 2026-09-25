@@ -1,0 +1,7 @@
+Project Check Command: OK
+Message: Validation profile contract is valid.
+Project root: /mnt/data/alb_c10_final
+Project file: /mnt/data/alb_c10_final/project.toml
+Errors: 0
+Warnings: 0
+Diagnostics: 0

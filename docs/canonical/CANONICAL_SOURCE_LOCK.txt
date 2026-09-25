@@ -1,0 +1,3 @@
+archive=Albanian_RGL_Total_Documentation_v2_CompendiumAligned_20260925(9).zip
+sha256=9e10d077a7d18e2d2b21b874e12ed24d20314f356153ca0d36ec409026870b4c
+imported=2026-09-25

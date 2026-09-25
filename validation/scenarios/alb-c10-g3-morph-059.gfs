@@ -1,0 +1,506 @@
+-- GF_WORDBENCH_INPUT_SHA256 9cbb02e35b0c3a9e25648bdddfd075d2968ef4aaa81c3b58c6703316267f7aad validation/inputs/AlbC10G3059.gf
+-- GF_WORDBENCH_INPUT_SHA256 9fd95f22eafe94fbfc5423626af8066a4fd0a8125a64172a99b4e00ebe009d37 validation/inputs/AlbC10G3059Sqi.gf
+i AlbC10G3059Sqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE G3C14501 gërmoj_V imperf_admirative_sg_p2"
+l G3C14501
+ps "CASE G3C14502 gërmoj_V imperf_admirative_sg_p3"
+l G3C14502
+ps "CASE G3C14503 gërmoj_V imperf_admirative_pl_p1"
+l G3C14503
+ps "CASE G3C14504 gërmoj_V imperf_admirative_pl_p2"
+l G3C14504
+ps "CASE G3C14505 gërmoj_V imperf_admirative_pl_p3"
+l G3C14505
+ps "CASE G3C14506 gërvisht_V indicative_pres_sg_p1"
+l G3C14506
+ps "CASE G3C14507 gërvisht_V indicative_pres_sg_p2"
+l G3C14507
+ps "CASE G3C14508 gërvisht_V indicative_pres_sg_p3"
+l G3C14508
+ps "CASE G3C14509 gërvisht_V indicative_pres_pl_p1"
+l G3C14509
+ps "CASE G3C14510 gërvisht_V indicative_pres_pl_p2"
+l G3C14510
+ps "CASE G3C14511 gërvisht_V indicative_pres_pl_p3"
+l G3C14511
+ps "CASE G3C14512 gërvisht_V indicative_past_sg_p1"
+l G3C14512
+ps "CASE G3C14513 gërvisht_V indicative_past_sg_p2"
+l G3C14513
+ps "CASE G3C14514 gërvisht_V indicative_past_sg_p3"
+l G3C14514
+ps "CASE G3C14515 gërvisht_V indicative_past_pl_p1"
+l G3C14515
+ps "CASE G3C14516 gërvisht_V indicative_past_pl_p2"
+l G3C14516
+ps "CASE G3C14517 gërvisht_V indicative_past_pl_p3"
+l G3C14517
+ps "CASE G3C14518 gërvisht_V indicative_imperfect_sg_p1"
+l G3C14518
+ps "CASE G3C14519 gërvisht_V indicative_imperfect_sg_p2"
+l G3C14519
+ps "CASE G3C14520 gërvisht_V indicative_imperfect_sg_p3"
+l G3C14520
+ps "CASE G3C14521 gërvisht_V indicative_imperfect_pl_p1"
+l G3C14521
+ps "CASE G3C14522 gërvisht_V indicative_imperfect_pl_p2"
+l G3C14522
+ps "CASE G3C14523 gërvisht_V indicative_imperfect_pl_p3"
+l G3C14523
+ps "CASE G3C14524 gërvisht_V indicative_aorist_sg_p1"
+l G3C14524
+ps "CASE G3C14525 gërvisht_V indicative_aorist_sg_p2"
+l G3C14525
+ps "CASE G3C14526 gërvisht_V indicative_aorist_sg_p3"
+l G3C14526
+ps "CASE G3C14527 gërvisht_V indicative_aorist_pl_p1"
+l G3C14527
+ps "CASE G3C14528 gërvisht_V indicative_aorist_pl_p2"
+l G3C14528
+ps "CASE G3C14529 gërvisht_V indicative_aorist_pl_p3"
+l G3C14529
+ps "CASE G3C14530 gërvisht_V subjunctive_sg_p1"
+l G3C14530
+ps "CASE G3C14531 gërvisht_V subjunctive_sg_p2"
+l G3C14531
+ps "CASE G3C14532 gërvisht_V subjunctive_sg_p3"
+l G3C14532
+ps "CASE G3C14533 gërvisht_V subjunctive_pl_p1"
+l G3C14533
+ps "CASE G3C14534 gërvisht_V subjunctive_pl_p2"
+l G3C14534
+ps "CASE G3C14535 gërvisht_V subjunctive_pl_p3"
+l G3C14535
+ps "CASE G3C14536 gërvisht_V imperative_sg"
+l G3C14536
+ps "CASE G3C14537 gërvisht_V imperative_pl"
+l G3C14537
+ps "CASE G3C14538 gërvisht_V participle"
+l G3C14538
+ps "CASE G3C14539 gërvisht_V pres_optative_sg_p1"
+l G3C14539
+ps "CASE G3C14540 gërvisht_V pres_optative_sg_p2"
+l G3C14540
+ps "CASE G3C14541 gërvisht_V pres_optative_sg_p3"
+l G3C14541
+ps "CASE G3C14542 gërvisht_V pres_optative_pl_p1"
+l G3C14542
+ps "CASE G3C14543 gërvisht_V pres_optative_pl_p2"
+l G3C14543
+ps "CASE G3C14544 gërvisht_V pres_optative_pl_p3"
+l G3C14544
+ps "CASE G3C14545 gërvisht_V perf_optative_sg_p1"
+l G3C14545
+ps "CASE G3C14546 gërvisht_V perf_optative_sg_p2"
+l G3C14546
+ps "CASE G3C14547 gërvisht_V perf_optative_sg_p3"
+l G3C14547
+ps "CASE G3C14548 gërvisht_V perf_optative_pl_p1"
+l G3C14548
+ps "CASE G3C14549 gërvisht_V perf_optative_pl_p2"
+l G3C14549
+ps "CASE G3C14550 gërvisht_V perf_optative_pl_p3"
+l G3C14550
+ps "CASE G3C14551 gërvisht_V pres_admirative_sg_p1"
+l G3C14551
+ps "CASE G3C14552 gërvisht_V pres_admirative_sg_p2"
+l G3C14552
+ps "CASE G3C14553 gërvisht_V pres_admirative_sg_p3"
+l G3C14553
+ps "CASE G3C14554 gërvisht_V pres_admirative_pl_p1"
+l G3C14554
+ps "CASE G3C14555 gërvisht_V pres_admirative_pl_p2"
+l G3C14555
+ps "CASE G3C14556 gërvisht_V pres_admirative_pl_p3"
+l G3C14556
+ps "CASE G3C14557 gërvisht_V imperf_admirative_sg_p1"
+l G3C14557
+ps "CASE G3C14558 gërvisht_V imperf_admirative_sg_p2"
+l G3C14558
+ps "CASE G3C14559 gërvisht_V imperf_admirative_sg_p3"
+l G3C14559
+ps "CASE G3C14560 gërvisht_V imperf_admirative_pl_p1"
+l G3C14560
+ps "CASE G3C14561 gërvisht_V imperf_admirative_pl_p2"
+l G3C14561
+ps "CASE G3C14562 gërvisht_V imperf_admirative_pl_p3"
+l G3C14562
+ps "CASE G3C14563 ha_V indicative_pres_sg_p1"
+l G3C14563
+ps "CASE G3C14564 ha_V indicative_pres_sg_p2"
+l G3C14564
+ps "CASE G3C14565 ha_V indicative_pres_sg_p3"
+l G3C14565
+ps "CASE G3C14566 ha_V indicative_pres_pl_p1"
+l G3C14566
+ps "CASE G3C14567 ha_V indicative_pres_pl_p2"
+l G3C14567
+ps "CASE G3C14568 ha_V indicative_pres_pl_p3"
+l G3C14568
+ps "CASE G3C14569 ha_V indicative_past_sg_p1"
+l G3C14569
+ps "CASE G3C14570 ha_V indicative_past_sg_p2"
+l G3C14570
+ps "CASE G3C14571 ha_V indicative_past_sg_p3"
+l G3C14571
+ps "CASE G3C14572 ha_V indicative_past_pl_p1"
+l G3C14572
+ps "CASE G3C14573 ha_V indicative_past_pl_p2"
+l G3C14573
+ps "CASE G3C14574 ha_V indicative_past_pl_p3"
+l G3C14574
+ps "CASE G3C14575 ha_V indicative_imperfect_sg_p1"
+l G3C14575
+ps "CASE G3C14576 ha_V indicative_imperfect_sg_p2"
+l G3C14576
+ps "CASE G3C14577 ha_V indicative_imperfect_sg_p3"
+l G3C14577
+ps "CASE G3C14578 ha_V indicative_imperfect_pl_p1"
+l G3C14578
+ps "CASE G3C14579 ha_V indicative_imperfect_pl_p2"
+l G3C14579
+ps "CASE G3C14580 ha_V indicative_imperfect_pl_p3"
+l G3C14580
+ps "CASE G3C14581 ha_V indicative_aorist_sg_p1"
+l G3C14581
+ps "CASE G3C14582 ha_V indicative_aorist_sg_p2"
+l G3C14582
+ps "CASE G3C14583 ha_V indicative_aorist_sg_p3"
+l G3C14583
+ps "CASE G3C14584 ha_V indicative_aorist_pl_p1"
+l G3C14584
+ps "CASE G3C14585 ha_V indicative_aorist_pl_p2"
+l G3C14585
+ps "CASE G3C14586 ha_V indicative_aorist_pl_p3"
+l G3C14586
+ps "CASE G3C14587 ha_V subjunctive_sg_p1"
+l G3C14587
+ps "CASE G3C14588 ha_V subjunctive_sg_p2"
+l G3C14588
+ps "CASE G3C14589 ha_V subjunctive_sg_p3"
+l G3C14589
+ps "CASE G3C14590 ha_V subjunctive_pl_p1"
+l G3C14590
+ps "CASE G3C14591 ha_V subjunctive_pl_p2"
+l G3C14591
+ps "CASE G3C14592 ha_V subjunctive_pl_p3"
+l G3C14592
+ps "CASE G3C14593 ha_V imperative_sg"
+l G3C14593
+ps "CASE G3C14594 ha_V imperative_pl"
+l G3C14594
+ps "CASE G3C14595 ha_V participle"
+l G3C14595
+ps "CASE G3C14596 ha_V pres_optative_sg_p1"
+l G3C14596
+ps "CASE G3C14597 ha_V pres_optative_sg_p2"
+l G3C14597
+ps "CASE G3C14598 ha_V pres_optative_sg_p3"
+l G3C14598
+ps "CASE G3C14599 ha_V pres_optative_pl_p1"
+l G3C14599
+ps "CASE G3C14600 ha_V pres_optative_pl_p2"
+l G3C14600
+ps "CASE G3C14601 ha_V pres_optative_pl_p3"
+l G3C14601
+ps "CASE G3C14602 ha_V perf_optative_sg_p1"
+l G3C14602
+ps "CASE G3C14603 ha_V perf_optative_sg_p2"
+l G3C14603
+ps "CASE G3C14604 ha_V perf_optative_sg_p3"
+l G3C14604
+ps "CASE G3C14605 ha_V perf_optative_pl_p1"
+l G3C14605
+ps "CASE G3C14606 ha_V perf_optative_pl_p2"
+l G3C14606
+ps "CASE G3C14607 ha_V perf_optative_pl_p3"
+l G3C14607
+ps "CASE G3C14608 ha_V pres_admirative_sg_p1"
+l G3C14608
+ps "CASE G3C14609 ha_V pres_admirative_sg_p2"
+l G3C14609
+ps "CASE G3C14610 ha_V pres_admirative_sg_p3"
+l G3C14610
+ps "CASE G3C14611 ha_V pres_admirative_pl_p1"
+l G3C14611
+ps "CASE G3C14612 ha_V pres_admirative_pl_p2"
+l G3C14612
+ps "CASE G3C14613 ha_V pres_admirative_pl_p3"
+l G3C14613
+ps "CASE G3C14614 ha_V imperf_admirative_sg_p1"
+l G3C14614
+ps "CASE G3C14615 ha_V imperf_admirative_sg_p2"
+l G3C14615
+ps "CASE G3C14616 ha_V imperf_admirative_sg_p3"
+l G3C14616
+ps "CASE G3C14617 ha_V imperf_admirative_pl_p1"
+l G3C14617
+ps "CASE G3C14618 ha_V imperf_admirative_pl_p2"
+l G3C14618
+ps "CASE G3C14619 ha_V imperf_admirative_pl_p3"
+l G3C14619
+ps "CASE G3C14620 hap_V indicative_pres_sg_p1"
+l G3C14620
+ps "CASE G3C14621 hap_V indicative_pres_sg_p2"
+l G3C14621
+ps "CASE G3C14622 hap_V indicative_pres_sg_p3"
+l G3C14622
+ps "CASE G3C14623 hap_V indicative_pres_pl_p1"
+l G3C14623
+ps "CASE G3C14624 hap_V indicative_pres_pl_p2"
+l G3C14624
+ps "CASE G3C14625 hap_V indicative_pres_pl_p3"
+l G3C14625
+ps "CASE G3C14626 hap_V indicative_past_sg_p1"
+l G3C14626
+ps "CASE G3C14627 hap_V indicative_past_sg_p2"
+l G3C14627
+ps "CASE G3C14628 hap_V indicative_past_sg_p3"
+l G3C14628
+ps "CASE G3C14629 hap_V indicative_past_pl_p1"
+l G3C14629
+ps "CASE G3C14630 hap_V indicative_past_pl_p2"
+l G3C14630
+ps "CASE G3C14631 hap_V indicative_past_pl_p3"
+l G3C14631
+ps "CASE G3C14632 hap_V indicative_imperfect_sg_p1"
+l G3C14632
+ps "CASE G3C14633 hap_V indicative_imperfect_sg_p2"
+l G3C14633
+ps "CASE G3C14634 hap_V indicative_imperfect_sg_p3"
+l G3C14634
+ps "CASE G3C14635 hap_V indicative_imperfect_pl_p1"
+l G3C14635
+ps "CASE G3C14636 hap_V indicative_imperfect_pl_p2"
+l G3C14636
+ps "CASE G3C14637 hap_V indicative_imperfect_pl_p3"
+l G3C14637
+ps "CASE G3C14638 hap_V indicative_aorist_sg_p1"
+l G3C14638
+ps "CASE G3C14639 hap_V indicative_aorist_sg_p2"
+l G3C14639
+ps "CASE G3C14640 hap_V indicative_aorist_sg_p3"
+l G3C14640
+ps "CASE G3C14641 hap_V indicative_aorist_pl_p1"
+l G3C14641
+ps "CASE G3C14642 hap_V indicative_aorist_pl_p2"
+l G3C14642
+ps "CASE G3C14643 hap_V indicative_aorist_pl_p3"
+l G3C14643
+ps "CASE G3C14644 hap_V subjunctive_sg_p1"
+l G3C14644
+ps "CASE G3C14645 hap_V subjunctive_sg_p2"
+l G3C14645
+ps "CASE G3C14646 hap_V subjunctive_sg_p3"
+l G3C14646
+ps "CASE G3C14647 hap_V subjunctive_pl_p1"
+l G3C14647
+ps "CASE G3C14648 hap_V subjunctive_pl_p2"
+l G3C14648
+ps "CASE G3C14649 hap_V subjunctive_pl_p3"
+l G3C14649
+ps "CASE G3C14650 hap_V imperative_sg"
+l G3C14650
+ps "CASE G3C14651 hap_V imperative_pl"
+l G3C14651
+ps "CASE G3C14652 hap_V participle"
+l G3C14652
+ps "CASE G3C14653 hap_V pres_optative_sg_p1"
+l G3C14653
+ps "CASE G3C14654 hap_V pres_optative_sg_p2"
+l G3C14654
+ps "CASE G3C14655 hap_V pres_optative_sg_p3"
+l G3C14655
+ps "CASE G3C14656 hap_V pres_optative_pl_p1"
+l G3C14656
+ps "CASE G3C14657 hap_V pres_optative_pl_p2"
+l G3C14657
+ps "CASE G3C14658 hap_V pres_optative_pl_p3"
+l G3C14658
+ps "CASE G3C14659 hap_V perf_optative_sg_p1"
+l G3C14659
+ps "CASE G3C14660 hap_V perf_optative_sg_p2"
+l G3C14660
+ps "CASE G3C14661 hap_V perf_optative_sg_p3"
+l G3C14661
+ps "CASE G3C14662 hap_V perf_optative_pl_p1"
+l G3C14662
+ps "CASE G3C14663 hap_V perf_optative_pl_p2"
+l G3C14663
+ps "CASE G3C14664 hap_V perf_optative_pl_p3"
+l G3C14664
+ps "CASE G3C14665 hap_V pres_admirative_sg_p1"
+l G3C14665
+ps "CASE G3C14666 hap_V pres_admirative_sg_p2"
+l G3C14666
+ps "CASE G3C14667 hap_V pres_admirative_sg_p3"
+l G3C14667
+ps "CASE G3C14668 hap_V pres_admirative_pl_p1"
+l G3C14668
+ps "CASE G3C14669 hap_V pres_admirative_pl_p2"
+l G3C14669
+ps "CASE G3C14670 hap_V pres_admirative_pl_p3"
+l G3C14670
+ps "CASE G3C14671 hap_V imperf_admirative_sg_p1"
+l G3C14671
+ps "CASE G3C14672 hap_V imperf_admirative_sg_p2"
+l G3C14672
+ps "CASE G3C14673 hap_V imperf_admirative_sg_p3"
+l G3C14673
+ps "CASE G3C14674 hap_V imperf_admirative_pl_p1"
+l G3C14674
+ps "CASE G3C14675 hap_V imperf_admirative_pl_p2"
+l G3C14675
+ps "CASE G3C14676 hap_V imperf_admirative_pl_p3"
+l G3C14676
+ps "CASE G3C14677 harroj_V indicative_pres_sg_p1"
+l G3C14677
+ps "CASE G3C14678 harroj_V indicative_pres_sg_p2"
+l G3C14678
+ps "CASE G3C14679 harroj_V indicative_pres_sg_p3"
+l G3C14679
+ps "CASE G3C14680 harroj_V indicative_pres_pl_p1"
+l G3C14680
+ps "CASE G3C14681 harroj_V indicative_pres_pl_p2"
+l G3C14681
+ps "CASE G3C14682 harroj_V indicative_pres_pl_p3"
+l G3C14682
+ps "CASE G3C14683 harroj_V indicative_past_sg_p1"
+l G3C14683
+ps "CASE G3C14684 harroj_V indicative_past_sg_p2"
+l G3C14684
+ps "CASE G3C14685 harroj_V indicative_past_sg_p3"
+l G3C14685
+ps "CASE G3C14686 harroj_V indicative_past_pl_p1"
+l G3C14686
+ps "CASE G3C14687 harroj_V indicative_past_pl_p2"
+l G3C14687
+ps "CASE G3C14688 harroj_V indicative_past_pl_p3"
+l G3C14688
+ps "CASE G3C14689 harroj_V indicative_imperfect_sg_p1"
+l G3C14689
+ps "CASE G3C14690 harroj_V indicative_imperfect_sg_p2"
+l G3C14690
+ps "CASE G3C14691 harroj_V indicative_imperfect_sg_p3"
+l G3C14691
+ps "CASE G3C14692 harroj_V indicative_imperfect_pl_p1"
+l G3C14692
+ps "CASE G3C14693 harroj_V indicative_imperfect_pl_p2"
+l G3C14693
+ps "CASE G3C14694 harroj_V indicative_imperfect_pl_p3"
+l G3C14694
+ps "CASE G3C14695 harroj_V indicative_aorist_sg_p1"
+l G3C14695
+ps "CASE G3C14696 harroj_V indicative_aorist_sg_p2"
+l G3C14696
+ps "CASE G3C14697 harroj_V indicative_aorist_sg_p3"
+l G3C14697
+ps "CASE G3C14698 harroj_V indicative_aorist_pl_p1"
+l G3C14698
+ps "CASE G3C14699 harroj_V indicative_aorist_pl_p2"
+l G3C14699
+ps "CASE G3C14700 harroj_V indicative_aorist_pl_p3"
+l G3C14700
+ps "CASE G3C14701 harroj_V subjunctive_sg_p1"
+l G3C14701
+ps "CASE G3C14702 harroj_V subjunctive_sg_p2"
+l G3C14702
+ps "CASE G3C14703 harroj_V subjunctive_sg_p3"
+l G3C14703
+ps "CASE G3C14704 harroj_V subjunctive_pl_p1"
+l G3C14704
+ps "CASE G3C14705 harroj_V subjunctive_pl_p2"
+l G3C14705
+ps "CASE G3C14706 harroj_V subjunctive_pl_p3"
+l G3C14706
+ps "CASE G3C14707 harroj_V imperative_sg"
+l G3C14707
+ps "CASE G3C14708 harroj_V imperative_pl"
+l G3C14708
+ps "CASE G3C14709 harroj_V participle"
+l G3C14709
+ps "CASE G3C14710 harroj_V pres_optative_sg_p1"
+l G3C14710
+ps "CASE G3C14711 harroj_V pres_optative_sg_p2"
+l G3C14711
+ps "CASE G3C14712 harroj_V pres_optative_sg_p3"
+l G3C14712
+ps "CASE G3C14713 harroj_V pres_optative_pl_p1"
+l G3C14713
+ps "CASE G3C14714 harroj_V pres_optative_pl_p2"
+l G3C14714
+ps "CASE G3C14715 harroj_V pres_optative_pl_p3"
+l G3C14715
+ps "CASE G3C14716 harroj_V perf_optative_sg_p1"
+l G3C14716
+ps "CASE G3C14717 harroj_V perf_optative_sg_p2"
+l G3C14717
+ps "CASE G3C14718 harroj_V perf_optative_sg_p3"
+l G3C14718
+ps "CASE G3C14719 harroj_V perf_optative_pl_p1"
+l G3C14719
+ps "CASE G3C14720 harroj_V perf_optative_pl_p2"
+l G3C14720
+ps "CASE G3C14721 harroj_V perf_optative_pl_p3"
+l G3C14721
+ps "CASE G3C14722 harroj_V pres_admirative_sg_p1"
+l G3C14722
+ps "CASE G3C14723 harroj_V pres_admirative_sg_p2"
+l G3C14723
+ps "CASE G3C14724 harroj_V pres_admirative_sg_p3"
+l G3C14724
+ps "CASE G3C14725 harroj_V pres_admirative_pl_p1"
+l G3C14725
+ps "CASE G3C14726 harroj_V pres_admirative_pl_p2"
+l G3C14726
+ps "CASE G3C14727 harroj_V pres_admirative_pl_p3"
+l G3C14727
+ps "CASE G3C14728 harroj_V imperf_admirative_sg_p1"
+l G3C14728
+ps "CASE G3C14729 harroj_V imperf_admirative_sg_p2"
+l G3C14729
+ps "CASE G3C14730 harroj_V imperf_admirative_sg_p3"
+l G3C14730
+ps "CASE G3C14731 harroj_V imperf_admirative_pl_p1"
+l G3C14731
+ps "CASE G3C14732 harroj_V imperf_admirative_pl_p2"
+l G3C14732
+ps "CASE G3C14733 harroj_V imperf_admirative_pl_p3"
+l G3C14733
+ps "CASE G3C14734 hedh_V indicative_pres_sg_p1"
+l G3C14734
+ps "CASE G3C14735 hedh_V indicative_pres_sg_p2"
+l G3C14735
+ps "CASE G3C14736 hedh_V indicative_pres_sg_p3"
+l G3C14736
+ps "CASE G3C14737 hedh_V indicative_pres_pl_p1"
+l G3C14737
+ps "CASE G3C14738 hedh_V indicative_pres_pl_p2"
+l G3C14738
+ps "CASE G3C14739 hedh_V indicative_pres_pl_p3"
+l G3C14739
+ps "CASE G3C14740 hedh_V indicative_past_sg_p1"
+l G3C14740
+ps "CASE G3C14741 hedh_V indicative_past_sg_p2"
+l G3C14741
+ps "CASE G3C14742 hedh_V indicative_past_sg_p3"
+l G3C14742
+ps "CASE G3C14743 hedh_V indicative_past_pl_p1"
+l G3C14743
+ps "CASE G3C14744 hedh_V indicative_past_pl_p2"
+l G3C14744
+ps "CASE G3C14745 hedh_V indicative_past_pl_p3"
+l G3C14745
+ps "CASE G3C14746 hedh_V indicative_imperfect_sg_p1"
+l G3C14746
+ps "CASE G3C14747 hedh_V indicative_imperfect_sg_p2"
+l G3C14747
+ps "CASE G3C14748 hedh_V indicative_imperfect_sg_p3"
+l G3C14748
+ps "CASE G3C14749 hedh_V indicative_imperfect_pl_p1"
+l G3C14749
+ps "CASE G3C14750 hedh_V indicative_imperfect_pl_p2"
+l G3C14750
+ps "GF_WORDBENCH_END cases"
+q

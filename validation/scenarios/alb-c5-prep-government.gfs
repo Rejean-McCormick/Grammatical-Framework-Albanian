@@ -1,0 +1,76 @@
+-- GF_WORDBENCH_INPUT_SHA256 7895ddd4a972db53ec7f8112d8547bbf22e3a8848002ccca17f9acbe37816a6b validation/inputs/AlbC5PrepGovernment.gf
+-- GF_WORDBENCH_INPUT_SHA256 ee248e331dc6e7cc2ebb4fd4f07a26635f586d222d2f201a719d3b61932232eb validation/inputs/AlbC5PrepGovernmentSqi.gf
+i AlbC5PrepGovernmentSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C5G01 në->Acc"
+l C5G01
+ps "CASE C5G02 me->Acc"
+l C5G02
+ps "CASE C5G03 pa->Acc"
+l C5G03
+ps "CASE C5G04 për->Acc"
+l C5G04
+ps "CASE C5G05 mbi->Acc"
+l C5G05
+ps "CASE C5G06 nën->Acc"
+l C5G06
+ps "CASE C5G07 nga->Nom"
+l C5G07
+ps "CASE C5G08 tek->Nom"
+l C5G08
+ps "CASE C5G09 prej->Ablat"
+l C5G09
+ps "CASE C5G10 brenda->Ablat"
+l C5G10
+ps "CASE C5G11 gjatë->Ablat"
+l C5G11
+ps "CASE C5G12 para->Ablat"
+l C5G12
+ps "CASE C5G13 midis->Ablat"
+l C5G13
+ps "CASE C5G14 sipas->Ablat"
+l C5G14
+ps "CASE C5G15 above"
+l C5G15
+ps "CASE C5G16 after"
+l C5G16
+ps "CASE C5G17 before"
+l C5G17
+ps "CASE C5G18 behind"
+l C5G18
+ps "CASE C5G19 between"
+l C5G19
+ps "CASE C5G20 by8agent"
+l C5G20
+ps "CASE C5G21 by8means"
+l C5G21
+ps "CASE C5G22 during"
+l C5G22
+ps "CASE C5G23 for"
+l C5G23
+ps "CASE C5G24 from"
+l C5G24
+ps "CASE C5G25 in8front"
+l C5G25
+ps "CASE C5G26 in"
+l C5G26
+ps "CASE C5G27 on"
+l C5G27
+ps "CASE C5G28 part"
+l C5G28
+ps "CASE C5G29 through"
+l C5G29
+ps "CASE C5G30 to"
+l C5G30
+ps "CASE C5G31 under"
+l C5G31
+ps "CASE C5G32 with"
+l C5G32
+ps "CASE C5G33 without"
+l C5G33
+ps "CASE C5G34 except"
+l C5G34
+ps "CASE C5G35 possess"
+l C5G35
+ps "GF_WORDBENCH_END cases"
+q

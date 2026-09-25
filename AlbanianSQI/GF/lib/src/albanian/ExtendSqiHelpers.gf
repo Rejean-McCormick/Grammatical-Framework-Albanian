@@ -9,7 +9,7 @@ oper
   agrMascSg : R.Agr = R.agrgP3 R.Masc P.Sg ;
 
   adjSurfaceNomMascSg : A -> Str =
-    \a -> a.s ! R.Nom ! R.Masc ! P.Sg ;
+    \a -> R.adjForm a R.Masc P.Sg ;
 
   apSurfaceNomMascSg : AP -> Str =
     \ap -> ap.s ! R.Indef ! R.Nom ! R.Masc ! P.Sg ;
@@ -26,32 +26,26 @@ oper
       s = table {
         R.Nom   => nom ;
         R.Acc   => acc ;
+        R.Gen   => dat ;
         R.Dat   => dat ;
         R.Ablat => dat
       } ;
-      acc_clit = accCl ;
-      dat_clit = datCl ;
       a = R.agrgP3 g n ;
       isPron = True
     } ;
 
   adjComplStr : A -> R.Species -> R.Case -> R.Gender -> P.Number -> Str =
-    \a,spec,c,g,n -> case a.clit of {
-      True  => R.link_clitic ! spec ! c ! g ! n ++ a.s ! c ! g ! n ;
-      False => a.s ! c ! g ! n
-    } ;
+    \a,spec,c,g,n -> R.realizeAdj a spec c g n ;
 
   mkBareNpFromCn : P.Number -> CN -> NP =
     \n,cn -> lin NP {
-      s = \\c => cn.s ! R.Indef ! c ! n ;
-      acc_clit = [] ;
-      dat_clit = [] ;
-      a = R.agrgP3 cn.g n ;
+      s = \\c => R.cnForm cn R.Indef c n ;
+      a = R.agrgP3 (cn.g ! n) n ;
       isPron = False
     } ;
 
   cnSurfaceNomSg : CN -> Str =
-    \cn -> cn.s ! R.Indef ! R.Nom ! P.Sg ;
+    \cn -> R.cnForm cn R.Indef R.Nom P.Sg ;
 
   apSurfaceNomMascSgCompat : AP -> Str = apSurfaceNomMascSg ;
 
@@ -59,13 +53,11 @@ oper
     \w -> lin AP {s = \\_,_,_,_ => w} ;
 
   mkCompatCNFromStr : Str -> R.Gender -> CN =
-    \w,g -> lin CN {s = \\_,_,_ => w ; g = g} ;
+    \w,g -> lin CN {s = \\_,_,_ => w ; g = table {Sg=>g; Pl=>g}} ;
 
   mkCompatNPFromStr : Str -> R.Gender -> P.Number -> NP =
     \w,g,n -> lin NP {
       s = \\_ => w ;
-      acc_clit = [] ;
-      dat_clit = [] ;
       a = R.agrgP3 g n ;
       isPron = False
     } ;

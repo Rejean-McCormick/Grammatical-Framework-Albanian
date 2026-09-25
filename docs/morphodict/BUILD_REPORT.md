@@ -1,62 +1,72 @@
-# MorphoDictSqi build report — 2026-09-24
+# MorphoDictSqi MAX — build report CMP-C2-MAX-20260925
 
-## Result
+## Scope
 
-- Active MorphoDict lemgrams: **592**
-- Categories: **18**
-- Current RGL Lexicon source entries accounted: **348/348**
-- Current IrregSqi verbs included: **22/22**
-- Tosk unique lemma/POS groups inspected: **242**
-- Source items excluded/superseded with an explicit reason: **21**
-- `variants` used: **0**
-- Active Albanian core files modified: **0**
+C2-only morphology-dictionary campaign against the supplied 2026-09-25 Albanian snapshot. The campaign does not edit `ResSqi`, `MorphoSqi`, `ParadigmsSqi` or `IrregSqi`.
 
-## Category coverage
+## Before
 
-- `A`: 84
-- `Adv`: 26
-- `Conj`: 12
-- `Det`: 6
-- `IAdv`: 5
-- `IDet`: 1
-- `IP`: 4
-- `IQuant`: 1
-- `Interj`: 2
-- `N`: 277
-- `NP`: 5
-- `PN`: 2
-- `Predet`: 3
-- `Prep`: 20
-- `Pron`: 7
-- `Quant`: 3
-- `Subj`: 5
-- `V`: 129
+- active functions: 592
+- compile-safe placeholders: 155 = 97 N + 35 A + 23 V
+- placeholders were structurally compilable debt, not certified inflection.
 
-## Quality classes
+## Resolution method
 
-- `exact`: 367
-- `smart-generated`: 155
-- `rgl-derived-explicit`: 1
-- `exact-normalized`: 10
-- `direct-invariant`: 23
-- `rgl+reference-characteristic`: 11
-- `direct-with-government`: 3
-- `exact-irregular`: 22
+For every placeholder:
 
-`exact` / `exact-irregular` entries preserve current RGL analyses. `rgl+reference-characteristic` entries keep the RGL lemma while adding a characteristic Tosk form or gender. `smart-generated` entries are new Tosk-reference expansions produced through Albanian smart paradigms and still require compile + linguistic/gold review.
+1. read all recorded Tosk observed forms for the same lemma/category;
+2. evaluate the current numbered `MorphoSqi` classes conservatively;
+3. prefer the current `ParadigmsSqi` smart-dispatch class **only if** it reproduces every recorded form and noun gender;
+4. if smart dispatch fails, accept another numbered class only when it is the **unique** evidence-compatible class;
+5. otherwise block the entry. No invariant fallback is created.
 
-## Important boundary
+This yields:
 
-“Complete” here means complete for the **morphological inventory recoverable from the supplied/current Albanian RGL plus the supplied Tosk reference**, under MorphoDict rules. It is not a claim to contain every word in the Albanian language. A national-scale lexical source would be needed for tens of thousands of lemmas.
+- 123 explicit class resolutions: 75 N, 32 A, 16 V;
+- 32 blocked: 22 N, 3 A, 7 V;
+- 5 of the 32 are source conflicts; 27 are C2 insufficient-evidence cases. Two of those 27 have zero statically matching numbered classes and are sent only to **C1 triage**, not asserted as proven missing classes.
 
-## Compiler status
+Representative recovered cases:
 
-The current execution environment has no `gf` executable. Static checks pass, but `gf -make MorphoDictSqi.gf` must be run in the user's GF 3.12 / Wordbench environment before compile certification.
+- `aeroport_N -> mkN005 "aeroport"`
+- `barabartë_A -> mkA013 "barabartë"`
+- `bazohem_V -> mkV041 "bazohem"`
+- `breg_N -> mkN096 "breg"` (unique alternative to bad smart route)
+- `mashkull_N -> mkN257 "mashkull"` (unique alternative)
+- `tjetër_A -> mkA025 "tjetër"` (unique alternative)
+- `kryej_V -> mkV042 "kryej"` (unique alternative)
 
-## 2026-09-25 compiler remediation
+## After
 
-`cilido_A` no longer uses unsupported smart `mkA "cilido"`. Its inflection is derived from the existing declined `cili` IQuant table and the bound suffix `do`, preserving the attested masculine accusative singular `cilindo`.
+- active functions: 560
+- active compile-safe N/A/V placeholders: 0
+- variants: 0
+- active multiwords: 0
+- certification metadata: 306 C1, 254 C2, 0 C6
+- source-universe candidate records: 7,079, 0 unclassified
+- Tosk evidence records: 242 lemma/category groups
+- Tosk feature mapping rows: 280 = 207 exact, 54 ambiguous, 19 unmapped
 
-### GF 3.12 scope remediation (run 20260925_030234)
+## Validation performed here
 
-The explicit `cilido_A` table is retained. `MorphoDictSqi` now explicitly opens `Prelude`, which supplies the `True` Boolean constructor used by the `Adj.clit` field. This fixes `constant not found: True` without changing the generated `cilido` forms.
+- MAX static validator: 27/27 PASS
+- Dict + MorphoDict combined static validator: PASS
+- Dict static validator: PASS
+- `MorphoSqi` heuristic lint: 0 findings
+- Python compilation of new tools/validators: PASS
+- deterministic double rebuild: PASS (identical generated hashes)
+
+## Validation not performed here
+
+No `gf` executable is installed in this environment. Consequently this report does **not** claim:
+
+- a fresh GF 3.12 compile of the 560-entry candidate;
+- native table signatures;
+- 58/58 + 52/52 for the changed candidate;
+- C5/C6 linguistic certification.
+
+These are explicit external gates.
+
+## Baseline/test migration
+
+The former smoke scenario referenced `armë_N`, one of the 32 unresolved placeholder entries. The required scenario count remains 52, but the MorphoDict smoke case is migrated to active evidence-resolved entries and adds three MAX probes. This is a test migration required by removal of an unproved API entry and must be reconciled by C10 in the next Wordbench run.

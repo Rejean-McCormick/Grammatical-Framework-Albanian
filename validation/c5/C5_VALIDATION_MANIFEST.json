@@ -1,0 +1,38 @@
+{
+  "schema": "albanian-rgl-c5-validation-v2",
+  "date": "2026-09-25",
+  "baseline_tag": "albanian-s02-green-20260925",
+  "supplied_snapshot": "Code_snapshot_Grammatical_Framework-Albanian(20260925-123255).zip",
+  "gf_required": "3.12",
+  "wordbench_required": "1.3.4",
+  "gf_census": {
+    "language": 51,
+    "api_facades": 5,
+    "morphodict": 2,
+    "total": 58
+  },
+  "historical_scenarios": 52,
+  "new_required_scenarios": [
+    "alb-c5-clitic-matrix",
+    "alb-c5-pronoun-cases",
+    "alb-c5-prep-government",
+    "alb-c5-realization-contexts",
+    "alb-c5-relative-genitive"
+  ],
+  "required_scenario_total": 57,
+  "new_case_count": 199,
+  "source_locked_expected_count": 165,
+  "review_required_runtime_count": 34,
+  "local_c5_static_checks": 167,
+  "structural_prepositions_classified": 21,
+  "structural_prepositions_source_locked": 15,
+  "structural_prepositions_review_required": 6,
+  "api_parity_rows_static_assessed": 21,
+  "source_lock_58_aggregate_sha256": "e15d7abd7c99510a438cc90b682b55c7ef7e1f17f3b49e8aae791e90c2adb49b",
+  "diff_summary": {
+    "MODIFIED": 33,
+    "ADDED": 26,
+    "DELETED": 0
+  },
+  "runtime_certification": "NOT_EXECUTED_NO_GF_3_12_IN_ENVIRONMENT"
+}

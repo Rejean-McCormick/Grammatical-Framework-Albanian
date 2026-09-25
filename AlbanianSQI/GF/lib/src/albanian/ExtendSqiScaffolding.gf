@@ -28,27 +28,34 @@ oper
   } ;
 
   sc_GenNP : NP -> Quant = \np -> lin Quant {
-    s=\\c,g,n =>R.link_clitic!R.Indef!c!g!n ++ np.s!R.Ablat ;
+    s=\\c,g,n =>R.nyje!R.Def!c!g!n ++ np.s!R.Gen ;
     spec=R.Def ;
     placement=R.PostNominal
   } ;
 
   sc_GenIP : IP -> IQuant = \ip -> lin IQuant {
-    s=\\_,_,_ =>"i" ++ ip.s!R.Dat
+    s=\\c,g,n =>R.nyje!R.Def!c!g!n ++ ip.s!R.Gen
+  } ;
+
+  relativeGenitive : R.GenNum -> Str = \gn -> case gn of {
+    R.GSg R.Masc => "të" ++ "cilit" ;
+    R.GSg R.Fem  => "së" ++ "cilës" ;
+    R.GPl R.Masc => "të" ++ "cilëve" ;
+    R.GPl R.Fem  => "të" ++ "cilave"
   } ;
 
   sc_GenRP : Num -> CN -> RP = \num,cn -> lin RP {
-    s=\\c,gn =>R.link_clitic!R.Indef!c!cn.g!num.n ++ cn.s!R.Indef!R.Ablat!num.n
+    s=\\c,gn =>R.cnForm cn R.Def c num.n ++
+      R.nyje!R.Def!c!(cn.g!num.n)!num.n ++ relativeGenitive gn
   } ;
 
   sc_GenModNP : Num -> NP -> CN -> NP = \num,np,cn -> lin NP {
-    s=\\c =>cn.s!R.Def!c!num.n ++ R.link_clitic!R.Def!c!cn.g!num.n ++ np.s!R.Ablat ;
-    acc_clit=[] ; dat_clit=[] ; a=R.agrgP3 cn.g num.n ; isPron=False
+    s=\\c =>R.cnForm cn R.Def c num.n ++ R.nyje!R.Def!c!(cn.g!num.n)!num.n ++ np.s!R.Gen ; a=R.agrgP3 (cn.g!num.n) num.n ; isPron=False
   } ;
 
   sc_GenModIP : Num -> IP -> CN -> IP = \num,ip,cn -> lin IP {
-    s=\\c =>cn.s!R.Def!c!num.n ++ R.link_clitic!R.Def!c!cn.g!num.n ++ ip.s!R.Dat ;
-    a=R.agrgP3 cn.g num.n
+    s=\\c =>R.cnForm cn R.Def c num.n ++ R.nyje!R.Def!c!(cn.g!num.n)!num.n ++ ip.s!R.Gen ;
+    a=R.agrgP3 (cn.g!num.n) num.n
   } ;
 
   sc_PiedPipingQuestSlash : IP -> ClSlash -> QCl = \ip,slash -> lin QCl {
@@ -56,26 +63,49 @@ oper
   } ;
 
   sc_PiedPipingRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
-    s=\\agr,t,a,p =>slash.c2.s ++ rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p
+    s=\\agr,t,a,p =>case Predef.eqStr slash.c2.s [] of {
+      Predef.PTrue => rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ;
+      Predef.PFalse => slash.c2.s ++ sc_RelativeCili slash.c2.c agr.gn ++ slash.s!t!a!p
+    }
   } ;
 
-  -- Albanian prepositions normally precede their complement.  The API keeps
-  -- strand/pied-pipe distinctions; both are grammaticalized here without
-  -- losing the governed case.
-  sc_StrandQuestSlash : IP -> ClSlash -> QCl = \ip,slash -> lin QCl {
-    s=\\t,a,p =>ip.s!slash.c2.c ++ slash.s!t!a!p ++ slash.c2.s
-  } ;
+  -- Standard Albanian does not use English-style preposition stranding as
+  -- the canonical strategy.  Keep common API coverage through pied-piping.
+  sc_StrandQuestSlash : IP -> ClSlash -> QCl = \ip,slash ->
+    sc_PiedPipingQuestSlash ip slash ;
 
-  sc_StrandRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
-    s=\\agr,t,a,p =>rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ++ slash.c2.s
-  } ;
+  sc_StrandRelSlash : RP -> ClSlash -> RCl = \rp,slash ->
+    sc_PiedPipingRelSlash rp slash ;
 
   sc_EmptyRelSlash : ClSlash -> RCl = \slash -> lin RCl {
-    s=\\_,t,a,p =>"që" ++ slash.s!t!a!p ++ slash.c2.s
+    s=\\agr,t,a,p =>case Predef.eqStr slash.c2.s [] of {
+      Predef.PTrue => "që" ++ slash.s!t!a!p ;
+      Predef.PFalse => slash.c2.s ++ sc_RelativeCili slash.c2.c agr.gn ++ slash.s!t!a!p
+    }
   } ;
 
+  sc_RelativeCili : R.Case -> R.GenNum -> Str = \c,gn ->
+    case gn of {
+      R.GSg R.Masc => case c of {
+        R.Nom => "i cili" ; R.Acc => "të cilin" ; R.Gen => "të cilit" ;
+        R.Dat => "të cilit" ; R.Ablat => "të cilit"
+      } ;
+      R.GSg R.Fem => case c of {
+        R.Nom => "e cila" ; R.Acc => "të cilën" ; R.Gen => "së cilës" ;
+        R.Dat => "së cilës" ; R.Ablat => "së cilës"
+      } ;
+      R.GPl R.Masc => case c of {
+        R.Nom => "të cilët" ; R.Acc => "të cilët" ; R.Gen => "të cilëve" ;
+        R.Dat => "të cilëve" ; R.Ablat => "të cilëve"
+      } ;
+      R.GPl R.Fem => case c of {
+        R.Nom => "të cilat" ; R.Acc => "të cilat" ; R.Gen => "të cilave" ;
+        R.Dat => "të cilave" ; R.Ablat => "të cilave"
+      }
+    } ;
+
   sc_ProDrop : Pron -> Pron = \pro -> lin Pron {
-    s=\\_ =>[] ; acc_clit=pro.acc_clit ; dat_clit=pro.dat_clit ; a=pro.a ; isPron=True
+    s=\\_ =>[] ; a=pro.a ; isPron=True
   } ;
 
   sc_AdAdV : AdA -> AdV -> AdV = \a,v -> lin AdV {s=a.s ++ v.s} ;
@@ -116,15 +146,14 @@ oper
   } ;
 
   sc_ApposNP : NP -> NP -> NP = \np1,np2 -> lin NP {
-    s=\\c =>np1.s!c ++ SOFT_BIND ++ "," ++ np2.s!c ;
-    acc_clit=[] ; dat_clit=[] ; a=np1.a ; isPron=False
+    s=\\c =>np1.s!c ++ SOFT_BIND ++ "," ++ np2.s!c ; a=np1.a ; isPron=False
   } ;
 
   sc_ComplGenVV : VV -> Ant -> Pol -> R.VP -> R.VP = \vv,ant,pol,vp ->
     appendVP (emptyVP vv) (\\a =>realizeSubjAntVP vp ant.a pol.p a) ;
 
   sc_CompoundN : N -> N -> N = \modifier,head -> lin N {
-    s=\\sp,c,n =>modifier.s!R.Indef!R.Nom!P.Sg ++ head.s!sp!c!n ;
+    s=\\sp,c,n =>R.nounForm modifier R.Indef R.Nom P.Sg ++ R.nounForm head sp c n ;
     g=head.g
   } ;
 
@@ -132,7 +161,7 @@ oper
     s=\\_,_,_ =>realizeGerundVP vp agrMascSg ; g=R.Masc
   } ;
   sc_GerundNP : VP -> NP = \vp -> lin NP {
-    s=\\_ =>realizeGerundVP vp agrMascSg ; acc_clit=[] ; dat_clit=[] ; a=agrMascSg ; isPron=False
+    s=\\_ =>realizeGerundVP vp agrMascSg ; a=agrMascSg ; isPron=False
   } ;
   sc_GerundAdv : VP -> Adv = \vp -> lin Adv {s=realizeGerundVP vp agrMascSg} ;
 
@@ -143,11 +172,11 @@ oper
     appendVP (vpFromSlash sl) (\\_ =>sl.c2.s ++ np.s!sl.c2.c) ;
 
   sc_DetNPMasc : Det -> NP = \det -> lin NP {
-    s=\\c =>det.s!c!R.Masc ; acc_clit=[] ; dat_clit=[] ;
+    s=\\c =>det.s!c!R.Masc ;
     a=R.agrgP3 R.Masc det.n ; isPron=False
   } ;
   sc_DetNPFem : Det -> NP = \det -> lin NP {
-    s=\\c =>det.s!c!R.Fem ; acc_clit=[] ; dat_clit=[] ;
+    s=\\c =>det.s!c!R.Fem ;
     a=R.agrgP3 R.Fem det.n ; isPron=False
   } ;
 
@@ -158,7 +187,7 @@ oper
     s=\\c =>np.s!c ++ rs.s!np.a
   } ;
   sc_SubjunctRelCN : CN -> RS -> CN = \cn,rs -> cn ** {
-    s=\\sp,c,n =>cn.s!sp!c!n ++ rs.s!(R.agrgP3 cn.g n)
+    s=\\sp,c,n =>R.cnForm cn sp c n ++ rs.s!(R.agrgP3 (cn.g!n) n)
   } ;
 
 }

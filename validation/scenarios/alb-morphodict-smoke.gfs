@@ -12,8 +12,8 @@ ps "CASE M0004 anije_N"
 l anije_N
 ps "CASE M0005 apartament_N"
 l apartament_N
-ps "CASE M0006 armë_N"
-l armë_N
+ps "CASE M0006 breg_N"
+l breg_N
 ps "CASE M0007 baba_N"
 l baba_N
 ps "CASE M0008 bankë_N"
@@ -62,5 +62,11 @@ ps "CASE M0029 Gjon_PN"
 l Gjon_PN
 ps "CASE M0030 Paris_PN"
 l Paris_PN
+ps "CASE M0031 mashkull_N MAX-resolved"
+l mashkull_N
+ps "CASE M0032 tjetër_A MAX-resolved"
+l tjetër_A
+ps "CASE M0033 kryej_V MAX-resolved"
+l kryej_V
 ps "GF_WORDBENCH_END cases"
 q

@@ -6,7 +6,7 @@ resource ExtendSqiVPBridge =
 
 oper
   vp_agentAdv : NP -> Adv = \np ->
-    AS.PrepNP (PS.mkPrep "nga" R.Ablat) np ;
+    AS.PrepNP (PS.mkPrep "nga" R.Nom) np ;
 
   vp_PresPartAP : VP -> AP = \vp -> lin AP {
     s=\\_,_,_,_ =>realizeGerundVP vp agrMascSg
@@ -29,8 +29,8 @@ oper
   } ;
 
   vp_PassVPSlash : R.VPSlash -> R.VP = \sl ->
-    appendVP (emptyVP (lin Verb I.jam_V))
-      (\\a =>sl.participle ++ sl.post!a) ;
+    (appendVP (emptyVP (lin Verb I.jam_V))
+      (\\a =>sl.participle ++ sl.post!a)) ** {voiceUse=R.PassiveUse} ;
 
   vp_PassAgentVPSlash : R.VPSlash -> NP -> R.VP = \sl,np ->
     appendVP (vp_PassVPSlash sl) (\\_ => (vp_agentAdv np).s) ;
@@ -38,13 +38,11 @@ oper
   vp_NominalizeVPSlashNP : VPSlash -> NP -> NP = \sl,np ->
     let vp : VP = ComplSlash sl np
     in lin NP {
-      s=\\_ =>realizeGerundVP vp agrMascSg ;
-      acc_clit=[] ; dat_clit=[] ; a=agrMascSg ; isPron=False
+      s=\\_ =>realizeGerundVP vp agrMascSg ; a=agrMascSg ; isPron=False
     } ;
 
   vp_ProgrVPSlash : VPSlash -> VPSlash = \sl -> sl ** {
-    cl="po" ++ sl.cl ;
-    subjcl="të" ++ "po" ++ sl.cl
+    progressive=True ; progressivity=R.Progressive
   } ;
 
   vp_A2VPSlash : A2 -> R.VPSlash = \a2 ->
@@ -65,12 +63,11 @@ oper
 
   -- për të + participle is the productive Standard-Albanian purpose form.
   vp_PurposeVP : VP -> Adv = \vp -> lin Adv {
-    s="për" ++ vp.subjcl ++
-      vp.participle ++ vp.post!agrMascSg
+    s="për" ++ realizeInfVP vp agrMascSg
   } ;
 
   vp_WithoutVP : VP -> Adv = \vp -> lin Adv {
-    s="pa" ++ vp.cl ++ vp.participle ++ vp.post!agrMascSg
+    s="pa" ++ realizePartVP vp agrMascSg
   } ;
 
   vp_ByVP : VP -> Adv = \vp -> lin Adv {
@@ -82,6 +79,6 @@ oper
   } ;
 
   vp_CompoundAP : N -> A -> AP = \n,a ->
-    AdvAP (PositA a) (AS.PrepNP (PS.mkPrep "nga" R.Ablat) (NS.MassNP (UseN n))) ;
+    AdvAP (PositA a) (AS.PrepNP (PS.mkPrep "nga" R.Nom) (NS.MassNP (UseN n))) ;
 
 }

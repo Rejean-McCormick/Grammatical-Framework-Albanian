@@ -1,0 +1,8 @@
+C7 clause static validation: PASS
+- canonical clause helpers present
+- no CatSqi/ResSqi representation migration
+- SentAP embedding ownership repaired
+- explicit stranding operations neutralized where representable
+- shared Sentence/Question/Relative coverage: 41/41
+- 52 required scenarios preserved
+- optional alb-clause-final: 18 SHA-locked CASEs

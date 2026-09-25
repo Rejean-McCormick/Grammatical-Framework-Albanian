@@ -1,5 +1,5 @@
--- GF_WORDBENCH_INPUT_SHA256 7949d3190dc786a3092a1d006ed00e3004e47f847ba6a3634c7ea0e1ed6cdc9c validation/inputs/AlbCampaign047.gf
--- GF_WORDBENCH_INPUT_SHA256 e2d8889758b7e76081152cd483042cfeec63be39c9c82ab4ed4b7c9ca0dd554c validation/inputs/AlbCampaign047Sqi.gf
+-- GF_WORDBENCH_INPUT_SHA256 1a2f6a5708004a7ed84aff96622fbd1f999c39bcf193ec62c0e7e918cc901d27 validation/inputs/AlbCampaign047.gf
+-- GF_WORDBENCH_INPUT_SHA256 5d8780cbba65635e1f81c6dc31a0008463a8e953211232c84a70c2980ad58cca validation/inputs/AlbCampaign047Sqi.gf
 i AlbCampaign047Sqi.gf
 ps "GF_WORDBENCH_BEGIN cases"
 ps "CASE C0461 mass beer"
@@ -22,5 +22,9 @@ ps "CASE C0469 many books"
 l C0469
 ps "CASE C0470 every city"
 l C0470
+ps "CASE DEMACC1 proximal demonstrative acc masc pl"
+l DEMACC1
+ps "CASE DEMACC2 proximal demonstrative acc fem pl"
+l DEMACC2
 ps "GF_WORDBENCH_END cases"
 q

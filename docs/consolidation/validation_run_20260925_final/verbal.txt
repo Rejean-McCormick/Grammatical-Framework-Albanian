@@ -1,0 +1,43 @@
+FAIL
+- exact bëhem must be NonActiveMorph
+- ProgrVP must set typed progressivity only
+- ProgrVPSlash must set typed progressivity
+- ReflVP must mark ReflexiveUse
+- PassV2 must mark PassiveUse
+- Extend PassVPSlash must mark PassiveUse
+- legacy internal Past token remains in AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf
+- legacy internal Past token remains in AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf
+- advanced verbal scenario must be registered as optional, not required
+- alb-c10-g3-morph-060.gfs: SHA mismatch for validation/inputs/AlbC10G3060Sqi.gf: 9886c978221065f81238314c1dd8697efaaa7007dbd470b5e0c14ce4e858dd81 != 537f1342af44f107177961364a8dd3134dc41e54829c83503207dce5c60f1e3e
+- alb-c10-g3-morph-024.gfs: SHA mismatch for validation/inputs/AlbC10G3024Sqi.gf: 554a76449dd8f7177e00083bd9285cc60f40396708843476f988d97113526b88 != d88ff08cb665a5a40843a4f22d35c26a6959584a57cb93b30e7995729474beb9
+- alb-c10-g3-morph-053.gfs: SHA mismatch for validation/inputs/AlbC10G3053Sqi.gf: 6163d473c2e0beb0ef3b2d530db4056dee3607eba09f9eb40d6b837b1ecec5a2 != 550412d0a04ea064b34f888a84bce60b7bd8478f3ffcf4793bd2b5713a0530c6
+- alb-c10-g3-morph-029.gfs: SHA mismatch for validation/inputs/AlbC10G3029Sqi.gf: c2eef922c43ffe75aac365edbba182d12dc58487321793d8252f0e0d7cd9b627 != ca75063540e9c31c13b5edf39fc3fb456e01712fbdff138df82c018bc6e286f9
+- alb-c10-g3-morph-031.gfs: SHA mismatch for validation/inputs/AlbC10G3031Sqi.gf: f35476fc0b3346ecd069cbeb71f01bd98894e3c47d54d46bd9754de9e35e6b2c != c17c3862e4c1913f6b8775e7d373037f7f924ef20d3fcbc83c2fc5b8df70684e
+- alb-c10-g3-morph-016.gfs: SHA mismatch for validation/inputs/AlbC10G3016Sqi.gf: 6c22d932b4498aeb50d295cd5dd26c62324361a6ffdb282a568c74da6adb9637 != f627c03705639c9bb65ee6f070b3b63aa04df5fc681865d79454c68cf87f3bb5
+- alb-c10-g3-morph-018.gfs: SHA mismatch for validation/inputs/AlbC10G3018Sqi.gf: 49015132ca609c15da3361a4762e60abfd403cbcd83037b3587b8b06e3fd36c1 != 5e9ad70ee568169a9bb3d9c92cbd1603cd6195b0e947653611f567dd6562efab
+- alb-c10-g3-morph-056.gfs: SHA mismatch for validation/inputs/AlbC10G3056Sqi.gf: 68fe3e88f1835b926ad95bcf88154ccf841be6678183b23d3683527dcb16d3b2 != 06e25445812fdda7a46b6452d6bbbd66c2c6842fe22977f18eef408ba16d1710
+- alb-c10-g3-morph-015.gfs: SHA mismatch for validation/inputs/AlbC10G3015Sqi.gf: 3df3dfa81ebc5e229accdec5c957e459a2a6a12f474bbc2c6730a50a3219e758 != df09b5a260cdea12e778b93f2d9ebe84261f0cb97d652cadcd328fab4abfcd3f
+- alb-c10-g3-morph-030.gfs: SHA mismatch for validation/inputs/AlbC10G3030Sqi.gf: 14a7c054728bc5944c70f993b1c92e94acd7ca673a69a7bc6dd562fba399fa36 != 016c93f32bd53c880b867c34e0603c60b1df9ce1c88e18f11d0934b8687bc65b
+- alb-c10-g3-morph-017.gfs: SHA mismatch for validation/inputs/AlbC10G3017Sqi.gf: 64499f046462a23d397d96e1a6d441ee1fb86ee3953126d39e6efaa766071d7e != 1d86e13e59558ad5bdc7dba882b3cc41685cd0270eee4c9cdcfae7e4e6e95dec
+- alb-c10-g3-morph-034.gfs: SHA mismatch for validation/inputs/AlbC10G3034Sqi.gf: 30c1c66f24717e94da72dc091a57190e0e662d35a21457748d247800dd11dc34 != 285122818b02e1567d26e3de78849cab8375894d3396bb30f7abc825dd55b750
+- alb-c10-g3-morph-032.gfs: SHA mismatch for validation/inputs/AlbC10G3032Sqi.gf: 62f1e1afdd72b18415c88ff2eb047eb012788b01d037fa5a55b828be2e5c6e2d != 317912c8d112df6193d91d160509d2827160aa24288ca1dd89aab5081f5d5172
+- alb-c10-g3-morph-027.gfs: SHA mismatch for validation/inputs/AlbC10G3027Sqi.gf: ea787626033c38decabd6c22d32d034f8a139377280365e9d0089780f6b27257 != 754350b9658bdf9a6e6ebf603ad8724d2a160fa72345a286c6350b9685a5d223
+- alb-c10-g3-morph-035.gfs: SHA mismatch for validation/inputs/AlbC10G3035Sqi.gf: 75be3dc6dd9c757c648d56ee6e9eaee15c47a9221de1cc83565913a277a2009a != 66bbd785ae5e2066045cfdf4903c726be61019d5da4c1b9e756f50f53b77a2ec
+- alb-c10-g3-morph-021.gfs: SHA mismatch for validation/inputs/AlbC10G3021Sqi.gf: 4ac989844d4e239cab46588f4a3f364aa3e5298d168042c54fb3f757642179f3 != 834f6241c22173f740bd910d524017fbb206e2e88c821bcb718a89a352546c43
+- alb-c10-g3-morph-033.gfs: SHA mismatch for validation/inputs/AlbC10G3033Sqi.gf: 08dc2efe98509423c5799c4372d6da87b669a10e4c6005175fe51ccdb17569c8 != c41189f378b52c1a5adeb4f8e78a4a0fce0c000e27849a66b50dab11c894140d
+- alb-c10-g3-morph-023.gfs: SHA mismatch for validation/inputs/AlbC10G3023Sqi.gf: 585d1a4fc5bd8bfb1c378dea6a0c1cea7fc5107a5ff0ca858ae78d7b73f95003 != 82aae0f37912adccc43a6c2b049304bc8ac7f90b196cca72e44c48733d756964
+- alb-c10-g3-morph-059.gfs: SHA mismatch for validation/inputs/AlbC10G3059Sqi.gf: 4371afc1551e8a308d37ed2dd604d01b45650f89d335d9ad550d4238e372fa1a != 9fd95f22eafe94fbfc5423626af8066a4fd0a8125a64172a99b4e00ebe009d37
+- alb-c10-g3-morph-022.gfs: SHA mismatch for validation/inputs/AlbC10G3022Sqi.gf: 48ed38c6a4e31e6d06b089785a8bbb177e065252e37a9b6da7517e87ae6292a3 != 9b988297c41a0c8777bb558453b262416e9dfdb53cf2cf5ded56f61ac23aea1b
+- alb-c10-g3-morph-052.gfs: SHA mismatch for validation/inputs/AlbC10G3052Sqi.gf: dc0aa9398b4ab9c948d1f796ea6307826c81547f1370285eb6746239b49f431c != 70d44f52bc0e4000078e8d41d1844acf839850acfcc94a176b6d6dbc1ab6b88f
+- alb-c10-g3-morph-038.gfs: SHA mismatch for validation/inputs/AlbC10G3038Sqi.gf: 4db4b0ee6975a541c1aeb5e90d95615ff0ae574b22dc7442d344f63e221f0509 != 223fdeffc38d65d59046ed5d87d83388b146091b4625c35c06a54af680299864
+- alb-c10-g3-morph-037.gfs: SHA mismatch for validation/inputs/AlbC10G3037Sqi.gf: 0bab12e155ff71b1a66d959477f5aacc644c1c15cc624c63e1cb163704a4d596 != 1dfa2325c36523e23c6035bff03132d971912e5868e18fd432bbe40ff217cd92
+- alb-c10-g3-morph-026.gfs: SHA mismatch for validation/inputs/AlbC10G3026Sqi.gf: 1968ebbbe3697b9ed00ddf377ac5e51fd1b99abe7ac385ee1c440f82ca365bec != 3ef8579c0d62af8690d1f4ce244693d00b55176f474b53d871a0c8046bc1e502
+- alb-c10-g3-morph-057.gfs: SHA mismatch for validation/inputs/AlbC10G3057Sqi.gf: 8488f1fb2ee965ebeb1a7af5762801689fa7362b4b55b98cf97f1c997a5ec68f != 6952b6908031572b83fe95cedad41b11820627c2fa1a5a32c1049e99eb48c801
+- alb-c10-g3-morph-055.gfs: SHA mismatch for validation/inputs/AlbC10G3055Sqi.gf: fc98bcfbb7c9fa70c228acc1e72f45cfdd810e239a61f4f522154c876d3016c0 != ae256fa047880606241f8f3faae3f566d8005771d5951de2f7c692f5bb427696
+- alb-c10-g3-morph-036.gfs: SHA mismatch for validation/inputs/AlbC10G3036Sqi.gf: 58537c70293f9cbe5799ac83ded1ecca43fe6fb0a8234bc5f229e1cf6650b315 != e7060e022cfd8b9a35ddf61e59a563aa9c46921d7c449a45e54589940c6d29d3
+- alb-c10-g3-morph-028.gfs: SHA mismatch for validation/inputs/AlbC10G3028Sqi.gf: 5f3148183add7741671df1334a02805022ccde9f5701d0427e22f93eeb9dc976 != 257349f1bc6d11d7941bfd84059d174538afff14d1cda5147b05bd858ebb27f7
+- alb-c10-g3-morph-025.gfs: SHA mismatch for validation/inputs/AlbC10G3025Sqi.gf: 7c966118d991885a6f51fa53a8e00146ade4cbbd4c4a56801f91cbbc24c05923 != 243135d6c8dc86a828273600531a4a606f99b13288d302d8c25a547d0035c330
+- alb-c10-g3-morph-054.gfs: SHA mismatch for validation/inputs/AlbC10G3054Sqi.gf: e368251a0f9a4e9121f123e8b7507bf0aaf1bb5e9e941f25f9a983b4884efd83 != d8297d9e6cc93cd57e78b86dafde8a9e97073ab14e70707d936d8d4c6c91e5a7
+- alb-c10-g3-morph-058.gfs: SHA mismatch for validation/inputs/AlbC10G3058Sqi.gf: 90e47f5da7593e1718edfbcdde062508b4eefa441f64c205a6821ceaf5181d86 != 5b2aafcfc05e744ce48cfacd4747d2dd182384d1e8d0d66d2b887b5b337bd62e
+- alb-c10-g3-morph-020.gfs: SHA mismatch for validation/inputs/AlbC10G3020Sqi.gf: a5a41547faeeb729a2fe7997745862b4e30a74d7ac63583f151132a809f11c6a != d6f6db67de23b70d7b88eafff0c93423b900d5b80fcc3ab1ae7422f0f6aaebb2
+- alb-c10-g3-morph-019.gfs: SHA mismatch for validation/inputs/AlbC10G3019Sqi.gf: 7efd6b6dd9c5a770364bbcbaf2f1f15fa1483f6a7de814b8e0d7fee3c33d92c9 != 7ebeba6a2c526678e51526be3b4e0b8512aeaa5e4690285950d3625a405e3b4e

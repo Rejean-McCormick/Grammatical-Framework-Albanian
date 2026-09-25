@@ -1,0 +1,50 @@
+[
+  {
+    "filename": "Code_snapshot_Grammatical_Framework-Albanian(20260925-123255).zip",
+    "bytes": 1261630,
+    "sha256": "961852fae67f7e5878c7d214197a75a705e5028d7ee8e87974358a9d85c39829",
+    "role": "Albanian source"
+  },
+  {
+    "filename": "gf-rgl-master.zip",
+    "bytes": 46535093,
+    "sha256": "e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d",
+    "role": "upstream RGL"
+  },
+  {
+    "filename": "Code_snapshot_GF_RGL_AI_Compendium(4).zip",
+    "bytes": 2220831,
+    "sha256": "73849c9b2e74cd8fcaacb438663eee2c285f84872f46284543b165840ce79bfe",
+    "role": "Compendium"
+  },
+  {
+    "filename": "Code_snapshot_GF_Wordbench(20260925-123301).zip",
+    "bytes": 4539726,
+    "sha256": "1664b592c5cfca72131ba75124f3a6d51b39e2596ae4488aa70a55746245cfdd",
+    "role": "Wordbench"
+  },
+  {
+    "filename": "Albanian_ref(4).zip",
+    "bytes": 909703,
+    "sha256": "15396c31106de2787ae844bb7013b77b4d1fe0b8a3b5e714fc7a9aeef23f1cfc",
+    "role": "Albanian references"
+  },
+  {
+    "filename": "Albanian_RGL_Morphology_MAX_Docs_v2_20260925 (2).zip",
+    "bytes": 570227,
+    "sha256": "5402dfc63c1f2e20331e38208b9b2168d93814b54ee3423d9817ad2c65149da6",
+    "role": "10 workstream docs"
+  },
+  {
+    "filename": "docs(20260925-133742).zip",
+    "bytes": 348348,
+    "sha256": "04d08549d326581e26d8888ede169d2dc9e639aaeb905168d8a4f51feb96a0c0",
+    "role": "historical project docs"
+  },
+  {
+    "filename": "DocGF-Compendium(4).zip",
+    "bytes": 1526579,
+    "sha256": "c635c426af5f16efbf798cc7ee87c2976247f08944385191a22c826e22b38ef7",
+    "role": "Compendium normative alignment copy used by v2"
+  }
+]

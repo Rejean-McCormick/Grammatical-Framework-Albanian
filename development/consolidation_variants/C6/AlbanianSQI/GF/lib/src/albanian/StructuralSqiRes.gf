@@ -1,0 +1,66 @@
+-- GF/lib/src/albanian/StructuralSqiRes.gf
+resource StructuralSqiRes =
+  open Prelude, ParamX, ResSqi, CatSqi in {
+
+oper
+  mkNPConst : Str -> Gender -> Number -> Person -> CatSqi.NP =
+    \x,g,n,p -> lin NP {
+      s = table {
+        Nom   => x ;
+        Acc   => x ;
+        Gen   => x ;
+        Dat   => x ;
+        Ablat => x
+      } ;
+      acc_clit = [] ;
+      dat_clit = [] ;
+      a = {g = g ; n = n ; p = p} ;
+      isPron = False
+    } ;
+
+  mkNPConstP3 : Str -> CatSqi.NP =
+    \x -> mkNPConst x Masc Sg P3 ;
+
+  mkDetInv : Str -> Number -> CatSqi.Det =
+    \x,n -> lin Det {
+      s = table {
+        Nom   => table {Masc => x ; Fem => x} ;
+        Acc   => table {Masc => x ; Fem => x} ;
+        Gen   => table {Masc => x ; Fem => x} ;
+        Dat   => table {Masc => x ; Fem => x} ;
+        Ablat => table {Masc => x ; Fem => x}
+      } ;
+      spec = Indef ;
+      n = n ;
+      placement = PreNominal
+    } ;
+
+  mkQuantInv : Str -> CatSqi.Quant =
+    \x -> lin Quant {
+      s = table {
+        Nom => table {
+          Masc => table {Sg => x ; Pl => x} ;
+          Fem  => table {Sg => x ; Pl => x}
+        } ;
+        Acc => table {
+          Masc => table {Sg => x ; Pl => x} ;
+          Fem  => table {Sg => x ; Pl => x}
+        } ;
+        Gen => table {
+          Masc => table {Sg => x ; Pl => x} ;
+          Fem  => table {Sg => x ; Pl => x}
+        } ;
+        Dat => table {
+          Masc => table {Sg => x ; Pl => x} ;
+          Fem  => table {Sg => x ; Pl => x}
+        } ;
+        Ablat => table {
+          Masc => table {Sg => x ; Pl => x} ;
+          Fem  => table {Sg => x ; Pl => x}
+        }
+      } ;
+      spec = Indef ;
+      placement = PreNominal
+    } ;
+
+} ;

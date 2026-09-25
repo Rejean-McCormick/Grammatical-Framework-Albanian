@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "albanian-c10-bug-handoff-v1",
+  "type": "object",
+  "required": ["schema", "bug_id", "case_id", "owner_conversation", "source_lock_sha256", "language_variety", "scenario_id", "observed_output", "verdict", "confidence", "rationale", "expected_constraint", "status"],
+  "properties": {
+    "schema": {"const": "albanian-c10-bug-handoff-v1"},
+    "bug_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "owner_conversation": {"type": "integer", "minimum": 1, "maximum": 9},
+    "source_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "language_variety": {"const": "Standard Albanian"},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "observed_output": {"type": "string"},
+    "verdict": {"enum": ["questionable", "invalid"]},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "expected_constraint": {"type": "string", "minLength": 1},
+    "status": {"enum": ["open", "resolved", "revalidated", "closed"]}
+  },
+  "additionalProperties": true
+}

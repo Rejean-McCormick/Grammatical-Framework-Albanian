@@ -1,0 +1,168 @@
+PASS Case has 5 syntax values 
+PASS MorphCase syncretic layer exists 
+PASS Gender-preserving plural agreement exists 
+PASS Typed CliticCluster exists 
+PASS Central clitic flattener exists 
+PASS Central të contraction exists 
+PASS No legacy acc_clit field 
+PASS No legacy dat_clit field 
+PASS No active subjcl field 
+PASS No active cl : Str field 
+PASS po separate from cluster 
+PASS Dat utterance remains Dat 
+PASS All explicit Case/MorphCase tables exhaustive 
+PASS Case/MorphCase table audit exercised substantial source Case=24 MorphCase=1174
+PASS datAccSg definition present 
+PASS datAccSg contains ma 
+PASS datAccSg contains ta 
+PASS datAccSg contains ia 
+PASS datAccSg contains na" ++ "e 
+PASS datAccSg contains jua 
+PASS datAccSg contains ua 
+PASS datAccPl definition present 
+PASS datAccPl contains m'i 
+PASS datAccPl contains t'i 
+PASS datAccPl contains ia 
+PASS datAccPl contains na" ++ "i 
+PASS datAccPl contains jua 
+PASS datAccPl contains ua 
+PASS datRefl definition present 
+PASS datRefl contains m'u 
+PASS datRefl contains t'u 
+PASS datRefl contains iu 
+PASS datRefl contains na" ++ "u 
+PASS datRefl contains ju 
+PASS datRefl contains ju 
+PASS të contraction "e" => "ta" 
+PASS të contraction "i" => "t'i" 
+PASS të contraction "u" => "t'u" 
+PASS të contraction "jua" => "t'jua" 
+PASS të contraction "ua" => "t'ua" 
+PASS 18 double-clitic reference cells 18
+PASS all 18 source-locked 
+PASS 14 source-attested prep government rows 14
+PASS 21 Structural prepositions implemented 21
+PASS 21 Structural prepositions uniquely classified rows=21 unique=21
+PASS No Structural preposition UNASSESSED 
+PASS Structural registry covers implementation exactly missing=[] extra=[]
+PASS Structural prep shape above_Prep impl=sipër/Ablat/OrdinaryCompl registry={'constructor': 'above_Prep', 'surface': 'sipër', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'REVIEW_REQUIRED', 'source_or_rationale': 'Structural mapping; surface/case not in 14-item locked preposition core'}
+PASS Structural prep shape after_Prep impl=pas/Ablat/OrdinaryCompl registry={'constructor': 'after_Prep', 'surface': 'pas', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'REVIEW_REQUIRED', 'source_or_rationale': 'Structural mapping; surface/case not in 14-item locked preposition core'}
+PASS Structural prep shape before_Prep impl=para/Ablat/OrdinaryCompl registry={'constructor': 'before_Prep', 'surface': 'para', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: para governs ablative'}
+PASS Structural prep shape behind_Prep impl=pas/Ablat/OrdinaryCompl registry={'constructor': 'behind_Prep', 'surface': 'pas', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'REVIEW_REQUIRED', 'source_or_rationale': 'Structural mapping; semantic distinction from after requires review'}
+PASS Structural prep shape between_Prep impl=midis/Ablat/OrdinaryCompl registry={'constructor': 'between_Prep', 'surface': 'midis', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: midis governs ablative'}
+PASS Structural prep shape by8agent_Prep impl=nga/Nom/OrdinaryCompl registry={'constructor': 'by8agent_Prep', 'surface': 'nga', 'case': 'Nom', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: nga governs nominative; agent semantics separately RGL-owned'}
+PASS Structural prep shape by8means_Prep impl=me/Acc/OrdinaryCompl registry={'constructor': 'by8means_Prep', 'surface': 'me', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: me governs accusative'}
+PASS Structural prep shape during_Prep impl=gjatë/Ablat/OrdinaryCompl registry={'constructor': 'during_Prep', 'surface': 'gjatë', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: gjatë governs ablative'}
+PASS Structural prep shape except_Prep impl=përveç/Ablat/OrdinaryCompl registry={'constructor': 'except_Prep', 'surface': 'përveç', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'REVIEW_REQUIRED', 'source_or_rationale': 'Structural mapping; surface/case not in 14-item locked preposition core'}
+PASS Structural prep shape for_Prep impl=për/Acc/OrdinaryCompl registry={'constructor': 'for_Prep', 'surface': 'për', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: për governs accusative'}
+PASS Structural prep shape from_Prep impl=nga/Nom/OrdinaryCompl registry={'constructor': 'from_Prep', 'surface': 'nga', 'case': 'Nom', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: nga governs nominative'}
+PASS Structural prep shape in8front_Prep impl=përpara/Ablat/OrdinaryCompl registry={'constructor': 'in8front_Prep', 'surface': 'përpara', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'REVIEW_REQUIRED', 'source_or_rationale': 'Structural mapping; surface/case not in 14-item locked preposition core'}
+PASS Structural prep shape in_Prep impl=në/Acc/OrdinaryCompl registry={'constructor': 'in_Prep', 'surface': 'në', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: në governs accusative'}
+PASS Structural prep shape on_Prep impl=mbi/Acc/OrdinaryCompl registry={'constructor': 'on_Prep', 'surface': 'mbi', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: mbi governs accusative'}
+PASS Structural prep shape part_Prep impl=prej/Ablat/OrdinaryCompl registry={'constructor': 'part_Prep', 'surface': 'prej', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: prej governs ablative'}
+PASS Structural prep shape possess_Prep impl=<zero+nyje>/Gen/GenitiveCompl registry={'constructor': 'possess_Prep', 'surface': '<zero+nyje>', 'case': 'Gen', 'kind': 'GenitiveCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Albanian grammar: genitive is distinguished from dative by required nyje; C5 typed GenitiveCompl'}
+PASS Structural prep shape through_Prep impl=përmes/Ablat/OrdinaryCompl registry={'constructor': 'through_Prep', 'surface': 'përmes', 'case': 'Ablat', 'kind': 'OrdinaryCompl', 'status': 'REVIEW_REQUIRED', 'source_or_rationale': 'Structural mapping; surface/case not in 14-item locked preposition core'}
+PASS Structural prep shape to_Prep impl=tek/Nom/OrdinaryCompl registry={'constructor': 'to_Prep', 'surface': 'tek', 'case': 'Nom', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: tek governs nominative'}
+PASS Structural prep shape under_Prep impl=nën/Acc/OrdinaryCompl registry={'constructor': 'under_Prep', 'surface': 'nën', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: nën governs accusative'}
+PASS Structural prep shape with_Prep impl=me/Acc/OrdinaryCompl registry={'constructor': 'with_Prep', 'surface': 'me', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: me governs accusative'}
+PASS Structural prep shape without_Prep impl=pa/Acc/OrdinaryCompl registry={'constructor': 'without_Prep', 'surface': 'pa', 'case': 'Acc', 'kind': 'OrdinaryCompl', 'status': 'SOURCE_LOCKED', 'source_or_rationale': 'Lesson_20 §7: pa governs accusative'}
+PASS Typed genitive Prep helper exists 
+PASS brother_N2 uses typed genitive complement 
+PASS father_N2 uses typed genitive complement 
+PASS mother_N2 uses typed genitive complement 
+PASS No kinship mkPrep i/e pseudo-genitive remains 
+PASS FunRP head/gap case routing 
+PASS C5 API parity registry has 21 rows 21
+PASS C5 API parity has no UNASSESSED row 
+PASS API owner defines ComplSlash VerbSqi.gf
+PASS API owner defines ReflVP VerbSqi.gf
+PASS API owner defines Slash2V3 VerbSqi.gf
+PASS API owner defines Slash3V3 VerbSqi.gf
+PASS API owner defines SlashVV VerbSqi.gf
+PASS API owner defines VPSlashPrep VerbSqi.gf
+PASS API owner defines UsePron NounSqi.gf
+PASS API owner defines PossPron NounSqi.gf
+PASS API owner defines PossNP NounSqi.gf
+PASS API owner defines PartNP NounSqi.gf
+PASS API owner defines PrepNP AdverbSqi.gf
+PASS API owner defines QuestSlash QuestionSqi.gf
+PASS API owner defines PrepIP QuestionSqi.gf
+PASS API owner defines ComplSlashIP QuestionSqi.gf
+PASS API owner defines RelSlash RelativeSqi.gf
+PASS API owner defines IdRP RelativeSqi.gf
+PASS API owner defines FunRP RelativeSqi.gf
+PASS API owner defines PredVP SentenceSqi.gf
+PASS API owner defines ImpVP SentenceSqi.gf
+PASS API owner defines personal_pronouns StructuralSqiNominal.gf
+PASS API owner defines prepositions StructuralSqiClause.gf
+PASS 5 C5 scenarios declared 5
+PASS project requires 57 scenarios 57
+PASS scenario exists alb-c5-clitic-matrix 
+PASS project requires alb-c5-clitic-matrix 
+PASS SHA locks alb-c5-clitic-matrix 
+PASS scenario exists alb-c5-pronoun-cases 
+PASS project requires alb-c5-pronoun-cases 
+PASS SHA locks alb-c5-pronoun-cases 
+PASS scenario exists alb-c5-prep-government 
+PASS project requires alb-c5-prep-government 
+PASS SHA locks alb-c5-prep-government 
+PASS scenario exists alb-c5-realization-contexts 
+PASS project requires alb-c5-realization-contexts 
+PASS SHA locks alb-c5-realization-contexts 
+PASS scenario exists alb-c5-relative-genitive 
+PASS project requires alb-c5-relative-genitive 
+PASS SHA locks alb-c5-relative-genitive 
+PASS scenario inventory = 57 (52 historical + 5 C5) 57
+PASS GF census shape = 51 language + 5 API + 2 MorphoDict 51+5+2
+PASS brace balance LangSqi.gf 1/1
+PASS brace balance DocumentationSqi.gf 22/22
+PASS brace balance ExtendSqiAPCN.gf 4/4
+PASS brace balance GrammarSqi.gf 1/1
+PASS brace balance StructuralSqi.gf 1/1
+PASS brace balance ExtendSqiVPBridge.gf 12/12
+PASS brace balance IdiomSqi.gf 17/17
+PASS brace balance StructuralSqiNominal.gf 37/37
+PASS brace balance ExtraSqi.gf 16/16
+PASS brace balance SentenceSqi.gf 20/20
+PASS brace balance QuestionSqi.gf 15/15
+PASS brace balance AdverbSqi.gf 10/10
+PASS brace balance AllSqiAbs.gf 1/1
+PASS brace balance StructuralSqiClause.gf 7/7
+PASS brace balance ParadigmsSqi.gf 143/143
+PASS brace balance ExtendSqiVPS.gf 26/26
+PASS brace balance AdjectiveSqi.gf 11/11
+PASS brace balance ExtendSqiHelpers.gf 8/8
+PASS brace balance NamesSqi.gf 4/4
+PASS brace balance ExtendSqiRNP.gf 22/22
+PASS brace balance RelativeSqi.gf 7/7
+PASS brace balance MorphoSqi.gf 10780/10780
+PASS brace balance CatSqi.gf 42/42
+PASS brace balance TextSqi.gf 5/5
+PASS brace balance AllSqi.gf 1/1
+PASS brace balance ResSqi.gf 174/174
+PASS brace balance SymbolSqi.gf 13/13
+PASS brace balance IrregSqiAbs.gf 1/1
+PASS brace balance TenseSqi.gf 1/1
+PASS brace balance DictSqiAbs.gf 1/1
+PASS brace balance PhraseSqi.gf 14/14
+PASS brace balance NumeralSqi.gf 42/42
+PASS brace balance ExtendSqiFocusPrep.gf 5/5
+PASS brace balance IrregSqi.gf 5/5
+PASS brace balance StructuralSqiRes.gf 28/28
+PASS brace balance StructuralSqiVerbal.gf 1/1
+PASS brace balance MarkupSqi.gf 9/9
+PASS brace balance ExtendSqi.gf 13/13
+PASS brace balance ExtendSqiExistential.gf 1/1
+PASS brace balance TestAbs.gf 1/1
+PASS brace balance ClauseSqiRes.gf 24/24
+PASS brace balance VerbSqi.gf 23/23
+PASS brace balance NounSqi.gf 58/58
+PASS brace balance TestSqi.gf 1/1
+PASS brace balance ConstructionSqi.gf 120/120
+PASS brace balance ExtendSqiScaffolding.gf 45/45
+PASS brace balance LexiconSqi.gf 15/15
+PASS brace balance ExtraSqiAbs.gf 1/1
+PASS brace balance DictSqi.gf 27/27
+PASS brace balance ConjunctionSqi.gf 39/39
+PASS brace balance ExtendSqiLexicon.gf 3/3
+CHECKS 167 FAILED 0

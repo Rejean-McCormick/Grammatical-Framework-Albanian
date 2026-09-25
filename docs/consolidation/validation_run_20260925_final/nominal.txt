@@ -1,0 +1,66 @@
+PASS five grammatical cases including Gen
+PASS four morphological noun cases
+PASS Gen maps to MDat only at morphology boundary
+PASS Noun stores MorphCase and number-sensitive gender
+PASS CN carries grammatical Case
+PASS CatSqi CN uses grammatical CNoun
+PASS Adj lexical table is Gender x Number with typed class
+PASS typed articulated/unarticulated adjective class
+PASS single typed nyje service
+FAIL legacy GenNum/GSg/GPl removed
+FAIL legacy adjective .clit flag removed
+PASS PossNP selects grammatical Gen on possessor
+PASS public ambigeneric noun constructors
+PASS PN API exposes five-case explicit constructor
+PASS LN API exposes five-case explicit constructor
+PASS GN API exposes five-case explicit constructor
+PASS proximal demonstrative accusative plurals match supplied Lesson 30
+PASS 1SG feminine possessive matches supplied table
+PASS 2SG masculine possessive matches supplied table
+PASS unresolved agreement fallbacks are centralized and named
+PASS no NumeralGov invented without Albanian minimal pairs
+FAIL compound lexical N remains in MorphCase space
+PASS documentation handles number-sensitive noun gender
+PASS noun documentation table spans all five grammatical cases
+FAIL no nounForm inside lexical lin N record (ExtendSqiScaffolding.gf)
+PASS language target census remains 51 (got 51)
+PASS API facade census remains 5 (got 5)
+PASS MorphoDict target census remains 2 (got 2)
+FAIL scenario census remains 52 (got 138)
+FAIL stale scenario input hash: alb-c10-g3-morph-015.gfs -> validation/inputs/AlbC10G3015Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-016.gfs -> validation/inputs/AlbC10G3016Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-017.gfs -> validation/inputs/AlbC10G3017Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-018.gfs -> validation/inputs/AlbC10G3018Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-019.gfs -> validation/inputs/AlbC10G3019Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-020.gfs -> validation/inputs/AlbC10G3020Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-021.gfs -> validation/inputs/AlbC10G3021Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-022.gfs -> validation/inputs/AlbC10G3022Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-023.gfs -> validation/inputs/AlbC10G3023Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-024.gfs -> validation/inputs/AlbC10G3024Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-025.gfs -> validation/inputs/AlbC10G3025Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-026.gfs -> validation/inputs/AlbC10G3026Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-027.gfs -> validation/inputs/AlbC10G3027Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-028.gfs -> validation/inputs/AlbC10G3028Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-029.gfs -> validation/inputs/AlbC10G3029Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-030.gfs -> validation/inputs/AlbC10G3030Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-031.gfs -> validation/inputs/AlbC10G3031Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-032.gfs -> validation/inputs/AlbC10G3032Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-033.gfs -> validation/inputs/AlbC10G3033Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-034.gfs -> validation/inputs/AlbC10G3034Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-035.gfs -> validation/inputs/AlbC10G3035Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-036.gfs -> validation/inputs/AlbC10G3036Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-037.gfs -> validation/inputs/AlbC10G3037Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-038.gfs -> validation/inputs/AlbC10G3038Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-052.gfs -> validation/inputs/AlbC10G3052Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-053.gfs -> validation/inputs/AlbC10G3053Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-054.gfs -> validation/inputs/AlbC10G3054Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-055.gfs -> validation/inputs/AlbC10G3055Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-056.gfs -> validation/inputs/AlbC10G3056Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-057.gfs -> validation/inputs/AlbC10G3057Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-058.gfs -> validation/inputs/AlbC10G3058Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-059.gfs -> validation/inputs/AlbC10G3059Sqi.gf
+FAIL stale scenario input hash: alb-c10-g3-morph-060.gfs -> validation/inputs/AlbC10G3060Sqi.gf
+FAIL all embedded Wordbench input hashes are current
+PASS all scenario linearization symbols exist in abstract and concrete inputs
+
+6 nominal architecture checks failed

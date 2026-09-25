@@ -1,0 +1,509 @@
+{
+  "schema": "albanian-rgl-c5-final-local-overlay-v1",
+  "date": "2026-09-25",
+  "status": "FINALIZED_LOCALLY_NOT_GF_CERTIFIED",
+  "file_count_excluding_manifest": 100,
+  "target_gf_source_lock_58": "e15d7abd7c99510a438cc90b682b55c7ef7e1f17f3b49e8aae791e90c2adb49b",
+  "files": [
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf",
+      "bytes": 1647,
+      "sha256": "1c6d2c611c7fc2c4969c9d0a52864e319899008e6343d4a936e6740603f7682f"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf",
+      "bytes": 834,
+      "sha256": "8d1b0cc585d6d57f608739bd2ac809a50f909a10207262ff8a0e896d4672566b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/CatSqi.gf",
+      "bytes": 2679,
+      "sha256": "db9150d97fcaf0bc6573754071ceab233e887d2b156076af42352f719dc6573b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf",
+      "bytes": 5838,
+      "sha256": "14746f70260ca0b32aa2c73ef7edbff2c7ad72ea56a019d825da44300630b8cd"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf",
+      "bytes": 2427,
+      "sha256": "734d685655de8afdac53e5330521ceb8814e1c4a0c0b28308c076bcffbb7aaae"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf",
+      "bytes": 7653,
+      "sha256": "a1d3ac2a949c1957e2b9d5c7d6dc9c07550eeabfb30410026bbc3050fe2effd5"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+      "bytes": 278721,
+      "sha256": "9edd8988382d1b8bb09c3feddafe775d13beab78df277cca71bb322bee3f33a3"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf",
+      "bytes": 10048,
+      "sha256": "a266de03bc0c2f277ff149c4daa38179d3bbeb208232b7cc2a3dc098e5ff3899"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf",
+      "bytes": 817,
+      "sha256": "d9754ca896999d61149071eccfd3807eb4bd6d0542309e067a1d2590fa356c1a"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiHelpers.gf",
+      "bytes": 1958,
+      "sha256": "6a90bd310dee919177a2e633dd70fd03224a5c4f761de8f38829a1d07b1f8773"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiLexicon.gf",
+      "bytes": 1205,
+      "sha256": "7e7370a4a0937152197dc6ff3ab15ebd24b8745f2a62ea6996ba8b377f8b99ce"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf",
+      "bytes": 2651,
+      "sha256": "87da4cdcc61aca02157173a02e8726e029042062e0f1c70b9dd51375401935de"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf",
+      "bytes": 6653,
+      "sha256": "49fc65a78d4909c28ad2cb35c7817f61942fe7a22e1f96714f174f910157ea0c"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf",
+      "bytes": 2500,
+      "sha256": "e93308cd9df9506b1dd9df8747707706af73c9e13d8d6c43ffa47a38e6ece82e"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf",
+      "bytes": 4337,
+      "sha256": "d7af217dfabf20e914b472affdacec60426ab2ab54415188cd010f1720801589"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf",
+      "bytes": 1646,
+      "sha256": "205c8318c60b170f0e196b7b5a7f4a541fd2ecd4ee78eb32a6d3e965610fd812"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf",
+      "bytes": 19096,
+      "sha256": "a061411024760a85724ecb8191c8fd4a6a16cbd5eb60699cee67b80417c72311"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/MarkupSqi.gf",
+      "bytes": 595,
+      "sha256": "ed4bb54fb4222eb02a2dc9e3a05628d491885b02fcf689a805b160208416a4ca"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf",
+      "bytes": 1079508,
+      "sha256": "17e50da942b729d49696f541adc1143065b696e49bc94f87a2bba878acd03b80"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf",
+      "bytes": 756,
+      "sha256": "c28cbb11863ca7cc1c761d123f2462ee4ca46e93f1b5fda1aa23702342f30465"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/NounSqi.gf",
+      "bytes": 6713,
+      "sha256": "c2944d0f6b9703225d9161e9f95c82dc8ef71197b88373adba200557b3910669"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf",
+      "bytes": 54908,
+      "sha256": "834b031e9e79f144dc649773d749fe49f047b50de142bdc3bacafc58a1810f73"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/PhraseSqi.gf",
+      "bytes": 706,
+      "sha256": "34ea6dd3854240468dc4eda4742d57180d5ea0b90f3c972e03e0dea7cb0125aa"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf",
+      "bytes": 1487,
+      "sha256": "c32998e9c7e663b33daf8d342da0d4d16e207acdaa99e99baed96f15275715ab"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf",
+      "bytes": 1521,
+      "sha256": "a564cd6d0dd0f1a939f35071e53547123d68eb0c6e090d662a905754d6d8420c"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/ResSqi.gf",
+      "bytes": 18968,
+      "sha256": "f04e86837bf6dfbb06e2957eb51dc3a2f516cd3485cfd0c20f3dfab61c750e36"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiClause.gf",
+      "bytes": 3495,
+      "sha256": "e3d249d7be101fb146afaa81516582007b37bfe1e3c21a11e2c96e70dd27997b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf",
+      "bytes": 4056,
+      "sha256": "dc6150e34f7d6772c339a93c4eb7145206edc74850bcfb60d0446dc5a8330482"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/StructuralSqiRes.gf",
+      "bytes": 1641,
+      "sha256": "dcc41f84d5602ab8e7ca90a65d7873b4dfc09b339ff3f4bdcd9b4a21a2c1190b"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf",
+      "bytes": 2768,
+      "sha256": "5ee036d9659a80c12ba1338cb60f9e89805dbd246ef6b2042e73f062c2799df1"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf",
+      "bytes": 6896,
+      "sha256": "694361a7c51c461103d0459ded03bc1ccd14bf04c9a42b4e3dd0f2a960503c71"
+    },
+    {
+      "path": "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+      "bytes": 23890,
+      "sha256": "a816379b7067c34321bfd13cd5bfbbd6dd8c6e07a9153001b116d82d89c43a2a"
+    },
+    {
+      "path": "C5_FINAL_DELIVERY_README.md",
+      "bytes": 1778,
+      "sha256": "d8363dceac2bff82fac35aa1f987c9974631f57c50148185c09059595414c54c"
+    },
+    {
+      "path": "C5_FINAL_REPORT.md",
+      "bytes": 2113,
+      "sha256": "2024ba653d8e5bc9827d2e8676a5420ae49dec195acf2832e07382d0badb8db1"
+    },
+    {
+      "path": "C5_OVERLAY_APPLY_README.md",
+      "bytes": 494,
+      "sha256": "94a3d24f4b6dcfdd45ede56e4bff99784d244458edd8a19614bc721e0f573949"
+    },
+    {
+      "path": "docs/c5/C5_CANONICAL_RECONCILIATION_20260925.md",
+      "bytes": 4906,
+      "sha256": "8a2231fdf1670ea753b5c248fb947cef4c072bdcfac460d07ac9aedf3d16b51e"
+    },
+    {
+      "path": "docs/c5/C5_CHANGED_FILES.json",
+      "bytes": 5361,
+      "sha256": "a7be45f6b7a8a333a8f75da634a2f1fadce2a330d2162414304bccf1897d458d"
+    },
+    {
+      "path": "docs/c5/C5_DIFF_AGAINST_SUPPLIED_SNAPSHOT.tsv",
+      "bytes": 9764,
+      "sha256": "61bed32ac1cc9787d9971bcb9ca12a8de0c8d27759b75d5392128353b859f427"
+    },
+    {
+      "path": "docs/c5/C5_IMPLEMENTATION_STATUS_20260925.md",
+      "bytes": 3996,
+      "sha256": "6de4a8e8a9d697772f6feba6ec54fe7df66fe3da3e19fcf74734e2db2a1e5389"
+    },
+    {
+      "path": "docs/c5/C5_LOCAL_RELEASE_EVIDENCE_20260925.json",
+      "bytes": 1193,
+      "sha256": "28070a4702e201f77b0dfb12bb84c39536b9f57b822ed2abe1272d106856ebbc"
+    },
+    {
+      "path": "docs/c5/C5_LOCAL_RELEASE_EVIDENCE_20260925.md",
+      "bytes": 2571,
+      "sha256": "67fdcb1c29a39ac5c874ab02e34a7a86f32b03089d9f890eab85b45cd96a33c2"
+    },
+    {
+      "path": "docs/c5/C5_SOURCE_LOCK_SHA256.txt",
+      "bytes": 6697,
+      "sha256": "6d87808a05fcf767afca41f7983da3732e86c4ef4e9d2e59203bdb0a64674c14"
+    },
+    {
+      "path": "docs/c5/canonical_reference/03_FINAL_PRODUCT_AND_DEFINITION_OF_DONE.md",
+      "bytes": 2407,
+      "sha256": "153aa1dbebee48c68280ebedc563e004a2ea0ff03676dade474fd67a4da3061d"
+    },
+    {
+      "path": "docs/c5/canonical_reference/10_CLITICS_PRONOUNS_CASE_PREPOSITIONS.md",
+      "bytes": 1298,
+      "sha256": "6fd60ac27fa01f1999ecf33ddd08054dfe57b5467acafca319e2f3074a2a7948"
+    },
+    {
+      "path": "docs/c5/canonical_reference/17_TESTING_CERTIFICATION_AND_RELEASE_LEVELS.md",
+      "bytes": 2194,
+      "sha256": "781796ff229f67a6288749c1869a92701db4cfc5635634bdc16494b9b41d1020"
+    },
+    {
+      "path": "docs/c5/canonical_reference/19_GLOBAL_DECISION_REGISTER.md",
+      "bytes": 2492,
+      "sha256": "3a98f166b96920860a523e6dc114f56c3d781aced8e40311e600075cd6e570f0"
+    },
+    {
+      "path": "docs/c5/canonical_reference/20_GLOBAL_OPEN_QUESTIONS.md",
+      "bytes": 1677,
+      "sha256": "379c071486bb0fea531998fabb3a7ca2ac318c60add5e25e28b59bf2fe45a95e"
+    },
+    {
+      "path": "docs/c5/canonical_reference/22_RELEASE_GATES.md",
+      "bytes": 3798,
+      "sha256": "f6d2d5f28e3360db38fddddfb7334058f85fd6c82543c0a09390d18e059b64d1"
+    },
+    {
+      "path": "docs/c5/canonical_reference/25_CHANGE_CONTROL_AND_DELIVERY.md",
+      "bytes": 6128,
+      "sha256": "16271047d775303d700afbfef00858e7358b415ce85fc70e2b6185b4c2bd42bb"
+    },
+    {
+      "path": "docs/c5/spec_v2/00_FINAL_TARGET.md",
+      "bytes": 3175,
+      "sha256": "8512190330f89a341e1a911bc0509f65643ef46ca686ff0edc27711ab7c7e35c"
+    },
+    {
+      "path": "docs/c5/spec_v2/01_CURRENT_BASELINE_AND_GAPS.md",
+      "bytes": 3665,
+      "sha256": "29813fe49dc50cb4b706244acfc16890639dd97f8a253f2f6ed91e96df6c4467"
+    },
+    {
+      "path": "docs/c5/spec_v2/02_TYPED_ARCHITECTURE.md",
+      "bytes": 3948,
+      "sha256": "dd6e0c3fd0922cd22cfd2ab0c66de000b9c9466bcb07247eca286b672f410c18"
+    },
+    {
+      "path": "docs/c5/spec_v2/03_CLITIC_SYSTEM_SPEC.md",
+      "bytes": 2760,
+      "sha256": "01b0425434887b5711cfcc594e5e9a34bd841929b80b2cd015eb6f46e473eb21"
+    },
+    {
+      "path": "docs/c5/spec_v2/04_PRONOUN_CASE_PREPOSITION_SPEC.md",
+      "bytes": 2899,
+      "sha256": "4fd307f767f08540de9c4e8abc5560408b39384df57baf629664e4addc1468ad"
+    },
+    {
+      "path": "docs/c5/spec_v2/05_REALIZATION_CONTEXT_MATRIX.md",
+      "bytes": 3059,
+      "sha256": "4aec4250545dbc820cdb276bc3546b1e2584a7502839c1f0dd39bb347f49f529"
+    },
+    {
+      "path": "docs/c5/spec_v2/06_MODEL_LANGUAGE_POLICY.md",
+      "bytes": 1905,
+      "sha256": "403fbd27c25c03bf57b5870366f95c8c3e9281ca9adc3a591708690a4585b2b2"
+    },
+    {
+      "path": "docs/c5/spec_v2/07_MIGRATION_PLAN.md",
+      "bytes": 2744,
+      "sha256": "c60f5615412617e43002f86c3b0f98a57650de8efff9644ebc5db5da70812aed"
+    },
+    {
+      "path": "docs/c5/spec_v2/08_TEST_AND_CERTIFICATION_PLAN.md",
+      "bytes": 2477,
+      "sha256": "b03a735205ec299dba04679c647ef50c6aa16a9f7811e316f25191d0f56def7f"
+    },
+    {
+      "path": "docs/c5/spec_v2/09_DECISION_LEDGER.md",
+      "bytes": 2552,
+      "sha256": "a2fb4ff91af77817b27de5246ab4d3f487b078e042ad982cd3439846e0b65aea"
+    },
+    {
+      "path": "docs/c5/spec_v2/10_OPEN_QUESTIONS.md",
+      "bytes": 2105,
+      "sha256": "ac3be5b9524715fea40fbfee0278bc4f64d9e999c5949f9fbe20df200a52688a"
+    },
+    {
+      "path": "docs/c5/spec_v2/11_PATCH_CHECKLIST.md",
+      "bytes": 2169,
+      "sha256": "2be60a707933bbcf510b68a00877c41280e69db07fa87a63cef8713f0f503013"
+    },
+    {
+      "path": "docs/c5/spec_v2/12_SOURCE_EVIDENCE_MATRIX.md",
+      "bytes": 4087,
+      "sha256": "407d28a489a7569b1f7ef07a2cbf2343886c87d7d05d0f045621c4b9c8c4afd4"
+    },
+    {
+      "path": "docs/c5/spec_v2/13_CROSS_WORKSTREAM_BOUNDARIES.md",
+      "bytes": 2171,
+      "sha256": "297cb898b2afe643f7e9121452632d7cf8bf28a8a1cdaf099ec999e4e8673552"
+    },
+    {
+      "path": "docs/c5/spec_v2/14_RGL_API_PARITY_MATRIX.md",
+      "bytes": 2613,
+      "sha256": "f6fb9ffcfe4aee8198a25feb4a903adf10f9a625fed19aca6973906ce4146e7e"
+    },
+    {
+      "path": "docs/c5/spec_v2/15_PRODUCER_CONSUMER_OWNERSHIP.md",
+      "bytes": 2202,
+      "sha256": "84ac3f2378ef7e946a2d9aac24722efb684c2a56732c22f5984e4c3387076c2c"
+    },
+    {
+      "path": "docs/c5/spec_v2/16_EXHAUSTIVE_LINGUISTIC_INVENTORY.md",
+      "bytes": 2486,
+      "sha256": "3eac042a884deb7fd70d7ec73a48a51467374fa65273fe0048f2ba6fbe4d76e3"
+    },
+    {
+      "path": "docs/c5/spec_v2/17_MACHINE_CHECKABLE_DEFINITION_OF_DONE.md",
+      "bytes": 2505,
+      "sha256": "2f3bfdc737ae94f887a8b59b1dc3c64f31c6307e4b00287f914d283f95a153d9"
+    },
+    {
+      "path": "docs/c5/spec_v2/18_VERSIONING_AND_CHANGE_CONTROL.md",
+      "bytes": 1453,
+      "sha256": "157d28b224af5d4c5c62d0822ce89d3aa5d1fa9a42f8134a65ff7328d09caddc"
+    },
+    {
+      "path": "docs/c5/spec_v2/19_REQUIREMENT_TRACEABILITY_MATRIX.md",
+      "bytes": 1785,
+      "sha256": "679c3da95f2cd79e4b7a3c9cdbd5ab9cc633a73457e8deaeef2df43a19c320a0"
+    },
+    {
+      "path": "docs/c5/spec_v2/CHANGELOG.md",
+      "bytes": 1026,
+      "sha256": "39e8a69176b1ef2305031626f6c972c4dbf0878f45942ffa8b45baacc95de483"
+    },
+    {
+      "path": "docs/c5/spec_v2/MANIFEST.md",
+      "bytes": 1150,
+      "sha256": "7a3f04f38e224598742cafc6f70d2e5db1599f1e838a4ecee2a8a0ceb328ebc8"
+    },
+    {
+      "path": "docs/c5/spec_v2/README.md",
+      "bytes": 5592,
+      "sha256": "f84c98d02d59bab4a6d31af73cd642ce941af1e16eaac9c5b842ca7a8696e75e"
+    },
+    {
+      "path": "docs/c5/spec_v2/VALIDATION_REPORT.md",
+      "bytes": 608,
+      "sha256": "20e0e0a87e39eadfecfae95f4443994a7855662f6efde03e0d325dab1f811219"
+    },
+    {
+      "path": "project.toml",
+      "bytes": 1816,
+      "sha256": "e8968966253a071744784214214f735eeb4975e2b7eb18907a11b67b82f584f0"
+    },
+    {
+      "path": "validation/c5/C5_API_PARITY_REGISTRY.tsv",
+      "bytes": 2186,
+      "sha256": "036b08f19649274132b30bfb6eb0a4e524fee9e2aa96bd6569fa6172a5c009a3"
+    },
+    {
+      "path": "validation/c5/C5_PREPOSITION_REGISTRY.tsv",
+      "bytes": 685,
+      "sha256": "5124f4f60737708bd5b004f4001760fe6af6e523ea3215d48a8e7856361fe529"
+    },
+    {
+      "path": "validation/c5/C5_REFERENCE_EXPECTATIONS.tsv",
+      "bytes": 14971,
+      "sha256": "2832dae46fecf9e48c694ee51c5353cc10716eedbc47470636b2d75748e3b57d"
+    },
+    {
+      "path": "validation/c5/C5_STATIC_VALIDATION.txt",
+      "bytes": 11627,
+      "sha256": "874b7186a1beac2022e9de9b5e63a3a63b8c62295c5265d7e26d6dbe117f29bc"
+    },
+    {
+      "path": "validation/c5/C5_STRUCTURAL_PREPOSITION_REGISTRY.tsv",
+      "bytes": 2207,
+      "sha256": "d6f58f3ba0d1beeb57a5db7f5f02906c3680f7a96def1fe44d14f28cf4d74658"
+    },
+    {
+      "path": "validation/c5/C5_VALIDATION_MANIFEST.json",
+      "bytes": 1191,
+      "sha256": "3cc4dc939ed929b20ebdb086230d6196450b53a6a0ce48a664cda0c0fb3920cf"
+    },
+    {
+      "path": "validation/c5/DICT_MORPH_COMBINED_VALIDATION.txt",
+      "bytes": 1137,
+      "sha256": "dfbd26ffe98a36586f116e457491cb6de26824d148ee5d014b5d0247e4244b60"
+    },
+    {
+      "path": "validation/c5/DICT_STATIC_VALIDATION.txt",
+      "bytes": 245,
+      "sha256": "ba45d9db28af87cd6737eb1dd7b16f587d8c09e50c72207358893c673ed59e3a"
+    },
+    {
+      "path": "validation/c5/MORPHODICT_STATIC_VALIDATION.txt",
+      "bytes": 595,
+      "sha256": "d4d2b75b1e5aa48df6e04faf55c996b32fbff9ebba23aa8b0ac95eae30421f1b"
+    },
+    {
+      "path": "validation/c5/MORPHOSQI_LINT.txt",
+      "bytes": 74,
+      "sha256": "fe19c1da0e6f37d13dae8c1482e9c4d9bc77dea1c66a4c4ac309705fa57c91e2"
+    },
+    {
+      "path": "validation/c5/static_validate_c5.py",
+      "bytes": 10013,
+      "sha256": "6d54e1cf374868eae061ac92279ea8e7d70f0b3bfd6fcf0cdb2ea9162f890bfe"
+    },
+    {
+      "path": "validation/inputs/AlbC5CliticMatrix.gf",
+      "bytes": 753,
+      "sha256": "786c7c0bbc948bf58a8bf6528d9082efea84fe25c6fe184869ab666200889d81"
+    },
+    {
+      "path": "validation/inputs/AlbC5CliticMatrixSqi.gf",
+      "bytes": 2413,
+      "sha256": "e1a779e06f07973dbd89afb0d82e45f4d59dde7aef2a572309bb13fa9172a26c"
+    },
+    {
+      "path": "validation/inputs/AlbC5PrepGovernment.gf",
+      "bytes": 755,
+      "sha256": "7895ddd4a972db53ec7f8112d8547bbf22e3a8848002ccca17f9acbe37816a6b"
+    },
+    {
+      "path": "validation/inputs/AlbC5PrepGovernmentSqi.gf",
+      "bytes": 2941,
+      "sha256": "ee248e331dc6e7cc2ebb4fd4f07a26635f586d222d2f201a719d3b61932232eb"
+    },
+    {
+      "path": "validation/inputs/AlbC5PronounCases.gf",
+      "bytes": 1153,
+      "sha256": "49333c2a4b81e27443c4abbe27bbf3e686b19f48bd0241166da8d17403e200d4"
+    },
+    {
+      "path": "validation/inputs/AlbC5PronounCasesSqi.gf",
+      "bytes": 2644,
+      "sha256": "bd2673469ab8d37df4099b9f0b29c5255f738d7b1b8a4e9a0c26aab628bf4740"
+    },
+    {
+      "path": "validation/inputs/AlbC5RealizationContexts.gf",
+      "bytes": 340,
+      "sha256": "3023e2c4c583a28c199ceb52fbc2a9dd67967023971e19a7b53f4a1af3ff2341"
+    },
+    {
+      "path": "validation/inputs/AlbC5RealizationContextsSqi.gf",
+      "bytes": 1326,
+      "sha256": "1a5a0cb00acd6ad58c688a853a87c4e25879fae77128124c3f82c6d98acdc4e9"
+    },
+    {
+      "path": "validation/inputs/AlbC5RelativeGenitive.gf",
+      "bytes": 1257,
+      "sha256": "c1e50c245a1527b9bcf70672b8320fa11cb7d0998de66f4e6a742e1688a36b78"
+    },
+    {
+      "path": "validation/inputs/AlbC5RelativeGenitiveSqi.gf",
+      "bytes": 3279,
+      "sha256": "cec663c64b4797553f36dd36221a64f8a354dce0c8d66d26ec34b6230154ff5c"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-clitic-matrix.gfs",
+      "bytes": 1680,
+      "sha256": "ee2e3323c8b7beb85d0e5fc52225978d66a3aa3d9ac09ea8a74fdb69107db956"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-prep-government.gfs",
+      "bytes": 1484,
+      "sha256": "5c0df06ffb810c6a51785135a2c7f80336c46c601195d721dcc538a4b6f02e53"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-pronoun-cases.gfs",
+      "bytes": 2242,
+      "sha256": "c8ded44c835e35243b7d6e6e3ea7c1396c777f4f761b179c7d8f5006bb1c82a3"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-realization-contexts.gfs",
+      "bytes": 1096,
+      "sha256": "a7bdb010e672dc6b9e91e69b1a95d74db57c51d2b34f784966d5d82181a7cc53"
+    },
+    {
+      "path": "validation/scenarios/alb-c5-relative-genitive.gfs",
+      "bytes": 3021,
+      "sha256": "3f33b408172202806346e04e257cbcac552e85cf35e706624098e0ef10725b05"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+test_id	expected	status	evidence
+MX001	librit	accepted-existing-lexicon	LexiconSqi.bookNForms defDatSg
+MX002	librit	accepted-structural	Albanian refs: Dat/Gen noun forms morphologically identical; Gen remains distinct key
+MX003	Masc	accepted-structural	Lesson_10 grammatical gender; mkNAmbig explicit metadata
+MX004	Fem	accepted-structural	Lesson_10 ambigeneric nouns: masculine singular, feminine plural agreement
+MX005	mali	candidate-smart-paradigm	MorphoSqi productive class selected by mal/male + validator mali
+MX006	madhe	candidate-smart-paradigm	MorphoSqi productive class for madh; fem sg
+MX007	shkruar	candidate-smart-paradigm	MorphoSqi mkV032; participial principal part
+MX008	shkrova	candidate-smart-paradigm	MorphoSqi mkV032; aorist 1sg
+MX009	shkruaja	candidate-smart-paradigm	MorphoSqi mkV032; imperfect 1sg
+MX010	NonActive	accepted-structural	Lesson_40 active/non-active morphology; regV -em class metadata
+MX011	jam	accepted-structural	Lesson_40 compound non-active changes auxiliary kam -> jam
+MX012	kam	accepted-structural	active perfect auxiliary default
+MX013	NonActive	accepted-structural	IrregSqi bëhem full non-active constructor
+MX014	të	candidate-nyje-table	ResSqi.nyje Def Gen Masc Sg; sentence-level selection needs syntax golds
+MX015	librave	accepted-structural	LexiconSqi.bookNForms indefDatPl copied to Gen surface
+MX016	Articulated	accepted-structural	productive adjective class metadata
+MX017	Unarticulated	accepted-structural	unartA explicit wrapper
+MX018	Gen	accepted-api	ParadigmsSqi public genitive case
+MX019	dish	accepted-compatibility	Historical ResSqi subjunctive exception preserved inside legacy irregV only
+MX020	pijë	accepted-compatibility	Historical ResSqi subjunctive exception preserved inside legacy irregV only

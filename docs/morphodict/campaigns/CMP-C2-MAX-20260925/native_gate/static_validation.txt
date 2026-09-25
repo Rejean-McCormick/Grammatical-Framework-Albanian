@@ -1,0 +1,29 @@
+PASS abstract IDs unique 560
+PASS abstract/concrete bijection fun=560 lin=560
+PASS LEMGRAMS matches active GF 560
+PASS active count reconciled 
+PASS no variants 
+PASS no compile-safe placeholder 
+PASS no invariantN/invariantA fallback 
+PASS invariantV limited to declared baseline exact entries duhet_V,fle_V,mund_V
+PASS no active multiword 
+PASS all active provenance labels present 
+PASS no static C6 overclaim {'C2': 254, 'C1': 306}
+PASS 32 unresolved placeholders removed 32
+PASS 123 placeholders resolved explicitly 
+PASS placeholder count zero 
+PASS source universe fully classified 7079
+PASS dependency coverage 560
+PASS Tosk evidence inventory present 242
+PASS 123 explicit class/evidence matches reproducible 
+PASS blocked queues reconcile C2-review=27 conflicts=5
+PASS no unproven C1 missing-class claim proven missing classes=0
+PASS core escalation triage is narrow filloj,tjetër
+PASS blocked lemgrams absent from required scenarios 
+PASS required scenario count preserved 52
+PASS review queue covers all non-C6 active 560
+PASS base/category homograph review set stable {('disa', 'Det'): ['disa_1_Det', 'disa_2_Det'], ('kush', 'IP'): ['kush_1_IP', 'kush_2_IP'], ('shumë', 'Det'): ['shumë_1_Det', 'shumë_2_Det'], ('çfarë', 'IP'): ['çfarë_1_IP', 'çfarë_2_IP']}
+PASS baseline reconstruction input locked 592
+PASS Python tools compile 
+NOT_EXECUTED native GF 3.12 gate: gf executable not available in this environment
+SUMMARY 27 / 27 static checks passed

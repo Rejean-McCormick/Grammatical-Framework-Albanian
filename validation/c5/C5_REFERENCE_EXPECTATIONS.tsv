@@ -1,0 +1,200 @@
+case_id	family	expected_surface	description	status	source
+C5M01	clitic_matrix	ma	Dat më + e	SOURCE_LOCKED	Lesson_30 §17.4
+C5M02	clitic_matrix	m'i	Dat më + i	SOURCE_LOCKED	Lesson_30 §17.4
+C5M03	clitic_matrix	m'u	Dat më + u	SOURCE_LOCKED	Lesson_30 §17.4
+C5M04	clitic_matrix	ta	Dat të + e	SOURCE_LOCKED	Lesson_30 §17.4
+C5M05	clitic_matrix	t'i	Dat të + i	SOURCE_LOCKED	Lesson_30 §17.4
+C5M06	clitic_matrix	t'u	Dat të + u	SOURCE_LOCKED	Lesson_30 §17.4
+C5M07	clitic_matrix	ia	Dat i + e	SOURCE_LOCKED	Lesson_30 §17.4
+C5M08	clitic_matrix	ia	Dat i + i	SOURCE_LOCKED	Lesson_30 §17.4
+C5M09	clitic_matrix	iu	Dat i + u	SOURCE_LOCKED	Lesson_30 §17.4
+C5M10	clitic_matrix	na e	Dat na + e	SOURCE_LOCKED	Lesson_30 §17.4
+C5M11	clitic_matrix	na i	Dat na + i	SOURCE_LOCKED	Lesson_30 §17.4
+C5M12	clitic_matrix	na u	Dat na + u	SOURCE_LOCKED	Lesson_30 §17.4
+C5M13	clitic_matrix	jua	Dat ju + e	SOURCE_LOCKED	Lesson_30 §17.4
+C5M14	clitic_matrix	jua	Dat ju + i	SOURCE_LOCKED	Lesson_30 §17.4
+C5M15	clitic_matrix	ju	Dat ju + u	SOURCE_LOCKED	Lesson_30 §17.4
+C5M16	clitic_matrix	ua	Dat u + e	SOURCE_LOCKED	Lesson_30 §17.4
+C5M17	clitic_matrix	ua	Dat u + i	SOURCE_LOCKED	Lesson_30 §17.4
+C5M18	clitic_matrix	ju	Dat u + u	SOURCE_LOCKED	Lesson_30 §17.4
+C5T01	te_cluster	ta	të+e	SOURCE_LOCKED	Lesson_30 §17.4
+C5T02	te_cluster	t'i	të+i	SOURCE_LOCKED	Lesson_30 §17.4
+C5T03	te_cluster	t'jua	të+jua	SOURCE_LOCKED	Lesson_30 §17.4
+C5T04	te_cluster	të m'i	të+m'i	SOURCE_LOCKED	Lesson_30 §17.4
+C5T05	te_cluster	të na	të+na	SOURCE_LOCKED	Lesson_30 §17.4
+C5W01	weak_inventory	më	weakAcc (Weak Sg P1)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W02	weak_inventory	të	weakAcc (Weak Sg P2)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W03	weak_inventory	e	weakAcc (Weak Sg P3)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W04	weak_inventory	na	weakAcc (Weak Pl P1)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W05	weak_inventory	ju	weakAcc (Weak Pl P2)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W06	weak_inventory	i	weakAcc (Weak Pl P3)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W07	weak_inventory	më	weakDat (Weak Sg P1)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W08	weak_inventory	të	weakDat (Weak Sg P2)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W09	weak_inventory	i	weakDat (Weak Sg P3)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W10	weak_inventory	na	weakDat (Weak Pl P1)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W11	weak_inventory	ju	weakDat (Weak Pl P2)	SOURCE_LOCKED	Lesson_30 §17.1
+C5W12	weak_inventory	u	weakDat (Weak Pl P3)	SOURCE_LOCKED	Lesson_30 §17.1
+C5P01	strong_pronoun	unë	I.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P02	strong_pronoun	mua	I.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P03	strong_pronoun	mua	I.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P04	strong_pronoun	mua	I.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P05	strong_pronoun	meje	I.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P06	strong_pronoun	ne	WE.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P07	strong_pronoun	ne	WE.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P08	strong_pronoun	neve	WE.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P09	strong_pronoun	neve	WE.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P10	strong_pronoun	nesh	WE.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P11	strong_pronoun	ti	YOU.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P12	strong_pronoun	ty	YOU.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P13	strong_pronoun	ty	YOU.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P14	strong_pronoun	ty	YOU.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P15	strong_pronoun	teje	YOU.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P16	strong_pronoun	ju	YOUPL.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P17	strong_pronoun	ju	YOUPL.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P18	strong_pronoun	juve	YOUPL.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P19	strong_pronoun	juve	YOUPL.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P20	strong_pronoun	jesh	YOUPL.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P21	strong_pronoun	ai	HE.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P22	strong_pronoun	atë	HE.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P23	strong_pronoun	atij	HE.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P24	strong_pronoun	atij	HE.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P25	strong_pronoun	atij	HE.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P26	strong_pronoun	ajo	SHE.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P27	strong_pronoun	atë	SHE.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P28	strong_pronoun	asaj	SHE.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P29	strong_pronoun	asaj	SHE.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P30	strong_pronoun	asaj	SHE.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P31	strong_pronoun	ajo	IT.Nom	SOURCE_LOCKED	Lesson_30 §16
+C5P32	strong_pronoun	atë	IT.Acc	SOURCE_LOCKED	Lesson_30 §16
+C5P33	strong_pronoun	asaj	IT.Gen	SOURCE_LOCKED	Lesson_30 §16
+C5P34	strong_pronoun	asaj	IT.Dat	SOURCE_LOCKED	Lesson_30 §16
+C5P35	strong_pronoun	asaj	IT.Ablat	SOURCE_LOCKED	Lesson_30 §16
+C5P36	demonstrative	ai	DIST_M_SG.Nom	SOURCE_LOCKED	Lesson_30 §15
+C5P37	demonstrative	atë	DIST_M_SG.Acc	SOURCE_LOCKED	Lesson_30 §15
+C5P38	demonstrative	atij	DIST_M_SG.Gen	SOURCE_LOCKED	Lesson_30 §15
+C5P39	demonstrative	atij	DIST_M_SG.Dat	SOURCE_LOCKED	Lesson_30 §15
+C5P40	demonstrative	atij	DIST_M_SG.Ablat	SOURCE_LOCKED	Lesson_30 §15
+C5P41	demonstrative	ajo	DIST_F_SG.Nom	SOURCE_LOCKED	Lesson_30 §15
+C5P42	demonstrative	atë	DIST_F_SG.Acc	SOURCE_LOCKED	Lesson_30 §15
+C5P43	demonstrative	asaj	DIST_F_SG.Gen	SOURCE_LOCKED	Lesson_30 §15
+C5P44	demonstrative	asaj	DIST_F_SG.Dat	SOURCE_LOCKED	Lesson_30 §15
+C5P45	demonstrative	asaj	DIST_F_SG.Ablat	SOURCE_LOCKED	Lesson_30 §15
+C5P46	demonstrative	ky	PROX_M_SG.Nom	SOURCE_LOCKED	Lesson_30 §15
+C5P47	demonstrative	këtë	PROX_M_SG.Acc	SOURCE_LOCKED	Lesson_30 §15
+C5P48	demonstrative	këtij	PROX_M_SG.Gen	SOURCE_LOCKED	Lesson_30 §15
+C5P49	demonstrative	këtij	PROX_M_SG.Dat	SOURCE_LOCKED	Lesson_30 §15
+C5P50	demonstrative	këtij	PROX_M_SG.Ablat	SOURCE_LOCKED	Lesson_30 §15
+C5P51	demonstrative	kjo	PROX_F_SG.Nom	SOURCE_LOCKED	Lesson_30 §15
+C5P52	demonstrative	këtë	PROX_F_SG.Acc	SOURCE_LOCKED	Lesson_30 §15
+C5P53	demonstrative	kësaj	PROX_F_SG.Gen	SOURCE_LOCKED	Lesson_30 §15
+C5P54	demonstrative	kësaj	PROX_F_SG.Dat	SOURCE_LOCKED	Lesson_30 §15
+C5P55	demonstrative	kësaj	PROX_F_SG.Ablat	SOURCE_LOCKED	Lesson_30 §15
+C5G01	source_prep	në atë	në->Acc	SOURCE_LOCKED	Lesson_20 §7
+C5G02	source_prep	me atë	me->Acc	SOURCE_LOCKED	Lesson_20 §7
+C5G03	source_prep	pa atë	pa->Acc	SOURCE_LOCKED	Lesson_20 §7
+C5G04	source_prep	për atë	për->Acc	SOURCE_LOCKED	Lesson_20 §7
+C5G05	source_prep	mbi atë	mbi->Acc	SOURCE_LOCKED	Lesson_20 §7
+C5G06	source_prep	nën atë	nën->Acc	SOURCE_LOCKED	Lesson_20 §7
+C5G07	source_prep	nga ajo	nga->Nom	SOURCE_LOCKED	Lesson_20 §7
+C5G08	source_prep	tek ajo	tek->Nom	SOURCE_LOCKED	Lesson_20 §7
+C5G09	source_prep	prej asaj	prej->Ablat	SOURCE_LOCKED	Lesson_20 §7
+C5G10	source_prep	brenda asaj	brenda->Ablat	SOURCE_LOCKED	Lesson_20 §7
+C5G11	source_prep	gjatë asaj	gjatë->Ablat	SOURCE_LOCKED	Lesson_20 §7
+C5G12	source_prep	para asaj	para->Ablat	SOURCE_LOCKED	Lesson_20 §7
+C5G13	source_prep	midis asaj	midis->Ablat	SOURCE_LOCKED	Lesson_20 §7
+C5G14	source_prep	sipas asaj	sipas->Ablat	SOURCE_LOCKED	Lesson_20 §7
+C5G15	structural_prep	REVIEW_AT_GF_RUN	above	REVIEW_REQUIRED	C5 canonical context matrix
+C5G16	structural_prep	REVIEW_AT_GF_RUN	after	REVIEW_REQUIRED	C5 canonical context matrix
+C5G17	structural_prep	REVIEW_AT_GF_RUN	before	REVIEW_REQUIRED	C5 canonical context matrix
+C5G18	structural_prep	REVIEW_AT_GF_RUN	behind	REVIEW_REQUIRED	C5 canonical context matrix
+C5G19	structural_prep	REVIEW_AT_GF_RUN	between	REVIEW_REQUIRED	C5 canonical context matrix
+C5G20	structural_prep	REVIEW_AT_GF_RUN	by8agent	REVIEW_REQUIRED	C5 canonical context matrix
+C5G21	structural_prep	REVIEW_AT_GF_RUN	by8means	REVIEW_REQUIRED	C5 canonical context matrix
+C5G22	structural_prep	REVIEW_AT_GF_RUN	during	REVIEW_REQUIRED	C5 canonical context matrix
+C5G23	structural_prep	REVIEW_AT_GF_RUN	for	REVIEW_REQUIRED	C5 canonical context matrix
+C5G24	structural_prep	REVIEW_AT_GF_RUN	from	REVIEW_REQUIRED	C5 canonical context matrix
+C5G25	structural_prep	REVIEW_AT_GF_RUN	in8front	REVIEW_REQUIRED	C5 canonical context matrix
+C5G26	structural_prep	REVIEW_AT_GF_RUN	in	REVIEW_REQUIRED	C5 canonical context matrix
+C5G27	structural_prep	REVIEW_AT_GF_RUN	on	REVIEW_REQUIRED	C5 canonical context matrix
+C5G28	structural_prep	REVIEW_AT_GF_RUN	part	REVIEW_REQUIRED	C5 canonical context matrix
+C5G29	structural_prep	REVIEW_AT_GF_RUN	through	REVIEW_REQUIRED	C5 canonical context matrix
+C5G30	structural_prep	REVIEW_AT_GF_RUN	to	REVIEW_REQUIRED	C5 canonical context matrix
+C5G31	structural_prep	REVIEW_AT_GF_RUN	under	REVIEW_REQUIRED	C5 canonical context matrix
+C5G32	structural_prep	REVIEW_AT_GF_RUN	with	REVIEW_REQUIRED	C5 canonical context matrix
+C5G33	structural_prep	REVIEW_AT_GF_RUN	without	REVIEW_REQUIRED	C5 canonical context matrix
+C5G34	structural_prep	REVIEW_AT_GF_RUN	except	REVIEW_REQUIRED	C5 canonical context matrix
+C5G35	structural_prep	GENITIVE_COMPL	possess	SOURCE_LOCKED	C5 canonical context matrix
+C5C01	context	REVIEW_AT_GF_RUN	simple Acc clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5C02	context	REVIEW_AT_GF_RUN	negative Acc clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5C03	context	REVIEW_AT_GF_RUN	present perfect Acc clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5C04	context	REVIEW_AT_GF_RUN	double clitic simple	REVIEW_REQUIRED	C5 canonical context matrix
+C5C05	context	REVIEW_AT_GF_RUN	double clitic future	REVIEW_REQUIRED	C5 canonical context matrix
+C5C06	context	REVIEW_AT_GF_RUN	double clitic negative conditional	REVIEW_REQUIRED	C5 canonical context matrix
+C5C07	context	REVIEW_AT_GF_RUN	subjunctive + të contraction	REVIEW_REQUIRED	C5 canonical context matrix
+C5C08	context	REVIEW_AT_GF_RUN	negative subjunctive	REVIEW_REQUIRED	C5 canonical context matrix
+C5C09	context	REVIEW_AT_GF_RUN	progressive + clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5C10	context	REVIEW_AT_GF_RUN	negative progressive double clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5C11	context	REVIEW_AT_GF_RUN	positive imperative proclitic canonical	REVIEW_REQUIRED	C5 canonical context matrix
+C5C12	context	REVIEW_AT_GF_RUN	negative imperative	REVIEW_REQUIRED	C5 canonical context matrix
+C5C13	context	REVIEW_AT_GF_RUN	positive imperative double clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5C14	context	REVIEW_AT_GF_RUN	negative plural imperative double clitic	REVIEW_REQUIRED	C5 canonical context matrix
+C5R01	cili	i cili	cili Nom Masc Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R02	cili	të cilët	cili Nom Masc Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R03	cili	e cila	cili Nom Fem Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R04	cili	të cilat	cili Nom Fem Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R05	cili	të cilin	cili Acc Masc Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R06	cili	të cilët	cili Acc Masc Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R07	cili	të cilën	cili Acc Fem Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R08	cili	të cilat	cili Acc Fem Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R09	cili	të cilit	cili Gen Masc Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R10	cili	të cilëve	cili Gen Masc Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R11	cili	së cilës	cili Gen Fem Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R12	cili	të cilave	cili Gen Fem Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R13	cili	të cilit	cili Dat Masc Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R14	cili	të cilëve	cili Dat Masc Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R15	cili	së cilës	cili Dat Fem Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R16	cili	të cilave	cili Dat Fem Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R17	cili	të cilit	cili Ablat Masc Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R18	cili	të cilëve	cili Ablat Masc Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R19	cili	së cilës	cili Ablat Fem Sg	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R20	cili	të cilave	cili Ablat Fem Pl	SOURCE_LOCKED	Albanian grammar relative paradigm
+C5R21	nyje	i	nyje Indef Nom Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R22	nyje	të	nyje Indef Nom Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R23	nyje	e	nyje Indef Nom Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R24	nyje	e	nyje Indef Nom Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R25	nyje	të	nyje Indef Acc Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R26	nyje	të	nyje Indef Acc Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R27	nyje	të	nyje Indef Acc Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R28	nyje	të	nyje Indef Acc Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R29	nyje	të	nyje Indef Gen Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R30	nyje	të	nyje Indef Gen Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R31	nyje	së	nyje Indef Gen Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R32	nyje	të	nyje Indef Gen Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R33	nyje	të	nyje Indef Dat Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R34	nyje	të	nyje Indef Dat Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R35	nyje	së	nyje Indef Dat Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R36	nyje	të	nyje Indef Dat Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R37	nyje	të	nyje Indef Ablat Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R38	nyje	të	nyje Indef Ablat Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R39	nyje	së	nyje Indef Ablat Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R40	nyje	të	nyje Indef Ablat Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R41	nyje	i	nyje Def Nom Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R42	nyje	e	nyje Def Nom Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R43	nyje	e	nyje Def Nom Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R44	nyje	e	nyje Def Nom Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R45	nyje	e	nyje Def Acc Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R46	nyje	e	nyje Def Acc Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R47	nyje	e	nyje Def Acc Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R48	nyje	e	nyje Def Acc Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R49	nyje	të	nyje Def Gen Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R50	nyje	të	nyje Def Gen Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R51	nyje	së	nyje Def Gen Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R52	nyje	të	nyje Def Gen Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R53	nyje	të	nyje Def Dat Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R54	nyje	të	nyje Def Dat Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R55	nyje	së	nyje Def Dat Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R56	nyje	të	nyje Def Dat Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R57	nyje	të	nyje Def Ablat Masc Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R58	nyje	të	nyje Def Ablat Masc Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R59	nyje	së	nyje Def Ablat Fem Sg	SOURCE_LOCKED	Lesson_10 §4 Nyje
+C5R60	nyje	të	nyje Def Ablat Fem Pl	SOURCE_LOCKED	Lesson_10 §4 Nyje

@@ -1,0 +1,10 @@
+FAIL
+- exact bëhem must be NonActiveMorph
+- ProgrVP must set typed progressivity only
+- ProgrVPSlash must set typed progressivity
+- ReflVP must mark ReflexiveUse
+- PassV2 must mark PassiveUse
+- Extend PassVPSlash must mark PassiveUse
+- legacy internal Past token remains in AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf
+- legacy internal Past token remains in AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf
+- advanced verbal scenario must be registered as optional, not required

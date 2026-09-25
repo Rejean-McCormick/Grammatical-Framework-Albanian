@@ -1,0 +1,34 @@
+-- GF_WORDBENCH_INPUT_SHA256 3023e2c4c583a28c199ceb52fbc2a9dd67967023971e19a7b53f4a1af3ff2341 validation/inputs/AlbC5RealizationContexts.gf
+-- GF_WORDBENCH_INPUT_SHA256 1a5a0cb00acd6ad58c688a853a87c4e25879fae77128124c3f82c6d98acdc4e9 validation/inputs/AlbC5RealizationContextsSqi.gf
+i AlbC5RealizationContextsSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C5C01 simple Acc clitic"
+l C5C01
+ps "CASE C5C02 negative Acc clitic"
+l C5C02
+ps "CASE C5C03 present perfect Acc clitic"
+l C5C03
+ps "CASE C5C04 double clitic simple"
+l C5C04
+ps "CASE C5C05 double clitic future"
+l C5C05
+ps "CASE C5C06 double clitic negative conditional"
+l C5C06
+ps "CASE C5C07 subjunctive + të contraction"
+l C5C07
+ps "CASE C5C08 negative subjunctive"
+l C5C08
+ps "CASE C5C09 progressive + clitic"
+l C5C09
+ps "CASE C5C10 negative progressive double clitic"
+l C5C10
+ps "CASE C5C11 positive imperative proclitic canonical"
+l C5C11
+ps "CASE C5C12 negative imperative"
+l C5C12
+ps "CASE C5C13 positive imperative double clitic"
+l C5C13
+ps "CASE C5C14 negative plural imperative double clitic"
+l C5C14
+ps "GF_WORDBENCH_END cases"
+q

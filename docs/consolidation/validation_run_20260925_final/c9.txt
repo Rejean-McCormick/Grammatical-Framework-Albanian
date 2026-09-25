@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "checks": 139,
+  "failed": [
+    "protected_scenario_count: found 138",
+    "some_sg_standard_ndonje: ",
+    "it_pron_unspecified_gender_fem_default: ",
+    "they_pron_unspecified_gender_fem_default: "
+  ],
+  "parity": {},
+  "note": "Static validation only; GF 3.12 compiler and Wordbench execution were not available in this environment."
+}

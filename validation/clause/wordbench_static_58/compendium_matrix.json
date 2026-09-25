@@ -1,0 +1,68 @@
+{
+  "schema": "gf-wordbench-compendium-test-matrix-v1",
+  "protocol": "TEST_RGL",
+  "highest_evidenced_level": "T0",
+  "levels": [
+    {
+      "level": "T0",
+      "name": "environment_and_source_integrity",
+      "status": "pass"
+    },
+    {
+      "level": "T1",
+      "name": "resource_and_parameter_tests",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T2",
+      "name": "morphology_tests",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T3",
+      "name": "public_paradigm_tests",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T4",
+      "name": "category_construction",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T5",
+      "name": "abstract_constructor_tests",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T6",
+      "name": "feature_interactions",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T7",
+      "name": "syntax_module_tests",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T8",
+      "name": "aggregate_language_compile",
+      "status": "fail"
+    },
+    {
+      "level": "T9",
+      "name": "parse_and_generation_behavior",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T10",
+      "name": "regression_validation",
+      "status": "not_assessed"
+    },
+    {
+      "level": "T11",
+      "name": "family_and_release_checks",
+      "status": "not_assessed"
+    }
+  ],
+  "note": "Levels are evidence-derived. A passing aggregate compile does not mark unexecuted morphology, interaction, parse, generation, or regression levels as passed."
+}

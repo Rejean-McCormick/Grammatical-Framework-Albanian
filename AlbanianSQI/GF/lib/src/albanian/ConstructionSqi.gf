@@ -12,7 +12,7 @@ concrete ConstructionSqi of Construction = CatSqi **
       mkNoun w w w w w w w w w w w w w w w w g ;
 
     mkNPConst : Gender -> Number -> Str -> NP = \g,n,w -> lin NP {
-      s=\\_=>w; acc_clit=[]; dat_clit=[]; a=agrgP3 g n; isPron=False
+      s=\\_=>w; a=agrgP3 g n; isPron=False
     } ;
 
     mkPNConst : Gender -> Str -> PN = \g,w -> lin PN {
@@ -52,7 +52,7 @@ concrete ConstructionSqi of Construction = CatSqi **
     intYear i = {s=i.s} ;
 
     InLanguage lang = {s="në" ++ lang.s} ;
-    languageCN lang = mkNConst Fem ("gjuhë" ++ lang.s) ;
+    languageCN lang = useNoun (mkNConst Fem ("gjuhë" ++ lang.s)) ;
     languageNP lang = mkNPConst Fem Sg ("gjuha" ++ lang.s) ;
 
     has_age_VP c = constructionAddPost (constructionBaseVP (lin Verb I.kam_V)) (\\_=>c.s ++ "vjeç") ;
@@ -93,44 +93,43 @@ concrete ConstructionSqi of Construction = CatSqi **
 
     weather_adjCl ap = {
       s=\\t,a,p=>"moti" ++ realizeVP
-        (copVP (\\_=>ap.s!Indef!Nom!Masc!Sg)) t a p {gn=GSg Masc;p=P3}
+        (copVP (\\_=>ap.s!Indef!Nom!Masc!Sg)) t a p agrgP3 Masc Sg
     } ;
 
     timeunitAdv c tu = {s=c.s ++ tu.s} ;
     timeunitRange lo hi tu = {s=lo.s ++ "deri" ++ hi.s ++ tu.s} ;
 
     n_units_AP c cn a = {
-      s=\\sp,cas,g,n=>c.s ++ cn.s!Indef!cas!Pl ++ a.s!cas!g!n
+      s=\\sp,cas,g,n=>c.s ++ cnForm cn Indef cas Pl ++ realizeAdj a sp cas g n
     } ;
 
     n_units_of_NP c cn np = lin NP {
-      s=\\cas=>c.s ++ cn.s!Indef!cas!Pl ++ "prej" ++ np.s!Ablat;
-      acc_clit=[]; dat_clit=[]; a=agrgP3 Masc Pl; isPron=False
+      s=\\cas=>c.s ++ cnForm cn Indef cas Pl ++ "prej" ++ np.s!Ablat; a=agrgP3 Masc Pl; isPron=False
     } ;
 
     n_unit_CN c unit cn = {
-      s=\\sp,cas,n=>c.s ++ unit.s!Indef!cas!Sg ++ cn.s!sp!cas!n;
+      s=\\sp,cas,n=>c.s ++ cnForm unit Indef cas Sg ++ cnForm cn sp cas n;
       g=cn.g
     } ;
 
     bottle_of_CN np = {
-      s=\\sp,cas,n=>(mkNConst Fem "shishe").s!sp!cas!n ++ "me" ++ np.s!Acc;
-      g=Fem
+      s=\\sp,cas,n=>nounForm (mkNConst Fem "shishe") sp cas n ++ "me" ++ np.s!Acc;
+      g=table {Sg=>Fem; Pl=>Fem}
     } ;
     cup_of_CN np = {
-      s=\\sp,cas,n=>(mkNConst Masc "filxhan").s!sp!cas!n ++ "me" ++ np.s!Acc;
-      g=Masc
+      s=\\sp,cas,n=>nounForm (mkNConst Masc "filxhan") sp cas n ++ "me" ++ np.s!Acc;
+      g=table {Sg=>Masc; Pl=>Masc}
     } ;
     glass_of_CN np = {
-      s=\\sp,cas,n=>(mkNConst Fem "gotë").s!sp!cas!n ++ "me" ++ np.s!Acc;
-      g=Fem
+      s=\\sp,cas,n=>nounForm (mkNConst Fem "gotë") sp cas n ++ "me" ++ np.s!Acc;
+      g=table {Sg=>Fem; Pl=>Fem}
     } ;
 
     few_X_short_of_Y np x y = {
       s=np.s!Nom ++
         realizeVP (constructionBaseVP (lin Verb I.kam_V)) ParamX.Pres Simul Pos np.a ++
-        "pak" ++ x.s!Indef!Acc!Pl ++
-        "më pak se" ++ y.s!Indef!Acc!Sg
+        "pak" ++ cnForm x Indef Acc Pl ++
+        "më pak se" ++ cnForm y Indef Acc Sg
     } ;
 
     oneHour = {s = "1"} ;

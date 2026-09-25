@@ -1,0 +1,8 @@
+ERROR C10-CAMP-010 g1 manifest source lock is stale
+ERROR C10-CAMP-010 g2 manifest source lock is stale
+ERROR C10-CAMP-010 g3 manifest source lock is stale
+ERROR C10-SCEN-011 expected 79 generated optional scenarios, got 91
+ERROR C10-SCEN-012 project optional scenario registry differs from generated C10 scripts
+maturity=pre-R0 evidence-backed certification=NOT_ESTABLISHED
+
+C10 refresh rc=1

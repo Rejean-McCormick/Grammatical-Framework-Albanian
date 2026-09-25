@@ -1,0 +1,11 @@
+{
+  "schema": "albanian-c10-native-wordbench-static-check-v1",
+  "wordbench_version": "1.3.4",
+  "project_check_ok": true,
+  "project_diagnostic_count": 0,
+  "scenario_check_ok": true,
+  "scenario_diagnostic_count": 0,
+  "rgl_root": "/mnt/data/gf_rgl_full/gf-rgl-master",
+  "language_path": "/mnt/data/alb_c10_final/AlbanianSQI/GF/lib/src/albanian",
+  "profile": "/mnt/data/alb_c10_final/project.toml"
+}

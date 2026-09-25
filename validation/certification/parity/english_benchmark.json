@@ -1,0 +1,40 @@
+{
+  "schema": "albanian-c10-english-benchmark-v1",
+  "rgl_archive_sha256": "e6491c23c440b4f18e59404908eeb71bfd3404745ad2634009b27bfbb19e8a4d",
+  "metrics": {
+    "dict_abstract_functions": {
+      "albanian": 6720,
+      "english": 64931
+    },
+    "morphodict_lemgrams": {
+      "albanian": 592,
+      "english": 56568
+    },
+    "language_gf_files": {
+      "albanian": 51,
+      "english": 41
+    },
+    "dict_concrete_bytes": {
+      "albanian": 278709,
+      "english": 2985699
+    },
+    "morphodict_concrete_bytes": {
+      "albanian": 23878,
+      "english": 2824086
+    },
+    "paradigms_bytes": {
+      "albanian": 54260,
+      "english": 25990
+    },
+    "extend_bytes": {
+      "albanian": 15614,
+      "english": 17547
+    }
+  },
+  "documented_reference_notes": {
+    "english_morphodict_lemgrams_in_prior_c10_docs": 56577,
+    "snapshot_count": 56568,
+    "policy": "Use the supplied source snapshot count for executable comparisons; retain the documented 56,577 figure as a provenance discrepancy until reconciled."
+  },
+  "interpretation": "English is a maturity/depth benchmark. Raw equality of counts is not a linguistic requirement."
+}

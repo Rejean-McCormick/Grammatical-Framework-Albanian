@@ -1,0 +1,70 @@
+evidence_id	source	key	status	details	automatic_verdict_permission
+DICT-PROV:aeroplan_N	docs/dictionary/DictSqi_provenance.tsv	aeroplan_N	baseline_lexicon_exact	Albanet/OMW | Baseline LexiconSqi | wns/als/wn-data-als.tab | airplane_N	false
+DICT-PROV:akull_N	docs/dictionary/DictSqi_provenance.tsv	akull_N	baseline_lexicon_exact	Baseline LexiconSqi | ice_N	false
+DICT-PROV:anije_N	docs/dictionary/DictSqi_provenance.tsv	anije_N	baseline_lexicon_exact	Albanet/OMW | Baseline LexiconSqi | wns/als/wn-data-als.tab | ship_N	false
+DICT-PROV:afer_A	docs/dictionary/DictSqi_provenance.tsv	afer_A	baseline_lexicon_exact	Baseline LexiconSqi | near_A	false
+DICT-PROV:bardhe_A	docs/dictionary/DictSqi_provenance.tsv	bardhe_A	baseline_lexicon_exact	Baseline LexiconSqi | white_A	false
+DICT-PROV:bosh_A	docs/dictionary/DictSqi_provenance.tsv	bosh_A	baseline_lexicon_exact	Baseline LexiconSqi | empty_A	false
+DICT-PROV:digjem_V	docs/dictionary/DictSqi_provenance.tsv	digjem_V	baseline_lexicon_exact	Albanet/OMW | Baseline LexiconSqi | wns/als/wn-data-als.tab | burn_V	false
+DICT-PROV:fle_V	docs/dictionary/DictSqi_provenance.tsv	fle_V	baseline_lexicon_exact	Albanet/OMW | Baseline LexiconSqi | wns/als/wn-data-als.tab | sleep_V	false
+DICT-PROV:fluturoj_V	docs/dictionary/DictSqi_provenance.tsv	fluturoj_V	baseline_lexicon_exact	Baseline LexiconSqi | fly_V	false
+DICT-PROV:blej_V2	docs/dictionary/DictSqi_provenance.tsv	blej_V2	baseline_lexicon_exact	Baseline LexiconSqi | buy_V2	false
+DICT-PROV:bej_V2	docs/dictionary/DictSqi_provenance.tsv	bej_V2	baseline_lexicon_exact	Baseline LexiconSqi | do_V2	false
+DICT-PROV:dashuroj_V2	docs/dictionary/DictSqi_provenance.tsv	dashuroj_V2	baseline_lexicon_exact	Baseline LexiconSqi | love_V2	false
+DICT-PROV:dergoj_V3	docs/dictionary/DictSqi_provenance.tsv	dergoj_V3	baseline_lexicon_exact	Baseline LexiconSqi | send_V3	false
+DICT-PROV:flas_V3	docs/dictionary/DictSqi_provenance.tsv	flas_V3	baseline_lexicon_exact	Baseline LexiconSqi | talk_V3	false
+DICT-PROV:jap_V3	docs/dictionary/DictSqi_provenance.tsv	jap_V3	baseline_lexicon_exact	Baseline LexiconSqi | give_V3	false
+DICT-PROV:druaj_VS	docs/dictionary/DictSqi_provenance.tsv	druaj_VS	baseline_lexicon_exact	Baseline LexiconSqi | fear_VS	false
+DICT-PROV:kuptoj_VS	docs/dictionary/DictSqi_provenance.tsv	kuptoj_VS	baseline_lexicon_exact	Baseline LexiconSqi | know_VS	false
+DICT-PROV:shpresoj_VS	docs/dictionary/DictSqi_provenance.tsv	shpresoj_VS	baseline_lexicon_exact	Baseline LexiconSqi | hope_VS	false
+DICT-PROV:kuptoj_VQ	docs/dictionary/DictSqi_provenance.tsv	kuptoj_VQ	baseline_lexicon_exact	Baseline LexiconSqi | know_VQ	false
+DICT-PROV:pyes_veten_VQ	docs/dictionary/DictSqi_provenance.tsv	pyes_veten_VQ	baseline_lexicon_exact	Baseline LexiconSqi | wonder_VQ	false
+DICT-PROV:lutem_V2V	docs/dictionary/DictSqi_provenance.tsv	lutem_V2V	baseline_lexicon_exact	Baseline LexiconSqi | beg_V2V	false
+DICT-PROV:baba_N2	docs/dictionary/DictSqi_provenance.tsv	baba_N2	baseline_lexicon_exact	Baseline LexiconSqi | father_N2	false
+DICT-PROV:nene_N2	docs/dictionary/DictSqi_provenance.tsv	nene_N2	baseline_lexicon_exact	Baseline LexiconSqi | mother_N2	false
+DICT-PROV:vella_N2	docs/dictionary/DictSqi_provenance.tsv	vella_N2	baseline_lexicon_exact	Baseline LexiconSqi | brother_N2	false
+DICT-PROV:distance_N3	docs/dictionary/DictSqi_provenance.tsv	distance_N3	baseline_lexicon_exact	Baseline LexiconSqi | distance_N3	false
+DICT-PROV:martuar_A2	docs/dictionary/DictSqi_provenance.tsv	martuar_A2	baseline_lexicon_exact	Baseline LexiconSqi | married_A2	false
+DICT-PROV:larg_Adv	docs/dictionary/DictSqi_provenance.tsv	larg_Adv	baseline_lexicon_exact	Baseline LexiconSqi | far_Adv	false
+DICT-PROV:sot_Adv	docs/dictionary/DictSqi_provenance.tsv	sot_Adv	baseline_lexicon_exact	UT Austin Tosk Glossary | Baseline LexiconSqi | adverb; | today_Adv	false
+DICT-PROV:tani_Adv	docs/dictionary/DictSqi_provenance.tsv	tani_Adv	baseline_lexicon_exact	UT Austin Tosk Glossary | Baseline LexiconSqi | adverb; | now_Adv	false
+DICT-PROV:gjer_Prep	docs/dictionary/DictSqi_provenance.tsv	gjer_Prep	reference_attested_unreviewed	UT Austin Tosk Glossary | preposition, accusative;	false
+DICT-PROV:kundrejt_Prep	docs/dictionary/DictSqi_provenance.tsv	kundrejt_Prep	reference_attested_unreviewed	UT Austin Tosk Glossary | preposition, ablative;	false
+DICT-PROV:mbi_Prep	docs/dictionary/DictSqi_provenance.tsv	mbi_Prep	reference_attested_unreviewed	UT Austin Tosk Glossary | preposition, accusative;	false
+DICT-PROV:dhe_Conj	docs/dictionary/DictSqi_provenance.tsv	dhe_Conj	reference_attested_unreviewed	UT Austin Tosk Glossary | conjunction;	false
+DICT-PROV:e_Conj	docs/dictionary/DictSqi_provenance.tsv	e_Conj	reference_attested_unreviewed	UT Austin Tosk Glossary | conjunction;	false
+DICT-PROV:ose_Conj	docs/dictionary/DictSqi_provenance.tsv	ose_Conj	reference_attested_unreviewed	UT Austin Tosk Glossary | conjunction;	false
+DICT-PROV:medet_Interj	docs/dictionary/DictSqi_provenance.tsv	medet_Interj	baseline_lexicon_exact	Baseline LexiconSqi | alas_Interj	false
+DICT-PROV:o_Interj	docs/dictionary/DictSqi_provenance.tsv	o_Interj	reference_attested_unreviewed	UT Austin Tosk Glossary | interjection;	false
+DICT-PROV:gjon_PN	docs/dictionary/DictSqi_provenance.tsv	gjon_PN	baseline_lexicon_exact	Baseline LexiconSqi | john_PN	false
+DICT-PROV:paris_PN	docs/dictionary/DictSqi_provenance.tsv	paris_PN	baseline_lexicon_exact	Baseline LexiconSqi | paris_PN	false
+MORPH-COV:aeroplan_N	docs/morphodict/COVERAGE.csv	aeroplan_N	exact	"RGL LexiconSqi | mkN032 ""aeroplan"" | airplane_N"	false
+MORPH-COV:aeroport_N	docs/morphodict/COVERAGE.csv	aeroport_N	compile-safe-placeholder	"Tosk reference | forceGender (invariantN ""aeroport"") masculine | Tosk ref observed: aeroportit; Compile-safe placeholder pending Albanian paradigm certification."	false
+MORPH-COV:akull_N	docs/morphodict/COVERAGE.csv	akull_N	exact	"RGL LexiconSqi | mkN ""akull"" | ice_N"	false
+MORPH-COV:anije_N	docs/morphodict/COVERAGE.csv	anije_N	exact	"RGL LexiconSqi | mkN ""anije"" | ship_N"	false
+MORPH-COV:apartament_N	docs/morphodict/COVERAGE.csv	apartament_N	exact	"RGL LexiconSqi | mkN ""apartament"" | apartment_N"	false
+MORPH-COV:armë_N	docs/morphodict/COVERAGE.csv	armë_N	compile-safe-placeholder	"Tosk reference | forceGender (invariantN ""armë"") feminine | Tosk ref observed: armët; Compile-safe placeholder pending Albanian paradigm certification."	false
+MORPH-COV:baba_N	docs/morphodict/COVERAGE.csv	baba_N	exact	"RGL LexiconSqi | mkN ""baba"" | father_N2"	false
+MORPH-COV:bankë_N	docs/morphodict/COVERAGE.csv	bankë_N	exact	"RGL LexiconSqi | mkN ""bankë"" | bank_N"	false
+MORPH-COV:bazohem_V	docs/morphodict/COVERAGE.csv	bazohem_V	compile-safe-placeholder	"Tosk reference | invariantV ""bazohem"" | Tosk ref observed: bazohet; Compile-safe placeholder pending Albanian paradigm certification."	false
+MORPH-COV:bie_V	docs/morphodict/COVERAGE.csv	bie_V	exact-irregular	RGL IrregSqi | lin V I.bie_V | bie_V	false
+MORPH-COV:blej_V	docs/morphodict/COVERAGE.csv	blej_V	exact-irregular	RGL IrregSqi; RGL LexiconSqi | lin V I.blej_V | blej_V; buy_V2	false
+MORPH-COV:bëhem_V	docs/morphodict/COVERAGE.csv	bëhem_V	exact-irregular	RGL IrregSqi; RGL LexiconSqi | lin V I.behem_V | become_VA; behem_V	false
+MORPH-COV:bëj_V	docs/morphodict/COVERAGE.csv	bëj_V	exact-irregular	RGL IrregSqi; RGL LexiconSqi | lin V I.bej_V | bej_V; do_V2	false
+MORPH-COV:dal_V	docs/morphodict/COVERAGE.csv	dal_V	exact-irregular	RGL IrregSqi | lin V I.dal_V | dal_V	false
+MORPH-COV:dashuroj_V	docs/morphodict/COVERAGE.csv	dashuroj_V	exact	"RGL LexiconSqi | mkV ""dashuroj"" | love_V2"	false
+MORPH-COV:di_V	docs/morphodict/COVERAGE.csv	di_V	exact	"RGL StructuralSqiVerbal | irregV ""di"" ""di"" ""di"" ""dimë"" ""dini"" ""dinë"" ""di"" ""dini"" ""ditur"" | "	false
+MORPH-COV:afër_A	docs/morphodict/COVERAGE.csv	afër_A	exact	"RGL LexiconSqi | mkA ""afër"" | near_A"	false
+MORPH-COV:barabartë_A	docs/morphodict/COVERAGE.csv	barabartë_A	compile-safe-placeholder	"Tosk reference | invariantA ""barabartë"" | Tosk ref observed: barabarta; Compile-safe placeholder pending Albanian paradigm certification."	false
+MORPH-COV:bardhë_A	docs/morphodict/COVERAGE.csv	bardhë_A	exact	"RGL LexiconSqi | mkA ""bardhë"" | white_A"	false
+MORPH-COV:bosh_A	docs/morphodict/COVERAGE.csv	bosh_A	exact	"RGL LexiconSqi | mkA ""bosh"" | empty_A"	false
+MORPH-COV:budalla_A	docs/morphodict/COVERAGE.csv	budalla_A	exact	"RGL LexiconSqi | mkA ""budalla"" | stupid_A"	false
+MORPH-COV:bukur_A	docs/morphodict/COVERAGE.csv	bukur_A	exact	"RGL LexiconSqi | mkA ""bukur"" | beautiful_A"	false
+MORPH-COV:aq_Adv	docs/morphodict/COVERAGE.csv	aq_Adv	exact-normalized	"RGL StructuralSqiClause | mkAdv ""aq"" | AdA/AdV/AdN normalized to Adv where applicable"	false
+MORPH-COV:atje_Adv	docs/morphodict/COVERAGE.csv	atje_Adv	exact-normalized	"RGL StructuralSqiClause | mkAdv ""atje"" | AdA/AdV/AdN normalized to Adv where applicable"	false
+MORPH-COV:bashkë_Adv	docs/morphodict/COVERAGE.csv	bashkë_Adv	direct-invariant	"Tosk reference | mkAdv ""bashkë"" | Tosk ref observed: bashkë"	false
+MORPH-COV:gjatë_Prep	docs/morphodict/COVERAGE.csv	gjatë_Prep	exact	"RGL StructuralSqiClause | mkPrep ""gjatë"" ablative | governs ablative"	false
+MORPH-COV:kundrejt_Prep	docs/morphodict/COVERAGE.csv	kundrejt_Prep	direct-with-government	"Tosk reference | mkPrep ""kundrejt"" ablative | Tosk ref observed: kundrejt"	false
+MORPH-COV:mbi_Prep	docs/morphodict/COVERAGE.csv	mbi_Prep	exact	"RGL StructuralSqiClause | mkPrep ""mbi"" accusative | governs accusative"	false
+MORPH-COV:Gjon_PN	docs/morphodict/COVERAGE.csv	Gjon_PN	exact	"RGL LexiconSqi | mkPN ""Gjon"" | john_PN"	false
+MORPH-COV:Paris_PN	docs/morphodict/COVERAGE.csv	Paris_PN	exact	"RGL LexiconSqi | mkPN ""Paris"" | paris_PN"	false

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": 144,
+  "failed": [],
+  "parity": {
+    "Structural": {
+      "abstract_count": 102,
+      "missing_static": []
+    },
+    "Extend": {
+      "abstract_count": 128,
+      "missing_static": []
+    },
+    "Markup": {
+      "abstract_count": 8,
+      "missing_static": []
+    },
+    "Symbol": {
+      "abstract_count": 11,
+      "missing_static": []
+    },
+    "Documentation": {
+      "abstract_count": 31,
+      "missing_static": []
+    }
+  },
+  "note": "Static validation only; GF 3.12 compiler and Wordbench execution were not available in this environment."
+}

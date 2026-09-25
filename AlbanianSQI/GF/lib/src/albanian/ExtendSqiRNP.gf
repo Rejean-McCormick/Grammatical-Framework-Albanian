@@ -15,6 +15,7 @@ oper
   rnp_ReflPron : RNPRec = {
     s=\\a,c =>case c of {
       R.Acc => "veten" ;
+      R.Gen => "vetes" ;
       R.Dat => "vetes" ;
       R.Ablat => "vetes" ;
       R.Nom => case R.agrNumber a of {Sg=>"vetë"; Pl=>"vetë"}
@@ -23,7 +24,7 @@ oper
   } ;
 
   rnp_ReflPoss : Num -> CN -> RNPRec = \num,cn -> {
-    s=\\a,c =>cn.s!R.Def!c!num.n ++ case a.p of {
+    s=\\a,c =>R.cnForm cn R.Def c num.n ++ case a.p of {
       P1 => case R.agrNumber a of {Sg=>"im"; Pl=>"ynë"} ;
       P2 => case R.agrNumber a of {Sg=>"yt"; Pl=>"juaj"} ;
       P3 => "i vet"
@@ -53,9 +54,8 @@ oper
   } ;
 
   rnp_PossPronRNP : Pron -> Num -> CN -> RNPRec -> NP = \pron,num,cn,r -> lin NP {
-    s=\\c =>cn.s!R.Def!c!num.n ++ R.link_clitic!R.Def!c!cn.g!num.n ++
-      r.s!pron.a!R.Ablat ;
-    acc_clit=[] ; dat_clit=[] ; a=R.agrgP3 cn.g num.n ; isPron=False
+    s=\\c =>R.cnForm cn R.Def c num.n ++ R.nyje!R.Def!c!(cn.g!num.n)!num.n ++
+      r.s!pron.a!R.Ablat ; a=R.agrgP3 (cn.g!num.n) num.n ; isPron=False
   } ;
 
   rnp_ConjRNP : Conj -> RNPListRec -> RNPRec = \conj,xs -> {

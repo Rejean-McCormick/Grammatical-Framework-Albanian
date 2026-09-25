@@ -1,0 +1,506 @@
+-- GF_WORDBENCH_INPUT_SHA256 b0166799718410a33748a5b746609fdab56d90ac76c37f73c2ff8aa372e27fc0 validation/inputs/AlbDictValidation.gf
+-- GF_WORDBENCH_INPUT_SHA256 61a8c81ab530cf2a20272f46ed3472a295b1f3fc8386c00b2ec1896607501ae3 validation/inputs/AlbDictValidationSqi.gf
+i AlbDictValidationSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE G2C01242 braktis_V lexical smoke"
+l braktis_V
+ps "CASE G2C01243 c_nderoj_N lexical smoke"
+l c_nderoj_N
+ps "CASE G2C01244 eshte_ne_lartesine_e_duhur_V lexical smoke"
+l eshte_ne_lartesine_e_duhur_V
+ps "CASE G2C01246 mjegull_N lexical smoke"
+l mjegull_N
+ps "CASE G2C01247 arratisje_N lexical smoke"
+l arratisje_N
+ps "CASE G2C01248 brave_V lexical smoke"
+l brave_V
+ps "CASE G2C01249 caktim_detyre_N lexical smoke"
+l caktim_detyre_N
+ps "CASE G2C01250 faza_e_pjekjes_V lexical smoke"
+l faza_e_pjekjes_V
+ps "CASE G2C01252 mjek_N lexical smoke"
+l mjek_N
+ps "CASE G2C01253 arrest_N lexical smoke"
+l arrest_N
+ps "CASE G2C01254 brazde_V lexical smoke"
+l brazde_V
+ps "CASE G2C01255 cast_vendimtar_N lexical smoke"
+l cast_vendimtar_N
+ps "CASE G2C01256 flas_mbyturazi_V lexical smoke"
+l flas_mbyturazi_V
+ps "CASE G2C01258 molle_N lexical smoke"
+l molle_N
+ps "CASE G2C01259 arrestim_N lexical smoke"
+l arrestim_N
+ps "CASE G2C01260 bredh_V lexical smoke"
+l bredh_V
+ps "CASE G2C01261 central_telefonik_N lexical smoke"
+l central_telefonik_N
+ps "CASE G2C01262 flas_ne_lidhje_me_V lexical smoke"
+l flas_ne_lidhje_me_V
+ps "CASE G2C01264 morr_N lexical smoke"
+l morr_N
+ps "CASE G2C01265 arritje_N lexical smoke"
+l arritje_N
+ps "CASE G2C01266 bredharak_V lexical smoke"
+l bredharak_V
+ps "CASE G2C01267 ceremoni_fetare_N lexical smoke"
+l ceremoni_fetare_N
+ps "CASE G2C01268 flas_ne_tym_V lexical smoke"
+l flas_ne_tym_V
+ps "CASE G2C01270 moter_N lexical smoke"
+l moter_N
+ps "CASE G2C01271 arrogance_N lexical smoke"
+l arrogance_N
+ps "CASE G2C01272 bredhje_V lexical smoke"
+l bredhje_V
+ps "CASE G2C01273 ceremoni_martese_N lexical smoke"
+l ceremoni_martese_N
+ps "CASE G2C01274 flas_poshte_e_lart_V lexical smoke"
+l flas_poshte_e_lart_V
+ps "CASE G2C01276 muzike_N lexical smoke"
+l muzike_N
+ps "CASE G2C01277 arsim_N lexical smoke"
+l arsim_N
+ps "CASE G2C01278 brejtje_V lexical smoke"
+l brejtje_V
+ps "CASE G2C01279 ceremoni_martesore_N lexical smoke"
+l ceremoni_martesore_N
+ps "CASE G2C01280 flas_rreth_V lexical smoke"
+l flas_rreth_V
+ps "CASE G2C01282 nate_N lexical smoke"
+l nate_N
+ps "CASE G2C01283 arsyetim_N lexical smoke"
+l arsyetim_N
+ps "CASE G2C01284 brenge_V lexical smoke"
+l brenge_V
+ps "CASE G2C01285 ceshtje_e_kesaj_bote_N lexical smoke"
+l ceshtje_e_kesaj_bote_N
+ps "CASE G2C01286 fluturoj_me_avion_V lexical smoke"
+l fluturoj_me_avion_V
+ps "CASE G2C01288 numer_N lexical smoke"
+l numer_N
+ps "CASE G2C01289 arterie_N lexical smoke"
+l arterie_N
+ps "CASE G2C01290 britme_V lexical smoke"
+l britme_V
+ps "CASE G2C01291 ceshtje_e_kesaj_toke_N lexical smoke"
+l ceshtje_e_kesaj_toke_N
+ps "CASE G2C01292 formoj_nocion_V lexical smoke"
+l formoj_nocion_V
+ps "CASE G2C01294 pallto_N lexical smoke"
+l pallto_N
+ps "CASE G2C01295 arthropod_N lexical smoke"
+l arthropod_N
+ps "CASE G2C01296 brockulla_V lexical smoke"
+l brockulla_V
+ps "CASE G2C01297 ceshtje_te_dhenash_N lexical smoke"
+l ceshtje_te_dhenash_N
+ps "CASE G2C01298 foto_e_castit_V lexical smoke"
+l foto_e_castit_V
+ps "CASE G2C01300 paqe_N lexical smoke"
+l paqe_N
+ps "CASE G2C01301 artikull_N lexical smoke"
+l artikull_N
+ps "CASE G2C01302 bucitje_V lexical smoke"
+l bucitje_V
+ps "CASE G2C01303 cilesi_e_percaktuar_N lexical smoke"
+l cilesi_e_percaktuar_N
+ps "CASE G2C01304 frenoj_e_mbaj_brenda_te_fshehten_V lexical smoke"
+l frenoj_e_mbaj_brenda_te_fshehten_V
+ps "CASE G2C01306 peme_N lexical smoke"
+l peme_N
+ps "CASE G2C01307 artileri_N lexical smoke"
+l artileri_N
+ps "CASE G2C01308 burgos_V lexical smoke"
+l burgos_V
+ps "CASE G2C01309 cope_toke_N lexical smoke"
+l cope_toke_N
+ps "CASE G2C01310 ftoj_brenda_V lexical smoke"
+l ftoj_brenda_V
+ps "CASE G2C01312 pende_N lexical smoke"
+l pende_N
+ps "CASE G2C01313 artiodactyl_N lexical smoke"
+l artiodactyl_N
+ps "CASE G2C01314 bymehet_V lexical smoke"
+l bymehet_V
+ps "CASE G2C01315 cope_veshjesh_N lexical smoke"
+l cope_veshjesh_N
+ps "CASE G2C01316 futem_ne_rroba_V lexical smoke"
+l futem_ne_rroba_V
+ps "CASE G2C01318 person_N lexical smoke"
+l person_N
+ps "CASE G2C01319 artist_N lexical smoke"
+l artist_N
+ps "CASE G2C01320 caj_V lexical smoke"
+l caj_V
+ps "CASE G2C01321 damke_hekuri_N lexical smoke"
+l damke_hekuri_N
+ps "CASE G2C01322 get_it_on_V lexical smoke"
+l get_it_on_V
+ps "CASE G2C01324 peshk_N lexical smoke"
+l peshk_N
+ps "CASE G2C01325 artistik_N lexical smoke"
+l artistik_N
+ps "CASE G2C01326 cakordoj_V lexical smoke"
+l cakordoj_V
+ps "CASE G2C01327 debim_nga_atdheu_N lexical smoke"
+l debim_nga_atdheu_N
+ps "CASE G2C01328 get_laid_V lexical smoke"
+l get_laid_V
+ps "CASE G2C01330 planet_N lexical smoke"
+l planet_N
+ps "CASE G2C01331 as_N lexical smoke"
+l as_N
+ps "CASE G2C01332 caktoj_V lexical smoke"
+l caktoj_V
+ps "CASE G2C01333 dega_e_studimit_N lexical smoke"
+l dega_e_studimit_N
+ps "CASE G2C01334 gisht_i_madh_V lexical smoke"
+l gisht_i_madh_V
+ps "CASE G2C01336 plastike_N lexical smoke"
+l plastike_N
+ps "CASE G2C01337 asgje_N lexical smoke"
+l asgje_N
+ps "CASE G2C01338 calim_V lexical smoke"
+l calim_V
+ps "CASE G2C01339 dekret_ligji_N lexical smoke"
+l dekret_ligji_N
+ps "CASE G2C01340 gje_e_blere_V lexical smoke"
+l gje_e_blere_V
+ps "CASE G2C01342 pluhur_N lexical smoke"
+l pluhur_N
+ps "CASE G2C01343 asgjesoj_N lexical smoke"
+l asgjesoj_N
+ps "CASE G2C01344 can_V lexical smoke"
+l can_V
+ps "CASE G2C01345 depo_hekurudhor_N lexical smoke"
+l depo_hekurudhor_N
+ps "CASE G2C01346 gjej_me_mend_V lexical smoke"
+l gjej_me_mend_V
+ps "CASE G2C01348 polic_N lexical smoke"
+l polic_N
+ps "CASE G2C01349 ashpersi_N lexical smoke"
+l ashpersi_N
+ps "CASE G2C01350 capitje_V lexical smoke"
+l capitje_V
+ps "CASE G2C01351 depo_makinash_N lexical smoke"
+l depo_makinash_N
+ps "CASE G2C01352 gjej_pergjigjen_V lexical smoke"
+l gjej_pergjigjen_V
+ps "CASE G2C01354 port_N lexical smoke"
+l port_N
+ps "CASE G2C01355 asimetri_N lexical smoke"
+l asimetri_N
+ps "CASE G2C01356 carje_V lexical smoke"
+l carje_V
+ps "CASE G2C01357 derrase_hekurosjeje_N lexical smoke"
+l derrase_hekurosjeje_N
+ps "CASE G2C01358 gjendem_poshte_V lexical smoke"
+l gjendem_poshte_V
+ps "CASE G2C01360 prift_N lexical smoke"
+l prift_N
+ps "CASE G2C01361 asimetrik_N lexical smoke"
+l asimetrik_N
+ps "CASE G2C01362 cek_V lexical smoke"
+l cek_V
+ps "CASE G2C01363 deshire_seksuale_N lexical smoke"
+l deshire_seksuale_N
+ps "CASE G2C01364 goditje_e_forte_V lexical smoke"
+l goditje_e_forte_V
+ps "CASE G2C01366 pyetje_N lexical smoke"
+l pyetje_N
+ps "CASE G2C01367 asistentt_N lexical smoke"
+l asistentt_N
+ps "CASE G2C01368 cekje_V lexical smoke"
+l cekje_V
+ps "CASE G2C01369 detyre_mbeshtetese_N lexical smoke"
+l detyre_mbeshtetese_N
+ps "CASE G2C01370 hap_e_mbyll_syte_V lexical smoke"
+l hap_e_mbyll_syte_V
+ps "CASE G2C01372 pyll_N lexical smoke"
+l pyll_N
+ps "CASE G2C01373 asociacion_N lexical smoke"
+l asociacion_N
+ps "CASE G2C01374 cel_V lexical smoke"
+l cel_V
+ps "CASE G2C01375 detyre_mbrojtese_N lexical smoke"
+l detyre_mbrojtese_N
+ps "CASE G2C01376 have_a_go_at_it_V lexical smoke"
+l have_a_go_at_it_V
+ps "CASE G2C01378 qafe_N lexical smoke"
+l qafe_N
+ps "CASE G2C01379 asortiment_N lexical smoke"
+l asortiment_N
+ps "CASE G2C01380 cenim_V lexical smoke"
+l cenim_V
+ps "CASE G2C01381 dhenie_me_qera_N lexical smoke"
+l dhenie_me_qera_N
+ps "CASE G2C01382 have_intercourse_V lexical smoke"
+l have_intercourse_V
+ps "CASE G2C01384 qen_N lexical smoke"
+l qen_N
+ps "CASE G2C01385 aspekt_N lexical smoke"
+l aspekt_N
+ps "CASE G2C01386 cenoj_V lexical smoke"
+l cenoj_V
+ps "CASE G2C01387 dhome_ne_papafingo_N lexical smoke"
+l dhome_ne_papafingo_N
+ps "CASE G2C01388 have_it_away_V lexical smoke"
+l have_it_away_V
+ps "CASE G2C01390 qiell_N lexical smoke"
+l qiell_N
+ps "CASE G2C01391 aspirim_N lexical smoke"
+l aspirim_N
+ps "CASE G2C01392 cep_V lexical smoke"
+l cep_V
+ps "CASE G2C01393 diference_opinionesh_N lexical smoke"
+l diference_opinionesh_N
+ps "CASE G2C01394 have_it_off_V lexical smoke"
+l have_it_off_V
+ps "CASE G2C01396 qilim_N lexical smoke"
+l qilim_N
+ps "CASE G2C01397 aspirin_N lexical smoke"
+l aspirin_N
+ps "CASE G2C01398 cicerime_V lexical smoke"
+l cicerime_V
+ps "CASE G2C01399 dijetar_aplikimesh_N lexical smoke"
+l dijetar_aplikimesh_N
+ps "CASE G2C01400 have_sex_V lexical smoke"
+l have_sex_V
+ps "CASE G2C01402 qumesht_N lexical smoke"
+l qumesht_N
+ps "CASE G2C01403 aspiroj_N lexical smoke"
+l aspiroj_N
+ps "CASE G2C01404 cifel_V lexical smoke"
+l cifel_V
+ps "CASE G2C01405 disa_gjera_te_ndryshme_N lexical smoke"
+l disa_gjera_te_ndryshme_N
+ps "CASE G2C01406 hedh_poshte_V lexical smoke"
+l hedh_poshte_V
+ps "CASE G2C01408 qytet_N lexical smoke"
+l qytet_N
+ps "CASE G2C01409 atesi_N lexical smoke"
+l atesi_N
+ps "CASE G2C01410 cift_V lexical smoke"
+l cift_V
+ps "CASE G2C01411 disk_drive_N lexical smoke"
+l disk_drive_N
+ps "CASE G2C01412 hedh_poshte_me_goditje_V lexical smoke"
+l hedh_poshte_me_goditje_V
+ps "CASE G2C01414 radio_N lexical smoke"
+l radio_N
+ps "CASE G2C01415 atletike_N lexical smoke"
+l atletike_N
+ps "CASE G2C01416 ciftohem_V lexical smoke"
+l ciftohem_V
+ps "CASE G2C01417 dita_yjore_N lexical smoke"
+l dita_yjore_N
+ps "CASE G2C01418 heq_dore_V lexical smoke"
+l heq_dore_V
+ps "CASE G2C01420 re_N lexical smoke"
+l re_N
+ps "CASE G2C01421 atletike_N__2 lexical smoke"
+l atletike_N__2
+ps "CASE G2C01422 ciftoj_V lexical smoke"
+l ciftoj_V
+ps "CASE G2C01423 dite_e_shenuar_N lexical smoke"
+l dite_e_shenuar_N
+ps "CASE G2C01424 heq_dore_V__2 lexical smoke"
+l heq_dore_V__2
+ps "CASE G2C01426 rere_N lexical smoke"
+l rere_N
+ps "CASE G2C01427 atmosfere_N lexical smoke"
+l atmosfere_N
+ps "CASE G2C01428 cilesoj_V lexical smoke"
+l cilesoj_V
+ps "CASE G2C01429 dite_pune_N lexical smoke"
+l dite_pune_N
+ps "CASE G2C01430 heq_dore_nga_V lexical smoke"
+l heq_dore_nga_V
+ps "CASE G2C01432 restorant_N lexical smoke"
+l restorant_N
+ps "CASE G2C01433 atom_N lexical smoke"
+l atom_N
+ps "CASE G2C01434 cirrem_V lexical smoke"
+l cirrem_V
+ps "CASE G2C01435 dite_pushimi_N lexical smoke"
+l dite_pushimi_N
+ps "CASE G2C01436 heq_menjane_V lexical smoke"
+l heq_menjane_V
+ps "CASE G2C01438 rregull_N lexical smoke"
+l rregull_N
+ps "CASE G2C01439 atribut_N lexical smoke"
+l atribut_N
+ps "CASE G2C01440 ckoloroj_V lexical smoke"
+l ckoloroj_V
+ps "CASE G2C01441 dite_te_erreta_N lexical smoke"
+l dite_te_erreta_N
+ps "CASE G2C01442 heq_nga_kali_V lexical smoke"
+l heq_nga_kali_V
+ps "CASE G2C01444 rrenje_N lexical smoke"
+l rrenje_N
+ps "CASE G2C01445 au_N lexical smoke"
+l au_N
+ps "CASE G2C01446 clirohem_V lexical smoke"
+l clirohem_V
+ps "CASE G2C01447 ditet_e_muajit_N lexical smoke"
+l ditet_e_muajit_N
+ps "CASE G2C01448 heq_nga_qarkullimi_V lexical smoke"
+l heq_nga_qarkullimi_V
+ps "CASE G2C01450 rruge_N__2 lexical smoke"
+l rruge_N__2
+ps "CASE G2C01451 audience_N lexical smoke"
+l audience_N
+ps "CASE G2C01452 cliroj_V lexical smoke"
+l cliroj_V
+ps "CASE G2C01453 divizion_ajror_N lexical smoke"
+l divizion_ajror_N
+ps "CASE G2C01454 heq_plehrat_V lexical smoke"
+l heq_plehrat_V
+ps "CASE G2C01456 shef_N lexical smoke"
+l shef_N
+ps "CASE G2C01457 autokamp_N lexical smoke"
+l autokamp_N
+ps "CASE G2C01458 clodhem_V lexical smoke"
+l clodhem_V
+ps "CASE G2C01459 divizion_detar_N lexical smoke"
+l divizion_detar_N
+ps "CASE G2C01460 heq_qafe_V lexical smoke"
+l heq_qafe_V
+ps "CASE G2C01462 shi_N lexical smoke"
+l shi_N
+ps "CASE G2C01463 autokton_N lexical smoke"
+l autokton_N
+ps "CASE G2C01464 clodhje_V lexical smoke"
+l clodhje_V
+ps "CASE G2C01465 dobesim_i_kockave_N lexical smoke"
+l dobesim_i_kockave_N
+ps "CASE G2C01466 hidhem_brenda_V lexical smoke"
+l hidhem_brenda_V
+ps "CASE G2C01468 shkemb_N lexical smoke"
+l shkemb_N
+ps "CASE G2C01469 automjet_N lexical smoke"
+l automjet_N
+ps "CASE G2C01470 cmim_V lexical smoke"
+l cmim_V
+ps "CASE G2C01471 doktor_dhembesh_N lexical smoke"
+l doktor_dhembesh_N
+ps "CASE G2C01472 humbas_energji_V lexical smoke"
+l humbas_energji_V
+ps "CASE G2C01474 shkence_N lexical smoke"
+l shkence_N
+ps "CASE G2C01475 automobil_N lexical smoke"
+l automobil_N
+ps "CASE G2C01476 cmoj_V lexical smoke"
+l cmoj_V
+ps "CASE G2C01477 dokument_ligji_N lexical smoke"
+l dokument_ligji_N
+ps "CASE G2C01478 i_acarte_V lexical smoke"
+l i_acarte_V
+ps "CASE G2C01480 shkolle_N__2 lexical smoke"
+l shkolle_N__2
+ps "CASE G2C01481 autonomi_N lexical smoke"
+l autonomi_N
+ps "CASE G2C01482 cmontoj_V lexical smoke"
+l cmontoj_V
+ps "CASE G2C01483 dokument_zyrtar_N lexical smoke"
+l dokument_zyrtar_N
+ps "CASE G2C01484 i_barabarte_V lexical smoke"
+l i_barabarte_V
+ps "CASE G2C01486 shkop_N lexical smoke"
+l shkop_N
+ps "CASE G2C01487 autor_N lexical smoke"
+l autor_N
+ps "CASE G2C01488 cngjyros_V lexical smoke"
+l cngjyros_V
+ps "CASE G2C01489 dollap_ne_mur_N lexical smoke"
+l dollap_ne_mur_N
+ps "CASE G2C01490 i_bere_mire_V lexical smoke"
+l i_bere_mire_V
+ps "CASE G2C01492 shpine_N lexical smoke"
+l shpine_N
+ps "CASE G2C01493 autoresi_N lexical smoke"
+l autoresi_N
+ps "CASE G2C01494 cohem_V lexical smoke"
+l cohem_V
+ps "CASE G2C01495 dollap_per_rroba_N lexical smoke"
+l dollap_per_rroba_N
+ps "CASE G2C01496 i_dallgezuar_V lexical smoke"
+l i_dallgezuar_V
+ps "CASE G2C01498 shtepi_N__2 lexical smoke"
+l shtepi_N__2
+ps "CASE G2C01499 autoritet_N lexical smoke"
+l autoritet_N
+ps "CASE G2C01500 coj_V lexical smoke"
+l coj_V
+ps "CASE G2C01501 dollap_rrobash_N lexical smoke"
+l dollap_rrobash_N
+ps "CASE G2C01502 i_dredhur_V lexical smoke"
+l i_dredhur_V
+ps "CASE G2C01504 sobe_N lexical smoke"
+l sobe_N
+ps "CASE G2C01505 autoritetet_N lexical smoke"
+l autoritetet_N
+ps "CASE G2C01506 coke_V lexical smoke"
+l coke_V
+ps "CASE G2C01507 dore_letrash_N lexical smoke"
+l dore_letrash_N
+ps "CASE G2C01508 i_fiksuar_mire_V lexical smoke"
+l i_fiksuar_mire_V
+ps "CASE G2C01510 stilolaps_N lexical smoke"
+l stilolaps_N
+ps "CASE G2C01511 autorizim_N lexical smoke"
+l autorizim_N
+ps "CASE G2C01512 coksigjenoj_V lexical smoke"
+l coksigjenoj_V
+ps "CASE G2C01513 dore_ndihmuese_N lexical smoke"
+l dore_ndihmuese_N
+ps "CASE G2C01514 i_fresket_V lexical smoke"
+l i_fresket_V
+ps "CASE G2C01516 student_N lexical smoke"
+l student_N
+ps "CASE G2C01517 autorizues_N lexical smoke"
+l autorizues_N
+ps "CASE G2C01518 copetim_V lexical smoke"
+l copetim_V
+ps "CASE G2C01519 doreze_kamzhiku_N lexical smoke"
+l doreze_kamzhiku_N
+ps "CASE G2C01520 i_gatshem_V lexical smoke"
+l i_gatshem_V
+ps "CASE G2C01522 sy_N lexical smoke"
+l sy_N
+ps "CASE G2C01523 avancim_N lexical smoke"
+l avancim_N
+ps "CASE G2C01524 copezoj_V lexical smoke"
+l copezoj_V
+ps "CASE G2C01525 dosje_te_dhenash_N lexical smoke"
+l dosje_te_dhenash_N
+ps "CASE G2C01526 i_heq_te_drejte_V lexical smoke"
+l i_heq_te_drejte_V
+ps "CASE G2C01528 tavan_N lexical smoke"
+l tavan_N
+ps "CASE G2C01529 avantazh_N lexical smoke"
+l avantazh_N
+ps "CASE G2C01530 corientoj_V lexical smoke"
+l corientoj_V
+ps "CASE G2C01531 drejtim_i_gabuar_N lexical smoke"
+l drejtim_i_gabuar_N
+ps "CASE G2C01532 i_holle_V lexical smoke"
+l i_holle_V
+ps "CASE G2C01534 televizor_N lexical smoke"
+l televizor_N
+ps "CASE G2C01535 aventure_N lexical smoke"
+l aventure_N
+ps "CASE G2C01536 crregullim_V lexical smoke"
+l crregullim_V
+ps "CASE G2C01537 drejtim_politike_N lexical smoke"
+l drejtim_politike_N
+ps "CASE G2C01538 i_jap_energji_V lexical smoke"
+l i_jap_energji_V
+ps "CASE G2C01540 thua_N lexical smoke"
+l thua_N
+ps "CASE G2C01541 avion_N lexical smoke"
+l avion_N
+ps "GF_WORDBENCH_END cases"
+q

@@ -1,0 +1,1067 @@
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2026-09-25 14:06:52.897390273 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2026-09-25 14:26:11.706539445 +0000
+@@ -8,9 +8,13 @@
+     A = Adj ;
+     A2 = Adj ** {c2 : Compl} ;
+ 
+-    V, VA, VV, VS, VQ = Verb ;
++    V, VA, VV, VQ = Verb ;
++    -- Finite declarative complementizers are lexically selectable in Albanian
++    -- (e.g. që vs se), so VS/V2S keep this metadata to the realization boundary.
++    VS = Verb ** {scomp : Str} ;
+     V2 = Verb ** {c2 : Compl} ;
+-    V2S, V2Q, V3, V2A, V2V = Verb ** {c2,c3 : Compl} ;
++    V2S = Verb ** {c2,c3 : Compl ; scomp : Str} ;
++    V2Q, V3, V2A, V2V = Verb ** {c2,c3 : Compl} ;
+ 
+     Prep = Compl ;
+ 
+@@ -30,13 +34,13 @@
+     S = {s : Str} ;
+     QS = {s : Str} ;
+     RS = {s : Agr => Str} ;
+-    SSlash = {s : Str ; c2 : Compl} ;
++    SSlash = {s : Str ; c2 : Compl ; gapPost : Agr => Str} ;
+ 
+     Cl = {s : ParamX.Tense => Anteriority => Polarity => Str} ;
+     QCl = {s : ParamX.Tense => Anteriority => Polarity => Str} ;
+     RCl = {s : Agr => ParamX.Tense => Anteriority => Polarity => Str} ;
+     RP = {s : Case => GenNum => Str} ;
+-    ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl} ;
++    ClSlash = {s : ParamX.Tense => Anteriority => Polarity => Str ; c2 : Compl ; gapPost : Agr => Str} ;
+ 
+     -- Shared category shapes live in ResSqi, matching the standard RGL
+     -- Cat/Res boundary and preventing lock-field loss through helper calls.
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	2026-09-25 14:06:52.897514484 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	2026-09-25 14:26:11.706784793 +0000
+@@ -6,6 +6,7 @@
+ 
+ oper
+   defaultAgr : Agr = {gn = GSg Masc ; p = P3} ;
++  emptyGapPost : Agr => Agr => Str = \\_,_ => [] ;
+ 
+   vpFromSlash : VPSlash -> VP = \sl -> {
+     indicative = sl.indicative ;
+@@ -47,7 +48,8 @@
+     cl = vp.cl ;
+     subjcl = vp.subjcl ;
+     post = vp.post ;
+-    c2 = c
++    c2 = c ;
++    gapPost = emptyGapPost
+   } ;
+ 
+   appendVP : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
+@@ -110,7 +112,7 @@
+     } ;
+ 
+   realizeImpVP : VP -> Polarity -> Number -> Str = \vp,pol,n ->
+-    let a : Agr = {gn = case n of {Sg => GSg Masc ; Pl => GPl} ; p = P2}
++    let a : Agr = {gn = case n of {Sg => GSg Masc ; Pl => GPl Masc} ; p = P2}
+     in case pol of {
+       Pos => vp.cl ++ vp.imperative ! n ++ vp.post ! a ;
+       Neg => "mos" ++ vp.cl ++ vp.imperative ! n ++ vp.post ! a
+@@ -122,6 +124,24 @@
+   realizeGerundVP : VP -> Agr -> Str = \vp,a ->
+     "duke" ++ vp.cl ++ vp.participle ++ vp.post ! a ;
+ 
++
++  -- Tense-general Standard-Albanian progressive.  po + finite verb is not
++  -- compositional across the whole public RGL tense space; jam + duke +
++  -- participle is.  Public Past maps to the Albanian Aorist slot, therefore
++  -- the progressive copula deliberately places the copular imperfect in that
++  -- slot (isha duke ...), while anterior forms naturally become kam qenë duke ... .
++  progressiveVPWithCopula : Verb -> VP -> VP = \cop,vp ->
++    let base : VP = emptyVP cop
++    in base ** {
++      indicative = table {
++        Pres => cop.Indicative ! Pres ;
++        Past => cop.Indicative ! Past ;
++        Aorist => cop.Indicative ! Imperfect ;
++        Imperfect => cop.Indicative ! Imperfect
++      } ;
++      post = \\a => "duke" ++ vp.cl ++ vp.participle ++ vp.post ! a
++    } ;
++
+   mkClause : Str -> Agr -> VP -> ParamX.Tense -> Anteriority -> Polarity -> Str =
+     \subj,a,vp,t,ant,pol -> subj ++ realizeVP vp t ant pol a ;
+ 
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2026-09-25 14:06:52.897608737 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2026-09-25 14:27:40.999718354 +0000
+@@ -12,6 +12,23 @@
+     [CN] = {first,last : Species => Case => Number => Str ; g : Gender} ;
+     [DAP] = {first,last : Case => Gender => Str ; n : Number} ;
+ 
++  oper
++    coordPerson : Person -> Person -> Person = \p,q -> case <p,q> of {
++      <P1,_> => P1 ; <_,P1> => P1 ;
++      <P2,_> => P2 ; <_,P2> => P2 ;
++      _ => P3
++    } ;
++
++    coordGender : Gender -> Gender -> Gender = \g,h -> case <g,h> of {
++      <Fem,Fem> => Fem ;
++      _ => Masc
++    } ;
++
++    coordAgr : Agr -> Agr -> Agr = \a,b -> {
++      gn = GPl (coordGender (agrGender a) (agrGender b)) ;
++      p = coordPerson a.p b.p
++    } ;
++
+   lin
+     BaseS x y = {first=x.s; last=y.s} ;
+     ConsS x xs = {first=x.s ++ "," ++ xs.first; last=xs.last} ;
+@@ -29,10 +46,10 @@
+     ConsIAdv x xs = {first=x.s ++ "," ++ xs.first; last=xs.last} ;
+     ConjIAdv c xs = {s=xs.first ++ c.s ++ xs.last} ;
+ 
+-    BaseNP x y = {first=x.s; last=y.s; a={gn=GPl;p=P3}} ;
++    BaseNP x y = {first=x.s; last=y.s; a=coordAgr x.a y.a} ;
+     ConsNP x xs = {
+       first=\\c=>x.s!c ++ "," ++ xs.first!c;
+-      last=xs.last; a={gn=GPl;p=P3}
++      last=xs.last; a=coordAgr x.a xs.a
+     } ;
+     ConjNP c xs = {
+       s=\\k=>xs.first!k ++ c.s ++ xs.last!k;
+@@ -54,10 +71,10 @@
+     } ;
+     ConjRS c xs = {s=\\a=>xs.first!a ++ c.s ++ xs.last!a} ;
+ 
+-    BaseCN x y = {first=x.s; last=y.s; g=x.g} ;
++    BaseCN x y = {first=x.s; last=y.s; g=coordGender x.g y.g} ;
+     ConsCN x xs = {
+       first=\\sp,k,n=>x.s!sp!k!n ++ "," ++ xs.first!sp!k!n;
+-      last=xs.last; g=xs.g
++      last=xs.last; g=coordGender x.g xs.g
+     } ;
+     ConjCN c xs = {
+       s=\\sp,k,n=>xs.first!sp!k!n ++ c.s ++ xs.last!sp!k!n;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf	2026-09-25 14:06:52.897761729 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf	2026-09-25 14:37:53.320354633 +0000
+@@ -3,7 +3,11 @@
+   open ResSqi, Prelude, Predef, ParamX, ClauseSqiRes, (P=ParadigmsSqi), (I=IrregSqi) in {
+ 
+   lincat
+-    Timeunit, Hour, Weekday, Month, Monthday, Year, Language = {s : Str} ;
++    Timeunit, Hour, Month, Monthday, Year, Language = {s : Str} ;
++    -- Weekdays are article-bearing feminine nominals in Albanian.  Keep the
++    -- citation/nominative form and the temporal accusative form separately so
++    -- "e hënë" and "të hënën" are not flattened into one string.
++    Weekday = {nom,acc : Str} ;
+ 
+   oper
+     showIntStr : Int -> Str = \i -> Predef.show Predef.Int i ;
+@@ -28,25 +32,34 @@
+ 
+     copVP : (Agr => Str) -> VP = \x -> appendVP (emptyVP (lin Verb I.jam_V)) x ;
+ 
+-    qualVP : Str -> Str -> VP = \m,f -> copVP (\\a=>case agrGender a of {
+-      Masc=>m; Fem=>f
+-    }) ;
++    adjVP : A -> VP = \a -> copVP (\\agr =>
++      case a.clit of {
++        True => link_clitic ! Indef ! Nom ! agrGender agr ! agrNumber agr ++
++                a.s ! Nom ! agrGender agr ! agrNumber agr ;
++        False => a.s ! Nom ! agrGender agr ! agrNumber agr
++      }) ;
++
++    adjWordVP : Str -> VP = \x -> adjVP (P.mkA x) ;
++
++    ageWord : Agr -> Str = \a -> case agrGender a of {
++      Masc => "vjeç" ; Fem => "vjeçe"
++    } ;
+ 
+   lin
+-    dayMonthAdv d m = {s=d.s ++ m.s} ;
+-    dayMonthYearAdv d m y = {s=d.s ++ m.s ++ y.s} ;
+-    monthAdv m = {s=m.s} ;
+-    monthYearAdv m y = {s=m.s ++ y.s} ;
+-    yearAdv y = {s=y.s} ;
++    dayMonthAdv d m = {s="më" ++ d.s ++ m.s} ;
++    dayMonthYearAdv d m y = {s="më" ++ d.s ++ m.s ++ y.s} ;
++    monthAdv m = {s="në" ++ m.s} ;
++    monthYearAdv m y = {s="në" ++ m.s ++ y.s} ;
++    yearAdv y = {s="në" ++ y.s} ;
+ 
+     monthN m = mkNConst Masc m.s ;
+     monthPN m = mkPNConst Masc m.s ;
+-    weekdayN w = mkNConst Fem w.s ;
+-    weekdayPN w = mkPNConst Fem w.s ;
+-    weekdayLastAdv w = {s=w.s ++ "e" ++ "kaluar"} ;
+-    weekdayNextAdv w = {s=w.s ++ "e" ++ "ardhshme"} ;
+-    weekdayPunctualAdv w = {s="të" ++ w.s} ;
+-    weekdayHabitualAdv w = {s="çdo" ++ w.s} ;
++    weekdayN w = mkNConst Fem w.nom ;
++    weekdayPN w = mkPNConst Fem w.nom ;
++    weekdayLastAdv w = {s=w.acc ++ "e" ++ "kaluar"} ;
++    weekdayNextAdv w = {s=w.acc ++ "e" ++ "ardhshme"} ;
++    weekdayPunctualAdv w = {s=w.acc} ;
++    weekdayHabitualAdv w = {s="çdo" ++ w.acc} ;
+ 
+     intMonthday i = {s=i.s} ;
+     intYear i = {s=i.s} ;
+@@ -55,7 +68,7 @@
+     languageCN lang = mkNConst Fem ("gjuhë" ++ lang.s) ;
+     languageNP lang = mkNPConst Fem Sg ("gjuha" ++ lang.s) ;
+ 
+-    has_age_VP c = constructionAddPost (constructionBaseVP (lin Verb I.kam_V)) (\\_=>c.s ++ "vjeç") ;
++    has_age_VP c = constructionAddPost (constructionBaseVP (lin Verb I.jam_V)) (\\a=>c.s ++ ageWord a) ;
+ 
+     have_name_Cl np name = lin Cl {
+       s = \\t,ant,pol =>
+@@ -63,7 +76,9 @@
+     } ;
+ 
+     what_name_QCl np = {
+-      s=\\t,a,p=>"si" ++ (have_name_Cl np (mkNPConst Masc Sg [])).s!t!a!p
++      -- Si quhet ai? / Si quheni ju? Predicate precedes the overt subject.
++      s=\\t,a,p=>"si" ++ realizeVP
++        (constructionBaseVP (lin Verb (P.mkV "quhem"))) t a p np.a ++ np.s!Nom
+     } ;
+ 
+     how_old_QCl np = {
+@@ -80,16 +95,23 @@
+ 
+     married_Cl np other =
+       mkPred (np.s!Nom) np.a
+-        (constructionAddPost (qualVP "i martuar" "e martuar") (\\_=>"me" ++ other.s!Acc)) ;
++        (constructionAddPost (adjWordVP "martuar") (\\_=>"me" ++ other.s!Acc)) ;
+ 
+-    hungry_VP  = qualVP "i uritur" "e uritur" ;
+-    thirsty_VP = qualVP "i etur" "e etur" ;
+-    tired_VP   = qualVP "i lodhur" "e lodhur" ;
+-    ill_VP     = qualVP "i sëmurë" "e sëmurë" ;
+-    scared_VP  = qualVP "i frikësuar" "e frikësuar" ;
+-    ready_VP   = copVP (\\_=>"gati") ;
+-    is_right_VP = copVP (\\_=>"me të drejtë") ;
+-    is_wrong_VP = copVP (\\_=>"gabim") ;
++    -- Productive adjective paradigms retain gender and number; this matters for
++    -- coordinated/plural subjects, unlike the former two-string singular fallback.
++    hungry_VP  = adjWordVP "uritur" ;
++    thirsty_VP = adjWordVP "etur" ;
++    tired_VP   = adjWordVP "lodhur" ;
++    ill_VP     = adjWordVP "sëmurë" ;
++    scared_VP  = adjWordVP "frikësuar" ;
++    ready_VP   = adjVP (P.unartA (P.mkA "gati")) ;
++
++    -- Idiomatic Albanian predication: ka të drejtë / e ka gabim.
++    is_right_VP = constructionAddPost
++      (constructionBaseVP (lin Verb I.kam_V)) (\\_=>"të drejtë") ;
++    is_wrong_VP = constructionAddPost
++      (appendClitic (constructionBaseVP (lin Verb I.kam_V)) "e" "ta")
++      (\\_=>"gabim") ;
+ 
+     weather_adjCl ap = {
+       s=\\t,a,p=>"moti" ++ realizeVP
+@@ -169,13 +191,13 @@
+     month_Timeunit = {s = "muaj"} ;
+     year_Timeunit = {s = "vit"} ;
+ 
+-    monday_Weekday = {s = "hënë"} ;
+-    tuesday_Weekday = {s = "martë"} ;
+-    wednesday_Weekday = {s = "mërkurë"} ;
+-    thursday_Weekday = {s = "enjte"} ;
+-    friday_Weekday = {s = "premte"} ;
+-    saturday_Weekday = {s = "shtunë"} ;
+-    sunday_Weekday = {s = "diel"} ;
++    monday_Weekday = {nom = "e hënë" ; acc = "të hënën"} ;
++    tuesday_Weekday = {nom = "e martë" ; acc = "të martën"} ;
++    wednesday_Weekday = {nom = "e mërkurë" ; acc = "të mërkurën"} ;
++    thursday_Weekday = {nom = "e enjte" ; acc = "të enjten"} ;
++    friday_Weekday = {nom = "e premte" ; acc = "të premten"} ;
++    saturday_Weekday = {nom = "e shtunë" ; acc = "të shtunën"} ;
++    sunday_Weekday = {nom = "e diel" ; acc = "të dielën"} ;
+ 
+     january_Month = {s = "janar"} ;
+     february_Month = {s = "shkurt"} ;
+@@ -226,4 +248,4 @@
+     turkish_Language = {s = "turqisht"} ;
+     urdu_Language = {s = "urdu"} ;
+ 
+-}
+\ No newline at end of file
++}
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf	2026-09-25 14:06:52.902347140 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiFocusPrep.gf	2026-09-25 14:28:20.157793317 +0000
+@@ -23,7 +23,7 @@
+     fp_FocusObj : NP -> SSlash -> Utt =
+       \np,sslash ->
+         lin Utt {
+-          s = fp_npSurfaceAcc np ++ wordSep ++ sslash.s
++          s = fp_npSurfaceAcc np ++ wordSep ++ sslash.s ++ sslash.gapPost!np.a
+         } ;
+ 
+     fp_FocusAdv : Adv -> S -> Utt =
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf	2026-09-25 14:06:52.902656295 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiRNP.gf	2026-09-25 14:28:20.157920550 +0000
+@@ -8,8 +8,10 @@
+   RNPListRec : Type = {first,last : R.Agr => R.Case => Str} ;
+ 
+   rnp_ReflRNP : R.VPSlash -> RNPRec -> R.VP = \sl,rnp -> case rnp.isPron of {
+-    True => appendClitic (vpFromSlash sl) "u" "t'u" ;
+-    False => appendVP (vpFromSlash sl) (\\a =>sl.c2.s ++ rnp.s!a!sl.c2.c)
++    True => appendVP (appendClitic (vpFromSlash sl) "u" "t'u")
++      (\\a =>sl.gapPost!a!a) ;
++    False => appendVP (vpFromSlash sl)
++      (\\a =>sl.c2.s ++ rnp.s!a!sl.c2.c ++ sl.gapPost!a!a)
+   } ;
+ 
+   rnp_ReflPron : RNPRec = {
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf	2026-09-25 14:06:52.902799606 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiScaffolding.gf	2026-09-25 14:29:02.972930839 +0000
+@@ -52,26 +52,26 @@
+   } ;
+ 
+   sc_PiedPipingQuestSlash : IP -> ClSlash -> QCl = \ip,slash -> lin QCl {
+-    s=\\t,a,p =>slash.c2.s ++ ip.s!slash.c2.c ++ slash.s!t!a!p
++    s=\\t,a,p =>slash.c2.s ++ ip.s!slash.c2.c ++ slash.s!t!a!p ++ slash.gapPost!ip.a
+   } ;
+ 
+   sc_PiedPipingRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
+-    s=\\agr,t,a,p =>slash.c2.s ++ rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p
++    s=\\agr,t,a,p =>slash.c2.s ++ rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ++ slash.gapPost!agr
+   } ;
+ 
+   -- Albanian prepositions normally precede their complement.  The API keeps
+   -- strand/pied-pipe distinctions; both are grammaticalized here without
+   -- losing the governed case.
+   sc_StrandQuestSlash : IP -> ClSlash -> QCl = \ip,slash -> lin QCl {
+-    s=\\t,a,p =>ip.s!slash.c2.c ++ slash.s!t!a!p ++ slash.c2.s
++    s=\\t,a,p =>ip.s!slash.c2.c ++ slash.s!t!a!p ++ slash.c2.s ++ slash.gapPost!ip.a
+   } ;
+ 
+   sc_StrandRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
+-    s=\\agr,t,a,p =>rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ++ slash.c2.s
++    s=\\agr,t,a,p =>rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ++ slash.c2.s ++ slash.gapPost!agr
+   } ;
+ 
+   sc_EmptyRelSlash : ClSlash -> RCl = \slash -> lin RCl {
+-    s=\\_,t,a,p =>"që" ++ slash.s!t!a!p ++ slash.c2.s
++    s=\\agr,t,a,p =>"që" ++ slash.s!t!a!p ++ slash.c2.s ++ slash.gapPost!agr
+   } ;
+ 
+   sc_ProDrop : Pron -> Pron = \pro -> lin Pron {
+@@ -95,14 +95,14 @@
+   sc_UttAdV : AdV -> Utt = \adv -> lin Utt {s=adv.s} ;
+   sc_UttVPShort : VP -> Utt = \vp -> lin Utt {s=realizeImpVP vp P.Pos P.Sg} ;
+ 
+-  sc_ComplBareVS : VS -> S -> R.VP = \vs,s -> appendVP (emptyVP vs) (\\_ =>s.s) ;
++  sc_ComplBareVS : VS -> S -> R.VP = \vs,s -> appendVP (emptyVP (lin Verb vs)) (\\_ =>s.s) ;
+   sc_SlashBareV2S : V2S -> S -> R.VPSlash = \v2s,s ->
+     slashFromVP
+       (appendVP (emptyVP (lin Verb v2s)) (\\_ =>s.s))
+       v2s.c2 ;
+ 
+   sc_ComplDirectVS : VS -> Utt -> R.VP = \vs,utt ->
+-    appendVP (emptyVP vs) (\\_ =>":" ++ utt.s) ;
++    appendVP (emptyVP (lin Verb vs)) (\\_ =>":" ++ utt.s) ;
+   sc_ComplDirectVQ : VQ -> Utt -> R.VP = \vq,utt ->
+     appendVP (emptyVP vq) (\\_ =>":" ++ utt.s) ;
+ 
+@@ -140,7 +140,8 @@
+   sc_TPastSimple : Tense = lin Tense {s=[] ; t=P.Past} ;
+ 
+   sc_ComplSlashPartLast : R.VPSlash -> NP -> R.VP = \sl,np ->
+-    appendVP (vpFromSlash sl) (\\_ =>sl.c2.s ++ np.s!sl.c2.c) ;
++    appendVP (vpFromSlash sl)
++      (\\subj =>sl.c2.s ++ np.s!sl.c2.c ++ sl.gapPost!subj!np.a) ;
+ 
+   sc_DetNPMasc : Det -> NP = \det -> lin NP {
+     s=\\c =>det.s!c!R.Masc ; acc_clit=[] ; dat_clit=[] ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf	2026-09-25 14:06:52.902919910 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPBridge.gf	2026-09-25 14:28:20.157464305 +0000
+@@ -17,20 +17,20 @@
+   } ;
+ 
+   vp_EmbedSSlash : SSlash -> SC = \sslash -> lin SC {
+-    s="çfarë" ++ sslash.s
++    s="çfarë" ++ sslash.s ++ sslash.gapPost!agrMascSg
+   } ;
+ 
+   vp_PastPartAP : VPSlash -> AP = \sl -> lin AP {
+-    s=\\_,_,g,n =>sl.participle ++ sl.post!(R.agrgP3 g n)
++    s=\\_,_,g,n =>let a : R.Agr = R.agrgP3 g n in sl.participle ++ sl.post!a ++ sl.gapPost!a!a
+   } ;
+ 
+   vp_PastPartAgentAP : VPSlash -> NP -> AP = \sl,np -> lin AP {
+-    s=\\_,_,g,n =>sl.participle ++ sl.post!(R.agrgP3 g n) ++ (vp_agentAdv np).s
++    s=\\_,_,g,n =>let a : R.Agr = R.agrgP3 g n in sl.participle ++ sl.post!a ++ sl.gapPost!a!a ++ (vp_agentAdv np).s
+   } ;
+ 
+   vp_PassVPSlash : R.VPSlash -> R.VP = \sl ->
+     appendVP (emptyVP (lin Verb I.jam_V))
+-      (\\a =>sl.participle ++ sl.post!a) ;
++      (\\a =>sl.participle ++ sl.post!a ++ sl.gapPost!a!a) ;
+ 
+   vp_PassAgentVPSlash : R.VPSlash -> NP -> R.VP = \sl,np ->
+     appendVP (vp_PassVPSlash sl) (\\_ => (vp_agentAdv np).s) ;
+@@ -42,6 +42,9 @@
+       acc_clit=[] ; dat_clit=[] ; a=agrMascSg ; isPron=False
+     } ;
+ 
++  -- Unresolved-object progressive retains po + finite V so later weak
++  -- object clitics stay inside the Albanian verbal clitic cluster. Saturated
++  -- ProgrVP uses tense-general jam + duke in IdiomSqi.
+   vp_ProgrVPSlash : VPSlash -> VPSlash = \sl -> sl ** {
+     cl="po" ++ sl.cl ;
+     subjcl="të" ++ "po" ++ sl.cl
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf	2026-09-25 14:06:52.903049035 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ExtendSqiVPS.gf	2026-09-25 14:27:41.000647572 +0000
+@@ -22,17 +22,19 @@
+   } ;
+ 
+   lexicalObjectVP : R.VPSlash -> R.Agr -> R.VP = \sl,objAgr ->
+-    case sl.c2.c of {
++    let core : R.VP = case sl.c2.c of {
+       R.Dat => appendClitic (vpFromSlash sl) (R.datCliticAgr objAgr) (R.subjDatCliticAgr objAgr) ;
+       _ => vpFromSlash sl
+-    } ;
++    }
++    in appendVP core (\\subj => sl.gapPost!subj!objAgr) ;
+ 
+   pronominalObjectVP : R.VPSlash -> R.Agr -> R.VP = \sl,objAgr ->
+-    case sl.c2.c of {
++    let core : R.VP = case sl.c2.c of {
+       R.Acc => appendClitic (vpFromSlash sl) (R.accCliticAgr objAgr) (R.subjAccCliticAgr objAgr) ;
+       R.Dat => appendClitic (vpFromSlash sl) (R.datCliticAgr objAgr) (R.subjDatCliticAgr objAgr) ;
+       _ => vpFromSlash sl
+-    } ;
++    }
++    in appendVP core (\\subj => sl.gapPost!subj!objAgr) ;
+ 
+   vps_MkVPS : Temp -> Pol -> VP -> VPSRec = \t,pol,vp -> {
+     s=\\a =>realizeVP vp t.t t.a pol.p a
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	2026-09-25 14:06:52.903472391 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	2026-09-25 14:37:16.198014775 +0000
+@@ -1,18 +1,20 @@
+ concrete IdiomSqi of Idiom = CatSqi ** open Prelude, ParamX, ResSqi, ClauseSqiRes, (I=IrregSqi) in {
+   oper
+     defaultAgr : Agr = {gn=GSg Masc;p=P3} ;
+-    p1plAgr : Agr = {gn=GPl;p=P1} ;
++    p1plAgr : Agr = {gn=GPl Masc;p=P1} ;
+ 
+     subjVP : VP -> Agr -> Str = \vp,a -> realizeSubjVP vp Pos a ;
+     cleftCop : VP = emptyVP (lin Verb I.jam_V) ;
+ 
+-    existWord : ParamX.Tense -> Anteriority -> Agr -> Str = \t,ant,a ->
++    -- Existential kam is impersonal: the postverbal associate does not control
++    -- verbal number/person. Keep 3sg also in anterior forms.
++    existWord : ParamX.Tense -> Anteriority -> Agr -> Str = \t,ant,_ ->
+       case ant of {
+         Simul => case t of {
+-          ParamX.Pres => "ka" ; ParamX.Past => "pati" ;
++          ParamX.Pres => "ka" ; ParamX.Past => "kishte" ;
+           ParamX.Fut => "do të ketë" ; ParamX.Cond => "do të kishte"
+         } ;
+-        Anter => haveAux!t!agrNumber a!a.p ++ "pasur"
++        Anter => haveAux!t!Sg!P3 ++ "pasur"
+       } ;
+ 
+   lin
+@@ -39,7 +41,7 @@
+       s=\\t,a,p=>(ExistIP ip).s!t!a!p ++ adv.s
+     } ;
+ 
+-    ProgrVP vp = vp ** {cl="po" ++ vp.cl ; subjcl="të" ++ "po" ++ vp.cl} ;
++    ProgrVP vp = progressiveVPWithCopula (lin Verb I.jam_V) vp ;
+ 
+     ImpPl1 vp = {s="le" ++ subjVP vp p1plAgr} ;
+     ImpP3 np vp = {s="le" ++ np.s!Nom ++ subjVP vp np.a} ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	2026-09-25 14:06:52.903904628 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	2026-09-25 14:37:17.858197658 +0000
+@@ -40,7 +40,7 @@
+     alas_Interj              = mkInterj "medet" ;
+     already_Adv              = mkAdv "tashmë" ;
+     animal_N                 = mkN "kafshë" ;
+-    answer_V2S               = mkV2S (mkV "përgjigjem") ;
++    answer_V2S               = mkV2S (mkV "përgjigjem") (mkPrep [] dative) noPrep "se" ;
+     apartment_N              = mkN "apartament" ;
+     apple_N                  = mkNFull appleNForms feminine ;
+     art_N                    = mkN "art" ;
+@@ -54,7 +54,7 @@
+     beautiful_A              = mkA "bukur" ;
+     become_VA                = mkVA (lin V I.behem_V) ;
+     beer_N                   = mkN "birrë" ;
+-    beg_V2V                  = mkV2V (mkV "lutem") ;
++    beg_V2V                  = mkV2V (mkV "lutem") (mkPrep [] dative) noPrep ;
+     belly_N                  = mkN "bark" ;
+     big_A                    = mkA "madh" ;
+     bike_N                   = mkN "biçikletë" ;
+@@ -131,7 +131,7 @@
+     far_Adv                  = mkAdv "larg" ;
+     father_N2                = mkN2 (mkN "baba") (mkPrep "i") ;
+     fat_N                    = mkN "dhjamë" ;
+-    fear_VS                  = mkVS (mkV "druaj") ;
++    fear_VS                  = mkVS (mkV "druaj") "se" ;
+     fear_V2                  = mkV2 (mkV "druaj") ;
+     feather_N                = mkN "pendë" ;
+     fight_V2                 = mkV2 (mkV "luftoj") ;
+@@ -177,7 +177,7 @@
+     hill_N                   = mkN "kodër" ;
+     hit_V2                   = mkV2 (mkV "godit") ;
+     hold_V2                  = mkV2 (mkV "mbaj") ;
+-    hope_VS                  = mkVS (mkV "shpresoj") ;
++    hope_VS                  = mkVS (mkV "shpresoj") "se" ;
+     horn_N                   = mkN "bri" ;
+     horse_N                  = mkN "kalë" ;
+     hot_A                    = mkA "nxehtë" ;
+@@ -195,7 +195,7 @@
+     knee_N                   = mkN "gju" ;
+     know_V2                  = mkV2 (mkV "njoh") ;
+     know_VQ                  = mkVQ (mkV "kuptoj") ;
+-    know_VS                  = mkVS (mkV "kuptoj") ;
++    know_VS                  = mkVS (mkV "kuptoj") "se" ;
+     lake_N                   = mkN "liqen" ;
+     lamp_N                   = mkN "llambë" ;
+     language_N               = mkN "gjuhë" ;
+@@ -280,7 +280,7 @@
+     run_V                    = mkV "vrapoj" ;
+     salt_N                   = mkN "kripë" ;
+     sand_N                   = mkN "rërë" ;
+-    say_VS                   = mkVS (lin V I.them_V) ;
++    say_VS                   = mkVS (lin V I.them_V) "se" ;
+     school_N                 = mkN "shkollë" ;
+     science_N                = mkN "shkencë" ;
+     scratch_V2               = mkV2 (mkV "gërvisht") ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	2026-09-25 14:06:52.907590301 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	2026-09-25 14:27:40.999994971 +0000
+@@ -37,7 +37,7 @@
+             <Masc,Pl> => possPl "e mi" "të mi" c ;
+             <Fem,Pl>  => possPl "e mia" "të mia" c
+           } ;
+-          GPl => case <g,n> of {
++          GPl _ => case <g,n> of {
+             <Masc,Sg> => possSg "ynë" "tonë" "tonë" c ;
+             <Fem,Sg>  => possSg "jonë" "tonë" "sonë" c ;
+             <Masc,Pl> => possPl "tanë" "tanë" c ;
+@@ -51,7 +51,7 @@
+             <Masc,Pl> => possPl "e tu" "të tu" c ;
+             <Fem,Pl>  => possPl "e tua" "të tua" c
+           } ;
+-          GPl => case <g,n> of {
++          GPl _ => case <g,n> of {
+             <Masc,Sg> => possSg "juaj" "tuaj" "tuaj" c ;
+             <Fem,Sg>  => possSg "juaj" "tuaj" "suaj" c ;
+             <Masc,Pl> => possPl "tuaj" "tuaj" c ;
+@@ -71,7 +71,7 @@
+             <Masc,Pl> => possPl "e saj" "të saj" c ;
+             <Fem,Pl>  => possPl "e saj" "të saj" c
+           } ;
+-          GPl => case <g,n> of {
++          GPl _ => case <g,n> of {
+             <Masc,Sg> => possSg "i tyre" "e tyre" "të tyre" c ;
+             <Fem,Sg>  => possSg "e tyre" "e tyre" "së tyre" c ;
+             <Masc,Pl> => possPl "e tyre" "të tyre" c ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	2026-09-25 14:06:52.907972711 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	2026-09-25 14:26:11.708144641 +0000
+@@ -1410,7 +1410,7 @@
+ } ;
+ 
+ mkVVCore : V -> VV = \v -> lin VV v ;
+-mkVSCore : V -> VS = \v -> lin VS v ;
++mkVSCore : V -> Str -> VS = \v,c -> lin VS v ** {scomp=c} ;
+ mkVQCore : V -> VQ = \v -> lin VQ v ;
+ mkVACore : V -> VA = \v -> lin VA v ;
+ 
+@@ -1419,8 +1419,10 @@
+   mkVV : Str -> VV = \v -> mkVVCore (mkV v)
+ } ;
+ mkVS = overload {
+-  mkVS : V -> VS = mkVSCore ;
+-  mkVS : Str -> VS = \v -> mkVSCore (mkV v)
++  mkVS : V -> VS = \v -> mkVSCore v "që" ;
++  mkVS : V -> Str -> VS = mkVSCore ;
++  mkVS : Str -> VS = \v -> mkVSCore (mkV v) "që" ;
++  mkVS : Str -> Str -> VS = \v,c -> mkVSCore (mkV v) c
+ } ;
+ mkVQ = overload {
+   mkVQ : V -> VQ = mkVQCore ;
+@@ -1433,8 +1435,8 @@
+ 
+ mkV2VCore : V -> Prep -> Prep -> V2V = \v,p2,p3 ->
+   lin V2V v ** {c2=p2; c3=p3} ;
+-mkV2SCore : V -> Prep -> Prep -> V2S = \v,p2,p3 ->
+-  lin V2S v ** {c2=p2; c3=p3} ;
++mkV2SCore : V -> Prep -> Prep -> Str -> V2S = \v,p2,p3,c ->
++  lin V2S v ** {c2=p2; c3=p3; scomp=c} ;
+ mkV2QCore : V -> Prep -> Prep -> V2Q = \v,p2,p3 ->
+   lin V2Q v ** {c2=p2; c3=p3} ;
+ mkV2ACore : V -> Prep -> Prep -> V2A = \v,p2,p3 ->
+@@ -1448,10 +1450,12 @@
+ } ;
+ 
+ mkV2S = overload {
+-  mkV2S : V -> V2S = \v -> mkV2SCore v noPrep noPrep ;
+-  mkV2S : V -> Prep -> Prep -> V2S = mkV2SCore ;
+-  mkV2S : Str -> V2S = \v -> mkV2SCore (mkV v) noPrep noPrep ;
+-  mkV2S : Str -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore (mkV v) p2 p3 ;
++  mkV2S : V -> V2S = \v -> mkV2SCore v noPrep noPrep "që" ;
++  mkV2S : V -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore v p2 p3 "që" ;
++  mkV2S : V -> Prep -> Prep -> Str -> V2S = mkV2SCore ;
++  mkV2S : Str -> V2S = \v -> mkV2SCore (mkV v) noPrep noPrep "që" ;
++  mkV2S : Str -> Prep -> Prep -> V2S = \v,p2,p3 -> mkV2SCore (mkV v) p2 p3 "që" ;
++  mkV2S : Str -> Prep -> Prep -> Str -> V2S = \v,p2,p3,c -> mkV2SCore (mkV v) p2 p3 c ;
+ } ;
+ 
+ mkV2Q = overload {
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf	2026-09-25 14:06:52.908199184 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf	2026-09-25 14:27:40.999466852 +0000
+@@ -12,7 +12,7 @@
+   } ;
+ 
+   QuestSlash ip cl = {
+-    s = \\t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol
++    s = \\t,ant,pol => cl.c2.s ++ ip.s ! cl.c2.c ++ cl.s ! t ! ant ! pol ++ cl.gapPost ! ip.a
+   } ;
+ 
+   QuestIAdv iadv cl = {
+@@ -47,7 +47,7 @@
+   CompIP ip = {s = ip.s ! Nom} ;
+ 
+   ComplSlashIP sl ip = appendVP (vpFromSlash sl)
+-    (\\_ => sl.c2.s ++ ip.s ! sl.c2.c) ;
++    (\\subj => sl.c2.s ++ ip.s ! sl.c2.c ++ sl.gapPost ! subj ! ip.a) ;
+ 
+   AdvQVP vp iadv = appendVP vp (\\_ => iadv.s) ;
+   AddAdvQVP qvp iadv = appendVP qvp (\\_ => iadv.s) ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf	2026-09-25 14:06:52.908267637 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf	2026-09-25 14:27:40.999655681 +0000
+@@ -10,7 +10,7 @@
+ 
+   RelSlash rp cl = {
+     s = \\agr,t,ant,pol =>
+-      cl.c2.s ++ rp.s ! cl.c2.c ! agr.gn ++ cl.s ! t ! ant ! pol
++      cl.c2.s ++ rp.s ! cl.c2.c ! agr.gn ++ cl.s ! t ! ant ! pol ++ cl.gapPost ! agr
+   } ;
+ 
+   IdRP = {s = \\_,_ => "që"} ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	2026-09-25 14:06:52.908396014 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	2026-09-25 14:26:11.705895858 +0000
+@@ -19,7 +19,7 @@
+   Gender = Masc | Fem ;
+ 
+ param
+-  GenNum = GSg Gender | GPl ;
++  GenNum = GSg Gender | GPl Gender ;
+ 
+ oper
+   Agr : Type = {gn : GenNum ; p : Person} ;
+@@ -27,7 +27,7 @@
+   genNum : Gender -> Number -> GenNum = \g,n ->
+     case n of {
+       Sg => GSg g ;
+-      Pl => GPl
++      Pl => GPl g
+     } ;
+ 
+   agrgP3 : Gender -> Number -> Agr =
+@@ -108,7 +108,13 @@
+     post : Agr => Str
+   } ;
+ 
+-  VPSlash : Type = VP ** {c2 : Compl} ;
++  -- Material before and after an unresolved complement must remain distinct.
++  -- gapPost is indexed by matrix-subject agreement and missing-object agreement;
++  -- this is required for object-controlled V2V/V2A and for V3 argument order.
++  VPSlash : Type = VP ** {
++    c2 : Compl ;
++    gapPost : Agr => Agr => Str
++  } ;
+ 
+ oper
+   Verb : Type = {
+@@ -322,12 +328,12 @@
+ oper
+   agrNumber : Agr -> Number = \a -> case a.gn of {
+     GSg _ => Sg ;
+-    GPl   => Pl
++    GPl _ => Pl
+   } ;
+ 
+   agrGender : Agr -> Gender = \a -> case a.gn of {
+     GSg g => g ;
+-    GPl   => Masc
++    GPl g => g
+   } ;
+ 
+   -- Public RGL tense and Albanian morphological tense are deliberately
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf	2026-09-25 14:06:52.908476437 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf	2026-09-25 14:26:11.708468841 +0000
+@@ -12,20 +12,23 @@
+ 
+   SlashVP np sl = {
+     s = \\t,ant,pol => mkClause (np.s ! Nom) np.a (vpFromSlash sl) t ant pol ;
+-    c2 = sl.c2
++    c2 = sl.c2 ;
++    gapPost = \\obj => sl.gapPost ! np.a ! obj
+   } ;
+ 
++  -- Postposed adverbial remains after the extracted gap.
+   AdvSlash cl adv = cl ** {
+-    s = \\t,ant,pol => cl.s ! t ! ant ! pol ++ adv.s
++    gapPost = \\obj => cl.gapPost ! obj ++ adv.s
+   } ;
+ 
+-  SlashPrep cl prep = {s = cl.s ; c2 = prep} ;
++  SlashPrep cl prep = {s = cl.s ; c2 = prep ; gapPost = \\_ => []} ;
+ 
+   SlashVS np vs sslash = {
+     s = \\t,ant,pol =>
+-      let vp : VP = appendVP (emptyVP vs) (\\_ => "që" ++ sslash.s)
++      let vp : VP = appendVP (emptyVP (lin Verb vs)) (\\_ => vs.scomp ++ sslash.s)
+       in mkClause (np.s ! Nom) np.a vp t ant pol ;
+-    c2 = sslash.c2
++    c2 = sslash.c2 ;
++    gapPost = sslash.gapPost
+   } ;
+ 
+   ImpVP vp = {s = \\pol,n => realizeImpVP vp pol n} ;
+@@ -40,7 +43,8 @@
+   UseRCl temp pol rcl = {s = \\a => rcl.s ! a ! temp.t ! temp.a ! pol.p} ;
+   UseSlash temp pol clsl = {
+     s = clsl.s ! temp.t ! temp.a ! pol.p ;
+-    c2 = clsl.c2
++    c2 = clsl.c2 ;
++    gapPost = clsl.gapPost
+   } ;
+ 
+   AdvS adv s = {s = adv.s ++ s.s} ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	2026-09-25 14:06:52.908724356 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	2026-09-25 14:28:54.730406057 +0000
+@@ -80,14 +80,14 @@
+   something_NP = SR.mkNPConstP3 "diçka" ;
+ 
+   they_Pron =
+-    ResSqi.mkPron "ata" "ata" "atyre" "atyre" "i" "u" GPl P3 ;
++    ResSqi.mkPron "ata" "ata" "atyre" "atyre" "i" "u" (GPl Masc) P3 ;
+ 
+   we_Pron =
+-    ResSqi.mkPron "ne" "ne" "neve" "nesh" "na" "na" GPl P1 ;
++    ResSqi.mkPron "ne" "ne" "neve" "nesh" "na" "na" (GPl Masc) P1 ;
+ 
+   whatPl_IP = lin IP {
+     s=table {Nom=>"çfarë"; Acc=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
+-    a={gn=GPl;p=P3}
++    a={gn=GPl Masc;p=P3}
+   } ;
+   whatSg_IP = lin IP {
+     s=table {Nom=>"çfarë"; Acc=>"çfarë"; Dat=>"çfarë"; Ablat=>"çfarë"};
+@@ -96,7 +96,7 @@
+ 
+   whoPl_IP = lin IP {
+     s=table {Nom=>"kush"; Acc=>"kë"; Dat=>"kujt"; Ablat=>"kujt"};
+-    a={gn=GPl;p=P3}
++    a={gn=GPl Masc;p=P3}
+   } ;
+   whoSg_IP = lin IP {
+     s=table {Nom=>"kush"; Acc=>"kë"; Dat=>"kujt"; Ablat=>"kujt"};
+@@ -107,10 +107,10 @@
+     ResSqi.mkPron "ti" "ty" "ty" "teje" "të" "të" (GSg Masc) P2 ;
+ 
+   youPl_Pron =
+-    ResSqi.mkPron "ju" "ju" "juve" "jush" "ju" "ju" GPl P2 ;
++    ResSqi.mkPron "ju" "ju" "juve" "jush" "ju" "ju" (GPl Masc) P2 ;
+ 
+   youPol_Pron =
+-    ResSqi.mkPron "ju" "ju" "juve" "jush" "ju" "ju" GPl P2 ;
++    ResSqi.mkPron "ju" "ju" "juve" "jush" "ju" "ju" (GPl Masc) P2 ;
+ 
+   nobody_NP = SR.mkNPConstP3 "askush" ;
+   nothing_NP = SR.mkNPConstP3 "asgjë" ;
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2026-09-25 14:06:52.908981306 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2026-09-25 14:27:41.000090203 +0000
+@@ -7,7 +7,7 @@
+ 
+   oper
+     agr3 : Number -> Gender -> Agr = \n,g ->
+-      { gn = case n of {Sg => GSg g ; Pl => GPl} ; p = P3 } ;
++      { gn = case n of {Sg => GSg g ; Pl => GPl g} ; p = P3 } ;
+ 
+     mkNP_NumCN : Str -> Number -> Gender -> (Case => Str) -> CatSqi.NP =
+       \numStr,n,g,cnCase ->
+diff -ruN /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf
+--- /mnt/data/_c8final/alb/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf	2026-09-25 14:06:52.909334306 +0000
++++ /mnt/data/_c8final/c8_final/AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf	2026-09-25 14:26:11.706913320 +0000
+@@ -1,9 +1,10 @@
+--- Albanian verb syntax with deferred realization.
++-- Albanian verb syntax with deferred realization and typed complement transport.
+ concrete VerbSqi of Verb = CatSqi **
+   open Prelude, ParamX, ResSqi, (I = IrregSqi) in {
+ 
+   oper
+     emptyAgrStr : Agr => Str = \\_ => [] ;
++    emptyGapStr : Agr => Agr => Str = \\_,_ => [] ;
+ 
+     baseVP : Verb -> VP = \v -> lin VP {
+       indicative = v.Indicative ;
+@@ -31,7 +32,8 @@
+       cl = [] ;
+       subjcl = "të" ;
+       post = emptyAgrStr ;
+-      c2 = c
++      c2 = c ;
++      gapPost = emptyGapStr
+     } ;
+ 
+     slashToVP : VPSlash -> VP = \sl -> lin VP {
+@@ -52,10 +54,15 @@
+       post = \\a => vp.post ! a ++ x ! a
+     } ;
+ 
++    -- addPostSlash means "material before the still-unresolved gap".
+     addPostSlash : VPSlash -> (Agr => Str) -> VPSlash = \vp,x -> vp ** {
+       post = \\a => vp.post ! a ++ x ! a
+     } ;
+ 
++    addGapPostSlash : VPSlash -> (Agr => Agr => Str) -> VPSlash = \vp,x -> vp ** {
++      gapPost = \\subj,obj => vp.gapPost ! subj ! obj ++ x ! subj ! obj
++    } ;
++
+     addClitic : VP -> Str -> Str -> VP = \vp,x,sx -> vp ** {
+       cl = vp.cl ++ x ;
+       subjcl = sx
+@@ -69,7 +76,9 @@
+     vpiStr : VP -> Agr -> Str = \vp,a ->
+       vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
+ 
+-    slashVpiStr : VPSlash -> Agr -> Str = \vp,a ->
++    -- Prefix of an embedded unresolved slash.  Material after its gap is kept
++    -- separately and is only realized once the missing argument is known.
++    slashVpiPrefix : VPSlash -> Agr -> Str = \vp,a ->
+       vp.subjcl ++ vp.subjunctive ! agrNumber a ! a.p ++ vp.post ! a ;
+ 
+     NPRec : Type = {
+@@ -79,16 +88,40 @@
+       isPron : Bool
+     } ;
+ 
++    -- Saturation is the single boundary where an unresolved complement becomes
++    -- an NP.  Object agreement is then available for V2A/V2V tails.
+     saturateSlash : VPSlash -> NPRec -> VP = \sl,np ->
+-      let c : Case = sl.c2.c in
+-      case <np.isPron,c> of {
+-        <True,Acc> => addClitic (slashToVP sl) np.acc_clit (subjAccCliticAgr np.a) ;
+-        <True,Dat> => addClitic (slashToVP sl) np.dat_clit (subjDatCliticAgr np.a) ;
+-        <False,Dat> =>
+-          addPost
++      let c : Case = sl.c2.c ;
++          tail : Agr => Str = \\subj => sl.gapPost ! subj ! np.a
++      in case <np.isPron,c> of {
++        <True,Acc> => addPost
++          (addClitic (slashToVP sl) np.acc_clit (subjAccCliticAgr np.a)) tail ;
++        <True,Dat> => addPost
++          (addClitic (slashToVP sl) np.dat_clit (subjDatCliticAgr np.a)) tail ;
++        <False,Dat> => addPost
++          (addPost
+             (addClitic (slashToVP sl) (datCliticAgr np.a) (subjDatCliticAgr np.a))
+-            (\\_ => sl.c2.s ++ np.s ! c) ;
+-        _ => addPost (slashToVP sl) (\\_ => sl.c2.s ++ np.s ! c)
++            (\\_ => sl.c2.s ++ np.s ! c)) tail ;
++        _ => addPost
++          (addPost (slashToVP sl) (\\_ => sl.c2.s ++ np.s ! c)) tail
++      } ;
++
++    -- A supplied V3 argument may require a weak dative clitic even while the
++    -- other argument remains a slash.  Keep the clitic before the finite verb
++    -- and its overt realization in the appropriate side of the gap.
++    fixedObjectClitic : VPSlash -> Compl -> NPRec -> VPSlash = \sl,c,np ->
++      case <np.isPron,c.c> of {
++        <True,Acc> => addCliticSlash sl np.acc_clit (subjAccCliticAgr np.a) ;
++        <True,Dat> => addCliticSlash sl np.dat_clit (subjDatCliticAgr np.a) ;
++        <False,Dat> => addCliticSlash sl (datCliticAgr np.a) (subjDatCliticAgr np.a) ;
++        _ => sl
++      } ;
++
++    fixedObjectSurface : Compl -> NPRec -> Str = \c,np ->
++      case <np.isPron,c.c> of {
++        <True,Acc> => [] ;
++        <True,Dat> => [] ;
++        _ => c.s ++ np.s ! c.c
+       } ;
+ 
+   lin
+@@ -107,41 +140,58 @@
+     ExtAdvVP vp adv = addPost vp (\\_ => SOFT_BIND ++ "," ++ adv.s) ;
+     AdVVP adv vp = vp ** {post = \\a => adv.s ++ vp.post ! a} ;
+ 
+-    AdvVPSlash sl adv = addPostSlash sl (\\_ => adv.s) ;
++    -- Ordinary adverbials follow the missing object; AdV keeps the established
++    -- preverbal/early VP behavior and therefore stays before the gap.
++    AdvVPSlash sl adv = addGapPostSlash sl (\\_,_ => adv.s) ;
+     AdVVPSlash adv sl = sl ** {post = \\a => adv.s ++ sl.post ! a} ;
+ 
+     ComplSlash sl np = saturateSlash sl np ;
+ 
+-    ReflVP sl = addClitic (slashToVP sl) "u" "t'u" ;
++    -- The reflexive missing object is controlled by the subject.
++    ReflVP sl = addPost
++      (addClitic (slashToVP sl) "u" "t'u")
++      (\\a => sl.gapPost ! a ! a) ;
+ 
+     PassV2 v2 = addPost (baseVP (lin Verb I.jam_V)) (\\_ => v2.participle) ;
+ 
++    -- Standard Albanian finite verbal complementation is finite/subjunctive;
++    -- VV control uses the matrix subject, while VS uses its lexical complementizer.
+     ComplVV vv vp = addPost (baseVP vv) (\\a => vpiStr vp a) ;
+-    ComplVS vs s = addPost (baseVP vs) (\\_ => "që" ++ s.s) ;
++    ComplVS vs s = addPost (baseVP (lin Verb vs)) (\\_ => vs.scomp ++ s.s) ;
+     ComplVQ vq qs = addPost (baseVP vq) (\\_ => qs.s) ;
+     ComplVA va ap = addPost (baseVP va)
+       (\\a => ap.s ! Indef ! Nom ! agrGender a ! agrNumber a) ;
+ 
+     SlashV2a v2 = baseSlash (lin Verb v2) v2.c2 ;
+ 
+-    SlashV2V v2v vp = addPostSlash (baseSlash (lin Verb v2v) v2v.c2)
+-      (\\a => v2v.c3.s ++ vpiStr vp a) ;
+-
+-    SlashV2S v2s s = addPostSlash (baseSlash (lin Verb v2s) v2s.c2)
+-      (\\_ => v2s.c3.s ++ "që" ++ s.s) ;
+-
+-    SlashV2Q v2q qs = addPostSlash (baseSlash (lin Verb v2q) v2q.c2)
+-      (\\_ => v2q.c3.s ++ qs.s) ;
+-
+-    SlashV2A v2a ap = addPostSlash (baseSlash (lin Verb v2a) v2a.c2)
+-      (\\a => v2a.c3.s ++ ap.s ! Indef ! Nom ! agrGender a ! agrNumber a) ;
+-
+-    Slash2V3 v3 np = addPostSlash (baseSlash (lin Verb v3) v3.c3)
+-      (\\_ => v3.c2.s ++ np.s ! v3.c2.c) ;
+-
+-    Slash3V3 v3 np = addPostSlash (baseSlash (lin Verb v3) v3.c2)
+-      (\\_ => v3.c3.s ++ np.s ! v3.c3.c) ;
++    -- Object-control: the unresolved object, not the matrix subject, controls
++    -- the embedded subjunctive.
++    SlashV2V v2v vp = addGapPostSlash (baseSlash (lin Verb v2v) v2v.c2)
++      (\\_,obj => v2v.c3.s ++ vpiStr vp obj) ;
++
++    SlashV2S v2s s = addGapPostSlash (baseSlash (lin Verb v2s) v2s.c2)
++      (\\_,_ => v2s.c3.s ++ v2s.scomp ++ s.s) ;
++
++    SlashV2Q v2q qs = addGapPostSlash (baseSlash (lin Verb v2q) v2q.c2)
++      (\\_,_ => v2q.c3.s ++ qs.s) ;
++
++    -- Object-oriented secondary predication.  Albanian secondary adjectives
++    -- agree with the object; object case is accusative at this realization
++    -- boundary (e lyeva të kuq / të kuqe), not matrix-subject nominative.
++    SlashV2A v2a ap = addGapPostSlash (baseSlash (lin Verb v2a) v2a.c2)
++      (\\_,obj => v2a.c3.s ++
++        ap.s ! Indef ! Acc ! agrGender obj ! agrNumber obj) ;
++
++    -- Slash2V3 supplies c2 and leaves c3 unresolved: fixed c2 precedes the gap.
++    Slash2V3 v3 np =
++      slashFromVP (saturateSlash (baseSlash (lin Verb v3) v3.c2) np) v3.c3 ;
++
++    -- Slash3V3 leaves c2 unresolved and supplies c3: fixed c3 is after the gap.
++    Slash3V3 v3 np =
++      let sl0 : VPSlash = fixedObjectClitic (baseSlash (lin Verb v3) v3.c2) v3.c3 np
++      in addGapPostSlash sl0 (\\_,_ => fixedObjectSurface v3.c3 np) ;
+ 
++    -- Subject-control VV over an embedded unresolved object.
+     SlashVV vv sl = lin VPSlash {
+       indicative = vv.Indicative ;
+       subjunctive = vv.Subjunctive ;
+@@ -153,25 +203,30 @@
+       imperf_admirative = vv.imperf_admirative ;
+       cl = [] ;
+       subjcl = "të" ;
+-      post = \\a => slashVpiStr sl a ;
+-      c2 = sl.c2
+-    } ;
+-
+-    SlashV2VNP v2v np sl = lin VPSlash {
+-      indicative = v2v.Indicative ;
+-      subjunctive = v2v.Subjunctive ;
+-      imperative = v2v.Imperative ;
+-      participle = v2v.participle ;
+-      pres_optative = v2v.pres_optative ;
+-      perf_optative = v2v.perf_optative ;
+-      pres_admirative = v2v.pres_admirative ;
+-      imperf_admirative = v2v.imperf_admirative ;
+-      cl = [] ;
+-      subjcl = "të" ;
+-      post = \\a => v2v.c2.s ++ np.s ! v2v.c2.c ++
+-                     v2v.c3.s ++ slashVpiStr sl a ;
+-      c2 = sl.c2
+-    } ;
++      post = \\subj => slashVpiPrefix sl subj ;
++      c2 = sl.c2 ;
++      gapPost = \\subj,obj => sl.gapPost ! subj ! obj
++    } ;
++
++    -- The overt V2V object controls the embedded subject.  Its case/clitic
++    -- behavior is saturated before the inner slash is transported outward.
++    SlashV2VNP v2v np sl =
++      let outer : VP = saturateSlash (baseSlash (lin Verb v2v) v2v.c2) np
++      in lin VPSlash {
++        indicative = outer.indicative ;
++        subjunctive = outer.subjunctive ;
++        imperative = outer.imperative ;
++        participle = outer.participle ;
++        pres_optative = outer.pres_optative ;
++        perf_optative = outer.perf_optative ;
++        pres_admirative = outer.pres_admirative ;
++        imperf_admirative = outer.imperf_admirative ;
++        cl = outer.cl ;
++        subjcl = outer.subjcl ;
++        post = \\subj => outer.post ! subj ++ v2v.c3.s ++ slashVpiPrefix sl np.a ;
++        c2 = sl.c2 ;
++        gapPost = \\_,obj => sl.gapPost ! np.a ! obj
++      } ;
+ 
+     VPSlashPrep vp prep = lin VPSlash {
+       indicative = vp.indicative ;
+@@ -185,6 +240,7 @@
+       cl = vp.cl ;
+       subjcl = vp.subjcl ;
+       post = vp.post ;
+-      c2 = prep
++      c2 = prep ;
++      gapPost = emptyGapStr
+     } ;
+ }
+diff -ruN /mnt/data/_c8final/alb/docs/conversation8/C8_FINAL_IMPLEMENTATION_20260925.md /mnt/data/_c8final/c8_final/docs/conversation8/C8_FINAL_IMPLEMENTATION_20260925.md
+--- /mnt/data/_c8final/alb/docs/conversation8/C8_FINAL_IMPLEMENTATION_20260925.md	1970-01-01 00:00:00.000000000 +0000
++++ /mnt/data/_c8final/c8_final/docs/conversation8/C8_FINAL_IMPLEMENTATION_20260925.md	2026-09-25 14:28:20.158062077 +0000
+@@ -0,0 +1,22 @@
++# Conversation 8 — final implementation candidate — 2026-09-25
++
++## Scope
++Valence/complementation, control, lexical finite complementizers, copula/secondary predication, coordination agreement, existential/progressive idioms, and propagation through slash/Extend consumers.
++
++## Implemented architecture
++- `VPSlash` separates pre-gap material from `gapPost` material.
++- `gapPost` receives matrix-subject and missing-object agreement.
++- `V2V` object control uses the missing object as embedded subject.
++- `V2A` predicates agree with the missing object and use accusative adjective realization.
++- `V3` slash variants preserve c2/c3 order.
++- `VS` / `V2S` preserve lexical finite complementizers; default `që`, `hope_VS` = `se`.
++- coordinated NP agreement resolves P1 > P2 > P3 and preserves plural gender.
++- existential `kam` remains impersonal 3sg including anterior forms.
++- saturated `ProgrVP` uses tense-general `jam + duke + participle`.
++- unresolved `ProgrVPSlash` retains `po + finite V` pending a cross-workstream clitic-site representation.
++
++## Certification boundary
++No GF executable is available in this environment. Static/structural validation is executed here; fresh GF 3.12 / Wordbench acceptance and linguistic gold promotion remain external gates.
++
++## Explicit review target
++Object secondary-predicate accusative (`e lyeva të kuq/të kuqe`) is the implemented target and must be promoted to linguistic gold only after Albanian review. Lexical `që`/`se` selection must likewise be expanded entry-by-entry from evidence.

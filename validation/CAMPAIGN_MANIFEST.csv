@@ -105,7 +105,7 @@ C0103,alb-verb-01,verb-morphology,come_V pres sg p3,AlbCampaign011,(L.come_V).In
 C0104,alb-verb-01,verb-morphology,come_V pres pl p1,AlbCampaign011,(L.come_V).Indicative ! Pres ! Pl ! P1
 C0105,alb-verb-01,verb-morphology,come_V pres pl p2,AlbCampaign011,(L.come_V).Indicative ! Pres ! Pl ! P2
 C0106,alb-verb-01,verb-morphology,come_V pres pl p3,AlbCampaign011,(L.come_V).Indicative ! Pres ! Pl ! P3
-C0107,alb-verb-01,verb-morphology,come_V past sg p3,AlbCampaign011,(L.come_V).Indicative ! Past ! Sg ! P3
+C0107,alb-verb-01,verb-morphology,come_V perfect sg p3,AlbCampaign011,(L.come_V).Indicative ! Perfect ! Sg ! P3
 C0108,alb-verb-01,verb-morphology,come_V aorist sg p3,AlbCampaign011,(L.come_V).Indicative ! Aorist ! Sg ! P3
 C0109,alb-verb-01,verb-morphology,come_V imperfect sg p3,AlbCampaign011,(L.come_V).Indicative ! Imperfect ! Sg ! P3
 C0110,alb-verb-01,verb-morphology,come_V subj sg p3,AlbCampaign011,(L.come_V).Subjunctive ! Sg ! P3
@@ -115,7 +115,7 @@ C0113,alb-verb-02,verb-morphology,go_V pres sg p3,AlbCampaign012,(L.go_V).Indica
 C0114,alb-verb-02,verb-morphology,go_V pres pl p1,AlbCampaign012,(L.go_V).Indicative ! Pres ! Pl ! P1
 C0115,alb-verb-02,verb-morphology,go_V pres pl p2,AlbCampaign012,(L.go_V).Indicative ! Pres ! Pl ! P2
 C0116,alb-verb-02,verb-morphology,go_V pres pl p3,AlbCampaign012,(L.go_V).Indicative ! Pres ! Pl ! P3
-C0117,alb-verb-02,verb-morphology,go_V past sg p3,AlbCampaign012,(L.go_V).Indicative ! Past ! Sg ! P3
+C0117,alb-verb-02,verb-morphology,go_V perfect sg p3,AlbCampaign012,(L.go_V).Indicative ! Perfect ! Sg ! P3
 C0118,alb-verb-02,verb-morphology,go_V aorist sg p3,AlbCampaign012,(L.go_V).Indicative ! Aorist ! Sg ! P3
 C0119,alb-verb-02,verb-morphology,go_V imperfect sg p3,AlbCampaign012,(L.go_V).Indicative ! Imperfect ! Sg ! P3
 C0120,alb-verb-02,verb-morphology,go_V subj sg p3,AlbCampaign012,(L.go_V).Subjunctive ! Sg ! P3
@@ -125,7 +125,7 @@ C0123,alb-verb-03,verb-morphology,live_V pres sg p3,AlbCampaign013,(L.live_V).In
 C0124,alb-verb-03,verb-morphology,live_V pres pl p1,AlbCampaign013,(L.live_V).Indicative ! Pres ! Pl ! P1
 C0125,alb-verb-03,verb-morphology,live_V pres pl p2,AlbCampaign013,(L.live_V).Indicative ! Pres ! Pl ! P2
 C0126,alb-verb-03,verb-morphology,live_V pres pl p3,AlbCampaign013,(L.live_V).Indicative ! Pres ! Pl ! P3
-C0127,alb-verb-03,verb-morphology,live_V past sg p3,AlbCampaign013,(L.live_V).Indicative ! Past ! Sg ! P3
+C0127,alb-verb-03,verb-morphology,live_V perfect sg p3,AlbCampaign013,(L.live_V).Indicative ! Perfect ! Sg ! P3
 C0128,alb-verb-03,verb-morphology,live_V aorist sg p3,AlbCampaign013,(L.live_V).Indicative ! Aorist ! Sg ! P3
 C0129,alb-verb-03,verb-morphology,live_V imperfect sg p3,AlbCampaign013,(L.live_V).Indicative ! Imperfect ! Sg ! P3
 C0130,alb-verb-03,verb-morphology,live_V subj sg p3,AlbCampaign013,(L.live_V).Subjunctive ! Sg ! P3
@@ -135,7 +135,7 @@ C0133,alb-verb-04,verb-morphology,eat_V2 pres sg p3,AlbCampaign014,(L.eat_V2).In
 C0134,alb-verb-04,verb-morphology,eat_V2 pres pl p1,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Pl ! P1
 C0135,alb-verb-04,verb-morphology,eat_V2 pres pl p2,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Pl ! P2
 C0136,alb-verb-04,verb-morphology,eat_V2 pres pl p3,AlbCampaign014,(L.eat_V2).Indicative ! Pres ! Pl ! P3
-C0137,alb-verb-04,verb-morphology,eat_V2 past sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Past ! Sg ! P3
+C0137,alb-verb-04,verb-morphology,eat_V2 perfect sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Perfect ! Sg ! P3
 C0138,alb-verb-04,verb-morphology,eat_V2 aorist sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Aorist ! Sg ! P3
 C0139,alb-verb-04,verb-morphology,eat_V2 imperfect sg p3,AlbCampaign014,(L.eat_V2).Indicative ! Imperfect ! Sg ! P3
 C0140,alb-verb-04,verb-morphology,eat_V2 subj sg p3,AlbCampaign014,(L.eat_V2).Subjunctive ! Sg ! P3
@@ -145,7 +145,7 @@ C0143,alb-verb-05,verb-morphology,drink_V2 pres sg p3,AlbCampaign015,(L.drink_V2
 C0144,alb-verb-05,verb-morphology,drink_V2 pres pl p1,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Pl ! P1
 C0145,alb-verb-05,verb-morphology,drink_V2 pres pl p2,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Pl ! P2
 C0146,alb-verb-05,verb-morphology,drink_V2 pres pl p3,AlbCampaign015,(L.drink_V2).Indicative ! Pres ! Pl ! P3
-C0147,alb-verb-05,verb-morphology,drink_V2 past sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Past ! Sg ! P3
+C0147,alb-verb-05,verb-morphology,drink_V2 perfect sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Perfect ! Sg ! P3
 C0148,alb-verb-05,verb-morphology,drink_V2 aorist sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Aorist ! Sg ! P3
 C0149,alb-verb-05,verb-morphology,drink_V2 imperfect sg p3,AlbCampaign015,(L.drink_V2).Indicative ! Imperfect ! Sg ! P3
 C0150,alb-verb-05,verb-morphology,drink_V2 subj sg p3,AlbCampaign015,(L.drink_V2).Subjunctive ! Sg ! P3
@@ -155,7 +155,7 @@ C0153,alb-verb-06,verb-morphology,buy_V2 pres sg p3,AlbCampaign016,(L.buy_V2).In
 C0154,alb-verb-06,verb-morphology,buy_V2 pres pl p1,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Pl ! P1
 C0155,alb-verb-06,verb-morphology,buy_V2 pres pl p2,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Pl ! P2
 C0156,alb-verb-06,verb-morphology,buy_V2 pres pl p3,AlbCampaign016,(L.buy_V2).Indicative ! Pres ! Pl ! P3
-C0157,alb-verb-06,verb-morphology,buy_V2 past sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Past ! Sg ! P3
+C0157,alb-verb-06,verb-morphology,buy_V2 perfect sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Perfect ! Sg ! P3
 C0158,alb-verb-06,verb-morphology,buy_V2 aorist sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Aorist ! Sg ! P3
 C0159,alb-verb-06,verb-morphology,buy_V2 imperfect sg p3,AlbCampaign016,(L.buy_V2).Indicative ! Imperfect ! Sg ! P3
 C0160,alb-verb-06,verb-morphology,buy_V2 subj sg p3,AlbCampaign016,(L.buy_V2).Subjunctive ! Sg ! P3
@@ -165,7 +165,7 @@ C0163,alb-verb-07,verb-morphology,love_V2 pres sg p3,AlbCampaign017,(L.love_V2).
 C0164,alb-verb-07,verb-morphology,love_V2 pres pl p1,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Pl ! P1
 C0165,alb-verb-07,verb-morphology,love_V2 pres pl p2,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Pl ! P2
 C0166,alb-verb-07,verb-morphology,love_V2 pres pl p3,AlbCampaign017,(L.love_V2).Indicative ! Pres ! Pl ! P3
-C0167,alb-verb-07,verb-morphology,love_V2 past sg p3,AlbCampaign017,(L.love_V2).Indicative ! Past ! Sg ! P3
+C0167,alb-verb-07,verb-morphology,love_V2 perfect sg p3,AlbCampaign017,(L.love_V2).Indicative ! Perfect ! Sg ! P3
 C0168,alb-verb-07,verb-morphology,love_V2 aorist sg p3,AlbCampaign017,(L.love_V2).Indicative ! Aorist ! Sg ! P3
 C0169,alb-verb-07,verb-morphology,love_V2 imperfect sg p3,AlbCampaign017,(L.love_V2).Indicative ! Imperfect ! Sg ! P3
 C0170,alb-verb-07,verb-morphology,love_V2 subj sg p3,AlbCampaign017,(L.love_V2).Subjunctive ! Sg ! P3
@@ -175,7 +175,7 @@ C0173,alb-verb-08,verb-morphology,give_V3 pres sg p3,AlbCampaign018,(L.give_V3).
 C0174,alb-verb-08,verb-morphology,give_V3 pres pl p1,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Pl ! P1
 C0175,alb-verb-08,verb-morphology,give_V3 pres pl p2,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Pl ! P2
 C0176,alb-verb-08,verb-morphology,give_V3 pres pl p3,AlbCampaign018,(L.give_V3).Indicative ! Pres ! Pl ! P3
-C0177,alb-verb-08,verb-morphology,give_V3 past sg p3,AlbCampaign018,(L.give_V3).Indicative ! Past ! Sg ! P3
+C0177,alb-verb-08,verb-morphology,give_V3 perfect sg p3,AlbCampaign018,(L.give_V3).Indicative ! Perfect ! Sg ! P3
 C0178,alb-verb-08,verb-morphology,give_V3 aorist sg p3,AlbCampaign018,(L.give_V3).Indicative ! Aorist ! Sg ! P3
 C0179,alb-verb-08,verb-morphology,give_V3 imperfect sg p3,AlbCampaign018,(L.give_V3).Indicative ! Imperfect ! Sg ! P3
 C0180,alb-verb-08,verb-morphology,give_V3 subj sg p3,AlbCampaign018,(L.give_V3).Subjunctive ! Sg ! P3
@@ -185,7 +185,7 @@ C0183,alb-verb-09,verb-morphology,say_VS pres sg p3,AlbCampaign019,(L.say_VS).In
 C0184,alb-verb-09,verb-morphology,say_VS pres pl p1,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Pl ! P1
 C0185,alb-verb-09,verb-morphology,say_VS pres pl p2,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Pl ! P2
 C0186,alb-verb-09,verb-morphology,say_VS pres pl p3,AlbCampaign019,(L.say_VS).Indicative ! Pres ! Pl ! P3
-C0187,alb-verb-09,verb-morphology,say_VS past sg p3,AlbCampaign019,(L.say_VS).Indicative ! Past ! Sg ! P3
+C0187,alb-verb-09,verb-morphology,say_VS perfect sg p3,AlbCampaign019,(L.say_VS).Indicative ! Perfect ! Sg ! P3
 C0188,alb-verb-09,verb-morphology,say_VS aorist sg p3,AlbCampaign019,(L.say_VS).Indicative ! Aorist ! Sg ! P3
 C0189,alb-verb-09,verb-morphology,say_VS imperfect sg p3,AlbCampaign019,(L.say_VS).Indicative ! Imperfect ! Sg ! P3
 C0190,alb-verb-09,verb-morphology,say_VS subj sg p3,AlbCampaign019,(L.say_VS).Subjunctive ! Sg ! P3
@@ -195,7 +195,7 @@ C0193,alb-verb-10,verb-morphology,become_VA pres sg p3,AlbCampaign020,(L.become_
 C0194,alb-verb-10,verb-morphology,become_VA pres pl p1,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Pl ! P1
 C0195,alb-verb-10,verb-morphology,become_VA pres pl p2,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Pl ! P2
 C0196,alb-verb-10,verb-morphology,become_VA pres pl p3,AlbCampaign020,(L.become_VA).Indicative ! Pres ! Pl ! P3
-C0197,alb-verb-10,verb-morphology,become_VA past sg p3,AlbCampaign020,(L.become_VA).Indicative ! Past ! Sg ! P3
+C0197,alb-verb-10,verb-morphology,become_VA perfect sg p3,AlbCampaign020,(L.become_VA).Indicative ! Perfect ! Sg ! P3
 C0198,alb-verb-10,verb-morphology,become_VA aorist sg p3,AlbCampaign020,(L.become_VA).Indicative ! Aorist ! Sg ! P3
 C0199,alb-verb-10,verb-morphology,become_VA imperfect sg p3,AlbCampaign020,(L.become_VA).Indicative ! Imperfect ! Sg ! P3
 C0200,alb-verb-10,verb-morphology,become_VA subj sg p3,AlbCampaign020,(L.become_VA).Subjunctive ! Sg ! P3

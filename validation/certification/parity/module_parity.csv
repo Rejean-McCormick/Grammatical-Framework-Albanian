@@ -1,0 +1,32 @@
+module,scope,file,status,owner_conversation,rationale
+Adjective,core,AlbanianSQI/GF/lib/src/albanian/AdjectiveSqi.gf,implemented,6,Concrete module present; linguistic equivalence remains evidence-bound.
+Adverb,core,AlbanianSQI/GF/lib/src/albanian/AdverbSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Conjunction,core,AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf,implemented,8,Concrete module present; linguistic equivalence remains evidence-bound.
+Construction,core,AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf,implemented,8,Concrete module present; linguistic equivalence remains evidence-bound.
+Extend,core,AlbanianSQI/GF/lib/src/albanian/ExtendSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Extra,core,AlbanianSQI/GF/lib/src/albanian/ExtraSqi.gf,equivalent,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Idiom,core,AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf,implemented,8,Concrete module present; linguistic equivalence remains evidence-bound.
+Names,core,AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf,implemented,6,Concrete module present; linguistic equivalence remains evidence-bound.
+Noun,core,AlbanianSQI/GF/lib/src/albanian/NounSqi.gf,implemented,6,Concrete module present; linguistic equivalence remains evidence-bound.
+Numeral,core,AlbanianSQI/GF/lib/src/albanian/NumeralSqi.gf,implemented,6,Concrete module present; linguistic equivalence remains evidence-bound.
+Phrase,core,AlbanianSQI/GF/lib/src/albanian/PhraseSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Question,core,AlbanianSQI/GF/lib/src/albanian/QuestionSqi.gf,implemented,7,Concrete module present; linguistic equivalence remains evidence-bound.
+Relative,core,AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf,implemented,7,Concrete module present; linguistic equivalence remains evidence-bound.
+Sentence,core,AlbanianSQI/GF/lib/src/albanian/SentenceSqi.gf,implemented,7,Concrete module present; linguistic equivalence remains evidence-bound.
+Structural,core,AlbanianSQI/GF/lib/src/albanian/StructuralSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Symbol,core,AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Tense,core,AlbanianSQI/GF/lib/src/albanian/TenseSqi.gf,implemented,4,Concrete module present; linguistic equivalence remains evidence-bound.
+Text,core,AlbanianSQI/GF/lib/src/albanian/TextSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Verb,core,AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf,implemented,8,Concrete module present; linguistic equivalence remains evidence-bound.
+Lexicon,core,AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf,implemented,3,Concrete module present; linguistic equivalence remains evidence-bound.
+Documentation,core,AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Markup,core,AlbanianSQI/GF/lib/src/albanian/MarkupSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Grammar,core,AlbanianSQI/GF/lib/src/albanian/GrammarSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Lang,core,AlbanianSQI/GF/lib/src/albanian/LangSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+All,core,AlbanianSQI/GF/lib/src/albanian/AllSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Syntax,core,AlbanianSQI/GF/lib/src/SyntaxSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Constructors,core,AlbanianSQI/GF/lib/src/ConstructorsSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Combinators,core,AlbanianSQI/GF/lib/src/CombinatorsSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Try,core,AlbanianSQI/GF/lib/src/TrySqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Symbolic,core,AlbanianSQI/GF/lib/src/SymbolicSqi.gf,implemented,9,Concrete module present; linguistic equivalence remains evidence-bound.
+Browse,tooling_optional,,linguistically_not_applicable,9,Canonical policy: out of core release scope unless upstream packaging requires it.

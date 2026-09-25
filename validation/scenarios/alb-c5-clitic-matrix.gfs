@@ -1,0 +1,76 @@
+-- GF_WORDBENCH_INPUT_SHA256 786c7c0bbc948bf58a8bf6528d9082efea84fe25c6fe184869ab666200889d81 validation/inputs/AlbC5CliticMatrix.gf
+-- GF_WORDBENCH_INPUT_SHA256 e1a779e06f07973dbd89afb0d82e45f4d59dde7aef2a572309bb13fa9172a26c validation/inputs/AlbC5CliticMatrixSqi.gf
+i AlbC5CliticMatrixSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE C5M01 Dat më + e"
+l C5M01
+ps "CASE C5M02 Dat më + i"
+l C5M02
+ps "CASE C5M03 Dat më + u"
+l C5M03
+ps "CASE C5M04 Dat të + e"
+l C5M04
+ps "CASE C5M05 Dat të + i"
+l C5M05
+ps "CASE C5M06 Dat të + u"
+l C5M06
+ps "CASE C5M07 Dat i + e"
+l C5M07
+ps "CASE C5M08 Dat i + i"
+l C5M08
+ps "CASE C5M09 Dat i + u"
+l C5M09
+ps "CASE C5M10 Dat na + e"
+l C5M10
+ps "CASE C5M11 Dat na + i"
+l C5M11
+ps "CASE C5M12 Dat na + u"
+l C5M12
+ps "CASE C5M13 Dat ju + e"
+l C5M13
+ps "CASE C5M14 Dat ju + i"
+l C5M14
+ps "CASE C5M15 Dat ju + u"
+l C5M15
+ps "CASE C5M16 Dat u + e"
+l C5M16
+ps "CASE C5M17 Dat u + i"
+l C5M17
+ps "CASE C5M18 Dat u + u"
+l C5M18
+ps "CASE C5T01 të+e"
+l C5T01
+ps "CASE C5T02 të+i"
+l C5T02
+ps "CASE C5T03 të+jua"
+l C5T03
+ps "CASE C5T04 të+m'i"
+l C5T04
+ps "CASE C5T05 të+na"
+l C5T05
+ps "CASE C5W01 weakAcc (Weak Sg P1)"
+l C5W01
+ps "CASE C5W02 weakAcc (Weak Sg P2)"
+l C5W02
+ps "CASE C5W03 weakAcc (Weak Sg P3)"
+l C5W03
+ps "CASE C5W04 weakAcc (Weak Pl P1)"
+l C5W04
+ps "CASE C5W05 weakAcc (Weak Pl P2)"
+l C5W05
+ps "CASE C5W06 weakAcc (Weak Pl P3)"
+l C5W06
+ps "CASE C5W07 weakDat (Weak Sg P1)"
+l C5W07
+ps "CASE C5W08 weakDat (Weak Sg P2)"
+l C5W08
+ps "CASE C5W09 weakDat (Weak Sg P3)"
+l C5W09
+ps "CASE C5W10 weakDat (Weak Pl P1)"
+l C5W10
+ps "CASE C5W11 weakDat (Weak Pl P2)"
+l C5W11
+ps "CASE C5W12 weakDat (Weak Pl P3)"
+l C5W12
+ps "GF_WORDBENCH_END cases"
+q

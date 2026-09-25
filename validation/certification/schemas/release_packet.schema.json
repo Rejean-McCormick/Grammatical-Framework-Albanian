@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "albanian-c10-release-evidence-v1",
+  "type": "object",
+  "required": ["schema", "source_lock_sha256", "language_variety", "gf_version_required", "wordbench_version_required", "development_state", "release_candidate", "gates", "consistency_lint", "known_limitations"],
+  "properties": {
+    "schema": {"const": "albanian-c10-release-evidence-v1"},
+    "source_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "language_variety": {"const": "Standard Albanian"},
+    "gf_version_required": {"const": "3.12"},
+    "wordbench_version_required": {"const": "1.3.4"},
+    "development_state": {"type": "string"},
+    "release_candidate": {"type": "boolean"},
+    "gates": {"type": "object"},
+    "consistency_lint": {"type": "object"},
+    "known_limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

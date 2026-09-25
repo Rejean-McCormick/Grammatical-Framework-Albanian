@@ -1,0 +1,24 @@
+schema_version: SRC-SQI-MAX-1
+sources:
+- source_id: SRC-RGL-CURRENT
+  kind: rgl-current
+  path: docs/morphodict/RGL_LEXICON_MAPPING.csv
+  sha256: f74653dbbbe16994f8949aba7a080dcad08fd179540ba98678a98dcfe5f8393a
+  license: project/RGL source
+  role: existing Albanian RGL lexical analyses and active lemgram anchors
+  redistribution: project source
+- source_id: SRC-TOSK-UT
+  kind: linguistic-reference
+  path: resources/morphodict/TOSK_REFERENCE_LEMMAS.tsv
+  sha256: 9fd8b74c600c1e7505e4f00189c6d3f6d8244c57da8677db59ff999898c89e34
+  license: not identified in supplied reference bundle
+  role: evidence/review only; no assumption of bulk redistribution rights
+  redistribution: derived evidence already present in supplied project; do not expand
+    extraction without licence review
+- source_id: SRC-ALBANET-OMW
+  kind: lexical-candidate-inventory
+  path: resources/dictionary/albanet_unique_pos_lemma_synset.tsv
+  sha256: 952a30ca4c5b345e3d74f4cfc5804fd8173af98110d4b87386573546d96a9b67
+  license: CC BY 3.0 per project THIRD_PARTY_NOTICES.md
+  role: large lemma/POS candidate universe; does not itself prove inflection
+  redistribution: allowed subject to attribution/CC BY terms

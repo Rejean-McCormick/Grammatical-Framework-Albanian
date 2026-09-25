@@ -1,0 +1,9 @@
+C2 MAX overlay reconstruction audit
+Date: 2026-09-25
+Baseline: Code_snapshot_Grammatical_Framework-Albanian(20260925-123255).zip
+Overlay checked: MorphoDictSqi_MAX_C2_overlay_20260925.zip
+Payload files checked against delivered candidate: 47
+Hash mismatches: 0
+Result: PASS
+
+A separate deterministic rebuild of the delivered candidate changed only Python __pycache__ bytecode files. Source/generated project artifacts were byte-identical.

@@ -1,16 +1,9 @@
 {
-  "name": "MorphoDictSqi_COMPLETE_20260924",
-  "adds_only": true,
-  "payload_files": [
-    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.config",
-    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
-    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.header",
-    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.gf",
-    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.header"
-  ],
-  "entry_count": 592,
+  "name": "MorphoDictSqi_MAX_C2_20260925",
+  "campaign_id": "CMP-C2-MAX-20260925",
+  "entry_count": 560,
   "categories": {
-    "A": 84,
+    "A": 81,
     "Adv": 26,
     "Conj": 12,
     "Det": 6,
@@ -19,7 +12,7 @@
     "IP": 4,
     "IQuant": 1,
     "Interj": 2,
-    "N": 277,
+    "N": 255,
     "NP": 5,
     "PN": 2,
     "Predet": 3,
@@ -27,19 +20,27 @@
     "Pron": 7,
     "Quant": 3,
     "Subj": 5,
-    "V": 129
+    "V": 122
   },
   "quality_counts": {
-    "exact": 367,
-    "compile-safe-placeholder": 155,
-    "rgl-derived-explicit": 1,
-    "exact-normalized": 10,
     "direct-invariant": 23,
-    "rgl+reference-characteristic": 11,
     "direct-with-government": 3,
-    "exact-irregular": 22
+    "evidence-matched-explicit-class": 123,
+    "exact": 367,
+    "exact-irregular": 22,
+    "exact-normalized": 10,
+    "rgl+reference-characteristic": 11,
+    "rgl-derived-explicit": 1
   },
-  "compiler_remediation_20260925": "cilido_A derived from StructuralSqiNominal.which_IQuant + bound do",
-  "compiler_remediation_20260925_run_030234": "open Prelude explicitly so cilido_A clit=True is in scope",
-  "compiler_remediation_20260925_run_031945": "155 Tosk smart-generated N/A/V converted to compile-safe placeholders pending paradigm certification"
+  "certification_counts": {
+    "C2": 254,
+    "C1": 306
+  },
+  "placeholder_count": 0,
+  "blocked_count": 32,
+  "resolved_existing_class_count": 123,
+  "source_universe_records": 7079,
+  "gf312_new_run": "NOT_EXECUTED_IN_THIS_ENVIRONMENT",
+  "wordbench_new_run": "NOT_EXECUTED_IN_THIS_ENVIRONMENT",
+  "c6_policy": "no static-only promotion"
 }

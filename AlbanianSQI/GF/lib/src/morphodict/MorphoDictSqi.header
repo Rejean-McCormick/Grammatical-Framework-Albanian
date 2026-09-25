@@ -1,0 +1,6 @@
+--# -path=.:../albanian:alltenses
+concrete MorphoDictSqi of MorphoDictSqiAbs =
+  CatSqi [N,A,V,Adv,Prep,PN,Interj,Conj,Subj,Det,IDet,IAdv,IP,NP,Pron,Quant,IQuant,Predet] **
+  open Prelude, ParadigmsSqi in
+{
+flags coding = utf8 ;

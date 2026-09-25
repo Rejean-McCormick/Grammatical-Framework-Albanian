@@ -1,0 +1,22 @@
+source,base,category,reason,note
+RGL LexiconSqi,left_Ord,Ord,Ord is outside selected MorphoDict lemgram categories and entries are multiword,"lin Ord {s = table {_ => table {_ => table {_ => ""i majtë""}}}}"
+RGL LexiconSqi,bie shi,V,multiword excluded by MorphoDict convention,rain_V0
+RGL LexiconSqi,right_Ord,Ord,Ord is outside selected MorphoDict lemgram categories and entries are multiword,"lin Ord {s = table {_ => table {_ => table {_ => ""i djathtë""}}}}"
+RGL LexiconSqi,pyes veten,V,multiword excluded by MorphoDict convention,wonder_VQ
+Tosk reference,cili,Pron,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: cilat
+Tosk reference,diçka,Pron,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: diçka
+Tosk reference,do,Marker,category outside current MorphoDictSqi contract,Tosk ref observed: do
+Tosk reference,dy,Det,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: dy
+Tosk reference,e,Particle,category outside current MorphoDictSqi contract,"Tosk ref observed: e, i, së, të"
+Tosk reference,im,Pron,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: time
+Tosk reference,juaj,Pron,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: tuaj
+Tosk reference,ky,Det,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: ky
+Tosk reference,ky,Pron,insufficient full paradigm in reference; only exact StructuralSqi items are activated,"Tosk ref observed: ky, kësaj, këtë"
+Tosk reference,mbarë,Det,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: mbarë
+Tosk reference,mos,Particle,category outside current MorphoDictSqi contract,Tosk ref observed: mos
+Tosk reference,një,Det,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: një
+Tosk reference,po,Marker,category outside current MorphoDictSqi contract,Tosk ref observed: po
+Tosk reference,për në,Prep,multiword excluded by MorphoDict convention,Tosk ref observed: për në
+Tosk reference,tij,Det,insufficient full paradigm in reference; only exact StructuralSqi items are activated,Tosk ref observed: tij
+Tosk reference,u,Marker,category outside current MorphoDictSqi contract,Tosk ref observed: u
+RGL LexiconSqi,burrë,N,same-base noun superseded by explicit mkNFull lemgram,husband_N

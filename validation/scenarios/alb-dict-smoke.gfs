@@ -1,0 +1,84 @@
+-- GF_WORDBENCH_INPUT_SHA256 b0166799718410a33748a5b746609fdab56d90ac76c37f73c2ff8aa372e27fc0 validation/inputs/AlbDictValidation.gf
+-- GF_WORDBENCH_INPUT_SHA256 61a8c81ab530cf2a20272f46ed3472a295b1f3fc8386c00b2ec1896607501ae3 validation/inputs/AlbDictValidationSqi.gf
+i AlbDictValidationSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE D0001 aeroplan_N"
+l aeroplan_N
+ps "CASE D0002 akull_N"
+l akull_N
+ps "CASE D0003 anije_N"
+l anije_N
+ps "CASE D0004 afer_A"
+l afer_A
+ps "CASE D0005 bardhe_A"
+l bardhe_A
+ps "CASE D0006 bosh_A"
+l bosh_A
+ps "CASE D0007 digjem_V"
+l digjem_V
+ps "CASE D0008 fle_V"
+l fle_V
+ps "CASE D0009 fluturoj_V"
+l fluturoj_V
+ps "CASE D0010 blej_V2"
+l blej_V2
+ps "CASE D0011 bej_V2"
+l bej_V2
+ps "CASE D0012 dashuroj_V2"
+l dashuroj_V2
+ps "CASE D0013 dergoj_V3"
+l dergoj_V3
+ps "CASE D0014 flas_V3"
+l flas_V3
+ps "CASE D0015 jap_V3"
+l jap_V3
+ps "CASE D0016 druaj_VS"
+l druaj_VS
+ps "CASE D0017 kuptoj_VS"
+l kuptoj_VS
+ps "CASE D0018 shpresoj_VS"
+l shpresoj_VS
+ps "CASE D0019 kuptoj_VQ"
+l kuptoj_VQ
+ps "CASE D0020 pyes_veten_VQ"
+l pyes_veten_VQ
+ps "CASE D0021 lutem_V2V"
+l lutem_V2V
+ps "CASE D0022 baba_N2"
+l baba_N2
+ps "CASE D0023 nene_N2"
+l nene_N2
+ps "CASE D0024 vella_N2"
+l vella_N2
+ps "CASE D0025 distance_N3"
+l distance_N3
+ps "CASE D0026 martuar_A2"
+l martuar_A2
+ps "CASE D0027 larg_Adv"
+l larg_Adv
+ps "CASE D0028 sot_Adv"
+l sot_Adv
+ps "CASE D0029 tani_Adv"
+l tani_Adv
+ps "CASE D0030 gjer_Prep"
+l gjer_Prep
+ps "CASE D0031 kundrejt_Prep"
+l kundrejt_Prep
+ps "CASE D0032 mbi_Prep"
+l mbi_Prep
+ps "CASE D0033 dhe_Conj"
+l dhe_Conj
+ps "CASE D0034 e_Conj"
+l e_Conj
+ps "CASE D0035 ose_Conj"
+l ose_Conj
+ps "CASE D0036 medet_Interj"
+l medet_Interj
+ps "CASE D0037 o_Interj"
+l o_Interj
+ps "CASE D0038 gjon_PN"
+l gjon_PN
+ps "CASE D0039 paris_PN"
+l paris_PN
+ps "GF_WORDBENCH_END cases"
+q

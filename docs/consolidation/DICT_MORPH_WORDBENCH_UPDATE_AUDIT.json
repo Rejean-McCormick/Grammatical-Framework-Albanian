@@ -1,0 +1,22 @@
+{
+  "baseline_file_count": 324,
+  "updated_file_count": 330,
+  "missing": [],
+  "changed": [
+    "project.toml",
+    "validation/README.md",
+    "validation/lexicon/WORD_BENCH_REQUEST.md"
+  ],
+  "added": [
+    "docs/consolidation/DICT_MORPH_WORDBENCH_UPDATE_20260924.md",
+    "docs/consolidation/DICT_MORPH_WORDBENCH_UPDATE_AUDIT.json",
+    "validation/inputs/AlbDictValidation.gf",
+    "validation/inputs/AlbMorphoDictValidation.gf",
+    "validation/scenarios/alb-dict-smoke.gfs",
+    "validation/scenarios/alb-morphodict-smoke.gfs"
+  ],
+  "gf_source_files_changed": [],
+  "expected_direct_census": 56,
+  "required_scenarios": 52,
+  "morphodict_validation": "required scenario import/load"
+}

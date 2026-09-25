@@ -18,8 +18,8 @@ path_parts = []
 minimum_version = "3.12"
 
 [modules]
-entrypoints = ["LangSqi.gf", "GrammarSqi.gf", "AllSqi.gf"]
-checkpoints = ["MorphoSqi.gf", "ParadigmsSqi.gf", "GrammarSqi.gf", "LangSqi.gf"]
+entrypoints = ["LangSqi.gf", "GrammarSqi.gf", "AllSqi.gf", "DictSqi.gf"]
+checkpoints = ["MorphoSqi.gf", "ParadigmsSqi.gf", "GrammarSqi.gf", "LangSqi.gf", "DictSqi.gf"]
 
 [validation]
 required_scenarios = [
@@ -73,6 +73,8 @@ required_scenarios = [
   "alb-cross-01",
   "alb-cross-02",
   "alb-cross-03",
+  "alb-dict-smoke",
+  "alb-morphodict-smoke",
 ]
 optional_scenarios = []
 release_requires_pgf = false

@@ -1,0 +1,90 @@
+{
+  "dictionary_entries": 6720,
+  "categories": {
+    "A": 108,
+    "A2": 1,
+    "A2V": 1,
+    "AS": 1,
+    "AV": 1,
+    "Adv": 19,
+    "Conj": 16,
+    "Interj": 2,
+    "N": 4310,
+    "N2": 3,
+    "N3": 1,
+    "Ord": 2,
+    "PN": 2,
+    "Prep": 12,
+    "V": 2174,
+    "V0": 1,
+    "V2": 50,
+    "V2A": 1,
+    "V2Q": 1,
+    "V2S": 1,
+    "V2V": 1,
+    "V3": 5,
+    "VA": 1,
+    "VQ": 2,
+    "VS": 4
+  },
+  "status": {
+    "baseline_lexicon_exact": 337,
+    "imported_unreviewed": 6339,
+    "reference_attested_unreviewed": 44
+  },
+  "source_memberships": {
+    "Baseline LexiconSqi": 337,
+    "Albanet/OMW": 6489,
+    "UT Austin Tosk Glossary": 46
+  },
+  "exact_baseline_lexicon_aliases": 337,
+  "distinct_lexicon_lemma_category_pairs": 337,
+  "lexicon_pairs_new_beyond_albanet": 187,
+  "albanet_unique_pos_lemma_pairs": 6489,
+  "tosk_functional_rows": 46,
+  "flags": {
+    "case_marked": 14,
+    "functional_reference": 46,
+    "lexicon_sqi_exact": 337,
+    "multiword": 1830,
+    "pos_from_wordnet": 6489,
+    "punctuation": 34
+  },
+  "baseline_files_missing": [],
+  "baseline_files_changed": [],
+  "baseline_preserved": true,
+  "gf_compile_certified": false,
+  "gf_compile_note": "Wordbench 20260925_001953 exposed legacy Lexicon suffix/category mismatch; normalized to actual Cat types. Re-run GF 3.12 required.",
+  "source_lock": {
+    "albanet_repo": "omwn/omw-data",
+    "albanet_path": "wns/als/wn-data-als.tab",
+    "albanet_blob_sha": "a22812b3fa9f03e3b784e34da396165725ac514f",
+    "normalized_inventory_sha256": "952a30ca4c5b345e3d74f4cfc5804fd8173af98110d4b87386573546d96a9b67",
+    "baseline_lexicon_sha256": "b724d800c49efda27b75333c4d72c990e4f824d679a19cc6922fcc02e377dec6",
+    "DictSqiAbs_sha256": "6f435488586784c2f82adaae001a3c58729aa99467305bb49b6038cd3ddad97d",
+    "DictSqi_sha256": "bac6a3a4adf8863cdff9689c6967924f6e46035f146750eb74f852c456a52ca3"
+  },
+  "gf_category_normalization": {
+    "A2V": "A2",
+    "AS": "A",
+    "AV": "A",
+    "V0": "V"
+  },
+  "compiler_remediation_20260925_run_030234": {
+    "issue": "Predef.error: Cannot find an inflection rule at aftesi_mendore_V",
+    "policy": "imported_unreviewed V -> invariantV; baseline aliases/IrregSqi unchanged",
+    "affected_unreviewed_v_entries": 2141,
+    "gf_compile_certified": false
+  },
+  "compiler_remediation_20260925_run_031945": {
+    "issue": "Predef.error at bota_N: smart mkN selected an inapplicable paradigm",
+    "policy": "all imported_unreviewed N/A/V -> compile-safe invariant placeholders; baseline LexiconSqi aliases unchanged",
+    "affected_imported_unreviewed": {
+      "N": 4134,
+      "A": 64,
+      "V": 2141
+    },
+    "linguistic_status": "placeholders are not gold-certified paradigms",
+    "gf_compile_certified": false
+  }
+}

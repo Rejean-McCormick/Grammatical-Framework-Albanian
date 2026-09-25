@@ -1,0 +1,45 @@
+{
+  "input_snapshot": "Code_snapshot_Grammatical_Framework-Albanian(20260925-024342).zip",
+  "input_snapshot_sha256": "b0be43114d4c71c73878048a9800235f3ee97b0d55241991a1e7ceefb6a2f82e",
+  "wordbench_evidence": "summary(20260925-024243).zip",
+  "wordbench_evidence_sha256": "584faaf95ba51ebe05cdd3f6ae99cf19562f7c67cdbb9539e91123966d2de3b2",
+  "changed_files": [
+    "AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+    "AlbanianSQI/GF/lib/src/albanian/DictSqiAbs.gf",
+    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+    "WORDBENCH_UPDATE_20260925.md",
+    "docs/dictionary/DICT_SQI_REPORT.md",
+    "docs/dictionary/DICT_SQI_VALIDATION.json",
+    "docs/dictionary/SHA256SUMS.txt",
+    "docs/morphodict/BUILD_REPORT.md",
+    "docs/morphodict/COVERAGE.csv",
+    "docs/morphodict/COVERAGE.json",
+    "docs/morphodict/MANIFEST.json",
+    "docs/morphodict/README.md",
+    "docs/morphodict/SOURCE_PACKAGE_SHA256SUMS.txt",
+    "project.toml",
+    "tools/dictionary/build_complete_dict.py",
+    "tools/dictionary/static_validate_dict.py",
+    "validation/inputs/AlbDictValidation.gf",
+    "validation/inputs/AlbMorphoDictValidation.gf",
+    "validation/morphodict/static_validate_morphodict.py",
+    "validation/scenarios/alb-dict-smoke.gfs",
+    "validation/scenarios/alb-morphodict-smoke.gfs"
+  ],
+  "added_files": [
+    "docs/consolidation/CORRECTION_20260925_024243.md"
+  ],
+  "deleted_files": [],
+  "historical_wordbench_source_lock_files_unchanged": 54,
+  "target_gate": "58/58 compile; 52/52 required scenarios",
+  "static_validation": {
+    "dict": "PASS",
+    "morphodict": "PASS",
+    "combined": "PASS",
+    "morphosqi_lint_findings": 0,
+    "scenario_sha_locks": "PASS",
+    "python_compileall": "PASS",
+    "project_required_scenarios": 52
+  },
+  "overlay_payload_files": 22
+}

@@ -1,0 +1,66 @@
+-- GF_WORDBENCH_INPUT_SHA256 76e0d2f9c38a5b613febd0893a7573c2150e1d72e3c3e631ae5500aee4332ed6 validation/inputs/AlbMorphoDictValidation.gf
+-- GF_WORDBENCH_INPUT_SHA256 232d986b847eed9f5a87dfd4cbe60c2bf77c9baabbd8f780f7a11c9a23d9c6a7 validation/inputs/AlbMorphoDictValidationSqi.gf
+i AlbMorphoDictValidationSqi.gf
+ps "GF_WORDBENCH_BEGIN cases"
+ps "CASE M0001 aeroplan_N"
+l aeroplan_N
+ps "CASE M0002 aeroport_N"
+l aeroport_N
+ps "CASE M0003 akull_N"
+l akull_N
+ps "CASE M0004 anije_N"
+l anije_N
+ps "CASE M0005 apartament_N"
+l apartament_N
+ps "CASE M0006 armë_N"
+l armë_N
+ps "CASE M0007 baba_N"
+l baba_N
+ps "CASE M0008 bankë_N"
+l bankë_N
+ps "CASE M0009 bazohem_V"
+l bazohem_V
+ps "CASE M0010 bie_V"
+l bie_V
+ps "CASE M0011 blej_V"
+l blej_V
+ps "CASE M0012 bëhem_V"
+l bëhem_V
+ps "CASE M0013 bëj_V"
+l bëj_V
+ps "CASE M0014 dal_V"
+l dal_V
+ps "CASE M0015 dashuroj_V"
+l dashuroj_V
+ps "CASE M0016 di_V"
+l di_V
+ps "CASE M0017 afër_A"
+l afër_A
+ps "CASE M0018 barabartë_A"
+l barabartë_A
+ps "CASE M0019 bardhë_A"
+l bardhë_A
+ps "CASE M0020 bosh_A"
+l bosh_A
+ps "CASE M0021 budalla_A"
+l budalla_A
+ps "CASE M0022 bukur_A"
+l bukur_A
+ps "CASE M0023 aq_Adv"
+l aq_Adv
+ps "CASE M0024 atje_Adv"
+l atje_Adv
+ps "CASE M0025 bashkë_Adv"
+l bashkë_Adv
+ps "CASE M0026 gjatë_Prep"
+l gjatë_Prep
+ps "CASE M0027 kundrejt_Prep"
+l kundrejt_Prep
+ps "CASE M0028 mbi_Prep"
+l mbi_Prep
+ps "CASE M0029 Gjon_PN"
+l Gjon_PN
+ps "CASE M0030 Paris_PN"
+l Paris_PN
+ps "GF_WORDBENCH_END cases"
+q

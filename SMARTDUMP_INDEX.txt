@@ -1,11 +1,11 @@
 SMART DUMPER INDEX
 ==================
-generated_at: 2026-09-24T14:18:10.674075
+generated_at: 2026-09-24T19:04:04.556492
 source_root: C:\mycode\Grammatical_Framework\Grammatical_Framework-Albanian
 zip_file: Code_snapshot_Grammatical_Framework-Albanian.zip
 embedded_index: SMARTDUMP_INDEX.txt
-file_count: 241
-total_bytes: 2044805
+file_count: 324
+total_bytes: 4638458
 compression: ZIP_DEFLATED level 1
 
 FILES
@@ -20,6 +20,8 @@ AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2744 bytes
 AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	4396 bytes
 AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2449 bytes
 AlbanianSQI/GF/lib/src/albanian/ConstructionSqi.gf	7642 bytes
+AlbanianSQI/GF/lib/src/albanian/DictSqi.gf	233287 bytes
+AlbanianSQI/GF/lib/src/albanian/DictSqiAbs.gf	134862 bytes
 AlbanianSQI/GF/lib/src/albanian/DocumentationSqi.gf	9602 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqi.gf	15614 bytes
 AlbanianSQI/GF/lib/src/albanian/ExtendSqiAPCN.gf	808 bytes
@@ -39,7 +41,7 @@ AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	1712 bytes
 AlbanianSQI/GF/lib/src/albanian/IrregSqi.gf	10602 bytes
 AlbanianSQI/GF/lib/src/albanian/IrregSqiAbs.gf	371 bytes
 AlbanianSQI/GF/lib/src/albanian/LangSqi.gf	342 bytes
-AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	19003 bytes
+AlbanianSQI/GF/lib/src/albanian/LexiconSqi.gf	19015 bytes
 AlbanianSQI/GF/lib/src/albanian/MarkupSqi.gf	594 bytes
 AlbanianSQI/GF/lib/src/albanian/MorphoSqi.gf	1074832 bytes
 AlbanianSQI/GF/lib/src/albanian/NamesSqi.gf	796 bytes
@@ -64,11 +66,52 @@ AlbanianSQI/GF/lib/src/albanian/TextSqi.gf	230 bytes
 AlbanianSQI/GF/lib/src/albanian/VerbSqi.gf	6200 bytes
 AlbanianSQI/GF/lib/src/CombinatorsSqi.gf	180 bytes
 AlbanianSQI/GF/lib/src/ConstructorsSqi.gf	120 bytes
+AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.config	366 bytes
+AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf	21850 bytes
+AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.header	220 bytes
+AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.gf	10759 bytes
+AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqiAbs.header	121 bytes
 AlbanianSQI/GF/lib/src/SymbolicSqi.gf	125 bytes
 AlbanianSQI/GF/lib/src/SyntaxSqi.gf	140 bytes
 AlbanianSQI/GF/lib/src/TrySqi.gf	246 bytes
 CODE_SNAPSHOT_MANIFEST.md	14183 bytes
+CONSOLIDATION_README.md	2119 bytes
 detect_morphosqi_table_inference.py	13934 bytes
+development/draftmax/checkpoint1/APPLY_README.md	423 bytes
+development/draftmax/checkpoint1/OVERLAY_FILES.txt	465 bytes
+development/draftmax/checkpoint1/overlay_manifest.json	2733 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2754 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	4403 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	2883 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	1719 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	6808 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	54299 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf	1514 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	15452 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	3561 bytes
+development/draftmax/checkpoint1/payload/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2598 bytes
+development/draftmax/checkpoint1/REPORT.md	3397 bytes
+development/draftmax/checkpoint1/STATIC_VALIDATION.txt	74 bytes
+development/draftmax/checkpoint2/APPLY_README.md	1226 bytes
+development/draftmax/checkpoint2/CHECKPOINT1_TO_CHECKPOINT2.patch	33258 bytes
+development/draftmax/checkpoint2/MIGRATION_NOTES.md	1316 bytes
+development/draftmax/checkpoint2/OVERLAY_FILES.txt	465 bytes
+development/draftmax/checkpoint2/overlay_manifest.json	4031 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/CatSqi.gf	2754 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/ClauseSqiRes.gf	6973 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/ConjunctionSqi.gf	3189 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/IdiomSqi.gf	1644 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/NounSqi.gf	6814 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/ParadigmsSqi.gf	55921 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/RelativeSqi.gf	1514 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/ResSqi.gf	20130 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/StructuralSqiNominal.gf	3814 bytes
+development/draftmax/checkpoint2/payload/AlbanianSQI/GF/lib/src/albanian/SymbolSqi.gf	2965 bytes
+development/draftmax/checkpoint2/REPORT.md	6350 bytes
+development/draftmax/checkpoint2/SHA256SUMS.txt	1903 bytes
+development/draftmax/checkpoint2/STATIC_VALIDATION.txt	1572 bytes
+development/draftmax/checkpoint2/validation/static_validate.py	3982 bytes
+development/draftmax/README.md	507 bytes
 docs/ALBANIAN_DECISION_LOG.md	90593 bytes
 docs/albanian_extend_specifics_lockfield_and_boundary.md	23556 bytes
 docs/ALBANIAN_EXTENDSQI_FINAL_TARGET.md	11683 bytes
@@ -83,10 +126,36 @@ docs/ALBANIAN_RECOVERY_AND_COMPLETION_SEQUENCE.md	14313 bytes
 docs/ALBANIAN_RGL_COMPLETION_EXPANSION_PLAN.md	87699 bytes
 docs/ALBANIAN_SYMBOL_STATUS_LEDGER.md	41517 bytes
 docs/ALBANIAN_UPGRADE_IMPLEMENTATION_20260922.md	6065 bytes
+docs/consolidation/ACTIVE_CHANGES.patch	1671 bytes
+docs/consolidation/BASELINE_SHA256SUMS.txt	25390 bytes
+docs/consolidation/BUGREPORT_20260924_181733_SUMMARY.md	36012 bytes
+docs/consolidation/CHECKPOINT1_REPORT.md	3397 bytes
+docs/consolidation/CONSOLIDATED_SHA256SUMS.txt	31436 bytes
+docs/consolidation/CONSOLIDATION_REPORT.md	3067 bytes
+docs/consolidation/LINGUISTIC_REVIEW_REQUEST_20260924_181733.json	1462 bytes
+docs/consolidation/MORPHOSQI_LINT.txt	74 bytes
+docs/consolidation/PRESERVATION_AUDIT.json	370 bytes
+docs/consolidation/REGRESSION_AUDIT_checkpoint2_vs_snapshot.md	4274 bytes
+docs/consolidation/STATIC_SANITY.txt	260 bytes
 docs/CURRENT_REPAIR_STATE.md	14971 bytes
+docs/dictionary/DICT_SQI_REPORT.md	2125 bytes
+docs/dictionary/DICT_SQI_VALIDATION.json	1834 bytes
+docs/dictionary/DictSqi_provenance.tsv	735435 bytes
+docs/dictionary/README.md	521 bytes
+docs/dictionary/SHA256SUMS.txt	783 bytes
+docs/dictionary/THIRD_PARTY_NOTICES.md	606 bytes
 docs/DOCUMENTATION_SYNC_20260921.md	6431 bytes
 docs/DOCUMENTATION_SYNC_20260922.md	5478 bytes
 docs/DOCUMENTATION_SYNC_20260924.md	1692 bytes
+docs/morphodict/BUILD_REPORT.md	1747 bytes
+docs/morphodict/COVERAGE.csv	49686 bytes
+docs/morphodict/COVERAGE.json	164290 bytes
+docs/morphodict/EXCLUDED.csv	2606 bytes
+docs/morphodict/INPUT_SHA256SUMS.txt	919 bytes
+docs/morphodict/MANIFEST.json	942 bytes
+docs/morphodict/README.md	3062 bytes
+docs/morphodict/RGL_LEXICON_MAPPING.csv	10161 bytes
+docs/morphodict/SOURCE_PACKAGE_SHA256SUMS.txt	1577 bytes
 docs/README.md	6577 bytes
 docs/status/ALBANIAN_CORE_V0.1.0.md	5738 bytes
 docs/status/ALBANIAN_IMPLEMENTATION_STATUS.md	25580 bytes
@@ -96,9 +165,20 @@ gf_safe_fix.ps1	9173 bytes
 gf_sanitize_text.ps1	3560 bytes
 project.toml	1599 bytes
 README.md	34 bytes
-SMARTDUMP_INDEX.txt	12283 bytes
+resources/dictionary/albanet_unique_pos_lemma_synset.tsv	100283 bytes
+resources/dictionary/baseline_lexicon_aliases.tsv	13127 bytes
+resources/dictionary/tosk_function_words.tsv	1471 bytes
+resources/morphodict/TOSK_REFERENCE_LEMMAS.tsv	19426 bytes
+SMARTDUMP_INDEX.txt	12328 bytes
+tools/dictionary/build_complete_dict.py	17660 bytes
+tools/dictionary/BUILD_NOTES.md	326 bytes
+tools/dictionary/static_validate_dict.py	1082 bytes
 validation/CAMPAIGN_MANIFEST.csv	61289 bytes
 validation/CAMPAIGN_MANIFEST.json	1452 bytes
+validation/dictionary/CHATGPT_REVIEW_PROTOCOL.md	578 bytes
+validation/dictionary/CHATGPT_REVIEW_QUEUE.tsv	685739 bytes
+validation/dictionary/dict-sqi-smoke.gfs	455 bytes
+validation/dictionary/WORD_BENCH_REQUEST.md	375 bytes
 validation/gold/.gitkeep	0 bytes
 validation/inputs/AlbCampaign001.gf	250 bytes
 validation/inputs/AlbCampaign001Sqi.gf	705 bytes
@@ -200,6 +280,9 @@ validation/inputs/AlbCampaign049.gf	250 bytes
 validation/inputs/AlbCampaign049Sqi.gf	1158 bytes
 validation/inputs/AlbCampaign050.gf	250 bytes
 validation/inputs/AlbCampaign050Sqi.gf	1515 bytes
+validation/lexicon/static_validate_dict_and_morphodict.py	733 bytes
+validation/lexicon/WORD_BENCH_REQUEST.md	390 bytes
+validation/morphodict/static_validate_morphodict.py	1249 bytes
 validation/README.md	613 bytes
 validation/scenarios/alb-adj-01.gfs	775 bytes
 validation/scenarios/alb-adj-02.gfs	765 bytes

@@ -1,0 +1,35 @@
+{
+  "base": "Albanian_CORRECTED_20260925 (the version used for Wordbench run 20260925_030234)",
+  "run_evidence": {
+    "files": "56/58",
+    "scenarios": "50/52",
+    "dict_direct": "aftesi_mendore_V -> Predef.error: Cannot find an inflection rule",
+    "morphodict_direct": "cilido_A -> constant not found: True"
+  },
+  "remediation": {
+    "dict": "2141 Albanet-only imported_unreviewed V entries use invariantV; baseline aliases and IrregSqi preserved",
+    "morphodict": "open Prelude explicitly; cilido declined table unchanged"
+  },
+  "changed_files": [
+    "AlbanianSQI/GF/lib/src/albanian/DictSqi.gf",
+    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.gf",
+    "AlbanianSQI/GF/lib/src/morphodict/MorphoDictSqi.header",
+    "WORDBENCH_UPDATE_20260925.md",
+    "docs/dictionary/DICT_SQI_REPORT.md",
+    "docs/dictionary/DICT_SQI_VALIDATION.json",
+    "docs/dictionary/README.md",
+    "docs/dictionary/SHA256SUMS.txt",
+    "docs/morphodict/BUILD_REPORT.md",
+    "docs/morphodict/MANIFEST.json",
+    "docs/morphodict/README.md",
+    "docs/morphodict/SOURCE_PACKAGE_SHA256SUMS.txt",
+    "tools/dictionary/build_complete_dict.py",
+    "tools/dictionary/static_validate_dict.py",
+    "validation/morphodict/static_validate_morphodict.py"
+  ],
+  "added_files": [
+    "docs/consolidation/WORDBENCH_RUN_20260925_030234_FIX.md"
+  ],
+  "deleted_files": [],
+  "target": "58/58 files, 52/52 scenarios on GF 3.12"
+}

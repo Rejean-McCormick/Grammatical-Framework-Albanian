@@ -4,3 +4,15 @@
 
 /GF_Lexicons_Archive/
 /DOC_FOR_AI/
+
+# Historical/preservation trees: retain in Git, omit from routine code snapshots.
+/development/
+/docs/legacy_project_docs/
+
+# Certification evidence is retained in Git but is large generated/historical
+# evidence rather than active implementation context.
+/validation/certification/
+
+# Snapshot bookkeeping
+/CODE_SNAPSHOT_MANIFEST.md
+/SMARTDUMP_INDEX.txt

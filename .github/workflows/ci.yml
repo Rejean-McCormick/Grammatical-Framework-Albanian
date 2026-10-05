@@ -1,0 +1,47 @@
+name: CI - lightweight
+
+on:
+  push:
+    paths:
+      - "AlbanianSQI/**/*.gf"
+      - "AlbanianSQI/**/*.py"
+      - "validation/**/*.gfs"
+      - "validation/**/*.py"
+      - "tools/**/*.py"
+      - "*.py"
+      - "project.toml"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    paths:
+      - "AlbanianSQI/**/*.gf"
+      - "AlbanianSQI/**/*.py"
+      - "validation/**/*.gfs"
+      - "validation/**/*.py"
+      - "tools/**/*.py"
+      - "*.py"
+      - "project.toml"
+      - ".github/workflows/ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gf-albanian-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lightweight-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Validate repository
+        run: python tools/ci_lightweight.py

@@ -61,3 +61,10 @@ desktop.ini
 .pytest-tmp/
 test-results/
 playwright-report/
+
+# Local environments and generic cache
+.env
+.env.*
+!.env.example
+!*.example
+.cache/

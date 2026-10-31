@@ -93,7 +93,7 @@ concrete ConstructionSqi of Construction = CatSqi **
 
     weather_adjCl ap = {
       s=\\t,a,p=>"moti" ++ realizeVP
-        (copVP (\\_=>ap.s!Indef!Nom!Masc!Sg)) t a p agrgP3 Masc Sg
+        (copVP (\\_=>ap.s!Indef!Nom!Masc!Sg)) t a p (agrgP3 Masc Sg)
     } ;
 
     timeunitAdv c tu = {s=c.s ++ tu.s} ;

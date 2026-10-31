@@ -95,7 +95,7 @@ oper
   CNoun : Type = {s : Species => Case => Number => Str ; g : Number => Gender} ;
 
   useNoun : Noun -> CNoun = \n -> {
-    s = \sp,c,num => nounForm n sp c num ;
+    s = \\sp,c,num => nounForm n sp c num ;
     g = n.g
   } ;
 
@@ -145,7 +145,7 @@ oper
   -- SelfAdVVP); `progressive` carries po separately.  Neither field may be
   -- used to encode a pronominal clitic.
   WeakArg : Type = WeakClitic ;
-  CliticCluster : Type = {dat, acc : WeakArg ; refl : Bool} ;
+  CliticCluster : Type = {dat, acc : WeakArg ; refl : Bool ; legal : Bool} ;
 
   VP : Type = {
     indicative : Tense => Number => Person => Str ;
@@ -161,6 +161,7 @@ oper
     progressive : Bool ;
     progressivity : Progressivity ;
     preClitic : Str ;
+    preCliticPresent : Bool ;
     post : Agr => Str ;
     morphVoice : MorphVoice ;
     voiceUse : VoiceUse
@@ -303,26 +304,26 @@ oper
 
 
 oper
-  emptyClitics : CliticCluster = {dat=NoWeak ; acc=NoWeak ; refl=False} ;
+  emptyClitics : CliticCluster = {dat=NoWeak ; acc=NoWeak ; refl=False ; legal=True} ;
 
   weakFromAgr : Agr -> WeakArg = \a -> Weak (agrNumber a) a.p ;
 
   putAccClitic : CliticCluster -> Agr -> CliticCluster = \cc,a ->
     case cc.acc of {
       NoWeak => cc ** {acc=weakFromAgr a} ;
-      _ => Predef.error "Albanian clitic cluster already has an accusative slot"
+      _ => cc ** {legal=False}
     } ;
 
   putDatClitic : CliticCluster -> Agr -> CliticCluster = \cc,a ->
     case cc.dat of {
       NoWeak => cc ** {dat=weakFromAgr a} ;
-      _ => Predef.error "Albanian clitic cluster already has a dative slot"
+      _ => cc ** {legal=False}
     } ;
 
   putReflClitic : CliticCluster -> CliticCluster = \cc ->
     case cc.refl of {
       False => cc ** {refl=True} ;
-      True => Predef.error "Albanian clitic cluster already has a reflexive slot"
+      True => cc ** {legal=False}
     } ;
 
   weakAcc : WeakArg -> Str = \w -> case w of {
@@ -378,8 +379,13 @@ oper
   -- This is the sole owner of Dat+Acc/Refl ordering and fusion.  The supplied
   -- Albanian reference explicitly gives the 6 x {e,i,u} matrix; other
   -- Dat+Acc person combinations are rejected rather than guessed.
+  -- A duplicate typed slot is rejected at the realization boundary.
+  -- Keep Predef.error out of a PMCFG-expanded term; nonExist never licenses
+  -- a new clitic combination and does not erase the previously filled slot.
   flattenClitics : CliticCluster -> Str = \cc ->
-    case <cc.dat,cc.acc,cc.refl> of {
+    case cc.legal of {
+      False => nonExist ;
+      True => case <cc.dat,cc.acc,cc.refl> of {
       <NoWeak,NoWeak,False> => [] ;
       <NoWeak,a,False> => weakAcc a ;
       <d,NoWeak,False> => weakDat d ;
@@ -387,25 +393,39 @@ oper
       <d,NoWeak,True> => datRefl d ;
       <d,Weak Sg P3,False> => datAccSg d ;
       <d,Weak Pl P3,False> => datAccPl d ;
-      <NoWeak,a,True> => Predef.error "Albanian Acc+Refl cluster not licensed by the locked C5 evidence" ;
-      <d,a,False> => Predef.error "Albanian Dat+Acc cluster outside the locked 18-cell paradigm" ;
-      <d,a,True> => Predef.error "Albanian three-slot Dat+Acc+Refl cluster not licensed by the locked C5 evidence"
+      <NoWeak,a,True> => nonExist ;
+      <d,a,False> => nonExist ;
+      <d,a,True> => nonExist
+      }
     } ;
 
-  -- të contracts only after the cluster has been flattened.  e gives ta;
-  -- vowel-/j-initial licensed clusters lose the vowel of të.
+  -- të contracts next to a typed clitic cluster: e gives ta;
+  -- licensed vowel-/j-initial forms lose the vowel of të.
+  -- Test the typed clitic slots, never a runtime Str. This preserves
+  -- the same contractions while avoiding a dynamic string case in PMCFG.
   teWithClitics : CliticCluster -> Str = \cc ->
-    case <flattenClitics cc : Str> of {
-      "" => "të" ;
-      "e" => "ta" ;
-      "i" => "t'i" ;
-      "u" => "t'u" ;
-      "ia" => "t'ia" ;
-      "iu" => "t'iu" ;
-      "jua" => "t'jua" ;
-      "ju" => "t'ju" ;
-      "ua" => "t'ua" ;
-      x => "të" ++ x
+    case cc.legal of {
+      False => nonExist ;
+      True => case <cc.dat,cc.acc,cc.refl> of {
+      <NoWeak,NoWeak,False> => "të" ;
+      <NoWeak,Weak Sg P3,False> => "ta" ;
+      <NoWeak,Weak Pl P3,False> => "t'i" ;
+      <Weak Sg P3,NoWeak,False> => "t'i" ;
+      <NoWeak,NoWeak,True> => "t'u" ;
+      <Weak Pl P3,NoWeak,False> => "t'u" ;
+      <Weak Sg P3,Weak Sg P3,False> => "t'ia" ;
+      <Weak Sg P3,Weak Pl P3,False> => "t'ia" ;
+      <Weak Sg P3,NoWeak,True> => "t'iu" ;
+      <Weak Pl P2,Weak Sg P3,False> => "t'jua" ;
+      <Weak Pl P2,Weak Pl P3,False> => "t'jua" ;
+      <NoWeak,Weak Pl P2,False> => "t'ju" ;
+      <Weak Pl P2,NoWeak,False> => "t'ju" ;
+      <Weak Pl P2,NoWeak,True> => "t'ju" ;
+      <Weak Pl P3,NoWeak,True> => "t'ju" ;
+      <Weak Pl P3,Weak Sg P3,False> => "t'ua" ;
+      <Weak Pl P3,Weak Pl P3,False> => "t'ua" ;
+      _ => "të" ++ flattenClitics cc
+      }
     } ;
 
 
@@ -560,7 +580,7 @@ oper
       Sg => table {P1 => "kam" ; P2 => "ke" ; P3 => "ka"} ;
       Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kanë"}
     } ;
-    ParamX.Perfect => table {
+    ParamX.Past => table {
       Sg => table {P1 => "kisha" ; P2 => "kishe" ; P3 => "kishte"} ;
       Pl => table {P1 => "kishim" ; P2 => "kishit" ; P3 => "kishin"}
     } ;
@@ -582,6 +602,44 @@ oper
   haveSubj : Number => Person => Str = table {
     Sg => table {P1 => "kem" ; P2 => "kesh" ; P3 => "ketë"} ;
     Pl => table {P1 => "kemi" ; P2 => "keni" ; P3 => "kenë"}
+  } ;
+
+  -- Auxiliary of jam (non-active anterior constructions).
+  -- Forms agree with the jam_V paradigms in IrregSqi.gf.
+  beAux : ParamX.Tense => Number => Person => Str = table {
+    ParamX.Pres => table {
+      Sg => table {P1 => "jam" ; P2 => "je" ; P3 => "është"} ;
+      Pl => table {P1 => "jemi" ; P2 => "jeni" ; P3 => "janë"}
+    } ;
+    ParamX.Past => table {
+      Sg => table {P1 => "isha" ; P2 => "ishe" ; P3 => "ishte"} ;
+      Pl => table {P1 => "ishim" ; P2 => "ishit" ; P3 => "ishin"}
+    } ;
+    ParamX.Fut => table {
+      Sg => table {P1 => "do të jem" ; P2 => "do të jesh" ; P3 => "do të jetë"} ;
+      Pl => table {P1 => "do të jemi" ; P2 => "do të jeni" ; P3 => "do të jenë"}
+    } ;
+    ParamX.Cond => table {
+      Sg => table {P1 => "do të isha" ; P2 => "do të ishe" ; P3 => "do të ishte"} ;
+      Pl => table {P1 => "do të ishim" ; P2 => "do të ishit" ; P3 => "do të ishin"}
+    }
+  } ;
+
+  -- Subjunctive of jam, matching jam_V in IrregSqi.gf.
+  beSubj : Number => Person => Str = table {
+    Sg => table {P1 => "jem" ; P2 => "jesh" ; P3 => "jetë"} ;
+    Pl => table {P1 => "jemi" ; P2 => "jeni" ; P3 => "jenë"}
+  } ;
+
+  -- Aorist auxiliaries, matching kam_V and jam_V in IrregSqi.gf.
+  haveAorAux : Number => Person => Str = table {
+    Sg => table {P1 => "pata" ; P2 => "pate" ; P3 => "pati"} ;
+    Pl => table {P1 => "patëm" ; P2 => "patët" ; P3 => "patën"}
+  } ;
+
+  beAorAux : Number => Person => Str = table {
+    Sg => table {P1 => "qeshë" ; P2 => "qe" ; P3 => "qe"} ;
+    Pl => table {P1 => "qemë" ; P2 => "qetë" ; P3 => "qenë"}
   } ;
 
   perfectAux : MorphVoice -> ParamX.Tense -> Number -> Person -> Str = \mv,t,n,p ->

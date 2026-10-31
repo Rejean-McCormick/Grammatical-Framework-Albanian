@@ -9,7 +9,7 @@ flags coding = utf8 ;
 flags optimize = all_subs ;
 
 oper
-  forceGender : N -> Gender -> N = \n,gen -> n ** {g = gen} ;
+  forceGender : N -> Gender -> N = \n,gen -> n ** {g = table {Sg => gen ; Pl => gen}} ;
   invariantV : Str -> V = \x -> irregV x x x x x x x x x ;
 
   appleNForms : NForms = {
@@ -86,7 +86,7 @@ lin
   bëhem_V = lin V I.behem_V ;
   bëj_V = lin V I.bej_V ;
   cili_IQuant = SN.which_IQuant ;
-  cilido_A = lin A {s = \\c,g,n => (SN.which_IQuant.s ! c ! g ! n) + "do" ; clit = True} ;
+  cilido_A = lin A {s = \\g,n => (SN.which_IQuant.s ! R.Nom ! g ! n) + "do" ; cls = R.unarticulatedAdjClass} ;
   dal_V = lin V I.dal_V ;
   dashuri_N = mkN "dashuri" ;
   dashuroj_V = mkV "dashuroj" ;
@@ -287,7 +287,7 @@ lin
   lopë_N = mkN "lopë" ;
   luaj_V = mkV "luaj" ;
   luftoj_V = mkV "luftoj" "luftuar" ;
-  luftë_N = forceGender (mkN "luftë" "luftra") feminine ;
+  luftë_N = mkNFull {indefNomSg="luftë"; indefNomPl="luftra"; indefAccSg="luftë"; indefAccPl="luftra"; indefDatSg="lufte"; indefDatPl="luftrave"; indefAblSg="lufte"; indefAblPl="luftrash"; defNomSg="lufta"; defNomPl="luftrat"; defAccSg="luftën"; defAccPl="luftrat"; defDatSg="luftës"; defDatPl="luftrave"; defAblSg="luftës"; defAblPl="luftrave"} feminine ;
   lule_N = mkN "lule" ;
   lumë_N = mkN "lumë" ;
   lutem_V = mkV "lutem" ;

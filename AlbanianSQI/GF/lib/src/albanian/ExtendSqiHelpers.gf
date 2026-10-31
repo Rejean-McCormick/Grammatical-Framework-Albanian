@@ -21,8 +21,8 @@ oper
     \prep,np -> prep.s ++ np.s ! prep.c ;
 
   mkPronConst :
-    Str -> Str -> Str -> Str -> Str -> R.Gender -> P.Number -> CatSqi.Pron =
-    \nom,acc,dat,accCl,datCl,g,n -> lin Pron {
+    Str -> Str -> Str -> R.Gender -> P.Number -> CatSqi.Pron =
+    \nom,acc,dat,g,n -> lin Pron {
       s = table {
         R.Nom   => nom ;
         R.Acc   => acc ;

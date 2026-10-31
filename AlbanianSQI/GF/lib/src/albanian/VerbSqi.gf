@@ -1,6 +1,6 @@
 -- Albanian verb syntax with deferred realization.
 concrete VerbSqi of Verb = CatSqi **
-  open Prelude, ParamX, ResSqi, (I = IrregSqi) in {
+  open Prelude, ParamX, ResSqi, ClauseSqiRes, (I = IrregSqi) in {
 
   oper
     emptyAgrStr : Agr => Str = \\_ => [] ;
@@ -16,7 +16,7 @@ concrete VerbSqi of Verb = CatSqi **
       imperf_admirative = v.imperf_admirative ;
       clitics = emptyClitics ;
       progressive = False ; progressivity = NeutralProgressive ;
-      preClitic = [] ;
+      preClitic = [] ; preCliticPresent = False ;
       post = emptyAgrStr ;
       morphVoice = v.morphVoice ; voiceUse = PlainUse
     } ;
@@ -32,10 +32,10 @@ concrete VerbSqi of Verb = CatSqi **
       imperf_admirative = v.imperf_admirative ;
       clitics = emptyClitics ;
       progressive = False ; progressivity = NeutralProgressive ;
-      preClitic = [] ;
+      preClitic = [] ; preCliticPresent = False ;
       post = emptyAgrStr ;
       morphVoice = v.morphVoice ; voiceUse = PlainUse ;
-      c2 = c ; gapPost = \_,_ => []
+      c2 = c ; gapPost = \\_,_ => []
     } ;
 
     slashToVP : VPSlash -> VP = \sl -> lin VP {
@@ -49,7 +49,7 @@ concrete VerbSqi of Verb = CatSqi **
       imperf_admirative = sl.imperf_admirative ;
       clitics = sl.clitics ;
       progressive = sl.progressive ; progressivity = sl.progressivity ;
-      preClitic = sl.preClitic ;
+      preClitic = sl.preClitic ; preCliticPresent = sl.preCliticPresent ;
       post = sl.post ; morphVoice = sl.morphVoice ; voiceUse = sl.voiceUse
     } ;
 
@@ -102,20 +102,20 @@ concrete VerbSqi of Verb = CatSqi **
       case <np.isPron,compl.c> of {
         <True,Acc> => addAcc vp np.a ;
         <True,Dat> => addDat vp np.a ;
-        <False,Dat> => addPost (addDat vp np.a) (\_ => compl.s ++ np.s ! Dat) ;
-        _ => addPost vp (\_ => compl.s ++ np.s ! compl.c)
+        <False,Dat> => addPost (addDat vp np.a) (\\_ => compl.s ++ np.s ! Dat) ;
+        _ => addPost vp (\\_ => compl.s ++ np.s ! compl.c)
       } ;
 
     saturateSlash : VPSlash -> NPRec -> VP = \sl,np ->
       addPost (saturateVPArg (slashToVP sl) sl.c2 np)
-        (\subj => sl.gapPost ! subj ! np.a) ;
+        (\\subj => sl.gapPost ! subj ! np.a) ;
 
     saturateRemainingSlashArg : VPSlash -> Compl -> NPRec -> VPSlash = \sl,compl,np ->
       case <np.isPron,compl.c> of {
         <True,Acc> => addAccSlash sl np.a ;
         <True,Dat> => addDatSlash sl np.a ;
-        <False,Dat> => addPostSlash (addDatSlash sl np.a) (\_ => compl.s ++ np.s ! Dat) ;
-        _ => addPostSlash sl (\_ => compl.s ++ np.s ! compl.c)
+        <False,Dat> => addPostSlash (addDatSlash sl np.a) (\\_ => compl.s ++ np.s ! Dat) ;
+        _ => addPostSlash sl (\\_ => compl.s ++ np.s ! compl.c)
       } ;
 
 
@@ -140,7 +140,7 @@ concrete VerbSqi of Verb = CatSqi **
 
     ComplSlash sl np = saturateSlash sl np ;
 
-    ReflVP sl = (addPost (addRefl (slashToVP sl)) (\a => sl.gapPost ! a ! a)) ** {voiceUse=ReflexiveUse} ;
+    ReflVP sl = (addPost (addRefl (slashToVP sl)) (\\a => sl.gapPost ! a ! a)) ** {voiceUse=ReflexiveUse} ;
 
     PassV2 v2 = (addPost (baseVP (lin Verb I.jam_V)) (\\_ => v2.participle)) ** {voiceUse=PassiveUse} ;
 
@@ -169,7 +169,7 @@ concrete VerbSqi of Verb = CatSqi **
 
     Slash3V3 v3 np = addGapPostSlash
       (saturateRemainingSlashArg (baseSlash (lin Verb v3) v3.c2) v3.c3 np)
-      (\_,_ => []) ;
+      (\\_,_ => []) ;
 
     SlashVV vv sl = lin VPSlash {
       indicative = vv.Indicative ;
@@ -182,7 +182,7 @@ concrete VerbSqi of Verb = CatSqi **
       imperf_admirative = vv.imperf_admirative ;
       clitics = emptyClitics ;
       progressive = False ; progressivity = NeutralProgressive ;
-      preClitic = [] ;
+      preClitic = [] ; preCliticPresent = False ;
       post = \\a => slashVpiStr sl a ;
       morphVoice = vv.morphVoice ; voiceUse = PlainUse ;
       c2 = sl.c2 ; gapPost = sl.gapPost
@@ -199,7 +199,7 @@ concrete VerbSqi of Verb = CatSqi **
       imperf_admirative = v2v.imperf_admirative ;
       clitics = emptyClitics ;
       progressive = False ; progressivity = NeutralProgressive ;
-      preClitic = [] ;
+      preClitic = [] ; preCliticPresent = False ;
       post = \\a => v2v.c2.s ++ np.s ! v2v.c2.c ++
                      v2v.c3.s ++ slashVpiStr sl a ;
       morphVoice = v2v.morphVoice ; voiceUse = PlainUse ;
@@ -217,8 +217,8 @@ concrete VerbSqi of Verb = CatSqi **
       imperf_admirative = vp.imperf_admirative ;
       clitics = vp.clitics ;
       progressive = vp.progressive ; progressivity = vp.progressivity ;
-      preClitic = vp.preClitic ;
+      preClitic = vp.preClitic ; preCliticPresent = vp.preCliticPresent ;
       post = vp.post ; morphVoice = vp.morphVoice ; voiceUse = vp.voiceUse ;
-      c2 = prep ; gapPost = \_,_ => []
+      c2 = prep ; gapPost = \\_,_ => []
     } ;
 }

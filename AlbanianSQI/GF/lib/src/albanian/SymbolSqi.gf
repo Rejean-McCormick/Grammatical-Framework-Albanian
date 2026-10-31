@@ -7,7 +7,7 @@ concrete SymbolSqi of Symbol = CatSqi
 
   oper
     agr3 : Number -> Gender -> Agr = \n,g ->
-      { g = g ; n = n ; p = P3 } ;
+      { gn = genNum g n ; p = P3 } ;
 
     mkNP_NumCN : Str -> Number -> Gender -> (Case => Str) -> CatSqi.NP =
       \numStr,n,g,cnCase ->

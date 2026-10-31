@@ -1289,7 +1289,9 @@ mkNFull : NForms -> Gender -> N = \f,g -> lin N {
   } ; g = table {Sg => g ; Pl => g}
 } ;
 
-setNounGender : N -> Gender -> Gender -> N = ResSqi.setNounGender ;
+setNounGender : N -> Gender -> Gender -> N = \n,gsg,gpl -> n ** {
+  g = table {Sg => gsg ; Pl => gpl}
+} ;
 mkNAmbig : N -> Gender -> Gender -> N = \n,gsg,gpl -> setNounGender n gsg gpl ;
 
 -- Full-table constructor with independent singular/plural gender.  This is the
@@ -1452,7 +1454,10 @@ mkNonActiveVFull :
   (pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm : Number => Person => Str) ->
   (imp : Number => Str) -> Str -> V =
   \pres,past,aor,imperf,subj,presOpt,perfOpt,presAdm,imperfAdm,imp,part ->
-    markNonActiveVerb (mkVFull pres past aor imperf subj presOpt perfOpt presAdm imperfAdm imp part) ;
+    (mkVFull pres past aor imperf subj presOpt perfOpt presAdm imperfAdm imp part) ** {
+      morphVoice = NonActiveMorph ;
+      perfectAux = AuxJam
+    } ;
 
 -- Compatibility-only subjunctive selector for the compact irregV API.
 -- ResSqi.subjunctiveFromPresent is intentionally lexical-exception-free; the
@@ -1753,9 +1758,9 @@ mkACard : Str -> ACard = \s -> lin ACard {s=s} ;
 mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
 
 mkPrep = overload {
-  mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Acc} ;
-  mkPrep : Str -> Case -> Prep = \s,c -> lin Prep {s=s; c=c}
+  mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Acc; kind=OrdinaryCompl} ;
+  mkPrep : Str -> Case -> Prep = \s,c -> lin Prep {s=s; c=c; kind=OrdinaryCompl}
 } ;
-noPrep : Prep = lin Prep {s=[]; c=Acc} ;
+noPrep : Prep = lin Prep {s=[]; c=Acc; kind=OrdinaryCompl} ;
 
 }

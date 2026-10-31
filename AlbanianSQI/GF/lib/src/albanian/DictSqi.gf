@@ -21,7 +21,7 @@ oper
   } ;
   invariantA : Str -> A = \x -> lin A {
     s = table {Masc => table {Sg => x ; Pl => x} ; Fem => table {Sg => x ; Pl => x}} ;
-    cls = unarticulatedAdjClass
+    cls = R.unarticulatedAdjClass
   } ;
   invariantV : Str -> V = \x -> irregV x x x x x x x x x ;
 

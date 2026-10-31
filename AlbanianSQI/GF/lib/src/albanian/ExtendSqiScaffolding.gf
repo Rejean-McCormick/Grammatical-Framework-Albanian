@@ -153,12 +153,12 @@ oper
     appendVP (emptyVP vv) (\\a =>realizeSubjAntVP vp ant.a pol.p a) ;
 
   sc_CompoundN : N -> N -> N = \modifier,head -> lin N {
-    s=\\sp,c,n =>R.nounForm modifier R.Indef R.Nom P.Sg ++ R.nounForm head sp c n ;
+    s=\\sp,c,n =>modifier.s!R.Indef!R.MNom!P.Sg ++ head.s!sp!c!n ;
     g=head.g
   } ;
 
   sc_GerundCN : VP -> CN = \vp -> lin CN {
-    s=\\_,_,_ =>realizeGerundVP vp agrMascSg ; g=R.Masc
+    s=\\_,_,_ =>realizeGerundVP vp agrMascSg ; g=table {P.Sg=>R.Masc ; P.Pl=>R.Masc}
   } ;
   sc_GerundNP : VP -> NP = \vp -> lin NP {
     s=\\_ =>realizeGerundVP vp agrMascSg ; a=agrMascSg ; isPron=False

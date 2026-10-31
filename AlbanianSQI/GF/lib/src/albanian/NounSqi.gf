@@ -139,7 +139,7 @@ concrete NounSqi of Noun = CatSqi ** open MorphoSqi, ResSqi, Prelude in {
     } ;
 
     ComplN3 n3 np = {
-      s=\\sp,c,n=>nounForm n3 sp c n ++ n3.c2.s ++ np.s!n3.c2.c;
+      s=\\sp,c,n=>n3.s ! sp ! c ! n ++ n3.c2.s ++ np.s!n3.c2.c;
       g=n3.g; c2=n3.c3
     } ;
 

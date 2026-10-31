@@ -18,7 +18,7 @@ oper
     imperf_admirative = sl.imperf_admirative ;
     clitics = sl.clitics ;
     progressive = sl.progressive ; progressivity = sl.progressivity ;
-    preClitic = sl.preClitic ;
+    preClitic = sl.preClitic ; preCliticPresent = sl.preCliticPresent ;
     post = sl.post ; morphVoice=sl.morphVoice ; voiceUse=sl.voiceUse
   } ;
 
@@ -33,7 +33,7 @@ oper
     imperf_admirative = v.imperf_admirative ;
     clitics = emptyClitics ;
     progressive = False ; progressivity = NeutralProgressive ;
-    preClitic = [] ;
+    preClitic = [] ; preCliticPresent = False ;
     post = \\_ => [] ; morphVoice=v.morphVoice ; voiceUse=PlainUse
   } ;
 
@@ -48,9 +48,9 @@ oper
     imperf_admirative = vp.imperf_admirative ;
     clitics = vp.clitics ;
     progressive = vp.progressive ; progressivity = vp.progressivity ;
-    preClitic = vp.preClitic ;
+    preClitic = vp.preClitic ; preCliticPresent = vp.preCliticPresent ;
     post = vp.post ; morphVoice=vp.morphVoice ; voiceUse=vp.voiceUse ;
-    c2 = c ; gapPost=\_,_ => []
+    c2 = c ; gapPost=\\_,_ => []
   } ;
 
   appendVP : VP -> (Agr => Str) -> VP = \vp,x -> vp ** {
@@ -76,7 +76,7 @@ oper
   progressiveVP : VP -> VP = \vp -> vp ** {progressive=True ; progressivity=Progressive} ;
 
   addPreCliticMaterial : VP -> Str -> VP = \vp,x -> vp ** {
-    preClitic = vp.preClitic ++ x
+    preClitic = vp.preClitic ++ x ; preCliticPresent = True
   } ;
 
   ordinaryPrefix : VP -> Str = \vp ->
@@ -85,12 +85,12 @@ oper
 
   -- Positive të contracts only when the clitic cluster is immediately after
   -- të.  If another preverbal slot intervenes, të stays independent.
-  subjPrefix : VP -> Str = \vp -> case <vp.preClitic : Str> of {
-    "" => case vp.progressive of {
+  subjPrefix : VP -> Str = \vp -> case vp.preCliticPresent of {
+    False => case vp.progressive of {
       False => teWithClitics vp.clitics ;
       True  => "të" ++ "po" ++ flattenClitics vp.clitics
     } ;
-    _ => "të" ++ vp.preClitic ++
+    True => "të" ++ vp.preClitic ++
          case vp.progressive of {True => "po" ; False => []} ++
          flattenClitics vp.clitics
   } ;

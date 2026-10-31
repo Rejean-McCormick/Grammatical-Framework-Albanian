@@ -8,7 +8,7 @@ oper
   RNPListRec : Type = {first,last : R.Agr => R.Case => Str} ;
 
   rnp_ReflRNP : R.VPSlash -> RNPRec -> R.VP = \sl,rnp -> case rnp.isPron of {
-    True => appendClitic (vpFromSlash sl) "u" "t'u" ;
+    True => appendReflClitic (vpFromSlash sl) ;
     False => appendVP (vpFromSlash sl) (\\a =>sl.c2.s ++ rnp.s!a!sl.c2.c)
   } ;
 

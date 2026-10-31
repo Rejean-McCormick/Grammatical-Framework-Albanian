@@ -9,7 +9,7 @@ concrete ConjunctionSqi of Conjunction = CatSqi **
     [IAdv] = {first,last : Str} ;
     [NP] = {first,last : Case => Str ; a : Agr} ;
     [AP] = {first,last : Species => Case => Gender => Number => Str} ;
-    [CN] = {first,last : Species => Case => Number => Str ; g : Gender} ;
+    [CN] = {first,last : Species => Case => Number => Str ; g : Number => Gender} ;
     [DAP] = {first,last : Case => Gender => Str ; n : Number} ;
 
   oper

@@ -49,7 +49,7 @@ lin InflectionA, InflectionA2 = \x -> {
       s3=[]
     } where {
         y : Case => Gender => Number => Str =
-          \c,g,n => realizeAdj x Indef c g n ;
+          \\c,g,n => realizeAdj x Indef c g n ;
     } ;
 
 lin InflectionV, InflectionV2, InflectionVV, InflectionVS, InflectionVQ, InflectionVA,

@@ -1761,6 +1761,6 @@ mkPrep = overload {
   mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Acc; kind=OrdinaryCompl} ;
   mkPrep : Str -> Case -> Prep = \s,c -> lin Prep {s=s; c=c; kind=OrdinaryCompl}
 } ;
-noPrep : Prep = lin Prep {s=[]; c=Acc; kind=OrdinaryCompl} ;
+noPrep : Prep = lin Prep {s=[]; c=Acc; kind=BareCompl} ;
 
 }

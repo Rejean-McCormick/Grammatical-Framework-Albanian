@@ -1,20 +1,24 @@
 resource ResSqi = ParamX-[Tense,Past,Pres] ** open Prelude in {
 
 param
-  ComplKind = OrdinaryCompl | GenitiveCompl ;
+  ComplKind = OrdinaryCompl | GenitiveCompl | BareCompl ;
 
 oper
   Compl : Type = {s : Str ; c : Case ; kind : ComplKind} ;
 
   mkCompl : Str -> Case -> Compl = \s,c -> {s = s ; c = c ; kind = OrdinaryCompl} ;
   mkGenitiveCompl : Compl = {s = [] ; c = Gen ; kind = GenitiveCompl} ;
+  -- Bare government is distinct from a pronounced preposition.  This
+  -- distinction must be carried as a parameter, not inferred using eqStr
+  -- on an unresolved PMCFG field.
+  mkBareCompl : Case -> Compl = \c -> {s = [] ; c = c ; kind = BareCompl} ;
 
   -- In CatSqi: Prep = Compl.  Government is therefore carried all the
   -- way to the final nominal-realization boundary instead of being
   -- flattened into a preposition string.
   Prep : Type = Compl ;
   mkPrep : Str -> Case -> Prep = mkCompl ;
-  noPrep : Prep = mkPrep [] Acc ;
+  noPrep : Prep = mkBareCompl Acc ;
 
 
 param

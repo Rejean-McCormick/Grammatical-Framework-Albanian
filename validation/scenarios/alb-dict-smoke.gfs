@@ -28,10 +28,13 @@ ps "CASE D0012 dashuroj_V2"
 l dashuroj_V2
 ps "CASE D0013 dergoj_V3"
 l dergoj_V3
+l -all dergoj_V3
 ps "CASE D0014 flas_V3"
 l flas_V3
+l -all flas_V3
 ps "CASE D0015 jap_V3"
 l jap_V3
+l -all jap_V3
 ps "CASE D0016 druaj_VS"
 l druaj_VS
 ps "CASE D0017 kuptoj_VS"
@@ -44,6 +47,7 @@ ps "CASE D0020 pyes_veten_VQ"
 l pyes_veten_VQ
 ps "CASE D0021 lutem_V2V"
 l lutem_V2V
+l -all lutem_V2V
 ps "CASE D0022 baba_N2"
 l baba_N2
 ps "CASE D0023 nene_N2"
@@ -52,6 +56,7 @@ ps "CASE D0024 vella_N2"
 l vella_N2
 ps "CASE D0025 distance_N3"
 l distance_N3
+l -all distance_N3
 ps "CASE D0026 martuar_A2"
 l martuar_A2
 ps "CASE D0027 larg_Adv"

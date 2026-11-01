@@ -98,11 +98,13 @@ concrete VerbSqi of Verb = CatSqi **
       isPron : Bool
     } ;
 
+    -- Cliticize only bare verb arguments.  An overt preposition governs a
+    -- strong pronoun/NP; it must not consume an Acc/Dat weak-clitic slot.
     saturateVPArg : VP -> Compl -> NPRec -> VP = \vp,compl,np ->
-      case <np.isPron,compl.c> of {
-        <True,Acc> => addAcc vp np.a ;
-        <True,Dat> => addDat vp np.a ;
-        <False,Dat> => addPost (addDat vp np.a) (\\_ => compl.s ++ np.s ! Dat) ;
+      case <np.isPron,compl.c,compl.kind> of {
+        <True,Acc,BareCompl> => addAcc vp np.a ;
+        <True,Dat,BareCompl> => addDat vp np.a ;
+        <False,Dat,BareCompl> => addPost (addDat vp np.a) (\\_ => compl.s ++ np.s ! Dat) ;
         _ => addPost vp (\\_ => compl.s ++ np.s ! compl.c)
       } ;
 
@@ -111,10 +113,10 @@ concrete VerbSqi of Verb = CatSqi **
         (\\subj => sl.gapPost ! subj ! np.a) ;
 
     saturateRemainingSlashArg : VPSlash -> Compl -> NPRec -> VPSlash = \sl,compl,np ->
-      case <np.isPron,compl.c> of {
-        <True,Acc> => addAccSlash sl np.a ;
-        <True,Dat> => addDatSlash sl np.a ;
-        <False,Dat> => addPostSlash (addDatSlash sl np.a) (\\_ => compl.s ++ np.s ! Dat) ;
+      case <np.isPron,compl.c,compl.kind> of {
+        <True,Acc,BareCompl> => addAccSlash sl np.a ;
+        <True,Dat,BareCompl> => addDatSlash sl np.a ;
+        <False,Dat,BareCompl> => addPostSlash (addDatSlash sl np.a) (\\_ => compl.s ++ np.s ! Dat) ;
         _ => addPostSlash sl (\\_ => compl.s ++ np.s ! compl.c)
       } ;
 

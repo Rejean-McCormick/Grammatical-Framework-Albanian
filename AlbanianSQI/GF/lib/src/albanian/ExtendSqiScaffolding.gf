@@ -63,9 +63,10 @@ oper
   } ;
 
   sc_PiedPipingRelSlash : RP -> ClSlash -> RCl = \rp,slash -> lin RCl {
-    s=\\agr,t,a,p =>case Predef.eqStr slash.c2.s [] of {
-      Predef.PTrue => rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ;
-      Predef.PFalse => slash.c2.s ++ sc_RelativeCili slash.c2.c agr.gn ++ slash.s!t!a!p
+    s=\\agr,t,a,p =>case slash.c2.kind of {
+      R.BareCompl => rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ;
+      R.GenitiveCompl => rp.s!slash.c2.c!agr.gn ++ slash.s!t!a!p ;
+      R.OrdinaryCompl => slash.c2.s ++ sc_RelativeCili slash.c2.c agr.gn ++ slash.s!t!a!p
     }
   } ;
 
@@ -78,9 +79,10 @@ oper
     sc_PiedPipingRelSlash rp slash ;
 
   sc_EmptyRelSlash : ClSlash -> RCl = \slash -> lin RCl {
-    s=\\agr,t,a,p =>case Predef.eqStr slash.c2.s [] of {
-      Predef.PTrue => "që" ++ slash.s!t!a!p ;
-      Predef.PFalse => slash.c2.s ++ sc_RelativeCili slash.c2.c agr.gn ++ slash.s!t!a!p
+    s=\\agr,t,a,p =>case slash.c2.kind of {
+      R.BareCompl => "që" ++ slash.s!t!a!p ;
+      R.GenitiveCompl => "që" ++ slash.s!t!a!p ;
+      R.OrdinaryCompl => slash.c2.s ++ sc_RelativeCili slash.c2.c agr.gn ++ slash.s!t!a!p
     }
   } ;
 

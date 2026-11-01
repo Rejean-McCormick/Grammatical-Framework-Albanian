@@ -20,12 +20,14 @@ ps "CASE M0008 bankë_N"
 l bankë_N
 ps "CASE M0009 bazohem_V"
 l bazohem_V
+l -all bazohem_V
 ps "CASE M0010 bie_V"
 l bie_V
 ps "CASE M0011 blej_V"
 l blej_V
 ps "CASE M0012 bëhem_V"
 l bëhem_V
+l -all bëhem_V
 ps "CASE M0013 bëj_V"
 l bëj_V
 ps "CASE M0014 dal_V"

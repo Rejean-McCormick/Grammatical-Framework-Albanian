@@ -1090,6 +1090,8 @@ oper
 
   regV : Str -> V   -- Indicative;Pres;Sg;P1
     = \form -> <case <form : Str> of {
+    "flas" => c14FlasV;
+    "lutem" => c14LutemV;
     _ + "rap" => mkV013 form;
     _ + "jep" => mkV036 form;
     _ + "ket" => mkV078 form;
@@ -1458,6 +1460,45 @@ mkNonActiveVFull :
       morphVoice = NonActiveMorph ;
       perfectAux = AuxJam
     } ;
+
+-- Cycle 14: full principal-part paradigms for two lexemes which are not
+-- predictable from their citation forms.  These tables preserve the RGL V
+-- contract and are not a replacement for the productive conjugation families.
+-- flas: Standard Albanian flas/flet, aorist fola, participle folur.
+-- lutem: non-active lutem/lutesh, aorist u luta, participle lutur.
+c14Pers : (p1sg,p2sg,p3sg,p1pl,p2pl,p3pl : Str) -> Number => Person => Str =
+  \p1sg,p2sg,p3sg,p1pl,p2pl,p3pl -> table {
+    Sg => table {P1=>p1sg ; P2=>p2sg ; P3=>p3sg} ;
+    Pl => table {P1=>p1pl ; P2=>p2pl ; P3=>p3pl}
+  } ;
+
+c14Imp : (sg,pl : Str) -> Number => Str = \sg,pl -> table {Sg=>sg ; Pl=>pl} ;
+
+c14FlasV : V = mkVFull
+  (c14Pers "flas" "flet" "flet" "flasim" "flisni" "flasin")
+  (c14Pers "kam folur" "ke folur" "ka folur" "kemi folur" "keni folur" "kanë folur")
+  (c14Pers "fola" "fole" "foli" "folëm" "folët" "folën")
+  (c14Pers "flisja" "flisje" "fliste" "flisnim" "flisnit" "flisnin")
+  (c14Pers "flas" "flasësh" "flasë" "flasim" "flisni" "flasin")
+  (c14Pers "folsha" "folsh" "foltë" "folshim" "folshi" "folshin")
+  (c14Pers "paça folur" "paç folur" "pastë folur" "paçim folur" "paçit folur" "paçin folur")
+  (c14Pers "folkam" "folke" "folka" "folkemi" "folkeni" "folkan")
+  (c14Pers "folkësha" "folkëshe" "folkësh" "folkëshim" "folkëshit" "folkëshin")
+  (c14Imp "fol" "flisni")
+  "folur" ;
+
+c14LutemV : V = mkNonActiveVFull
+  (c14Pers "lutem" "lutesh" "lutet" "lutemi" "luteni" "luten")
+  (c14Pers "jam lutur" "je lutur" "është lutur" "jemi lutur" "jeni lutur" "janë lutur")
+  (c14Pers "u luta" "u lute" "u lut" "u lutëm" "u lutët" "u lutën")
+  (c14Pers "lutesha" "luteshe" "lutej" "luteshim" "luteshit" "luteshin")
+  (c14Pers "lutem" "lutesh" "lutet" "lutemi" "luteni" "luten")
+  (c14Pers "u lutsha" "u lutsh" "u luttë" "u lutshim" "u lutshi" "u lutshin")
+  (c14Pers "qofsha lutur" "qofsh lutur" "qoftë lutur" "qofshim lutur" "qofshit lutur" "qofshin lutur")
+  (c14Pers "u lutkam" "u lutke" "u lutka" "u lutkemi" "u lutkeni" "u lutkan")
+  (c14Pers "u lutkësha" "u lutkëshe" "u lutkësh" "u lutkëshim" "u lutkëshit" "u lutkëshin")
+  (c14Imp "lutu" "lutuni")
+  "lutur" ;
 
 -- Compatibility-only subjunctive selector for the compact irregV API.
 -- ResSqi.subjunctiveFromPresent is intentionally lexical-exception-free; the

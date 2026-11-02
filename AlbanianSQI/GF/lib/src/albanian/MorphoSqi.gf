@@ -23155,14 +23155,14 @@ mkV096 base =
           } ;
           Aorist => table { -- aorist stem (still stored without u-)
             Sg => table {
-              P1 => aorStem+"a" ;
-              P2 => aorStem+"e" ;
-              P3 => aorStem+"i"
+              P1 => "u" ++ (aorStem+"a") ;
+              P2 => "u" ++ (aorStem+"e") ;
+              P3 => "u" ++ (base_1+"ua")
             } ;
             Pl => table {
-              P1 => aorStem+"ëm" ;
-              P2 => aorStem+"ët" ;
-              P3 => aorStem+"ën"
+              P1 => "u" ++ (base_1+"uam") ;
+              P2 => "u" ++ (base_1+"uat") ;
+              P3 => "u" ++ (base_1+"uan")
             }
           } ;
           Imperfect => table {
@@ -23200,14 +23200,14 @@ mkV096 base =
 
         pres_optative = table {
           Sg => table {
-            P1 => optBase+"sha" ;
-            P2 => optBase+"sh" ;
-            P3 => optBase+"të"
+            P1 => "u" ++ (optBase+"sha") ;
+            P2 => "u" ++ (optBase+"sh") ;
+            P3 => "u" ++ (optBase+"të")
           } ;
           Pl => table {
-            P1 => optBase+"shim" ;
-            P2 => optBase+"shi" ;
-            P3 => optBase+"shin"
+            P1 => "u" ++ (optBase+"shim") ;
+            P2 => "u" ++ (optBase+"shi") ;
+            P3 => "u" ++ (optBase+"shin")
           }
         } ;
 
@@ -23226,27 +23226,27 @@ mkV096 base =
 
         pres_admirative = table {
           Sg => table {
-            P1 => admStem+"kam" ;
-            P2 => admStem+"ke" ;
-            P3 => admStem+"ka"
+            P1 => "u" ++ (admStem+"kam") ;
+            P2 => "u" ++ (admStem+"ke") ;
+            P3 => "u" ++ (admStem+"ka")
           } ;
           Pl => table {
-            P1 => admStem+"kemi" ;
-            P2 => admStem+"keni" ;
-            P3 => admStem+"kan"
+            P1 => "u" ++ (admStem+"kemi") ;
+            P2 => "u" ++ (admStem+"keni") ;
+            P3 => "u" ++ (admStem+"kan")
           }
         } ;
 
         imperf_admirative = table {
           Sg => table {
-            P1 => admStem+"kësha" ;
-            P2 => admStem+"këshe" ;
-            P3 => admStem+"kësh"
+            P1 => "u" ++ (admStem+"kësha") ;
+            P2 => "u" ++ (admStem+"këshe") ;
+            P3 => "u" ++ (admStem+"kësh")
           } ;
           Pl => table {
-            P1 => admStem+"këshim" ;
-            P2 => admStem+"këshit" ;
-            P3 => admStem+"këshin"
+            P1 => "u" ++ (admStem+"këshim") ;
+            P2 => "u" ++ (admStem+"këshit") ;
+            P3 => "u" ++ (admStem+"këshin")
           }
         } ;
     morphVoice = NonActiveMorph ;

@@ -213,9 +213,9 @@ oper
             "pi"  => "pish" ;
             "vij" => "vish" ;
             "them" => "thuash" ;
-            _ + "j" => init p1 ++ "sh" ;
+            _ + "j" => init p1 + "sh" ;
             _ => case <p2 : Str> of {
-              stem + "n" => stem ++ "sh" ;
+              stem + "n" => stem + "sh" ;
               x => x
             }
           } ;
@@ -230,7 +230,7 @@ oper
             "them" => "thotë" ;
             _ + "j" => p1 + "ë" ;
             _ => case <p2 : Str> of {
-              stem + "n" => stem ++ "ë" ;
+              stem + "n" => stem + "ë" ;
               x => x
             }
           }

@@ -65,7 +65,7 @@ lin
   bardhë_A = mkA "bardhë" ;
   bark_N = mkN "bark" ;
   bashkë_Adv = mkAdv "bashkë" ;
-  bazohem_V = mkV041 "bazohem" ;
+  bazohem_V = mkV096 "bazohem" ;
   beton_N = mkN020 "beton" ;
   bie_V = lin V I.bie_V ;
   birrë_N = mkN "birrë" ;
